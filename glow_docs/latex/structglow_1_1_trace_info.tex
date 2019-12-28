@@ -1,0 +1,49 @@
+\hypertarget{structglow_1_1_trace_info}{}\section{glow\+:\+:Trace\+Info Struct Reference}
+\label{structglow_1_1_trace_info}\index{glow\+::\+Trace\+Info@{glow\+::\+Trace\+Info}}
+
+
+{\ttfamily \#include $<$Trace\+Events.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structglow_1_1_trace_info_1_1_event}{Event}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_info_a5a6c4a9eea7d41c94d1025c7469089d4}\label{structglow_1_1_trace_info_a5a6c4a9eea7d41c94d1025c7469089d4}} 
+{\bfseries Trace\+Info} (bool e, size\+\_\+t d)
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_info_ac71e586c7b886deb5ade61584aff0577}\label{structglow_1_1_trace_info_ac71e586c7b886deb5ade61584aff0577}} 
+void {\bfseries add} (\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$PH, size\+\_\+t index, std\+::string name, char type)
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_info_a5665d43abc8ef77741d01a08fef4dc31}\label{structglow_1_1_trace_info_a5665d43abc8ef77741d01a08fef4dc31}} 
+void {\bfseries add} (\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$PH, size\+\_\+t index, std\+::string name, char type, std\+::string context)
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_info_a2d8f54a12a9eef00530d1ead453a8387}\label{structglow_1_1_trace_info_a2d8f54a12a9eef00530d1ead453a8387}} 
+void \hyperlink{structglow_1_1_trace_info_a2d8f54a12a9eef00530d1ead453a8387}{add} (\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$PH, size\+\_\+t start\+Index, size\+\_\+t end\+Index, std\+::string name, std\+::string context=\char`\"{}\char`\"{}, std\+::string kind=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Add data for a Complete \hyperlink{structglow_1_1_trace_event}{Trace\+Event}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_info_a3cd948ec521070622707582feabedfba}\label{structglow_1_1_trace_info_a3cd948ec521070622707582feabedfba}} 
+bool \hyperlink{structglow_1_1_trace_info_a3cd948ec521070622707582feabedfba}{enabled} \{false\}
+\begin{DoxyCompactList}\small\item\em Whether tracing is enabled for this run. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_trace_info_aef86bfa27c54e11743025965a4306173}\label{structglow_1_1_trace_info_aef86bfa27c54e11743025965a4306173}} 
+bool \hyperlink{structglow_1_1_trace_info_aef86bfa27c54e11743025965a4306173}{auto\+Instrumented} \{false\}
+\begin{DoxyCompactList}\small\item\em Whether the function was auto instrumented. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_trace_info_a3a688877f66fe1ac1ec5c43854a6ecb8}\label{structglow_1_1_trace_info_a3a688877f66fe1ac1ec5c43854a6ecb8}} 
+size\+\_\+t \hyperlink{structglow_1_1_trace_info_a3a688877f66fe1ac1ec5c43854a6ecb8}{data\+Size} \{0\}
+\begin{DoxyCompactList}\small\item\em The size of each item in the backing \hyperlink{classglow_1_1_tensor}{Tensor}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_trace_info_a2d2e7d62ba5d37fe6d4bb1312cbce64b}\label{structglow_1_1_trace_info_a2d2e7d62ba5d37fe6d4bb1312cbce64b}} 
+std\+::map$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$, std\+::vector$<$ \hyperlink{structglow_1_1_trace_info_1_1_event}{Event} $>$ $>$ {\bfseries events}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Tracing / Profiling events map for a \hyperlink{classglow_1_1_compiled_function}{Compiled\+Function}. This class encodes information on how to read event metrics out of Tensors and into Trace\+Events, and is used by \hyperlink{classglow_1_1_compiled_function_ab2c21d3d37661c8f7bc0629c19b1fa27}{Compiled\+Function\+::translate\+Trace\+Events()}. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Execution\+Context/Trace\+Events.\+h\end{DoxyCompactItemize}

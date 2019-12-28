@@ -1,0 +1,78 @@
+https\+://github.com/onnx/onnx/blob/master/docs/\+O\+N\+N\+X\+I\+F\+I.\+md \char`\"{}\+O\+N\+N\+X\+I\+F\+I\char`\"{} is an interface that allows Py\+Torch/\+Caffe2 to use Glow as an execution backend. Right now, \href{https://github.com/houseroad/foxi}{\tt F\+O\+XI} (i.\+e., O\+N\+N\+X\+I\+FI with Facebook Extension) is used to support more features.
+
+Setting up a Caffe2 environment to use Glow via O\+N\+N\+X\+I\+FI can be tricky the first time. The steps in this walkthrough show how to build all the required components from source. They have been tested using Ubuntu 16.\+04 and Python 3.\+6.
+
+$\ast$$\ast$(T\+O\+DO\+: You\textquotesingle{}ll need to apt-\/get install some packages to get everything to build, but I don\textquotesingle{}t remember all of them.)$\ast$$\ast$
+
+While not required, we recommend using a Python virtual environment, to avoid quirks associated with the system Python environment.
+
+
+\begin{DoxyCode}
+cd $SRC
+mkdir virtualenv && cd virtualenv && virtualenv . && source bin/activate
+pip install pyyaml pytest future
+\end{DoxyCode}
+
+
+Get Py\+Torch, O\+N\+NX and Glow.
+
+
+\begin{DoxyCode}
+cd $SRC
+git clone https://github.com/pytorch/pytorch.git
+git clone https://github.com/onnx/onnx.git
+git clone https://github.com/pytorch/glow.git
+\end{DoxyCode}
+
+
+Build and install O\+N\+NX.
+
+
+\begin{DoxyCode}
+cd $SRC/onnx
+git submodule update --init --recursive
+python setup.py install
+\end{DoxyCode}
+
+
+Build Glow and copy/rename its O\+N\+N\+X\+I\+FI library.
+
+
+\begin{DoxyCode}
+cd $SRC/glow
+git submodule update --init --recursive
+mkdir build && cd build && cmake -G Ninja -DGLOW\_WITH\_OPENCL=OFF .. && ninja all
+mkdir -p $HOME/lib
+cp lib/Onnxifi/libonnxifi-glow.so $HOME/lib/libonnxifi.so
+export LD\_LIBRARY\_PATH=$HOME/lib:$LD\_LIBRARY\_PATH
+\end{DoxyCode}
+
+
+Build and install Py\+Torch.
+
+
+\begin{DoxyCode}
+cd $SRC/pytorch
+git submodule update --init --recursive
+python setup.py install
+\end{DoxyCode}
+
+
+Remove the dummy libonnxifi.\+so that Py\+Torch installs. $\ast$$\ast$(T\+O\+DO\+: Needing to do this is weird. Can we avoid it?)$\ast$$\ast$
+
+
+\begin{DoxyCode}
+find $SRC/pytorch/build -name libonnxifi.so -delete
+find $SRC/virtualenv -name libonnxifi.so -delete
+\end{DoxyCode}
+
+
+Test your installation.
+
+
+\begin{DoxyCode}
+cd $SRC/pytorch/build
+sed -i.orig 's/@unittest.skip/#@unittest.skip/' caffe2/python/onnx/test\_onnxifi.py
+python -m pytest -s caffe2/python/onnx/test\_onnxifi.py
+\end{DoxyCode}
+ 

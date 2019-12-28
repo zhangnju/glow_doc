@@ -1,0 +1,44 @@
+\hypertarget{classglow_1_1onnxifi_1_1_host_manager_backend}{}\section{glow\+:\+:onnxifi\+:\+:Host\+Manager\+Backend Class Reference}
+\label{classglow_1_1onnxifi_1_1_host_manager_backend}\index{glow\+::onnxifi\+::\+Host\+Manager\+Backend@{glow\+::onnxifi\+::\+Host\+Manager\+Backend}}
+Inheritance diagram for glow\+:\+:onnxifi\+:\+:Host\+Manager\+Backend\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1onnxifi_1_1_host_manager_backend}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1onnxifi_1_1_host_manager_backend_a1e685c23b29ab980ca2636c4b828b854}{Host\+Manager\+Backend} (std\+::shared\+\_\+ptr$<$ \hyperlink{classglow_1_1runtime_1_1_host_manager}{runtime\+::\+Host\+Manager} $>$ host\+Manager, llvm\+::\+String\+Ref backend\+Name, bool use\+Onnx)
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_host_manager_backend_a7cf556d12833649b0b7b356ef2c14a07}\label{classglow_1_1onnxifi_1_1_host_manager_backend_a7cf556d12833649b0b7b356ef2c14a07}} 
+void {\bfseries run\+Network} (const \hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph} $\ast$graph, std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ context, runtime\+::\+Result\+C\+B\+Ty callback, uint64\+\_\+t priority=0) override
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_host_manager_backend_a759c6e790e0792d6c6b0afc0a61d89e9}\label{classglow_1_1onnxifi_1_1_host_manager_backend_a759c6e790e0792d6c6b0afc0a61d89e9}} 
+onnx\+Status {\bfseries add\+Network} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_module}{Module} $>$ module)
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_host_manager_backend_addffbb489897fb74a169c6491a249183}\label{classglow_1_1onnxifi_1_1_host_manager_backend_addffbb489897fb74a169c6491a249183}} 
+onnx\+Status {\bfseries remove\+Network} (const \hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph} $\ast$graph) override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_host_manager_backend_ac7501569fb1ac0973c5962bd2ad74120}\label{classglow_1_1onnxifi_1_1_host_manager_backend_ac7501569fb1ac0973c5962bd2ad74120}} 
+static std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1runtime_1_1_host_manager}{runtime\+::\+Host\+Manager} $>$ {\bfseries create\+Host\+Manager} (llvm\+::\+String\+Ref backend\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_host_manager_backend_a1e685c23b29ab980ca2636c4b828b854}\label{classglow_1_1onnxifi_1_1_host_manager_backend_a1e685c23b29ab980ca2636c4b828b854}} 
+\index{glow\+::onnxifi\+::\+Host\+Manager\+Backend@{glow\+::onnxifi\+::\+Host\+Manager\+Backend}!Host\+Manager\+Backend@{Host\+Manager\+Backend}}
+\index{Host\+Manager\+Backend@{Host\+Manager\+Backend}!glow\+::onnxifi\+::\+Host\+Manager\+Backend@{glow\+::onnxifi\+::\+Host\+Manager\+Backend}}
+\subsubsection{\texorpdfstring{Host\+Manager\+Backend()}{HostManagerBackend()}}
+{\footnotesize\ttfamily glow\+::onnxifi\+::\+Host\+Manager\+Backend\+::\+Host\+Manager\+Backend (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classglow_1_1runtime_1_1_host_manager}{runtime\+::\+Host\+Manager} $>$}]{host\+Manager,  }\item[{llvm\+::\+String\+Ref}]{backend\+Name,  }\item[{bool}]{use\+Onnx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create Glow O\+N\+N\+X\+I\+FI backend identifier using Host\+Manager with the given Glow backend {\ttfamily kind\+Name}, whether to use onnx or \hyperlink{namespacecaffe2}{caffe2} for models ({\ttfamily use\+Onnx}). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Onnxifi/Host\+Manager\+Onnxifi.\+h\item 
+lib/\+Onnxifi/Host\+Manager\+Onnxifi.\+cpp\end{DoxyCompactItemize}

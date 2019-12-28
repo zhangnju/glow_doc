@@ -1,0 +1,128 @@
+\hypertarget{structglow_1_1_trace_event}{}\section{glow\+:\+:Trace\+Event Struct Reference}
+\label{structglow_1_1_trace_event}\index{glow\+::\+Trace\+Event@{glow\+::\+Trace\+Event}}
+
+
+{\ttfamily \#include $<$Trace\+Events.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}\label{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}} 
+enum \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} \{ \newline
+{\bfseries N\+O\+NE} = 0x00, 
+{\bfseries R\+E\+Q\+U\+E\+ST} = 0x01, 
+{\bfseries R\+U\+N\+T\+I\+ME} = 0x02, 
+{\bfseries C\+O\+PY} = 0x04, 
+\newline
+{\bfseries O\+P\+E\+R\+A\+T\+OR} = 0x08, 
+{\bfseries D\+E\+B\+UG} = 0x10, 
+{\bfseries S\+T\+A\+N\+D\+A\+RD}
+ \}\begin{DoxyCompactList}\small\item\em The amount and type of Trace\+Events that should appear in the trace. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_a3db6299e7670cd1db9fe9f16eeba4597}\label{structglow_1_1_trace_event_a3db6299e7670cd1db9fe9f16eeba4597}} 
+{\bfseries Trace\+Event} (llvm\+::\+String\+Ref n, \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} l, uint64\+\_\+t ts, char c, int t, int d=-\/1)
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_a6534995ac3eef3d2ae830d03a194f15b}\label{structglow_1_1_trace_event_a6534995ac3eef3d2ae830d03a194f15b}} 
+{\bfseries Trace\+Event} (llvm\+::\+String\+Ref n, \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} l, uint64\+\_\+t ts, char c, int t, std\+::map$<$ std\+::string, std\+::string $>$ a, int d=-\/1)
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_af4b7eafd0d5e85ccb2c198a16ca95eb6}\label{structglow_1_1_trace_event_af4b7eafd0d5e85ccb2c198a16ca95eb6}} 
+{\bfseries Trace\+Event} (llvm\+::\+String\+Ref n, \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} l, uint64\+\_\+t ts, uint64\+\_\+t dur, int t, std\+::map$<$ std\+::string, std\+::string $>$ a=\{\}, int d=-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{structglow_1_1_trace_event_acbca9b65c5383467f89f034312d1160c}{dump\+Trace\+Events} (std\+::vector$<$ \hyperlink{structglow_1_1_trace_event}{Trace\+Event} $>$ \&events, llvm\+::\+String\+Ref filename, const std\+::string \&process\+Name=\char`\"{}\char`\"{}, const std\+::map$<$ int, std\+::string $>$ \&thread\+Names=\{\})
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_a67efc5d9cc716387a4404b8923a5b7c8}\label{structglow_1_1_trace_event_a67efc5d9cc716387a4404b8923a5b7c8}} 
+static uint64\+\_\+t \hyperlink{structglow_1_1_trace_event_a67efc5d9cc716387a4404b8923a5b7c8}{now} ()
+\begin{DoxyCompactList}\small\item\em Return the current time in microseconds in the timestamp domain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_aa356b5fc6b12af1f12e3d80f557ae8be}\label{structglow_1_1_trace_event_aa356b5fc6b12af1f12e3d80f557ae8be}} 
+static llvm\+::\+String\+Ref \hyperlink{structglow_1_1_trace_event_aa356b5fc6b12af1f12e3d80f557ae8be}{trace\+Level\+To\+String} (\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} \hyperlink{structglow_1_1_trace_event_adad40f9005c398fa9704c40ec81e16f6}{level})
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the provided {\ttfamily level}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_ab99556f1d824a41d64538b7cd61ed7f9}\label{structglow_1_1_trace_event_ab99556f1d824a41d64538b7cd61ed7f9}} 
+std\+::string \hyperlink{structglow_1_1_trace_event_ab99556f1d824a41d64538b7cd61ed7f9}{name}
+\begin{DoxyCompactList}\small\item\em Human readable name for the item, will be used to match up begin and end. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_a86e36f81eebb4c661445019a8dc75fb5}\label{structglow_1_1_trace_event_a86e36f81eebb4c661445019a8dc75fb5}} 
+uint64\+\_\+t \hyperlink{structglow_1_1_trace_event_a86e36f81eebb4c661445019a8dc75fb5}{timestamp}
+\begin{DoxyCompactList}\small\item\em Time of the event, in microseconds since epoch. \end{DoxyCompactList}\item 
+char \hyperlink{structglow_1_1_trace_event_a959851b24699050f16b536c8a2807dbd}{type}
+\item 
+int \hyperlink{structglow_1_1_trace_event_a8babcdea3902b2e13327f4006fbbd6c2}{tid}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_a7cc8e0e7a3453c34a8f4cbd1b859fa0a}\label{structglow_1_1_trace_event_a7cc8e0e7a3453c34a8f4cbd1b859fa0a}} 
+uint64\+\_\+t \hyperlink{structglow_1_1_trace_event_a7cc8e0e7a3453c34a8f4cbd1b859fa0a}{duration} \{0\}
+\begin{DoxyCompactList}\small\item\em Duration of the event (for Complete events). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_a32f0202a8652f98dd419161416403fae}\label{structglow_1_1_trace_event_a32f0202a8652f98dd419161416403fae}} 
+int \hyperlink{structglow_1_1_trace_event_a32f0202a8652f98dd419161416403fae}{id} \{-\/1\}
+\begin{DoxyCompactList}\small\item\em Async event id (-\/1 == no id) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_adad40f9005c398fa9704c40ec81e16f6}\label{structglow_1_1_trace_event_adad40f9005c398fa9704c40ec81e16f6}} 
+\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} \hyperlink{structglow_1_1_trace_event_adad40f9005c398fa9704c40ec81e16f6}{level} \{N\+O\+NE\}
+\begin{DoxyCompactList}\small\item\em The type/verbosity of this event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_a75f23a704286a43d6a94d6bc602f9f94}\label{structglow_1_1_trace_event_a75f23a704286a43d6a94d6bc602f9f94}} 
+std\+::map$<$ std\+::string, std\+::string $>$ \hyperlink{structglow_1_1_trace_event_a75f23a704286a43d6a94d6bc602f9f94}{args}
+\begin{DoxyCompactList}\small\item\em Arbitrary \hyperlink{structglow_1_1_trace_event}{Trace\+Event} arguments (from spec). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_af2b2fc075debe344ecec4e5627d00032}\label{structglow_1_1_trace_event_af2b2fc075debe344ecec4e5627d00032}} 
+static constexpr auto \hyperlink{structglow_1_1_trace_event_af2b2fc075debe344ecec4e5627d00032}{Begin\+Type} = \textquotesingle{}B\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Event Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_a9acf3589a6db73613e453561da27c99a}\label{structglow_1_1_trace_event_a9acf3589a6db73613e453561da27c99a}} 
+static constexpr auto {\bfseries End\+Type} = \textquotesingle{}E\textquotesingle{}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_a7b34339ee5bc2d10db2caac328f36d5d}\label{structglow_1_1_trace_event_a7b34339ee5bc2d10db2caac328f36d5d}} 
+static constexpr auto {\bfseries Instant\+Type} = \textquotesingle{}I\textquotesingle{}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_aeeb5c2fa3918157b2a48785f35fb7aee}\label{structglow_1_1_trace_event_aeeb5c2fa3918157b2a48785f35fb7aee}} 
+static constexpr auto {\bfseries Complete\+Type} = \textquotesingle{}X\textquotesingle{}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_aa981a8b21809ca177f5f59079b4774b3}\label{structglow_1_1_trace_event_aa981a8b21809ca177f5f59079b4774b3}} 
+static constexpr auto {\bfseries Async\+Begin\+Type} = \textquotesingle{}b\textquotesingle{}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_a4c135f48d761a415a778d61d5195bf98}\label{structglow_1_1_trace_event_a4c135f48d761a415a778d61d5195bf98}} 
+static constexpr auto {\bfseries Async\+End\+Type} = \textquotesingle{}e\textquotesingle{}
+\item 
+\mbox{\Hypertarget{structglow_1_1_trace_event_aa41e6b466b2f7d8a8e569068c7b70a0a}\label{structglow_1_1_trace_event_aa41e6b466b2f7d8a8e569068c7b70a0a}} 
+static constexpr auto \hyperlink{structglow_1_1_trace_event_aa41e6b466b2f7d8a8e569068c7b70a0a}{Metadata\+Type} = \textquotesingle{}M\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Metadata\+Type is used for the thread name mapping. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An individual tracing event, such as the begin or end of an instruction. Designed to match the Google Trace Event Format for Chrome\+: \href{https://docs.google.com/document/d/1CvAClvFfyA5R-PhYUmn5OOQtYMH4h6I0nSsKchNAySU}{\tt https\+://docs.\+google.\+com/document/d/1\+Cv\+A\+Clv\+Ffy\+A5\+R-\/\+Ph\+Y\+Umn5\+O\+O\+Qt\+Y\+M\+H4h6\+I0n\+Ss\+Kch\+N\+Ay\+SU} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_trace_event_acbca9b65c5383467f89f034312d1160c}\label{structglow_1_1_trace_event_acbca9b65c5383467f89f034312d1160c}} 
+\index{glow\+::\+Trace\+Event@{glow\+::\+Trace\+Event}!dump\+Trace\+Events@{dump\+Trace\+Events}}
+\index{dump\+Trace\+Events@{dump\+Trace\+Events}!glow\+::\+Trace\+Event@{glow\+::\+Trace\+Event}}
+\subsubsection{\texorpdfstring{dump\+Trace\+Events()}{dumpTraceEvents()}}
+{\footnotesize\ttfamily void glow\+::\+Trace\+Event\+::dump\+Trace\+Events (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structglow_1_1_trace_event}{Trace\+Event} $>$ \&}]{events,  }\item[{llvm\+::\+String\+Ref}]{filename,  }\item[{const std\+::string \&}]{process\+Name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::map$<$ int, std\+::string $>$ \&}]{thread\+Names = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set up process name metadata.
+
+And thread name metadata. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1_trace_event_a8babcdea3902b2e13327f4006fbbd6c2}\label{structglow_1_1_trace_event_a8babcdea3902b2e13327f4006fbbd6c2}} 
+\index{glow\+::\+Trace\+Event@{glow\+::\+Trace\+Event}!tid@{tid}}
+\index{tid@{tid}!glow\+::\+Trace\+Event@{glow\+::\+Trace\+Event}}
+\subsubsection{\texorpdfstring{tid}{tid}}
+{\footnotesize\ttfamily int glow\+::\+Trace\+Event\+::tid}
+
+Thread Id for this event. All Events on the same tid will be shown on the same row of the trace. \mbox{\Hypertarget{structglow_1_1_trace_event_a959851b24699050f16b536c8a2807dbd}\label{structglow_1_1_trace_event_a959851b24699050f16b536c8a2807dbd}} 
+\index{glow\+::\+Trace\+Event@{glow\+::\+Trace\+Event}!type@{type}}
+\index{type@{type}!glow\+::\+Trace\+Event@{glow\+::\+Trace\+Event}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily char glow\+::\+Trace\+Event\+::type}
+
+\hyperlink{structglow_1_1_type}{Type} of the event, a (usually) one char code (see Event Descriptions in the Trace Event Format spec). e.\+g. \textquotesingle{}B\textquotesingle{} for begin event, \textquotesingle{}E\textquotesingle{} for end event. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Execution\+Context/Trace\+Events.\+h\item 
+lib/\+Execution\+Context/Trace\+Events.\+cpp\end{DoxyCompactItemize}

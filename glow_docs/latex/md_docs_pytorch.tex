@@ -1,0 +1,46 @@
+{\bfseries Warning\+:} Py\+Torch integration is still under development and does not yet have as much support as Caffe2 model loading.
+
+\subsection*{About}
+
+Import Py\+Torch models to Glow via the \href{https://pytorch.org/docs/master/jit.html}{\tt Py\+Torch J\+IT IR}.
+
+See {\ttfamily glow/torch\+\_\+glow/examples} for illustrative examples.
+
+\subsection*{Setup}
+
+
+\begin{DoxyItemize}
+\item Follow directions in Building.\+md to make sure Glow can be built
+\item install \href{https://pytorch.org/}{\tt Py\+Torch} nightly
+\item cd to {\ttfamily glow/torch\+\_\+glow}
+\end{DoxyItemize}
+
+\subsection*{Usage}
+
+\subsubsection*{Run tests}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily python setup.\+py test} \subsubsection*{Temporarily install while developing on Glow}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily python setup.\+py develop}
+\begin{DoxyItemize}
+\item verify with installation worked with {\ttfamily import torch\+\_\+glow} in Python \subsubsection*{Install}
+\end{DoxyItemize}
+\item {\ttfamily python setup.\+py install}
+\begin{DoxyItemize}
+\item verify with installation worked with {\ttfamily import torch\+\_\+glow} in Python
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsection*{Tips}
+
+
+\begin{DoxyItemize}
+\item Use the {\ttfamily -\/-\/run\+\_\+cmake} flag to force rerun cmake
+\item Use the {\ttfamily -\/-\/cmake\+\_\+prefix\+\_\+path} flag to specify an llvm install location just like when building glow
+\item To disable capturing test outputs and print a lot more test details, add {\ttfamily addopts = -\/s} to {\ttfamily \mbox{[}tool\+:pytest\mbox{]}} in setup.\+cfg 
+\end{DoxyItemize}

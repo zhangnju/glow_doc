@@ -1,0 +1,80 @@
+\hypertarget{classglow_1_1_thread_pool}{}\section{glow\+:\+:Thread\+Pool Class Reference}
+\label{classglow_1_1_thread_pool}\index{glow\+::\+Thread\+Pool@{glow\+::\+Thread\+Pool}}
+
+
+Thread pool for asynchronous execution of generic functions.  
+
+
+
+
+{\ttfamily \#include $<$Thread\+Pool.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_thread_pool_ab10100ee1172c075fd38583f1a194080}{Thread\+Pool} (unsigned num\+Workers=k\+Num\+Workers)
+\item 
+\hyperlink{classglow_1_1_thread_pool_aa2b1e452ea6045331c2f26b247558dd5}{$\sim$\+Thread\+Pool} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_thread_pool_ac98310c2bf46b65a5d381b517ce69e1a}\label{classglow_1_1_thread_pool_ac98310c2bf46b65a5d381b517ce69e1a}} 
+void \hyperlink{classglow_1_1_thread_pool_ac98310c2bf46b65a5d381b517ce69e1a}{stop} (bool block=false)
+\begin{DoxyCompactList}\small\item\em Stop all threads and optionally wait for them to join. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename F $>$ }\\std\+::future$<$ void $>$ \hyperlink{classglow_1_1_thread_pool_a3ec94a4373c5a4380c28d75bfb61e3ac}{submit} (F \&\&fn)
+\item 
+\mbox{\Hypertarget{classglow_1_1_thread_pool_ac766376d0bbf7f48b62f74622c53dcf2}\label{classglow_1_1_thread_pool_ac766376d0bbf7f48b62f74622c53dcf2}} 
+std\+::future$<$ void $>$ \hyperlink{classglow_1_1_thread_pool_ac766376d0bbf7f48b62f74622c53dcf2}{submit} (std\+::packaged\+\_\+task$<$ void(void)$>$ \&\&task)
+\begin{DoxyCompactList}\small\item\em Submit {\ttfamily task} as a work item for the thread pool. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_thread_executor}{Thread\+Executor} $\ast$ \hyperlink{classglow_1_1_thread_pool_a1da371b53981316f8e0ebd66efd43cd1}{get\+Executor} ()
+\item 
+{\footnotesize template$<$typename F $>$ }\\std\+::future$<$ void $>$ \hyperlink{classglow_1_1_thread_pool_ac75f4d3a956beb63705644d9b867a45a}{run\+On\+All\+Threads} (F \&\&fn)
+\item 
+\mbox{\Hypertarget{classglow_1_1_thread_pool_a0afcdede97273797947323fdf39a1726}\label{classglow_1_1_thread_pool_a0afcdede97273797947323fdf39a1726}} 
+const std\+::set$<$ size\+\_\+t $>$ \& {\bfseries get\+Thread\+Ids} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Thread pool for asynchronous execution of generic functions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_thread_pool_ab10100ee1172c075fd38583f1a194080}\label{classglow_1_1_thread_pool_ab10100ee1172c075fd38583f1a194080}} 
+\index{glow\+::\+Thread\+Pool@{glow\+::\+Thread\+Pool}!Thread\+Pool@{Thread\+Pool}}
+\index{Thread\+Pool@{Thread\+Pool}!glow\+::\+Thread\+Pool@{glow\+::\+Thread\+Pool}}
+\subsubsection{\texorpdfstring{Thread\+Pool()}{ThreadPool()}}
+{\footnotesize\ttfamily glow\+::\+Thread\+Pool\+::\+Thread\+Pool (\begin{DoxyParamCaption}\item[{unsigned}]{num\+Workers = {\ttfamily kNumWorkers} }\end{DoxyParamCaption})}
+
+Constructor. Initializes a thread pool with {\ttfamily num\+Workers} threads and has them all run Thread\+Pool\+::thread\+Pool\+Worker\+Main. \mbox{\Hypertarget{classglow_1_1_thread_pool_aa2b1e452ea6045331c2f26b247558dd5}\label{classglow_1_1_thread_pool_aa2b1e452ea6045331c2f26b247558dd5}} 
+\index{glow\+::\+Thread\+Pool@{glow\+::\+Thread\+Pool}!````~Thread\+Pool@{$\sim$\+Thread\+Pool}}
+\index{````~Thread\+Pool@{$\sim$\+Thread\+Pool}!glow\+::\+Thread\+Pool@{glow\+::\+Thread\+Pool}}
+\subsubsection{\texorpdfstring{$\sim$\+Thread\+Pool()}{~ThreadPool()}}
+{\footnotesize\ttfamily glow\+::\+Thread\+Pool\+::$\sim$\+Thread\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. Signals to all threads to stop and waits for all of them to exit. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_thread_pool_a1da371b53981316f8e0ebd66efd43cd1}\label{classglow_1_1_thread_pool_a1da371b53981316f8e0ebd66efd43cd1}} 
+\index{glow\+::\+Thread\+Pool@{glow\+::\+Thread\+Pool}!get\+Executor@{get\+Executor}}
+\index{get\+Executor@{get\+Executor}!glow\+::\+Thread\+Pool@{glow\+::\+Thread\+Pool}}
+\subsubsection{\texorpdfstring{get\+Executor()}{getExecutor()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_thread_executor}{Thread\+Executor}$\ast$ glow\+::\+Thread\+Pool\+::get\+Executor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a \hyperlink{classglow_1_1_thread_executor}{Thread\+Executor} that can be accessed directly, allowing submitting multiple tasks to the same thread. \mbox{\Hypertarget{classglow_1_1_thread_pool_ac75f4d3a956beb63705644d9b867a45a}\label{classglow_1_1_thread_pool_ac75f4d3a956beb63705644d9b867a45a}} 
+\index{glow\+::\+Thread\+Pool@{glow\+::\+Thread\+Pool}!run\+On\+All\+Threads@{run\+On\+All\+Threads}}
+\index{run\+On\+All\+Threads@{run\+On\+All\+Threads}!glow\+::\+Thread\+Pool@{glow\+::\+Thread\+Pool}}
+\subsubsection{\texorpdfstring{run\+On\+All\+Threads()}{runOnAllThreads()}}
+{\footnotesize\ttfamily template$<$typename F $>$ \\
+std\+::future$<$void$>$ glow\+::\+Thread\+Pool\+::run\+On\+All\+Threads (\begin{DoxyParamCaption}\item[{F \&\&}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Run the provided function on every thread in the \hyperlink{classglow_1_1_thread_pool}{Thread\+Pool}. The function must be copyable. \mbox{\Hypertarget{classglow_1_1_thread_pool_a3ec94a4373c5a4380c28d75bfb61e3ac}\label{classglow_1_1_thread_pool_a3ec94a4373c5a4380c28d75bfb61e3ac}} 
+\index{glow\+::\+Thread\+Pool@{glow\+::\+Thread\+Pool}!submit@{submit}}
+\index{submit@{submit}!glow\+::\+Thread\+Pool@{glow\+::\+Thread\+Pool}}
+\subsubsection{\texorpdfstring{submit()}{submit()}}
+{\footnotesize\ttfamily template$<$typename F $>$ \\
+std\+::future$<$void$>$ glow\+::\+Thread\+Pool\+::submit (\begin{DoxyParamCaption}\item[{F \&\&}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Submit {\ttfamily fn} as a work item for the thread pool. {\ttfamily fn} must be a lambda with void return type and arguments. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Thread\+Pool.\+h\item 
+lib/\+Support/Thread\+Pool.\+cpp\end{DoxyCompactItemize}

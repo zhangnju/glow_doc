@@ -1,0 +1,71 @@
+\hypertarget{class_abstract_dotty_printer}{}\section{Abstract\+Dotty\+Printer Class Reference}
+\label{class_abstract_dotty_printer}\index{Abstract\+Dotty\+Printer@{Abstract\+Dotty\+Printer}}
+
+
+A helper class for visiting and generating the dotty graph file.  
+
+
+Inheritance diagram for Abstract\+Dotty\+Printer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_abstract_dotty_printer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_abstract_dotty_printer_a0e5c39e3f6d24a29c56f871c300978a8}\label{class_abstract_dotty_printer_a0e5c39e3f6d24a29c56f871c300978a8}} 
+void {\bfseries dump\+All} (std\+::ostream \&os)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_abstract_dotty_printer_a9535123f72954dd24b5f8b1b59108e6b}\label{class_abstract_dotty_printer_a9535123f72954dd24b5f8b1b59108e6b}} 
+using {\bfseries Vertex\+Number\+Map} = std\+::unordered\+\_\+map$<$ void $\ast$, unsigned $>$
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_abstract_dotty_printer_a16114210e14d5634d233f72872525611}{dump\+Label\+For\+Row} (llvm\+::\+Array\+Ref$<$ std\+::string $>$ names, std\+::ostream \&os)
+\item 
+\mbox{\Hypertarget{class_abstract_dotty_printer_ab0999aeedafe421fd7093a56ee6e5810}\label{class_abstract_dotty_printer_ab0999aeedafe421fd7093a56ee6e5810}} 
+void {\bfseries dump\+Label} (\hyperlink{classglow_1_1_node}{Node} $\ast$N, std\+::ostream \&os)
+\item 
+\mbox{\Hypertarget{class_abstract_dotty_printer_a172c8248d08fb2d56fc5ca963561a81b}\label{class_abstract_dotty_printer_a172c8248d08fb2d56fc5ca963561a81b}} 
+void {\bfseries dump\+Node} (\hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\item 
+\mbox{\Hypertarget{class_abstract_dotty_printer_a8f5fb2a0bae624879ce9a5712c5ba5c6}\label{class_abstract_dotty_printer_a8f5fb2a0bae624879ce9a5712c5ba5c6}} 
+void {\bfseries dump\+Edge\+Style} (const \hyperlink{classglow_1_1_node}{Node} $\ast$N, size\+\_\+t i, \hyperlink{classglow_1_1_node}{Node} $\ast$to, std\+::ostream \&os)
+\item 
+\mbox{\Hypertarget{class_abstract_dotty_printer_abadee112b7d95c111e781f3961fd77de}\label{class_abstract_dotty_printer_abadee112b7d95c111e781f3961fd77de}} 
+std\+::string {\bfseries unique\+Vertex\+Name} (void $\ast$N)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_abstract_dotty_printer_acd9ebd3f910c6e80a664a61691b4486c}\label{class_abstract_dotty_printer_acd9ebd3f910c6e80a664a61691b4486c}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries vertices\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{class_abstract_dotty_printer_a48aab95e3f18a31384e38a67067f2b5d}\label{class_abstract_dotty_printer_a48aab95e3f18a31384e38a67067f2b5d}} 
+std\+::unordered\+\_\+set$<$ std\+::string $>$ {\bfseries edges\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{class_abstract_dotty_printer_a858283a379ee6ee5445aecefdd4ff7d3}\label{class_abstract_dotty_printer_a858283a379ee6ee5445aecefdd4ff7d3}} 
+Vertex\+Number\+Map {\bfseries vertex\+\_\+numbers} \{\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A helper class for visiting and generating the dotty graph file. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_abstract_dotty_printer_a16114210e14d5634d233f72872525611}\label{class_abstract_dotty_printer_a16114210e14d5634d233f72872525611}} 
+\index{Abstract\+Dotty\+Printer@{Abstract\+Dotty\+Printer}!dump\+Label\+For\+Row@{dump\+Label\+For\+Row}}
+\index{dump\+Label\+For\+Row@{dump\+Label\+For\+Row}!Abstract\+Dotty\+Printer@{Abstract\+Dotty\+Printer}}
+\subsubsection{\texorpdfstring{dump\+Label\+For\+Row()}{dumpLabelForRow()}}
+{\footnotesize\ttfamily void Abstract\+Dotty\+Printer\+::dump\+Label\+For\+Row (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ std\+::string $>$}]{names,  }\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Dumps label for a input/output row, given port names. E.\+g. \{\char`\"{}\+L\+H\+S\char`\"{}, \char`\"{}\+R\+H\+S\char`\"{}\} will produce \{$<$\+L\+H\+S$>$L\+H\+S$\vert$$<$\+R\+H\+S$>$R\+HS\} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Graph/Graph.\+cpp\end{DoxyCompactItemize}

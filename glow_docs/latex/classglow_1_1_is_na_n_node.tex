@@ -1,0 +1,102 @@
+\hypertarget{classglow_1_1_is_na_n_node}{}\section{glow\+:\+:Is\+Na\+N\+Node Class Reference}
+\label{classglow_1_1_is_na_n_node}\index{glow\+::\+Is\+Na\+N\+Node@{glow\+::\+Is\+Na\+N\+Node}}
+
+
+Determines whether each element of the Input is NaN and generates a mask that can be consumed by a Select node.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Is\+Na\+N\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_is_na_n_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_aa7882e42c9c438a385e60650b10d514d}\label{classglow_1_1_is_na_n_node_aa7882e42c9c438a385e60650b10d514d}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_a8a4466ba994918600609b5197732ada2}\label{classglow_1_1_is_na_n_node_a8a4466ba994918600609b5197732ada2}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_a00ea507198f2b8441beadbdbf3a99a6e}\label{classglow_1_1_is_na_n_node_a00ea507198f2b8441beadbdbf3a99a6e}} 
+{\bfseries Is\+Na\+N\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input)
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_af8e601e7cab23ee8e1d4c2f18083676f}\label{classglow_1_1_is_na_n_node_af8e601e7cab23ee8e1d4c2f18083676f}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_a98560a3af85f48b7c2b335960cfcfdbf}\label{classglow_1_1_is_na_n_node_a98560a3af85f48b7c2b335960cfcfdbf}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_a956871f68aef7f4ecc71d1af9a872b09}\label{classglow_1_1_is_na_n_node_a956871f68aef7f4ecc71d1af9a872b09}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_abf88d6afc6c97240d6b36d286887479e}\label{classglow_1_1_is_na_n_node_abf88d6afc6c97240d6b36d286887479e}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_ae58baf6fc22f1532bcf2f46cea81ad58}\label{classglow_1_1_is_na_n_node_ae58baf6fc22f1532bcf2f46cea81ad58}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_aac23d838914389a33b8778a973119b28}\label{classglow_1_1_is_na_n_node_aac23d838914389a33b8778a973119b28}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_a1b8fa9ae8c67df2a2caf9fc243bbad04}\label{classglow_1_1_is_na_n_node_a1b8fa9ae8c67df2a2caf9fc243bbad04}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_a27bab3db30e157ea7769483ddcd7eb88}\label{classglow_1_1_is_na_n_node_a27bab3db30e157ea7769483ddcd7eb88}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_afed15a9cf7169feac88f5e7c9fb184aa}\label{classglow_1_1_is_na_n_node_afed15a9cf7169feac88f5e7c9fb184aa}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_aed6c7ca0e60c534a2edb53b4b4c1ce41}\label{classglow_1_1_is_na_n_node_aed6c7ca0e60c534a2edb53b4b4c1ce41}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_af2f9e7b5f8a2f080c78afe69fba667f0}\label{classglow_1_1_is_na_n_node_af2f9e7b5f8a2f080c78afe69fba667f0}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_aaff9dcb21b3c460d28955472f7fb6778}\label{classglow_1_1_is_na_n_node_aaff9dcb21b3c460d28955472f7fb6778}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_a7cfe95a43000f626fd24b76d37f0d0b3}\label{classglow_1_1_is_na_n_node_a7cfe95a43000f626fd24b76d37f0d0b3}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_is_na_n_node}{Is\+Na\+N\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_a495dfa9dd734fac2ee6b0ff5cae56f66}\label{classglow_1_1_is_na_n_node_a495dfa9dd734fac2ee6b0ff5cae56f66}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_a3bf35a95999418b6ed598385da344b6b}\label{classglow_1_1_is_na_n_node_a3bf35a95999418b6ed598385da344b6b}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_a1f39b6e663f17cf46df6cd76902ba2d0}\label{classglow_1_1_is_na_n_node_a1f39b6e663f17cf46df6cd76902ba2d0}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_a714644a114da209eb013c2bbf94975fe}\label{classglow_1_1_is_na_n_node_a714644a114da209eb013c2bbf94975fe}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_is_na_n_node_acf05e15e0081826d8ca9e870d1e646b9}\label{classglow_1_1_is_na_n_node_acf05e15e0081826d8ca9e870d1e646b9}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Determines whether each element of the Input is NaN and generates a mask that can be consumed by a Select node. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,97 @@
+\hypertarget{classglow_1_1_use_def}{}\section{glow\+:\+:Use\+Def$<$ User\+Ty, Use $>$ Class Template Reference}
+\label{classglow_1_1_use_def}\index{glow\+::\+Use\+Def$<$ User\+Ty, Use $>$@{glow\+::\+Use\+Def$<$ User\+Ty, Use $>$}}
+
+
+A \hyperlink{classglow_1_1_use_def}{Use\+Def} is something that can be an operand for an instruction.  
+
+
+
+
+{\ttfamily \#include $<$Use\+Def.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_use_def_a8ad43846727ec8ca1d90d6bfe78e42aa}\label{classglow_1_1_use_def_a8ad43846727ec8ca1d90d6bfe78e42aa}} 
+void \hyperlink{classglow_1_1_use_def_a8ad43846727ec8ca1d90d6bfe78e42aa}{remove\+Use} (\hyperlink{structglow_1_1_use}{Use} U)
+\begin{DoxyCompactList}\small\item\em Removes the use {\ttfamily U} from the uselist. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_use_def_af4c271b975499255e48b0ba1f050acf1}\label{classglow_1_1_use_def_af4c271b975499255e48b0ba1f050acf1}} 
+void \hyperlink{classglow_1_1_use_def_af4c271b975499255e48b0ba1f050acf1}{add\+Use} (\hyperlink{structglow_1_1_use}{Use} U)
+\begin{DoxyCompactList}\small\item\em Adds the use {\ttfamily U}. \end{DoxyCompactList}\item 
+bool \hyperlink{classglow_1_1_use_def_a57e259466504c1b589ff4f84dc5bcbb9}{has\+Users} () const
+\item 
+bool \hyperlink{classglow_1_1_use_def_aff3381f7085f27c6053426920b42147c}{has\+One\+Use} () const
+\item 
+unsigned \hyperlink{classglow_1_1_use_def_aee4e20812def8d2a62db301527e8e9e8}{get\+Num\+Users} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_use_def_a9b0a173f02a51a77ce3e9e342ae416c9}\label{classglow_1_1_use_def_a9b0a173f02a51a77ce3e9e342ae416c9}} 
+bool \hyperlink{classglow_1_1_use_def_a9b0a173f02a51a77ce3e9e342ae416c9}{has\+User} (const User\+Ty $\ast$I) const
+\begin{DoxyCompactList}\small\item\em Returns true if the user {\ttfamily I} is in the list. \end{DoxyCompactList}\item 
+std\+::list$<$ \hyperlink{structglow_1_1_use}{Use} $>$ \& \hyperlink{classglow_1_1_use_def_a36287064b16f4c2569988d2b795cd9b7}{get\+Users} ()
+\item 
+const std\+::list$<$ \hyperlink{structglow_1_1_use}{Use} $>$ \& \hyperlink{classglow_1_1_use_def_a15a07afe24f9546f4ea841ffefe46508}{get\+Users} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename User\+Ty, typename Use$>$\newline
+class glow\+::\+Use\+Def$<$ User\+Ty, Use $>$}
+
+A \hyperlink{classglow_1_1_use_def}{Use\+Def} is something that can be an operand for an instruction. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_use_def_aee4e20812def8d2a62db301527e8e9e8}\label{classglow_1_1_use_def_aee4e20812def8d2a62db301527e8e9e8}} 
+\index{glow\+::\+Use\+Def@{glow\+::\+Use\+Def}!get\+Num\+Users@{get\+Num\+Users}}
+\index{get\+Num\+Users@{get\+Num\+Users}!glow\+::\+Use\+Def@{glow\+::\+Use\+Def}}
+\subsubsection{\texorpdfstring{get\+Num\+Users()}{getNumUsers()}}
+{\footnotesize\ttfamily template$<$typename User\+Ty, typename Use$>$ \\
+unsigned \hyperlink{classglow_1_1_use_def}{glow\+::\+Use\+Def}$<$ User\+Ty, \hyperlink{structglow_1_1_use}{Use} $>$\+::get\+Num\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of users that the value has. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_use_def_a36287064b16f4c2569988d2b795cd9b7}\label{classglow_1_1_use_def_a36287064b16f4c2569988d2b795cd9b7}} 
+\index{glow\+::\+Use\+Def@{glow\+::\+Use\+Def}!get\+Users@{get\+Users}}
+\index{get\+Users@{get\+Users}!glow\+::\+Use\+Def@{glow\+::\+Use\+Def}}
+\subsubsection{\texorpdfstring{get\+Users()}{getUsers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename User\+Ty, typename Use$>$ \\
+std\+::list$<$\hyperlink{structglow_1_1_use}{Use}$>$\& \hyperlink{classglow_1_1_use_def}{glow\+::\+Use\+Def}$<$ User\+Ty, \hyperlink{structglow_1_1_use}{Use} $>$\+::get\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of users for this value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_use_def_a15a07afe24f9546f4ea841ffefe46508}\label{classglow_1_1_use_def_a15a07afe24f9546f4ea841ffefe46508}} 
+\index{glow\+::\+Use\+Def@{glow\+::\+Use\+Def}!get\+Users@{get\+Users}}
+\index{get\+Users@{get\+Users}!glow\+::\+Use\+Def@{glow\+::\+Use\+Def}}
+\subsubsection{\texorpdfstring{get\+Users()}{getUsers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename User\+Ty, typename Use$>$ \\
+const std\+::list$<$\hyperlink{structglow_1_1_use}{Use}$>$\& \hyperlink{classglow_1_1_use_def}{glow\+::\+Use\+Def}$<$ User\+Ty, \hyperlink{structglow_1_1_use}{Use} $>$\+::get\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of users for this value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_use_def_aff3381f7085f27c6053426920b42147c}\label{classglow_1_1_use_def_aff3381f7085f27c6053426920b42147c}} 
+\index{glow\+::\+Use\+Def@{glow\+::\+Use\+Def}!has\+One\+Use@{has\+One\+Use}}
+\index{has\+One\+Use@{has\+One\+Use}!glow\+::\+Use\+Def@{glow\+::\+Use\+Def}}
+\subsubsection{\texorpdfstring{has\+One\+Use()}{hasOneUse()}}
+{\footnotesize\ttfamily template$<$typename User\+Ty, typename Use$>$ \\
+bool \hyperlink{classglow_1_1_use_def}{glow\+::\+Use\+Def}$<$ User\+Ty, \hyperlink{structglow_1_1_use}{Use} $>$\+::has\+One\+Use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if there is a single use to this value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_use_def_a57e259466504c1b589ff4f84dc5bcbb9}\label{classglow_1_1_use_def_a57e259466504c1b589ff4f84dc5bcbb9}} 
+\index{glow\+::\+Use\+Def@{glow\+::\+Use\+Def}!has\+Users@{has\+Users}}
+\index{has\+Users@{has\+Users}!glow\+::\+Use\+Def@{glow\+::\+Use\+Def}}
+\subsubsection{\texorpdfstring{has\+Users()}{hasUsers()}}
+{\footnotesize\ttfamily template$<$typename User\+Ty, typename Use$>$ \\
+bool \hyperlink{classglow_1_1_use_def}{glow\+::\+Use\+Def}$<$ User\+Ty, \hyperlink{structglow_1_1_use}{Use} $>$\+::has\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if the value has some users. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Use\+Def.\+h\end{DoxyCompactItemize}

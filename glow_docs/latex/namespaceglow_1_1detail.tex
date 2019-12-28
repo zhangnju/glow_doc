@@ -1,0 +1,121 @@
+\hypertarget{namespaceglow_1_1detail}{}\section{glow\+:\+:detail Namespace Reference}
+\label{namespaceglow_1_1detail}\index{glow\+::detail@{glow\+::detail}}
+
+
+Forward declarations.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classglow_1_1detail_1_1_check_state}{Check\+State}
+\item 
+class \hyperlink{classglow_1_1detail_1_1_check_state_3_01false_01_4}{Check\+State$<$ false $>$}
+\begin{DoxyCompactList}\small\item\em Specialization of \hyperlink{classglow_1_1detail_1_1_check_state}{Check\+State} with checking disabled. \end{DoxyCompactList}\item 
+class \hyperlink{classglow_1_1detail_1_1_check_state_3_01true_01_4}{Check\+State$<$ true $>$}
+\begin{DoxyCompactList}\small\item\em Specialization of \hyperlink{classglow_1_1detail_1_1_check_state}{Check\+State} with checking enabled. \end{DoxyCompactList}\item 
+class \hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error}
+\item 
+class \hyperlink{classglow_1_1detail_1_1_glow_error_empty}{Glow\+Error\+Empty}
+\item 
+class \hyperlink{classglow_1_1detail_1_1_glow_error_success}{Glow\+Error\+Success}
+\item 
+class \hyperlink{classglow_1_1detail_1_1_glow_error_value}{Glow\+Error\+Value}
+\item 
+class \hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected}
+\item 
+struct \hyperlink{structglow_1_1detail_1_1_is_error}{Is\+Error}
+\begin{DoxyCompactList}\small\item\em Is true\+\_\+type only if applied to Error or a descendant. \end{DoxyCompactList}\item 
+struct \hyperlink{structglow_1_1detail_1_1_is_expected}{Is\+Expected}
+\begin{DoxyCompactList}\small\item\em Is true\+\_\+type only if applied to Expected. \end{DoxyCompactList}\item 
+struct \hyperlink{structglow_1_1detail_1_1_is_expected_3_01_glow_expected_3_01_t_01_4_01_4}{Is\+Expected$<$ Glow\+Expected$<$ T $>$ $>$}
+\item 
+class \hyperlink{classglow_1_1detail_1_1_opaque}{Opaque}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1detail_1_1_glow_error_value}{Glow\+Error\+Value} $>$ \hyperlink{namespaceglow_1_1detail_a9da81cdf40a87d71d6a6d3937cad18a6}{take\+Error\+Value} (\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error} error)
+\item 
+void \hyperlink{namespaceglow_1_1detail_ab97940326641f5f16ece0eb0013348e6}{exit\+On\+Error} (const char $\ast$file\+Name, size\+\_\+t line\+Number, \hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error} error)
+\item 
+{\footnotesize template$<$typename StreamT $>$ }\\StreamT \& \hyperlink{namespaceglow_1_1detail_a523e3184bbccd0f375f59b695812f382}{operator$<$$<$} (StreamT \&os, const \hyperlink{classglow_1_1detail_1_1_glow_error_value}{Glow\+Error\+Value} \&error\+Value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespaceglow_1_1detail_a2f258d44dd2a51bcbd37c3fa7ab163c7}{exit\+On\+Error} (const char $\ast$file\+Name, size\+\_\+t line\+Number, \hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected}$<$ T $>$ expected)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error} \hyperlink{namespaceglow_1_1detail_a21cb777b3cd78edbd6dc1531606590db}{make\+Error} (Args \&\&... args)
+\item 
+bool \hyperlink{namespaceglow_1_1detail_a01efc381cb4bbab786537b832d4c6f71}{error\+To\+Bool} (const char $\ast$file\+Name, size\+\_\+t line\+Number, \hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error} error, bool log=true)
+\item 
+std\+::string \hyperlink{namespaceglow_1_1detail_a31088d4ee87e842ac413f6029cf5bc7f}{error\+To\+String} (\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error} error)
+\item 
+void \hyperlink{namespaceglow_1_1detail_a20b523c2b82a75da01d030784732a461}{error\+To\+Void} (const char $\ast$file\+Name, size\+\_\+t line\+Number, \hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error} error, bool log=true)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Forward declarations. 
+
+N\+O\+TE\+: detail namespace contains code that should not be used outside of \hyperlink{_error_8h_source}{Error.\+h} and Error.\+cpp. Please instead use types and macros defined above. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceglow_1_1detail_a01efc381cb4bbab786537b832d4c6f71}\label{namespaceglow_1_1detail_a01efc381cb4bbab786537b832d4c6f71}} 
+\index{glow\+::detail@{glow\+::detail}!error\+To\+Bool@{error\+To\+Bool}}
+\index{error\+To\+Bool@{error\+To\+Bool}!glow\+::detail@{glow\+::detail}}
+\subsubsection{\texorpdfstring{error\+To\+Bool()}{errorToBool()}}
+{\footnotesize\ttfamily bool glow\+::detail\+::error\+To\+Bool (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{size\+\_\+t}]{line\+Number,  }\item[{\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error}}]{error,  }\item[{bool}]{log = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Given an Error {\ttfamily error}, destroys the Error and returns true if an Error\+Value was contained. Logs if {\ttfamily log} is true and uses {\ttfamily file\+Name} and {\ttfamily line\+Number} for additional logging information. N\+O\+TE\+: this should not be used directly, use macros defined at the top of \hyperlink{_error_8h_source}{Error.\+h} instead. \mbox{\Hypertarget{namespaceglow_1_1detail_a31088d4ee87e842ac413f6029cf5bc7f}\label{namespaceglow_1_1detail_a31088d4ee87e842ac413f6029cf5bc7f}} 
+\index{glow\+::detail@{glow\+::detail}!error\+To\+String@{error\+To\+String}}
+\index{error\+To\+String@{error\+To\+String}!glow\+::detail@{glow\+::detail}}
+\subsubsection{\texorpdfstring{error\+To\+String()}{errorToString()}}
+{\footnotesize\ttfamily std\+::string glow\+::detail\+::error\+To\+String (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error}}]{error }\end{DoxyParamCaption})}
+
+Given an Error {\ttfamily error}, destroys the Error and returns a string that is the result of calling log() on the Error\+Value it contained if any and \char`\"{}success\char`\"{} otherwise. N\+O\+TE\+: this should not be used directly, use macros defined at the top of \hyperlink{_error_8h_source}{Error.\+h} instead. \mbox{\Hypertarget{namespaceglow_1_1detail_a20b523c2b82a75da01d030784732a461}\label{namespaceglow_1_1detail_a20b523c2b82a75da01d030784732a461}} 
+\index{glow\+::detail@{glow\+::detail}!error\+To\+Void@{error\+To\+Void}}
+\index{error\+To\+Void@{error\+To\+Void}!glow\+::detail@{glow\+::detail}}
+\subsubsection{\texorpdfstring{error\+To\+Void()}{errorToVoid()}}
+{\footnotesize\ttfamily void glow\+::detail\+::error\+To\+Void (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{size\+\_\+t}]{line\+Number,  }\item[{\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error}}]{error,  }\item[{bool}]{log = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Given an Error {\ttfamily error}, destroys the Error. Logs if {\ttfamily log} is true and uses {\ttfamily file\+Name} and {\ttfamily line\+Number} for additional logging information. N\+O\+TE\+: this should not be used directly, use macros defined at the top of \hyperlink{_error_8h_source}{Error.\+h} instead. \mbox{\Hypertarget{namespaceglow_1_1detail_ab97940326641f5f16ece0eb0013348e6}\label{namespaceglow_1_1detail_ab97940326641f5f16ece0eb0013348e6}} 
+\index{glow\+::detail@{glow\+::detail}!exit\+On\+Error@{exit\+On\+Error}}
+\index{exit\+On\+Error@{exit\+On\+Error}!glow\+::detail@{glow\+::detail}}
+\subsubsection{\texorpdfstring{exit\+On\+Error()}{exitOnError()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void glow\+::detail\+::exit\+On\+Error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{size\+\_\+t}]{line\+Number,  }\item[{\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error}}]{error }\end{DoxyParamCaption})}
+
+Takes an Error {\ttfamily error} and asserts that it does not contain an Error\+Value. Uses {\ttfamily file\+Name} and {\ttfamily line\+Number} for logging. \mbox{\Hypertarget{namespaceglow_1_1detail_a2f258d44dd2a51bcbd37c3fa7ab163c7}\label{namespaceglow_1_1detail_a2f258d44dd2a51bcbd37c3fa7ab163c7}} 
+\index{glow\+::detail@{glow\+::detail}!exit\+On\+Error@{exit\+On\+Error}}
+\index{exit\+On\+Error@{exit\+On\+Error}!glow\+::detail@{glow\+::detail}}
+\subsubsection{\texorpdfstring{exit\+On\+Error()}{exitOnError()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T glow\+::detail\+::exit\+On\+Error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{size\+\_\+t}]{line\+Number,  }\item[{\hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected}$<$ T $>$}]{expected }\end{DoxyParamCaption})}
+
+Given an Expected$<$\+T$>$, asserts that it contains a value T and \begin{DoxyReturn}{Returns}
+it. If an Error\+Value is contained in the expected then logs this along with {\ttfamily file\+Name} and {\ttfamily line\+Number} and aborts. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceglow_1_1detail_a21cb777b3cd78edbd6dc1531606590db}\label{namespaceglow_1_1detail_a21cb777b3cd78edbd6dc1531606590db}} 
+\index{glow\+::detail@{glow\+::detail}!make\+Error@{make\+Error}}
+\index{make\+Error@{make\+Error}!glow\+::detail@{glow\+::detail}}
+\subsubsection{\texorpdfstring{make\+Error()}{makeError()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error} glow\+::detail\+::make\+Error (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+Constructs an Error\+Value from {\ttfamily args} then wraps and \begin{DoxyReturn}{Returns}
+it in an Error. N\+O\+TE\+: this should not be used directly, use macros defined at the top of \hyperlink{_error_8h_source}{Error.\+h} instead. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceglow_1_1detail_a523e3184bbccd0f375f59b695812f382}\label{namespaceglow_1_1detail_a523e3184bbccd0f375f59b695812f382}} 
+\index{glow\+::detail@{glow\+::detail}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!glow\+::detail@{glow\+::detail}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename StreamT $>$ \\
+StreamT\& glow\+::detail\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{StreamT \&}]{os,  }\item[{const \hyperlink{classglow_1_1detail_1_1_glow_error_value}{Glow\+Error\+Value} \&}]{error\+Value }\end{DoxyParamCaption})}
+
+Overload for operator$<$$<$ for logging an Error\+Value {\ttfamily error\+Value} to a stream {\ttfamily os}. \mbox{\Hypertarget{namespaceglow_1_1detail_a9da81cdf40a87d71d6a6d3937cad18a6}\label{namespaceglow_1_1detail_a9da81cdf40a87d71d6a6d3937cad18a6}} 
+\index{glow\+::detail@{glow\+::detail}!take\+Error\+Value@{take\+Error\+Value}}
+\index{take\+Error\+Value@{take\+Error\+Value}!glow\+::detail@{glow\+::detail}}
+\subsubsection{\texorpdfstring{take\+Error\+Value()}{takeErrorValue()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1detail_1_1_glow_error_value}{Glow\+Error\+Value} $>$ glow\+::detail\+::take\+Error\+Value (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error}}]{error }\end{DoxyParamCaption})}
+
+This method is the only way to destroy an Error {\ttfamily error} and mark it as checked when it contains an Error\+Value. It \begin{DoxyReturn}{Returns}
+the contained Error\+Value. N\+O\+TE\+: This method should not be used directly, use one of the methods that calls this. 
+\end{DoxyReturn}

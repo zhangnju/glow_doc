@@ -1,0 +1,56 @@
+\hypertarget{classglow_1_1_handle_iterator}{}\section{glow\+:\+:Handle\+Iterator$<$ Elem\+Ty, Is\+Const $>$ Class Template Reference}
+\label{classglow_1_1_handle_iterator}\index{glow\+::\+Handle\+Iterator$<$ Elem\+Ty, Is\+Const $>$@{glow\+::\+Handle\+Iterator$<$ Elem\+Ty, Is\+Const $>$}}
+
+
+{\ttfamily \#include $<$Tensor.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Handle\+Iterator$<$ Elem\+Ty, Is\+Const $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_handle_iterator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_iterator_ac398e8510decbf1c8a1ecfaec8e667a0}\label{classglow_1_1_handle_iterator_ac398e8510decbf1c8a1ecfaec8e667a0}} 
+\hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator} \& {\bfseries operator++} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_iterator_a82f3ab7202eeddd1c7979a663b398c21}\label{classglow_1_1_handle_iterator_a82f3ab7202eeddd1c7979a663b398c21}} 
+\hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator} \& {\bfseries operator-\/-\/} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_iterator_a3c508d725a41e5282de2721128e59b9a}\label{classglow_1_1_handle_iterator_a3c508d725a41e5282de2721128e59b9a}} 
+\hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator} {\bfseries operator+} (int n) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_iterator_ab2f790803a2868c823e0f3fa38a84826}\label{classglow_1_1_handle_iterator_ab2f790803a2868c823e0f3fa38a84826}} 
+\hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator} {\bfseries operator-\/} (int n) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_iterator_a1f1ff215bddc4c9b1ef40f47101e9533}\label{classglow_1_1_handle_iterator_a1f1ff215bddc4c9b1ef40f47101e9533}} 
+{\bfseries operator int} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_iterator_a21b65a14632927f6a9c37997b17fa83c}\label{classglow_1_1_handle_iterator_a21b65a14632927f6a9c37997b17fa83c}} 
+Elem\+Ty\+Ref {\bfseries operator$\ast$} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_iterator_a0ba87c7c5fa831b9f636fff9a5f8d9a7}\label{classglow_1_1_handle_iterator_a0ba87c7c5fa831b9f636fff9a5f8d9a7}} 
+bool {\bfseries operator==} (const \hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator}$<$ Elem\+Ty, Is\+Const $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_iterator_a664b1101bdae554d8f0128cc26531dab}\label{classglow_1_1_handle_iterator_a664b1101bdae554d8f0128cc26531dab}} 
+bool {\bfseries operator!=} (const \hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator}$<$ Elem\+Ty, Is\+Const $>$ \&other) const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_iterator_ac1c93456ae7170c82eb77953671c9aa6}\label{classglow_1_1_handle_iterator_ac1c93456ae7170c82eb77953671c9aa6}} 
+class {\bfseries Handle$<$ Elem\+Ty $>$}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Elem\+Ty, bool Is\+Const$>$\newline
+class glow\+::\+Handle\+Iterator$<$ Elem\+Ty, Is\+Const $>$}
+
+A class that provides ability to iterate over a Handle$<$\+Elem\+Ty$>$. Since it\textquotesingle{}s common to have both mutating and const iterators, this class has template parameter Is\+Const, which is true to create const\+\_\+iterator and false otherwise. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Base/Tensor.\+h\end{DoxyCompactItemize}

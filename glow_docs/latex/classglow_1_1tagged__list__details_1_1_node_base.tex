@@ -1,0 +1,48 @@
+\hypertarget{classglow_1_1tagged__list__details_1_1_node_base}{}\section{glow\+:\+:tagged\+\_\+list\+\_\+details\+:\+:Node\+Base Class Reference}
+\label{classglow_1_1tagged__list__details_1_1_node_base}\index{glow\+::tagged\+\_\+list\+\_\+details\+::\+Node\+Base@{glow\+::tagged\+\_\+list\+\_\+details\+::\+Node\+Base}}
+
+
+{\ttfamily \#include $<$Tagged\+List.\+h$>$}
+
+Inheritance diagram for glow\+:\+:tagged\+\_\+list\+\_\+details\+:\+:Node\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classglow_1_1tagged__list__details_1_1_node_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_node_base_a5d3efe35837b62d4d4400e1f0c8e11c9}\label{classglow_1_1tagged__list__details_1_1_node_base_a5d3efe35837b62d4d4400e1f0c8e11c9}} 
+bool \hyperlink{classglow_1_1tagged__list__details_1_1_node_base_a5d3efe35837b62d4d4400e1f0c8e11c9}{is\+Tagged\+List\+Sentinel} () const
+\begin{DoxyCompactList}\small\item\em Is this the {\ttfamily end()} sentinel? All real nodes return false. \end{DoxyCompactList}\item 
+bool \hyperlink{classglow_1_1tagged__list__details_1_1_node_base_af9089de2767fa3a4df48cb6d5b401c6a}{in\+Tagged\+List} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_node_base_a5a83b4dfbe14d4a3034419350b6ed82c}\label{classglow_1_1tagged__list__details_1_1_node_base_a5a83b4dfbe14d4a3034419350b6ed82c}} 
+class {\bfseries List\+Impl}
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_node_base_aa5c83577652250640bc983f4725cc75b}\label{classglow_1_1tagged__list__details_1_1_node_base_aa5c83577652250640bc983f4725cc75b}} 
+{\footnotesize template$<$typename T , bool Is\+Reverse, bool Is\+Const$>$ }\\class {\bfseries Iterator}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for nodes that can be inserted in a {\ttfamily \hyperlink{classglow_1_1_tagged_list}{Tagged\+List}}.
+
+Users should derive from {\ttfamily \hyperlink{classglow_1_1_tagged_list_node}{Tagged\+List\+Node}$<$T$>$}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_node_base_af9089de2767fa3a4df48cb6d5b401c6a}\label{classglow_1_1tagged__list__details_1_1_node_base_af9089de2767fa3a4df48cb6d5b401c6a}} 
+\index{glow\+::tagged\+\_\+list\+\_\+details\+::\+Node\+Base@{glow\+::tagged\+\_\+list\+\_\+details\+::\+Node\+Base}!in\+Tagged\+List@{in\+Tagged\+List}}
+\index{in\+Tagged\+List@{in\+Tagged\+List}!glow\+::tagged\+\_\+list\+\_\+details\+::\+Node\+Base@{glow\+::tagged\+\_\+list\+\_\+details\+::\+Node\+Base}}
+\subsubsection{\texorpdfstring{in\+Tagged\+List()}{inTaggedList()}}
+{\footnotesize\ttfamily bool glow\+::tagged\+\_\+list\+\_\+details\+::\+Node\+Base\+::in\+Tagged\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Is this node inserted in a \hyperlink{classglow_1_1_tagged_list}{Tagged\+List}? This also returns true for the end() sentinel. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Base/Tagged\+List.\+h\end{DoxyCompactItemize}

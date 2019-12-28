@@ -1,0 +1,52 @@
+\hypertarget{classglow_1_1_o_n_n_x_i_f_i_model_loader}{}\section{glow\+:\+:O\+N\+N\+X\+I\+F\+I\+Model\+Loader Class Reference}
+\label{classglow_1_1_o_n_n_x_i_f_i_model_loader}\index{glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const llvm\+::\+String\+Map$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \& \hyperlink{classglow_1_1_o_n_n_x_i_f_i_model_loader_af9d4f9219dece20a56eb9c451793393c}{get\+Input\+Vars\+Mapping} () const
+\item 
+const llvm\+::\+String\+Map$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \& \hyperlink{classglow_1_1_o_n_n_x_i_f_i_model_loader_a67e7b300f2c54583abeae36d53b5a51f}{get\+Output\+Vars\+Mapping} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_o_n_n_x_i_f_i_model_loader}{O\+N\+N\+X\+I\+F\+I\+Model\+Loader} $>$ $>$ \hyperlink{classglow_1_1_o_n_n_x_i_f_i_model_loader_a8b1db52c069d59cf77865c6cae6af5cd}{parse} (const void $\ast$onnx\+Model, uint32\+\_\+t onnx\+Model\+Size, uint32\+\_\+t weights\+Count, const onnx\+Tensor\+Descriptor\+V1 $\ast$weight\+Descriptors, \hyperlink{classglow_1_1_function}{Function} \&F, bool load\+Inputs\+As\+Placeholders=true, bool use\+\_\+onnx=true)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_i_f_i_model_loader_af9d4f9219dece20a56eb9c451793393c}\label{classglow_1_1_o_n_n_x_i_f_i_model_loader_af9d4f9219dece20a56eb9c451793393c}} 
+\index{glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader}!get\+Input\+Vars\+Mapping@{get\+Input\+Vars\+Mapping}}
+\index{get\+Input\+Vars\+Mapping@{get\+Input\+Vars\+Mapping}!glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader}}
+\subsubsection{\texorpdfstring{get\+Input\+Vars\+Mapping()}{getInputVarsMapping()}}
+{\footnotesize\ttfamily const llvm\+::\+String\+Map$<$\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$\& glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader\+::get\+Input\+Vars\+Mapping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+mapping between O\+N\+NX names and actual Glow input vars. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_i_f_i_model_loader_a67e7b300f2c54583abeae36d53b5a51f}\label{classglow_1_1_o_n_n_x_i_f_i_model_loader_a67e7b300f2c54583abeae36d53b5a51f}} 
+\index{glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader}!get\+Output\+Vars\+Mapping@{get\+Output\+Vars\+Mapping}}
+\index{get\+Output\+Vars\+Mapping@{get\+Output\+Vars\+Mapping}!glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader}}
+\subsubsection{\texorpdfstring{get\+Output\+Vars\+Mapping()}{getOutputVarsMapping()}}
+{\footnotesize\ttfamily const llvm\+::\+String\+Map$<$\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$\& glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader\+::get\+Output\+Vars\+Mapping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+mapping between O\+N\+NX names and actual Glow output nodes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_i_f_i_model_loader_a8b1db52c069d59cf77865c6cae6af5cd}\label{classglow_1_1_o_n_n_x_i_f_i_model_loader_a8b1db52c069d59cf77865c6cae6af5cd}} 
+\index{glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader}!parse@{parse}}
+\index{parse@{parse}!glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_o_n_n_x_i_f_i_model_loader}{O\+N\+N\+X\+I\+F\+I\+Model\+Loader} $>$ $>$ glow\+::\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader\+::parse (\begin{DoxyParamCaption}\item[{const void $\ast$}]{onnx\+Model,  }\item[{uint32\+\_\+t}]{onnx\+Model\+Size,  }\item[{uint32\+\_\+t}]{weights\+Count,  }\item[{const onnx\+Tensor\+Descriptor\+V1 $\ast$}]{weight\+Descriptors,  }\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{F,  }\item[{bool}]{load\+Inputs\+As\+Placeholders = {\ttfamily true},  }\item[{bool}]{use\+\_\+onnx = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+a unique\+\_\+ptr$<$\+O\+N\+N\+X\+I\+F\+I\+Model\+Loader$>$ if {\ttfamily onnx\+Model} can be parsed and static weights can be loaded from the {\ttfamily wight\+Descriptors}. 
+
+Error otherwise. {\ttfamily load\+Inputs\+As\+Placeholders} is passed to load\+Inputs to determine whether graph inputs are loaded as Placeholders or Tensors. Loading inputs as Tensors is useful for when weights are not provided such as when the graph being loaded is actually a small patch of a larger graph because the graph inputs in this case may represent internal values for the larger graph. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Importer/O\+N\+N\+X\+I\+F\+I\+Model\+Loader.\+h\item 
+lib/\+Importer/O\+N\+N\+X\+I\+F\+I\+Model\+Loader.\+cpp\end{DoxyCompactItemize}

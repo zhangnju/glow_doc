@@ -1,0 +1,61 @@
+\hypertarget{structglow_1_1_debug_info}{}\section{glow\+:\+:Debug\+Info Struct Reference}
+\label{structglow_1_1_debug_info}\index{glow\+::\+Debug\+Info@{glow\+::\+Debug\+Info}}
+
+
+A P\+OD struct that stores information related to debug info.  
+
+
+
+
+{\ttfamily \#include $<$L\+L\+V\+M\+I\+R\+Gen.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_debug_info_a5eb1e7fae412c7d8d0fdc18cdd47e4fe}\label{structglow_1_1_debug_info_a5eb1e7fae412c7d8d0fdc18cdd47e4fe}} 
+llvm\+::\+D\+I\+File $\ast$ \hyperlink{structglow_1_1_debug_info_a5eb1e7fae412c7d8d0fdc18cdd47e4fe}{main\+File\+\_\+} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em Source file for the main function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_debug_info_a00b411ee4fb3ffc6e3671b8076433abc}\label{structglow_1_1_debug_info_a00b411ee4fb3ffc6e3671b8076433abc}} 
+llvm\+::\+D\+I\+Subprogram $\ast$ \hyperlink{structglow_1_1_debug_info_a00b411ee4fb3ffc6e3671b8076433abc}{main\+F\+\_\+} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em Debug info for the main function. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{structglow_1_1_debug_info_a099a2636f46176f7804f55b2374c64c2}{main\+File\+First\+Instr\+Line\+No\+\_\+} \{0\}
+\item 
+\mbox{\Hypertarget{structglow_1_1_debug_info_a936ef696ae6bc75112f0f4a0047a496d}\label{structglow_1_1_debug_info_a936ef696ae6bc75112f0f4a0047a496d}} 
+llvm\+::\+D\+I\+Compile\+Unit $\ast$ \hyperlink{structglow_1_1_debug_info_a936ef696ae6bc75112f0f4a0047a496d}{compilation\+Unit\+\_\+} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em Debug info for the current compilation unit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_debug_info_a9c2343cf4b47b197d170bc240ec1ba4a}\label{structglow_1_1_debug_info_a9c2343cf4b47b197d170bc240ec1ba4a}} 
+llvm\+::\+Dense\+Map$<$ llvm\+::\+Type $\ast$, llvm\+::\+D\+I\+Type $\ast$ $>$ \hyperlink{structglow_1_1_debug_info_a9c2343cf4b47b197d170bc240ec1ba4a}{D\+I\+Types\+\_\+}
+\begin{DoxyCompactList}\small\item\em Mapping from L\+L\+VM types to \hyperlink{structglow_1_1_debug_info}{Debug\+Info} types. \end{DoxyCompactList}\item 
+llvm\+::\+Small\+Vector$<$ llvm\+::\+String\+Ref, Last\+Memory\+Area -\/ 1 $>$ \hyperlink{structglow_1_1_debug_info_aedd8c89215db736c9099b56e0c318c72}{base\+Addresses\+Variables\+Names\+\_\+}
+\item 
+llvm\+::\+Small\+Vector$<$ llvm\+::\+Global\+Variable $\ast$, Last\+Memory\+Area -\/ 1 $>$ \hyperlink{structglow_1_1_debug_info_a717459e7223f04f86cd58a62445a92c0}{base\+Addresses\+Variables\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A P\+OD struct that stores information related to debug info. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1_debug_info_a717459e7223f04f86cd58a62445a92c0}\label{structglow_1_1_debug_info_a717459e7223f04f86cd58a62445a92c0}} 
+\index{glow\+::\+Debug\+Info@{glow\+::\+Debug\+Info}!base\+Addresses\+Variables\+\_\+@{base\+Addresses\+Variables\+\_\+}}
+\index{base\+Addresses\+Variables\+\_\+@{base\+Addresses\+Variables\+\_\+}!glow\+::\+Debug\+Info@{glow\+::\+Debug\+Info}}
+\subsubsection{\texorpdfstring{base\+Addresses\+Variables\+\_\+}{baseAddressesVariables\_}}
+{\footnotesize\ttfamily llvm\+::\+Small\+Vector$<$llvm\+::\+Global\+Variable $\ast$, Last\+Memory\+Area -\/ 1$>$ glow\+::\+Debug\+Info\+::base\+Addresses\+Variables\+\_\+}
+
+Maps memory area kinds to the global variables holding the base address of the corresponding memory area, e.\+g. activations, constant or mutable weights area. Used only when producing a debug information. These variables are required to properly show in the debugger weights and activations variables, which are expressed in D\+W\+A\+RF using a relative addressing mode with the base addresses stored in these base addresses variables. \mbox{\Hypertarget{structglow_1_1_debug_info_aedd8c89215db736c9099b56e0c318c72}\label{structglow_1_1_debug_info_aedd8c89215db736c9099b56e0c318c72}} 
+\index{glow\+::\+Debug\+Info@{glow\+::\+Debug\+Info}!base\+Addresses\+Variables\+Names\+\_\+@{base\+Addresses\+Variables\+Names\+\_\+}}
+\index{base\+Addresses\+Variables\+Names\+\_\+@{base\+Addresses\+Variables\+Names\+\_\+}!glow\+::\+Debug\+Info@{glow\+::\+Debug\+Info}}
+\subsubsection{\texorpdfstring{base\+Addresses\+Variables\+Names\+\_\+}{baseAddressesVariablesNames\_}}
+{\footnotesize\ttfamily llvm\+::\+Small\+Vector$<$llvm\+::\+String\+Ref, Last\+Memory\+Area -\/ 1$>$ glow\+::\+Debug\+Info\+::base\+Addresses\+Variables\+Names\+\_\+}
+
+Names of global variables to hold the bases address of different memory areas, e.\+g. activations, constant or mutable weights. \mbox{\Hypertarget{structglow_1_1_debug_info_a099a2636f46176f7804f55b2374c64c2}\label{structglow_1_1_debug_info_a099a2636f46176f7804f55b2374c64c2}} 
+\index{glow\+::\+Debug\+Info@{glow\+::\+Debug\+Info}!main\+File\+First\+Instr\+Line\+No\+\_\+@{main\+File\+First\+Instr\+Line\+No\+\_\+}}
+\index{main\+File\+First\+Instr\+Line\+No\+\_\+@{main\+File\+First\+Instr\+Line\+No\+\_\+}!glow\+::\+Debug\+Info@{glow\+::\+Debug\+Info}}
+\subsubsection{\texorpdfstring{main\+File\+First\+Instr\+Line\+No\+\_\+}{mainFileFirstInstrLineNo\_}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+Debug\+Info\+::main\+File\+First\+Instr\+Line\+No\+\_\+ \{0\}}
+
+Line number for the first instruction in the textual representation of the Glow IR. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+L\+L\+V\+M\+I\+R\+Code\+Gen/L\+L\+V\+M\+I\+R\+Gen.\+h\end{DoxyCompactItemize}

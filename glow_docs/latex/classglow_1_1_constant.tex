@@ -1,0 +1,79 @@
+\hypertarget{classglow_1_1_constant}{}\section{glow\+:\+:Constant Class Reference}
+\label{classglow_1_1_constant}\index{glow\+::\+Constant@{glow\+::\+Constant}}
+Inheritance diagram for glow\+:\+:Constant\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.705314cm]{classglow_1_1_constant}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_constant_ad7216d16fbe01db6b670810030c15f41}\label{classglow_1_1_constant_ad7216d16fbe01db6b670810030c15f41}} 
+\hyperlink{classglow_1_1_constant_ad7216d16fbe01db6b670810030c15f41}{Constant} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Ty)
+\begin{DoxyCompactList}\small\item\em Create a new constant and initialize its payload. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_constant_a0d68ae25dda3b3656ee75de1b257deb8}\label{classglow_1_1_constant_a0d68ae25dda3b3656ee75de1b257deb8}} 
+{\bfseries Constant} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_tensor}{Tensor} \&\&payload)
+\item 
+void \hyperlink{classglow_1_1_constant_ae0b1b3aecc549a9f9885558753391500}{ensure\+Is\+Owned} ()
+\item 
+\hyperlink{classglow_1_1_tensor}{Tensor} \& \hyperlink{classglow_1_1_constant_ace7a74284d69823f398ad069fce905c1}{get\+Payload\+Mutable} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_constant_a7c900e473c6eb18d909454f76fdf48fd}\label{classglow_1_1_constant_a7c900e473c6eb18d909454f76fdf48fd}} 
+const \hyperlink{classglow_1_1_tensor}{Tensor} \& {\bfseries get\+Payload} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_constant_a630e2ce5e9cf5e186cb25d08948bc280}\label{classglow_1_1_constant_a630e2ce5e9cf5e186cb25d08948bc280}} 
+{\footnotesize template$<$class Elem\+Ty  = float$>$ }\\\hyperlink{classglow_1_1_handle}{Handle}$<$ Elem\+Ty $>$ {\bfseries get\+Handle} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_constant_a591b9e635e497399b0267acf58f5d987}\label{classglow_1_1_constant_a591b9e635e497399b0267acf58f5d987}} 
+void {\bfseries assign} (const \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$t)
+\item 
+\mbox{\Hypertarget{classglow_1_1_constant_a3b6a6d9c829e4ee04c547b3cffa2db1b}\label{classglow_1_1_constant_a3b6a6d9c829e4ee04c547b3cffa2db1b}} 
+void {\bfseries set\+Payload\+Type} (\hyperlink{structglow_1_1_type}{Type\+Ref} ty)
+\item 
+\mbox{\Hypertarget{classglow_1_1_constant_aa27d8ba25ea8ad70ef171196250349a7}\label{classglow_1_1_constant_aa27d8ba25ea8ad70ef171196250349a7}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_constant_ac9a43f6902b3b42675af472640924480}\label{classglow_1_1_constant_ac9a43f6902b3b42675af472640924480}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_constant_a35490f46c989c8b4aeaf75d607387705}\label{classglow_1_1_constant_a35490f46c989c8b4aeaf75d607387705}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_constant_a126e1379478833112642d7feb28c4c72}\label{classglow_1_1_constant_a126e1379478833112642d7feb28c4c72}} 
+void {\bfseries clear\+Payload} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_constant_af45fb1415fdf61d6a68854e9b9b4c038}\label{classglow_1_1_constant_af45fb1415fdf61d6a68854e9b9b4c038}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_constant_ad62a0f3dc0b39334e39758aa22ba664f}\label{classglow_1_1_constant_ad62a0f3dc0b39334e39758aa22ba664f}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_constant_ae0b1b3aecc549a9f9885558753391500}\label{classglow_1_1_constant_ae0b1b3aecc549a9f9885558753391500}} 
+\index{glow\+::\+Constant@{glow\+::\+Constant}!ensure\+Is\+Owned@{ensure\+Is\+Owned}}
+\index{ensure\+Is\+Owned@{ensure\+Is\+Owned}!glow\+::\+Constant@{glow\+::\+Constant}}
+\subsubsection{\texorpdfstring{ensure\+Is\+Owned()}{ensureIsOwned()}}
+{\footnotesize\ttfamily void glow\+::\+Constant\+::ensure\+Is\+Owned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+If payload is unowned, make an owned copy of the payload for modification. \mbox{\Hypertarget{classglow_1_1_constant_ace7a74284d69823f398ad069fce905c1}\label{classglow_1_1_constant_ace7a74284d69823f398ad069fce905c1}} 
+\index{glow\+::\+Constant@{glow\+::\+Constant}!get\+Payload\+Mutable@{get\+Payload\+Mutable}}
+\index{get\+Payload\+Mutable@{get\+Payload\+Mutable}!glow\+::\+Constant@{glow\+::\+Constant}}
+\subsubsection{\texorpdfstring{get\+Payload\+Mutable()}{getPayloadMutable()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tensor}{Tensor}\& glow\+::\+Constant\+::get\+Payload\+Mutable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a mutable reference to the payload tensor. If the payload tensor is unowned then it will be converted to an owned copy before returning. 
+\end{DoxyReturn}
+Make sure the payload is owned before handing out a mutable reference. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\end{DoxyCompactItemize}

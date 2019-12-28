@@ -1,0 +1,34 @@
+\hypertarget{classglow_1_1_child_mem_size_based_scheduler}{}\section{glow\+:\+:Child\+Mem\+Size\+Based\+Scheduler Class Reference}
+\label{classglow_1_1_child_mem_size_based_scheduler}\index{glow\+::\+Child\+Mem\+Size\+Based\+Scheduler@{glow\+::\+Child\+Mem\+Size\+Based\+Scheduler}}
+
+
+{\ttfamily \#include $<$Graph\+Scheduler.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Child\+Mem\+Size\+Based\+Scheduler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_child_mem_size_based_scheduler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_child_mem_size_based_scheduler_aaadb4f4fa4fa89adeda6a87d4c8df6c0}\label{classglow_1_1_child_mem_size_based_scheduler_aaadb4f4fa4fa89adeda6a87d4c8df6c0}} 
+{\bfseries Child\+Mem\+Size\+Based\+Scheduler} (\hyperlink{classglow_1_1_function}{Function} \&G, \hyperlink{namespaceglow_a40ec79a2f9c485bfa999ed31fd0854dd}{Nodes\+Ptr\+List} \&Schedule)
+\item 
+\mbox{\Hypertarget{classglow_1_1_child_mem_size_based_scheduler_a8a3a6c05ed31c6e317e15b03a607cbe1}\label{classglow_1_1_child_mem_size_based_scheduler_a8a3a6c05ed31c6e317e15b03a607cbe1}} 
+void {\bfseries schedule} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is a scheduler based on the generalized the paper \char`\"{}\+Generalizations of
+the Sethi-\/\+Ullman algorithm for register allocation\char`\"{} by Andrew W. Appel and Kenneth J. Supowit. \href{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.319&rep=rep1&type=pdf}{\tt http\+://citeseerx.\+ist.\+psu.\+edu/viewdoc/download?doi=10.\+1.\+1.\+54.\+319\&rep=rep1\&type=pdf}
+
+The idea is to give more priority and schedule earlier those child nodes that free more memory after their computation. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+I\+R/Graph\+Scheduler.\+h\item 
+lib/\+I\+R/Child\+Mem\+Size\+Based\+Scheduler.\+cpp\end{DoxyCompactItemize}

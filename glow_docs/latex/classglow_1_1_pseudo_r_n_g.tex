@@ -1,0 +1,122 @@
+\hypertarget{classglow_1_1_pseudo_r_n_g}{}\section{glow\+:\+:Pseudo\+R\+NG Class Reference}
+\label{classglow_1_1_pseudo_r_n_g}\index{glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}}
+
+
+{\ttfamily \#include $<$Random.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_pseudo_r_n_g_ab4c3c2b212f00c6f0d9f1a2968cea564}\label{classglow_1_1_pseudo_r_n_g_ab4c3c2b212f00c6f0d9f1a2968cea564}} 
+typedef std\+::mt19937 \hyperlink{classglow_1_1_pseudo_r_n_g_ab4c3c2b212f00c6f0d9f1a2968cea564}{Engine}
+\begin{DoxyCompactList}\small\item\em Glow uses the Mersenne Twister engine. \end{DoxyCompactList}\item 
+typedef Engine\+::result\+\_\+type \hyperlink{classglow_1_1_pseudo_r_n_g_a3fe973c9dca35c5b572da3ed711df069}{result\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_pseudo_r_n_g_af2e430b238bb9d081e6771acaac0956c}{Pseudo\+R\+NG} ()
+\item 
+double \hyperlink{classglow_1_1_pseudo_r_n_g_a1422103880800d95e63e393e37fca771}{next\+Rand} ()
+\item 
+double \hyperlink{classglow_1_1_pseudo_r_n_g_ab4e260e38ef6928e8a0892e524e8b2a7}{next\+Rand\+Real} (double a, double b)
+\item 
+int \hyperlink{classglow_1_1_pseudo_r_n_g_ab1a884f81fbe5b640924727b0a86bb3e}{next\+Rand\+Int} (int a, int b)
+\item 
+\hyperlink{classglow_1_1_pseudo_r_n_g_a3fe973c9dca35c5b572da3ed711df069}{result\+\_\+type} \hyperlink{classglow_1_1_pseudo_r_n_g_a05c49b1dc4d64572e91bbc08a489d965}{operator()} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \hyperlink{classglow_1_1_pseudo_r_n_g_a3fe973c9dca35c5b572da3ed711df069}{result\+\_\+type} \hyperlink{classglow_1_1_pseudo_r_n_g_a3bd34021eb9345528df795dd66f3181a}{min} ()
+\item 
+static constexpr \hyperlink{classglow_1_1_pseudo_r_n_g_a3fe973c9dca35c5b572da3ed711df069}{result\+\_\+type} \hyperlink{classglow_1_1_pseudo_r_n_g_aa98bf022462ca4fc96382a67d1800a0d}{max} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A pseudo-\/random number generator.
+
+A \hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} generates a deterministic sequence of numbers controlled by the initial seed. \hyperlink{structglow_1_1_use}{Use} the various templates from the $<$random$>$ standard library header to draw numbers from a specific distribution. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classglow_1_1_pseudo_r_n_g_a3fe973c9dca35c5b572da3ed711df069}\label{classglow_1_1_pseudo_r_n_g_a3fe973c9dca35c5b572da3ed711df069}} 
+\index{glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}!result\+\_\+type@{result\+\_\+type}}
+\index{result\+\_\+type@{result\+\_\+type}!glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}}
+\subsubsection{\texorpdfstring{result\+\_\+type}{result\_type}}
+{\footnotesize\ttfamily typedef Engine\+::result\+\_\+type \hyperlink{classglow_1_1_pseudo_r_n_g_a3fe973c9dca35c5b572da3ed711df069}{glow\+::\+Pseudo\+R\+N\+G\+::result\+\_\+type}}
+
+This typedef and the methods below implement the standard interface for a random number generator. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_pseudo_r_n_g_af2e430b238bb9d081e6771acaac0956c}\label{classglow_1_1_pseudo_r_n_g_af2e430b238bb9d081e6771acaac0956c}} 
+\index{glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}!Pseudo\+R\+NG@{Pseudo\+R\+NG}}
+\index{Pseudo\+R\+NG@{Pseudo\+R\+NG}!glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}}
+\subsubsection{\texorpdfstring{Pseudo\+R\+N\+G()}{PseudoRNG()}}
+{\footnotesize\ttfamily glow\+::\+Pseudo\+R\+N\+G\+::\+Pseudo\+R\+NG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get a freshly initialized pseudo-\/random number generator.
+
+All the generators created by this default constructor will generate the same deterministic sequence of numbers, controlled by the \char`\"{}-\/pseudo-\/random-\/seed\char`\"{} command line option. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_pseudo_r_n_g_aa98bf022462ca4fc96382a67d1800a0d}\label{classglow_1_1_pseudo_r_n_g_aa98bf022462ca4fc96382a67d1800a0d}} 
+\index{glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}!max@{max}}
+\index{max@{max}!glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}}
+\subsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily static constexpr \hyperlink{classglow_1_1_pseudo_r_n_g_a3fe973c9dca35c5b572da3ed711df069}{result\+\_\+type} glow\+::\+Pseudo\+R\+N\+G\+::max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+the largest possible value generated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_pseudo_r_n_g_a3bd34021eb9345528df795dd66f3181a}\label{classglow_1_1_pseudo_r_n_g_a3bd34021eb9345528df795dd66f3181a}} 
+\index{glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}!min@{min}}
+\index{min@{min}!glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}}
+\subsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily static constexpr \hyperlink{classglow_1_1_pseudo_r_n_g_a3fe973c9dca35c5b572da3ed711df069}{result\+\_\+type} glow\+::\+Pseudo\+R\+N\+G\+::min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+the smallest possible value generated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_pseudo_r_n_g_a1422103880800d95e63e393e37fca771}\label{classglow_1_1_pseudo_r_n_g_a1422103880800d95e63e393e37fca771}} 
+\index{glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}!next\+Rand@{next\+Rand}}
+\index{next\+Rand@{next\+Rand}!glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}}
+\subsubsection{\texorpdfstring{next\+Rand()}{nextRand()}}
+{\footnotesize\ttfamily double glow\+::\+Pseudo\+R\+N\+G\+::next\+Rand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+a pseudo-\/random floating point number from the half-\/open range \mbox{[}-\/1; 1). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_pseudo_r_n_g_ab1a884f81fbe5b640924727b0a86bb3e}\label{classglow_1_1_pseudo_r_n_g_ab1a884f81fbe5b640924727b0a86bb3e}} 
+\index{glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}!next\+Rand\+Int@{next\+Rand\+Int}}
+\index{next\+Rand\+Int@{next\+Rand\+Int}!glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}}
+\subsubsection{\texorpdfstring{next\+Rand\+Int()}{nextRandInt()}}
+{\footnotesize\ttfamily int glow\+::\+Pseudo\+R\+N\+G\+::next\+Rand\+Int (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the next uniform random integer in the closed interval \mbox{[}a, b\mbox{]}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_pseudo_r_n_g_ab4e260e38ef6928e8a0892e524e8b2a7}\label{classglow_1_1_pseudo_r_n_g_ab4e260e38ef6928e8a0892e524e8b2a7}} 
+\index{glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}!next\+Rand\+Real@{next\+Rand\+Real}}
+\index{next\+Rand\+Real@{next\+Rand\+Real}!glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}}
+\subsubsection{\texorpdfstring{next\+Rand\+Real()}{nextRandReal()}}
+{\footnotesize\ttfamily double glow\+::\+Pseudo\+R\+N\+G\+::next\+Rand\+Real (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+a pseudo-\/random floating point number from the half-\/open user-\/specified range \mbox{[}a; b). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_pseudo_r_n_g_a05c49b1dc4d64572e91bbc08a489d965}\label{classglow_1_1_pseudo_r_n_g_a05c49b1dc4d64572e91bbc08a489d965}} 
+\index{glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}!operator()@{operator()}}
+\index{operator()@{operator()}!glow\+::\+Pseudo\+R\+NG@{glow\+::\+Pseudo\+R\+NG}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_pseudo_r_n_g_a3fe973c9dca35c5b572da3ed711df069}{result\+\_\+type} glow\+::\+Pseudo\+R\+N\+G\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the next pseudo-\/random number between \hyperlink{classglow_1_1_pseudo_r_n_g_a3bd34021eb9345528df795dd66f3181a}{min()} and \hyperlink{classglow_1_1_pseudo_r_n_g_aa98bf022462ca4fc96382a67d1800a0d}{max()}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Random.\+h\item 
+lib/\+Support/Random.\+cpp\end{DoxyCompactItemize}

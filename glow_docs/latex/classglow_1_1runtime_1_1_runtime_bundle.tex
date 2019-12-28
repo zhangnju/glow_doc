@@ -1,0 +1,129 @@
+\hypertarget{classglow_1_1runtime_1_1_runtime_bundle}{}\section{glow\+:\+:runtime\+:\+:Runtime\+Bundle Class Reference}
+\label{classglow_1_1runtime_1_1_runtime_bundle}\index{glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}}
+
+
+{\ttfamily \#include $<$Backend\+Utils.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_aa7bce0d1b4de07c426fadf7356ff290b}\label{classglow_1_1runtime_1_1_runtime_bundle_aa7bce0d1b4de07c426fadf7356ff290b}} 
+size\+\_\+t \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_aa7bce0d1b4de07c426fadf7356ff290b}{get\+Constant\+Weight\+Size} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classglow_1_1_constant}{Constant} Weights memory size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_a6d86984311509c9b43052d535547b581}\label{classglow_1_1runtime_1_1_runtime_bundle_a6d86984311509c9b43052d535547b581}} 
+size\+\_\+t \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_a6d86984311509c9b43052d535547b581}{get\+Mutable\+Weight\+Size} () const
+\begin{DoxyCompactList}\small\item\em Get Mutable Weights memory size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_a835538bd946378a9d1fbf026a62a4dfe}\label{classglow_1_1runtime_1_1_runtime_bundle_a835538bd946378a9d1fbf026a62a4dfe}} 
+size\+\_\+t \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_a835538bd946378a9d1fbf026a62a4dfe}{get\+Activations\+Size} () const
+\begin{DoxyCompactList}\small\item\em Get Activations Weights memory size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_a7c080dc9d43996462e5ec18e7b1a5c80}\label{classglow_1_1runtime_1_1_runtime_bundle_a7c080dc9d43996462e5ec18e7b1a5c80}} 
+uint8\+\_\+t $\ast$ \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_a7c080dc9d43996462e5ec18e7b1a5c80}{get\+Constants} () const
+\begin{DoxyCompactList}\small\item\em Get pointer to memory block of constants. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_af96a025bdc7c79ad0c4ee4269d2b9698}\label{classglow_1_1runtime_1_1_runtime_bundle_af96a025bdc7c79ad0c4ee4269d2b9698}} 
+void \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_af96a025bdc7c79ad0c4ee4269d2b9698}{set\+Constants} (uint8\+\_\+t $\ast$constants)
+\begin{DoxyCompactList}\small\item\em Set pointer to memory block of constants. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_a8b3bfb661c9a4d70ada436f5322a04fe}\label{classglow_1_1runtime_1_1_runtime_bundle_a8b3bfb661c9a4d70ada436f5322a04fe}} 
+size\+\_\+t \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_a8b3bfb661c9a4d70ada436f5322a04fe}{get\+Value\+Offset} (const \hyperlink{classglow_1_1_named}{Named} $\ast$v) const
+\begin{DoxyCompactList}\small\item\em Helper function, gets offset of {\ttfamily v}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_a4390c9f31d556ea14b4108a5655e688e}\label{classglow_1_1runtime_1_1_runtime_bundle_a4390c9f31d556ea14b4108a5655e688e}} 
+const \hyperlink{structglow_1_1runtime_1_1_runtime_symbol_info}{Runtime\+Symbol\+Info} \& \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_a4390c9f31d556ea14b4108a5655e688e}{get\+Symbol\+Info} (const \hyperlink{classglow_1_1_named}{Named} $\ast$v) const
+\begin{DoxyCompactList}\small\item\em Helper function, gets symbol info for {\ttfamily v}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_a29fce3fb1bbb1bf761366d6e03c24dc9}\label{classglow_1_1runtime_1_1_runtime_bundle_a29fce3fb1bbb1bf761366d6e03c24dc9}} 
+const Symbol\+Table\+Ty \& \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_a29fce3fb1bbb1bf761366d6e03c24dc9}{get\+Symbol\+Table} () const
+\begin{DoxyCompactList}\small\item\em Get a const reference to the symbol table. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_ab01a849dbfc29a86c392e213a8dd8b2b}{collect\+Constants} (const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$F)
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_aedcd7f06fa34bcd10897da2385387afd}\label{classglow_1_1runtime_1_1_runtime_bundle_aedcd7f06fa34bcd10897da2385387afd}} 
+void {\bfseries collect\+Constants} (const \hyperlink{classglow_1_1_module}{Module} $\ast$M)
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_a4f72dac6c7bac5e95b32a212d0341c0f}\label{classglow_1_1runtime_1_1_runtime_bundle_a4f72dac6c7bac5e95b32a212d0341c0f}} 
+void \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_a4f72dac6c7bac5e95b32a212d0341c0f}{free\+Constants} ()
+\begin{DoxyCompactList}\small\item\em Free constants. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_ae5541e5c198da1a287eb280664714b8f}\label{classglow_1_1runtime_1_1_runtime_bundle_ae5541e5c198da1a287eb280664714b8f}} 
+void \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_ae5541e5c198da1a287eb280664714b8f}{set\+Inputsand\+Outputs} ()
+\begin{DoxyCompactList}\small\item\em Sets the input and output flags for each symbol in the symbol\+Bundle. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1runtime_1_1_runtime_bundle_aa5e7328e332d3c678247ee266fba343f}{Runtime\+Bundle} ()=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_addc01cff043fa9667a9424ca84e5e96c}\label{classglow_1_1runtime_1_1_runtime_bundle_addc01cff043fa9667a9424ca84e5e96c}} 
+{\bfseries Runtime\+Bundle} (Symbol\+Table\+Ty \&symbol\+Table, size\+\_\+t const\+Weight, size\+\_\+t mutable\+Weight, size\+\_\+t activations)
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_a2a7986bc5ef69b6f4c24bee210e66e87}\label{classglow_1_1runtime_1_1_runtime_bundle_a2a7986bc5ef69b6f4c24bee210e66e87}} 
+{\bfseries Runtime\+Bundle} (const \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle} \&)=default
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_afa6ecdb4e42c66611e1d6f07bc2f34e2}\label{classglow_1_1runtime_1_1_runtime_bundle_afa6ecdb4e42c66611e1d6f07bc2f34e2}} 
+\hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle} \& {\bfseries operator=} (const \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle} \&)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_a2492027a00c7e23649ca2d5535dce04c}\label{classglow_1_1runtime_1_1_runtime_bundle_a2492027a00c7e23649ca2d5535dce04c}} 
+{\bfseries Runtime\+Bundle} (\hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle} \&\&rhs)
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_abea93c47bfd35d751e2b061d2ed20a59}\label{classglow_1_1runtime_1_1_runtime_bundle_abea93c47bfd35d751e2b061d2ed20a59}} 
+\hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle} \& {\bfseries operator=} (\hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle} \&\&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_a7b230ed6c075c6f0b4b210e17d41c09f}{create} (const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} \&F, \hyperlink{classglow_1_1_memory_allocator}{Memory\+Allocator} \&constant\+Allocator, \hyperlink{classglow_1_1_memory_allocator}{Memory\+Allocator} \&placeholder\+Allocator, \hyperlink{classglow_1_1_memory_allocator}{Memory\+Allocator} \&activations\+Allocator)
+\item 
+static \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_afd92718c1299dccfed7f2d667eb3eb69}{create} (const \hyperlink{classglow_1_1_function}{Function} \&F, const std\+::vector$<$ const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$$>$ \&funcs)
+\item 
+static \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_a8c6efabf1d72088e473646b7b2a3a25a}{create} (const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} \&F, \hyperlink{classglow_1_1_memory_allocator}{Memory\+Allocator} \&allocator)
+\item 
+static \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} \hyperlink{classglow_1_1runtime_1_1_runtime_bundle_ab875c4022c4ace24653d5dfb6b55c229}{create} (const \hyperlink{classglow_1_1_function}{Function} \&F)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the information needed to be passed forward from compile time to runtime. In order to allocate and initialize memory. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_aa5e7328e332d3c678247ee266fba343f}\label{classglow_1_1runtime_1_1_runtime_bundle_aa5e7328e332d3c678247ee266fba343f}} 
+\index{glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}!Runtime\+Bundle@{Runtime\+Bundle}}
+\index{Runtime\+Bundle@{Runtime\+Bundle}!glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}}
+\subsubsection{\texorpdfstring{Runtime\+Bundle()}{RuntimeBundle()}}
+{\footnotesize\ttfamily glow\+::runtime\+::\+Runtime\+Bundle\+::\+Runtime\+Bundle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Deleted default constructor. A properly constructed \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle} is necessary for correct execution using the \hyperlink{classglow_1_1runtime_1_1_host_manager}{Host\+Manager}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_ab01a849dbfc29a86c392e213a8dd8b2b}\label{classglow_1_1runtime_1_1_runtime_bundle_ab01a849dbfc29a86c392e213a8dd8b2b}} 
+\index{glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}!collect\+Constants@{collect\+Constants}}
+\index{collect\+Constants@{collect\+Constants}!glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}}
+\subsubsection{\texorpdfstring{collect\+Constants()}{collectConstants()}}
+{\footnotesize\ttfamily void glow\+::runtime\+::\+Runtime\+Bundle\+::collect\+Constants (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$}]{F }\end{DoxyParamCaption})}
+
+At compile time condense constants to a single block of memory. This allows the graph to go away after compile time. Allocates a block of memory of size {\ttfamily constant\+Max\+Size} then walks the given function {\ttfamily F} and and copies weights to their address as specified by offsets contained in symbol\+Table\+\_\+. \mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_a7b230ed6c075c6f0b4b210e17d41c09f}\label{classglow_1_1runtime_1_1_runtime_bundle_a7b230ed6c075c6f0b4b210e17d41c09f}} 
+\index{glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}!create@{create}}
+\index{create@{create}!glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}}
+\subsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} runtime\+::\+Runtime\+Bundle\+::create (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} \&}]{F,  }\item[{\hyperlink{classglow_1_1_memory_allocator}{Memory\+Allocator} \&}]{constant\+Allocator,  }\item[{\hyperlink{classglow_1_1_memory_allocator}{Memory\+Allocator} \&}]{placeholder\+Allocator,  }\item[{\hyperlink{classglow_1_1_memory_allocator}{Memory\+Allocator} \&}]{activations\+Allocator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes offsets and total allocation for Constants, Placeholders, and Activations to build runtime symbol table. Returns \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle}. \mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_afd92718c1299dccfed7f2d667eb3eb69}\label{classglow_1_1runtime_1_1_runtime_bundle_afd92718c1299dccfed7f2d667eb3eb69}} 
+\index{glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}!create@{create}}
+\index{create@{create}!glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}}
+\subsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} runtime\+::\+Runtime\+Bundle\+::create (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_function}{Function} \&}]{F,  }\item[{const std\+::vector$<$ const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$$>$ \&}]{funcs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes offsets and total allocation for Constants, Placeholders, and Activations to build runtime symbol table. \begin{DoxyReturn}{Returns}
+\hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle}. Constants and Placeholders are taken from {\ttfamily F}, and all Activations required by each function in {\ttfamily funcs} are placed into the same \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_a8c6efabf1d72088e473646b7b2a3a25a}\label{classglow_1_1runtime_1_1_runtime_bundle_a8c6efabf1d72088e473646b7b2a3a25a}} 
+\index{glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}!create@{create}}
+\index{create@{create}!glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}}
+\subsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} runtime\+::\+Runtime\+Bundle\+::create (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} \&}]{F,  }\item[{\hyperlink{classglow_1_1_memory_allocator}{Memory\+Allocator} \&}]{allocator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes offsets and total allocations for Constants, Placeholders, and Activations to build runtime symbol table. \begin{DoxyReturn}{Returns}
+\hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle}. Uses a single allocator {\ttfamily allocator} and allocates all buffers contiguously in the same block. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_runtime_bundle_ab875c4022c4ace24653d5dfb6b55c229}\label{classglow_1_1runtime_1_1_runtime_bundle_ab875c4022c4ace24653d5dfb6b55c229}} 
+\index{glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}!create@{create}}
+\index{create@{create}!glow\+::runtime\+::\+Runtime\+Bundle@{glow\+::runtime\+::\+Runtime\+Bundle}}
+\subsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} runtime\+::\+Runtime\+Bundle\+::create (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_function}{Function} \&}]{F }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Build a runtime symbol table from a \hyperlink{classglow_1_1_function}{Function}. Computes \hyperlink{classglow_1_1_constant}{Constant} and \hyperlink{classglow_1_1_placeholder}{Placeholder} sizes, but not Activations, since Functions are unserialized. Only use this method to generate bundles for backends that do not use Glow\textquotesingle{}s IR. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Backend/Backend\+Utils.\+h\item 
+lib/\+Backend/Backend\+Utils.\+cpp\end{DoxyCompactItemize}

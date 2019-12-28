@@ -1,0 +1,119 @@
+An external backend can be added to Glow without changing the Glow build infrastructure. An external backend must be provided as a single source directory, and then can be developped in a separate source management repository.
+
+\subsubsection*{External backend structure}
+
+An external backend must have the following structure\+: 
+\begin{DoxyCode}
+`-- <Name>
+    |-- CMakeLists.txt
+    |-- Backends
+    |   |-- CMakeLists.txt
+    |   |-- <main backend sources>
+    |-- ClassGen
+    |   |-- CMakeLists.txt
+    |   |-- <ClassGen sources>
+    `-- Tests
+        |-- CMakeLists.txt
+        |-- <Tests sources>
+\end{DoxyCode}
+
+
+To be integrated into Glow and compiled, the backend directory must be placed in the {\ttfamily externalbackends/} sub-\/directory of the Glow project.
+
+\subsubsection*{Backend structure details}
+
+\paragraph*{Defined cmake variables}
+
+When an external backend is detected and activated, the following C\+Make variable is defined\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+N\+A\+ME} \+: name derived from the external backend directory name. Can be used by the backend to name libraries for instance.
+\end{DoxyItemize}
+
+There is the possibility to disable an detected external backend by setting the following C\+Make define to {\ttfamily O\+FF}\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily G\+L\+O\+W\+\_\+\+W\+I\+T\+H\+\_\+$<$B\+A\+C\+K\+E\+ND D\+IR N\+A\+ME$>$}
+\end{DoxyItemize}
+
+\paragraph*{C++ define}
+
+When an external backend is activated, Glow adds a global C++ compiler define that can be used to enclose backend specific code in the generic Glow source code, based on the activation of this external backend\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily G\+L\+O\+W\+\_\+\+W\+I\+T\+H\+\_\+$<$B\+A\+C\+K\+E\+ND D\+IR N\+A\+ME$>$}
+\end{DoxyItemize}
+
+\paragraph*{Backend Core \+: Mandatory}
+
+The core of the external backend is mandatory and located in {\ttfamily $<$Name$>$/\+Backends/}. It must contain a {\ttfamily C\+Make\+Lists.\+txt} file that will ensure the correct compilation of the backend and the good integration with Glow.
+
+The external backend must respect the same interface as standard backends. It can be summarized the following way\+:
+
+
+\begin{DoxyItemize}
+\item Backend main class that inherits from the Glow {\ttfamily Backend} class. For example, class {\ttfamily $<$Name$>$Backend} in library {\ttfamily \$\{E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+N\+A\+ME\}}.
+\item Backend factory registration in a backend specific factory library. For example, calling {\ttfamily R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+G\+L\+O\+W\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+F\+A\+C\+T\+O\+RY($<$Name$>$Factory, $<$Name$>$Backend, $<$Name$>$)} in library {\ttfamily \$\{E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+B\+A\+C\+K\+E\+N\+D\+\_\+\+N\+A\+ME\}Factory}.
+\end{DoxyItemize}
+
+The external backend is declared to Glow by setting the C\+Make {\ttfamily linked\+\_\+factories} variable in the {\ttfamily $<$Name$>$/\+Backends/\+C\+Make\+Lists.txt}. Example\+:{\ttfamily set(linked\+\_\+factories \$\{linked\+\_\+factories\} $<$Name$>$Factory P\+A\+R\+E\+N\+T\+\_\+\+S\+C\+O\+PE)}
+
+For more details, please refer to the general Glow backend documentation.
+
+\paragraph*{Top level C\+Make configuration file}
+
+Global configuration of the backend can be specified in a top level {\ttfamily $<$Name$>$/\+C\+Make\+Lists.txt}.
+
+This file is optional.
+
+\paragraph*{Backend specific nodes and instructions}
+
+An external backend can optionally declare specific Glow nodes and instructions. In this case, the {\ttfamily $<$Name$>$/\+Class\+Gen/\+C\+Make\+Lists.txt} must be provided and backend specific nodes and instructions declaration headers declared.
+
+C\+Make example\+: 
+\begin{DoxyCode}
+set(VERIF\_FILENAME <Name>SpecificNodesVerification.h)
+configure\_file($\{VERIF\_FILENAME\}
+               $\{GLOW\_BINARY\_DIR\}/glow/$\{VERIF\_FILENAME\} COPYONLY)
+
+set(VERIF\_FILENAME <Name>SpecificInstrsVerification.h)
+configure\_file($\{VERIF\_FILENAME\}
+               $\{GLOW\_BINARY\_DIR\}/glow/$\{VERIF\_FILENAME\} COPYONLY)
+\end{DoxyCode}
+
+
+These header files must be included in the generic glow code, respectivelly in {\ttfamily tools/\+Class\+Gen/\+Node\+Gen.\+cpp} and {\ttfamily tools/\+Class\+Gen/\+Instr\+Gen.\+cpp}, at the end of the {\ttfamily main} function like standard backends.\+It is advised to enclose the backend specific include into {\ttfamily \#ifdef G\+L\+O\+W\+\_\+\+W\+I\+T\+H\+\_\+$<$B\+A\+C\+K\+E\+ND D\+IR N\+A\+ME$>$}.
+
+Example for specific nodes\+: 
+\begin{DoxyCode}
+int main(int argc, char **argv) \{
+  // <generic glow code>
+
+#include "Backends/CPU/CPUSpecificNodes.h"
+#include "Backends/OpenCL/OpenCLSpecificNodes.h"
+
+#ifdef GLOW\_WITH\_<NAME>
+# include "<Name>/ClassGen/<Name>SpecificNodes.h"
+#endif
+
+  return 0;
+\}
+\end{DoxyCode}
+
+
+\paragraph*{Backend specific tests}
+
+Backend specific tests can be added. In this case, the {\ttfamily $<$Name$>$/\+Tests/\+C\+Make\+Lists.txt} must be provided. The Backend tests must be compiled as a library and registered to glow with the {\ttfamily add\+\_\+glow\+\_\+test} cmake function.
+
+C\+Make example\+: ``` add\+\_\+executable($<$\+Name$>$Test $<$test sources$>$=\char`\"{}\char`\"{}$>$)
+
+target\+\_\+link\+\_\+libraries($<$\+Name$>$Test P\+R\+I\+V\+A\+TE Backends Execution\+Engine Graph Optimizer gtest Test\+Main)
+
+add\+\_\+glow\+\_\+test($<$name$>$Test \$\{G\+L\+O\+W\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+D\+IR\}/tests/$<$name$>$Test --gtest\+\_\+output=xml\+:Xtensa$<$name$>$Test.\+xml)`
+
+```
+
+For details, please refer to the general Glow testing documentation. 

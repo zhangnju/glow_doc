@@ -1,0 +1,186 @@
+\hypertarget{classglow_1_1_o_n_n_x_model_loader}{}\section{glow\+:\+:O\+N\+N\+X\+Model\+Loader Class Reference}
+\label{classglow_1_1_o_n_n_x_model_loader}\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+
+
+Loads O\+N\+NX models.  
+
+
+
+
+{\ttfamily \#include $<$O\+N\+N\+X\+Model\+Loader.\+h$>$}
+
+Inheritance diagram for glow\+:\+:O\+N\+N\+X\+Model\+Loader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.714055cm]{classglow_1_1_o_n_n_x_model_loader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{classglow_1_1_o_n_n_x_model_loader_a3c8adfddf50b79e3c62c4482a5c7396f}{get\+Ir\+Version} () const
+\item 
+size\+\_\+t \hyperlink{classglow_1_1_o_n_n_x_model_loader_ad79bf9d6dce0929b7ac160370dde4016}{get\+Op\+Set\+Version} () const
+\item 
+\hyperlink{classglow_1_1_o_n_n_x_model_loader_ac83cee4acc760b654ff5df058476d0a7}{O\+N\+N\+X\+Model\+Loader} (\hyperlink{classglow_1_1_function}{Function} \&F, \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$err\+Ptr=nullptr)
+\item 
+\hyperlink{classglow_1_1_o_n_n_x_model_loader_a610dc94fa573669e30035e80c020f5ab}{O\+N\+N\+X\+Model\+Loader} (const std\+::string \&model\+Desc\+Filename, llvm\+::\+Array\+Ref$<$ const char $\ast$$>$ tensor\+Names, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$ types, \hyperlink{classglow_1_1_function}{Function} \&F, \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$err\+Ptr=nullptr, bool zip\+Mode=false)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_o_n_n_x_model_loader_a58b2261b6839659a524fe1c60da69a57}{load\+Network} (O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Graph\+Proto \&net)
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_o_n_n_x_model_loader_ad27874fc7944a1514d1c0366edf432cf}{set\+Output\+Nodes} (O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Graph\+Proto \&net)
+\item 
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a0badc8e4da10853ad2c8ca5ecdadefe8}\label{classglow_1_1_o_n_n_x_model_loader_a0badc8e4da10853ad2c8ca5ecdadefe8}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_o_n_n_x_model_loader_a0badc8e4da10853ad2c8ca5ecdadefe8}{set\+Version} (O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Model\+Proto MP)
+\begin{DoxyCompactList}\small\item\em Set ir verion and op version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a2da72549e3a216548ec6537dde49defc}\label{classglow_1_1_o_n_n_x_model_loader_a2da72549e3a216548ec6537dde49defc}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_o_n_n_x_model_loader_a2da72549e3a216548ec6537dde49defc}{load\+Initializers} (O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Graph\+Proto \&net)
+\begin{DoxyCompactList}\small\item\em Load the network initializers from the Graph\+Proto. \end{DoxyCompactList}\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_o_n_n_x_model_loader_a058a0e98fd1cc21e4c092ddb4857969b}{load\+Inputs} (O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Graph\+Proto \&net, bool load\+Inputs\+As\+Placeholders)
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_o_n_n_x_model_loader_a9e92db9b3c007ae25458a7cfc0d6523f}{check\+Inputs} (O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Graph\+Proto \&net, llvm\+::\+Array\+Ref$<$ const char $\ast$$>$ tensor\+Names, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$ types)
+\item 
+\hyperlink{classglow_1_1_o_n_n_x_model_loader_a4f342be604ca0d6c9371696e2b0f99bb}{O\+N\+N\+X\+Model\+Loader} (const void $\ast$model, uint32\+\_\+t model\+Size, uint32\+\_\+t weights\+Count, const onnx\+Tensor\+Descriptor\+V1 $\ast$weight\+Descriptors, \hyperlink{classglow_1_1_function}{Function} \&F, bool load\+Inputs\+As\+Placeholders, \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$err\+Ptr=nullptr)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Model\+Proto $>$ \hyperlink{classglow_1_1_o_n_n_x_model_loader_a5400313d3234e910faae69a942d31b17}{load\+Proto} (google\+::protobuf\+::io\+::\+Zero\+Copy\+Input\+Stream \&i\+Stream)
+\item 
+static \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Model\+Proto $>$ \hyperlink{classglow_1_1_o_n_n_x_model_loader_a5895f6457fc8173369cee2fd296c770d}{load\+Proto} (const std\+::string \&filename)
+\item 
+static \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Model\+Proto $>$ \hyperlink{classglow_1_1_o_n_n_x_model_loader_a014184395bf683b1873bb17eae365ebd}{load\+Proto} (const void $\ast$onnx\+Model, size\+\_\+t onnx\+Model\+Size)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a2261b7d10ab59af231f02aaa75b7829a}\label{classglow_1_1_o_n_n_x_model_loader_a2261b7d10ab59af231f02aaa75b7829a}} 
+class {\bfseries O\+N\+N\+X\+I\+F\+I\+Model\+Loader}
+\item 
+{\footnotesize template$<$class Loader\+Type , class Op\+Type $>$ }\\\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_o_n_n_x_model_loader_a80921ed3db9c22615413812ec08923de}{constant\+Fold\+In\+Loader} (\hyperlink{classglow_1_1_function}{Function} $\ast$F, Loader\+Type \&tmp\+Loader, Loader\+Type $\ast$loader, const Op\+Type \&op)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Loads O\+N\+NX models. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a4f342be604ca0d6c9371696e2b0f99bb}\label{classglow_1_1_o_n_n_x_model_loader_a4f342be604ca0d6c9371696e2b0f99bb}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!O\+N\+N\+X\+Model\+Loader@{O\+N\+N\+X\+Model\+Loader}}
+\index{O\+N\+N\+X\+Model\+Loader@{O\+N\+N\+X\+Model\+Loader}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{O\+N\+N\+X\+Model\+Loader()}{ONNXModelLoader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily O\+N\+N\+X\+Model\+Loader\+::\+O\+N\+N\+X\+Model\+Loader (\begin{DoxyParamCaption}\item[{const void $\ast$}]{model,  }\item[{uint32\+\_\+t}]{model\+Size,  }\item[{uint32\+\_\+t}]{weights\+Count,  }\item[{const onnx\+Tensor\+Descriptor\+V1 $\ast$}]{weight\+Descriptors,  }\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{F,  }\item[{bool}]{load\+Inputs\+As\+Placeholders,  }\item[{\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$}]{err\+Ptr = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates a O\+N\+NX model loader to build {\ttfamily F}. Loads the O\+N\+N\+I\+X\+FI {\ttfamily model} from memory of {\ttfamily model\+Size} size, and {\ttfamily weights\+Count}, and {\ttfamily onnx\+Tensor\+Descriptor\+V1} correspondent descriptors. Converts inputs into placeholder if requested {\ttfamily load\+Inputs\+As\+Placeholders}. Reports success/failure through optional parameter {\ttfamily err\+Ptr}. \mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_ac83cee4acc760b654ff5df058476d0a7}\label{classglow_1_1_o_n_n_x_model_loader_ac83cee4acc760b654ff5df058476d0a7}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!O\+N\+N\+X\+Model\+Loader@{O\+N\+N\+X\+Model\+Loader}}
+\index{O\+N\+N\+X\+Model\+Loader@{O\+N\+N\+X\+Model\+Loader}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{O\+N\+N\+X\+Model\+Loader()}{ONNXModelLoader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily O\+N\+N\+X\+Model\+Loader\+::\+O\+N\+N\+X\+Model\+Loader (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{F,  }\item[{\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$}]{err\+Ptr = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Creates a O\+N\+NX model loader to build {\ttfamily F}. If {\ttfamily err\+Ptr} is not null then if an error occurs it will get assigned there otherwise if an error occurs it will abort. \mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a610dc94fa573669e30035e80c020f5ab}\label{classglow_1_1_o_n_n_x_model_loader_a610dc94fa573669e30035e80c020f5ab}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!O\+N\+N\+X\+Model\+Loader@{O\+N\+N\+X\+Model\+Loader}}
+\index{O\+N\+N\+X\+Model\+Loader@{O\+N\+N\+X\+Model\+Loader}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{O\+N\+N\+X\+Model\+Loader()}{ONNXModelLoader()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily O\+N\+N\+X\+Model\+Loader\+::\+O\+N\+N\+X\+Model\+Loader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{model\+Desc\+Filename,  }\item[{llvm\+::\+Array\+Ref$<$ const char $\ast$$>$}]{tensor\+Names,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$}]{types,  }\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{F,  }\item[{\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$}]{err\+Ptr = {\ttfamily nullptr},  }\item[{bool}]{zip\+Mode = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Loads the O\+N\+NX model that\textquotesingle{}s represented by a model description file, serialized in {\ttfamily model\+Desc\+Filename} and populates the network into {\ttfamily F}. The types in {\ttfamily types} match the list of names {\ttfamily tensor\+Names} and used as inputs to the network. If {\ttfamily names} and {\ttfamily types} are empty loader fills inputs automatically. If {\ttfamily err\+Ptr} is not null then if an error occurs it will get assigned there otherwise if an error occurs it will abort. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a9e92db9b3c007ae25458a7cfc0d6523f}\label{classglow_1_1_o_n_n_x_model_loader_a9e92db9b3c007ae25458a7cfc0d6523f}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!check\+Inputs@{check\+Inputs}}
+\index{check\+Inputs@{check\+Inputs}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{check\+Inputs()}{checkInputs()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} O\+N\+N\+X\+Model\+Loader\+::check\+Inputs (\begin{DoxyParamCaption}\item[{O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Graph\+Proto \&}]{net,  }\item[{llvm\+::\+Array\+Ref$<$ const char $\ast$$>$}]{tensor\+Names,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$}]{types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Checks that the inputs tensors are compatible with the inputs declared in the O\+N\+NX model. The input types in {\ttfamily types} match the list of names {\ttfamily tensor\+Names}. \mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a3c8adfddf50b79e3c62c4482a5c7396f}\label{classglow_1_1_o_n_n_x_model_loader_a3c8adfddf50b79e3c62c4482a5c7396f}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!get\+Ir\+Version@{get\+Ir\+Version}}
+\index{get\+Ir\+Version@{get\+Ir\+Version}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{get\+Ir\+Version()}{getIrVersion()}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+O\+N\+N\+X\+Model\+Loader\+::get\+Ir\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+O\+N\+NX model ir\+\_\+version; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_ad79bf9d6dce0929b7ac160370dde4016}\label{classglow_1_1_o_n_n_x_model_loader_ad79bf9d6dce0929b7ac160370dde4016}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!get\+Op\+Set\+Version@{get\+Op\+Set\+Version}}
+\index{get\+Op\+Set\+Version@{get\+Op\+Set\+Version}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{get\+Op\+Set\+Version()}{getOpSetVersion()}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+O\+N\+N\+X\+Model\+Loader\+::get\+Op\+Set\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+O\+N\+NX model op\+\_\+version; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a058a0e98fd1cc21e4c092ddb4857969b}\label{classglow_1_1_o_n_n_x_model_loader_a058a0e98fd1cc21e4c092ddb4857969b}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!load\+Inputs@{load\+Inputs}}
+\index{load\+Inputs@{load\+Inputs}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{load\+Inputs()}{loadInputs()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} O\+N\+N\+X\+Model\+Loader\+::load\+Inputs (\begin{DoxyParamCaption}\item[{O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Graph\+Proto \&}]{net,  }\item[{bool}]{load\+Inputs\+As\+Placeholders }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Load the inputs from the Graph\+Proto. If {\ttfamily load\+Inputs\+As\+Placeholders} is true then this will load each graph input as a placeholder otherwise it will create an empty tensor for each input. \mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a58b2261b6839659a524fe1c60da69a57}\label{classglow_1_1_o_n_n_x_model_loader_a58b2261b6839659a524fe1c60da69a57}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!load\+Network@{load\+Network}}
+\index{load\+Network@{load\+Network}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{load\+Network()}{loadNetwork()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} O\+N\+N\+X\+Model\+Loader\+::load\+Network (\begin{DoxyParamCaption}\item[{O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Graph\+Proto \&}]{net }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Load the network operators from the Graph\+Proto. \begin{DoxyReturn}{Returns}
+Error if network cannot be loaded. 
+\end{DoxyReturn}
+Load the network operators\+: \mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a5400313d3234e910faae69a942d31b17}\label{classglow_1_1_o_n_n_x_model_loader_a5400313d3234e910faae69a942d31b17}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!load\+Proto@{load\+Proto}}
+\index{load\+Proto@{load\+Proto}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{load\+Proto()}{loadProto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Model\+Proto $>$ O\+N\+N\+X\+Model\+Loader\+::load\+Proto (\begin{DoxyParamCaption}\item[{google\+::protobuf\+::io\+::\+Zero\+Copy\+Input\+Stream \&}]{i\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+Expected$<$\+Model\+Proto$>$ if a Model\+Proto can be loaded from the stream {\ttfamily i\+Stream}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a5895f6457fc8173369cee2fd296c770d}\label{classglow_1_1_o_n_n_x_model_loader_a5895f6457fc8173369cee2fd296c770d}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!load\+Proto@{load\+Proto}}
+\index{load\+Proto@{load\+Proto}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{load\+Proto()}{loadProto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Model\+Proto $>$ O\+N\+N\+X\+Model\+Loader\+::load\+Proto (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+Expected$<$\+Model\+Proto$>$ if a Model\+Proto can be constructed from the contents of the file {\ttfamily filename} and Error otherwise. Loads Model\+Proto from the file containing serialized protobuf. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a014184395bf683b1873bb17eae365ebd}\label{classglow_1_1_o_n_n_x_model_loader_a014184395bf683b1873bb17eae365ebd}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!load\+Proto@{load\+Proto}}
+\index{load\+Proto@{load\+Proto}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{load\+Proto()}{loadProto()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Model\+Proto $>$ O\+N\+N\+X\+Model\+Loader\+::load\+Proto (\begin{DoxyParamCaption}\item[{const void $\ast$}]{onnx\+Model,  }\item[{size\+\_\+t}]{onnx\+Model\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+Expected$<$\+Model\+Proto$>$ if a Model\+Proto can be constructed from the in-\/memory serialized protobuf. Loads Model\+Proto from the in-\/memory serialized protobuf {\ttfamily onnx\+Model} with the model size {\ttfamily onnx\+Model\+Size}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_ad27874fc7944a1514d1c0366edf432cf}\label{classglow_1_1_o_n_n_x_model_loader_ad27874fc7944a1514d1c0366edf432cf}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!set\+Output\+Nodes@{set\+Output\+Nodes}}
+\index{set\+Output\+Nodes@{set\+Output\+Nodes}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{set\+Output\+Nodes()}{setOutputNodes()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} O\+N\+N\+X\+Model\+Loader\+::set\+Output\+Nodes (\begin{DoxyParamCaption}\item[{O\+N\+N\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Graph\+Proto \&}]{net }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set the output nodes of the network {\ttfamily net}. Initializes the map from the names of the outputs to the save nodes that save each output. \begin{DoxyReturn}{Returns}
+Error if network cannot be loaded. 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_loader_a80921ed3db9c22615413812ec08923de}\label{classglow_1_1_o_n_n_x_model_loader_a80921ed3db9c22615413812ec08923de}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}!constant\+Fold\+In\+Loader@{constant\+Fold\+In\+Loader}}
+\index{constant\+Fold\+In\+Loader@{constant\+Fold\+In\+Loader}!glow\+::\+O\+N\+N\+X\+Model\+Loader@{glow\+::\+O\+N\+N\+X\+Model\+Loader}}
+\subsubsection{\texorpdfstring{constant\+Fold\+In\+Loader}{constantFoldInLoader}}
+{\footnotesize\ttfamily template$<$class Loader\+Type , class Op\+Type $>$ \\
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} constant\+Fold\+In\+Loader (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} $\ast$}]{F,  }\item[{Loader\+Type \&}]{tmp\+Loader,  }\item[{Loader\+Type $\ast$}]{loader,  }\item[{const Op\+Type \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyReturn}{Returns}
+success if the folding of operator {\ttfamily op} in the loader {\ttfamily loader} is successful. The folding utility uses temporary loader {\ttfamily tmp\+Loader}, and associated temporary function {\ttfamily F}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Importer/O\+N\+N\+X\+Model\+Loader.\+h\item 
+lib/\+Importer/O\+N\+N\+X\+Model\+Loader.\+cpp\end{DoxyCompactItemize}

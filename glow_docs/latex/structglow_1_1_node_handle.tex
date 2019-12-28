@@ -1,0 +1,83 @@
+\hypertarget{structglow_1_1_node_handle}{}\section{glow\+:\+:Node\+Handle Struct Reference}
+\label{structglow_1_1_node_handle}\index{glow\+::\+Node\+Handle@{glow\+::\+Node\+Handle}}
+
+
+{\ttfamily \#include $<$Node\+Value.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Node\+Handle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structglow_1_1_node_handle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_handle_a172e2db59fb9be128977de0527922048}\label{structglow_1_1_node_handle_a172e2db59fb9be128977de0527922048}} 
+\hyperlink{structglow_1_1_node_handle_a172e2db59fb9be128977de0527922048}{Node\+Handle} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\begin{DoxyCompactList}\small\item\em Create a new value and register the node we reference. \end{DoxyCompactList}\item 
+\hyperlink{structglow_1_1_node_handle_ada61f6b4c842e7911d221dac609c69c2}{Node\+Handle} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node}{Node} $\ast$N, unsigned res\+No)
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_handle_a9e59215aee87a3e0af80a6f506c81d2f}\label{structglow_1_1_node_handle_a9e59215aee87a3e0af80a6f506c81d2f}} 
+\hyperlink{structglow_1_1_node_handle_a9e59215aee87a3e0af80a6f506c81d2f}{Node\+Handle} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&that)
+\begin{DoxyCompactList}\small\item\em Create a new operand and register it as a new user to the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_handle_aa7efaaf73277a56d20716f621096fe2e}\label{structglow_1_1_node_handle_aa7efaaf73277a56d20716f621096fe2e}} 
+\hyperlink{structglow_1_1_node_handle_aa7efaaf73277a56d20716f621096fe2e}{Node\+Handle} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, const \hyperlink{structglow_1_1_node_handle}{Node\+Handle} \&that)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{structglow_1_1_node_handle}{Node\+Handle} from an existing one and register it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_handle_a4eac1ac7ee0f665c0ef7f28426dc31a7}\label{structglow_1_1_node_handle_a4eac1ac7ee0f665c0ef7f28426dc31a7}} 
+{\bfseries Node\+Handle} (const \hyperlink{structglow_1_1_node_handle}{Node\+Handle} \&that)
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_handle_a4401e5a207fea885cdbb88badf5fc518}\label{structglow_1_1_node_handle_a4401e5a207fea885cdbb88badf5fc518}} 
+\hyperlink{structglow_1_1_node_handle_a4401e5a207fea885cdbb88badf5fc518}{Node\+Handle} ()
+\begin{DoxyCompactList}\small\item\em Create an empty handle. \end{DoxyCompactList}\item 
+\hyperlink{structglow_1_1_node_handle_a5d05908394a4401a5de3a244d55b843f}{$\sim$\+Node\+Handle} ()
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_handle_a6cf57e8bbd0c662f4f6ad5f8d9c79f80}\label{structglow_1_1_node_handle_a6cf57e8bbd0c662f4f6ad5f8d9c79f80}} 
+\hyperlink{structglow_1_1_node_handle}{Node\+Handle} \& \hyperlink{structglow_1_1_node_handle_a6cf57e8bbd0c662f4f6ad5f8d9c79f80}{operator=} (const \hyperlink{structglow_1_1_node_handle}{Node\+Handle} \&that)
+\begin{DoxyCompactList}\small\item\em Unregister old value, assign new \hyperlink{structglow_1_1_node_value}{Node\+Value} and register it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_handle_aff514c45c01ad0159f77c4ac195f963f}\label{structglow_1_1_node_handle_aff514c45c01ad0159f77c4ac195f963f}} 
+\hyperlink{structglow_1_1_node_handle}{Node\+Handle} \& \hyperlink{structglow_1_1_node_handle_aff514c45c01ad0159f77c4ac195f963f}{operator=} (const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&that)
+\begin{DoxyCompactList}\small\item\em Unregister old value, assign new \hyperlink{structglow_1_1_node_value}{Node\+Value} and register it. \end{DoxyCompactList}\item 
+void \hyperlink{structglow_1_1_node_handle_a7747b243b3fab345ee117cf5d0e8d9bb}{set\+Operand} (\hyperlink{classglow_1_1_node}{Node} $\ast$v, unsigned res\+No)
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_handle_aaee87960be8540791957b2a9b764b31f}\label{structglow_1_1_node_handle_aaee87960be8540791957b2a9b764b31f}} 
+void \hyperlink{structglow_1_1_node_handle_aaee87960be8540791957b2a9b764b31f}{set\+Parent} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Set the parent object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A handle type for a \hyperlink{structglow_1_1_node_value}{Node\+Value}. This type should be used only by the class members of \hyperlink{classglow_1_1_node}{Node} classes when they need to refer to other nodes!
+
+This class also manages the node use-\/def chain, by registering and removing the address of the value from the use-\/list. This data structure is similar to L\+L\+VM\textquotesingle{}s S\+D\+Value. Only these \hyperlink{structglow_1_1_node_handle}{Node\+Handle} instances are registered as users of the nodes they refer to. The is different from the usual \hyperlink{structglow_1_1_node_value}{Node\+Value} instances, which are not registered as users of the nodes they refer to.
+
+Instances of \hyperlink{structglow_1_1_node_handle}{Node\+Handle} should always stay inside the Nodes they are members of and should never leave it. E.\+g. they cannot be returned as results of function calls, etc. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structglow_1_1_node_handle_ada61f6b4c842e7911d221dac609c69c2}\label{structglow_1_1_node_handle_ada61f6b4c842e7911d221dac609c69c2}} 
+\index{glow\+::\+Node\+Handle@{glow\+::\+Node\+Handle}!Node\+Handle@{Node\+Handle}}
+\index{Node\+Handle@{Node\+Handle}!glow\+::\+Node\+Handle@{glow\+::\+Node\+Handle}}
+\subsubsection{\texorpdfstring{Node\+Handle()}{NodeHandle()}}
+{\footnotesize\ttfamily Node\+Handle\+::\+Node\+Handle (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{parent,  }\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{N,  }\item[{unsigned}]{res\+No }\end{DoxyParamCaption})}
+
+Create a new value for result {\ttfamily res\+No} and register the node we reference. \mbox{\Hypertarget{structglow_1_1_node_handle_a5d05908394a4401a5de3a244d55b843f}\label{structglow_1_1_node_handle_a5d05908394a4401a5de3a244d55b843f}} 
+\index{glow\+::\+Node\+Handle@{glow\+::\+Node\+Handle}!````~Node\+Handle@{$\sim$\+Node\+Handle}}
+\index{````~Node\+Handle@{$\sim$\+Node\+Handle}!glow\+::\+Node\+Handle@{glow\+::\+Node\+Handle}}
+\subsubsection{\texorpdfstring{$\sim$\+Node\+Handle()}{~NodeHandle()}}
+{\footnotesize\ttfamily glow\+::\+Node\+Handle\+::$\sim$\+Node\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+When deleting an operand we need to unregister the operand from the use-\/list of the node it used to reference. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_node_handle_a7747b243b3fab345ee117cf5d0e8d9bb}\label{structglow_1_1_node_handle_a7747b243b3fab345ee117cf5d0e8d9bb}} 
+\index{glow\+::\+Node\+Handle@{glow\+::\+Node\+Handle}!set\+Operand@{set\+Operand}}
+\index{set\+Operand@{set\+Operand}!glow\+::\+Node\+Handle@{glow\+::\+Node\+Handle}}
+\subsubsection{\texorpdfstring{set\+Operand()}{setOperand()}}
+{\footnotesize\ttfamily void Node\+Handle\+::set\+Operand (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{v,  }\item[{unsigned}]{res\+No }\end{DoxyParamCaption})}
+
+Sets the operand to point to {\ttfamily N}. This method registers the operand as a user of {\ttfamily N}. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Node\+Value.\+h\item 
+lib/\+Graph/Node\+Value.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,87 @@
+\hypertarget{structglow_1_1_precision_configuration}{}\section{glow\+:\+:Precision\+Configuration Struct Reference}
+\label{structglow_1_1_precision_configuration}\index{glow\+::\+Precision\+Configuration@{glow\+::\+Precision\+Configuration}}
+
+
+Configuration for different precision modes.  
+
+
+
+
+{\ttfamily \#include $<$Compilation\+Context.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12c}{Quantization\+Mode} \{ {\bfseries None}, 
+\hyperlink{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12caca39930e22f40d10155a57dba32240bb}{Quantization\+Mode\+::\+Quantize}, 
+\hyperlink{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12cacce99c598cfdb9773ab041d54c3d973a}{Quantization\+Mode\+::\+Profile}
+ \}\begin{DoxyCompactList}\small\item\em Enum for what kind of transformation should be done for Quantization. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_precision_configuration_a51230123c34aaa8ea0720529aa3aa668}\label{structglow_1_1_precision_configuration_a51230123c34aaa8ea0720529aa3aa668}} 
+enum \hyperlink{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12c}{glow\+::\+Precision\+Configuration\+::\+Quantization\+Mode} {\bfseries None}
+\item 
+\mbox{\Hypertarget{structglow_1_1_precision_configuration_a11d37f864d0732837579f9981da42fd6}\label{structglow_1_1_precision_configuration_a11d37f864d0732837579f9981da42fd6}} 
+\hyperlink{structglow_1_1quantization_1_1_quantization_configuration}{quantization\+::\+Quantization\+Configuration} \hyperlink{structglow_1_1_precision_configuration_a11d37f864d0732837579f9981da42fd6}{quant\+Config}
+\begin{DoxyCompactList}\small\item\em Configuration for Quantization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_precision_configuration_ac9732333f585d5c8b6ecaf6855d12657}\label{structglow_1_1_precision_configuration_ac9732333f585d5c8b6ecaf6855d12657}} 
+bool \hyperlink{structglow_1_1_precision_configuration_ac9732333f585d5c8b6ecaf6855d12657}{convert\+To\+F\+P16} \{false\}
+\begin{DoxyCompactList}\small\item\em Whether to convert the Float\+Ty to Float16\+Ty in the \hyperlink{classglow_1_1_function}{Function}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_precision_configuration_abe4769c76864ecfd081d14b9854a744e}\label{structglow_1_1_precision_configuration_abe4769c76864ecfd081d14b9854a744e}} 
+bool \hyperlink{structglow_1_1_precision_configuration_abe4769c76864ecfd081d14b9854a744e}{convert\+Fused\+To\+F\+P16} \{false\}
+\begin{DoxyCompactList}\small\item\em Whether to convert U\+Int8\+Fused\+Q\+Ty to U\+Int8\+Fused\+F\+P16\+Q\+Ty in the \hyperlink{classglow_1_1_function}{Function}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_precision_configuration_a65953dbf7a7d68736f337ee9d0e11969}\label{structglow_1_1_precision_configuration_a65953dbf7a7d68736f337ee9d0e11969}} 
+bool \hyperlink{structglow_1_1_precision_configuration_a65953dbf7a7d68736f337ee9d0e11969}{clip\+F\+P16} \{false\}
+\begin{DoxyCompactList}\small\item\em Whether to clip out-\/of-\/range FP values to the min/max of fp16. \end{DoxyCompactList}\item 
+Kind\+Set \hyperlink{structglow_1_1_precision_configuration_aa82990fcfc9b6b3cac365d037b962852}{precision\+Mode\+Kind\+Set}
+\item 
+bool \hyperlink{structglow_1_1_precision_configuration_a1bfcccc0bdb4c783ab15ba37677f8582}{use\+Set\+As\+Whitelist} \{false\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Configuration for different precision modes. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12c}\label{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12c}} 
+\index{glow\+::\+Precision\+Configuration@{glow\+::\+Precision\+Configuration}!Quantization\+Mode@{Quantization\+Mode}}
+\index{Quantization\+Mode@{Quantization\+Mode}!glow\+::\+Precision\+Configuration@{glow\+::\+Precision\+Configuration}}
+\subsubsection{\texorpdfstring{Quantization\+Mode}{QuantizationMode}}
+{\footnotesize\ttfamily enum \hyperlink{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12c}{glow\+::\+Precision\+Configuration\+::\+Quantization\+Mode}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enum for what kind of transformation should be done for Quantization. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Quantize@{Quantize}!glow\+::\+Precision\+Configuration@{glow\+::\+Precision\+Configuration}}\index{glow\+::\+Precision\+Configuration@{glow\+::\+Precision\+Configuration}!Quantize@{Quantize}}}\mbox{\Hypertarget{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12caca39930e22f40d10155a57dba32240bb}\label{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12caca39930e22f40d10155a57dba32240bb}} 
+Quantize&Perform no transformations for quantization. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Profile@{Profile}!glow\+::\+Precision\+Configuration@{glow\+::\+Precision\+Configuration}}\index{glow\+::\+Precision\+Configuration@{glow\+::\+Precision\+Configuration}!Profile@{Profile}}}\mbox{\Hypertarget{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12cacce99c598cfdb9773ab041d54c3d973a}\label{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12cacce99c598cfdb9773ab041d54c3d973a}} 
+Profile&Quantize the graph using previously gathered statistics. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1_precision_configuration_aa82990fcfc9b6b3cac365d037b962852}\label{structglow_1_1_precision_configuration_aa82990fcfc9b6b3cac365d037b962852}} 
+\index{glow\+::\+Precision\+Configuration@{glow\+::\+Precision\+Configuration}!precision\+Mode\+Kind\+Set@{precision\+Mode\+Kind\+Set}}
+\index{precision\+Mode\+Kind\+Set@{precision\+Mode\+Kind\+Set}!glow\+::\+Precision\+Configuration@{glow\+::\+Precision\+Configuration}}
+\subsubsection{\texorpdfstring{precision\+Mode\+Kind\+Set}{precisionModeKindSet}}
+{\footnotesize\ttfamily Kind\+Set glow\+::\+Precision\+Configuration\+::precision\+Mode\+Kind\+Set}
+
+Used during Quantization and convert\+To\+F\+P16 to keep the original precision of specific node kinds (i.\+e. quantization/\+F\+P16 conversion would be skipped for any node kinds found here). Used during profiling to prevent nodes from being lowered before instrumenting the graph (e.\+g. do not lower group convolutions for profiling; see {\ttfamily -\/do-\/not-\/lower-\/nodes-\/for-\/profiling} in docs/\+Quantization.\+md). \mbox{\Hypertarget{structglow_1_1_precision_configuration_a1bfcccc0bdb4c783ab15ba37677f8582}\label{structglow_1_1_precision_configuration_a1bfcccc0bdb4c783ab15ba37677f8582}} 
+\index{glow\+::\+Precision\+Configuration@{glow\+::\+Precision\+Configuration}!use\+Set\+As\+Whitelist@{use\+Set\+As\+Whitelist}}
+\index{use\+Set\+As\+Whitelist@{use\+Set\+As\+Whitelist}!glow\+::\+Precision\+Configuration@{glow\+::\+Precision\+Configuration}}
+\subsubsection{\texorpdfstring{use\+Set\+As\+Whitelist}{useSetAsWhitelist}}
+{\footnotesize\ttfamily bool glow\+::\+Precision\+Configuration\+::use\+Set\+As\+Whitelist \{false\}}
+
+Whether to use the precision\+Mode\+Kind\+Set as a whitelist instead of the default blacklist. Currently only supported for convert\+To\+F\+P16. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Optimizer/\+Graph\+Optimizer/Compilation\+Context.\+h\end{DoxyCompactItemize}

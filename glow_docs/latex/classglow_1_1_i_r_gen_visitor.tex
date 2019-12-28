@@ -1,0 +1,73 @@
+\hypertarget{classglow_1_1_i_r_gen_visitor}{}\section{glow\+:\+:I\+R\+Gen\+Visitor Class Reference}
+\label{classglow_1_1_i_r_gen_visitor}\index{glow\+::\+I\+R\+Gen\+Visitor@{glow\+::\+I\+R\+Gen\+Visitor}}
+
+
+{\ttfamily \#include $<$I\+R\+Gen.\+h$>$}
+
+Inheritance diagram for glow\+:\+:I\+R\+Gen\+Visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_i_r_gen_visitor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classglow_1_1_i_r_gen_visitor_a5f5fe967edc74e4a65e5c4d76affac80}{should\+Visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node}{Node} $\ast$N) override
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_gen_visitor_aa8aff953d4f0ceafe3b8e5fd48590d0e}\label{classglow_1_1_i_r_gen_visitor_aa8aff953d4f0ceafe3b8e5fd48590d0e}} 
+{\bfseries I\+R\+Gen\+Visitor} (\hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$M, const \hyperlink{classglow_1_1_backend}{Backend} \&B)
+\item 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ \hyperlink{classglow_1_1_i_r_gen_visitor_a34877f08e0fe9644b471d729a7924039}{value\+For\+Node} (\hyperlink{structglow_1_1_node_value}{Node\+Value} N)
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_gen_visitor_a6d0bf5fd1344ba86df0ec2d589d66937}\label{classglow_1_1_i_r_gen_visitor_a6d0bf5fd1344ba86df0ec2d589d66937}} 
+void \hyperlink{classglow_1_1_i_r_gen_visitor_a6d0bf5fd1344ba86df0ec2d589d66937}{register\+IR} (\hyperlink{structglow_1_1_node_value}{Node\+Value} N, \hyperlink{classglow_1_1_value}{Value} $\ast$v)
+\begin{DoxyCompactList}\small\item\em Saves the generated IR in {\ttfamily v} for the node {\ttfamily N}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_gen_visitor_a85300f2b9ee350ccd2b01200a1f09beb}\label{classglow_1_1_i_r_gen_visitor_a85300f2b9ee350ccd2b01200a1f09beb}} 
+void \hyperlink{classglow_1_1_i_r_gen_visitor_a85300f2b9ee350ccd2b01200a1f09beb}{set\+Node\+To\+IR} (\hyperlink{classglow_1_1_node}{Node} $\ast$N, \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$inst)
+\begin{DoxyCompactList}\small\item\em Adds to \hyperlink{classglow_1_1_node}{Node} {\ttfamily N} --$>$ \hyperlink{classglow_1_1_instruction}{Instruction} {\ttfamily inst} map. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$ \hyperlink{classglow_1_1_i_r_gen_visitor_a53d9ffcdda8b598a40e95d139dc83f06}{get\+Node\+To\+IR} (\hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_gen_visitor_a2791ce4591f8edb1a38a89bf1f764867}\label{classglow_1_1_i_r_gen_visitor_a2791ce4591f8edb1a38a89bf1f764867}} 
+void \hyperlink{classglow_1_1_i_r_gen_visitor_a2791ce4591f8edb1a38a89bf1f764867}{post} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node}{Node} $\ast$N) override
+\begin{DoxyCompactList}\small\item\em This callback is called after visiting the children of {\ttfamily N}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_gen_visitor_a9061ec8ffd134283efab72ec5bc1fab1}\label{classglow_1_1_i_r_gen_visitor_a9061ec8ffd134283efab72ec5bc1fab1}} 
+\hyperlink{classglow_1_1_i_r_builder}{I\+R\+Builder} $\ast$ {\bfseries get\+Builder} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements {\ttfamily \hyperlink{classglow_1_1_node_walker}{Node\+Walker}} interface to translate from \hyperlink{classglow_1_1_node}{Node} to \hyperlink{classglow_1_1_instruction}{Instruction} IR. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_i_r_gen_visitor_a53d9ffcdda8b598a40e95d139dc83f06}\label{classglow_1_1_i_r_gen_visitor_a53d9ffcdda8b598a40e95d139dc83f06}} 
+\index{glow\+::\+I\+R\+Gen\+Visitor@{glow\+::\+I\+R\+Gen\+Visitor}!get\+Node\+To\+IR@{get\+Node\+To\+IR}}
+\index{get\+Node\+To\+IR@{get\+Node\+To\+IR}!glow\+::\+I\+R\+Gen\+Visitor@{glow\+::\+I\+R\+Gen\+Visitor}}
+\subsubsection{\texorpdfstring{get\+Node\+To\+I\+R()}{getNodeToIR()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$ I\+R\+Gen\+Visitor\+::get\+Node\+To\+IR (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{N }\end{DoxyParamCaption})}
+
+Return \hyperlink{classglow_1_1_instruction}{Instruction} that is mapped to \hyperlink{classglow_1_1_node}{Node} {\ttfamily N}. If mapping doesn\textquotesingle{}t exists returns nullptr. \mbox{\Hypertarget{classglow_1_1_i_r_gen_visitor_a5f5fe967edc74e4a65e5c4d76affac80}\label{classglow_1_1_i_r_gen_visitor_a5f5fe967edc74e4a65e5c4d76affac80}} 
+\index{glow\+::\+I\+R\+Gen\+Visitor@{glow\+::\+I\+R\+Gen\+Visitor}!should\+Visit@{should\+Visit}}
+\index{should\+Visit@{should\+Visit}!glow\+::\+I\+R\+Gen\+Visitor@{glow\+::\+I\+R\+Gen\+Visitor}}
+\subsubsection{\texorpdfstring{should\+Visit()}{shouldVisit()}}
+{\footnotesize\ttfamily bool I\+R\+Gen\+Visitor\+::should\+Visit (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{parent,  }\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{N }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This callback is called before processing the graph. If the method returns false then we skip this node. 
+
+Reimplemented from \hyperlink{classglow_1_1_node_walker_a33532d7a4fe24f71c1b763c53182b20b}{glow\+::\+Node\+Walker}.
+
+\mbox{\Hypertarget{classglow_1_1_i_r_gen_visitor_a34877f08e0fe9644b471d729a7924039}\label{classglow_1_1_i_r_gen_visitor_a34877f08e0fe9644b471d729a7924039}} 
+\index{glow\+::\+I\+R\+Gen\+Visitor@{glow\+::\+I\+R\+Gen\+Visitor}!value\+For\+Node@{value\+For\+Node}}
+\index{value\+For\+Node@{value\+For\+Node}!glow\+::\+I\+R\+Gen\+Visitor@{glow\+::\+I\+R\+Gen\+Visitor}}
+\subsubsection{\texorpdfstring{value\+For\+Node()}{valueForNode()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_value}{Value} $\ast$ I\+R\+Gen\+Visitor\+::value\+For\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{N }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the generated instruction for the node {\ttfamily N}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+I\+R/I\+R\+Gen.\+h\item 
+lib/\+I\+R/I\+R\+Gen.\+cpp\end{DoxyCompactItemize}

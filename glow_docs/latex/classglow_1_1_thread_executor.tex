@@ -1,0 +1,84 @@
+\hypertarget{classglow_1_1_thread_executor}{}\section{glow\+:\+:Thread\+Executor Class Reference}
+\label{classglow_1_1_thread_executor}\index{glow\+::\+Thread\+Executor@{glow\+::\+Thread\+Executor}}
+
+
+An executor that runs Tasks on a single thread.  
+
+
+
+
+{\ttfamily \#include $<$Thread\+Pool.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_thread_executor_a11897142fea378fe51557e56b64e6abc}\label{classglow_1_1_thread_executor_a11897142fea378fe51557e56b64e6abc}} 
+\hyperlink{classglow_1_1_thread_executor_a11897142fea378fe51557e56b64e6abc}{Thread\+Executor} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Initializes one thread backed by the work\+Queue\+\_\+. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_thread_executor_a52fcf5308d249813074c7aaf2e2e41e0}\label{classglow_1_1_thread_executor_a52fcf5308d249813074c7aaf2e2e41e0}} 
+\hyperlink{classglow_1_1_thread_executor_a52fcf5308d249813074c7aaf2e2e41e0}{$\sim$\+Thread\+Executor} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Signals the thread to stop and waits for exit. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename F $>$ }\\std\+::future$<$ void $>$ \hyperlink{classglow_1_1_thread_executor_af5cda76c60df09c55b796bda2c2009fc}{submit} (F \&\&fn)
+\item 
+\mbox{\Hypertarget{classglow_1_1_thread_executor_acd99d215fa8e7f8432021a7620861cc0}\label{classglow_1_1_thread_executor_acd99d215fa8e7f8432021a7620861cc0}} 
+std\+::future$<$ void $>$ \hyperlink{classglow_1_1_thread_executor_acd99d215fa8e7f8432021a7620861cc0}{submit} (std\+::packaged\+\_\+task$<$ void(void)$>$ \&\&task)
+\begin{DoxyCompactList}\small\item\em Submit {\ttfamily task} as a work item for the thread pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_thread_executor_a6cc911aa8d7bdf3282d8c6c9ec19a3d7}\label{classglow_1_1_thread_executor_a6cc911aa8d7bdf3282d8c6c9ec19a3d7}} 
+void {\bfseries stop} (bool block=false)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_thread_executor_ac6cccc80604fb029b68f955867edf425}\label{classglow_1_1_thread_executor_ac6cccc80604fb029b68f955867edf425}} 
+void \hyperlink{classglow_1_1_thread_executor_ac6cccc80604fb029b68f955867edf425}{thread\+Pool\+Worker\+Main} ()
+\begin{DoxyCompactList}\small\item\em Main loop run by the workers in the thread pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ bool $>$ \hyperlink{classglow_1_1_thread_executor_a88d31feb58f5b19d6a6892b55a80f102}{should\+Stop\+\_\+} \{false\}
+\item 
+\mbox{\Hypertarget{classglow_1_1_thread_executor_a2c3f8f552f945a365279701c77d8f20e}\label{classglow_1_1_thread_executor_a2c3f8f552f945a365279701c77d8f20e}} 
+std\+::queue$<$ std\+::packaged\+\_\+task$<$ void(void)$>$ $>$ \hyperlink{classglow_1_1_thread_executor_a2c3f8f552f945a365279701c77d8f20e}{work\+Queue\+\_\+}
+\begin{DoxyCompactList}\small\item\em Queue of work items. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_thread_executor_a60b0448ed3cf0ea306d043db4853d29c}\label{classglow_1_1_thread_executor_a60b0448ed3cf0ea306d043db4853d29c}} 
+std\+::mutex \hyperlink{classglow_1_1_thread_executor_a60b0448ed3cf0ea306d043db4853d29c}{work\+Queue\+Mtx\+\_\+}
+\begin{DoxyCompactList}\small\item\em Mutex to coordinate access to the work queue. \end{DoxyCompactList}\item 
+std\+::condition\+\_\+variable \hyperlink{classglow_1_1_thread_executor_ad2bd0f888b7c19935724e2ddfbe7706f}{queue\+Not\+Empty\+\_\+}
+\item 
+\mbox{\Hypertarget{classglow_1_1_thread_executor_aa62823b4869610631e501af9919fab52}\label{classglow_1_1_thread_executor_aa62823b4869610631e501af9919fab52}} 
+std\+::thread \hyperlink{classglow_1_1_thread_executor_aa62823b4869610631e501af9919fab52}{worker\+\_\+}
+\begin{DoxyCompactList}\small\item\em Worker thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An executor that runs Tasks on a single thread. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_thread_executor_af5cda76c60df09c55b796bda2c2009fc}\label{classglow_1_1_thread_executor_af5cda76c60df09c55b796bda2c2009fc}} 
+\index{glow\+::\+Thread\+Executor@{glow\+::\+Thread\+Executor}!submit@{submit}}
+\index{submit@{submit}!glow\+::\+Thread\+Executor@{glow\+::\+Thread\+Executor}}
+\subsubsection{\texorpdfstring{submit()}{submit()}}
+{\footnotesize\ttfamily template$<$typename F $>$ \\
+std\+::future$<$void$>$ glow\+::\+Thread\+Executor\+::submit (\begin{DoxyParamCaption}\item[{F \&\&}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Submit {\ttfamily fn} as a work item for the thread pool. {\ttfamily fn} must be a lambda with void return type and arguments. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classglow_1_1_thread_executor_ad2bd0f888b7c19935724e2ddfbe7706f}\label{classglow_1_1_thread_executor_ad2bd0f888b7c19935724e2ddfbe7706f}} 
+\index{glow\+::\+Thread\+Executor@{glow\+::\+Thread\+Executor}!queue\+Not\+Empty\+\_\+@{queue\+Not\+Empty\+\_\+}}
+\index{queue\+Not\+Empty\+\_\+@{queue\+Not\+Empty\+\_\+}!glow\+::\+Thread\+Executor@{glow\+::\+Thread\+Executor}}
+\subsubsection{\texorpdfstring{queue\+Not\+Empty\+\_\+}{queueNotEmpty\_}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable glow\+::\+Thread\+Executor\+::queue\+Not\+Empty\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Condition variable to signal to threads when work is added to the work queue. \mbox{\Hypertarget{classglow_1_1_thread_executor_a88d31feb58f5b19d6a6892b55a80f102}\label{classglow_1_1_thread_executor_a88d31feb58f5b19d6a6892b55a80f102}} 
+\index{glow\+::\+Thread\+Executor@{glow\+::\+Thread\+Executor}!should\+Stop\+\_\+@{should\+Stop\+\_\+}}
+\index{should\+Stop\+\_\+@{should\+Stop\+\_\+}!glow\+::\+Thread\+Executor@{glow\+::\+Thread\+Executor}}
+\subsubsection{\texorpdfstring{should\+Stop\+\_\+}{shouldStop\_}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ glow\+::\+Thread\+Executor\+::should\+Stop\+\_\+ \{false\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag checked in between work items to determine whether we should stop and exit. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Thread\+Pool.\+h\item 
+lib/\+Support/Thread\+Pool.\+cpp\end{DoxyCompactItemize}

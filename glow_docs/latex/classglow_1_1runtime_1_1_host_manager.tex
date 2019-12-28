@@ -1,0 +1,102 @@
+\hypertarget{classglow_1_1runtime_1_1_host_manager}{}\section{glow\+:\+:runtime\+:\+:Host\+Manager Class Reference}
+\label{classglow_1_1runtime_1_1_host_manager}\index{glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}}
+
+
+{\ttfamily \#include $<$Host\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_ab6c8d08c393bd511544b59b66c173b58}\label{classglow_1_1runtime_1_1_host_manager_ab6c8d08c393bd511544b59b66c173b58}} 
+\hyperlink{classglow_1_1runtime_1_1_host_manager_ab6c8d08c393bd511544b59b66c173b58}{Host\+Manager} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_ad30a764e2aa235864bda22cb417481d3}\label{classglow_1_1runtime_1_1_host_manager_ad30a764e2aa235864bda22cb417481d3}} 
+\hyperlink{classglow_1_1runtime_1_1_host_manager_ad30a764e2aa235864bda22cb417481d3}{Host\+Manager} (const \hyperlink{structglow_1_1runtime_1_1_host_config}{Host\+Config} \&host\+Config)
+\begin{DoxyCompactList}\small\item\em Constructor that takes configuration options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_a993540bff98f21c7f7a63a7b012b0697}\label{classglow_1_1runtime_1_1_host_manager_a993540bff98f21c7f7a63a7b012b0697}} 
+\hyperlink{classglow_1_1runtime_1_1_host_manager_a993540bff98f21c7f7a63a7b012b0697}{Host\+Manager} (std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{structglow_1_1runtime_1_1_device_config}{Device\+Config} $>$$>$ device\+Configs)
+\begin{DoxyCompactList}\small\item\em Constructor that takes a list of Devices to use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_a89b0b6ca1d8a1daa7c97b48cf622f82a}\label{classglow_1_1runtime_1_1_host_manager_a89b0b6ca1d8a1daa7c97b48cf622f82a}} 
+\hyperlink{classglow_1_1runtime_1_1_host_manager_a89b0b6ca1d8a1daa7c97b48cf622f82a}{Host\+Manager} (std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{structglow_1_1runtime_1_1_device_config}{Device\+Config} $>$$>$ device\+Configs, const \hyperlink{structglow_1_1runtime_1_1_host_config}{Host\+Config} \&host\+Config)
+\begin{DoxyCompactList}\small\item\em Constructor that takes both Devices and the configuration. \end{DoxyCompactList}\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_host_manager_a93e479985183392e3405e8e0a38b7516}{add\+Network} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_module}{Module} $>$ module, \hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx, bool saturate\+Host=false)
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_host_manager_a3ab032d13b46dad18341e97cec4a46c6}{remove\+Network} (llvm\+::\+String\+Ref network\+Name)
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_a0d68fe3250192a62ce45ced8ab9a259c}\label{classglow_1_1runtime_1_1_host_manager_a0d68fe3250192a62ce45ced8ab9a259c}} 
+bool \hyperlink{classglow_1_1runtime_1_1_host_manager_a0d68fe3250192a62ce45ced8ab9a259c}{network\+Added} (llvm\+::\+String\+Ref network\+Name)
+\begin{DoxyCompactList}\small\item\em Returns true if {\ttfamily network\+Name} is already added to the host. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_ae5a22d2e34e2990459958f6e275350d8}\label{classglow_1_1runtime_1_1_host_manager_ae5a22d2e34e2990459958f6e275350d8}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_host_manager_ae5a22d2e34e2990459958f6e275350d8}{clear\+Host} ()
+\begin{DoxyCompactList}\small\item\em Removes all networks from the host, and stops execution on all devices. \end{DoxyCompactList}\item 
+Run\+Identifier\+Ty \hyperlink{classglow_1_1runtime_1_1_host_manager_a40bb5ba6c62b6697e306519271b3b936}{run\+Network} (llvm\+::\+String\+Ref network\+Name, std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ context, Result\+C\+B\+Ty callback, uint64\+\_\+t priority=0)
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_host_manager_a6e65b0b9577ab3573121fd5875514da1}{run\+Network\+Blocking} (llvm\+::\+String\+Ref network\+Name, std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ context)
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_host_manager_a0d6086ba220183342de461d500d6dde4}{run\+Network\+Blocking} (llvm\+::\+String\+Ref network\+Name, \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings)
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_host_manager_aa074ead90b05d6cd00b82b83f142c141}{init} (std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{structglow_1_1runtime_1_1_device_config}{Device\+Config} $>$$>$ configs)
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_a91c85ef9c53652c7b470cf9e7876c4f0}\label{classglow_1_1runtime_1_1_host_manager_a91c85ef9c53652c7b470cf9e7876c4f0}} 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{structglow_1_1runtime_1_1_d_a_g}{D\+AG} $\ast$ $>$ \hyperlink{classglow_1_1runtime_1_1_host_manager_a91c85ef9c53652c7b470cf9e7876c4f0}{get\+Network\+D\+AG} (llvm\+::\+String\+Ref network)
+\begin{DoxyCompactList}\small\item\em Get the network \hyperlink{structglow_1_1runtime_1_1_d_a_g}{D\+AG} for {\ttfamily network} if it exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classglow_1_1runtime_1_1_host_manager}{Host\+Manager} serves as an entry point into the Runtime environment. It provides an interface to add, run, and evict networks from the host. It handles \hyperlink{classglow_1_1runtime_1_1_device_manager}{Device\+Manager} initialization, houses the \hyperlink{classglow_1_1runtime_1_1_executor}{Executor}, and calls into the \hyperlink{classglow_1_1_partitioner}{Partitioner} and \hyperlink{classglow_1_1runtime_1_1_provisioner}{Provisioner} for network initialization. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_a93e479985183392e3405e8e0a38b7516}\label{classglow_1_1runtime_1_1_host_manager_a93e479985183392e3405e8e0a38b7516}} 
+\index{glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}!add\+Network@{add\+Network}}
+\index{add\+Network@{add\+Network}!glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}}
+\subsubsection{\texorpdfstring{add\+Network()}{addNetwork()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} Host\+Manager\+::add\+Network (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_module}{Module} $>$}]{module,  }\item[{\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx,  }\item[{bool}]{saturate\+Host = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Adds the network to the host and does the necessary setup work. This includes partitioning, provisioning, compiling and initializing backends. Additionally D\+A\+Gs are created for each function and stored in networks\+\_\+. \begin{DoxyReturn}{Returns}
+an Error containing the results of the operation. This function consumes the {\ttfamily module} so any pointers to data contained within the module should be considered invalid. The function is optimized based on {\ttfamily cctx}. If {\ttfamily saturate\+Host} is set to true the \hyperlink{classglow_1_1runtime_1_1_host_manager}{Host\+Manager} will try to use all available devices on the host. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_aa074ead90b05d6cd00b82b83f142c141}\label{classglow_1_1runtime_1_1_host_manager_aa074ead90b05d6cd00b82b83f142c141}} 
+\index{glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}!init@{init}}
+\index{init@{init}!glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} Host\+Manager\+::init (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{structglow_1_1runtime_1_1_device_config}{Device\+Config} $>$$>$}]{configs }\end{DoxyParamCaption})}
+
+Initialize the \hyperlink{classglow_1_1runtime_1_1_host_manager}{Host\+Manager} with the given {\ttfamily configs} creating one \hyperlink{classglow_1_1runtime_1_1_device_manager}{Device\+Manager} for each config listed. \mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_a3ab032d13b46dad18341e97cec4a46c6}\label{classglow_1_1runtime_1_1_host_manager_a3ab032d13b46dad18341e97cec4a46c6}} 
+\index{glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}!remove\+Network@{remove\+Network}}
+\index{remove\+Network@{remove\+Network}!glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}}
+\subsubsection{\texorpdfstring{remove\+Network()}{removeNetwork()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} Host\+Manager\+::remove\+Network (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{network\+Name }\end{DoxyParamCaption})}
+
+Given {\ttfamily network\+Name} removes that network from the host. This also removes the network from any backends setup to execute it. \begin{DoxyReturn}{Returns}
+an Error indicating success or failure of the operation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_a40bb5ba6c62b6697e306519271b3b936}\label{classglow_1_1runtime_1_1_host_manager_a40bb5ba6c62b6697e306519271b3b936}} 
+\index{glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}!run\+Network@{run\+Network}}
+\index{run\+Network@{run\+Network}!glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}}
+\subsubsection{\texorpdfstring{run\+Network()}{runNetwork()}}
+{\footnotesize\ttfamily Run\+Identifier\+Ty Host\+Manager\+::run\+Network (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{network\+Name,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$}]{context,  }\item[{Result\+C\+B\+Ty}]{callback,  }\item[{uint64\+\_\+t}]{priority = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Runs the network specified by {\ttfamily network\+Name} using the provided {\ttfamily context}, returns a run\+Identifier which refers to the specic inference request. Calls {\ttfamily callback} with the results when inference is done. Note\+: This method is intended to be thread-\/safe, it will be called concurrently from multiple threads. Returns -\/1 if network\+Name not found or too many active requests. The parameter {\ttfamily priority} is used to indicate queueing priority, priority is lowest number first and in case of a tie the request that was submitted first will go first. \mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_a6e65b0b9577ab3573121fd5875514da1}\label{classglow_1_1runtime_1_1_host_manager_a6e65b0b9577ab3573121fd5875514da1}} 
+\index{glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}!run\+Network\+Blocking@{run\+Network\+Blocking}}
+\index{run\+Network\+Blocking@{run\+Network\+Blocking}!glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}}
+\subsubsection{\texorpdfstring{run\+Network\+Blocking()}{runNetworkBlocking()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} Host\+Manager\+::run\+Network\+Blocking (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{network\+Name,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$}]{context }\end{DoxyParamCaption})}
+
+A wrapper around run\+Network that provides a blocking interface for an inference request. Runs the network provided in {\ttfamily network\+Name} using {\ttfamily context}. \begin{DoxyReturn}{Returns}
+an Error indicating success or failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_host_manager_a0d6086ba220183342de461d500d6dde4}\label{classglow_1_1runtime_1_1_host_manager_a0d6086ba220183342de461d500d6dde4}} 
+\index{glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}!run\+Network\+Blocking@{run\+Network\+Blocking}}
+\index{run\+Network\+Blocking@{run\+Network\+Blocking}!glow\+::runtime\+::\+Host\+Manager@{glow\+::runtime\+::\+Host\+Manager}}
+\subsubsection{\texorpdfstring{run\+Network\+Blocking()}{runNetworkBlocking()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} Host\+Manager\+::run\+Network\+Blocking (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{network\+Name,  }\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings }\end{DoxyParamCaption})}
+
+A wrapper around run\+Network that provides a blocking interface for an inference request. Runs the network provided in {\ttfamily network\+Name} using {\ttfamily bindings} for placeholder bindings. \begin{DoxyReturn}{Returns}
+an Error indicating success or failure. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Runtime/\+Host\+Manager/Host\+Manager.\+h\item 
+lib/\+Runtime/\+Host\+Manager/Host\+Manager.\+cpp\end{DoxyCompactItemize}

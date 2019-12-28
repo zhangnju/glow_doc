@@ -1,0 +1,102 @@
+\hypertarget{structglow_1_1_allocations_info}{}\section{glow\+:\+:Allocations\+Info Struct Reference}
+\label{structglow_1_1_allocations_info}\index{glow\+::\+Allocations\+Info@{glow\+::\+Allocations\+Info}}
+
+
+{\ttfamily \#include $<$Allocations\+Info.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_allocations_info_a567e8d6e8893ba370bd2cd45a34a31f3}\label{structglow_1_1_allocations_info_a567e8d6e8893ba370bd2cd45a34a31f3}} 
+enum \hyperlink{structglow_1_1_allocations_info_a567e8d6e8893ba370bd2cd45a34a31f3}{Value\+Kind} \{ {\bfseries Constant\+Weight}, 
+{\bfseries Mutable\+Weight}, 
+{\bfseries Activation}
+ \}\begin{DoxyCompactList}\small\item\em Different kinds of values that need to be allocated. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{structglow_1_1_allocations_info_a459d3668174199d9fd8c0252acb4b3f6}\label{structglow_1_1_allocations_info_a459d3668174199d9fd8c0252acb4b3f6}} 
+using {\bfseries Kind\+And\+Number} = std\+::pair$<$ \hyperlink{structglow_1_1_allocations_info_a567e8d6e8893ba370bd2cd45a34a31f3}{Value\+Kind}, size\+\_\+t $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structglow_1_1_allocations_info_ac70e8e115d01733786ccb39c431a073c}{allocate\+Weight\+Vars} (const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$F)
+\begin{DoxyCompactList}\small\item\em Base address of constant weights. \end{DoxyCompactList}\item 
+void \hyperlink{structglow_1_1_allocations_info_a6e2463d5e6b2670eec88016d5ea423ce}{allocate\+Activations} (const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$F)
+\item 
+void \hyperlink{structglow_1_1_allocations_info_a8dcf9e71b8e280865ca169e7a3f8f947}{allocate\+Tensor\+Views} (const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$F)
+\item 
+void \hyperlink{structglow_1_1_allocations_info_ab816fe2907d4901209b6b08a436e97e8}{number\+Values} (const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$F)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_allocations_info_a29c6b600568a9cdf1b3cab12cc119cdb}\label{structglow_1_1_allocations_info_a29c6b600568a9cdf1b3cab12cc119cdb}} 
+llvm\+::\+Dense\+Map$<$ const \hyperlink{classglow_1_1_value}{Value} $\ast$, Kind\+And\+Number $>$ \hyperlink{structglow_1_1_allocations_info_a29c6b600568a9cdf1b3cab12cc119cdb}{value\+Numbers\+\_\+}
+\begin{DoxyCompactList}\small\item\em Map Values in the module to their numbers. \end{DoxyCompactList}\item 
+llvm\+::\+Dense\+Map$<$ const \hyperlink{classglow_1_1_value}{Value} $\ast$, uint64\+\_\+t $>$ \hyperlink{structglow_1_1_allocations_info_a7b605a7c7f6ed12f2c3f6f7e41d2784d}{allocated\+Address\+\_\+}
+\begin{DoxyCompactList}\small\item\em Maps Values in the module to their offsets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_allocations_info_a2b7ee050f49840b2f7bf5bca1dde9cd6}\label{structglow_1_1_allocations_info_a2b7ee050f49840b2f7bf5bca1dde9cd6}} 
+size\+\_\+t \hyperlink{structglow_1_1_allocations_info_a2b7ee050f49840b2f7bf5bca1dde9cd6}{constant\+Weight\+Vars\+Mem\+Size\+\_\+} \{0\}
+\begin{DoxyCompactList}\small\item\em Amount of memory to be allocated for constant Weight\+Vars. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_allocations_info_a794aef665b80b8558b1b2aaaf91a1bf8}\label{structglow_1_1_allocations_info_a794aef665b80b8558b1b2aaaf91a1bf8}} 
+size\+\_\+t \hyperlink{structglow_1_1_allocations_info_a794aef665b80b8558b1b2aaaf91a1bf8}{mutable\+Weight\+Vars\+Mem\+Size\+\_\+} \{0\}
+\begin{DoxyCompactList}\small\item\em Amount of memory to be allocated for mutable Weight\+Vars. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_allocations_info_ac74c0edfcde078694c009f1e21bd1baf}\label{structglow_1_1_allocations_info_ac74c0edfcde078694c009f1e21bd1baf}} 
+size\+\_\+t \hyperlink{structglow_1_1_allocations_info_ac74c0edfcde078694c009f1e21bd1baf}{activations\+Mem\+Size\+\_\+} \{0\}
+\begin{DoxyCompactList}\small\item\em Amount of memory to be allocated for activations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_allocations_info_a3fca4d6e5d5b55e11e800dfead8b4487}\label{structglow_1_1_allocations_info_a3fca4d6e5d5b55e11e800dfead8b4487}} 
+uint8\+\_\+t $\ast$ \hyperlink{structglow_1_1_allocations_info_a3fca4d6e5d5b55e11e800dfead8b4487}{base\+Constant\+Weight\+Vars\+Store\+\_\+} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em Base address of stored constant weights. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Information about allocations for activations, constant weight variables and mutable weight variables. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_allocations_info_a6e2463d5e6b2670eec88016d5ea423ce}\label{structglow_1_1_allocations_info_a6e2463d5e6b2670eec88016d5ea423ce}} 
+\index{glow\+::\+Allocations\+Info@{glow\+::\+Allocations\+Info}!allocate\+Activations@{allocate\+Activations}}
+\index{allocate\+Activations@{allocate\+Activations}!glow\+::\+Allocations\+Info@{glow\+::\+Allocations\+Info}}
+\subsubsection{\texorpdfstring{allocate\+Activations()}{allocateActivations()}}
+{\footnotesize\ttfamily void Allocations\+Info\+::allocate\+Activations (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$}]{F }\end{DoxyParamCaption})}
+
+Assign offsets to all activations. No actual memory allocation is performed. All the allocations should be performed by the client based on the information provided by the \hyperlink{structglow_1_1_allocations_info}{Allocations\+Info} or Runtime\+Bundle. \mbox{\Hypertarget{structglow_1_1_allocations_info_a8dcf9e71b8e280865ca169e7a3f8f947}\label{structglow_1_1_allocations_info_a8dcf9e71b8e280865ca169e7a3f8f947}} 
+\index{glow\+::\+Allocations\+Info@{glow\+::\+Allocations\+Info}!allocate\+Tensor\+Views@{allocate\+Tensor\+Views}}
+\index{allocate\+Tensor\+Views@{allocate\+Tensor\+Views}!glow\+::\+Allocations\+Info@{glow\+::\+Allocations\+Info}}
+\subsubsection{\texorpdfstring{allocate\+Tensor\+Views()}{allocateTensorViews()}}
+{\footnotesize\ttfamily void Allocations\+Info\+::allocate\+Tensor\+Views (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$}]{F }\end{DoxyParamCaption})}
+
+Assign offsets to all tensorviews. No memory allocation is performed. Sets up all offsets into already defined offsets for Weight\+Vars and Alloc\+Activations. Assumes the weight vars and alloc activations have already been added to allocated\+Address\+\_\+. \mbox{\Hypertarget{structglow_1_1_allocations_info_ac70e8e115d01733786ccb39c431a073c}\label{structglow_1_1_allocations_info_ac70e8e115d01733786ccb39c431a073c}} 
+\index{glow\+::\+Allocations\+Info@{glow\+::\+Allocations\+Info}!allocate\+Weight\+Vars@{allocate\+Weight\+Vars}}
+\index{allocate\+Weight\+Vars@{allocate\+Weight\+Vars}!glow\+::\+Allocations\+Info@{glow\+::\+Allocations\+Info}}
+\subsubsection{\texorpdfstring{allocate\+Weight\+Vars()}{allocateWeightVars()}}
+{\footnotesize\ttfamily void Allocations\+Info\+::allocate\+Weight\+Vars (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$}]{F }\end{DoxyParamCaption})}
+
+
+
+Base address of constant weights. 
+
+Assign offsets to all of the variables in the module {\ttfamily M} and to the placeholders. \mbox{\Hypertarget{structglow_1_1_allocations_info_ab816fe2907d4901209b6b08a436e97e8}\label{structglow_1_1_allocations_info_ab816fe2907d4901209b6b08a436e97e8}} 
+\index{glow\+::\+Allocations\+Info@{glow\+::\+Allocations\+Info}!number\+Values@{number\+Values}}
+\index{number\+Values@{number\+Values}!glow\+::\+Allocations\+Info@{glow\+::\+Allocations\+Info}}
+\subsubsection{\texorpdfstring{number\+Values()}{numberValues()}}
+{\footnotesize\ttfamily void Allocations\+Info\+::number\+Values (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$}]{F }\end{DoxyParamCaption})}
+
+Number all allocations and weight variables by assigning them unique numbers. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1_allocations_info_a7b605a7c7f6ed12f2c3f6f7e41d2784d}\label{structglow_1_1_allocations_info_a7b605a7c7f6ed12f2c3f6f7e41d2784d}} 
+\index{glow\+::\+Allocations\+Info@{glow\+::\+Allocations\+Info}!allocated\+Address\+\_\+@{allocated\+Address\+\_\+}}
+\index{allocated\+Address\+\_\+@{allocated\+Address\+\_\+}!glow\+::\+Allocations\+Info@{glow\+::\+Allocations\+Info}}
+\subsubsection{\texorpdfstring{allocated\+Address\+\_\+}{allocatedAddress\_}}
+{\footnotesize\ttfamily llvm\+::\+Dense\+Map$<$const \hyperlink{classglow_1_1_value}{Value} $\ast$, uint64\+\_\+t$>$ glow\+::\+Allocations\+Info\+::allocated\+Address\+\_\+}
+
+
+
+Maps Values in the module to their offsets. 
+
+To get the offset of a given value simply use number\+Offsets\+\_\+\mbox{[}value\+Numbers\+\_\+\mbox{[}v\mbox{]}\mbox{]} 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+L\+L\+V\+M\+I\+R\+Code\+Gen/Allocations\+Info.\+h\item 
+lib/\+L\+L\+V\+M\+I\+R\+Code\+Gen/Allocations\+Info.\+cpp\end{DoxyCompactItemize}

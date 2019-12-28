@@ -1,0 +1,109 @@
+\hypertarget{classglow_1_1_gather_node}{}\section{glow\+:\+:Gather\+Node Class Reference}
+\label{classglow_1_1_gather_node}\index{glow\+::\+Gather\+Node@{glow\+::\+Gather\+Node}}
+
+
+Gathers entries of the outer-\/most dimension of Data indexed by Indices, and concatenates them. Output tensor will have dimensions\+: \{I\+\_\+0, I\+\_\+1, ... I\+\_\+n, D\+\_\+1, D\+\_\+2, ... D\+\_\+m\}, where D\+\_\+i and I\+\_\+j denote Data and Indices dimensions respectively. If batch\+Dims is not zero, the gather operator will treat the first batch\+Dims as the batch and will concat the result of the gather operation on each sample in the batch.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Gather\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_gather_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a047e58dd642bb9f6d04e962fac2d212c}\label{classglow_1_1_gather_node_a047e58dd642bb9f6d04e962fac2d212c}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Data\+Idx} = 0, 
+{\bfseries Indices\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a87abae88d95e3f831b87e7d6ae7de00c}\label{classglow_1_1_gather_node_a87abae88d95e3f831b87e7d6ae7de00c}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a2df6df973b51f2db352ddb73bb678f1b}\label{classglow_1_1_gather_node_a2df6df973b51f2db352ddb73bb678f1b}} 
+{\bfseries Gather\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Data, \hyperlink{structglow_1_1_node_value}{Node\+Value} Indices, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Batch\+Dims)
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_ab207ab6c9b4501ec758e6bbf9ae9c0d1}\label{classglow_1_1_gather_node_ab207ab6c9b4501ec758e6bbf9ae9c0d1}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Data} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a93eabd62b5461ba0a3f0b84a8cd5f898}\label{classglow_1_1_gather_node_a93eabd62b5461ba0a3f0b84a8cd5f898}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Indices} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_af0db7f8e6d1847f6277ada1aa07ff812}\label{classglow_1_1_gather_node_af0db7f8e6d1847f6277ada1aa07ff812}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a020c35fbd707271785c646c51ed499d2}\label{classglow_1_1_gather_node_a020c35fbd707271785c646c51ed499d2}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a0412da12ce5d95a8ebbdae963ec57668}\label{classglow_1_1_gather_node_a0412da12ce5d95a8ebbdae963ec57668}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Batch\+Dims} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a91a39b869066d450a519bd5bc47d17d8}\label{classglow_1_1_gather_node_a91a39b869066d450a519bd5bc47d17d8}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a363d2104db746bb14ed7d770917513c0}\label{classglow_1_1_gather_node_a363d2104db746bb14ed7d770917513c0}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_ab14d40bc554f4d9355843290353f354c}\label{classglow_1_1_gather_node_ab14d40bc554f4d9355843290353f354c}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_ad87f334f0f88be9b6d6f508d0e5bfce9}\label{classglow_1_1_gather_node_ad87f334f0f88be9b6d6f508d0e5bfce9}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a1aa472b90239158504011f2129272233}\label{classglow_1_1_gather_node_a1aa472b90239158504011f2129272233}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a02135a3fb4b3e1977db85b7cc7ca087b}\label{classglow_1_1_gather_node_a02135a3fb4b3e1977db85b7cc7ca087b}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a57a6ff64a539476d29285075b76811c0}\label{classglow_1_1_gather_node_a57a6ff64a539476d29285075b76811c0}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a48ff34a0b06e12d0696e173cbda7a38d}\label{classglow_1_1_gather_node_a48ff34a0b06e12d0696e173cbda7a38d}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a084c2e61f5ba6f6af7a4818d5d71ab5d}\label{classglow_1_1_gather_node_a084c2e61f5ba6f6af7a4818d5d71ab5d}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_ace4b4a3c0166d7e53966a56a6e1aeda6}\label{classglow_1_1_gather_node_ace4b4a3c0166d7e53966a56a6e1aeda6}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_gather_node}{Gather\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_af37117ebb20fdd7da1cb0c6d64183f22}\label{classglow_1_1_gather_node_af37117ebb20fdd7da1cb0c6d64183f22}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a68cc3100ecb528c5b4fa9314ab3e01fc}\label{classglow_1_1_gather_node_a68cc3100ecb528c5b4fa9314ab3e01fc}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a635de050c4725a8ce1cce4ef4b90523b}\label{classglow_1_1_gather_node_a635de050c4725a8ce1cce4ef4b90523b}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a39c22715580e98188caa62d42a300319}\label{classglow_1_1_gather_node_a39c22715580e98188caa62d42a300319}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_gather_node_a093ffa53e0f65d96e2f019ba9edb843e}\label{classglow_1_1_gather_node_a093ffa53e0f65d96e2f019ba9edb843e}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Gathers entries of the outer-\/most dimension of Data indexed by Indices, and concatenates them. Output tensor will have dimensions\+: \{I\+\_\+0, I\+\_\+1, ... I\+\_\+n, D\+\_\+1, D\+\_\+2, ... D\+\_\+m\}, where D\+\_\+i and I\+\_\+j denote Data and Indices dimensions respectively. If batch\+Dims is not zero, the gather operator will treat the first batch\+Dims as the batch and will concat the result of the gather operation on each sample in the batch. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\hypertarget{classglow_1_1_segment}{}\section{glow\+:\+:Segment Class Reference}
+\label{classglow_1_1_segment}\index{glow\+::\+Segment@{glow\+::\+Segment}}
+
+
+A P\+OD struct that represents a single half-\/open allocation \mbox{[}start .. end).  
+
+
+
+
+{\ttfamily \#include $<$Memory\+Allocator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_segment_a6ffc406c24418a220df4431d4d6239a6}\label{classglow_1_1_segment_a6ffc406c24418a220df4431d4d6239a6}} 
+{\bfseries Segment} (uint64\+\_\+t begin, uint64\+\_\+t end)
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1_segment_ae8a61cbc6362e27e4b9e58da5f762f7b}{size} () const
+\item 
+bool \hyperlink{classglow_1_1_segment_a11d0f8ff343b8691d7f8086b4078868a}{contains} (uint64\+\_\+t idx) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_segment_aa11a499a96603a528f150a102f6c7cd9}\label{classglow_1_1_segment_aa11a499a96603a528f150a102f6c7cd9}} 
+uint64\+\_\+t \hyperlink{classglow_1_1_segment_aa11a499a96603a528f150a102f6c7cd9}{begin\+\_\+}
+\begin{DoxyCompactList}\small\item\em The allocation starts at this address. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_segment_ada84bef372c93043ff0b9e614a688057}\label{classglow_1_1_segment_ada84bef372c93043ff0b9e614a688057}} 
+uint64\+\_\+t \hyperlink{classglow_1_1_segment_ada84bef372c93043ff0b9e614a688057}{end\+\_\+}
+\begin{DoxyCompactList}\small\item\em The allocation ends before this address (half-\/open interval). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A P\+OD struct that represents a single half-\/open allocation \mbox{[}start .. end). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_segment_a11d0f8ff343b8691d7f8086b4078868a}\label{classglow_1_1_segment_a11d0f8ff343b8691d7f8086b4078868a}} 
+\index{glow\+::\+Segment@{glow\+::\+Segment}!contains@{contains}}
+\index{contains@{contains}!glow\+::\+Segment@{glow\+::\+Segment}}
+\subsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool glow\+::\+Segment\+::contains (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if the value {\ttfamily idx} falls within this segment. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_segment_ae8a61cbc6362e27e4b9e58da5f762f7b}\label{classglow_1_1_segment_ae8a61cbc6362e27e4b9e58da5f762f7b}} 
+\index{glow\+::\+Segment@{glow\+::\+Segment}!size@{size}}
+\index{size@{size}!glow\+::\+Segment@{glow\+::\+Segment}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily uint64\+\_\+t glow\+::\+Segment\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the size of the interval. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Code\+Gen/Memory\+Allocator.\+h\end{DoxyCompactItemize}

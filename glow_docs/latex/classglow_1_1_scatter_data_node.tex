@@ -1,0 +1,113 @@
+\hypertarget{classglow_1_1_scatter_data_node}{}\section{glow\+:\+:Scatter\+Data\+Node Class Reference}
+\label{classglow_1_1_scatter_data_node}\index{glow\+::\+Scatter\+Data\+Node@{glow\+::\+Scatter\+Data\+Node}}
+
+
+Copies each slice from Slices into Data at the corresponding index in Indices. For example, given input Data \{\{1,2\},\{3,4\},\{5,6\}\}, Slices \{\{-\/3,-\/4\}\}, and Indices \{\{1\}\}, the result is \{\{1,2\},\{-\/3,-\/4\},\{5,6\}\}. It also supports multi-\/dimensional indices. For example, given input Data \{\{1,2\},\{3,4\},\{5,6\}\}, Slices \{-\/3,-\/4\}, and Indices \{\{1,0\},\{1,1\}\} also produces \{\{1,2\},\{-\/3,-\/4\},\{5,6\}\}. If Cumulative is true, the node adds values from Slices to Data instead of copying. For example, given input Data \{\{1,2\},\{3,4\},\{5,6\}\}, Slices \{\{-\/3,-\/4\}\}, and Indices \{1\}, the result is \{\{1,2\},\{0,0\},\{5,6\}\}. If an index is specified several times, its updates will be added several times as well.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Scatter\+Data\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_scatter_data_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_aa1baf2a37a064cd1b8fe017ab70400b6}\label{classglow_1_1_scatter_data_node_aa1baf2a37a064cd1b8fe017ab70400b6}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Data\+Idx} = 0, 
+{\bfseries Indices\+Idx} = 1, 
+{\bfseries Slices\+Idx} = 2
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_a8259c69eb26a363d540e5c3df211d903}\label{classglow_1_1_scatter_data_node_a8259c69eb26a363d540e5c3df211d903}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_ab2436191e3916bbb2ed9d7b44c001c90}\label{classglow_1_1_scatter_data_node_ab2436191e3916bbb2ed9d7b44c001c90}} 
+{\bfseries Scatter\+Data\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Data, \hyperlink{structglow_1_1_node_value}{Node\+Value} Indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} Slices, bool Cumulative)
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_a54c8d95691826c7937680c56904c7eab}\label{classglow_1_1_scatter_data_node_a54c8d95691826c7937680c56904c7eab}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Data} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_ac73e2b0ff8d6b106f3df1898ab301018}\label{classglow_1_1_scatter_data_node_ac73e2b0ff8d6b106f3df1898ab301018}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Indices} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_afdfb72403f773d6400fa53a45a1cbf71}\label{classglow_1_1_scatter_data_node_afdfb72403f773d6400fa53a45a1cbf71}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Slices} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_a1eaf4adb64b196dcfed526e52985d63d}\label{classglow_1_1_scatter_data_node_a1eaf4adb64b196dcfed526e52985d63d}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_adafdfad6fac3f1daf69e7a17c50332bc}\label{classglow_1_1_scatter_data_node_adafdfad6fac3f1daf69e7a17c50332bc}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_a62869b9e642f3dff3e238a07535597a6}\label{classglow_1_1_scatter_data_node_a62869b9e642f3dff3e238a07535597a6}} 
+bool {\bfseries get\+Cumulative} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_ac406444be36c88b495b69e4ab884e582}\label{classglow_1_1_scatter_data_node_ac406444be36c88b495b69e4ab884e582}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_ae6491d37fe39e7a2e244d652c8ca9011}\label{classglow_1_1_scatter_data_node_ae6491d37fe39e7a2e244d652c8ca9011}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_acaf06179cb99d0baef4bd808fdb215da}\label{classglow_1_1_scatter_data_node_acaf06179cb99d0baef4bd808fdb215da}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_a616006607e7383b5021461ef43664c6b}\label{classglow_1_1_scatter_data_node_a616006607e7383b5021461ef43664c6b}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_ac3e4f48f570d24d20d2e675c223e4326}\label{classglow_1_1_scatter_data_node_ac3e4f48f570d24d20d2e675c223e4326}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_adb85801b52f99a47fd158feb26108717}\label{classglow_1_1_scatter_data_node_adb85801b52f99a47fd158feb26108717}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_ae8d776761e5a0dbaab4e57e489abdcdc}\label{classglow_1_1_scatter_data_node_ae8d776761e5a0dbaab4e57e489abdcdc}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_a6911f02f79c7f84005c76013ed760308}\label{classglow_1_1_scatter_data_node_a6911f02f79c7f84005c76013ed760308}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_aa6a7ce5c2ed9cffd40caf26f1e429ef6}\label{classglow_1_1_scatter_data_node_aa6a7ce5c2ed9cffd40caf26f1e429ef6}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_adb4b8d58d43ec41fb9de02a6195f5810}\label{classglow_1_1_scatter_data_node_adb4b8d58d43ec41fb9de02a6195f5810}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_scatter_data_node}{Scatter\+Data\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_a3f280cf9ec3d65c3fc680019aada2f54}\label{classglow_1_1_scatter_data_node_a3f280cf9ec3d65c3fc680019aada2f54}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_afff14ebe54ce31d4155625d6c8e957dc}\label{classglow_1_1_scatter_data_node_afff14ebe54ce31d4155625d6c8e957dc}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_aff8761c16e5e69887ce9468ad8a1311f}\label{classglow_1_1_scatter_data_node_aff8761c16e5e69887ce9468ad8a1311f}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_a83de3d02d1f79bd9dba936229c31d571}\label{classglow_1_1_scatter_data_node_a83de3d02d1f79bd9dba936229c31d571}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_scatter_data_node_a564e0a5bd8f78aea83460a2a53962c35}\label{classglow_1_1_scatter_data_node_a564e0a5bd8f78aea83460a2a53962c35}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Copies each slice from Slices into Data at the corresponding index in Indices. For example, given input Data \{\{1,2\},\{3,4\},\{5,6\}\}, Slices \{\{-\/3,-\/4\}\}, and Indices \{\{1\}\}, the result is \{\{1,2\},\{-\/3,-\/4\},\{5,6\}\}. It also supports multi-\/dimensional indices. For example, given input Data \{\{1,2\},\{3,4\},\{5,6\}\}, Slices \{-\/3,-\/4\}, and Indices \{\{1,0\},\{1,1\}\} also produces \{\{1,2\},\{-\/3,-\/4\},\{5,6\}\}. If Cumulative is true, the node adds values from Slices to Data instead of copying. For example, given input Data \{\{1,2\},\{3,4\},\{5,6\}\}, Slices \{\{-\/3,-\/4\}\}, and Indices \{1\}, the result is \{\{1,2\},\{0,0\},\{5,6\}\}. If an index is specified several times, its updates will be added several times as well. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+\hypertarget{classglow_1_1_sparse_to_dense_mask_inst}{}\section{glow\+:\+:Sparse\+To\+Dense\+Mask\+Inst Class Reference}
+\label{classglow_1_1_sparse_to_dense_mask_inst}\index{glow\+::\+Sparse\+To\+Dense\+Mask\+Inst@{glow\+::\+Sparse\+To\+Dense\+Mask\+Inst}}
+Inheritance diagram for glow\+:\+:Sparse\+To\+Dense\+Mask\+Inst\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.991111cm]{classglow_1_1_sparse_to_dense_mask_inst}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_a4a6481d691f30d0c09faff378db59a2d}\label{classglow_1_1_sparse_to_dense_mask_inst_a4a6481d691f30d0c09faff378db59a2d}} 
+{\bfseries Sparse\+To\+Dense\+Mask\+Inst} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$Dest, \hyperlink{classglow_1_1_value}{Value} $\ast$Indices, \hyperlink{classglow_1_1_value}{Value} $\ast$Values, \hyperlink{classglow_1_1_value}{Value} $\ast$Default\+Value, \hyperlink{classglow_1_1_value}{Value} $\ast$Lengths, std\+::vector$<$ int64\+\_\+t $>$ Mask)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_a0aa5733c56294b289d08088ed8430ff0}\label{classglow_1_1_sparse_to_dense_mask_inst_a0aa5733c56294b289d08088ed8430ff0}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Dest} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_a687d41f04262e307c483228d6738d89c}\label{classglow_1_1_sparse_to_dense_mask_inst_a687d41f04262e307c483228d6738d89c}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Indices} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_a4d23a787014f63795b412f6108edc2ad}\label{classglow_1_1_sparse_to_dense_mask_inst_a4d23a787014f63795b412f6108edc2ad}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Values} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_a7893896f2dff317493ec57e9671e0729}\label{classglow_1_1_sparse_to_dense_mask_inst_a7893896f2dff317493ec57e9671e0729}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Default\+Value} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_a8c212e6c0cf8d4589b73565ce7f14692}\label{classglow_1_1_sparse_to_dense_mask_inst_a8c212e6c0cf8d4589b73565ce7f14692}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Lengths} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_aa49ae9a8341cc75d4979a5bedbba9247}\label{classglow_1_1_sparse_to_dense_mask_inst_aa49ae9a8341cc75d4979a5bedbba9247}} 
+llvm\+::\+Array\+Ref$<$ int64\+\_\+t $>$ {\bfseries get\+Mask} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_ad4db8eed3a5fb87455ce047d1c818f19}\label{classglow_1_1_sparse_to_dense_mask_inst_ad4db8eed3a5fb87455ce047d1c818f19}} 
+bool {\bfseries is\+Inplace\+Op} (unsigned dst\+Idx, unsigned src\+Idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_ae798be931290f0d36620f8fa099c59ea}\label{classglow_1_1_sparse_to_dense_mask_inst_ae798be931290f0d36620f8fa099c59ea}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_a7717996280f8491cef2778ee1e26ffc2}\label{classglow_1_1_sparse_to_dense_mask_inst_a7717996280f8491cef2778ee1e26ffc2}} 
+void {\bfseries dump} (llvm\+::raw\+\_\+ostream \&os) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_af8e6da58a22953bed252f7b49ee0d943}\label{classglow_1_1_sparse_to_dense_mask_inst_af8e6da58a22953bed252f7b49ee0d943}} 
+void {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_mask_inst_a21fffffc600eea9e0dcfaff088ee9d97}\label{classglow_1_1_sparse_to_dense_mask_inst_a21fffffc600eea9e0dcfaff088ee9d97}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+h\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+cpp\end{DoxyCompactItemize}

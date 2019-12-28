@@ -1,0 +1,73 @@
+\hypertarget{classglow_1_1_c_p_u_function}{}\section{glow\+:\+:C\+P\+U\+Function Class Reference}
+\label{classglow_1_1_c_p_u_function}\index{glow\+::\+C\+P\+U\+Function@{glow\+::\+C\+P\+U\+Function}}
+
+
+A Glow IR function compiled for the C\+PU using L\+L\+VM.  
+
+
+
+
+{\ttfamily \#include $<$C\+P\+U\+Function.\+h$>$}
+
+Inheritance diagram for glow\+:\+:C\+P\+U\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classglow_1_1_c_p_u_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_function_a92ad5e9bfee881abc4d80bdafb81dcf7}\label{classglow_1_1_c_p_u_function_a92ad5e9bfee881abc4d80bdafb81dcf7}} 
+{\bfseries C\+P\+U\+Function} (std\+::unique\+\_\+ptr$<$ \hyperlink{classllvm_1_1orc_1_1_glow_j_i_t}{llvm\+::orc\+::\+Glow\+J\+IT} $>$ J\+IT, \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} \&\&runtime\+Bundle)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Compiled\+Function interface}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_function_aca761127a8fdbd1b79bb4a8f98bdc03e}\label{classglow_1_1_c_p_u_function_aca761127a8fdbd1b79bb4a8f98bdc03e}} 
+{\bfseries $\sim$\+C\+P\+U\+Function} () override=default
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_c_p_u_function_a31625d840ca33030c6762955c93d82a1}{execute} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context) override
+\item 
+virtual std\+::string \hyperlink{classglow_1_1_c_p_u_function_a4bf0faf1e98bcf21ec058c031df3c036}{get\+Compile\+Backend\+Name} () const override
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A Glow IR function compiled for the C\+PU using L\+L\+VM. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_c_p_u_function_a31625d840ca33030c6762955c93d82a1}\label{classglow_1_1_c_p_u_function_a31625d840ca33030c6762955c93d82a1}} 
+\index{glow\+::\+C\+P\+U\+Function@{glow\+::\+C\+P\+U\+Function}!execute@{execute}}
+\index{execute@{execute}!glow\+::\+C\+P\+U\+Function@{glow\+::\+C\+P\+U\+Function}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} C\+P\+U\+Function\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Execute the network and allocate \hyperlink{classglow_1_1_placeholder}{Placeholder} memory with given {\ttfamily bindings} providing mapping between \hyperlink{classglow_1_1_placeholder}{Placeholder} and populated tensor. \begin{DoxyReturn}{Returns}
+an Error if an error ocurred during execution. 
+\end{DoxyReturn}
+Base address for Mutable weights memory block, Inputs and Outputs. 
+
+Reimplemented from \hyperlink{classglow_1_1_l_l_v_m_compiled_function_a5589e30446aa3a92f3e94267bded99ae}{glow\+::\+L\+L\+V\+M\+Compiled\+Function}.
+
+\mbox{\Hypertarget{classglow_1_1_c_p_u_function_a4bf0faf1e98bcf21ec058c031df3c036}\label{classglow_1_1_c_p_u_function_a4bf0faf1e98bcf21ec058c031df3c036}} 
+\index{glow\+::\+C\+P\+U\+Function@{glow\+::\+C\+P\+U\+Function}!get\+Compile\+Backend\+Name@{get\+Compile\+Backend\+Name}}
+\index{get\+Compile\+Backend\+Name@{get\+Compile\+Backend\+Name}!glow\+::\+C\+P\+U\+Function@{glow\+::\+C\+P\+U\+Function}}
+\subsubsection{\texorpdfstring{get\+Compile\+Backend\+Name()}{getCompileBackendName()}}
+{\footnotesize\ttfamily virtual std\+::string glow\+::\+C\+P\+U\+Function\+::get\+Compile\+Backend\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the backend used to compile this function. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1_compiled_function_a7b3f2b17986d14706a1d1091d3c4df27}{glow\+::\+Compiled\+Function}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+C\+P\+U/C\+P\+U\+Function.\+h\item 
+lib/\+Backends/\+C\+P\+U/C\+P\+U\+Function.\+cpp\end{DoxyCompactItemize}

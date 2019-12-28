@@ -1,0 +1,74 @@
+\hypertarget{structglow_1_1_log_event}{}\section{glow\+:\+:Log\+Event Struct Reference}
+\label{structglow_1_1_log_event}\index{glow\+::\+Log\+Event@{glow\+::\+Log\+Event}}
+Inheritance diagram for glow\+:\+:Log\+Event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.944445cm]{structglow_1_1_log_event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_event_a10198e509d56beafa5b2ec13f0de0148}\label{structglow_1_1_log_event_a10198e509d56beafa5b2ec13f0de0148}} 
+{\bfseries Log\+Event} (llvm\+::\+String\+Ref n)
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_event_ae82ac2c7b5b7bc73acdc17b25f46c7ad}\label{structglow_1_1_log_event_ae82ac2c7b5b7bc73acdc17b25f46c7ad}} 
+void {\bfseries push\+Event} (\hyperlink{structglow_1_1_log_event}{Log\+Event} $\ast$e)
+\item 
+virtual bool \hyperlink{structglow_1_1_log_event_a1c25aa690ea65f6b184ba3133fd6c564}{dump} (llvm\+::raw\+\_\+fd\+\_\+ostream \&ostream)
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_event_a8d8adbcb0562a0168e2691a200e9193a}\label{structglow_1_1_log_event_a8d8adbcb0562a0168e2691a200e9193a}} 
+virtual bool {\bfseries dump\+Children} (llvm\+::raw\+\_\+fd\+\_\+ostream \&ostream)
+\item 
+virtual bool \hyperlink{structglow_1_1_log_event_acca8974ed27e0896a63af715ec912fa1}{silent} ()
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_event_ac85196b0260f22e94bd8c97d185fbd38}\label{structglow_1_1_log_event_ac85196b0260f22e94bd8c97d185fbd38}} 
+virtual \hyperlink{structglow_1_1_log_event}{Log\+Event} $\ast$ {\bfseries clone} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_event_ab58c962baf138678fa8e29cd42f54549}\label{structglow_1_1_log_event_ab58c962baf138678fa8e29cd42f54549}} 
+std\+::string {\bfseries name}
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_event_a3483b7391cf7f1949ad27b6935f464b7}\label{structglow_1_1_log_event_a3483b7391cf7f1949ad27b6935f464b7}} 
+\hyperlink{structglow_1_1_log_event}{Log\+Event} $\ast$ {\bfseries parent} \{nullptr\}
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_event_a37c5e5e23e3d2b1dbf4cef5ae64f9e74}\label{structglow_1_1_log_event_a37c5e5e23e3d2b1dbf4cef5ae64f9e74}} 
+std\+::vector$<$ \hyperlink{structglow_1_1_log_event}{Log\+Event} $\ast$ $>$ {\bfseries children}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_log_event_a1c25aa690ea65f6b184ba3133fd6c564}\label{structglow_1_1_log_event_a1c25aa690ea65f6b184ba3133fd6c564}} 
+\index{glow\+::\+Log\+Event@{glow\+::\+Log\+Event}!dump@{dump}}
+\index{dump@{dump}!glow\+::\+Log\+Event@{glow\+::\+Log\+Event}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily bool glow\+::\+Log\+Event\+::dump (\begin{DoxyParamCaption}\item[{llvm\+::raw\+\_\+fd\+\_\+ostream \&}]{ostream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+writes this Event and all children to the provided stream. \begin{DoxyReturn}{Returns}
+true if anything was written. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{structglow_1_1_log_input_change_abe24dc999f25edf277ec308940827431}{glow\+::\+Log\+Input\+Change}, \hyperlink{structglow_1_1_log_delete_a8d29cdcc6351be77ac45d28fef52a3f9}{glow\+::\+Log\+Delete}, \hyperlink{structglow_1_1_log_create_a42bb56ee4419b7a56af5a8e3f55c1a1f}{glow\+::\+Log\+Create}, and \hyperlink{structglow_1_1_log_scope_acab7040ff048222a7128d9d7c43bb92a}{glow\+::\+Log\+Scope}.
+
+\mbox{\Hypertarget{structglow_1_1_log_event_acca8974ed27e0896a63af715ec912fa1}\label{structglow_1_1_log_event_acca8974ed27e0896a63af715ec912fa1}} 
+\index{glow\+::\+Log\+Event@{glow\+::\+Log\+Event}!silent@{silent}}
+\index{silent@{silent}!glow\+::\+Log\+Event@{glow\+::\+Log\+Event}}
+\subsubsection{\texorpdfstring{silent()}{silent()}}
+{\footnotesize\ttfamily virtual bool glow\+::\+Log\+Event\+::silent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if this even will not log to the stream. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{structglow_1_1_log_scope_a4e7568406d6fec066b79bee89d0a9d1a}{glow\+::\+Log\+Scope}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Log.\+h\item 
+lib/\+Graph/Log.\+cpp\end{DoxyCompactItemize}

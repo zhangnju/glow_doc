@@ -1,0 +1,52 @@
+\hypertarget{classglow_1_1_node_to_function_map}{}\section{glow\+:\+:Node\+To\+Function\+Map Class Reference}
+\label{classglow_1_1_node_to_function_map}\index{glow\+::\+Node\+To\+Function\+Map@{glow\+::\+Node\+To\+Function\+Map}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_a4c1bd8fb37aa7ab3fc75189f694061fc}\label{classglow_1_1_node_to_function_map_a4c1bd8fb37aa7ab3fc75189f694061fc}} 
+void \hyperlink{classglow_1_1_node_to_function_map_a4c1bd8fb37aa7ab3fc75189f694061fc}{create\+Partition} (\hyperlink{classglow_1_1_function}{Function} $\ast$F, llvm\+::\+String\+Ref backend\+Name)
+\begin{DoxyCompactList}\small\item\em Create a new partition {\ttfamily F}, and map it with {\ttfamily backend\+Name}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_ac1f943a133cafdee5122497e28f65616}\label{classglow_1_1_node_to_function_map_ac1f943a133cafdee5122497e28f65616}} 
+std\+::string {\bfseries get\+Partition\+Backend\+Name} (\hyperlink{classglow_1_1_function}{Function} $\ast$F) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_aa8e2424baa1c7decf5a3f76f7c52f12f}\label{classglow_1_1_node_to_function_map_aa8e2424baa1c7decf5a3f76f7c52f12f}} 
+void \hyperlink{classglow_1_1_node_to_function_map_aa8e2424baa1c7decf5a3f76f7c52f12f}{add} (\hyperlink{classglow_1_1_node}{Node} $\ast$N, \hyperlink{classglow_1_1_function}{Function} $\ast$F)
+\begin{DoxyCompactList}\small\item\em Add a new Node-\/$>$\hyperlink{classglow_1_1_function}{Function} mapping. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_af7c28642dbc0a348c13a0770327b836d}\label{classglow_1_1_node_to_function_map_af7c28642dbc0a348c13a0770327b836d}} 
+const \hyperlink{namespaceglow_ae6f6f350877931e8074457bbab671b5f}{Function\+List} \& \hyperlink{classglow_1_1_node_to_function_map_af7c28642dbc0a348c13a0770327b836d}{get\+Partitions} () const
+\begin{DoxyCompactList}\small\item\em Get list of functions contained in this map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_ad347c6eb31d1ade690fac50e2766b92e}\label{classglow_1_1_node_to_function_map_ad347c6eb31d1ade690fac50e2766b92e}} 
+const std\+::vector$<$ Device\+I\+D\+Ty $>$ \hyperlink{classglow_1_1_node_to_function_map_ad347c6eb31d1ade690fac50e2766b92e}{get\+Logical\+Device\+I\+D\+List} (\hyperlink{classglow_1_1_function}{Function} $\ast$F) const
+\begin{DoxyCompactList}\small\item\em Get the list of logical device ID related to this function {\ttfamily F}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_a70cbeed58d0a72d51b86153bff4d4ed6}\label{classglow_1_1_node_to_function_map_a70cbeed58d0a72d51b86153bff4d4ed6}} 
+void {\bfseries append\+Logical\+Device\+ID} (\hyperlink{classglow_1_1_function}{Function} $\ast$F, Device\+I\+D\+Ty id)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_a8ce2ba5586395750dd7119243c8d0666}\label{classglow_1_1_node_to_function_map_a8ce2ba5586395750dd7119243c8d0666}} 
+void \hyperlink{classglow_1_1_node_to_function_map_a8ce2ba5586395750dd7119243c8d0666}{insert} (\hyperlink{classglow_1_1_node_to_function_map}{Node\+To\+Function\+Map} \&map)
+\begin{DoxyCompactList}\small\item\em attach {\ttfamily map} to current mapping. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_a0bb014d5c017599738eaead6411a7e9a}\label{classglow_1_1_node_to_function_map_a0bb014d5c017599738eaead6411a7e9a}} 
+Map\+::iterator \hyperlink{classglow_1_1_node_to_function_map_a0bb014d5c017599738eaead6411a7e9a}{find} (\hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\begin{DoxyCompactList}\small\item\em Map A\+PI. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_ab7adf79a10de09aa10747f39dddc8e8f}\label{classglow_1_1_node_to_function_map_ab7adf79a10de09aa10747f39dddc8e8f}} 
+Map\+::iterator {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_afe89fb350bbd970c1086e0183e998135}\label{classglow_1_1_node_to_function_map_afe89fb350bbd970c1086e0183e998135}} 
+Map\+::iterator {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_ac41d4704027248df6abb21ad91f5b5d8}\label{classglow_1_1_node_to_function_map_ac41d4704027248df6abb21ad91f5b5d8}} 
+\hyperlink{classglow_1_1_function}{Function} $\ast$ {\bfseries operator\mbox{[}$\,$\mbox{]}} (\hyperlink{classglow_1_1_node}{Node} $\ast$n)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_a815e91a73666b97fcc096ed30d26141f}\label{classglow_1_1_node_to_function_map_a815e91a73666b97fcc096ed30d26141f}} 
+void {\bfseries delete\+Partition} (\hyperlink{classglow_1_1_function}{Function} $\ast$func)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_a269c553f3278cbb1e6283461d5417281}\label{classglow_1_1_node_to_function_map_a269c553f3278cbb1e6283461d5417281}} 
+void \hyperlink{classglow_1_1_node_to_function_map_a269c553f3278cbb1e6283461d5417281}{set\+Graph\+Mem\+Info} (\hyperlink{classglow_1_1_function}{Function} $\ast$func, \hyperlink{structglow_1_1_graph_mem_info}{Graph\+Mem\+Info} cost)
+\begin{DoxyCompactList}\small\item\em Set the memory consumption {\ttfamily cost} for a partition {\ttfamily func}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_to_function_map_a872b694b5bf3669000a01e82d2ea551b}\label{classglow_1_1_node_to_function_map_a872b694b5bf3669000a01e82d2ea551b}} 
+\hyperlink{structglow_1_1_graph_mem_info}{Graph\+Mem\+Info} \hyperlink{classglow_1_1_node_to_function_map_a872b694b5bf3669000a01e82d2ea551b}{get\+Graph\+Mem\+Info} (\hyperlink{classglow_1_1_function}{Function} $\ast$func) const
+\begin{DoxyCompactList}\small\item\em Get the memory consumption for a partition {\ttfamily func}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Partitioner/Partitioner\+Types.\+h\end{DoxyCompactItemize}

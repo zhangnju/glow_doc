@@ -1,0 +1,26 @@
+\hypertarget{classglow_1_1_base_factory}{}\section{glow\+:\+:Base\+Factory$<$ Key, Base $>$ Class Template Reference}
+\label{classglow_1_1_base_factory}\index{glow\+::\+Base\+Factory$<$ Key, Base $>$@{glow\+::\+Base\+Factory$<$ Key, Base $>$}}
+
+
+{\ttfamily \#include $<$Register.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_base_factory_a63ebb087761d638c715887ebe9aa9861}\label{classglow_1_1_base_factory_a63ebb087761d638c715887ebe9aa9861}} 
+virtual Base $\ast$ \hyperlink{classglow_1_1_base_factory_a63ebb087761d638c715887ebe9aa9861}{create} ()=0
+\begin{DoxyCompactList}\small\item\em Create an object of Base type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_base_factory_a3814c70bc6638ffa9b362bb76acf2dfe}\label{classglow_1_1_base_factory_a3814c70bc6638ffa9b362bb76acf2dfe}} 
+virtual Key \hyperlink{classglow_1_1_base_factory_a3814c70bc6638ffa9b362bb76acf2dfe}{get\+Registration\+Key} () const =0
+\begin{DoxyCompactList}\small\item\em Key used for a registered factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Key, class Base$>$\newline
+class glow\+::\+Base\+Factory$<$ Key, Base $>$}
+
+Base factory interface which needs to be implemented for static registration of arbitrary classes. For example, C\+P\+U\+Factory would be responsible for creating C\+PU backends registred with \char`\"{}\+C\+P\+U\char`\"{} key. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Register.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,237 @@
+\hypertarget{classglow_1_1_common_operator_loader}{}\section{glow\+:\+:Common\+Operator\+Loader$<$ Op\+Type, Attr\+Type $>$ Class Template Reference}
+\label{classglow_1_1_common_operator_loader}\index{glow\+::\+Common\+Operator\+Loader$<$ Op\+Type, Attr\+Type $>$@{glow\+::\+Common\+Operator\+Loader$<$ Op\+Type, Attr\+Type $>$}}
+
+
+{\ttfamily \#include $<$Common\+Operator\+Loader.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Common\+Operator\+Loader$<$ Op\+Type, Attr\+Type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_common_operator_loader}
+\end{center}
+\end{figure}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a5b21493cb6f89151ca8bb1ab4e7673a5}\label{classglow_1_1_common_operator_loader_a5b21493cb6f89151ca8bb1ab4e7673a5}} 
+using {\bfseries Argument\+Dictionary\+Ty} = std\+::unordered\+\_\+map$<$ std\+::string, const Attr\+Type $\ast$ $>$
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a46ea6e13ae818fc629fba133602e71d4}\label{classglow_1_1_common_operator_loader_a46ea6e13ae818fc629fba133602e71d4}} 
+{\bfseries Common\+Operator\+Loader} (llvm\+::\+Array\+Ref$<$ const char $\ast$$>$ names, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$ types, \hyperlink{classglow_1_1_function}{Function} \&F)
+\item 
+virtual \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ bool $>$ \hyperlink{classglow_1_1_common_operator_loader_ac5ce8fc378bb2526f7f957e13a54e970}{get\+Broadcast} (const Argument\+Dictionary\+Ty \&dict)=0
+\item 
+virtual bool \hyperlink{classglow_1_1_common_operator_loader_a4e079eed244e7047b09040ca209d15e0}{has\+Multidirectional\+Broadcast} (const llvm\+::\+String\+Ref type\+Name)=0
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader_ab759aea69c4a85d95d1fbd6ed068618b}{add\+Node\+As\+Output} (const Op\+Type \&op, \hyperlink{classglow_1_1_node}{Node} $\ast$node, int num\+Outputs=-\/1)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a8eeda567e0c5df45b32c99c394cb6659}\label{classglow_1_1_common_operator_loader_a8eeda567e0c5df45b32c99c394cb6659}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader_a8eeda567e0c5df45b32c99c394cb6659}{load\+Relu} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\begin{DoxyCompactList}\small\item\em Loads R\+E\+LU operator, given its protobuf representation and parsed args. \end{DoxyCompactList}\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader_a6a8b5b3d78eab3af16b88b718aeb40c5}{load\+P\+Relu} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a322400cd9a5d0395d243456dd02779ad}\label{classglow_1_1_common_operator_loader_a322400cd9a5d0395d243456dd02779ad}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Sigmoid} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a90bf17a6ece8dc0a85700684ff25ea9b}\label{classglow_1_1_common_operator_loader_a90bf17a6ece8dc0a85700684ff25ea9b}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Tanh} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_ad9de415832ec1368d2c206989ef8be0e}\label{classglow_1_1_common_operator_loader_ad9de415832ec1368d2c206989ef8be0e}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Exp} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_aa8f81d255cbf5e6d0e2ddd06aaff101c}\label{classglow_1_1_common_operator_loader_aa8f81d255cbf5e6d0e2ddd06aaff101c}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Shape} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a055ca135d126d5829609ae1a2fafa012}\label{classglow_1_1_common_operator_loader_a055ca135d126d5829609ae1a2fafa012}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader_a055ca135d126d5829609ae1a2fafa012}{load\+Sqrt} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\begin{DoxyCompactList}\small\item\em Loads Sqrt operator, given its protobuf representation and parsed args. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_ae1b7917de7da91273cf923ad660c57ad}\label{classglow_1_1_common_operator_loader_ae1b7917de7da91273cf923ad660c57ad}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader_ae1b7917de7da91273cf923ad660c57ad}{load\+Sqr} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\begin{DoxyCompactList}\small\item\em Loads Sqr operator, given its protobuf representation and parsed args. \end{DoxyCompactList}\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader_a308c3bbba0a5e6ee0b50bd972dd6af84}{load\+Reciprocal} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a14b0505dbbbacfb84eb739d87e2757d2}\label{classglow_1_1_common_operator_loader_a14b0505dbbbacfb84eb739d87e2757d2}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Sum} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_af5fdbbf03cfdb8aa136a095ec99202e8}\label{classglow_1_1_common_operator_loader_af5fdbbf03cfdb8aa136a095ec99202e8}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Softmax} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a7c7bfd564cca23d2e59ed57ddaf81b3b}\label{classglow_1_1_common_operator_loader_a7c7bfd564cca23d2e59ed57ddaf81b3b}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+L\+RN} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a413b1226128696d2bcd60f0eb4f04d92}\label{classglow_1_1_common_operator_loader_a413b1226128696d2bcd60f0eb4f04d92}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Min\+Max} (llvm\+::\+String\+Ref type\+Name, const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_ab3b7c8058080874714d6028ede9d59a0}\label{classglow_1_1_common_operator_loader_ab3b7c8058080874714d6028ede9d59a0}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Batch\+Mat\+Mul} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict, bool is\+Batched)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a222493244659f4512d5c4a3383b53966}\label{classglow_1_1_common_operator_loader_a222493244659f4512d5c4a3383b53966}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Arithmetic} (llvm\+::\+String\+Ref type\+Name, const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_ac28ba1bfecda373163aeb576b8b15af3}\label{classglow_1_1_common_operator_loader_ac28ba1bfecda373163aeb576b8b15af3}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Split} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_acc700140f7f82e9fc58288a405776a2d}\label{classglow_1_1_common_operator_loader_acc700140f7f82e9fc58288a405776a2d}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Reshape} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a173df1148dc3f24b1545e766c2ec979d}\label{classglow_1_1_common_operator_loader_a173df1148dc3f24b1545e766c2ec979d}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Transpose} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict, llvm\+::\+String\+Ref perm\+Arg\+Name)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a4bdd95a2f4f8f0f485f4ec6868089e70}\label{classglow_1_1_common_operator_loader_a4bdd95a2f4f8f0f485f4ec6868089e70}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Flatten} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a356c1755730abd8b17b34974bcc9fed9}\label{classglow_1_1_common_operator_loader_a356c1755730abd8b17b34974bcc9fed9}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Identity} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_afabff4a3f6aab1f76a31fbcefebd3843}\label{classglow_1_1_common_operator_loader_afabff4a3f6aab1f76a31fbcefebd3843}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+TopK} (const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_ae946f5341e2ebb280de291effeaa2736}\label{classglow_1_1_common_operator_loader_ae946f5341e2ebb280de291effeaa2736}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Reduce\+Op} (llvm\+::\+String\+Ref type\+Name, const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a432b950bcd8ec5aba3d4d43497d40424}\label{classglow_1_1_common_operator_loader_a432b950bcd8ec5aba3d4d43497d40424}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Batch\+One\+Hot} (const Op\+Type \&op)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_af3a15c0fc79e60b3c97b382e25077754}\label{classglow_1_1_common_operator_loader_af3a15c0fc79e60b3c97b382e25077754}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Sparse\+Lengths\+Sum} (const Op\+Type \&op)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a4a89dedb00b1b5e5b04ae06833b4de2c}\label{classglow_1_1_common_operator_loader_a4a89dedb00b1b5e5b04ae06833b4de2c}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Sparse\+Lengths\+Weighted\+Sum} (const Op\+Type \&op)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_ab8e558743292792346737ec8213410fc}\label{classglow_1_1_common_operator_loader_ab8e558743292792346737ec8213410fc}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Sparse\+Lengths\+Weighted\+Sum\+Offsets} (const Op\+Type \&op)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_ae9fe39b17d7de44f5282c429a04051f2}\label{classglow_1_1_common_operator_loader_ae9fe39b17d7de44f5282c429a04051f2}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Lengths\+To\+Ranges} (const Op\+Type \&op)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a5fa137dde446baea21249abaa3351ac4}\label{classglow_1_1_common_operator_loader_a5fa137dde446baea21249abaa3351ac4}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Batch\+Box\+Cox} (const Op\+Type \&op)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a3a510a6453b6121c887fd05864afb75c}\label{classglow_1_1_common_operator_loader_a3a510a6453b6121c887fd05864afb75c}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Dot\+Product} (const Op\+Type \&op)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a231b02e5cd290f20bc8d6f2ca627a371}\label{classglow_1_1_common_operator_loader_a231b02e5cd290f20bc8d6f2ca627a371}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Replace\+NaN} (const Op\+Type \&op, const Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a451298ca6886ca45506704807c8147b6}\label{classglow_1_1_common_operator_loader_a451298ca6886ca45506704807c8147b6}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Lengths\+Sum} (const Op\+Type \&op)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_ae3fe104e242372e32ce3718c29b7b55d}\label{classglow_1_1_common_operator_loader_ae3fe104e242372e32ce3718c29b7b55d}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Expand\+Dims} (const Op\+Type \&op, const Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a2b2ffed358ccf09e2756dd957a4d940c}\label{classglow_1_1_common_operator_loader_a2b2ffed358ccf09e2756dd957a4d940c}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Clip} (const Op\+Type \&op, const Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_ad42c22a230e79add954c7c297d06a368}\label{classglow_1_1_common_operator_loader_ad42c22a230e79add954c7c297d06a368}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Sparse\+To\+Dense} (const Op\+Type \&op, const Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a4426eda4da89941aa5e9da9f620be454}\label{classglow_1_1_common_operator_loader_a4426eda4da89941aa5e9da9f620be454}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Sparse\+To\+Dense\+Mask} (const Op\+Type \&op, const Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_aa7aaf4bd9499a546f85589d5382893c3}\label{classglow_1_1_common_operator_loader_aa7aaf4bd9499a546f85589d5382893c3}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Gather\+Ops} (const std\+::string \&type\+Name, const Op\+Type \&op, const Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a6b27f8e6cf121c3bc43762e9eb81abbd}\label{classglow_1_1_common_operator_loader_a6b27f8e6cf121c3bc43762e9eb81abbd}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Gather\+Ranges} (const std\+::string \&type\+Name, const Op\+Type \&op, const Argument\+Dictionary\+Ty \&dict)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_ad4d56676e68d482be50e0d55c3303cb6}\label{classglow_1_1_common_operator_loader_ad4d56676e68d482be50e0d55c3303cb6}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries load\+Less} (const Op\+Type \&op, const Argument\+Dictionary\+Ty \&dict)
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ bool $>$ \hyperlink{classglow_1_1_common_operator_loader_aa499c4f1138c06c9954bd10a74d59fce}{try\+Load\+Common\+Operator} (llvm\+::\+String\+Ref type\+Name, const Op\+Type \&op, Argument\+Dictionary\+Ty \&dict)
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ std\+::vector$<$ size\+\_\+t $>$ $>$ \hyperlink{classglow_1_1_common_operator_loader_a7bf40c57ba137b70577a1dd307ee2de7}{compute\+Multidirectional\+Broadcast} (llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ shape0, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ shape1)
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader_a511142e66164d767c6c41766fa79b49b}{assign\+Node\+Outputs} (const Op\+Type \&op, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ N\+Vs)
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a41146636fdbad02b966942059bdd229e}\label{classglow_1_1_common_operator_loader_a41146636fdbad02b966942059bdd229e}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader_a41146636fdbad02b966942059bdd229e}{load\+Weights} (uint32\+\_\+t weights\+Count, const onnx\+Tensor\+Descriptor\+V1 $\ast$weight\+Descriptors)
+\begin{DoxyCompactList}\small\item\em Load pre-\/trained weights from {\ttfamily weight\+Descriptors}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a6a4c2f2f1e400f331e7a5a94156af961}\label{classglow_1_1_common_operator_loader_a6a4c2f2f1e400f331e7a5a94156af961}} 
+static \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ {\bfseries handle\+Batch\+Mat\+Mul\+Transpose} (\hyperlink{classglow_1_1_function}{Function} \&F, Argument\+Dictionary\+Ty \&dict, llvm\+::\+String\+Ref key, \hyperlink{structglow_1_1_node_value}{Node\+Value} input)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Op\+Type, typename Attr\+Type$>$\newline
+class glow\+::\+Common\+Operator\+Loader$<$ Op\+Type, Attr\+Type $>$}
+
+Contains loaders for operators, which are common to O\+N\+NX and Caffe2 formats. Every loader method adds necessary nodes to property G\+\_\+, which is inherited from \hyperlink{classglow_1_1_protobuf_loader}{Protobuf\+Loader} class, therefore modifying the class instance itself. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_ab759aea69c4a85d95d1fbd6ed068618b}\label{classglow_1_1_common_operator_loader_ab759aea69c4a85d95d1fbd6ed068618b}} 
+\index{glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}!add\+Node\+As\+Output@{add\+Node\+As\+Output}}
+\index{add\+Node\+As\+Output@{add\+Node\+As\+Output}!glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}}
+\subsubsection{\texorpdfstring{add\+Node\+As\+Output()}{addNodeAsOutput()}}
+{\footnotesize\ttfamily template$<$typename Op\+Type, typename Attr\+Type$>$ \\
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader}{glow\+::\+Common\+Operator\+Loader}$<$ Op\+Type, Attr\+Type $>$\+::add\+Node\+As\+Output (\begin{DoxyParamCaption}\item[{const Op\+Type \&}]{op,  }\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{node,  }\item[{int}]{num\+Outputs = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Associate the name of operation outputs to a Node\+Values corresponding to node {\ttfamily node}. If {\ttfamily num\+Outputs} is lower than 0, then all outputs are associated. Otherwise, the first {\ttfamily num\+Outputs} outputs are associated. \mbox{\Hypertarget{classglow_1_1_common_operator_loader_a511142e66164d767c6c41766fa79b49b}\label{classglow_1_1_common_operator_loader_a511142e66164d767c6c41766fa79b49b}} 
+\index{glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}!assign\+Node\+Outputs@{assign\+Node\+Outputs}}
+\index{assign\+Node\+Outputs@{assign\+Node\+Outputs}!glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}}
+\subsubsection{\texorpdfstring{assign\+Node\+Outputs()}{assignNodeOutputs()}}
+{\footnotesize\ttfamily template$<$typename Op\+Type, typename Attr\+Type$>$ \\
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader}{glow\+::\+Common\+Operator\+Loader}$<$ Op\+Type, Attr\+Type $>$\+::assign\+Node\+Outputs (\begin{DoxyParamCaption}\item[{const Op\+Type \&}]{op,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$}]{N\+Vs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Associate all outputs of {\ttfamily op} with nodes in {\ttfamily N\+Vs}. Number of outputs of {\ttfamily op} should match the number of elements of {\ttfamily N\+Vs}. \begin{DoxyReturn}{Returns}
+error code in case of error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a7bf40c57ba137b70577a1dd307ee2de7}\label{classglow_1_1_common_operator_loader_a7bf40c57ba137b70577a1dd307ee2de7}} 
+\index{glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}!compute\+Multidirectional\+Broadcast@{compute\+Multidirectional\+Broadcast}}
+\index{compute\+Multidirectional\+Broadcast@{compute\+Multidirectional\+Broadcast}!glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}}
+\subsubsection{\texorpdfstring{compute\+Multidirectional\+Broadcast()}{computeMultidirectionalBroadcast()}}
+{\footnotesize\ttfamily template$<$typename Op\+Type, typename Attr\+Type$>$ \\
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$std\+::vector$<$size\+\_\+t$>$ $>$ \hyperlink{classglow_1_1_common_operator_loader}{glow\+::\+Common\+Operator\+Loader}$<$ Op\+Type, Attr\+Type $>$\+::compute\+Multidirectional\+Broadcast (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{shape0,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{shape1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Utility function which computes the resulting shape in case of multidirectional broadcasting. \mbox{\Hypertarget{classglow_1_1_common_operator_loader_ac5ce8fc378bb2526f7f957e13a54e970}\label{classglow_1_1_common_operator_loader_ac5ce8fc378bb2526f7f957e13a54e970}} 
+\index{glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}!get\+Broadcast@{get\+Broadcast}}
+\index{get\+Broadcast@{get\+Broadcast}!glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}}
+\subsubsection{\texorpdfstring{get\+Broadcast()}{getBroadcast()}}
+{\footnotesize\ttfamily template$<$typename Op\+Type, typename Attr\+Type$>$ \\
+virtual \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$bool$>$ \hyperlink{classglow_1_1_common_operator_loader}{glow\+::\+Common\+Operator\+Loader}$<$ Op\+Type, Attr\+Type $>$\+::get\+Broadcast (\begin{DoxyParamCaption}\item[{const Argument\+Dictionary\+Ty \&}]{dict }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+True if the operator has broadcasting activated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a4e079eed244e7047b09040ca209d15e0}\label{classglow_1_1_common_operator_loader_a4e079eed244e7047b09040ca209d15e0}} 
+\index{glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}!has\+Multidirectional\+Broadcast@{has\+Multidirectional\+Broadcast}}
+\index{has\+Multidirectional\+Broadcast@{has\+Multidirectional\+Broadcast}!glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}}
+\subsubsection{\texorpdfstring{has\+Multidirectional\+Broadcast()}{hasMultidirectionalBroadcast()}}
+{\footnotesize\ttfamily template$<$typename Op\+Type, typename Attr\+Type$>$ \\
+virtual bool \hyperlink{classglow_1_1_common_operator_loader}{glow\+::\+Common\+Operator\+Loader}$<$ Op\+Type, Attr\+Type $>$\+::has\+Multidirectional\+Broadcast (\begin{DoxyParamCaption}\item[{const llvm\+::\+String\+Ref}]{type\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+True if the operator with the name {\ttfamily type\+Name} has support for multidirectional broadcasting. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_common_operator_loader_a6a8b5b3d78eab3af16b88b718aeb40c5}\label{classglow_1_1_common_operator_loader_a6a8b5b3d78eab3af16b88b718aeb40c5}} 
+\index{glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}!load\+P\+Relu@{load\+P\+Relu}}
+\index{load\+P\+Relu@{load\+P\+Relu}!glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}}
+\subsubsection{\texorpdfstring{load\+P\+Relu()}{loadPRelu()}}
+{\footnotesize\ttfamily template$<$typename Op\+Type, typename Attr\+Type$>$ \\
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader}{glow\+::\+Common\+Operator\+Loader}$<$ Op\+Type, Attr\+Type $>$\+::load\+P\+Relu (\begin{DoxyParamCaption}\item[{const Op\+Type \&}]{op,  }\item[{Argument\+Dictionary\+Ty \&}]{dict }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Loads P\+R\+E\+LU operator, given its protobuf representation and parsed args. Follows undirectional broadcasting described here\+: \href{https://github.com/onnx/onnx/blob/fb1a80692c1ab0bd27b1072f2e7bffacba336777/docs/Broadcasting.md}{\tt https\+://github.\+com/onnx/onnx/blob/fb1a80692c1ab0bd27b1072f2e7bffacba336777/docs/\+Broadcasting.\+md} \mbox{\Hypertarget{classglow_1_1_common_operator_loader_a308c3bbba0a5e6ee0b50bd972dd6af84}\label{classglow_1_1_common_operator_loader_a308c3bbba0a5e6ee0b50bd972dd6af84}} 
+\index{glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}!load\+Reciprocal@{load\+Reciprocal}}
+\index{load\+Reciprocal@{load\+Reciprocal}!glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}}
+\subsubsection{\texorpdfstring{load\+Reciprocal()}{loadReciprocal()}}
+{\footnotesize\ttfamily template$<$typename Op\+Type, typename Attr\+Type$>$ \\
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_loader}{glow\+::\+Common\+Operator\+Loader}$<$ Op\+Type, Attr\+Type $>$\+::load\+Reciprocal (\begin{DoxyParamCaption}\item[{const Op\+Type \&}]{op,  }\item[{Argument\+Dictionary\+Ty \&}]{dict }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Loads Reciprocal operator, given its protobuf representation and parsed args. \mbox{\Hypertarget{classglow_1_1_common_operator_loader_aa499c4f1138c06c9954bd10a74d59fce}\label{classglow_1_1_common_operator_loader_aa499c4f1138c06c9954bd10a74d59fce}} 
+\index{glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}!try\+Load\+Common\+Operator@{try\+Load\+Common\+Operator}}
+\index{try\+Load\+Common\+Operator@{try\+Load\+Common\+Operator}!glow\+::\+Common\+Operator\+Loader@{glow\+::\+Common\+Operator\+Loader}}
+\subsubsection{\texorpdfstring{try\+Load\+Common\+Operator()}{tryLoadCommonOperator()}}
+{\footnotesize\ttfamily template$<$typename Op\+Type, typename Attr\+Type$>$ \\
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$bool$>$ \hyperlink{classglow_1_1_common_operator_loader}{glow\+::\+Common\+Operator\+Loader}$<$ Op\+Type, Attr\+Type $>$\+::try\+Load\+Common\+Operator (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{type\+Name,  }\item[{const Op\+Type \&}]{op,  }\item[{Argument\+Dictionary\+Ty \&}]{dict }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+If operator type is supported, returns Expected$<$true$>$ and creates new operator. Returns Operator$<$false$>$ if operator type is not supported. Returns Error if an error occurred 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Importer/Common\+Operator\+Loader.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\hypertarget{class_node_builder}{}\section{Node\+Builder Class Reference}
+\label{class_node_builder}\index{Node\+Builder@{Node\+Builder}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_node_builder_a00f02ac86d38091054d2866aa51d836c}\label{class_node_builder_a00f02ac86d38091054d2866aa51d836c}} 
+{\bfseries Node\+Builder} (std\+::ofstream \&H, std\+::ofstream \&C, std\+::ofstream \&D, const std\+::string \&name, bool is\+Backend\+Specific)
+\item 
+\hyperlink{class_node_builder}{Node\+Builder} \& \hyperlink{class_node_builder_ad1aa1ad3f01f69333c848b40f4b50b93}{add\+Input} (const std\+::string \&op)
+\item 
+\hyperlink{class_node_builder}{Node\+Builder} \& \hyperlink{class_node_builder_a4ac09350245a07d8187b96bdd641d04d}{add\+Member} (Member\+Type type, const std\+::string \&name)
+\item 
+\hyperlink{class_node_builder}{Node\+Builder} \& \hyperlink{class_node_builder_a1805b1960d8247e34b816409e3fc8d68}{add\+Member} (\hyperlink{struct_member_type_info}{Member\+Type\+Info} type\+Info, const std\+::string \&name)
+\item 
+\hyperlink{class_node_builder}{Node\+Builder} \& \hyperlink{class_node_builder_ab2a15b943fa94aac99cddb5b92b439e9}{add\+Extra\+Method} (const std\+::string \&decl, const std\+::string \&body)
+\item 
+\hyperlink{class_node_builder}{Node\+Builder} \& \hyperlink{class_node_builder_a971697859997389e6f2fe2a56d99267a}{add\+Enum\+Case} (const std\+::string \&op)
+\item 
+\hyperlink{class_node_builder}{Node\+Builder} \& \hyperlink{class_node_builder_a605fddc6415045aba18d5756ff9739f7}{add\+Result} (const std\+::string \&ty, const std\+::string \&name=\char`\"{}Result\char`\"{})
+\item 
+\hyperlink{class_node_builder}{Node\+Builder} \& \hyperlink{class_node_builder_a62ee041879e95ec36c120159e4dc2277}{add\+Result\+From\+Ctor\+Arg} (const std\+::string \&name=\char`\"{}Result\char`\"{})
+\item 
+\mbox{\Hypertarget{class_node_builder_a15df8c1e24ddd6cc779cb4ed5e5eace2}\label{class_node_builder_a15df8c1e24ddd6cc779cb4ed5e5eace2}} 
+\hyperlink{class_node_builder}{Node\+Builder} \& \hyperlink{class_node_builder_a15df8c1e24ddd6cc779cb4ed5e5eace2}{set\+Docstring} (const std\+::string \&docstring)
+\begin{DoxyCompactList}\small\item\em Set the documentation string. Each line will be prepended with \char`\"{}/// \char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_node_builder_aca50d259f221a816ed5ca40b8df722f8}\label{class_node_builder_aca50d259f221a816ed5ca40b8df722f8}} 
+\hyperlink{class_node_builder}{Node\+Builder} \& \hyperlink{class_node_builder_aca50d259f221a816ed5ca40b8df722f8}{set\+Has\+Side\+Effects} (bool has\+Side\+Effects)
+\begin{DoxyCompactList}\small\item\em Set whether node has side effects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_node_builder_a19694563b8a2728efda86842250805eb}\label{class_node_builder_a19694563b8a2728efda86842250805eb}} 
+\hyperlink{class_node_builder}{Node\+Builder} \& {\bfseries add\+Overwritten\+Input} (const std\+::string \&name)
+\item 
+\mbox{\Hypertarget{class_node_builder_aaebb1d48c9e4afaee820f623cafe2501}\label{class_node_builder_aaebb1d48c9e4afaee820f623cafe2501}} 
+\hyperlink{class_node_builder}{Node\+Builder} \& {\bfseries data\+Parallel} ()
+\item 
+\hyperlink{class_node_builder}{Node\+Builder} \& \hyperlink{class_node_builder_a12bc758e5d8a853e540bdfdcd9338ef4}{add\+Gradient} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_node_builder_a971697859997389e6f2fe2a56d99267a}\label{class_node_builder_a971697859997389e6f2fe2a56d99267a}} 
+\index{Node\+Builder@{Node\+Builder}!add\+Enum\+Case@{add\+Enum\+Case}}
+\index{add\+Enum\+Case@{add\+Enum\+Case}!Node\+Builder@{Node\+Builder}}
+\subsubsection{\texorpdfstring{add\+Enum\+Case()}{addEnumCase()}}
+{\footnotesize\ttfamily \hyperlink{class_node_builder}{Node\+Builder}\& Node\+Builder\+::add\+Enum\+Case (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add an field to the enum. The enum name should start with a capital letter. For example\+: \char`\"{}\+External\char`\"{}. \mbox{\Hypertarget{class_node_builder_ab2a15b943fa94aac99cddb5b92b439e9}\label{class_node_builder_ab2a15b943fa94aac99cddb5b92b439e9}} 
+\index{Node\+Builder@{Node\+Builder}!add\+Extra\+Method@{add\+Extra\+Method}}
+\index{add\+Extra\+Method@{add\+Extra\+Method}!Node\+Builder@{Node\+Builder}}
+\subsubsection{\texorpdfstring{add\+Extra\+Method()}{addExtraMethod()}}
+{\footnotesize\ttfamily \hyperlink{class_node_builder}{Node\+Builder}\& Node\+Builder\+::add\+Extra\+Method (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{decl,  }\item[{const std\+::string \&}]{body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds the body of a new public method to the class. {\ttfamily decl} is the decleration that goes in the header file. {\ttfamily body} is the implementation that goes in the cpp file. \mbox{\Hypertarget{class_node_builder_a12bc758e5d8a853e540bdfdcd9338ef4}\label{class_node_builder_a12bc758e5d8a853e540bdfdcd9338ef4}} 
+\index{Node\+Builder@{Node\+Builder}!add\+Gradient@{add\+Gradient}}
+\index{add\+Gradient@{add\+Gradient}!Node\+Builder@{Node\+Builder}}
+\subsubsection{\texorpdfstring{add\+Gradient()}{addGradient()}}
+{\footnotesize\ttfamily \hyperlink{class_node_builder}{Node\+Builder} \& Node\+Builder\+::add\+Gradient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs a new gradient node that is based on the current node that we are building. The gradient node will produce one gradient output for each input. The rule is that each output becomes an input (named \char`\"{}\+Output\char`\"{}, to preserve the original name) and each input becomes a gradient output with the same name. \mbox{\Hypertarget{class_node_builder_ad1aa1ad3f01f69333c848b40f4b50b93}\label{class_node_builder_ad1aa1ad3f01f69333c848b40f4b50b93}} 
+\index{Node\+Builder@{Node\+Builder}!add\+Input@{add\+Input}}
+\index{add\+Input@{add\+Input}!Node\+Builder@{Node\+Builder}}
+\subsubsection{\texorpdfstring{add\+Input()}{addInput()}}
+{\footnotesize\ttfamily \hyperlink{class_node_builder}{Node\+Builder}\& Node\+Builder\+::add\+Input (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add an operand to the node. The name should start with a capital letter. For example\+: \char`\"{}\+Input\char`\"{}. \mbox{\Hypertarget{class_node_builder_a4ac09350245a07d8187b96bdd641d04d}\label{class_node_builder_a4ac09350245a07d8187b96bdd641d04d}} 
+\index{Node\+Builder@{Node\+Builder}!add\+Member@{add\+Member}}
+\index{add\+Member@{add\+Member}!Node\+Builder@{Node\+Builder}}
+\subsubsection{\texorpdfstring{add\+Member()}{addMember()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_node_builder}{Node\+Builder} \& Node\+Builder\+::add\+Member (\begin{DoxyParamCaption}\item[{Member\+Type}]{type,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+Add a member to the node. Format\+: type, name. The name should start with a capital letter. For example\+: \char`\"{}\+Filter\char`\"{}.
+
+Copyright (c) Glow Contributors. See C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS file.
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \begin{DoxyVerb}http://www.apache.org/licenses/LICENSE-2.0
+\end{DoxyVerb}
+
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. \mbox{\Hypertarget{class_node_builder_a1805b1960d8247e34b816409e3fc8d68}\label{class_node_builder_a1805b1960d8247e34b816409e3fc8d68}} 
+\index{Node\+Builder@{Node\+Builder}!add\+Member@{add\+Member}}
+\index{add\+Member@{add\+Member}!Node\+Builder@{Node\+Builder}}
+\subsubsection{\texorpdfstring{add\+Member()}{addMember()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_node_builder}{Node\+Builder}\& Node\+Builder\+::add\+Member (\begin{DoxyParamCaption}\item[{\hyperlink{struct_member_type_info}{Member\+Type\+Info}}]{type\+Info,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a member to the node. Format type, name. The name should start with a capital letter. For example\+: \char`\"{}\+Filter\char`\"{}. If \hyperlink{struct_member_type_info}{Member\+Type\+Info} refers to an external user-\/defined type, this type T should satisfy the following requirements\+:
+\begin{DoxyItemize}
+\item There should be a hash function with a signature like {\ttfamily llvm\+::hash\+\_\+code hash\+\_\+value(const T)} which takes T by value, by reference or as a pointer, depending on the intended use.
+\item There should be a stream output operator with a signature like {\ttfamily llvm\+::raw\+\_\+ostream \&operator$<$$<$(llvm\+::raw\+\_\+ostream \&os, const T);}, which takes T by value, by reference or as a pointer, depending on the intended use.
+\item There should be a comparison operator {\ttfamily bool operator==(const T L\+HS, const T R\+HS)} (or a custom comparator function mentioned in \hyperlink{struct_member_type_info_abf6a66ee80b0f3680c6bd0b86d61a858}{Member\+Type\+Info\+::cmp\+Fn}), which takes T by reference or by value depending on the intended use. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_node_builder_a605fddc6415045aba18d5756ff9739f7}\label{class_node_builder_a605fddc6415045aba18d5756ff9739f7}} 
+\index{Node\+Builder@{Node\+Builder}!add\+Result@{add\+Result}}
+\index{add\+Result@{add\+Result}!Node\+Builder@{Node\+Builder}}
+\subsubsection{\texorpdfstring{add\+Result()}{addResult()}}
+{\footnotesize\ttfamily \hyperlink{class_node_builder}{Node\+Builder}\& Node\+Builder\+::add\+Result (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ty,  }\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}Result\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the expression that initializes a new return type for the node. Example\+: \textquotesingle{}L\+H\+S-\/$>$get\+Type()\textquotesingle{}, \char`\"{}\+Result\char`\"{}. \mbox{\Hypertarget{class_node_builder_a62ee041879e95ec36c120159e4dc2277}\label{class_node_builder_a62ee041879e95ec36c120159e4dc2277}} 
+\index{Node\+Builder@{Node\+Builder}!add\+Result\+From\+Ctor\+Arg@{add\+Result\+From\+Ctor\+Arg}}
+\index{add\+Result\+From\+Ctor\+Arg@{add\+Result\+From\+Ctor\+Arg}!Node\+Builder@{Node\+Builder}}
+\subsubsection{\texorpdfstring{add\+Result\+From\+Ctor\+Arg()}{addResultFromCtorArg()}}
+{\footnotesize\ttfamily \hyperlink{class_node_builder}{Node\+Builder}\& Node\+Builder\+::add\+Result\+From\+Ctor\+Arg (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}Result\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a Type\+Ref parameter to the constructor and use this argument to add a result type to the node. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tools/\+Class\+Gen/Node\+Builder.\+h\item 
+tools/\+Class\+Gen/Node\+Builder.\+cpp\end{DoxyCompactItemize}

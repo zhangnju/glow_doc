@@ -1,0 +1,111 @@
+\hypertarget{classglow_1_1_pad_node}{}\section{glow\+:\+:Pad\+Node Class Reference}
+\label{classglow_1_1_pad_node}\index{glow\+::\+Pad\+Node@{glow\+::\+Pad\+Node}}
+
+
+Performs padding of a given input tensor. The Padding information must be specified for each dimension of the tensor in Pads (start and end padding). In case the padding is negative, it means that the tensor must be cropped. Mode defines how extra padding elements are created. Supported modes are defined in the Padding\+Mode enum\+: C\+O\+N\+S\+T\+A\+NT, R\+E\+F\+L\+E\+CT, E\+D\+GE. \hyperlink{classglow_1_1_value}{Value} is only used with the C\+O\+N\+S\+T\+A\+NT mode.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Pad\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_pad_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a23821d9c4e493508a2b32bd6be65a25b}\label{classglow_1_1_pad_node_a23821d9c4e493508a2b32bd6be65a25b}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a6268d17e04e6932bb7e42aa256355b2d}\label{classglow_1_1_pad_node_a6268d17e04e6932bb7e42aa256355b2d}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_ab0e8b6e10727c2c4e88c9b09104559bf}\label{classglow_1_1_pad_node_ab0e8b6e10727c2c4e88c9b09104559bf}} 
+{\bfseries Pad\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Mode, std\+::vector$<$ int $>$ Pads, float \hyperlink{classglow_1_1_value}{Value})
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_ad9da00169271d05810802915bd700d99}\label{classglow_1_1_pad_node_ad9da00169271d05810802915bd700d99}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a2f634b28c1786224df9cb977304b8ebc}\label{classglow_1_1_pad_node_a2f634b28c1786224df9cb977304b8ebc}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a62b2ab2bc76f38f108f93c845e4ecae6}\label{classglow_1_1_pad_node_a62b2ab2bc76f38f108f93c845e4ecae6}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a3a9edc28ff8df1f7fe2dd1434dcb6ea1}\label{classglow_1_1_pad_node_a3a9edc28ff8df1f7fe2dd1434dcb6ea1}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Mode} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a9f0072c6fec0be920737f1e370d3ba53}\label{classglow_1_1_pad_node_a9f0072c6fec0be920737f1e370d3ba53}} 
+llvm\+::\+Array\+Ref$<$ int $>$ {\bfseries get\+Pads} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_af94d657082724f20935a47e73472b9cf}\label{classglow_1_1_pad_node_af94d657082724f20935a47e73472b9cf}} 
+float {\bfseries get\+Value} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a6c28492ee073281383bf28c44a1f5b50}\label{classglow_1_1_pad_node_a6c28492ee073281383bf28c44a1f5b50}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_ac3ebcc2e8c1d3121fcd07d261c641fab}\label{classglow_1_1_pad_node_ac3ebcc2e8c1d3121fcd07d261c641fab}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_acf5315bb6663ca2062ad25c9b95babd8}\label{classglow_1_1_pad_node_acf5315bb6663ca2062ad25c9b95babd8}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_ae1e28c278dd48cc0c0413e2183ad624f}\label{classglow_1_1_pad_node_ae1e28c278dd48cc0c0413e2183ad624f}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a7a2e2e00052c205cd9e82c883db077f5}\label{classglow_1_1_pad_node_a7a2e2e00052c205cd9e82c883db077f5}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a9f842f0427e9844b3eb3f50d2a69a675}\label{classglow_1_1_pad_node_a9f842f0427e9844b3eb3f50d2a69a675}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a4a87ae528b202384fc27496b146d9d8c}\label{classglow_1_1_pad_node_a4a87ae528b202384fc27496b146d9d8c}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a558a1f6f2bb942fa46936e225b06aa84}\label{classglow_1_1_pad_node_a558a1f6f2bb942fa46936e225b06aa84}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a6c4f353a8b69be99b017c8817680efc2}\label{classglow_1_1_pad_node_a6c4f353a8b69be99b017c8817680efc2}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a643b7108576383faa45ee336c3bab80d}\label{classglow_1_1_pad_node_a643b7108576383faa45ee336c3bab80d}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_pad_node}{Pad\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_ac7fa291d4655313d4a995f71ce751ea3}\label{classglow_1_1_pad_node_ac7fa291d4655313d4a995f71ce751ea3}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a41fc4d81b5f69b7f670509bbcf3b38d7}\label{classglow_1_1_pad_node_a41fc4d81b5f69b7f670509bbcf3b38d7}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a703f14e32688bb501f9a35bda3f54f04}\label{classglow_1_1_pad_node_a703f14e32688bb501f9a35bda3f54f04}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_a77d173ca4d0d3ebf925dea74ce96e18e}\label{classglow_1_1_pad_node_a77d173ca4d0d3ebf925dea74ce96e18e}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_pad_node_ae1d9327503a1b4b56dfb5b6b56e436f7}\label{classglow_1_1_pad_node_ae1d9327503a1b4b56dfb5b6b56e436f7}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Performs padding of a given input tensor. The Padding information must be specified for each dimension of the tensor in Pads (start and end padding). In case the padding is negative, it means that the tensor must be cropped. Mode defines how extra padding elements are created. Supported modes are defined in the Padding\+Mode enum\+: C\+O\+N\+S\+T\+A\+NT, R\+E\+F\+L\+E\+CT, E\+D\+GE. \hyperlink{classglow_1_1_value}{Value} is only used with the C\+O\+N\+S\+T\+A\+NT mode. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

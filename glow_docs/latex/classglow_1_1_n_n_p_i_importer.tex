@@ -1,0 +1,85 @@
+\hypertarget{classglow_1_1_n_n_p_i_importer}{}\section{glow\+:\+:N\+N\+P\+I\+Importer Class Reference}
+\label{classglow_1_1_n_n_p_i_importer}\index{glow\+::\+N\+N\+P\+I\+Importer@{glow\+::\+N\+N\+P\+I\+Importer}}
+
+
+This class imports Glow IR to the N\+N\+PI backend.  
+
+
+
+
+{\ttfamily \#include $<$Importer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_a018329f35c8960f6b277bc1e68c78242}\label{classglow_1_1_n_n_p_i_importer_a018329f35c8960f6b277bc1e68c78242}} 
+\hyperlink{classglow_1_1_n_n_p_i_importer_a018329f35c8960f6b277bc1e68c78242}{N\+N\+P\+I\+Importer} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_a373fd8bb5a2d9a4f5dc932b89f70e4dd}\label{classglow_1_1_n_n_p_i_importer_a373fd8bb5a2d9a4f5dc932b89f70e4dd}} 
+\hyperlink{classglow_1_1_n_n_p_i_importer_a373fd8bb5a2d9a4f5dc932b89f70e4dd}{$\sim$\+N\+N\+P\+I\+Importer} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+N\+N\+P\+I\+Network \hyperlink{classglow_1_1_n_n_p_i_importer_acee7ca1b564e19778f18da94739bb8f1}{import\+Function} (\hyperlink{classglow_1_1_function}{Function} $\ast$F, const \hyperlink{structglow_1_1_backend_options}{Backend\+Options} \&opts)
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_a797ff9c7d339b26dca0da91b0ded1c2d}\label{classglow_1_1_n_n_p_i_importer_a797ff9c7d339b26dca0da91b0ded1c2d}} 
+std\+::string \hyperlink{classglow_1_1_n_n_p_i_importer_a797ff9c7d339b26dca0da91b0ded1c2d}{get\+Internal\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get a new name for an internal object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_ae6bd38b44403f14da3f383bb155a3cb5}\label{classglow_1_1_n_n_p_i_importer_ae6bd38b44403f14da3f383bb155a3cb5}} 
+N\+N\+P\+I\+Network \hyperlink{classglow_1_1_n_n_p_i_importer_ae6bd38b44403f14da3f383bb155a3cb5}{get\+Network} () const
+\begin{DoxyCompactList}\small\item\em Get the network handle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_a0be74d279d10418bc0fff7b9e48bdebc}\label{classglow_1_1_n_n_p_i_importer_a0be74d279d10418bc0fff7b9e48bdebc}} 
+N\+N\+P\+I\+Error\+Code \hyperlink{classglow_1_1_n_n_p_i_importer_a0be74d279d10418bc0fff7b9e48bdebc}{add\+Value\+If\+Tensor} (\hyperlink{classglow_1_1_value}{Value} $\ast$v)
+\begin{DoxyCompactList}\small\item\em Add a value to the network by Glow\+::\+Value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_ae3b98c4f0d3fcb663e7e6191ef4a4c4b}\label{classglow_1_1_n_n_p_i_importer_ae3b98c4f0d3fcb663e7e6191ef4a4c4b}} 
+N\+N\+P\+I\+Error\+Code \hyperlink{classglow_1_1_n_n_p_i_importer_ae3b98c4f0d3fcb663e7e6191ef4a4c4b}{add\+Value} (std\+::string name, const \hyperlink{structglow_1_1_type}{glow\+::\+Type} $\ast$v\+Type, bool alternative\+Layout=false, bool input=false, bool output=false, const std\+::string \&scale\+Tensor=\{\}, const std\+::string \&offset\+Tensor=\{\}, bool force\+Symlowp=false)
+\begin{DoxyCompactList}\small\item\em Add a value to the network by parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_a3dddd9aa8bf1683202db584b1680562f}\label{classglow_1_1_n_n_p_i_importer_a3dddd9aa8bf1683202db584b1680562f}} 
+void \hyperlink{classglow_1_1_n_n_p_i_importer_a3dddd9aa8bf1683202db584b1680562f}{set\+Used\+Tensors} (const std\+::set$<$ std\+::string $>$ \&read\+Tensors=\{\}, const std\+::set$<$ std\+::string $>$ \&write\+Tensors=\{\})
+\begin{DoxyCompactList}\small\item\em Set given tensor names as inputs/outputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_a17439e3c3e7bd40b47b6fd27fa898da1}\label{classglow_1_1_n_n_p_i_importer_a17439e3c3e7bd40b47b6fd27fa898da1}} 
+N\+N\+P\+I\+Error\+Code \hyperlink{classglow_1_1_n_n_p_i_importer_a17439e3c3e7bd40b47b6fd27fa898da1}{add\+Tensor} (std\+::string name, bool alternative\+Layout=false, const std\+::string \&scale\+Tensor=\{\}, const std\+::string \&offset\+Tensor=\{\}, bool force\+Symlowp=false)
+\begin{DoxyCompactList}\small\item\em Add an external tensor to the network (by name). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_a4f8277b5ec56cd328eef94c9529fbdd1}\label{classglow_1_1_n_n_p_i_importer_a4f8277b5ec56cd328eef94c9529fbdd1}} 
+N\+N\+P\+I\+Error\+Code \hyperlink{classglow_1_1_n_n_p_i_importer_a4f8277b5ec56cd328eef94c9529fbdd1}{add\+Tensor} (std\+::string name, const N\+N\+P\+I\+Tensor\+Desc \&desc, const void $\ast$p\+Data)
+\begin{DoxyCompactList}\small\item\em Add an external tensor to the network (by parameters). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_a513557436fbe7559ba24cd15c2da0b15}\label{classglow_1_1_n_n_p_i_importer_a513557436fbe7559ba24cd15c2da0b15}} 
+void \hyperlink{classglow_1_1_n_n_p_i_importer_a513557436fbe7559ba24cd15c2da0b15}{update\+Desc\+Quant\+From\+Glow} (const \hyperlink{structglow_1_1_type}{glow\+::\+Type} \&t, N\+N\+P\+I\+Tensor\+Desc \&desc, const std\+::string \&scale\+Tensor=\{\}, const std\+::string \&offset\+Tensor=\{\}, bool force\+Symlowp=false)
+\begin{DoxyCompactList}\small\item\em Update the N\+N\+P\+I\+Tensor\+Desc {\ttfamily desc} quantization params by {\ttfamily v\+Type}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_ab483dc4972b6b248860f07130126ef77}\label{classglow_1_1_n_n_p_i_importer_ab483dc4972b6b248860f07130126ef77}} 
+bool {\bfseries zeroes} (const std\+::string \&name) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_ad9ac243f873c5de0d834b705698ff659}\label{classglow_1_1_n_n_p_i_importer_ad9ac243f873c5de0d834b705698ff659}} 
+static void \hyperlink{classglow_1_1_n_n_p_i_importer_ad9ac243f873c5de0d834b705698ff659}{update\+Desc\+Dims\+From\+Glow} (const llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ glow\+Dims, N\+N\+P\+I\+Tensor\+Desc \&desc, bool alternative\+Layout=false)
+\begin{DoxyCompactList}\small\item\em Update the N\+N\+P\+I\+Tensor\+Desc {\ttfamily desc} by the dimensions array {\ttfamily glow\+Dims}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_a0a936fa9849190019b1946e62fc263fb}\label{classglow_1_1_n_n_p_i_importer_a0a936fa9849190019b1946e62fc263fb}} 
+static bool {\bfseries is\+Variable\+Using\+Alternative\+Layout} (\hyperlink{classglow_1_1_storage}{Storage} $\ast$v)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_a36c37cd720f8975e97729bad4b90106f}\label{classglow_1_1_n_n_p_i_importer_a36c37cd720f8975e97729bad4b90106f}} 
+static const std\+::string \hyperlink{classglow_1_1_n_n_p_i_importer_a36c37cd720f8975e97729bad4b90106f}{internal\+Name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Internal name header used for variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class imports Glow IR to the N\+N\+PI backend. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_importer_acee7ca1b564e19778f18da94739bb8f1}\label{classglow_1_1_n_n_p_i_importer_acee7ca1b564e19778f18da94739bb8f1}} 
+\index{glow\+::\+N\+N\+P\+I\+Importer@{glow\+::\+N\+N\+P\+I\+Importer}!import\+Function@{import\+Function}}
+\index{import\+Function@{import\+Function}!glow\+::\+N\+N\+P\+I\+Importer@{glow\+::\+N\+N\+P\+I\+Importer}}
+\subsubsection{\texorpdfstring{import\+Function()}{importFunction()}}
+{\footnotesize\ttfamily N\+N\+P\+I\+Network glow\+::\+N\+N\+P\+I\+Importer\+::import\+Function (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} $\ast$}]{F,  }\item[{const \hyperlink{structglow_1_1_backend_options}{Backend\+Options} \&}]{opts }\end{DoxyParamCaption})}
+
+The main entry point for the importer functionality Imports a \hyperlink{classglow_1_1_function}{Function} {\ttfamily F} using options taken from {\ttfamily opts} \begin{DoxyReturn}{Returns}
+true iff the import succeeded. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+N\+N\+P\+I/Importer.\+h\item 
+lib/\+Backends/\+N\+N\+P\+I/Importer.\+cpp\end{DoxyCompactItemize}

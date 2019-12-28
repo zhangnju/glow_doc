@@ -1,0 +1,47 @@
+\hypertarget{structglow_1_1_tagged_list_traits}{}\section{glow\+:\+:Tagged\+List\+Traits$<$ T $>$ Struct Template Reference}
+\label{structglow_1_1_tagged_list_traits}\index{glow\+::\+Tagged\+List\+Traits$<$ T $>$@{glow\+::\+Tagged\+List\+Traits$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Tagged\+List.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_tagged_list_traits_aa761d00c1247c294c72c742fdcde6adf}\label{structglow_1_1_tagged_list_traits_aa761d00c1247c294c72c742fdcde6adf}} 
+void \hyperlink{structglow_1_1_tagged_list_traits_aa761d00c1247c294c72c742fdcde6adf}{add\+Node\+To\+List} (T $\ast$)
+\begin{DoxyCompactList}\small\item\em Called before node is added to this list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_tagged_list_traits_a2d68adb690439d516e5c77c107b5d9f6}\label{structglow_1_1_tagged_list_traits_a2d68adb690439d516e5c77c107b5d9f6}} 
+void \hyperlink{structglow_1_1_tagged_list_traits_a2d68adb690439d516e5c77c107b5d9f6}{remove\+Node\+From\+List} (T $\ast$)
+\begin{DoxyCompactList}\small\item\em Called before node is removed from this list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{structglow_1_1_tagged_list_traits_ab0384ec6c328482503d0ecf3cc8e7d05}{delete\+Node} (T $\ast$node)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct glow\+::\+Tagged\+List\+Traits$<$ T $>$}
+
+Traits for a Tagged\+List$<$\+T$>$
+
+Specialize these traits to customize list behavior.
+
+The \hyperlink{classglow_1_1_tagged_list}{Tagged\+List} will derive from the traits type. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_tagged_list_traits_ab0384ec6c328482503d0ecf3cc8e7d05}\label{structglow_1_1_tagged_list_traits_ab0384ec6c328482503d0ecf3cc8e7d05}} 
+\index{glow\+::\+Tagged\+List\+Traits@{glow\+::\+Tagged\+List\+Traits}!delete\+Node@{delete\+Node}}
+\index{delete\+Node@{delete\+Node}!glow\+::\+Tagged\+List\+Traits@{glow\+::\+Tagged\+List\+Traits}}
+\subsubsection{\texorpdfstring{delete\+Node()}{deleteNode()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static void \hyperlink{structglow_1_1_tagged_list_traits}{glow\+::\+Tagged\+List\+Traits}$<$ T $>$\+::delete\+Node (\begin{DoxyParamCaption}\item[{T $\ast$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Delete a node.
+
+A Tagged\+List$<$\+T$>$ never allocates nodes, but the erase() and clear() methods will delete nodes. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Base/Tagged\+List.\+h\end{DoxyCompactItemize}

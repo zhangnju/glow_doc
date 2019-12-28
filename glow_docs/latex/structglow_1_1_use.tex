@@ -1,0 +1,86 @@
+\hypertarget{structglow_1_1_use}{}\section{glow\+:\+:Use Struct Reference}
+\label{structglow_1_1_use}\index{glow\+::\+Use@{glow\+::\+Use}}
+
+
+{\ttfamily \#include $<$I\+R.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_use_a19370d5dc50923923fe287b525833be4}\label{structglow_1_1_use_a19370d5dc50923923fe287b525833be4}} 
+bool {\bfseries operator==} (const \hyperlink{structglow_1_1_use}{Use} \&other) const
+\item 
+\mbox{\Hypertarget{structglow_1_1_use_a7925a3748ebed45dadae5e4f3b59def6}\label{structglow_1_1_use_a7925a3748ebed45dadae5e4f3b59def6}} 
+{\bfseries Use} (unsigned idx, \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$use)
+\item 
+\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$ \hyperlink{structglow_1_1_use_a5cea7164405ca05e95eae7d516d1f412}{get} () const
+\item 
+\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$ \hyperlink{structglow_1_1_use_a2625c7dfb47805d15247b041f787fa01}{get\+User} () const
+\item 
+bool \hyperlink{structglow_1_1_use_aa6d1ae2ad6ba793289f0df77fbe31ef4}{is\+Same} (\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$other) const
+\item 
+\mbox{\Hypertarget{structglow_1_1_use_aef9239432df2fb6731d21b4e23538034}\label{structglow_1_1_use_aef9239432df2fb6731d21b4e23538034}} 
+void \hyperlink{structglow_1_1_use_aef9239432df2fb6731d21b4e23538034}{set\+Operand} (\hyperlink{classglow_1_1_value}{Value} $\ast$other)
+\begin{DoxyCompactList}\small\item\em Sets the operand to a new value. \end{DoxyCompactList}\item 
+Instruction\+Operand \hyperlink{structglow_1_1_use_ade9da8a3f564786ec28fdca26044d07c}{get\+Operand} ()
+\item 
+\mbox{\Hypertarget{structglow_1_1_use_ab85d30ee267faacdbf24c9531114b484}\label{structglow_1_1_use_ab85d30ee267faacdbf24c9531114b484}} 
+Const\+Instruction\+Operand {\bfseries get\+Operand} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_use_aa66d0e25704ede72afa291395e784d68}\label{structglow_1_1_use_aa66d0e25704ede72afa291395e784d68}} 
+\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$ \hyperlink{structglow_1_1_use_aa66d0e25704ede72afa291395e784d68}{use\+\_\+}
+\begin{DoxyCompactList}\small\item\em The instruction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_use_a0aea951b1570ad4cab53b13df0b459af}\label{structglow_1_1_use_a0aea951b1570ad4cab53b13df0b459af}} 
+unsigned \hyperlink{structglow_1_1_use_a0aea951b1570ad4cab53b13df0b459af}{idx\+\_\+}
+\begin{DoxyCompactList}\small\item\em The index of the operand. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \textquotesingle{}\hyperlink{structglow_1_1_use}{Use}\textquotesingle{} is a use-\/list representation of an instruction operand. It maps to a specific operand in an instruction. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_use_a5cea7164405ca05e95eae7d516d1f412}\label{structglow_1_1_use_a5cea7164405ca05e95eae7d516d1f412}} 
+\index{glow\+::\+Use@{glow\+::\+Use}!get@{get}}
+\index{get@{get}!glow\+::\+Use@{glow\+::\+Use}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_instruction}{Instruction}$\ast$ glow\+::\+Use\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the instruction that the use refers to. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_use_ade9da8a3f564786ec28fdca26044d07c}\label{structglow_1_1_use_ade9da8a3f564786ec28fdca26044d07c}} 
+\index{glow\+::\+Use@{glow\+::\+Use}!get\+Operand@{get\+Operand}}
+\index{get\+Operand@{get\+Operand}!glow\+::\+Use@{glow\+::\+Use}}
+\subsubsection{\texorpdfstring{get\+Operand()}{getOperand()}}
+{\footnotesize\ttfamily Instruction\+Operand Use\+::get\+Operand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the operand of the user instruction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_use_a2625c7dfb47805d15247b041f787fa01}\label{structglow_1_1_use_a2625c7dfb47805d15247b041f787fa01}} 
+\index{glow\+::\+Use@{glow\+::\+Use}!get\+User@{get\+User}}
+\index{get\+User@{get\+User}!glow\+::\+Use@{glow\+::\+Use}}
+\subsubsection{\texorpdfstring{get\+User()}{getUser()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_instruction}{Instruction}$\ast$ glow\+::\+Use\+::get\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the instruction that the use refers to (for compatibility with \hyperlink{classglow_1_1_use_def_a9b0a173f02a51a77ce3e9e342ae416c9}{Use\+Def\+::has\+User}) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_use_aa6d1ae2ad6ba793289f0df77fbe31ef4}\label{structglow_1_1_use_aa6d1ae2ad6ba793289f0df77fbe31ef4}} 
+\index{glow\+::\+Use@{glow\+::\+Use}!is\+Same@{is\+Same}}
+\index{is\+Same@{is\+Same}!glow\+::\+Use@{glow\+::\+Use}}
+\subsubsection{\texorpdfstring{is\+Same()}{isSame()}}
+{\footnotesize\ttfamily bool glow\+::\+Use\+::is\+Same (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if this \hyperlink{structglow_1_1_use}{Use} is for the instruction {\ttfamily other}. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+I\+R/I\+R.\+h\item 
+lib/\+I\+R/I\+R.\+cpp\end{DoxyCompactItemize}

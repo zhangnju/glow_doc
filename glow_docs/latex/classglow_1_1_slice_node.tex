@@ -1,0 +1,105 @@
+\hypertarget{classglow_1_1_slice_node}{}\section{glow\+:\+:Slice\+Node Class Reference}
+\label{classglow_1_1_slice_node}\index{glow\+::\+Slice\+Node@{glow\+::\+Slice\+Node}}
+
+
+Produces a slice of the Input tensor. The Start vector defines the starting indices for each dimension from which the slice should be taken. The end index for each dimension is determined from the input type\textquotesingle{}s shape.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Slice\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_slice_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_ae9fb67a3558af2956122b7987e0f13e0}\label{classglow_1_1_slice_node_ae9fb67a3558af2956122b7987e0f13e0}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a76510ea2218d64abd2b0759fe9df2944}\label{classglow_1_1_slice_node_a76510ea2218d64abd2b0759fe9df2944}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_afe9b66035c30bdd28dc4fb7f26add851}\label{classglow_1_1_slice_node_afe9b66035c30bdd28dc4fb7f26add851}} 
+{\bfseries Slice\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, std\+::vector$<$ size\+\_\+t $>$ Start)
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_ae88712815ee4b01383f18e50c0f0a5be}\label{classglow_1_1_slice_node_ae88712815ee4b01383f18e50c0f0a5be}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a799390825ad8056f73856db600345364}\label{classglow_1_1_slice_node_a799390825ad8056f73856db600345364}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_aa077f24b1c7e7847fdea161b33679011}\label{classglow_1_1_slice_node_aa077f24b1c7e7847fdea161b33679011}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a0b7330cac8b0b0c0d483626a888de30f}\label{classglow_1_1_slice_node_a0b7330cac8b0b0c0d483626a888de30f}} 
+llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ {\bfseries get\+Start} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a3b66cc1cb7210e421aee717f4f5d4b90}\label{classglow_1_1_slice_node_a3b66cc1cb7210e421aee717f4f5d4b90}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a959cc691d0c689913499404ccefc5c81}\label{classglow_1_1_slice_node_a959cc691d0c689913499404ccefc5c81}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a4d94abed7b43d6150482ebe4e58dc33d}\label{classglow_1_1_slice_node_a4d94abed7b43d6150482ebe4e58dc33d}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a42391ec9c6cc1cf19546461c00a018cc}\label{classglow_1_1_slice_node_a42391ec9c6cc1cf19546461c00a018cc}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a5784bb9f0a3fb477f88c15bdf1d7f9ea}\label{classglow_1_1_slice_node_a5784bb9f0a3fb477f88c15bdf1d7f9ea}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a01ebf8235e3aad8de049e8f9640feed6}\label{classglow_1_1_slice_node_a01ebf8235e3aad8de049e8f9640feed6}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_aa02b91d3532fcc378e085e84ccc838a3}\label{classglow_1_1_slice_node_aa02b91d3532fcc378e085e84ccc838a3}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a4c051458730861f19722831033d72a64}\label{classglow_1_1_slice_node_a4c051458730861f19722831033d72a64}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a3b651109d9cb39ea4b621ae4b07a9a31}\label{classglow_1_1_slice_node_a3b651109d9cb39ea4b621ae4b07a9a31}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_ac39435ca5b6c888bd0226736d0edbcbf}\label{classglow_1_1_slice_node_ac39435ca5b6c888bd0226736d0edbcbf}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_slice_node}{Slice\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a90ac05588df84aa78689d52282578e35}\label{classglow_1_1_slice_node_a90ac05588df84aa78689d52282578e35}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_aa1eec48b8a35f2c07de311567fb906d0}\label{classglow_1_1_slice_node_aa1eec48b8a35f2c07de311567fb906d0}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a9a3ef28862abe16fca375337cd2f19a7}\label{classglow_1_1_slice_node_a9a3ef28862abe16fca375337cd2f19a7}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_a34c9a542c9f46070de2502b8fc03ca0b}\label{classglow_1_1_slice_node_a34c9a542c9f46070de2502b8fc03ca0b}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_slice_node_ae95724aaaa37bba40b9ed4b8ab190061}\label{classglow_1_1_slice_node_ae95724aaaa37bba40b9ed4b8ab190061}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Produces a slice of the Input tensor. The Start vector defines the starting indices for each dimension from which the slice should be taken. The end index for each dimension is determined from the input type\textquotesingle{}s shape. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

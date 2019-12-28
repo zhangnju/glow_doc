@@ -1,0 +1,175 @@
+This document provides a short description about producing ahead-\/of-\/time compiled executable bundles. The motivation for this work is to remove the cost of compile time by allowing the users of Glow to compile the package ahead of time.
+
+\subsection*{Overview}
+
+A bundle is a self-\/contained compiled network model that can be used to execute the model in a standalone mode. After following the instructions in this document and the \href{../examples/bundles/resnet50/CMakeLists.txt}{\tt C\+Make\+Lists.\+txt} in the example directory you will be able to compile convolutional neural networks into small executables. Example\+:
+
+
+\begin{DoxyCode}
+$cmake -G ninja <other cmake flags> -DGLOW\_WITH\_BUNDLES=ON -DGLOW\_WITH\_CPU=ON
+...
+
+$ninja ResNet50Bundle
+...
+
+$./resnet50 cat.png
+Result: 285
+\end{DoxyCode}
+
+
+\subsection*{Producing a bundle}
+
+It is possible to use the Glow library to produce bundles. On the C\+PU, the bundles are object files that can be linked with some executable. On other architectures, the bundle may look completely different.
+
+This document demonstrates how to produce a bundle for the host C\+PU using the \textquotesingle{}image-\/classifier\textquotesingle{} tool. We use the flag {\ttfamily -\/emit-\/bundle} to specify the output directory.
+
+
+\begin{DoxyCode}
+$image-classifier image.png -image-mode=0to1 -m=resnet50 -model-input-name=gpu\_0/data -backend=CPU
+       -emit-bundle build/
+\end{DoxyCode}
+
+
+The command above would compile the neural network model described by the files {\ttfamily init\+\_\+net.\+pb} and {\ttfamily predict\+\_\+net.\+pb} located in the {\ttfamily network\+\_\+model\+\_\+directory\+\_\+name} directory and generate a bundle consisting of two files in the directory {\ttfamily output\+\_\+directory\+\_\+name}, {\ttfamily $<$network\+\_\+name$>$.o} and {\ttfamily $<$network\+\_\+name$>$.weights} where {\ttfamily $<$network\+\_\+name$>$} is by default equals to the last directory in the model path, i.\+e., {\ttfamily resnet50} in that case, and can be changed using {\ttfamily -\/network-\/name=$<$network\+\_\+name$>$}. {\ttfamily predict\+\_\+net.\+pb} describes the network model using the protobuf format for the O\+N\+NX or the \hyperlink{namespacecaffe2}{caffe2} representation. {\ttfamily init\+\_\+net.\+pb} contains the weights that are used by the network using the protobuf format as well.
+
+The first generated file is named {\ttfamily $<$network\+\_\+name$>$.o} and contains the compiled code of the network model. By default, this is a non-\/relocatable object file that can be linked with other files in your project. It is possible to control the relocation model with the command line option {\ttfamily -\/relocation-\/model=$<$mode$>$}.
+
+This option supports two modes\+:
+\begin{DoxyItemize}
+\item {\ttfamily static}\+: (Default) Produce non-\/relocatable code.
+\item {\ttfamily pic}\+: Produce position independent code.
+\end{DoxyItemize}
+
+The second generated file is named {\ttfamily $<$network\+\_\+name$>$.weights} and contains the weights required to run the compiled model.
+
+Another tool is the {\ttfamily model-\/compiler} which is used to compile a model into a bundle. This tool is more generic (is not tied just to image classification applications) and can compile models with any number of inputs. There is a difference when using this tool with O\+N\+NX or Caffe2 models\+:
+\begin{DoxyItemize}
+\item when using O\+N\+NX models the tool can infer automatically the inputs of the model since the description of the input tensors is part of the model. We can use this tool simply as\+: 
+\begin{DoxyCode}
+$model-compiler -model=<onnx-model-path> -backend=CPU -emit-bundle=<bundle-dir>
+\end{DoxyCode}
+
+\item when using Caffe2 models the user must provide explicitly the description of the input tensors (which is not part of the model) using the {\ttfamily -\/model-\/input} option\+: 
+\begin{DoxyCode}
+$model-compiler -model=<caffe2-model-path> -backend=CPU -emit-bundle=<bundle-dir> \(\backslash\)
+    -model-input=<inputName1>,<inputType1>,<inputShape1> \(\backslash\)
+    -model-input=<inputName2>,<inputType2>,<inputShape2> \(\backslash\)
+    ...
+\end{DoxyCode}
+ For quantized types the format of the {\ttfamily -\/model-\/input} is slightly different since the scale and offset parameters should also be provided\+: 
+\begin{DoxyCode}
+-model-input=<name>,<type>,<scale>,<offset>,<shape>
+\end{DoxyCode}
+ For example we can can provide one or more inputs with\+: 
+\begin{DoxyCode}
+-model-input=input\_03\_data,float,[1]
+-model-input=data\_bias,int32,[1,32,32]
+-model-input=data,int8q,0.123,-13,[1,10]
+\end{DoxyCode}
+ For more information about the options of the model-\/compiler type\+: 
+\begin{DoxyCode}
+$model-compiler -help
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+\subsection*{A\+P\+Is exposed by bundles}
+
+This section describes the A\+P\+Is that the C\+PU bundle exposes. Other targets may expose a completely different A\+PI.
+
+Each bundle exposes two symbols named {\ttfamily $<$network\+\_\+name$>$} and {\ttfamily $<$network\+\_\+name$>$\+\_\+config}, where, again, {\ttfamily $<$network\+\_\+name$>$} is specified by the {\ttfamily -\/network-\/name} command line option. The {\ttfamily $<$network\+\_\+name$>$} is the name of the auto-\/generated function that implements the network model. This symbol always has the following signature\+:
+
+
+\begin{DoxyCode}
+\{c++\}
+extern "C" void network\_name(uint8\_t *constantWeightVars,
+                             uint8\_t *mutableWeightVars,
+                             uint8\_t *activations);
+\end{DoxyCode}
+ The parameters of this function are the base addresses of the memory areas for constant weights variables, mutable weights variables (i.\+e. inputs and outputs) and activations.
+
+The {\ttfamily $<$network\+\_\+name$>$\+\_\+config} is a symbol that contains the configuration of the compiled network. The type of this symbol is always the following struct\+: 
+\begin{DoxyCode}
+\{c++\}
+struct BundleConfig \{
+  // Size of the constant weight variables memory area.
+  uint64\_t constantWeightVarsMemSize;
+  // Size of the mutable weight variables memory area.
+  uint64\_t mutableWeightVarsMemSize;
+  // Size of the activations memory area.
+  uint64\_t activationsMemSize;
+  // Alignment to be used for weights and activations.
+  uint64\_t alignment;
+  // Number of symbols in the symbol table.
+  uint64\_t numSymbols;
+  // Symbol table.
+  const SymbolTableEntry *symbolTable;
+\};
+\end{DoxyCode}
+ This configuration is supposed to be used by the client code to allocate the required amounts of memory for each of the memory areas, before invoking the {\ttfamily $<$network\+\_\+name$>$} function to run the network.
+
+Clients also use {\ttfamily Bundle\+Config} to perform the symbol table lookups when they need to find information about an input or output variable. The Symbol\+Table\+Entry always has the following structure\+: 
+\begin{DoxyCode}
+\{c++\}
+struct SymbolTableEntry \{
+  // Name of a variable.
+  const char *name;
+  // Offset of the variable inside the memory area.
+  uint64\_t offset;
+  // The number of elements inside this variable.
+  uint64\_t size;
+  // The kind of the variable. 1 if it is a mutable variable, 0 otherwise.
+  char kind;
+\};
+\end{DoxyCode}
+
+
+Offsets of constants are offsets inside the memory area for constant weights. Offsets of mutable variables are offsets inside the memory area for mutable weights.
+
+\subsection*{How to use the bundle}
+
+This section describes the use of the C\+PU bundle. Other targets may have different interfaces.
+
+To integrate the artifacts generated by the image-\/classifier into your project, you generally need to do the following\+:
+\begin{DoxyItemize}
+\item You need to link with the generated object file {\ttfamily $<$network\+\_\+name$>$.o}.
+\item You need to allocate the memory for constant weights variables, mutable weights variables (i.\+e. inputs and outputs) and activations based on the memory area sizes provided by {\ttfamily $<$network\+\_\+name$>$\+\_\+config}.
+\item You need to load the content of the auto-\/generated {\ttfamily network\+\_\+model\+\_\+name.\+weights} file into the constant weights variables memory area.
+\item And need to initialize the mutable weights area with inputs (e.\+g. image data)
+\item And finally, you need to invoke the {\ttfamily $<$network\+\_\+name$>$} function with 3 parameters that are base addresses of the memory areas for constant weights variables, mutable weights variables, and activations.
+\item After {\ttfamily $<$network\+\_\+name$>$} has returned, you can find the results of the mutable weights variables area.
+\end{DoxyItemize}
+
+\subsection*{A step-\/by-\/step example of the Resnet50 network model}
+
+There are concrete examples of integrating a network model with a project located in the {\ttfamily examples/bundles/} directory in the Glow repository. You can enable the compilation of these bundles by invoking {\ttfamily cmake} with {\ttfamily -\/\+D\+G\+L\+O\+W\+\_\+\+W\+I\+T\+H\+\_\+\+B\+U\+N\+D\+L\+ES=ON -\/\+D\+G\+L\+O\+W\+\_\+\+W\+I\+T\+H\+\_\+\+C\+PU=ON}.
+
+\subsubsection*{Floating point network}
+
+To build and run the example, you just need to execute\+:
+\begin{DoxyItemize}
+\item {\ttfamily cmake -\/G ninja $<$other cmake flags$>$ -\/\+D\+G\+L\+O\+W\+\_\+\+W\+I\+T\+H\+\_\+\+B\+U\+N\+D\+L\+ES=ON -\/\+D\+G\+L\+O\+W\+\_\+\+W\+I\+T\+H\+\_\+\+C\+PU=ON}
+\item {\ttfamily ninja Run\+Res\+Net50\+Bundle}
+\end{DoxyItemize}
+
+The C\+Make\+Lists.\+txt provides the following targets\+:
+\begin{DoxyItemize}
+\item {\ttfamily Res\+Net50\+Bundle\+Net\+Files}\+: it downloads the Resnet50 network model in the Caffe2 format.
+\item {\ttfamily Res\+Net50\+Bundle\+Net}\+: it generates the bundle files using the Glow image-\/classifier as described above. The concrete command line looks like this\+: {\ttfamily image-\/classifier tests/images/imagenet/cat\+\_\+285.\+png -\/image-\/mode=0to1 -\/m=resnet50 -\/model-\/input-\/name=gpu\+\_\+0/data -\/backend=C\+PU -\/emit-\/bundle $<$build\+\_\+dir$>$} It reads the network model from {\ttfamily resnet50} and generates the {\ttfamily resnet50.\+o} and {\ttfamily resnet50.\+weights} files into the {\ttfamily build\+\_\+dir} directory.
+\item {\ttfamily Res\+Net50\+Bundle\+Main}\+: it compiles the {\ttfamily main.\+cpp} file, which is the main file of the project. This source file gives a good idea about how to interface with an auto-\/generated bundle. It contains the code for interfacing with the auto-\/generated bundle.
+\begin{DoxyItemize}
+\item It allocated the memory areas based on their memory sizes provided in {\ttfamily resnet50\+\_\+config}.
+\item Then it loads the weights from the auto-\/generated {\ttfamily resnet50.\+weights} file.
+\item It loads the input image, pre-\/processes it and puts it into the mutable weight variables memory area.
+\item Once everything is setup, it invokes the compiled network model by calling the {\ttfamily resnet50} function from the {\ttfamily resnet50.\+o} object file.
+\end{DoxyItemize}
+\item {\ttfamily Res\+Net50\+Bundle}\+: it links the user-\/defined {\ttfamily main.\+o} and auto-\/generated {\ttfamily resnet50.\+o} into a standalone executable file called {\ttfamily resnet50} \subsubsection*{Quantized network}
+\end{DoxyItemize}
+
+All of the aforementioned targets have quantized versions in C\+Make\+Lists.\+txt named {\ttfamily Quantized\+Res\+Net50\+Bundle\+Net}, {\ttfamily Quantized\+Res\+Net50\+Bundle}.
+
+This run performs almost the same steps as non-\/quantized Resnet50 version except it emits bundle based on the quantization profile\+: {\ttfamily image-\/classifier tests/images/imagenet/cat\+\_\+285.\+png -\/image-\/mode=0to1 -\/m=resnet50 -\/model-\/input-\/name=gpu\+\_\+0/data -\/load-\/profile=profile.\+yml -\/backend=C\+PU -\/emit-\/bundle build}
+
+The {\ttfamily profile.\+yml} itself is captured at a prior step by executing image-\/classifier with the {\ttfamily dump-\/profile} option\+: {\ttfamily image-\/classifier tests/images/imagenet/$\ast$.png -\/image-\/mode=0to1 -\/m=resnet50 -\/model-\/input-\/name=gpu\+\_\+0/data -\/dump-\/profile=profile.\+yml}.
+
+See the \href{../examples/bundles/resnet50/CMakeLists.txt}{\tt C\+Make\+Lists.\+txt} for details. 

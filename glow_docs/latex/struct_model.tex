@@ -1,0 +1,85 @@
+\hypertarget{struct_model}{}\section{Model Struct Reference}
+\label{struct_model}\index{Model@{Model}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_model_a25fcfd54ff414539415c5a9e05d2d697}\label{struct_model_a25fcfd54ff414539415c5a9e05d2d697}} 
+void {\bfseries load\+Languages} ()
+\item 
+void \hyperlink{struct_model_aefa237830b190008efb400d88b3c8e6a}{load\+Encoder} ()
+\item 
+void \hyperlink{struct_model_aa2ab414d8bdb1eb04067342884e2233d}{load\+Decoder} ()
+\item 
+void \hyperlink{struct_model_ae148ec2146ad1d9b129809304136b6f0}{translate} (const std\+::vector$<$ std\+::string $>$ \&batch)
+\item 
+\mbox{\Hypertarget{struct_model_a3d39bb86d8723ad8138593f323fc19e8}\label{struct_model_a3d39bb86d8723ad8138593f323fc19e8}} 
+{\bfseries Model} (unsigned batch\+Size)
+\item 
+\mbox{\Hypertarget{struct_model_af486f304bb0edb06537b024c0d8de1bd}\label{struct_model_af486f304bb0edb06537b024c0d8de1bd}} 
+void {\bfseries dump\+Graph\+D\+AG} (const char $\ast$filename)
+\item 
+\mbox{\Hypertarget{struct_model_a4c9efed3fbfb8052f980402ce21794bb}\label{struct_model_a4c9efed3fbfb8052f980402ce21794bb}} 
+void {\bfseries compile} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_model_ae3a41c5a645cca84d08b9e7095be0cd7}\label{struct_model_ae3a41c5a645cca84d08b9e7095be0cd7}} 
+unsigned {\bfseries batch\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{struct_model_a967e57e686e4b18c21b1c765d5ec1789}\label{struct_model_a967e57e686e4b18c21b1c765d5ec1789}} 
+\hyperlink{classglow_1_1_execution_engine}{Execution\+Engine} {\bfseries E\+E\+\_\+} \{Execution\+Backend\}
+\item 
+\mbox{\Hypertarget{struct_model_a8b949de2c69d2052208df54e2bde4056}\label{struct_model_a8b949de2c69d2052208df54e2bde4056}} 
+\hyperlink{classglow_1_1_function}{Function} $\ast$ {\bfseries F\+\_\+}
+\item 
+\mbox{\Hypertarget{struct_model_a39d9aa560b265f456a6d6e4bf23ae550}\label{struct_model_a39d9aa560b265f456a6d6e4bf23ae550}} 
+\hyperlink{struct_vocabulary}{Vocabulary} {\bfseries en\+\_\+}
+\item 
+\mbox{\Hypertarget{struct_model_a824a3bcfc5f5d0b9fff662ff5ac058c4}\label{struct_model_a824a3bcfc5f5d0b9fff662ff5ac058c4}} 
+\hyperlink{struct_vocabulary}{Vocabulary} {\bfseries fr\+\_\+}
+\item 
+\mbox{\Hypertarget{struct_model_ab498b3dbb24268f924657d0a6b4121d9}\label{struct_model_ab498b3dbb24268f924657d0a6b4121d9}} 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ {\bfseries input\+\_\+}
+\item 
+\mbox{\Hypertarget{struct_model_a7169760e56cabd02395db59f2cd849f4}\label{struct_model_a7169760e56cabd02395db59f2cd849f4}} 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ {\bfseries seq\+Length\+\_\+}
+\item 
+\mbox{\Hypertarget{struct_model_abf382997bf9ead8bc695d7f6dfa90849}\label{struct_model_abf382997bf9ead8bc695d7f6dfa90849}} 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ {\bfseries output\+\_\+}
+\item 
+\mbox{\Hypertarget{struct_model_a838eb21e6b3c6228cb680a83174e1314}\label{struct_model_a838eb21e6b3c6228cb680a83174e1314}} 
+\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} {\bfseries bindings}
+\item 
+\mbox{\Hypertarget{struct_model_ab910501ce8e7039ab58cf4aaf6c232bb}\label{struct_model_ab910501ce8e7039ab58cf4aaf6c232bb}} 
+\hyperlink{namespaceglow_a419aca63ca48becda137d774dd06493c}{Lowered\+Info\+Map} {\bfseries lowered\+Map\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a single R\+NN model\+: encoder combined with decoder. Stores vocabulary, compiled Graph (ready to be executed), and few references to input/output Variables. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_model_aa2ab414d8bdb1eb04067342884e2233d}\label{struct_model_aa2ab414d8bdb1eb04067342884e2233d}} 
+\index{Model@{Model}!load\+Decoder@{load\+Decoder}}
+\index{load\+Decoder@{load\+Decoder}!Model@{Model}}
+\subsubsection{\texorpdfstring{load\+Decoder()}{loadDecoder()}}
+{\footnotesize\ttfamily void Model\+::load\+Decoder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hyperlink{struct_model}{Model} part representing Decoder. Uses {\ttfamily encoder\+Hidden\+Output} as final state from Encoder. Resulting translation is put into {\ttfamily output} Variable. \mbox{\Hypertarget{struct_model_aefa237830b190008efb400d88b3c8e6a}\label{struct_model_aefa237830b190008efb400d88b3c8e6a}} 
+\index{Model@{Model}!load\+Encoder@{load\+Encoder}}
+\index{load\+Encoder@{load\+Encoder}!Model@{Model}}
+\subsubsection{\texorpdfstring{load\+Encoder()}{loadEncoder()}}
+{\footnotesize\ttfamily void Model\+::load\+Encoder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hyperlink{struct_model}{Model} part representing Encoder. Remembers input sentence into hidden layer. {\ttfamily input} is Variable representing the sentence. {\ttfamily seq\+Length} is Variable representing the length of sentence. {\ttfamily encoder\+Hidden\+Output} saves resulting hidden layer. \mbox{\Hypertarget{struct_model_ae148ec2146ad1d9b129809304136b6f0}\label{struct_model_ae148ec2146ad1d9b129809304136b6f0}} 
+\index{Model@{Model}!translate@{translate}}
+\index{translate@{translate}!Model@{Model}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Model\+::translate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{batch }\end{DoxyParamCaption})}
+
+Translation has 2 stages\+: 1) Input sentence is fed into Encoder word by word. 2) \char`\"{}\+Memory\char`\"{} of Encoder is written into memory of Decoder. Now Decoder streams resulting translation word by word. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+examples/fr2en.\+cpp\end{DoxyCompactItemize}

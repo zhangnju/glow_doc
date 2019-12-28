@@ -1,0 +1,110 @@
+\hypertarget{classglow_1_1_sparse_lengths_sum_node}{}\section{glow\+:\+:Sparse\+Lengths\+Sum\+Node Class Reference}
+\label{classglow_1_1_sparse_lengths_sum_node}\index{glow\+::\+Sparse\+Lengths\+Sum\+Node@{glow\+::\+Sparse\+Lengths\+Sum\+Node}}
+
+
+Gathers slices of the outer-\/most dimension of Data indexed by Indices vector, and then accumulates them into len(\+Lengths) entries\+: first Lengths\mbox{[}0\mbox{]} slices are aggregated to Result\mbox{[}0\mbox{]}, next Lengths\mbox{[}1\mbox{]} slices are aggregated to Result\mbox{[}1\mbox{]}, etc. I.\+e. sum(\+Lengths) must be equal to len(\+Indices).  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Sparse\+Lengths\+Sum\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_sparse_lengths_sum_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_afef00dade4aab2c61ac8c7b5247d87aa}\label{classglow_1_1_sparse_lengths_sum_node_afef00dade4aab2c61ac8c7b5247d87aa}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Data\+Idx} = 0, 
+{\bfseries Indices\+Idx} = 1, 
+{\bfseries Lengths\+Idx} = 2
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_aeb04d86486a43affcc6c410c631f43e9}\label{classglow_1_1_sparse_lengths_sum_node_aeb04d86486a43affcc6c410c631f43e9}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a0c8ebd370b62917f6cfce8ce217e456a}\label{classglow_1_1_sparse_lengths_sum_node_a0c8ebd370b62917f6cfce8ce217e456a}} 
+{\bfseries Sparse\+Lengths\+Sum\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Data, \hyperlink{structglow_1_1_node_value}{Node\+Value} Indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} Lengths)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_ae1fa727fbda014383abc425a546eeb1a}\label{classglow_1_1_sparse_lengths_sum_node_ae1fa727fbda014383abc425a546eeb1a}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Data} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a8495d98c265204fa34ce7e19be95e739}\label{classglow_1_1_sparse_lengths_sum_node_a8495d98c265204fa34ce7e19be95e739}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Indices} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a7067aabcd62c89cbc18fc326bebf6940}\label{classglow_1_1_sparse_lengths_sum_node_a7067aabcd62c89cbc18fc326bebf6940}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Lengths} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_af44ffdaeac5b9a3419265048efaaf607}\label{classglow_1_1_sparse_lengths_sum_node_af44ffdaeac5b9a3419265048efaaf607}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a61d9c5e099b215bb474273e27875d439}\label{classglow_1_1_sparse_lengths_sum_node_a61d9c5e099b215bb474273e27875d439}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a43dbd7175612b5f5e4887fd5a45f1ded}\label{classglow_1_1_sparse_lengths_sum_node_a43dbd7175612b5f5e4887fd5a45f1ded}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_af9e501662e05de6f0c21f923e478bb2f}\label{classglow_1_1_sparse_lengths_sum_node_af9e501662e05de6f0c21f923e478bb2f}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_ac9d66990bee4a927e995a7010d7d0d69}\label{classglow_1_1_sparse_lengths_sum_node_ac9d66990bee4a927e995a7010d7d0d69}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a08bca51400aac6391f899acfc65cb063}\label{classglow_1_1_sparse_lengths_sum_node_a08bca51400aac6391f899acfc65cb063}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a0a27ec19cb24068c89b61d07c777e5d3}\label{classglow_1_1_sparse_lengths_sum_node_a0a27ec19cb24068c89b61d07c777e5d3}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a3ccb94b82574c2b6bc05cddac30fde80}\label{classglow_1_1_sparse_lengths_sum_node_a3ccb94b82574c2b6bc05cddac30fde80}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a5494c855052dd403624a61dd9fe58304}\label{classglow_1_1_sparse_lengths_sum_node_a5494c855052dd403624a61dd9fe58304}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a7dd33423e204d60bac50e88437ea0d07}\label{classglow_1_1_sparse_lengths_sum_node_a7dd33423e204d60bac50e88437ea0d07}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_aecbf7caa8b93d02f4ae25a440697c2ab}\label{classglow_1_1_sparse_lengths_sum_node_aecbf7caa8b93d02f4ae25a440697c2ab}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_ab3ccfd7cec28302a4eb2249d323fd64e}\label{classglow_1_1_sparse_lengths_sum_node_ab3ccfd7cec28302a4eb2249d323fd64e}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_sparse_lengths_sum_node}{Sparse\+Lengths\+Sum\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a33bab6f06bc6b267725c0844137cbf03}\label{classglow_1_1_sparse_lengths_sum_node_a33bab6f06bc6b267725c0844137cbf03}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_aa4874a3c891a37920b6f49821e423e1e}\label{classglow_1_1_sparse_lengths_sum_node_aa4874a3c891a37920b6f49821e423e1e}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a1c0e5edb4b85dbc49318f1d3c1008ce9}\label{classglow_1_1_sparse_lengths_sum_node_a1c0e5edb4b85dbc49318f1d3c1008ce9}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_a02d998d05eb421011843940c270c1631}\label{classglow_1_1_sparse_lengths_sum_node_a02d998d05eb421011843940c270c1631}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_sum_node_aab23422d951eb0b27c2bdb0fae708f6a}\label{classglow_1_1_sparse_lengths_sum_node_aab23422d951eb0b27c2bdb0fae708f6a}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Gathers slices of the outer-\/most dimension of Data indexed by Indices vector, and then accumulates them into len(\+Lengths) entries\+: first Lengths\mbox{[}0\mbox{]} slices are aggregated to Result\mbox{[}0\mbox{]}, next Lengths\mbox{[}1\mbox{]} slices are aggregated to Result\mbox{[}1\mbox{]}, etc. I.\+e. sum(\+Lengths) must be equal to len(\+Indices). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

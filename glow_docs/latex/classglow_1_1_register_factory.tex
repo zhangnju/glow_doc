@@ -1,0 +1,19 @@
+\hypertarget{classglow_1_1_register_factory}{}\section{glow\+:\+:Register\+Factory$<$ Key, Factory, Base $>$ Class Template Reference}
+\label{classglow_1_1_register_factory}\index{glow\+::\+Register\+Factory$<$ Key, Factory, Base $>$@{glow\+::\+Register\+Factory$<$ Key, Factory, Base $>$}}
+
+
+{\ttfamily \#include $<$Register.\+h$>$}
+
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Key, class Factory, class Base$>$\newline
+class glow\+::\+Register\+Factory$<$ Key, Factory, Base $>$}
+
+Factory registration template, all static registration should be done via \hyperlink{classglow_1_1_register_factory}{Register\+Factory}. It allows to register specific implementation factory with the \hyperlink{classglow_1_1_factory_registry}{Factory\+Registry} by instantiating this templated class with the specific factory class, specific Key class and the general Base class.
+
+Example registration\+: static Registry\+::\+Register\+Factory$<$ Specific\+Key\+Type, Specific\+Factory, \hyperlink{classglow_1_1_base_factory}{Base\+Factory}$>$ registered\+\_\+; 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Register.\+h\end{DoxyCompactItemize}

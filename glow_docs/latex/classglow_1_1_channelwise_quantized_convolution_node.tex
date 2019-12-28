@@ -1,0 +1,135 @@
+\hypertarget{classglow_1_1_channelwise_quantized_convolution_node}{}\section{glow\+:\+:Channelwise\+Quantized\+Convolution\+Node Class Reference}
+\label{classglow_1_1_channelwise_quantized_convolution_node}\index{glow\+::\+Channelwise\+Quantized\+Convolution\+Node@{glow\+::\+Channelwise\+Quantized\+Convolution\+Node}}
+
+
+Performs 2D Convolution using a given Input, Filter, and Bias tensors, as well as provided Kernels, Strides, Pads, and Group. Quantization parameters are provided by Scales and Offsets. If Groupwise is true then the quantization is per-\/group otherwise it is per-\/channel.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Channelwise\+Quantized\+Convolution\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.510791cm]{classglow_1_1_channelwise_quantized_convolution_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a89ac907d9a2fb1cb29bddf8762bee635}\label{classglow_1_1_channelwise_quantized_convolution_node_a89ac907d9a2fb1cb29bddf8762bee635}} 
+enum {\bfseries Input\+Indices} \{ \newline
+{\bfseries Input\+Idx} = 0, 
+{\bfseries Filter\+Idx} = 1, 
+{\bfseries Bias\+Idx} = 2, 
+{\bfseries Scales\+Idx} = 3, 
+\newline
+{\bfseries Offsets\+Idx} = 4
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a9dcba562b83432b869c140dfea5f2f92}\label{classglow_1_1_channelwise_quantized_convolution_node_a9dcba562b83432b869c140dfea5f2f92}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_aab693e948dd3f4b448e447bf5c617bb2}\label{classglow_1_1_channelwise_quantized_convolution_node_aab693e948dd3f4b448e447bf5c617bb2}} 
+{\bfseries Channelwise\+Quantized\+Convolution\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{structglow_1_1_node_value}{Node\+Value} Filter, \hyperlink{structglow_1_1_node_value}{Node\+Value} Bias, \hyperlink{structglow_1_1_node_value}{Node\+Value} Scales, \hyperlink{structglow_1_1_node_value}{Node\+Value} Offsets, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Kernels, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Strides, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Group, bool Groupwise)
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a8a931710505d1f2851a91097ad207399}\label{classglow_1_1_channelwise_quantized_convolution_node_a8a931710505d1f2851a91097ad207399}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a77f7210fc4763e9d1d880b87107c7eed}\label{classglow_1_1_channelwise_quantized_convolution_node_a77f7210fc4763e9d1d880b87107c7eed}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Filter} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_ab88ac7292b291618b5569cd9a86d85f1}\label{classglow_1_1_channelwise_quantized_convolution_node_ab88ac7292b291618b5569cd9a86d85f1}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Bias} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_ae7a9db0715b44a037c7e8f81ea6fba03}\label{classglow_1_1_channelwise_quantized_convolution_node_ae7a9db0715b44a037c7e8f81ea6fba03}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Scales} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_ab9e178cb41c42b486477b17be5e1361f}\label{classglow_1_1_channelwise_quantized_convolution_node_ab9e178cb41c42b486477b17be5e1361f}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Offsets} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a0665767d3e15ccbccb1191a48e0b90c4}\label{classglow_1_1_channelwise_quantized_convolution_node_a0665767d3e15ccbccb1191a48e0b90c4}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a35bb65089140d5c2b26c8557821112f5}\label{classglow_1_1_channelwise_quantized_convolution_node_a35bb65089140d5c2b26c8557821112f5}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_abcff6c4e5d31a6aaeeb0bb371e3bcdba}\label{classglow_1_1_channelwise_quantized_convolution_node_abcff6c4e5d31a6aaeeb0bb371e3bcdba}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Kernels} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_ab22f862d0ed62e370d6466b2ff2dcf46}\label{classglow_1_1_channelwise_quantized_convolution_node_ab22f862d0ed62e370d6466b2ff2dcf46}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Strides} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a16955f7da75d34fc84f0f21c0cff1539}\label{classglow_1_1_channelwise_quantized_convolution_node_a16955f7da75d34fc84f0f21c0cff1539}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Pads} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a500c28df0c2e0b69467dbf65b7707fc4}\label{classglow_1_1_channelwise_quantized_convolution_node_a500c28df0c2e0b69467dbf65b7707fc4}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Group} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_aaafcc121d82d11ab96b01d4ee29cef80}\label{classglow_1_1_channelwise_quantized_convolution_node_aaafcc121d82d11ab96b01d4ee29cef80}} 
+bool {\bfseries get\+Groupwise} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_aac740e5674c6fb0806ae3a11b0b9decb}\label{classglow_1_1_channelwise_quantized_convolution_node_aac740e5674c6fb0806ae3a11b0b9decb}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a8f6d3aaa29591337a2a68ed2d3ca86f1}\label{classglow_1_1_channelwise_quantized_convolution_node_a8f6d3aaa29591337a2a68ed2d3ca86f1}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a964b7c1d3583810cc81d602673825cfc}\label{classglow_1_1_channelwise_quantized_convolution_node_a964b7c1d3583810cc81d602673825cfc}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a242a4fb4a7126ce78825112ebb97ca3e}\label{classglow_1_1_channelwise_quantized_convolution_node_a242a4fb4a7126ce78825112ebb97ca3e}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a5518094e7f671778d8953f18344af246}\label{classglow_1_1_channelwise_quantized_convolution_node_a5518094e7f671778d8953f18344af246}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a02ebc5470cdf71004f2dbe8ddd73e511}\label{classglow_1_1_channelwise_quantized_convolution_node_a02ebc5470cdf71004f2dbe8ddd73e511}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a19188ea7cf702736dcfa97170f514d71}\label{classglow_1_1_channelwise_quantized_convolution_node_a19188ea7cf702736dcfa97170f514d71}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_af040f301b912562889da4b3d1c1c698f}\label{classglow_1_1_channelwise_quantized_convolution_node_af040f301b912562889da4b3d1c1c698f}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_ab2ae50130cbe79034515a94e72c6d3c4}\label{classglow_1_1_channelwise_quantized_convolution_node_ab2ae50130cbe79034515a94e72c6d3c4}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a55d4f7a97687ce3ccc3bbaadf4d74115}\label{classglow_1_1_channelwise_quantized_convolution_node_a55d4f7a97687ce3ccc3bbaadf4d74115}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_channelwise_quantized_convolution_node}{Channelwise\+Quantized\+Convolution\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a574a874607596ee77c59ad529e7106f0}\label{classglow_1_1_channelwise_quantized_convolution_node_a574a874607596ee77c59ad529e7106f0}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_abcc0376be527a5d8e1ea469ece990638}\label{classglow_1_1_channelwise_quantized_convolution_node_abcc0376be527a5d8e1ea469ece990638}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a6b9e3547d4f1127e02ce0a3ff1c6a91e}\label{classglow_1_1_channelwise_quantized_convolution_node_a6b9e3547d4f1127e02ce0a3ff1c6a91e}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_ac9b943565f300f72ccc5c858395828b4}\label{classglow_1_1_channelwise_quantized_convolution_node_ac9b943565f300f72ccc5c858395828b4}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_channelwise_quantized_convolution_node_a4976f5937ea2ac83173594e4111ef000}\label{classglow_1_1_channelwise_quantized_convolution_node_a4976f5937ea2ac83173594e4111ef000}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Performs 2D Convolution using a given Input, Filter, and Bias tensors, as well as provided Kernels, Strides, Pads, and Group. Quantization parameters are provided by Scales and Offsets. If Groupwise is true then the quantization is per-\/group otherwise it is per-\/channel. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

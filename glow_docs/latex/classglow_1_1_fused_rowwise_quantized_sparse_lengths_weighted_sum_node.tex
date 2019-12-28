@@ -1,0 +1,117 @@
+\hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node}{}\section{glow\+:\+:Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node Class Reference}
+\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node}\index{glow\+::\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node@{glow\+::\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node}}
+
+
+Gathers slices of the outer-\/most dimension of Data indexed by Indices vector, and then accumulates them into len(\+Lengths) entries\+: first Lengths\mbox{[}0\mbox{]} slices are aggregated to Result\mbox{[}0\mbox{]}, next Lengths\mbox{[}1\mbox{]} slices are aggregated to Result\mbox{[}1\mbox{]}, etc. I.\+e. sum(\+Lengths) must be equal to len(\+Indices). Before doing aggregation, each individual slice is scaled by its weight\+: Result\mbox{[}0\mbox{]} = Weights\mbox{[}0\mbox{]} $\ast$ Slice(0) + Weights\mbox{[}1\mbox{]} $\ast$ Slice(1) + ... It implies that len(\+Weights) == len(\+Indices). The input data is fused rowwise-\/quantized, where the Scales and Offsets are appended to the end of each row. Thus, Data must be a two-\/dimensional tensor.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.096606cm]{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a5f5fc2f17fd2c4bda6563bd23316a96a}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a5f5fc2f17fd2c4bda6563bd23316a96a}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Data\+Idx} = 0, 
+{\bfseries Weights\+Idx} = 1, 
+{\bfseries Indices\+Idx} = 2, 
+{\bfseries Lengths\+Idx} = 3
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a0e35f26110b7b17d2987439ea6895103}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a0e35f26110b7b17d2987439ea6895103}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_ab11afdbe704fc889f69e0d02669c0d5f}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_ab11afdbe704fc889f69e0d02669c0d5f}} 
+{\bfseries Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Data, \hyperlink{structglow_1_1_node_value}{Node\+Value} Weights, \hyperlink{structglow_1_1_node_value}{Node\+Value} Indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} Lengths, bool Use\+F\+P16\+Accumulation)
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a8a20831fecaa00be4b29a908b10dd719}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a8a20831fecaa00be4b29a908b10dd719}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Data} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_aebe406b047f370fb40aa3d1d2e3e6185}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_aebe406b047f370fb40aa3d1d2e3e6185}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Weights} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a9b91ada13b64d9315a8b8a519777b3a4}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a9b91ada13b64d9315a8b8a519777b3a4}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Indices} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a9031758d0d1b396070b4b9438d5199f8}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a9031758d0d1b396070b4b9438d5199f8}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Lengths} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_ab7824fb8427aefb2274a2690609ad3d0}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_ab7824fb8427aefb2274a2690609ad3d0}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a25015df3592ee302d73d45c41ebe9adc}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a25015df3592ee302d73d45c41ebe9adc}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a92565b713cc5276cd87b8ef7eadb12c6}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a92565b713cc5276cd87b8ef7eadb12c6}} 
+bool {\bfseries get\+Use\+F\+P16\+Accumulation} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a7ce67485ff06476de0c989562b078058}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a7ce67485ff06476de0c989562b078058}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a484bb783b50de13fd29c2b976d1f146b}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a484bb783b50de13fd29c2b976d1f146b}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_aef2da0694985cab8b9c1cfe7992ca2a8}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_aef2da0694985cab8b9c1cfe7992ca2a8}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a28c09569e95159f9677a63c9a263dad2}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a28c09569e95159f9677a63c9a263dad2}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_ad1bb6ab26cb30d2a811ecc880d92af0d}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_ad1bb6ab26cb30d2a811ecc880d92af0d}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_afdbae90d3b5031eea909271b61c56ced}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_afdbae90d3b5031eea909271b61c56ced}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a9f414364b9141db8ca7211fed16cbf6e}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a9f414364b9141db8ca7211fed16cbf6e}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_ac603e681d66f15105fed3e2eae1e4a62}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_ac603e681d66f15105fed3e2eae1e4a62}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a79985e050d1ffa6a6f864ee0c6695251}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a79985e050d1ffa6a6f864ee0c6695251}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a3fedc54d97956e640cfad45603e64861}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a3fedc54d97956e640cfad45603e64861}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node}{Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a8b135c2a121056ce5d863429478ceca9}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a8b135c2a121056ce5d863429478ceca9}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a1cca8e798ea3bfd8321319d12e9a9ed4}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a1cca8e798ea3bfd8321319d12e9a9ed4}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a7b0faf111b869b36dad1e1da2e1e5700}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a7b0faf111b869b36dad1e1da2e1e5700}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_ac1900f2383c87522c8eba7e13628211a}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_ac1900f2383c87522c8eba7e13628211a}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a2f0d5f4b84918eb68b2382c18c951370}\label{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node_a2f0d5f4b84918eb68b2382c18c951370}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Gathers slices of the outer-\/most dimension of Data indexed by Indices vector, and then accumulates them into len(\+Lengths) entries\+: first Lengths\mbox{[}0\mbox{]} slices are aggregated to Result\mbox{[}0\mbox{]}, next Lengths\mbox{[}1\mbox{]} slices are aggregated to Result\mbox{[}1\mbox{]}, etc. I.\+e. sum(\+Lengths) must be equal to len(\+Indices). Before doing aggregation, each individual slice is scaled by its weight\+: Result\mbox{[}0\mbox{]} = Weights\mbox{[}0\mbox{]} $\ast$ Slice(0) + Weights\mbox{[}1\mbox{]} $\ast$ Slice(1) + ... It implies that len(\+Weights) == len(\+Indices). The input data is fused rowwise-\/quantized, where the Scales and Offsets are appended to the end of each row. Thus, Data must be a two-\/dimensional tensor. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,54 @@
+\hypertarget{classglow_1_1runtime_1_1_thread_pool_executor}{}\section{glow\+:\+:runtime\+:\+:Thread\+Pool\+Executor Class Reference}
+\label{classglow_1_1runtime_1_1_thread_pool_executor}\index{glow\+::runtime\+::\+Thread\+Pool\+Executor@{glow\+::runtime\+::\+Thread\+Pool\+Executor}}
+
+
+{\ttfamily \#include $<$Thread\+Pool\+Executor.\+h$>$}
+
+Inheritance diagram for glow\+:\+:runtime\+:\+:Thread\+Pool\+Executor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1runtime_1_1_thread_pool_executor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_thread_pool_executor_a32aa26680344c7bbd1d4855679d4663b}\label{classglow_1_1runtime_1_1_thread_pool_executor_a32aa26680344c7bbd1d4855679d4663b}} 
+\hyperlink{classglow_1_1runtime_1_1_thread_pool_executor_a32aa26680344c7bbd1d4855679d4663b}{Thread\+Pool\+Executor} (const Device\+Manager\+Map\+Ty \&device\+Managers, unsigned num\+Workers=k\+Num\+Workers)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1runtime_1_1_thread_pool_executor_a2f0225f88e53cf550e98db5b5037449e}{run} (const \hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$root, std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ context, Run\+Identifier\+Ty run\+Id, Result\+C\+B\+Ty cb) override
+\item 
+void \hyperlink{classglow_1_1runtime_1_1_thread_pool_executor_ad77508bfa19d1ebaad7547b1bbce68f8}{shutdown} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This implementation of the \hyperlink{classglow_1_1runtime_1_1_executor}{Executor} interface uses a thread pool to handle and process multiple concurrent execution runs. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_thread_pool_executor_a2f0225f88e53cf550e98db5b5037449e}\label{classglow_1_1runtime_1_1_thread_pool_executor_a2f0225f88e53cf550e98db5b5037449e}} 
+\index{glow\+::runtime\+::\+Thread\+Pool\+Executor@{glow\+::runtime\+::\+Thread\+Pool\+Executor}!run@{run}}
+\index{run@{run}!glow\+::runtime\+::\+Thread\+Pool\+Executor@{glow\+::runtime\+::\+Thread\+Pool\+Executor}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void glow\+::runtime\+::\+Thread\+Pool\+Executor\+::run (\begin{DoxyParamCaption}\item[{const \hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$}]{root,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$}]{context,  }\item[{Run\+Identifier\+Ty}]{run\+Id,  }\item[{Result\+C\+B\+Ty}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+See \hyperlink{classglow_1_1runtime_1_1_executor_aeeef3270a1cdab1923bc75b02be16c07}{Executor\+::run}. A particular invocation is specified completely by the triple (roots, bindings, run\+Id). 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_executor_aeeef3270a1cdab1923bc75b02be16c07}{glow\+::runtime\+::\+Executor}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_thread_pool_executor_ad77508bfa19d1ebaad7547b1bbce68f8}\label{classglow_1_1runtime_1_1_thread_pool_executor_ad77508bfa19d1ebaad7547b1bbce68f8}} 
+\index{glow\+::runtime\+::\+Thread\+Pool\+Executor@{glow\+::runtime\+::\+Thread\+Pool\+Executor}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!glow\+::runtime\+::\+Thread\+Pool\+Executor@{glow\+::runtime\+::\+Thread\+Pool\+Executor}}
+\subsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily void glow\+::runtime\+::\+Thread\+Pool\+Executor\+::shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Shutdown the \hyperlink{classglow_1_1runtime_1_1_executor}{Executor}. Should block until all active requests are complete and prevent new requests from being initiated. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_executor_a2cbbc3a3fef585aed34aba34def2318a}{glow\+::runtime\+::\+Executor}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Runtime/\+Executor/Thread\+Pool\+Executor.\+h\item 
+lib/\+Runtime/\+Executor/Thread\+Pool\+Executor.\+cpp\end{DoxyCompactItemize}

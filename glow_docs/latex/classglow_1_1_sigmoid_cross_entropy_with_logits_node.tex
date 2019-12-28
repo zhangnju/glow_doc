@@ -1,0 +1,106 @@
+\hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node}{}\section{glow\+:\+:Sigmoid\+Cross\+Entropy\+With\+Logits\+Node Class Reference}
+\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node}\index{glow\+::\+Sigmoid\+Cross\+Entropy\+With\+Logits\+Node@{glow\+::\+Sigmoid\+Cross\+Entropy\+With\+Logits\+Node}}
+
+
+Computes the sigmoid cross entropy between two inputs.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Sigmoid\+Cross\+Entropy\+With\+Logits\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.615385cm]{classglow_1_1_sigmoid_cross_entropy_with_logits_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a371b86fe579f14300a1c11a6d1f3885b}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a371b86fe579f14300a1c11a6d1f3885b}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Logits\+Idx} = 0, 
+{\bfseries Targets\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a74d51e491a688a855ba158bd53639aa7}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a74d51e491a688a855ba158bd53639aa7}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ac1371c7f7010f112b846b51befb898e2}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ac1371c7f7010f112b846b51befb898e2}} 
+{\bfseries Sigmoid\+Cross\+Entropy\+With\+Logits\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Logits, \hyperlink{structglow_1_1_node_value}{Node\+Value} Targets)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a8ab3036b48091605026b05592e05d2cb}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a8ab3036b48091605026b05592e05d2cb}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Logits} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a9ade4d34fc22050eeaa7e6c3906c40ab}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a9ade4d34fc22050eeaa7e6c3906c40ab}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Targets} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a0a5b18c8e6e9ba9c710dba464b6a12c2}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a0a5b18c8e6e9ba9c710dba464b6a12c2}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a949b9a42a6386a2ce6b998cca7130e8e}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a949b9a42a6386a2ce6b998cca7130e8e}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ad2b5e4e65d76cc38b09da54580b2d9ea}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ad2b5e4e65d76cc38b09da54580b2d9ea}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ac9c7423a6d55bb843837b84d199adeeb}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ac9c7423a6d55bb843837b84d199adeeb}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a14bf9bed7d6e15db25353cc0a5d3d55b}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a14bf9bed7d6e15db25353cc0a5d3d55b}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a026ecaa4f6379c7e3a0a4219993a06e1}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a026ecaa4f6379c7e3a0a4219993a06e1}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a3494d3436e21d427ac5ccb12a6bd6a5c}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a3494d3436e21d427ac5ccb12a6bd6a5c}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a03af97df00c233de7974b44c6391080d}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a03af97df00c233de7974b44c6391080d}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a67c47402eae77ad5ab29303f29500934}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a67c47402eae77ad5ab29303f29500934}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a4edd53af2eea72d35c8fab73a6ef7034}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a4edd53af2eea72d35c8fab73a6ef7034}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ade2403c491c4e1e1586054fd38db7a5a}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ade2403c491c4e1e1586054fd38db7a5a}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a9a5a6e3da0bc8b308bbf51d1cecda47c}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a9a5a6e3da0bc8b308bbf51d1cecda47c}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_sigmoid_cross_entropy_with_logits_node}{Sigmoid\+Cross\+Entropy\+With\+Logits\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a3dc5a27e99c3494618adba21f515692e}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a3dc5a27e99c3494618adba21f515692e}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ade74debcc7d8a01c258dd392d49aa122}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ade74debcc7d8a01c258dd392d49aa122}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ae5587d0a7fbaa4fa9298c34267fd53d1}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_ae5587d0a7fbaa4fa9298c34267fd53d1}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a28668320d09bab914602a2d7e909234a}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a28668320d09bab914602a2d7e909234a}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a7b31c299de83fe41d56afbb5786233fe}\label{classglow_1_1_sigmoid_cross_entropy_with_logits_node_a7b31c299de83fe41d56afbb5786233fe}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Computes the sigmoid cross entropy between two inputs. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

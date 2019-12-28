@@ -1,0 +1,50 @@
+\hypertarget{classglow_1_1_o_n_n_x_model_writer}{}\section{glow\+:\+:O\+N\+N\+X\+Model\+Writer Class Reference}
+\label{classglow_1_1_o_n_n_x_model_writer}\index{glow\+::\+O\+N\+N\+X\+Model\+Writer@{glow\+::\+O\+N\+N\+X\+Model\+Writer}}
+
+
+Writes O\+N\+NX models.  
+
+
+
+
+{\ttfamily \#include $<$O\+N\+N\+X\+Model\+Writer.\+h$>$}
+
+Inheritance diagram for glow\+:\+:O\+N\+N\+X\+Model\+Writer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classglow_1_1_o_n_n_x_model_writer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_o_n_n_x_model_writer_a206d9db5afaa32748fc0d7dab0dedc7f}{O\+N\+N\+X\+Model\+Writer} (const std\+::string \&model\+Filename, \hyperlink{classglow_1_1_function}{Function} \&F, size\+\_\+t ir\+Version, size\+\_\+t opset\+Version, \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$err\+Ptr=nullptr, bool text\+Mode=false, bool zip\+Mode=false)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_writer_af3d16c64b9f3ef9ed09f6a944b57f297}\label{classglow_1_1_o_n_n_x_model_writer_af3d16c64b9f3ef9ed09f6a944b57f297}} 
+static Tensor\+Type\+::\+Data\+Type \hyperlink{classglow_1_1_o_n_n_x_model_writer_af3d16c64b9f3ef9ed09f6a944b57f297}{convert\+Type} (const \hyperlink{structglow_1_1_type}{Type} \&glow\+Type)
+\begin{DoxyCompactList}\small\item\em Converts {\ttfamily glow\+Type} to {\ttfamily proto\+Type}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_writer_a7948cce1f32d12474ce4eabd1baca18e}\label{classglow_1_1_o_n_n_x_model_writer_a7948cce1f32d12474ce4eabd1baca18e}} 
+static void \hyperlink{classglow_1_1_o_n_n_x_model_writer_a7948cce1f32d12474ce4eabd1baca18e}{write\+Tensor} (const \hyperlink{classglow_1_1_tensor}{Tensor} \&T, Tensor\+Type $\ast$out)
+\begin{DoxyCompactList}\small\item\em Writes Glow tensor {\ttfamily T} to proto output {\ttfamily out}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Writes O\+N\+NX models. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_o_n_n_x_model_writer_a206d9db5afaa32748fc0d7dab0dedc7f}\label{classglow_1_1_o_n_n_x_model_writer_a206d9db5afaa32748fc0d7dab0dedc7f}} 
+\index{glow\+::\+O\+N\+N\+X\+Model\+Writer@{glow\+::\+O\+N\+N\+X\+Model\+Writer}!O\+N\+N\+X\+Model\+Writer@{O\+N\+N\+X\+Model\+Writer}}
+\index{O\+N\+N\+X\+Model\+Writer@{O\+N\+N\+X\+Model\+Writer}!glow\+::\+O\+N\+N\+X\+Model\+Writer@{glow\+::\+O\+N\+N\+X\+Model\+Writer}}
+\subsubsection{\texorpdfstring{O\+N\+N\+X\+Model\+Writer()}{ONNXModelWriter()}}
+{\footnotesize\ttfamily glow\+::\+O\+N\+N\+X\+Model\+Writer\+::\+O\+N\+N\+X\+Model\+Writer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{model\+Filename,  }\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{F,  }\item[{size\+\_\+t}]{ir\+Version,  }\item[{size\+\_\+t}]{opset\+Version,  }\item[{\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$}]{err\+Ptr = {\ttfamily nullptr},  }\item[{bool}]{text\+Mode = {\ttfamily false},  }\item[{bool}]{zip\+Mode = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Creates an O\+N\+NX model writer to serialize {\ttfamily F} graph into file {\ttfamily model\+Filename}, writing {\ttfamily ir\+Version} and {\ttfamily opset\+Version}. If {\ttfamily err\+Ptr} is not null then if an error occurs it will get assigned there otherwise if an error occurs it will abort. It also supports serialization with text format or binary format depending on {\ttfamily text\+Mode}. If {\ttfamily zip\+Mode} is true, it will save weights into individual Tensor\+Proto file along with the model file and package them into a zip file. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Exporter/O\+N\+N\+X\+Model\+Writer.\+h\item 
+lib/\+Exporter/O\+N\+N\+X\+Model\+Writer.\+cpp\end{DoxyCompactItemize}

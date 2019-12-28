@@ -1,0 +1,124 @@
+\hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{}\section{glow\+:\+:onnxifi\+:\+:Glow\+Onnxifi\+Manager Class Reference}
+\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+
+
+{\ttfamily \#include $<$Glow\+Onnxifi\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a7d0eee5569b3f09ab0c26d551a5d069d}{Glow\+Onnxifi\+Manager} (const \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} \&)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_ab3b625b8abc439587b4443952a2fc171}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_ab3b625b8abc439587b4443952a2fc171}} 
+{\bfseries Glow\+Onnxifi\+Manager} (\hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_abb294faa1457ef93ac82b0ef91ea685c}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_abb294faa1457ef93ac82b0ef91ea685c}} 
+\hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} \& {\bfseries operator=} (const \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} \&)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_aa7f03bd9ef142c36930cd74dad1cacc3}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_aa7f03bd9ef142c36930cd74dad1cacc3}} 
+\hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} \& {\bfseries operator=} (\hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} \&\&)=delete
+\item 
+\hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr} \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_ad637fc5474d8a157aee9b44c0533e3a1}{create\+Backend} (llvm\+::\+String\+Ref backend\+Name, bool use\+Onnx, bool for\+Quantization=false)
+\item 
+\hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr} \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_aa4e8c1c658fe5053daea441809b91d14}{create\+Event} ()
+\item 
+\hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph\+Ptr} \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_ada8d8295e1d7471244a16e72f0aba40d}{create\+Graph} (\hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr} backend, \hyperlink{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12c}{Quantization\+Mode} quantization\+Mode=Quantization\+Mode\+::\+None)
+\item 
+bool \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a516210ca277b60710c368ec6c88a8338}{is\+Valid} (\hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr} backend) const
+\item 
+bool \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_ac8ad36eb469b6139f260ff6d3c40565f}{is\+Valid} (\hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr} event) const
+\item 
+bool \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_aa472c562f8a41fcd701c0fc201ee9ff4}{is\+Valid} (\hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph\+Ptr} graph) const
+\item 
+void \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a193268a2c7917edfea3d3731e4f47ee2}{release} (\hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr} backend)
+\item 
+void \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a0849c75dea0e13efe9296cb609450519}{release} (\hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr} event)
+\item 
+void \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a51e435a20546907964cef234fbe45bb8}{release} (\hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph\+Ptr} graph)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} \& \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a760b909b413290c2e910c73efde50e6c}{get} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Singleton class for creating and destroying objects for the O\+N\+N\+X\+I\+FI interface. \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} tracks objects it has created and can be used to check if an O\+N\+N\+X\+I\+FI interface object was created by glow or not. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a7d0eee5569b3f09ab0c26d551a5d069d}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a7d0eee5569b3f09ab0c26d551a5d069d}} 
+\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}!Glow\+Onnxifi\+Manager@{Glow\+Onnxifi\+Manager}}
+\index{Glow\+Onnxifi\+Manager@{Glow\+Onnxifi\+Manager}!glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+\subsubsection{\texorpdfstring{Glow\+Onnxifi\+Manager()}{GlowOnnxifiManager()}}
+{\footnotesize\ttfamily glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager\+::\+Glow\+Onnxifi\+Manager (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Disallow copying and moving \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} to help enforce singleton pattern. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_ad637fc5474d8a157aee9b44c0533e3a1}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_ad637fc5474d8a157aee9b44c0533e3a1}} 
+\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}!create\+Backend@{create\+Backend}}
+\index{create\+Backend@{create\+Backend}!glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+\subsubsection{\texorpdfstring{create\+Backend()}{createBackend()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr} glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager\+::create\+Backend (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{backend\+Name,  }\item[{bool}]{use\+Onnx,  }\item[{bool}]{for\+Quantization = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Create a new glow \hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend} for backend {\ttfamily backend\+Name} using onnx graphs if {\ttfamily use\+Onnx} and \hyperlink{namespacecaffe2}{caffe2} graphs otherwise. If {\ttfamily for\+Quantization} is true then a \hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend} will be created otherwise a \hyperlink{classglow_1_1onnxifi_1_1_host_manager_backend}{Host\+Manager\+Backend} will be be created. Can be called safely by multiple threads concurrently. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_aa4e8c1c658fe5053daea441809b91d14}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_aa4e8c1c658fe5053daea441809b91d14}} 
+\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}!create\+Event@{create\+Event}}
+\index{create\+Event@{create\+Event}!glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+\subsubsection{\texorpdfstring{create\+Event()}{createEvent()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr} glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager\+::create\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a new glow \hyperlink{classglow_1_1onnxifi_1_1_event}{Event}. Can be called safely by multiple threads concurrently. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_ada8d8295e1d7471244a16e72f0aba40d}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_ada8d8295e1d7471244a16e72f0aba40d}} 
+\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}!create\+Graph@{create\+Graph}}
+\index{create\+Graph@{create\+Graph}!glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+\subsubsection{\texorpdfstring{create\+Graph()}{createGraph()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph\+Ptr} glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager\+::create\+Graph (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr}}]{backend,  }\item[{\hyperlink{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12c}{Quantization\+Mode}}]{quantization\+Mode = {\ttfamily QuantizationMode\+:\+:None} }\end{DoxyParamCaption})}
+
+Create a new glow \hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph} associated with {\ttfamily backend}. Can be called safely by multiple threads concurrently. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a760b909b413290c2e910c73efde50e6c}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a760b909b413290c2e910c73efde50e6c}} 
+\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}!get@{get}}
+\index{get@{get}!glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} \& glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a reference to the \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager} singleton. There should only ever be one \hyperlink{classglow_1_1onnxifi_1_1_glow_onnxifi_manager}{Glow\+Onnxifi\+Manager}. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a516210ca277b60710c368ec6c88a8338}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a516210ca277b60710c368ec6c88a8338}} 
+\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+\subsubsection{\texorpdfstring{is\+Valid()}{isValid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager\+::is\+Valid (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr}}]{backend }\end{DoxyParamCaption}) const}
+
+Check if {\ttfamily backend} is a \hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend} created and managed by glow. Can be called safely by multiple threads concurrently. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_ac8ad36eb469b6139f260ff6d3c40565f}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_ac8ad36eb469b6139f260ff6d3c40565f}} 
+\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+\subsubsection{\texorpdfstring{is\+Valid()}{isValid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager\+::is\+Valid (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr}}]{event }\end{DoxyParamCaption}) const}
+
+Check if {\ttfamily event} is a \hyperlink{classglow_1_1onnxifi_1_1_event}{Event} created and managed by glow. Can be called safely by multiple threads concurrently. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_aa472c562f8a41fcd701c0fc201ee9ff4}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_aa472c562f8a41fcd701c0fc201ee9ff4}} 
+\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+\subsubsection{\texorpdfstring{is\+Valid()}{isValid()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager\+::is\+Valid (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph\+Ptr}}]{graph }\end{DoxyParamCaption}) const}
+
+Check if {\ttfamily graph} is a \hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph} created and managed by glow. Can be called safely by multiple threads concurrently. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a193268a2c7917edfea3d3731e4f47ee2}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a193268a2c7917edfea3d3731e4f47ee2}} 
+\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}!release@{release}}
+\index{release@{release}!glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+\subsubsection{\texorpdfstring{release()}{release()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager\+::release (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr}}]{backend }\end{DoxyParamCaption})}
+
+Free {\ttfamily backend}. Can be called safely by multiple threads concurrently. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a0849c75dea0e13efe9296cb609450519}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a0849c75dea0e13efe9296cb609450519}} 
+\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}!release@{release}}
+\index{release@{release}!glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+\subsubsection{\texorpdfstring{release()}{release()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager\+::release (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr}}]{event }\end{DoxyParamCaption})}
+
+Free {\ttfamily event}. Can be called safely by multiple threads concurrently. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a51e435a20546907964cef234fbe45bb8}\label{classglow_1_1onnxifi_1_1_glow_onnxifi_manager_a51e435a20546907964cef234fbe45bb8}} 
+\index{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}!release@{release}}
+\index{release@{release}!glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager@{glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager}}
+\subsubsection{\texorpdfstring{release()}{release()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void glow\+::onnxifi\+::\+Glow\+Onnxifi\+Manager\+::release (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph\+Ptr}}]{graph }\end{DoxyParamCaption})}
+
+Free {\ttfamily graph}. Can be called safely by multiple threads concurrently. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Onnxifi/Glow\+Onnxifi\+Manager.\+h\item 
+lib/\+Onnxifi/Glow\+Onnxifi\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\hypertarget{classglow_1_1_partitioner_base}{}\section{glow\+:\+:Partitioner\+Base Class Reference}
+\label{classglow_1_1_partitioner_base}\index{glow\+::\+Partitioner\+Base@{glow\+::\+Partitioner\+Base}}
+
+
+{\ttfamily \#include $<$Partitioner\+Base.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Partitioner\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_partitioner_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ D\+A\+G\+List\+Ty $>$ \hyperlink{classglow_1_1_partitioner_base_ac51c9b3cf875b52d6aa0282aebcc941d}{partition} (\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx)=0
+\item 
+void \hyperlink{classglow_1_1_partitioner_base_ae4c7498ec2510ff9b226191e5f479d43}{dump\+D\+AG} (llvm\+::\+String\+Ref dot\+Filename, const D\+A\+G\+List\+Ty \&partitions) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+A\+G\+List\+Ty \hyperlink{classglow_1_1_partitioner_base_a6fe7a0c542bd37744dd2667b86cdbf73}{do\+Partitioning} (llvm\+::\+String\+Ref func\+Name, std\+::vector$<$ \hyperlink{classglow_1_1_function}{Function} $\ast$$>$, \hyperlink{classglow_1_1_module}{Module} $\ast$module, \hyperlink{classglow_1_1_node_to_function_map}{Node\+To\+Function\+Map} \&mapping, bool save\+D\+AG)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Given a module, partitions each of the its functions into multiple ones based on memory constraints and minimizes the communication cost. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_partitioner_base_a6fe7a0c542bd37744dd2667b86cdbf73}\label{classglow_1_1_partitioner_base_a6fe7a0c542bd37744dd2667b86cdbf73}} 
+\index{glow\+::\+Partitioner\+Base@{glow\+::\+Partitioner\+Base}!do\+Partitioning@{do\+Partitioning}}
+\index{do\+Partitioning@{do\+Partitioning}!glow\+::\+Partitioner\+Base@{glow\+::\+Partitioner\+Base}}
+\subsubsection{\texorpdfstring{do\+Partitioning()}{doPartitioning()}}
+{\footnotesize\ttfamily D\+A\+G\+List\+Ty Partitioner\+Base\+::do\+Partitioning (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{func\+Name,  }\item[{std\+::vector$<$ \hyperlink{classglow_1_1_function}{Function} $\ast$$>$}]{funcs,  }\item[{\hyperlink{classglow_1_1_module}{Module} $\ast$}]{module,  }\item[{\hyperlink{classglow_1_1_node_to_function_map}{Node\+To\+Function\+Map} \&}]{mapping,  }\item[{bool}]{save\+D\+AG }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Given the node-\/function mapping {\ttfamily mapping}, do the actual partitioning. If {\ttfamily save\+D\+AG} is true, the D\+AG will be generated. \begin{DoxyReturn}{Returns}
+the final partitions or an empty partition (If {\ttfamily save\+D\+AG} is false). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_partitioner_base_ae4c7498ec2510ff9b226191e5f479d43}\label{classglow_1_1_partitioner_base_ae4c7498ec2510ff9b226191e5f479d43}} 
+\index{glow\+::\+Partitioner\+Base@{glow\+::\+Partitioner\+Base}!dump\+D\+AG@{dump\+D\+AG}}
+\index{dump\+D\+AG@{dump\+D\+AG}!glow\+::\+Partitioner\+Base@{glow\+::\+Partitioner\+Base}}
+\subsubsection{\texorpdfstring{dump\+D\+A\+G()}{dumpDAG()}}
+{\footnotesize\ttfamily void Partitioner\+Base\+::dump\+D\+AG (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{dot\+Filename,  }\item[{const D\+A\+G\+List\+Ty \&}]{partitions }\end{DoxyParamCaption}) const}
+
+Dump the partition result {\ttfamily partitions} to a dot file with name {\ttfamily dot\+Filename}. Since now all functions belong to a function family and they have the same partition, we only dump the one function\textquotesingle{}s partition. \mbox{\Hypertarget{classglow_1_1_partitioner_base_ac51c9b3cf875b52d6aa0282aebcc941d}\label{classglow_1_1_partitioner_base_ac51c9b3cf875b52d6aa0282aebcc941d}} 
+\index{glow\+::\+Partitioner\+Base@{glow\+::\+Partitioner\+Base}!partition@{partition}}
+\index{partition@{partition}!glow\+::\+Partitioner\+Base@{glow\+::\+Partitioner\+Base}}
+\subsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily virtual \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$D\+A\+G\+List\+Ty$>$ glow\+::\+Partitioner\+Base\+::partition (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Decompose each function in a module. {\ttfamily cctx} is used in function optimization. \begin{DoxyReturn}{Returns}
+the partition result. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classglow_1_1_partitioner_a41d81aa72c7c6105def11a06097166fb}{glow\+::\+Partitioner}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Partitioner/Partitioner\+Base.\+h\item 
+lib/\+Partitioner/Partitioner\+Base.\+cpp\end{DoxyCompactItemize}

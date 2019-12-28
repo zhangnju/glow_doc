@@ -1,0 +1,105 @@
+\hypertarget{classglow_1_1_cmp_l_t_node}{}\section{glow\+:\+:Cmp\+L\+T\+Node Class Reference}
+\label{classglow_1_1_cmp_l_t_node}\index{glow\+::\+Cmp\+L\+T\+Node@{glow\+::\+Cmp\+L\+T\+Node}}
+
+
+Compares X and Y element wise sets Dest\mbox{[}i\mbox{]} true if L\+HS\mbox{[}i\mbox{]} $<$ R\+HS\mbox{[}i\mbox{]} otherwise false. Final result is a mask consumed by Select, O\+N\+NX Where, operator.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Cmp\+L\+T\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_cmp_l_t_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a9ae474b10a45732791bc9549f10be944}\label{classglow_1_1_cmp_l_t_node_a9ae474b10a45732791bc9549f10be944}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries L\+H\+S\+Idx} = 0, 
+{\bfseries R\+H\+S\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_ac4408928e30e6bac13e8d01f11050e8b}\label{classglow_1_1_cmp_l_t_node_ac4408928e30e6bac13e8d01f11050e8b}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_ad1f72f15d08f8d096733a3cab314d61b}\label{classglow_1_1_cmp_l_t_node_ad1f72f15d08f8d096733a3cab314d61b}} 
+{\bfseries Cmp\+L\+T\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} L\+HS, \hyperlink{structglow_1_1_node_value}{Node\+Value} R\+HS)
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_af4b19c5e3a4178d838f52ad470c7eb59}\label{classglow_1_1_cmp_l_t_node_af4b19c5e3a4178d838f52ad470c7eb59}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+L\+HS} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_acdc5f9ca3b6641d368b0d25c1a7b8860}\label{classglow_1_1_cmp_l_t_node_acdc5f9ca3b6641d368b0d25c1a7b8860}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+R\+HS} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a6605377d4cbdd973af3c81a66a52b91a}\label{classglow_1_1_cmp_l_t_node_a6605377d4cbdd973af3c81a66a52b91a}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_ae6dbbcfc38ba8267a650eae6a39ba64c}\label{classglow_1_1_cmp_l_t_node_ae6dbbcfc38ba8267a650eae6a39ba64c}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_ac1309df3219640d65ca20a797123a891}\label{classglow_1_1_cmp_l_t_node_ac1309df3219640d65ca20a797123a891}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a0ea145ec657e326e7ef9ccc330d2a33c}\label{classglow_1_1_cmp_l_t_node_a0ea145ec657e326e7ef9ccc330d2a33c}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_acd88569a4ee86162af57956357f1d830}\label{classglow_1_1_cmp_l_t_node_acd88569a4ee86162af57956357f1d830}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a94e1dd55428e682cf427ac2cb54291b8}\label{classglow_1_1_cmp_l_t_node_a94e1dd55428e682cf427ac2cb54291b8}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a278501da9d1ad09c0d414e65cbf9cf37}\label{classglow_1_1_cmp_l_t_node_a278501da9d1ad09c0d414e65cbf9cf37}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a5a3ef7abc4ac0d342399372ba757b364}\label{classglow_1_1_cmp_l_t_node_a5a3ef7abc4ac0d342399372ba757b364}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a68c37776b16c2983f549785263028780}\label{classglow_1_1_cmp_l_t_node_a68c37776b16c2983f549785263028780}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a54e4574c910e7139f3db90dc7cec7cb2}\label{classglow_1_1_cmp_l_t_node_a54e4574c910e7139f3db90dc7cec7cb2}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a793f62056eb1a6951939a0e663c897c2}\label{classglow_1_1_cmp_l_t_node_a793f62056eb1a6951939a0e663c897c2}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a30a928cd21ff82517ef5b6b4ae8d4cb3}\label{classglow_1_1_cmp_l_t_node_a30a928cd21ff82517ef5b6b4ae8d4cb3}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_cmp_l_t_node}{Cmp\+L\+T\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_aef3b577c7abef7ae57fc858f584ec8cf}\label{classglow_1_1_cmp_l_t_node_aef3b577c7abef7ae57fc858f584ec8cf}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a97b58c212c3302d0c05875c80c65869e}\label{classglow_1_1_cmp_l_t_node_a97b58c212c3302d0c05875c80c65869e}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a8a0cca349a4b9f8c6a3d0eb8df01cd7b}\label{classglow_1_1_cmp_l_t_node_a8a0cca349a4b9f8c6a3d0eb8df01cd7b}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a12944d1ab6b4d78a8c3050128e341ebb}\label{classglow_1_1_cmp_l_t_node_a12944d1ab6b4d78a8c3050128e341ebb}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_cmp_l_t_node_a7091048379e1b9b1079c7702e61976a4}\label{classglow_1_1_cmp_l_t_node_a7091048379e1b9b1079c7702e61976a4}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Compares X and Y element wise sets Dest\mbox{[}i\mbox{]} true if L\+HS\mbox{[}i\mbox{]} $<$ R\+HS\mbox{[}i\mbox{]} otherwise false. Final result is a mask consumed by Select, O\+N\+NX Where, operator. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+\hypertarget{classglow_1_1_lengths_to_ranges_node}{}\section{glow\+:\+:Lengths\+To\+Ranges\+Node Class Reference}
+\label{classglow_1_1_lengths_to_ranges_node}\index{glow\+::\+Lengths\+To\+Ranges\+Node@{glow\+::\+Lengths\+To\+Ranges\+Node}}
+
+
+Given a vector of segment lengths, calculates offsets of each segment and packs them next to the lengths. For the input vector of length N the output is a Nx2 matrix with (offset, lengths) packaged for each segment.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Lengths\+To\+Ranges\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_lengths_to_ranges_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_acfcebce8a6c2372da0d6568b8cc8d06c}\label{classglow_1_1_lengths_to_ranges_node_acfcebce8a6c2372da0d6568b8cc8d06c}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Lengths\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_a6e14ef4132384e6200665f0903b0ee9e}\label{classglow_1_1_lengths_to_ranges_node_a6e14ef4132384e6200665f0903b0ee9e}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_a176c5c2022c67d6a2101d917367baec2}\label{classglow_1_1_lengths_to_ranges_node_a176c5c2022c67d6a2101d917367baec2}} 
+{\bfseries Lengths\+To\+Ranges\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Lengths)
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_a3279847af7cfc8e5a21747f32745464c}\label{classglow_1_1_lengths_to_ranges_node_a3279847af7cfc8e5a21747f32745464c}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Lengths} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_a945df8b898addbef8e0e2a9dd27dc80d}\label{classglow_1_1_lengths_to_ranges_node_a945df8b898addbef8e0e2a9dd27dc80d}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_a1acce52f69bf7b8f93b0b111f9e5b13e}\label{classglow_1_1_lengths_to_ranges_node_a1acce52f69bf7b8f93b0b111f9e5b13e}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_af973276f1d4d9ecc341d008618383e98}\label{classglow_1_1_lengths_to_ranges_node_af973276f1d4d9ecc341d008618383e98}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_aed8aa2b0e2e68c63376021540d706a24}\label{classglow_1_1_lengths_to_ranges_node_aed8aa2b0e2e68c63376021540d706a24}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_af08ed6940412d91aa0dc957122601f47}\label{classglow_1_1_lengths_to_ranges_node_af08ed6940412d91aa0dc957122601f47}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_ac8a8558799f3aff0d8a4d15b0a08d236}\label{classglow_1_1_lengths_to_ranges_node_ac8a8558799f3aff0d8a4d15b0a08d236}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_ae6801d5a973679510488ba4881f22b64}\label{classglow_1_1_lengths_to_ranges_node_ae6801d5a973679510488ba4881f22b64}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_a787a0ce03c9d00727a910fc17598b6fa}\label{classglow_1_1_lengths_to_ranges_node_a787a0ce03c9d00727a910fc17598b6fa}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_a34f62b4c1e09f0ec06cfb895be4c24b9}\label{classglow_1_1_lengths_to_ranges_node_a34f62b4c1e09f0ec06cfb895be4c24b9}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_accd1a96ef1530b18a5d23ef168d79021}\label{classglow_1_1_lengths_to_ranges_node_accd1a96ef1530b18a5d23ef168d79021}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_aae83d2c758a0e4613f563ebdba0f8da2}\label{classglow_1_1_lengths_to_ranges_node_aae83d2c758a0e4613f563ebdba0f8da2}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_af91b36239f3609cfdc992b7df183f981}\label{classglow_1_1_lengths_to_ranges_node_af91b36239f3609cfdc992b7df183f981}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_lengths_to_ranges_node}{Lengths\+To\+Ranges\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_a5617d223b9c6f10c481f162d07bb8e15}\label{classglow_1_1_lengths_to_ranges_node_a5617d223b9c6f10c481f162d07bb8e15}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_a8939e166caf187da8de070eca3e3b6b1}\label{classglow_1_1_lengths_to_ranges_node_a8939e166caf187da8de070eca3e3b6b1}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_aa9f61c600aaed4abd4d31fae8efc9cc6}\label{classglow_1_1_lengths_to_ranges_node_aa9f61c600aaed4abd4d31fae8efc9cc6}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_afc3adce0cb09417f6ac38719bf5bb2e0}\label{classglow_1_1_lengths_to_ranges_node_afc3adce0cb09417f6ac38719bf5bb2e0}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_to_ranges_node_a6333ccfdcd5028a3c9ed761774f09c80}\label{classglow_1_1_lengths_to_ranges_node_a6333ccfdcd5028a3c9ed761774f09c80}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Given a vector of segment lengths, calculates offsets of each segment and packs them next to the lengths. For the input vector of length N the output is a Nx2 matrix with (offset, lengths) packaged for each segment. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

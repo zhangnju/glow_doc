@@ -1,0 +1,57 @@
+\hypertarget{classglow_1_1_str_check}{}\section{glow\+:\+:Str\+Check Class Reference}
+\label{classglow_1_1_str_check}\index{glow\+::\+Str\+Check@{glow\+::\+Str\+Check}}
+
+
+{\ttfamily \#include $<$Str\+Check.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_str_check_a269c998b1e948e0342ea30cd364fd0ac}\label{classglow_1_1_str_check_a269c998b1e948e0342ea30cd364fd0ac}} 
+{\bfseries Str\+Check} (llvm\+::\+String\+Ref input)
+\item 
+\hyperlink{classglow_1_1_str_check}{Str\+Check} \& \hyperlink{classglow_1_1_str_check_a5f4ae7f23e0ad003b24683e875148f26}{check} (llvm\+::\+String\+Ref needle)
+\item 
+\hyperlink{classglow_1_1_str_check}{Str\+Check} \& \hyperlink{classglow_1_1_str_check_a83d72ca6e91ae0c3b7ef40609b760a27}{sameln} (llvm\+::\+String\+Ref needle)
+\item 
+\mbox{\Hypertarget{classglow_1_1_str_check_af98ac5f775f0fe3ca67804b16f534cf3}\label{classglow_1_1_str_check_af98ac5f775f0fe3ca67804b16f534cf3}} 
+\hyperlink{classglow_1_1_str_check}{Str\+Check} \& \hyperlink{classglow_1_1_str_check_af98ac5f775f0fe3ca67804b16f534cf3}{nextln} (llvm\+::\+String\+Ref needle)
+\begin{DoxyCompactList}\small\item\em Check that {\ttfamily needle} appears on the next line after the previous match. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_str_check_ae517fdf31d8c9ccbe9dbb28ecf28f088}\label{classglow_1_1_str_check_ae517fdf31d8c9ccbe9dbb28ecf28f088}} 
+\hyperlink{classglow_1_1_str_check}{Str\+Check} \& \hyperlink{classglow_1_1_str_check_ae517fdf31d8c9ccbe9dbb28ecf28f088}{no} (llvm\+::\+String\+Ref needle)
+\begin{DoxyCompactList}\small\item\em Check that no instances of {\ttfamily needle} appear before the next positive match. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_str_check_a59f49193401ebfd4687bf569f9da136d}\label{classglow_1_1_str_check_a59f49193401ebfd4687bf569f9da136d}} 
+{\bfseries operator testing\+::\+Assertion\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_str_check_a79f3d949aca0438342c6181c0108e13b}\label{classglow_1_1_str_check_a79f3d949aca0438342c6181c0108e13b}} 
+{\bfseries operator bool} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class for finding ordered substrings in a larger string.
+
+The \hyperlink{classglow_1_1_str_check}{Str\+Check} class is intended to be used in googletest unit tests\+:
+
+E\+X\+P\+E\+C\+T\+\_\+\+T\+R\+UE(Str\+Check(asm).check(\char`\"{}foo\char`\"{}).no(\char`\"{}baz\char`\"{}).sameln(\char`\"{}arg=7\char`\"{}));
+
+A typical use is to search for expected instruction patterns in disassembled code generated for a test case. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_str_check_a5f4ae7f23e0ad003b24683e875148f26}\label{classglow_1_1_str_check_a5f4ae7f23e0ad003b24683e875148f26}} 
+\index{glow\+::\+Str\+Check@{glow\+::\+Str\+Check}!check@{check}}
+\index{check@{check}!glow\+::\+Str\+Check@{glow\+::\+Str\+Check}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_str_check}{Str\+Check}\& glow\+::\+Str\+Check\+::check (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{needle }\end{DoxyParamCaption})}
+
+Check that {\ttfamily needle} appears in the input at a point after the previous match. \mbox{\Hypertarget{classglow_1_1_str_check_a83d72ca6e91ae0c3b7ef40609b760a27}\label{classglow_1_1_str_check_a83d72ca6e91ae0c3b7ef40609b760a27}} 
+\index{glow\+::\+Str\+Check@{glow\+::\+Str\+Check}!sameln@{sameln}}
+\index{sameln@{sameln}!glow\+::\+Str\+Check@{glow\+::\+Str\+Check}}
+\subsubsection{\texorpdfstring{sameln()}{sameln()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_str_check}{Str\+Check}\& glow\+::\+Str\+Check\+::sameln (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{needle }\end{DoxyParamCaption})}
+
+Check that {\ttfamily needle} appears on the same line as the previous match. (And following the previous match). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Testing/Str\+Check.\+h\end{DoxyCompactItemize}

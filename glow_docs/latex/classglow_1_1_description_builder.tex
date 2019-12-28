@@ -1,0 +1,40 @@
+\hypertarget{classglow_1_1_description_builder}{}\section{glow\+:\+:Description\+Builder Class Reference}
+\label{classglow_1_1_description_builder}\index{glow\+::\+Description\+Builder@{glow\+::\+Description\+Builder}}
+
+
+A helper class that builds a textual descriptor of a group of parameters.  
+
+
+
+
+{\ttfamily \#include $<$Support.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_description_builder_aedfe4100586b6929aa664bebc3f15af9}\label{classglow_1_1_description_builder_aedfe4100586b6929aa664bebc3f15af9}} 
+{\bfseries Description\+Builder} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{classglow_1_1_description_builder_ab356eb63be20df38bbda9617ec05a51f}\label{classglow_1_1_description_builder_ab356eb63be20df38bbda9617ec05a51f}} 
+\hyperlink{classglow_1_1_description_builder}{Description\+Builder} \& {\bfseries add\+Param} (const std\+::string \&name, const char $\ast$value)
+\item 
+\mbox{\Hypertarget{classglow_1_1_description_builder_a07c58d0140912f70368a6ef5790adf53}\label{classglow_1_1_description_builder_a07c58d0140912f70368a6ef5790adf53}} 
+{\footnotesize template$<$typename E $>$ }\\\hyperlink{classglow_1_1_description_builder}{Description\+Builder} \& {\bfseries add\+Param} (const std\+::string \&name, llvm\+::\+Array\+Ref$<$ E $>$ L)
+\item 
+\mbox{\Hypertarget{classglow_1_1_description_builder_a7354f40c8676bbb4fcda0fb31c4d1984}\label{classglow_1_1_description_builder_a7354f40c8676bbb4fcda0fb31c4d1984}} 
+{\footnotesize template$<$typename T\+\_\+ , typename  = typename std\+::enable\+\_\+if$<$std\+::is\+\_\+scalar$<$\+T\+\_\+$>$\+::value$>$\+::type$>$ }\\\hyperlink{classglow_1_1_description_builder}{Description\+Builder} \& {\bfseries add\+Param} (const std\+::string \&name, T\+\_\+ value)
+\item 
+\mbox{\Hypertarget{classglow_1_1_description_builder_aa8fd5f5102de57f0ba8a1fc8b3bd61b9}\label{classglow_1_1_description_builder_aa8fd5f5102de57f0ba8a1fc8b3bd61b9}} 
+{\footnotesize template$<$typename T\+\_\+ , typename  = typename std\+::enable\+\_\+if$<$                             !std\+::is\+\_\+scalar$<$\+T\+\_\+$>$\+::value$>$\+::type$>$ }\\\hyperlink{classglow_1_1_description_builder}{Description\+Builder} \& {\bfseries add\+Param} (const std\+::string \&name, const T\+\_\+ \&value)
+\item 
+\mbox{\Hypertarget{classglow_1_1_description_builder_a469e25f488e5d092bf3127583828545d}\label{classglow_1_1_description_builder_a469e25f488e5d092bf3127583828545d}} 
+{\bfseries operator std\+::string} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A helper class that builds a textual descriptor of a group of parameters. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Support.\+h\end{DoxyCompactItemize}

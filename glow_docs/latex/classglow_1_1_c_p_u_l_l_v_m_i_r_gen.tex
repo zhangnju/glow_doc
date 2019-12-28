@@ -1,0 +1,52 @@
+\hypertarget{classglow_1_1_c_p_u_l_l_v_m_i_r_gen}{}\section{glow\+:\+:C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen Class Reference}
+\label{classglow_1_1_c_p_u_l_l_v_m_i_r_gen}\index{glow\+::\+C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen}}
+
+
+{\ttfamily \#include $<$C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen.\+h$>$}
+
+Inheritance diagram for glow\+:\+:C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_c_p_u_l_l_v_m_i_r_gen}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a531edc97dfea41002c7c1f3f5bb9b48c}\label{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a531edc97dfea41002c7c1f3f5bb9b48c}} 
+virtual \hyperlink{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a531edc97dfea41002c7c1f3f5bb9b48c}{$\sim$\+C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a0a4ef29d10ca8fb1ed832df7005711a7}\label{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a0a4ef29d10ca8fb1ed832df7005711a7}} 
+\hyperlink{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a0a4ef29d10ca8fb1ed832df7005711a7}{C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen} (const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$M, \hyperlink{structglow_1_1_allocations_info}{Allocations\+Info} \&allocations\+Info, std\+::string main\+Entry\+Name, llvm\+::\+String\+Ref libjit\+BC)
+\begin{DoxyCompactList}\small\item\em Ctor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a396fcac8c5710b807e7fd670c33cd4bb}\label{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a396fcac8c5710b807e7fd670c33cd4bb}} 
+virtual void \hyperlink{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a396fcac8c5710b807e7fd670c33cd4bb}{generate\+L\+L\+V\+M\+I\+R\+For\+Instr} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, const \hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$I) override
+\begin{DoxyCompactList}\small\item\em Emit L\+L\+V\+M-\/\+IR for the instruction {\ttfamily I}, using the builder {\ttfamily builder}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_adbc69b398e182458dc67c93c3357b606}{generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, const \hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$I, llvm\+::\+Function $\ast$kernel, llvm\+::\+Dense\+Map$<$ \hyperlink{classglow_1_1_value}{Value} $\ast$, int $>$ \&buffer\+To\+Arg\+Num, llvm\+::\+Value $\ast$loop\+Count) override
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a4959fcc499c33aac349324273301c9ec}\label{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a4959fcc499c33aac349324273301c9ec}} 
+virtual void \hyperlink{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a4959fcc499c33aac349324273301c9ec}{generate\+L\+L\+V\+M\+I\+R\+For\+Module} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder) override
+\begin{DoxyCompactList}\small\item\em Emit L\+L\+V\+M-\/\+IR for the whole \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is a class containing a common logic for the generation of the L\+L\+VM IR from an \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function}. The primary clients of this class are J\+I\+Ts and bundlers. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_adbc69b398e182458dc67c93c3357b606}\label{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_adbc69b398e182458dc67c93c3357b606}} 
+\index{glow\+::\+C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen}!generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr@{generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr}}
+\index{generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr@{generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr}!glow\+::\+C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr()}{generateLLVMIRForDataParallelInstr()}}
+{\footnotesize\ttfamily void C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen\+::generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{const \hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$}]{I,  }\item[{llvm\+::\+Function $\ast$}]{kernel,  }\item[{llvm\+::\+Dense\+Map$<$ \hyperlink{classglow_1_1_value}{Value} $\ast$, int $>$ \&}]{buffer\+To\+Arg\+Num,  }\item[{llvm\+::\+Value $\ast$}]{loop\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Emit IR for the data parallel instruction {\ttfamily I} which is invoked inside the stacked {\ttfamily kernel}. The current loop count is described by {\ttfamily loop\+Count}. The {\ttfamily buffer\+To\+Arg\+Num} map can be used to find the required buffers, which are provided as arguments to the stacked {\ttfamily kernel}. 
+
+Reimplemented from \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a638e1a6f88ef525a57fa03c7c0cae7cc}{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+C\+P\+U/C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen.\+h\item 
+lib/\+Backends/\+C\+P\+U/C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen.\+cpp\end{DoxyCompactItemize}

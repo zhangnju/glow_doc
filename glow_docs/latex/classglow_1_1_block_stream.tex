@@ -1,0 +1,52 @@
+\hypertarget{classglow_1_1_block_stream}{}\section{glow\+:\+:Block\+Stream Class Reference}
+\label{classglow_1_1_block_stream}\index{glow\+::\+Block\+Stream@{glow\+::\+Block\+Stream}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_block_stream_a8d0906ce90a3968c890e862530529b02}\label{classglow_1_1_block_stream_a8d0906ce90a3968c890e862530529b02}} 
+\hyperlink{classglow_1_1_block_stream_a8d0906ce90a3968c890e862530529b02}{Block\+Stream} ()
+\begin{DoxyCompactList}\small\item\em Default constructor with 0 pre-\/allocated blocks and 10M page size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_block_stream_a43918f020651986b2b4de87cdb91ae05}\label{classglow_1_1_block_stream_a43918f020651986b2b4de87cdb91ae05}} 
+\hyperlink{classglow_1_1_block_stream_a43918f020651986b2b4de87cdb91ae05}{Block\+Stream} (size\+\_\+t prealloc\+Size)
+\begin{DoxyCompactList}\small\item\em Constructor with prealloc\+Size pre-\/allocated memory and 10M page size. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_block_stream_a2477bdde2366295d7a27087a011b824b}{Block\+Stream} (size\+\_\+t prealloc\+Size, uint32\+\_\+t page\+Block\+Size)
+\item 
+\mbox{\Hypertarget{classglow_1_1_block_stream_a5ce14cfac41c176c37d797907b1c0dcd}\label{classglow_1_1_block_stream_a5ce14cfac41c176c37d797907b1c0dcd}} 
+virtual \hyperlink{classglow_1_1_block_stream_a5ce14cfac41c176c37d797907b1c0dcd}{$\sim$\+Block\+Stream} ()
+\begin{DoxyCompactList}\small\item\em Destructor\+: cleans up the allocated blocks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_block_stream_a6d35d45098e2794047d318602028ce77}\label{classglow_1_1_block_stream_a6d35d45098e2794047d318602028ce77}} 
+size\+\_\+t \hyperlink{classglow_1_1_block_stream_a6d35d45098e2794047d318602028ce77}{read} (char $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Read from stream (updates read offset). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_block_stream_a162b46f672d78e4d68d119c135017252}\label{classglow_1_1_block_stream_a162b46f672d78e4d68d119c135017252}} 
+size\+\_\+t \hyperlink{classglow_1_1_block_stream_a162b46f672d78e4d68d119c135017252}{write} (const char $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Read to stream (updates read offset). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_block_stream_afec81b725887152686c3da25afd7b343}\label{classglow_1_1_block_stream_afec81b725887152686c3da25afd7b343}} 
+size\+\_\+t \hyperlink{classglow_1_1_block_stream_afec81b725887152686c3da25afd7b343}{get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Get size of written data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_block_stream_a81872800d6b2c64165e271b49086b119}\label{classglow_1_1_block_stream_a81872800d6b2c64165e271b49086b119}} 
+void \hyperlink{classglow_1_1_block_stream_a81872800d6b2c64165e271b49086b119}{reset\+Read} ()
+\begin{DoxyCompactList}\small\item\em Reset read offset (not changing steam data -\/ can re-\/read). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_block_stream_abbd4031369501396d012fa25019fe730}\label{classglow_1_1_block_stream_abbd4031369501396d012fa25019fe730}} 
+void \hyperlink{classglow_1_1_block_stream_abbd4031369501396d012fa25019fe730}{reset\+Write} ()
+\begin{DoxyCompactList}\small\item\em Reset write offset (not deleting allocated memory). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_block_stream_a2e7d260c31548fec456369ada8772f96}\label{classglow_1_1_block_stream_a2e7d260c31548fec456369ada8772f96}} 
+void \hyperlink{classglow_1_1_block_stream_a2e7d260c31548fec456369ada8772f96}{reset} ()
+\begin{DoxyCompactList}\small\item\em Reset both read and write offset (not deleting allocated memory). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_block_stream_a9df3e1185786a9647279627b42526ac6}\label{classglow_1_1_block_stream_a9df3e1185786a9647279627b42526ac6}} 
+void \hyperlink{classglow_1_1_block_stream_a9df3e1185786a9647279627b42526ac6}{release\+Memory} ()
+\begin{DoxyCompactList}\small\item\em Release allocated memory and reset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_block_stream_a2477bdde2366295d7a27087a011b824b}\label{classglow_1_1_block_stream_a2477bdde2366295d7a27087a011b824b}} 
+\index{glow\+::\+Block\+Stream@{glow\+::\+Block\+Stream}!Block\+Stream@{Block\+Stream}}
+\index{Block\+Stream@{Block\+Stream}!glow\+::\+Block\+Stream@{glow\+::\+Block\+Stream}}
+\subsubsection{\texorpdfstring{Block\+Stream()}{BlockStream()}}
+{\footnotesize\ttfamily glow\+::\+Block\+Stream\+::\+Block\+Stream (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{prealloc\+Size,  }\item[{uint32\+\_\+t}]{page\+Block\+Size }\end{DoxyParamCaption})}
+
+Constructor with prealloc\+Size pre-\/allocated memory and page\+Block\+Size page size. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+N\+N\+P\+I/Block\+Stream.\+h\item 
+lib/\+Backends/\+N\+N\+P\+I/Block\+Stream.\+cpp\end{DoxyCompactItemize}

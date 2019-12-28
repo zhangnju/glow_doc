@@ -1,0 +1,109 @@
+\hypertarget{classglow_1_1_cross_entropy_loss_node}{}\section{glow\+:\+:Cross\+Entropy\+Loss\+Node Class Reference}
+\label{classglow_1_1_cross_entropy_loss_node}\index{glow\+::\+Cross\+Entropy\+Loss\+Node@{glow\+::\+Cross\+Entropy\+Loss\+Node}}
+
+
+Computes the average cross entropy loss of the input.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Cross\+Entropy\+Loss\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_cross_entropy_loss_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a510f21a6d6cd731f0642922e3e361e57}\label{classglow_1_1_cross_entropy_loss_node_a510f21a6d6cd731f0642922e3e361e57}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries P\+Idx} = 0, 
+{\bfseries Labels\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a0d6ba0f361740b2e6dc3e2f84e57c187}\label{classglow_1_1_cross_entropy_loss_node_a0d6ba0f361740b2e6dc3e2f84e57c187}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries C\+E\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a269798839b120f8eb36e4d9d00b62cb2}\label{classglow_1_1_cross_entropy_loss_node_a269798839b120f8eb36e4d9d00b62cb2}} 
+{\bfseries Cross\+Entropy\+Loss\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} CE, \hyperlink{structglow_1_1_node_value}{Node\+Value} P, \hyperlink{structglow_1_1_node_value}{Node\+Value} Labels)
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a5cb71e917933bffa639f987687871206}\label{classglow_1_1_cross_entropy_loss_node_a5cb71e917933bffa639f987687871206}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries getP} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a1258bbf29ebeb955a1fc4d6ddb872289}\label{classglow_1_1_cross_entropy_loss_node_a1258bbf29ebeb955a1fc4d6ddb872289}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Labels} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a66287769113fa8b7f1b3770e960691b6}\label{classglow_1_1_cross_entropy_loss_node_a66287769113fa8b7f1b3770e960691b6}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+CE} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_aa2c439c80bdaf9afcdcce6f95df43e7b}\label{classglow_1_1_cross_entropy_loss_node_aa2c439c80bdaf9afcdcce6f95df43e7b}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+CE} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a7cb9ae4724c8105952ca97d455457185}\label{classglow_1_1_cross_entropy_loss_node_a7cb9ae4724c8105952ca97d455457185}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a26e0c6bfa89453f41f248dc559819515}\label{classglow_1_1_cross_entropy_loss_node_a26e0c6bfa89453f41f248dc559819515}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a19a1046d5b2bacbbcdbbf0e2107b631c}\label{classglow_1_1_cross_entropy_loss_node_a19a1046d5b2bacbbcdbbf0e2107b631c}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_ab6860529ed683563e014971530a45999}\label{classglow_1_1_cross_entropy_loss_node_ab6860529ed683563e014971530a45999}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a1563d161898a2842b0de0121c3e5fc50}\label{classglow_1_1_cross_entropy_loss_node_a1563d161898a2842b0de0121c3e5fc50}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a92e4a20e08598cb6414585e03669b0ab}\label{classglow_1_1_cross_entropy_loss_node_a92e4a20e08598cb6414585e03669b0ab}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_aefd903bdc5c705b3fa9e8ac0ed2d8ba2}\label{classglow_1_1_cross_entropy_loss_node_aefd903bdc5c705b3fa9e8ac0ed2d8ba2}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_adfe17af8b620ec20a434ad7345a2bd81}\label{classglow_1_1_cross_entropy_loss_node_adfe17af8b620ec20a434ad7345a2bd81}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a233f175990530d26c31f8ff3eb307bd7}\label{classglow_1_1_cross_entropy_loss_node_a233f175990530d26c31f8ff3eb307bd7}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_abf19045027941bef1e223cddd81d24f6}\label{classglow_1_1_cross_entropy_loss_node_abf19045027941bef1e223cddd81d24f6}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_cross_entropy_loss_node}{Cross\+Entropy\+Loss\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a4c34d770e7f24c387311e02d45652d70}\label{classglow_1_1_cross_entropy_loss_node_a4c34d770e7f24c387311e02d45652d70}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a9cdac4679d9248849e32b9566d6fba0c}\label{classglow_1_1_cross_entropy_loss_node_a9cdac4679d9248849e32b9566d6fba0c}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a3e1491c569b795283e99bec8650e73e9}\label{classglow_1_1_cross_entropy_loss_node_a3e1491c569b795283e99bec8650e73e9}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a3402208238863f95cd1d6af1bd85eb76}\label{classglow_1_1_cross_entropy_loss_node_a3402208238863f95cd1d6af1bd85eb76}} 
+bool {\bfseries verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_a852eb9d8e721875476e9481b1586844d}\label{classglow_1_1_cross_entropy_loss_node_a852eb9d8e721875476e9481b1586844d}} 
+\hyperlink{classglow_1_1_cross_entropy_loss_grad_node}{Cross\+Entropy\+Loss\+Grad\+Node} $\ast$ {\bfseries get\+Grad} (\hyperlink{classglow_1_1_graph_grad_mapper}{Graph\+Grad\+Mapper} \&builder)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_cross_entropy_loss_node_aa5f5094303efa947a6d4661b23e16405}\label{classglow_1_1_cross_entropy_loss_node_aa5f5094303efa947a6d4661b23e16405}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Computes the average cross entropy loss of the input. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,46 @@
+\hypertarget{classglow_1_1runtime_1_1_inflight_barrier}{}\section{glow\+:\+:runtime\+:\+:Inflight\+Barrier Class Reference}
+\label{classglow_1_1runtime_1_1_inflight_barrier}\index{glow\+::runtime\+::\+Inflight\+Barrier@{glow\+::runtime\+::\+Inflight\+Barrier}}
+
+
+{\ttfamily \#include $<$Thread\+Pool\+Executor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_inflight_barrier_abf738a3af8dd0057205c920509e59fcc}\label{classglow_1_1runtime_1_1_inflight_barrier_abf738a3af8dd0057205c920509e59fcc}} 
+void \hyperlink{classglow_1_1runtime_1_1_inflight_barrier_abf738a3af8dd0057205c920509e59fcc}{decrement} (unsigned decr=1)
+\begin{DoxyCompactList}\small\item\em Decrement the count of threads in the barrier by {\ttfamily decr}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_inflight_barrier_a8523fb920c54488ef8943d395ccbd0bf}\label{classglow_1_1runtime_1_1_inflight_barrier_a8523fb920c54488ef8943d395ccbd0bf}} 
+void \hyperlink{classglow_1_1runtime_1_1_inflight_barrier_a8523fb920c54488ef8943d395ccbd0bf}{increment} (unsigned incr=1)
+\begin{DoxyCompactList}\small\item\em Increment the count of threads in the barrier by {\ttfamily incr}. \end{DoxyCompactList}\item 
+unsigned \hyperlink{classglow_1_1runtime_1_1_inflight_barrier_acf13957d21ca846a19bc77c8bb841b27}{count} ()
+\item 
+void \hyperlink{classglow_1_1runtime_1_1_inflight_barrier_a65478337f00c3da7f5b557ba52789b30}{wait} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a simple barrier with which to wait for all threads to exit a certain section of code before proceeding. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_inflight_barrier_acf13957d21ca846a19bc77c8bb841b27}\label{classglow_1_1runtime_1_1_inflight_barrier_acf13957d21ca846a19bc77c8bb841b27}} 
+\index{glow\+::runtime\+::\+Inflight\+Barrier@{glow\+::runtime\+::\+Inflight\+Barrier}!count@{count}}
+\index{count@{count}!glow\+::runtime\+::\+Inflight\+Barrier@{glow\+::runtime\+::\+Inflight\+Barrier}}
+\subsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily unsigned glow\+::runtime\+::\+Inflight\+Barrier\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the current count of the barrier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_inflight_barrier_a65478337f00c3da7f5b557ba52789b30}\label{classglow_1_1runtime_1_1_inflight_barrier_a65478337f00c3da7f5b557ba52789b30}} 
+\index{glow\+::runtime\+::\+Inflight\+Barrier@{glow\+::runtime\+::\+Inflight\+Barrier}!wait@{wait}}
+\index{wait@{wait}!glow\+::runtime\+::\+Inflight\+Barrier@{glow\+::runtime\+::\+Inflight\+Barrier}}
+\subsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily void glow\+::runtime\+::\+Inflight\+Barrier\+::wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wait for the barrier count to hit zero before continuing. This is potentially a blocking call. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Runtime/\+Executor/Thread\+Pool\+Executor.\+h\item 
+lib/\+Runtime/\+Executor/Thread\+Pool\+Executor.\+cpp\end{DoxyCompactItemize}

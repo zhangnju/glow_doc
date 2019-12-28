@@ -1,0 +1,43 @@
+\hypertarget{classglow_1_1runtime_1_1_provisioner}{}\section{glow\+:\+:runtime\+:\+:Provisioner Class Reference}
+\label{classglow_1_1runtime_1_1_provisioner}\index{glow\+::runtime\+::\+Provisioner@{glow\+::runtime\+::\+Provisioner}}
+
+
+{\ttfamily \#include $<$Provisioner.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_provisioner_a3402b1aa860c7011c8b6efe0df15dfec}\label{classglow_1_1runtime_1_1_provisioner_a3402b1aa860c7011c8b6efe0df15dfec}} 
+{\bfseries Provisioner} (Device\+Manager\+Map\+Ty \&devices)
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_provisioner_a6a8d183987f99cddcce7abfa90119ffd}{provision} (D\+A\+G\+List\+Ty \&networks, \hyperlink{classglow_1_1_module}{Module} \&module, \hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx)
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_provisioner_a90ec18a4e7552f4145ac0b3dec34ef65}\label{classglow_1_1runtime_1_1_provisioner_a90ec18a4e7552f4145ac0b3dec34ef65}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_provisioner_a90ec18a4e7552f4145ac0b3dec34ef65}{remove\+Function} (llvm\+::\+String\+Ref name)
+\begin{DoxyCompactList}\small\item\em Remove stored compiled\+Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classglow_1_1runtime_1_1_provisioner}{Provisioner} is responsible for assigning networks to an actual device. It also compiles the networks before passing the compiled functions to the device. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_provisioner_a6a8d183987f99cddcce7abfa90119ffd}\label{classglow_1_1runtime_1_1_provisioner_a6a8d183987f99cddcce7abfa90119ffd}} 
+\index{glow\+::runtime\+::\+Provisioner@{glow\+::runtime\+::\+Provisioner}!provision@{provision}}
+\index{provision@{provision}!glow\+::runtime\+::\+Provisioner@{glow\+::runtime\+::\+Provisioner}}
+\subsubsection{\texorpdfstring{provision()}{provision()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} Provisioner\+::provision (\begin{DoxyParamCaption}\item[{D\+A\+G\+List\+Ty \&}]{networks,  }\item[{\hyperlink{classglow_1_1_module}{Module} \&}]{module,  }\item[{\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx }\end{DoxyParamCaption})}
+
+Traverses the \hyperlink{structglow_1_1runtime_1_1_d_a_g}{D\+AG} {\ttfamily networks} and\+:
+\begin{DoxyEnumerate}
+\item Retrieves each node\textquotesingle{}s \hyperlink{classglow_1_1_function}{Function} from the provided {\ttfamily module}.
+\item Compiles it using the provided \hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} {\ttfamily cctx}.
+\item Assigns a device and calls add\+Network on the chosen device(s). \begin{DoxyReturn}{Returns}
+a Error indicating if the operation was a success. 
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Runtime/\+Provisioner/Provisioner.\+h\item 
+lib/\+Runtime/\+Provisioner/Provisioner.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,1086 @@
+\hypertarget{classglow_1_1_function}{}\section{glow\+:\+:Function Class Reference}
+\label{classglow_1_1_function}\index{glow\+::\+Function@{glow\+::\+Function}}
+
+
+Represents the compute graph.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a3d93675aea23aef06971152d96ef9ce3}\label{classglow_1_1_function_a3d93675aea23aef06971152d96ef9ce3}} 
+{\bfseries Function} (\hyperlink{classglow_1_1_module}{Module} $\ast$parent, llvm\+::\+String\+Ref Name=\{\})
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a0e5dc1e1b10a595f5c2ceeb59e38226c}\label{classglow_1_1_function_a0e5dc1e1b10a595f5c2ceeb59e38226c}} 
+void \hyperlink{classglow_1_1_function_a0e5dc1e1b10a595f5c2ceeb59e38226c}{set\+State} (\hyperlink{namespaceglow_a1c98da7214165b41c7d6b255503d4062}{Function\+State} state)
+\begin{DoxyCompactList}\small\item\em Sets the state of the function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_a9e85c7a5cd8e4986ec861ae0ebd58fe8}\label{classglow_1_1_function_a9e85c7a5cd8e4986ec861ae0ebd58fe8}} 
+\hyperlink{namespaceglow_a1c98da7214165b41c7d6b255503d4062}{Function\+State} \hyperlink{classglow_1_1_function_a9e85c7a5cd8e4986ec861ae0ebd58fe8}{get\+State} ()
+\begin{DoxyCompactList}\small\item\em Gets the state of the function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_aae6019209226269eb42b5f27fc99d615}\label{classglow_1_1_function_aae6019209226269eb42b5f27fc99d615}} 
+std\+::string {\bfseries get\+Filename} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_ad6a16c8f354d8ba2316e47fc472d5305}\label{classglow_1_1_function_ad6a16c8f354d8ba2316e47fc472d5305}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classglow_1_1_log_context}{Log\+Context} $>$ \hyperlink{classglow_1_1_function_ad6a16c8f354d8ba2316e47fc472d5305}{get\+Log\+Context} ()
+\begin{DoxyCompactList}\small\item\em Return the log context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_acabd268f7c23b3a67401f2df9a5a2540}\label{classglow_1_1_function_acabd268f7c23b3a67401f2df9a5a2540}} 
+void \hyperlink{classglow_1_1_function_acabd268f7c23b3a67401f2df9a5a2540}{add\+Metadata\+Placeholder} (\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$PH)
+\begin{DoxyCompactList}\small\item\em Add placeholder for metadata such as profiling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_a65e182d5e7ce0b7722236423caeeda6f}\label{classglow_1_1_function_a65e182d5e7ce0b7722236423caeeda6f}} 
+const std\+::vector$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \& \hyperlink{classglow_1_1_function_a65e182d5e7ce0b7722236423caeeda6f}{get\+Metadata\+Placeholders} () const
+\begin{DoxyCompactList}\small\item\em Get list of metadata placeholders. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_ade4385a62022dd1a9dd993f4b3b21a5c}\label{classglow_1_1_function_ade4385a62022dd1a9dd993f4b3b21a5c}} 
+\hyperlink{classglow_1_1_module}{Module} $\ast$ {\bfseries get\+Parent} ()
+\item 
+void \hyperlink{classglow_1_1_function_ab1dabb8d94895004268410f672079f1a}{order\+Nodes} ()
+\item 
+Placeholder\+List \hyperlink{classglow_1_1_function_abc73d2632bdeaaa7a2ec029196608ab7}{find\+Placeholders} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a650818e9aa23fa39d25853456c8df56e}\label{classglow_1_1_function_a650818e9aa23fa39d25853456c8df56e}} 
+Placeholder\+List {\bfseries find\+Placeholders} () const
+\item 
+Const\+List \hyperlink{classglow_1_1_function_a0668c5170eedf2b84a292367cfb4fbac}{find\+Constants} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a0c7a59dca6b535e94ffaa5d0e72d2d1e}\label{classglow_1_1_function_a0c7a59dca6b535e94ffaa5d0e72d2d1e}} 
+Const\+List {\bfseries find\+Constants} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a5f187ac21a2f08073a24b75c13817b4e}\label{classglow_1_1_function_a5f187ac21a2f08073a24b75c13817b4e}} 
+const \hyperlink{classglow_1_1_module}{Module} $\ast$ {\bfseries get\+Parent} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_aa0abc2117e80f3253aa91122a7c786e9}\label{classglow_1_1_function_aa0abc2117e80f3253aa91122a7c786e9}} 
+{\footnotesize template$<$class Node\+Ty $>$ }\\Node\+Ty $\ast$ \hyperlink{classglow_1_1_function_aa0abc2117e80f3253aa91122a7c786e9}{add\+Node} (Node\+Ty $\ast$N)
+\begin{DoxyCompactList}\small\item\em Inserts the node {\ttfamily N} to the list of nodes, and returns the inserted node. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_function_a74703c0bb968ca968b65dbc20653940c}{take\+Ownership\+Of\+Node} (\hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_afeb654422d9a79453aa67d0dc1e565ae}\label{classglow_1_1_function_afeb654422d9a79453aa67d0dc1e565ae}} 
+\hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \& \hyperlink{classglow_1_1_function_afeb654422d9a79453aa67d0dc1e565ae}{get\+P\+R\+NG} ()
+\begin{DoxyCompactList}\small\item\em Get the pseudo-\/random number generator used by this module. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_trace_event_node}{Trace\+Event\+Node} $\ast$ \hyperlink{classglow_1_1_function_a85bff46320d22692796a98c44c785d36}{create\+Trace\+Event} (llvm\+::\+String\+Ref event\+Name, llvm\+::\+String\+Ref event\+Type, \hyperlink{classglow_1_1_node}{Node} $\ast$data, unsigned index)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_adb693d81eaa8052223079ae79d16c65b}\label{classglow_1_1_function_adb693d81eaa8052223079ae79d16c65b}} 
+void \hyperlink{classglow_1_1_function_adb693d81eaa8052223079ae79d16c65b}{erase\+Node} (\hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\begin{DoxyCompactList}\small\item\em Erase the node {\ttfamily N} from the \hyperlink{classglow_1_1_function}{Function}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_ad0c817ad84187e6237fe2e3b6da41c37}\label{classglow_1_1_function_ad0c817ad84187e6237fe2e3b6da41c37}} 
+void \hyperlink{classglow_1_1_function_ad0c817ad84187e6237fe2e3b6da41c37}{erase\+Node} (Nodes\+List\+::iterator I)
+\begin{DoxyCompactList}\small\item\em Erase the node {\ttfamily I} from the \hyperlink{classglow_1_1_function}{Function}. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_function}{Function} $\ast$ \hyperlink{classglow_1_1_function_a52bb076e6a99804a4349e1cb3b54291f}{clone} (llvm\+::\+String\+Ref new\+Name, llvm\+::\+Dense\+Map$<$ \hyperlink{classglow_1_1_node}{Node} $\ast$, \hyperlink{classglow_1_1_node}{Node} $\ast$$>$ $\ast$map=nullptr)
+\item 
+bool \hyperlink{classglow_1_1_function_a73897a61138cf69eacb41357839815df}{verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a61d47fdde36a323d732b9f74e18fca55}\label{classglow_1_1_function_a61d47fdde36a323d732b9f74e18fca55}} 
+void \hyperlink{classglow_1_1_function_a61d47fdde36a323d732b9f74e18fca55}{dump} () const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_function}{Function} into provided output stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_a7f2478eeed56907e1b9fb0bed6d8bd2a}\label{classglow_1_1_function_a7f2478eeed56907e1b9fb0bed6d8bd2a}} 
+std\+::string \hyperlink{classglow_1_1_function_a7f2478eeed56907e1b9fb0bed6d8bd2a}{to\+String} () const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_function}{Function} to std\+::string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_ae59478d0dd1e2b501de0e71ab508a4f6}\label{classglow_1_1_function_ae59478d0dd1e2b501de0e71ab508a4f6}} 
+void \hyperlink{classglow_1_1_function_ae59478d0dd1e2b501de0e71ab508a4f6}{dump} (llvm\+::raw\+\_\+ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_function}{Function} into default output stream. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classglow_1_1_function_a25f5f7d84157c8c3c20faeb82c083c2d}{dump\+D\+AG} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a3e8e3a9043edf5869ee13618fb04b731}\label{classglow_1_1_function_a3e8e3a9043edf5869ee13618fb04b731}} 
+void \hyperlink{classglow_1_1_function_a3e8e3a9043edf5869ee13618fb04b731}{dump\+D\+AG} (llvm\+::\+String\+Ref dot\+Filename)
+\begin{DoxyCompactList}\small\item\em Dump a dotty graph that depicts the function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_a524c4964b448c3b9a9b15b2a26faa8c3}\label{classglow_1_1_function_a524c4964b448c3b9a9b15b2a26faa8c3}} 
+void \hyperlink{classglow_1_1_function_a524c4964b448c3b9a9b15b2a26faa8c3}{dump\+D\+AG} (const char $\ast$dot\+Filename)
+\begin{DoxyCompactList}\small\item\em Dump a dotty graph that depicts the function. \end{DoxyCompactList}\item 
+\hyperlink{namespaceglow_a4919b7ef01548e927f0a5acb3a7400b9}{Nodes\+List} \& \hyperlink{classglow_1_1_function_ad79bc51bcabb426b1f64e8a0700fba2d}{get\+Nodes} ()
+\item 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{classglow_1_1_function_a26cfda31e823d1499173f1bd23f2d86c}{get\+Node\+By\+Name} (llvm\+::\+String\+Ref name)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_ad8c94ce2d752b75a9912369402f4cc5f}\label{classglow_1_1_function_ad8c94ce2d752b75a9912369402f4cc5f}} 
+const \hyperlink{namespaceglow_a4919b7ef01548e927f0a5acb3a7400b9}{Nodes\+List} \& {\bfseries get\+Nodes} () const
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ The builder functions below are identical to the builder functions}\par
+{\em above except that they create nodes that use \hyperlink{classglow_1_1_placeholder}{Placeholder} instead of Variables. The methods create and initialize the tensors in the \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings}. As soon as we finish the \hyperlink{classglow_1_1_placeholder}{Placeholder} migration we\textquotesingle{}ll delete these methods and merge them with the builder methods above. See issue \#1334. }\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a7ecd6f8406787c42d7fe75370acae397}\label{classglow_1_1_function_a7ecd6f8406787c42d7fe75370acae397}} 
+\hyperlink{classglow_1_1_batch_normalization_node}{Batch\+Normalization\+Node} $\ast$ {\bfseries create\+Batch\+Normalization} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} channel\+Idx=0, float epsilon=1e-\/5, float momentum=0.\+9)
+\item 
+\hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} $\ast$ \hyperlink{classglow_1_1_function_a878cada26ba13b88d149d7a631f5ae10}{create\+Conv} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, size\+\_\+t out\+Channels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ kernels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ strides, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} group, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} dilation=1, \hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout} layout=N\+H\+WC)
+\item 
+\hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} $\ast$ \hyperlink{classglow_1_1_function_a9fce0de99a46d774b0f9bd9aa04b1498}{create\+Conv} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, size\+\_\+t out\+Channels, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} kernel, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} stride, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} pad, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} group, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} dilation=1, \hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout} layout=N\+H\+WC)
+\item 
+\hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} $\ast$ \hyperlink{classglow_1_1_function_aaad3ec8a2afa0bcfcb21a55719f3df4f}{create\+Conv3D} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, size\+\_\+t out\+Channels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ kernels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ strides, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} group)
+\item 
+\hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} $\ast$ \hyperlink{classglow_1_1_function_a99742506dcf9c372bb92cf74e8160de2}{create\+Conv3D} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, size\+\_\+t out\+Channels, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} kernel, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} stride, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} pad, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} group)
+\item 
+\hyperlink{classglow_1_1_fully_connected_node}{Fully\+Connected\+Node} $\ast$ \hyperlink{classglow_1_1_function_ade9306e5e5d5665e16fc64dcf8df3e94}{create\+Fully\+Connected} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, size\+\_\+t out\+Depth, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} axis=1)
+\item 
+void \hyperlink{classglow_1_1_function_a5aa2b425049f5e2868062da4ca7c438e}{create\+Simple\+R\+NN} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, llvm\+::\+String\+Ref name\+Prefix, const llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ inputs, unsigned batch\+Size, unsigned hidden\+Size, unsigned output\+Size, std\+::vector$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ \&outputs)
+\item 
+void \hyperlink{classglow_1_1_function_a38073ffa1c63421716ee236d56178738}{create\+G\+RU} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, llvm\+::\+String\+Ref name\+Prefix, const llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ inputs, unsigned batch\+Size, unsigned hidden\+Size, unsigned output\+Size, std\+::vector$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ \&outputs)
+\item 
+void \hyperlink{classglow_1_1_function_a031dffcebc9798d481beaefaa927db61}{create\+L\+S\+TM} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, llvm\+::\+String\+Ref name\+Prefix, const llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ inputs, unsigned batch\+Size, unsigned hidden\+Size, unsigned output\+Size, std\+::vector$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ \&outputs)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{namespaceglow_a4919b7ef01548e927f0a5acb3a7400b9}{Nodes\+List} Function\+::$\ast$ \hyperlink{classglow_1_1_function_aa766431c358524e3dfeafc66d1cdcb4f}{get\+Nodes\+Member\+Ptr} ()
+\end{DoxyCompactItemize}
+\subsection*{High-\/level, operation-\/level I\+R\+Builder.}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a1a8656058a9f271299328ad88644d5fc}\label{classglow_1_1_function_a1a8656058a9f271299328ad88644d5fc}} 
+{\footnotesize template$<$class T , class U $>$ }\\using {\bfseries enable\+\_\+if\+\_\+same\+\_\+t} = std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T, U $>$\+::value, U $>$
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a15cf464c45ccbcae923056644b444ce8}\label{classglow_1_1_function_a15cf464c45ccbcae923056644b444ce8}} 
+\hyperlink{classglow_1_1_pad_node}{Pad\+Node} $\ast$ {\bfseries create\+Pad} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} mode, llvm\+::\+Array\+Ref$<$ int $>$ pads, float value)
+\item 
+\hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} $\ast$ \hyperlink{classglow_1_1_function_a0b28c191e7dbb0c0c83165a7c7107313}{create\+Conv} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} filter, \hyperlink{structglow_1_1_node_value}{Node\+Value} bias, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ kernels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ strides, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} group, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} dilation=1, \hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout} layout=Convolution\+Layout\+::\+N\+H\+WC)
+\item 
+\hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} $\ast$ \hyperlink{classglow_1_1_function_ad16bccb2690886aa72ad02131f9caf2c}{create\+Conv} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} filter, \hyperlink{structglow_1_1_node_value}{Node\+Value} bias, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} kernel, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} stride, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} pad, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} group, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} dilation=1, \hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout} layout=Convolution\+Layout\+::\+N\+H\+WC)
+\item 
+\hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} $\ast$ \hyperlink{classglow_1_1_function_a5eec756ea2779f3768102cd496cce846}{create\+Conv3D} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} filter, \hyperlink{structglow_1_1_node_value}{Node\+Value} bias, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ kernels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ strides, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} group)
+\item 
+\hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} $\ast$ \hyperlink{classglow_1_1_function_a29c34498d91c08a88e7f503bcb55646d}{create\+Conv3D} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} filter, \hyperlink{structglow_1_1_node_value}{Node\+Value} bias, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} kernel, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} stride, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} pad, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} group)
+\item 
+\hyperlink{classglow_1_1_channelwise_quantized_convolution_node}{Channelwise\+Quantized\+Convolution\+Node} $\ast$ \hyperlink{classglow_1_1_function_a94c1fee1a3b4e7779c7a1cee21592f0f}{create\+Channelwise\+Quantized\+Conv} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{classglow_1_1_constant}{Constant} $\ast$filter, \hyperlink{classglow_1_1_constant}{Constant} $\ast$bias, \hyperlink{classglow_1_1_constant}{Constant} $\ast$scales, \hyperlink{classglow_1_1_constant}{Constant} $\ast$offsets, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ kernels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ strides, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} group)
+\item 
+\hyperlink{classglow_1_1_convert_to_node}{Convert\+To\+Node} $\ast$ \hyperlink{classglow_1_1_function_afb186d99df71f01dc37871b7a91fe207}{create\+Convert\+To} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\item 
+\hyperlink{classglow_1_1_convert_to_node}{Convert\+To\+Node} $\ast$ \hyperlink{classglow_1_1_function_aad00b9f260eb7c5c21f5c59ebd0089b3}{create\+Convert\+To} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} k)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a81424770e89904f98f677caf5d494997}\label{classglow_1_1_function_a81424770e89904f98f677caf5d494997}} 
+\hyperlink{classglow_1_1_max_pool_node}{Max\+Pool\+Node} $\ast$ {\bfseries create\+Max\+Pool} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ kernels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ strides, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ pads, \hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout} layout=N\+H\+WC)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a3494f53b040eec329effdeca0373a19d}\label{classglow_1_1_function_a3494f53b040eec329effdeca0373a19d}} 
+\hyperlink{classglow_1_1_max_pool_node}{Max\+Pool\+Node} $\ast$ {\bfseries create\+Max\+Pool} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} kernel, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} stride, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} pad, \hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout} layout=N\+H\+WC)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a34cfd29adbc1ac732b8e54729cc9fc15}\label{classglow_1_1_function_a34cfd29adbc1ac732b8e54729cc9fc15}} 
+\hyperlink{classglow_1_1_avg_pool_node}{Avg\+Pool\+Node} $\ast$ {\bfseries create\+Avg\+Pool} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ kernels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ strides, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ pads, \hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout} layout=N\+H\+WC)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a9732922d9ff497ae3bbbcaa44403b23a}\label{classglow_1_1_function_a9732922d9ff497ae3bbbcaa44403b23a}} 
+\hyperlink{classglow_1_1_avg_pool_node}{Avg\+Pool\+Node} $\ast$ {\bfseries create\+Avg\+Pool} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ kernels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ strides, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ pads, \hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout} layout=N\+H\+WC)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a76cf51e276c58cbefba50f01a24c1e09}\label{classglow_1_1_function_a76cf51e276c58cbefba50f01a24c1e09}} 
+\hyperlink{classglow_1_1_avg_pool_node}{Avg\+Pool\+Node} $\ast$ {\bfseries create\+Avg\+Pool} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} kernel, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} stride, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} pad, \hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout} layout=N\+H\+WC)
+\item 
+\hyperlink{classglow_1_1_adaptive_avg_pool_node}{Adaptive\+Avg\+Pool\+Node} $\ast$ \hyperlink{classglow_1_1_function_a5145a97eddf1d1dd26ae7a9de37b341b}{create\+Adaptive\+Avg\+Pool} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\item 
+\hyperlink{classglow_1_1_fully_connected_node}{Fully\+Connected\+Node} $\ast$ \hyperlink{classglow_1_1_function_a369fe971f7e75ca38ff5d6bb0928be89}{create\+Fully\+Connected} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{classglow_1_1_storage}{Storage} $\ast$W, \hyperlink{classglow_1_1_storage}{Storage} $\ast$B, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} axis=1)
+\item 
+\hyperlink{classglow_1_1_fully_connected_node}{Fully\+Connected\+Node} $\ast$ \hyperlink{classglow_1_1_function_ad38b3e6dd3052c286126ab1239d97aa8}{create\+Fully\+Connected} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} W, \hyperlink{structglow_1_1_node_value}{Node\+Value} B, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} axis=1)
+\item 
+\hyperlink{classglow_1_1_rowwise_quantized_fully_connected_node}{Rowwise\+Quantized\+Fully\+Connected\+Node} $\ast$ \hyperlink{classglow_1_1_function_aa4b45584a08282fd6b027ce972c5f74d}{create\+Rowwise\+Quantized\+Fully\+Connected} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{classglow_1_1_constant}{Constant} $\ast$W, \hyperlink{structglow_1_1_node_value}{Node\+Value} B, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, quantization\+::\+Schema schema, bool transpose\+Weight=false)
+\item 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{classglow_1_1_function_accf9b83116497dd0ac4c3bb730be5153}{create\+Dot\+Product} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} X, \hyperlink{structglow_1_1_node_value}{Node\+Value} Y)
+\item 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{classglow_1_1_function_aefc00c1542599ab75332a236d1aee6a3}{create\+Elementwise\+Linear} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} X, \hyperlink{structglow_1_1_node_value}{Node\+Value} w, \hyperlink{structglow_1_1_node_value}{Node\+Value} b, unsigned axis)
+\item 
+\hyperlink{classglow_1_1_relu_node}{Relu\+Node} $\ast$ \hyperlink{classglow_1_1_function_ada1e5e0678dc0af5c17835ffea6c3367}{create\+R\+E\+LU} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input)
+\item 
+\hyperlink{classglow_1_1_relu_node}{Relu\+Node} $\ast$ \hyperlink{classglow_1_1_function_a31145d8863286195749705d53a93b9b0}{create\+R\+E\+LU} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\item 
+\hyperlink{classglow_1_1_p_relu_node}{P\+Relu\+Node} $\ast$ \hyperlink{classglow_1_1_function_a128f705eed37efbbb40cc644c36dd16e}{create\+P\+R\+E\+LU} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} slope)
+\item 
+\hyperlink{classglow_1_1_p_relu_node}{P\+Relu\+Node} $\ast$ \hyperlink{classglow_1_1_function_a87131023c229abbfbc109c06485106a7}{create\+P\+R\+E\+LU} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} slope, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\item 
+\hyperlink{classglow_1_1_sigmoid_node}{Sigmoid\+Node} $\ast$ \hyperlink{classglow_1_1_function_a8e62024d3d2033210f189b8f0fb19b04}{create\+Sigmoid} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{structglow_1_1_node_value}{Node\+Value} input)
+\item 
+\hyperlink{classglow_1_1_sigmoid_node}{Sigmoid\+Node} $\ast$ \hyperlink{classglow_1_1_function_a5493f61de698fa74ca152bbb52b212aa}{create\+Sigmoid} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input)
+\item 
+\hyperlink{classglow_1_1_tanh_node}{Tanh\+Node} $\ast$ \hyperlink{classglow_1_1_function_a859e8e441d4479750853cca69c357803}{create\+Tanh} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{structglow_1_1_node_value}{Node\+Value} input)
+\item 
+\hyperlink{classglow_1_1_tanh_node}{Tanh\+Node} $\ast$ \hyperlink{classglow_1_1_function_a311e1981e013129cef4882a2598c36f4}{create\+Tanh} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input)
+\item 
+\hyperlink{classglow_1_1_exp_node}{Exp\+Node} $\ast$ \hyperlink{classglow_1_1_function_af32483c4b5aff8743513d9eeec6d26fe}{create\+Exp} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input)
+\item 
+\hyperlink{classglow_1_1_log_node}{Log\+Node} $\ast$ \hyperlink{classglow_1_1_function_a4fd96b3007929f8a2c534e72311cd6e8}{create\+Log} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty=nullptr)
+\item 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{classglow_1_1_function_a81e3b70fd3322cc3ae6f733c7c818ff2}{create\+Logit} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, float eps)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a2ecf62f58de6964e28f495bd3595e813}\label{classglow_1_1_function_a2ecf62f58de6964e28f495bd3595e813}} 
+\hyperlink{classglow_1_1_soft_max_node}{Soft\+Max\+Node} $\ast$ {\bfseries create\+Soft\+Max} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} selected, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty=nullptr)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a58a9399b85f89421ef812a7b05f16966}\label{classglow_1_1_function_a58a9399b85f89421ef812a7b05f16966}} 
+\hyperlink{classglow_1_1_cross_entropy_loss_node}{Cross\+Entropy\+Loss\+Node} $\ast$ {\bfseries create\+Cross\+Entropy\+Loss} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} labels)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_ae34682d96ea79254986f7026a0d53398}\label{classglow_1_1_function_ae34682d96ea79254986f7026a0d53398}} 
+\hyperlink{classglow_1_1_regression_node}{Regression\+Node} $\ast$ {\bfseries create\+Regression} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} expected)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_aba0a2bb490c6973c7986c635c10f3a60}\label{classglow_1_1_function_aba0a2bb490c6973c7986c635c10f3a60}} 
+\hyperlink{classglow_1_1_sigmoid_cross_entropy_with_logits_node}{Sigmoid\+Cross\+Entropy\+With\+Logits\+Node} $\ast$ \hyperlink{classglow_1_1_function_aba0a2bb490c6973c7986c635c10f3a60}{create\+Sigmoid\+Cross\+Entropy\+With\+Logits} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} logits, \hyperlink{structglow_1_1_node_value}{Node\+Value} targets)
+\begin{DoxyCompactList}\small\item\em Creates a node, which computes sigmoid cross entropy between two inputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_a5761ec0e5f1d4ef24a00ed2b8e97e1b2}\label{classglow_1_1_function_a5761ec0e5f1d4ef24a00ed2b8e97e1b2}} 
+\hyperlink{classglow_1_1_reshape_node}{Reshape\+Node} $\ast$ {\bfseries create\+Reshape} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, Unsigned\+Array\+Ref shape)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a95baf74375150ab5f302ff9996278bf2}\label{classglow_1_1_function_a95baf74375150ab5f302ff9996278bf2}} 
+\hyperlink{classglow_1_1_transpose_node}{Transpose\+Node} $\ast$ {\bfseries create\+Transpose} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ shuffle)
+\item 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{classglow_1_1_function_a757d71d8785b075edcc6f0e9b9bc12ac}{create\+Broadcast} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, Unsigned\+Array\+Ref new\+Shape, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} axis)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_af67b2d59133de2a5fa8d4858758841b0}\label{classglow_1_1_function_af67b2d59133de2a5fa8d4858758841b0}} 
+\hyperlink{classglow_1_1_concat_node}{Concat\+Node} $\ast$ \hyperlink{classglow_1_1_function_af67b2d59133de2a5fa8d4858758841b0}{create\+Concat} (llvm\+::\+String\+Ref name, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ inputs, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} dimension)
+\begin{DoxyCompactList}\small\item\em Create concat node which concatenates input tensors along {\ttfamily dimension}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_ac904da4288552dd4146ea199a04a072d}\label{classglow_1_1_function_ac904da4288552dd4146ea199a04a072d}} 
+\hyperlink{classglow_1_1_concat_node}{Concat\+Node} $\ast$ \hyperlink{classglow_1_1_function_ac904da4288552dd4146ea199a04a072d}{create\+Concat} (llvm\+::\+String\+Ref name, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ inputs, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} dimension, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\begin{DoxyCompactList}\small\item\em Create concat node with the given return type {\ttfamily out\+Ty}. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_tile_node}{Tile\+Node} $\ast$ \hyperlink{classglow_1_1_function_aea101a646a4e71c0b513608587127217}{create\+Tile} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} tiles, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} axis, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty=nullptr)
+\item 
+\hyperlink{classglow_1_1_insert_tensor_node}{Insert\+Tensor\+Node} $\ast$ \hyperlink{classglow_1_1_function_aeacd10cc5da0f12caa196897ce7a6141}{create\+Insert\+Tensor} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} big, \hyperlink{structglow_1_1_node_value}{Node\+Value} small, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ start, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} count=1, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} axis=0)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a05b8477dbfb921800443064c03a7ac50}\label{classglow_1_1_function_a05b8477dbfb921800443064c03a7ac50}} 
+\hyperlink{classglow_1_1_slice_node}{Slice\+Node} $\ast$ {\bfseries create\+Slice} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, Unsigned\+Array\+Ref begin, Unsigned\+Array\+Ref end)
+\item 
+\hyperlink{classglow_1_1_slice_node}{Slice\+Node} $\ast$ \hyperlink{classglow_1_1_function_abdff3f5f232d5db7d7b7529516053964}{create\+Slice} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ start, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\item 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{classglow_1_1_function_a0a16974812ba2aaadd2ec5cf521ef1a0}{create\+Channel\+Shuffle} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, size\+\_\+t group, size\+\_\+t kernel)
+\item 
+\hyperlink{classglow_1_1_arg_max_node}{Arg\+Max\+Node} $\ast$ \hyperlink{classglow_1_1_function_a0dffc1674d4a1654cb7206a4d7752b1e}{create\+Arg\+Max} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} axis, bool keep\+Dims)
+\item 
+\hyperlink{classglow_1_1_reshape_node}{Reshape\+Node} $\ast$ \hyperlink{classglow_1_1_function_a5fa046629fa2f742a28a49966c67e947}{create\+Squeeze} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ axes)
+\item 
+\hyperlink{classglow_1_1_reshape_node}{Reshape\+Node} $\ast$ \hyperlink{classglow_1_1_function_a05272c5de8896a7f0110b620ae8ee3d9}{create\+Expand\+Dims} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ axes)
+\item 
+\hyperlink{classglow_1_1_reshape_node}{Reshape\+Node} $\ast$ \hyperlink{classglow_1_1_function_a5978750e2f05e9c022756e49e2591830}{create\+Flatten} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} axis)
+\item 
+void \hyperlink{classglow_1_1_function_a9f77fd01d257c12ce44d64ee25c9a65f}{create\+Split} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} output\+Num, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} axis, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ split, std\+::vector$<$ \hyperlink{classglow_1_1_slice_node}{Slice\+Node} $\ast$$>$ \&outputs)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a2008070c63095bd8d5a2923253d91875}\label{classglow_1_1_function_a2008070c63095bd8d5a2923253d91875}} 
+\hyperlink{classglow_1_1_batch_normalization_node}{Batch\+Normalization\+Node} $\ast$ {\bfseries create\+Batch\+Normalization} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} beta, \hyperlink{structglow_1_1_node_value}{Node\+Value} scale, \hyperlink{structglow_1_1_node_value}{Node\+Value} mean, \hyperlink{structglow_1_1_node_value}{Node\+Value} var, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} channel\+Idx=0, float epsilon=1e-\/5, float momentum=0.\+9)
+\item 
+\hyperlink{classglow_1_1_bucketize_node}{Bucketize\+Node} $\ast$ \hyperlink{classglow_1_1_function_aa6412c6acdbc1e9c6ec002c841e071f7}{create\+Bucketize\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, llvm\+::\+Array\+Ref$<$ float $>$ boundaries)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a544aa71f28b5c4bd7c890febdc36b95a}\label{classglow_1_1_function_a544aa71f28b5c4bd7c890febdc36b95a}} 
+\hyperlink{classglow_1_1_local_response_normalization_node}{Local\+Response\+Normalization\+Node} $\ast$ {\bfseries create\+Local\+Response\+Normalization} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} half\+Window\+Size=2, float alpha=1e-\/4, float beta=0.\+75, float k=2.\+0)
+\item 
+\hyperlink{classglow_1_1_modulo_node}{Modulo\+Node} $\ast$ \hyperlink{classglow_1_1_function_ae2629554747ce321d9ea9fc688ecde30}{create\+Modulo} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, int64\+\_\+t divisor, bool sign\+Follow\+Divisor=false)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_ad5fc9ffad1ed89c88bc53b5121e8d1d5}\label{classglow_1_1_function_ad5fc9ffad1ed89c88bc53b5121e8d1d5}} 
+{\bfseries A\+R\+I\+T\+H\+M\+E\+T\+I\+C\+\_\+\+F\+U\+N\+\_\+\+D\+E\+CL} (Add)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a5299ac3adfd3aa3f177e07fdef51b505}\label{classglow_1_1_function_a5299ac3adfd3aa3f177e07fdef51b505}} 
+{\bfseries A\+R\+I\+T\+H\+M\+E\+T\+I\+C\+\_\+\+F\+U\+N\+\_\+\+D\+E\+CL} (Mul)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_ab20bc7409fa02bd60c68cf268f772227}\label{classglow_1_1_function_ab20bc7409fa02bd60c68cf268f772227}} 
+{\bfseries A\+R\+I\+T\+H\+M\+E\+T\+I\+C\+\_\+\+F\+U\+N\+\_\+\+D\+E\+CL} (Sub)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a957466a0dd20deaa6695468c59c55dc5}\label{classglow_1_1_function_a957466a0dd20deaa6695468c59c55dc5}} 
+{\bfseries A\+R\+I\+T\+H\+M\+E\+T\+I\+C\+\_\+\+F\+U\+N\+\_\+\+D\+E\+CL} (Div)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a3db12acd2848454a919bc97924838485}\label{classglow_1_1_function_a3db12acd2848454a919bc97924838485}} 
+{\bfseries A\+R\+I\+T\+H\+M\+E\+T\+I\+C\+\_\+\+F\+U\+N\+\_\+\+D\+E\+CL} (Max)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a0f3b6f9d7f4f65bc1820c4bdcfab941a}\label{classglow_1_1_function_a0f3b6f9d7f4f65bc1820c4bdcfab941a}} 
+{\bfseries A\+R\+I\+T\+H\+M\+E\+T\+I\+C\+\_\+\+F\+U\+N\+\_\+\+D\+E\+CL} (Min)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a676ccc5af05703fee7bce9b2d50ae77e}\label{classglow_1_1_function_a676ccc5af05703fee7bce9b2d50ae77e}} 
+{\bfseries A\+R\+I\+T\+H\+M\+E\+T\+I\+C\+\_\+\+F\+U\+N\+\_\+\+D\+E\+CL} (Cmp\+L\+TE)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a4cfacd5bdf971b6f8faff5bc40277225}\label{classglow_1_1_function_a4cfacd5bdf971b6f8faff5bc40277225}} 
+{\bfseries A\+R\+I\+T\+H\+M\+E\+T\+I\+C\+\_\+\+F\+U\+N\+\_\+\+D\+E\+CL} (Cmp\+LT)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_aa724d8f9ff0b904331213717101ced8d}\label{classglow_1_1_function_aa724d8f9ff0b904331213717101ced8d}} 
+{\bfseries A\+R\+I\+T\+H\+M\+E\+T\+I\+C\+\_\+\+F\+U\+N\+\_\+\+D\+E\+CL} (Cmp\+EQ)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a37ca93b01c604a61e82f7a1795f8d674}\label{classglow_1_1_function_a37ca93b01c604a61e82f7a1795f8d674}} 
+{\bfseries A\+R\+I\+T\+H\+M\+E\+T\+I\+C\+\_\+\+F\+U\+N\+\_\+\+D\+E\+CL} (Pow)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a45a160429e8788071bc587a417edaa35}\label{classglow_1_1_function_a45a160429e8788071bc587a417edaa35}} 
+std\+::vector$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ {\bfseries broadcast\+Inputs} (int axis, const llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ inputs)
+\item 
+{\footnotesize template$<$class T , class... Args$>$ }\\enable\+\_\+if\+\_\+same\+\_\+t$<$ T, \hyperlink{classglow_1_1_select_node}{Select\+Node} $>$\+::type $\ast$ \hyperlink{classglow_1_1_function_ad8b34304a6130cd64289773e212dba8b}{create\+Node\+With\+Broadcast} (const std\+::string \&name, int axis, Args \&\&... input\+Args)
+\item 
+{\footnotesize template$<$class T , class... Args$>$ }\\enable\+\_\+if\+\_\+same\+\_\+t$<$ T, \hyperlink{classglow_1_1_cmp_l_t_node}{Cmp\+L\+T\+Node} $>$\+::type $\ast$ \hyperlink{classglow_1_1_function_a6b3c2945ca9381bc22dc01559dcdbbe9}{create\+Node\+With\+Broadcast} (const std\+::string \&name, int axis, Args \&\&... input\+Args)
+\item 
+\hyperlink{classglow_1_1_is_na_n_node}{Is\+Na\+N\+Node} $\ast$ \hyperlink{classglow_1_1_function_a441d3bf4a13e444a8ddaa5e129e3acee}{create\+Is\+NaN} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input)
+\item 
+\hyperlink{classglow_1_1_replace_na_n_node}{Replace\+Na\+N\+Node} $\ast$ \hyperlink{classglow_1_1_function_ad091697cc2cabe1ec8139eab16df6432}{create\+Replace\+NaN} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, float value)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_aa328c366d4dae452b12e4d3cfcafe4a3}\label{classglow_1_1_function_aa328c366d4dae452b12e4d3cfcafe4a3}} 
+\hyperlink{classglow_1_1_pow_node}{Pow\+Node} $\ast$ {\bfseries create\+Pow} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} base, float exp)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a40cc5b13c00716d04eaae431674a17ba}\label{classglow_1_1_function_a40cc5b13c00716d04eaae431674a17ba}} 
+\hyperlink{classglow_1_1_select_node}{Select\+Node} $\ast$ {\bfseries create\+Select} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Cond, \hyperlink{structglow_1_1_node_value}{Node\+Value} L\+HS, \hyperlink{structglow_1_1_node_value}{Node\+Value} R\+HS)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_ae4709be4b92c0294ec4e6a08b8bc8abf}\label{classglow_1_1_function_ae4709be4b92c0294ec4e6a08b8bc8abf}} 
+\hyperlink{classglow_1_1_select_node}{Select\+Node} $\ast$ {\bfseries create\+Select} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{structglow_1_1_node_value}{Node\+Value} Cond, \hyperlink{structglow_1_1_node_value}{Node\+Value} L\+HS, \hyperlink{structglow_1_1_node_value}{Node\+Value} R\+HS)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_ae701e42c30454e8a1ad9021ae0544ad0}\label{classglow_1_1_function_ae701e42c30454e8a1ad9021ae0544ad0}} 
+\hyperlink{classglow_1_1_splat_node}{Splat\+Node} $\ast$ {\bfseries create\+Splat} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} ty, float value)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a645c430d478415bb9dbac164390ce3cb}\label{classglow_1_1_function_a645c430d478415bb9dbac164390ce3cb}} 
+\hyperlink{classglow_1_1_mat_mul_node}{Mat\+Mul\+Node} $\ast$ {\bfseries create\+Mat\+Mul} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} lhs, \hyperlink{structglow_1_1_node_value}{Node\+Value} rhs)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_ae34171d96ac8fd4cf496e5c54ffab00b}\label{classglow_1_1_function_ae34171d96ac8fd4cf496e5c54ffab00b}} 
+\hyperlink{classglow_1_1_mat_mul_node}{Mat\+Mul\+Node} $\ast$ {\bfseries create\+Mat\+Mul} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{structglow_1_1_node_value}{Node\+Value} lhs, \hyperlink{structglow_1_1_node_value}{Node\+Value} rhs)
+\item 
+\hyperlink{classglow_1_1_batch_mat_mul_node}{Batch\+Mat\+Mul\+Node} $\ast$ \hyperlink{classglow_1_1_function_abdb2262cb88e35da526281c917c89774}{create\+Batch\+Mat\+Mul} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} lhs, \hyperlink{structglow_1_1_node_value}{Node\+Value} rhs)
+\item 
+\hyperlink{classglow_1_1_batched_reduce_add_node}{Batched\+Reduce\+Add\+Node} $\ast$ \hyperlink{classglow_1_1_function_a2c5f3c2af2648d3581dcb308ce2717f2}{create\+Batched\+Reduce\+Add} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} batch, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ axes)
+\item 
+\hyperlink{classglow_1_1_batched_reduce_add_node}{Batched\+Reduce\+Add\+Node} $\ast$ \hyperlink{classglow_1_1_function_ab00d007284518a222352b1a8083c892e}{create\+Batched\+Reduce\+Add} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{structglow_1_1_node_value}{Node\+Value} batch, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ axes)
+\item 
+\hyperlink{classglow_1_1_batched_reduce_min_node}{Batched\+Reduce\+Min\+Node} $\ast$ \hyperlink{classglow_1_1_function_a1e0f18260c6c63f0a20760a0a4a7ae2a}{create\+Batched\+Reduce\+Min} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} batch, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ axes)
+\item 
+\hyperlink{classglow_1_1_batched_reduce_mean_node}{Batched\+Reduce\+Mean\+Node} $\ast$ \hyperlink{classglow_1_1_function_ad4c8059d320a828aa4f6909804128479}{create\+Batched\+Reduce\+Mean} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{structglow_1_1_node_value}{Node\+Value} batch, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ axes)
+\item 
+\hyperlink{classglow_1_1_batched_reduce_mean_node}{Batched\+Reduce\+Mean\+Node} $\ast$ \hyperlink{classglow_1_1_function_aeb5d9dca40362f4088f9e6db5c41b0ee}{create\+Batched\+Reduce\+Mean} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} batch, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ axes)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a96bed8634d0a19292fd3a82d84e405f8}\label{classglow_1_1_function_a96bed8634d0a19292fd3a82d84e405f8}} 
+\hyperlink{classglow_1_1_batched_add_node}{Batched\+Add\+Node} $\ast$ {\bfseries create\+Batched\+Add} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} batch, \hyperlink{structglow_1_1_node_value}{Node\+Value} sample)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a429a3a119c976dabad7c60f1c45154ae}\label{classglow_1_1_function_a429a3a119c976dabad7c60f1c45154ae}} 
+\hyperlink{classglow_1_1_batched_add_node}{Batched\+Add\+Node} $\ast$ {\bfseries create\+Batched\+Add} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{structglow_1_1_node_value}{Node\+Value} batch, \hyperlink{structglow_1_1_node_value}{Node\+Value} sample)
+\item 
+\hyperlink{classglow_1_1_lengths_sum_node}{Lengths\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_a24bdca6a0b3ac6ba120f98b28440e2bc}{create\+Lengths\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} data, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths)
+\item 
+\hyperlink{classglow_1_1_sparse_lengths_sum_node}{Sparse\+Lengths\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_a5dd07dd06c24d69113033f9ceb1135ed}{create\+Sparse\+Lengths\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} data, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths)
+\item 
+\hyperlink{classglow_1_1_sparse_lengths_weighted_sum_node}{Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_a294f7aafb024ab39071832980f90fa8d}{create\+Sparse\+Lengths\+Weighted\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} data, \hyperlink{structglow_1_1_node_value}{Node\+Value} weights, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_af7a7f2e3210051403bbc3eecb016455e}\label{classglow_1_1_function_af7a7f2e3210051403bbc3eecb016455e}} 
+\hyperlink{classglow_1_1_sparse_lengths_weighted_sum_offsets_node}{Sparse\+Lengths\+Weighted\+Sum\+Offsets\+Node} $\ast$ \hyperlink{classglow_1_1_function_af7a7f2e3210051403bbc3eecb016455e}{create\+Sparse\+Lengths\+Weighted\+Sum\+Offsets} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} data, \hyperlink{structglow_1_1_node_value}{Node\+Value} weights, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} offsets)
+\begin{DoxyCompactList}\small\item\em Another version of Sparse\+Lengths\+Sum using offsets instead. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_sparse_lengths_weighted_sum_node}{Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_a1f195f77eb6fefdaac84ff2e1b887d75}{create\+Sparse\+Lengths\+Weighted\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty, \hyperlink{structglow_1_1_node_value}{Node\+Value} data, \hyperlink{structglow_1_1_node_value}{Node\+Value} weights, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths)
+\item 
+\hyperlink{classglow_1_1_rowwise_quantized_sparse_lengths_weighted_sum_node}{Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_a336683b0ec8e06e084caec12f60142fd}{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_constant}{Constant} $\ast$data, \hyperlink{classglow_1_1_constant}{Constant} $\ast$scales, \hyperlink{classglow_1_1_constant}{Constant} $\ast$offsets, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} precision=Elem\+Kind\+::\+Float\+Ty, bool use\+F\+P16\+Accumulation=false)
+\item 
+\hyperlink{classglow_1_1_rowwise_quantized_sparse_lengths_weighted_sum_node}{Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_ae7977506330eaf13bc3c39d63d83c333}{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_tensor}{Tensor} \&data, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths, quantization\+::\+Schema schema, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} precision=Elem\+Kind\+::\+Float\+Ty, bool use\+F\+P16\+Accumulation=false)
+\item 
+\hyperlink{classglow_1_1_rowwise_quantized_sparse_lengths_weighted_sum_node}{Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_ae17510e67747d910c5ba7999ff498ea5}{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_constant}{Constant} $\ast$data, \hyperlink{classglow_1_1_constant}{Constant} $\ast$scales, \hyperlink{classglow_1_1_constant}{Constant} $\ast$offsets, \hyperlink{structglow_1_1_node_value}{Node\+Value} weights, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} precision=Elem\+Kind\+::\+Float\+Ty, bool use\+F\+P16\+Accumulation=false)
+\item 
+\hyperlink{classglow_1_1_rowwise_quantized_sparse_lengths_weighted_sum_node}{Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_aae39e625ab8f247f03f7283dd7d0dd80}{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_tensor}{Tensor} \&data, \hyperlink{structglow_1_1_node_value}{Node\+Value} weights, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths, quantization\+::\+Schema schema, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} precision=Elem\+Kind\+::\+Float\+Ty, bool use\+F\+P16\+Accumulation=false)
+\item 
+\hyperlink{classglow_1_1_fused_rowwise_quantized_sparse_lengths_sum_node}{Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_a1ec48696db840ba590510e6c282b3a38}{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_constant}{Constant} $\ast$data, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths, bool use\+F\+P16\+Accumulation=false)
+\item 
+\hyperlink{classglow_1_1_fused_rowwise_quantized_sparse_lengths_sum_node}{Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_a50fe21630865f07b5fcaba7dcdeff6cb}{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_tensor}{Tensor} \&data, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} fused\+Elem\+Kind=Elem\+Kind\+::\+U\+Int8\+Fused\+Q\+Ty, bool use\+F\+P16\+Accumulation=false)
+\item 
+\hyperlink{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node}{Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_acc35291a608ce9d7aa2806ed50fa1e1b}{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} data, \hyperlink{structglow_1_1_node_value}{Node\+Value} weights, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths, bool use\+F\+P16\+Accumulation=false)
+\item 
+\hyperlink{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node}{Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ \hyperlink{classglow_1_1_function_a4463d76e607351b153d5c4704e9b26bb}{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_tensor}{Tensor} \&data, \hyperlink{structglow_1_1_node_value}{Node\+Value} weights, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} fused\+Elem\+Kind=Elem\+Kind\+::\+U\+Int8\+Fused\+Q\+Ty, bool use\+F\+P16\+Accumulation=false)
+\item 
+\hyperlink{classglow_1_1_lengths_to_ranges_node}{Lengths\+To\+Ranges\+Node} $\ast$ \hyperlink{classglow_1_1_function_a98924f81beee494322bc1cb8e7f5e5e7}{create\+Lengths\+To\+Ranges} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths)
+\item 
+\hyperlink{classglow_1_1_lengths_range_fill_node}{Lengths\+Range\+Fill\+Node} $\ast$ \hyperlink{classglow_1_1_function_a0e83d1e9da4a42527cc13d24ac29c17b}{create\+Lengths\+Range\+Fill} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} max\+Output\+Size)
+\item 
+\hyperlink{classglow_1_1_sparse_to_dense_node}{Sparse\+To\+Dense\+Node} $\ast$ \hyperlink{classglow_1_1_function_aa30faa862c948082d65911e42d9745e3}{create\+Sparse\+To\+Dense} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} values, \hyperlink{structglow_1_1_node_value}{Node\+Value} data\+To\+Infer\+Dim)
+\item 
+\hyperlink{classglow_1_1_sparse_to_dense_mask_node}{Sparse\+To\+Dense\+Mask\+Node} $\ast$ \hyperlink{classglow_1_1_function_a40c8dca4c538dfdf2d248bdb2c8d680a}{create\+Sparse\+To\+Dense\+Mask} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} values, \hyperlink{structglow_1_1_node_value}{Node\+Value} default\+Value, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths, llvm\+::\+Array\+Ref$<$ int64\+\_\+t $>$ mask)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a8fe83becaad9631ff34377f9b0943b54}\label{classglow_1_1_function_a8fe83becaad9631ff34377f9b0943b54}} 
+\hyperlink{classglow_1_1_save_node}{Save\+Node} $\ast$ {\bfseries create\+Save} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a3b112a4a4d551c9069d894d4dd7a0e6e}\label{classglow_1_1_function_a3b112a4a4d551c9069d894d4dd7a0e6e}} 
+\hyperlink{classglow_1_1_save_node}{Save\+Node} $\ast$ {\bfseries create\+Save} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$output)
+\item 
+\hyperlink{classglow_1_1_quantization_profile_node}{Quantization\+Profile\+Node} $\ast$ \hyperlink{classglow_1_1_function_ae9866986d73736c124e1bfaf3222aa13}{create\+Quantization\+Profile} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input)
+\item 
+\hyperlink{classglow_1_1_int_lookup_table_node}{Int\+Lookup\+Table\+Node} $\ast$ \hyperlink{classglow_1_1_function_ab6fb9971cd6af5a091098680ae2a26e0}{create\+Int\+Lookup\+Table} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, llvm\+::\+Array\+Ref$<$ int8\+\_\+t $>$ init\+Values, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_a0896ecd6746f310b8794f0cc26cbb378}\label{classglow_1_1_function_a0896ecd6746f310b8794f0cc26cbb378}} 
+\hyperlink{classglow_1_1_int_lookup_table_node}{Int\+Lookup\+Table\+Node} $\ast$ \hyperlink{classglow_1_1_function_a0896ecd6746f310b8794f0cc26cbb378}{create\+Int\+Tanh} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\begin{DoxyCompactList}\small\item\em Create quantized tanh. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_a14fb048e72c58e2b6be7403503e1dc55}\label{classglow_1_1_function_a14fb048e72c58e2b6be7403503e1dc55}} 
+\hyperlink{classglow_1_1_int_lookup_table_node}{Int\+Lookup\+Table\+Node} $\ast$ \hyperlink{classglow_1_1_function_a14fb048e72c58e2b6be7403503e1dc55}{create\+Int\+Sigmoid} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\begin{DoxyCompactList}\small\item\em Create quantized sigmoid. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_a6e2f21b419a4f8b79696807baa54d257}\label{classglow_1_1_function_a6e2f21b419a4f8b79696807baa54d257}} 
+\hyperlink{classglow_1_1_top_k_node}{Top\+K\+Node} $\ast$ {\bfseries create\+TopK} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} k)
+\item 
+\hyperlink{classglow_1_1_gather_node}{Gather\+Node} $\ast$ \hyperlink{classglow_1_1_function_a5dedd74fc1b4538ad12cd60d43339dc8}{create\+Gather} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} data, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} batch\+Dims=0)
+\item 
+\hyperlink{classglow_1_1_gather_ranges_node}{Gather\+Ranges\+Node} $\ast$ \hyperlink{classglow_1_1_function_aff08f2044b5486dc1df39158fd333ceb}{create\+Gather\+Ranges} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} data, \hyperlink{structglow_1_1_node_value}{Node\+Value} ranges, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} max\+Output\+Size)
+\item 
+\hyperlink{classglow_1_1_scatter_data_node}{Scatter\+Data\+Node} $\ast$ \hyperlink{classglow_1_1_function_acbe25057f5bb26ea1011b44b8815d6c9}{create\+Scatter\+Data} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} data, \hyperlink{structglow_1_1_node_value}{Node\+Value} indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} slices, bool cumulative=false)
+\item 
+\hyperlink{classglow_1_1_batch_one_hot_node}{Batch\+One\+Hot\+Node} $\ast$ \hyperlink{classglow_1_1_function_a0863b14aadd1072ca7f12a1925a790b0}{create\+Batch\+One\+Hot} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} data, \hyperlink{structglow_1_1_node_value}{Node\+Value} lengths, \hyperlink{structglow_1_1_node_value}{Node\+Value} values)
+\item 
+\hyperlink{classglow_1_1_space_to_depth_node}{Space\+To\+Depth\+Node} $\ast$ \hyperlink{classglow_1_1_function_aad17e40fffb4fe287d329c74a32256ea}{create\+Space\+To\+Depth} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, unsigned block\+Size)
+\item 
+\hyperlink{classglow_1_1_resize_nearest_node}{Resize\+Nearest\+Node} $\ast$ \hyperlink{classglow_1_1_function_a3e21b55f20e481869522d45d6856f8ae}{create\+Resize\+Nearest} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, float height\+Scale, float width\+Scale)
+\item 
+\hyperlink{classglow_1_1_quantize_node}{Quantize\+Node} $\ast$ \hyperlink{classglow_1_1_function_a5137409e46739131c920052ea550b003}{create\+Quantize} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\item 
+\hyperlink{classglow_1_1_dequantize_node}{Dequantize\+Node} $\ast$ \hyperlink{classglow_1_1_function_ac553e6f6d7495c5371f64a9a41080f8d}{create\+Dequantize} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input)
+\item 
+\hyperlink{classglow_1_1_dequantize_node}{Dequantize\+Node} $\ast$ \hyperlink{classglow_1_1_function_a5f8e4f0404804fe1b57bb77e5f9a48e8}{create\+Dequantize} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\item 
+\hyperlink{classglow_1_1_rescale_quantized_node}{Rescale\+Quantized\+Node} $\ast$ \hyperlink{classglow_1_1_function_acac964783c66b57eb30d0d643cf73026}{create\+Rescale\+Quantized} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_type}{Type\+Ref} out\+Ty)
+\item 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{classglow_1_1_function_ab511da8a4555e0e9b7e62b2f378716c9}{create\+Weighted\+Sum} (llvm\+::\+String\+Ref name, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ data, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ weights)
+\item 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{classglow_1_1_function_ad6329d3a8eb625ebd0a6b8f77762801f}{create\+Batch\+Box\+Cox} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, \hyperlink{structglow_1_1_node_value}{Node\+Value} lambda1, \hyperlink{structglow_1_1_node_value}{Node\+Value} lambda2, float epsilon=std\+::numeric\+\_\+limits$<$ float $>$\+::min())
+\item 
+\hyperlink{classglow_1_1_clip_node}{Clip\+Node} $\ast$ \hyperlink{classglow_1_1_function_af91f1a1f6278ab97ef760c5a04b34a6a}{create\+Clip} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} input, float min, float max)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the compute graph. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_function_a52bb076e6a99804a4349e1cb3b54291f}\label{classglow_1_1_function_a52bb076e6a99804a4349e1cb3b54291f}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!clone@{clone}}
+\index{clone@{clone}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_function}{Function} $\ast$ Function\+::clone (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{new\+Name,  }\item[{llvm\+::\+Dense\+Map$<$ \hyperlink{classglow_1_1_node}{Node} $\ast$, \hyperlink{classglow_1_1_node}{Node} $\ast$$>$ $\ast$}]{map = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Clone the current function into a new function with the name {\ttfamily new\+Name}. If {\ttfamily map} is non-\/null then the procedure records the mapping between the old node to the new node in {\ttfamily map}. \begin{DoxyReturn}{Returns}
+a new function that is a copy of the current function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_a5145a97eddf1d1dd26ae7a9de37b341b}\label{classglow_1_1_function_a5145a97eddf1d1dd26ae7a9de37b341b}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Adaptive\+Avg\+Pool@{create\+Adaptive\+Avg\+Pool}}
+\index{create\+Adaptive\+Avg\+Pool@{create\+Adaptive\+Avg\+Pool}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Adaptive\+Avg\+Pool()}{createAdaptiveAvgPool()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_adaptive_avg_pool_node}{Adaptive\+Avg\+Pool\+Node} $\ast$ Function\+::create\+Adaptive\+Avg\+Pool (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty }\end{DoxyParamCaption})}
+
+Creates and \begin{DoxyReturn}{Returns}
+an Adaptive\+Avg\+Pool node with {\ttfamily name}, {\ttfamily input}, and {\ttfamily out\+Ty}. The \hyperlink{classglow_1_1_adaptive_avg_pool_node}{Adaptive\+Avg\+Pool\+Node} will perform average pooling over the input so that the result is of the shape specified by {\ttfamily out\+Ty}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_a0dffc1674d4a1654cb7206a4d7752b1e}\label{classglow_1_1_function_a0dffc1674d4a1654cb7206a4d7752b1e}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Arg\+Max@{create\+Arg\+Max}}
+\index{create\+Arg\+Max@{create\+Arg\+Max}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Arg\+Max()}{createArgMax()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_arg_max_node}{Arg\+Max\+Node} $\ast$ Function\+::create\+Arg\+Max (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{axis,  }\item[{bool}]{keep\+Dims }\end{DoxyParamCaption})}
+
+Computes the indices of the max elements of the input tensor along the provided {\ttfamily axis}. The resulted tensor has the same rank as the input if {\ttfamily keep\+Dims} equal 1. If {\ttfamily keepdims} equals 0, the resulted tensor has the reduced dimension pruned. The type of the output tensor is int64. \mbox{\Hypertarget{classglow_1_1_function_ad6329d3a8eb625ebd0a6b8f77762801f}\label{classglow_1_1_function_ad6329d3a8eb625ebd0a6b8f77762801f}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Batch\+Box\+Cox@{create\+Batch\+Box\+Cox}}
+\index{create\+Batch\+Box\+Cox@{create\+Batch\+Box\+Cox}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Batch\+Box\+Cox()}{createBatchBoxCox()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node} $\ast$ Function\+::create\+Batch\+Box\+Cox (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lambda1,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lambda2,  }\item[{float}]{epsilon = {\ttfamily std\+:\+:numeric\+\_\+limits$<$float$>$\+:\+:min()} }\end{DoxyParamCaption})}
+
+Create a series of nodes that implements a two-\/parameter rowwise Box-\/\+Cox transform. For each element of the {\ttfamily input} x, this is defined as\+:
+
+y = ln(max(x + lambda2, 1e-\/6)), if lambda1 == 0 (max(x + lambda2, 1e-\/6)$^\wedge$lambda1 -\/ 1)/lambda1, if lambda1 != 0
+
+The transform parameters {\ttfamily lambda1} and {\ttfamily lambda2} are vectors of size D that are broadcasted to match the size of {\ttfamily input} (NxD). The transform itself is implemented using elementwise Max, Add, Log (if lambda1 == 0), Pow, Splat, Sub, and Div (if lambda1 != 0) nodes with a Splat and Select node to select between the two cases listed above. \begin{DoxyReturn}{Returns}
+the final Select node. {\ttfamily epsilon} is used to ensure we do not divide by zero when calculating the lambda == 0 case, as we use a Select to choose which result to use, and so both paths are executed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_a2c5f3c2af2648d3581dcb308ce2717f2}\label{classglow_1_1_function_a2c5f3c2af2648d3581dcb308ce2717f2}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Batched\+Reduce\+Add@{create\+Batched\+Reduce\+Add}}
+\index{create\+Batched\+Reduce\+Add@{create\+Batched\+Reduce\+Add}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Batched\+Reduce\+Add()}{createBatchedReduceAdd()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_batched_reduce_add_node}{Batched\+Reduce\+Add\+Node} $\ast$ Function\+::create\+Batched\+Reduce\+Add (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{batch,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{axes }\end{DoxyParamCaption})}
+
+Create a node, performing Batched\+Reduce\+Add operation. Output type is based on the input {\ttfamily batch} type with dimensions specified with {\ttfamily axes} removed. \mbox{\Hypertarget{classglow_1_1_function_ab00d007284518a222352b1a8083c892e}\label{classglow_1_1_function_ab00d007284518a222352b1a8083c892e}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Batched\+Reduce\+Add@{create\+Batched\+Reduce\+Add}}
+\index{create\+Batched\+Reduce\+Add@{create\+Batched\+Reduce\+Add}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Batched\+Reduce\+Add()}{createBatchedReduceAdd()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_batched_reduce_add_node}{Batched\+Reduce\+Add\+Node} $\ast$ Function\+::create\+Batched\+Reduce\+Add (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{batch,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{axes }\end{DoxyParamCaption})}
+
+Create a node, performing Batched\+Reduce\+Add operation. Output type matches input {\ttfamily out\+Ty} type. \mbox{\Hypertarget{classglow_1_1_function_ad4c8059d320a828aa4f6909804128479}\label{classglow_1_1_function_ad4c8059d320a828aa4f6909804128479}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Batched\+Reduce\+Mean@{create\+Batched\+Reduce\+Mean}}
+\index{create\+Batched\+Reduce\+Mean@{create\+Batched\+Reduce\+Mean}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Batched\+Reduce\+Mean()}{createBatchedReduceMean()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_batched_reduce_mean_node}{Batched\+Reduce\+Mean\+Node} $\ast$ Function\+::create\+Batched\+Reduce\+Mean (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{batch,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{axes }\end{DoxyParamCaption})}
+
+Create a node, performing Batched\+Reduce\+Mean operation. Output type matches input {\ttfamily out\+Ty} type. \mbox{\Hypertarget{classglow_1_1_function_aeb5d9dca40362f4088f9e6db5c41b0ee}\label{classglow_1_1_function_aeb5d9dca40362f4088f9e6db5c41b0ee}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Batched\+Reduce\+Mean@{create\+Batched\+Reduce\+Mean}}
+\index{create\+Batched\+Reduce\+Mean@{create\+Batched\+Reduce\+Mean}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Batched\+Reduce\+Mean()}{createBatchedReduceMean()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_batched_reduce_mean_node}{Batched\+Reduce\+Mean\+Node} $\ast$ Function\+::create\+Batched\+Reduce\+Mean (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{batch,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{axes }\end{DoxyParamCaption})}
+
+Create a node, performing Batched\+Reduce\+Mean operation. Output type is based on the input {\ttfamily batch} type with dimensions specified with {\ttfamily axes} removed. \mbox{\Hypertarget{classglow_1_1_function_a1e0f18260c6c63f0a20760a0a4a7ae2a}\label{classglow_1_1_function_a1e0f18260c6c63f0a20760a0a4a7ae2a}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Batched\+Reduce\+Min@{create\+Batched\+Reduce\+Min}}
+\index{create\+Batched\+Reduce\+Min@{create\+Batched\+Reduce\+Min}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Batched\+Reduce\+Min()}{createBatchedReduceMin()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_batched_reduce_min_node}{Batched\+Reduce\+Min\+Node} $\ast$ Function\+::create\+Batched\+Reduce\+Min (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{batch,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{axes }\end{DoxyParamCaption})}
+
+Create a node, performing Batched\+Reduce\+Min operation. Output type is based on the input {\ttfamily batch} type with dimensions specified with {\ttfamily axes} removed. \mbox{\Hypertarget{classglow_1_1_function_abdb2262cb88e35da526281c917c89774}\label{classglow_1_1_function_abdb2262cb88e35da526281c917c89774}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Batch\+Mat\+Mul@{create\+Batch\+Mat\+Mul}}
+\index{create\+Batch\+Mat\+Mul@{create\+Batch\+Mat\+Mul}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Batch\+Mat\+Mul()}{createBatchMatMul()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_batch_mat_mul_node}{Batch\+Mat\+Mul\+Node} $\ast$ Function\+::create\+Batch\+Mat\+Mul (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lhs,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{rhs }\end{DoxyParamCaption})}
+
+{\ttfamily lhs} and {\ttfamily rhs} are 3d matrices, where the leading dimension is the batch size. For each batch element number i, lhs.\+slice(i) is multiplied by rhs.\+slice(i). \mbox{\Hypertarget{classglow_1_1_function_a0863b14aadd1072ca7f12a1925a790b0}\label{classglow_1_1_function_a0863b14aadd1072ca7f12a1925a790b0}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Batch\+One\+Hot@{create\+Batch\+One\+Hot}}
+\index{create\+Batch\+One\+Hot@{create\+Batch\+One\+Hot}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Batch\+One\+Hot()}{createBatchOneHot()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_batch_one_hot_node}{Batch\+One\+Hot\+Node} $\ast$ Function\+::create\+Batch\+One\+Hot (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{values }\end{DoxyParamCaption})}
+
+Given 2D matrix {\ttfamily data}, 1D vector {\ttfamily lengths} (of the same size as width of {\ttfamily data}), and 1D vector {\ttfamily values} (of the same size as sum of {\ttfamily lengths}), expand each row of the {\ttfamily data} to a row of zeros and ones, according to One Hot Encoding. j-\/th element of resulting i-\/th row is one iff {\ttfamily values}\mbox{[}j\mbox{]} == {\ttfamily data}\mbox{[}i\mbox{]}\mbox{[}some index within range of j\mbox{]}. \mbox{\Hypertarget{classglow_1_1_function_a757d71d8785b075edcc6f0e9b9bc12ac}\label{classglow_1_1_function_a757d71d8785b075edcc6f0e9b9bc12ac}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Broadcast@{create\+Broadcast}}
+\index{create\+Broadcast@{create\+Broadcast}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Broadcast()}{createBroadcast()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node} $\ast$ Function\+::create\+Broadcast (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{Unsigned\+Array\+Ref}]{new\+Shape,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{axis }\end{DoxyParamCaption})}
+
+Create a series of nodes that implement a Broadcast operation. The {\ttfamily input} \hyperlink{classglow_1_1_tensor}{Tensor} is broadcasted based on {\ttfamily new\+Shape} and along the {\ttfamily axis}, which defines the offset from the leading dimension under which broadcasting is performed. \mbox{\Hypertarget{classglow_1_1_function_aa6412c6acdbc1e9c6ec002c841e071f7}\label{classglow_1_1_function_aa6412c6acdbc1e9c6ec002c841e071f7}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Bucketize\+Node@{create\+Bucketize\+Node}}
+\index{create\+Bucketize\+Node@{create\+Bucketize\+Node}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Bucketize\+Node()}{createBucketizeNode()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_bucketize_node}{Bucketize\+Node} $\ast$ Function\+::create\+Bucketize\+Node (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{llvm\+::\+Array\+Ref$<$ float $>$}]{boundaries }\end{DoxyParamCaption})}
+
+Bucketizes the input tensor based on monotonically increasing {\ttfamily boundaries} for each value in {\ttfamily input}. For each value x in input, the operator \begin{DoxyReturn}{Returns}
+index i given boundaries\mbox{[}i-\/1\mbox{]} $<$ x $<$= boundaries\mbox{[}i\mbox{]}. If the value x is beyond the bounds of boundaries, 0 or len(boundaries) is returned as appropriate. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_a0a16974812ba2aaadd2ec5cf521ef1a0}\label{classglow_1_1_function_a0a16974812ba2aaadd2ec5cf521ef1a0}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Channel\+Shuffle@{create\+Channel\+Shuffle}}
+\index{create\+Channel\+Shuffle@{create\+Channel\+Shuffle}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Channel\+Shuffle()}{createChannelShuffle()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node} $\ast$ Function\+::create\+Channel\+Shuffle (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{size\+\_\+t}]{group,  }\item[{size\+\_\+t}]{kernel }\end{DoxyParamCaption})}
+
+Shuffles dimension number {\ttfamily kernel}. Suppose original size is D. It will be represented as groupX(D/group) matrix, transposed and concatenated back to size D. For example, shuffle of \{1, 2, 3, 4, 5, 6\} with {\ttfamily group} = 2 is \{1, 4, 2, 5, 3, 6\} \mbox{\Hypertarget{classglow_1_1_function_a94c1fee1a3b4e7779c7a1cee21592f0f}\label{classglow_1_1_function_a94c1fee1a3b4e7779c7a1cee21592f0f}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Channelwise\+Quantized\+Conv@{create\+Channelwise\+Quantized\+Conv}}
+\index{create\+Channelwise\+Quantized\+Conv@{create\+Channelwise\+Quantized\+Conv}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Channelwise\+Quantized\+Conv()}{createChannelwiseQuantizedConv()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_channelwise_quantized_convolution_node}{Channelwise\+Quantized\+Convolution\+Node} $\ast$ Function\+::create\+Channelwise\+Quantized\+Conv (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{filter,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{bias,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{scales,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{offsets,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{kernels,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{strides,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{pads,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{group }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{classglow_1_1_channelwise_quantized_convolution_node}{Channelwise\+Quantized\+Convolution\+Node} with the given {\ttfamily name} which convolves the 4D {\ttfamily input} with {\ttfamily filter} and . {\ttfamily scales} and {\ttfamily offsets} provide individual quantization parameters for each filter group in {\ttfamily filter}. {\ttfamily kernels} defines the size of the height and width dimensions of the filters. {\ttfamily strides} defines the number of steps to take in the input for each output cell. {\ttfamily pads} defines how many zero padding cells should be added to the input during convolution. {\ttfamily group} defines the number of groups the input and output channels should be divided into and convolved separately. N\+O\+TE\+: \hyperlink{classglow_1_1_channelwise_quantized_convolution_node}{Channelwise\+Quantized\+Convolution\+Node} does not yet have an implementation so attempting to run a graph containing this node fails. \mbox{\Hypertarget{classglow_1_1_function_af91f1a1f6278ab97ef760c5a04b34a6a}\label{classglow_1_1_function_af91f1a1f6278ab97ef760c5a04b34a6a}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Clip@{create\+Clip}}
+\index{create\+Clip@{create\+Clip}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Clip()}{createClip()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_clip_node}{Clip\+Node} $\ast$ Function\+::create\+Clip (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+
+Create a series of nodes for the Clip operator. It limits the given input within an interval specified by the {\ttfamily min} and {\ttfamily max} arguments. \mbox{\Hypertarget{classglow_1_1_function_a0b28c191e7dbb0c0c83165a7c7107313}\label{classglow_1_1_function_a0b28c191e7dbb0c0c83165a7c7107313}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Conv@{create\+Conv}}
+\index{create\+Conv@{create\+Conv}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Conv()}{createConv()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} $\ast$ Function\+::create\+Conv (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{filter,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{bias,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{kernels,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{strides,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{pads,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{group,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{dilation = {\ttfamily 1},  }\item[{\hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout}}]{layout = {\ttfamily ConvolutionLayout\+:\+:NHWC} }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} with the given {\ttfamily name} which convolves the 4D {\ttfamily input} with {\ttfamily filter} and . {\ttfamily kernels} defines the size of the height and width dimensions of the filters. {\ttfamily strides} defines the number of steps to take in the input for each output cell. {\ttfamily pads} defines how many zero padding cells should be added to the input during convolution. {\ttfamily group} defines the number of groups the input and output channels should be divided into and convolved separately. {\ttfamily dilation} defines factor by which gap between 2 neighboring kernel elements is expanded along each axis. {\ttfamily layout} defines the \hyperlink{classglow_1_1_tensor}{Tensor} layout and must be either N\+H\+WC or N\+C\+HW. \mbox{\Hypertarget{classglow_1_1_function_ad16bccb2690886aa72ad02131f9caf2c}\label{classglow_1_1_function_ad16bccb2690886aa72ad02131f9caf2c}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Conv@{create\+Conv}}
+\index{create\+Conv@{create\+Conv}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Conv()}{createConv()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} $\ast$ Function\+::create\+Conv (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{filter,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{bias,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{kernel,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{stride,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{pad,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{group,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{dilation = {\ttfamily 1},  }\item[{\hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout}}]{layout = {\ttfamily ConvolutionLayout\+:\+:NHWC} }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} with the given {\ttfamily name} which convolves the 4D {\ttfamily input} with {\ttfamily filter} and . {\ttfamily kernel} defines the size of the height and width dimensions of the filters. {\ttfamily stride} defines the number of steps to take in the input for each output cell. {\ttfamily pad} defines how many zero padding cells should be added to the input during convolution. {\ttfamily group} defines the number of groups the input and output channels should be divided into and convolved separately. {\ttfamily dilation} defines factor by which gap between 2 neighboring kernel elements is expanded along each axis. {\ttfamily layout} defines the \hyperlink{classglow_1_1_tensor}{Tensor} layout and must be either N\+H\+WC or N\+C\+HW. \mbox{\Hypertarget{classglow_1_1_function_a878cada26ba13b88d149d7a631f5ae10}\label{classglow_1_1_function_a878cada26ba13b88d149d7a631f5ae10}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Conv@{create\+Conv}}
+\index{create\+Conv@{create\+Conv}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Conv()}{createConv()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} $\ast$ Function\+::create\+Conv (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings,  }\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{size\+\_\+t}]{out\+Channels,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{kernels,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{strides,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{pads,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{group,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{dilation = {\ttfamily 1},  }\item[{\hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout}}]{layout = {\ttfamily NHWC} }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} with the given {\ttfamily name} which convolves the 4D {\ttfamily input}. {\ttfamily kernels} defines the size of the height and width dimensions of the convolutional filters. {\ttfamily stride} defines the the number of steps to take in the input for each output cell. {\ttfamily pads} defines how many zero padding cells should be added to the input during convolution. {\ttfamily group} defines the number of groups the input and output channels should be divided into and convolved separately. {\ttfamily dilation} defines factor by which gap between 2 neighboring kernel elements is expanded along each axis. {\ttfamily layout} defines the \hyperlink{classglow_1_1_tensor}{Tensor} layout and must be either N\+H\+WC or N\+C\+HW. \mbox{\Hypertarget{classglow_1_1_function_a9fce0de99a46d774b0f9bd9aa04b1498}\label{classglow_1_1_function_a9fce0de99a46d774b0f9bd9aa04b1498}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Conv@{create\+Conv}}
+\index{create\+Conv@{create\+Conv}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Conv()}{createConv()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} $\ast$ Function\+::create\+Conv (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings,  }\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{size\+\_\+t}]{out\+Channels,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{kernel,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{stride,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{pad,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{group,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{dilation = {\ttfamily 1},  }\item[{\hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{Convolution\+Layout}}]{layout = {\ttfamily NHWC} }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{classglow_1_1_convolution_node}{Convolution\+Node} with the given {\ttfamily name} which convolves the 4D {\ttfamily input}. {\ttfamily kernel} defines the size of the height and width dimensions of the convolutional filters. {\ttfamily stride} defines the the number of steps to take in the input for each output cell. {\ttfamily pad} defines how many zero padding cells should be added to the input during convolution. {\ttfamily group} defines the number of groups the input and output channels should be divided into and convolved separately.{\ttfamily dilation} defines factor by which gap between 2 neighboring kernel elements is expanded along each axis. {\ttfamily layout} defines the \hyperlink{classglow_1_1_tensor}{Tensor} layout and must be either N\+H\+WC or N\+C\+HW. \mbox{\Hypertarget{classglow_1_1_function_a5eec756ea2779f3768102cd496cce846}\label{classglow_1_1_function_a5eec756ea2779f3768102cd496cce846}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Conv3D@{create\+Conv3D}}
+\index{create\+Conv3D@{create\+Conv3D}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Conv3\+D()}{createConv3D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} $\ast$ Function\+::create\+Conv3D (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{filter,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{bias,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{kernels,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{strides,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{pads,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{group }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} with the given {\ttfamily name} which convolves the 5D {\ttfamily input} with {\ttfamily filter} and . {\ttfamily kernels} defines the size of the height, width, and depth dimensions of the filters. {\ttfamily strides} defines the the number of steps to take in the input for each output cell. {\ttfamily pads} defines how many zero padding cells should be added to the input during convolution. {\ttfamily group} defines the number of groups the input and output channels should be divided into and convolved separately. {\ttfamily out\+Ty} defines the type of the output of the 3d convolution. \mbox{\Hypertarget{classglow_1_1_function_a29c34498d91c08a88e7f503bcb55646d}\label{classglow_1_1_function_a29c34498d91c08a88e7f503bcb55646d}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Conv3D@{create\+Conv3D}}
+\index{create\+Conv3D@{create\+Conv3D}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Conv3\+D()}{createConv3D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} $\ast$ Function\+::create\+Conv3D (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{filter,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{bias,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{kernel,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{stride,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{pad,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{group }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} with the given {\ttfamily name} which convolves the 5D {\ttfamily input} with {\ttfamily filter} and . {\ttfamily kernel} defines the size of the height, width, and depth dimensions of the filters. {\ttfamily stride} defines the the number of steps to take in the input for each output cell. {\ttfamily pad} defines how many zero padding cells should be added to the input during convolution. {\ttfamily group} defines the number of groups the input and output channels should be divided into and convolved separately. {\ttfamily out\+Ty} defines the type of the output of the 3d convolution. \mbox{\Hypertarget{classglow_1_1_function_aaad3ec8a2afa0bcfcb21a55719f3df4f}\label{classglow_1_1_function_aaad3ec8a2afa0bcfcb21a55719f3df4f}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Conv3D@{create\+Conv3D}}
+\index{create\+Conv3D@{create\+Conv3D}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Conv3\+D()}{createConv3D()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} $\ast$ Function\+::create\+Conv3D (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings,  }\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{size\+\_\+t}]{out\+Channels,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{kernels,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{strides,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{pads,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{group }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} with the given {\ttfamily name} which convolves the 5D {\ttfamily input}. {\ttfamily kernels} defines the size of the height, width, and depth dimensions of the convolutional filters. {\ttfamily strides} defines the the number of steps to take in the input for each output cell. {\ttfamily pads} defines how many zero padding cells should be added to the input during convolution. {\ttfamily group} defines the number of groups the input and output channels should be divided into and convolved separately. \mbox{\Hypertarget{classglow_1_1_function_a99742506dcf9c372bb92cf74e8160de2}\label{classglow_1_1_function_a99742506dcf9c372bb92cf74e8160de2}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Conv3D@{create\+Conv3D}}
+\index{create\+Conv3D@{create\+Conv3D}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Conv3\+D()}{createConv3D()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} $\ast$ Function\+::create\+Conv3D (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings,  }\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{size\+\_\+t}]{out\+Channels,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{kernel,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{stride,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{pad,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{group }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{classglow_1_1_convolution3_d_node}{Convolution3\+D\+Node} with the given {\ttfamily name} which convolves the 5D {\ttfamily input}. {\ttfamily kernel} defines the size of the height, width, and depth dimensions of the convolutional filters. {\ttfamily stride} defines the the number of steps to take in the input for each output cell. {\ttfamily pad} defines how many zero padding cells should be added to the input during convolution. {\ttfamily group} defines the number of groups the input and output channels should be divided into and convolved separately. \mbox{\Hypertarget{classglow_1_1_function_afb186d99df71f01dc37871b7a91fe207}\label{classglow_1_1_function_afb186d99df71f01dc37871b7a91fe207}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Convert\+To@{create\+Convert\+To}}
+\index{create\+Convert\+To@{create\+Convert\+To}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Convert\+To()}{createConvertTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_convert_to_node}{Convert\+To\+Node} $\ast$ Function\+::create\+Convert\+To (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty }\end{DoxyParamCaption})}
+
+Creates and \begin{DoxyReturn}{Returns}
+a Convert\+To \hyperlink{classglow_1_1_node}{Node} with name {\ttfamily name} of {\ttfamily input} to output type {\ttfamily out\+Ty}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_aad00b9f260eb7c5c21f5c59ebd0089b3}\label{classglow_1_1_function_aad00b9f260eb7c5c21f5c59ebd0089b3}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Convert\+To@{create\+Convert\+To}}
+\index{create\+Convert\+To@{create\+Convert\+To}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Convert\+To()}{createConvertTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_convert_to_node}{Convert\+To\+Node} $\ast$ Function\+::create\+Convert\+To (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{k }\end{DoxyParamCaption})}
+
+Creates and \begin{DoxyReturn}{Returns}
+a Convert\+To \hyperlink{classglow_1_1_node}{Node} with name {\ttfamily name} of {\ttfamily input} to output Elem\+Kind {\ttfamily k}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_ac553e6f6d7495c5371f64a9a41080f8d}\label{classglow_1_1_function_ac553e6f6d7495c5371f64a9a41080f8d}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Dequantize@{create\+Dequantize}}
+\index{create\+Dequantize@{create\+Dequantize}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Dequantize()}{createDequantize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_dequantize_node}{Dequantize\+Node} $\ast$ Function\+::create\+Dequantize (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input }\end{DoxyParamCaption})}
+
+Create dequantization node which transforms quantized tensor to a floating point one with given Scale and Offset. Scale and Offset params are part of the {\ttfamily input}. \mbox{\Hypertarget{classglow_1_1_function_a5f8e4f0404804fe1b57bb77e5f9a48e8}\label{classglow_1_1_function_a5f8e4f0404804fe1b57bb77e5f9a48e8}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Dequantize@{create\+Dequantize}}
+\index{create\+Dequantize@{create\+Dequantize}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Dequantize()}{createDequantize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_dequantize_node}{Dequantize\+Node} $\ast$ Function\+::create\+Dequantize (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty }\end{DoxyParamCaption})}
+
+Create dequantization node which transforms quantized tensor to a floating point type {\ttfamily out\+Ty} one with given Scale and Offset. Scale and Offset params are part of the {\ttfamily input}. \mbox{\Hypertarget{classglow_1_1_function_accf9b83116497dd0ac4c3bb730be5153}\label{classglow_1_1_function_accf9b83116497dd0ac4c3bb730be5153}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Dot\+Product@{create\+Dot\+Product}}
+\index{create\+Dot\+Product@{create\+Dot\+Product}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Dot\+Product()}{createDotProduct()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node} $\ast$ Function\+::create\+Dot\+Product (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{X,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{Y }\end{DoxyParamCaption})}
+
+Implement an operation that computes the row-\/wise dot product of its inputs. Consequently, {\ttfamily X} and {\ttfamily Y} must be either 1D or 2D tensors. This lowered to a Mul node, and is followed by a Batched\+Reduce\+Add if {\ttfamily X} and {\ttfamily Y} are 2D. \begin{DoxyReturn}{Returns}
+either the Mul or Batched\+Reduce\+Add node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_aefc00c1542599ab75332a236d1aee6a3}\label{classglow_1_1_function_aefc00c1542599ab75332a236d1aee6a3}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Elementwise\+Linear@{create\+Elementwise\+Linear}}
+\index{create\+Elementwise\+Linear@{create\+Elementwise\+Linear}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Elementwise\+Linear()}{createElementwiseLinear()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node} $\ast$ Function\+::create\+Elementwise\+Linear (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{X,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{w,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{b,  }\item[{unsigned}]{axis }\end{DoxyParamCaption})}
+
+Create a node that implements the elementwise linear operator. {\ttfamily X} is 2D and {\ttfamily w} and {\ttfamily b} are 1D. {\ttfamily w} and {\ttfamily b} are broadcasted to match the shape of {\ttfamily X} and then the output is computed by multiplying {\ttfamily X} and broadcasted {\ttfamily w} and adding broadcasted {\ttfamily b}. \begin{DoxyReturn}{Returns}
+the Elementwise\+Linear\+Node. {\ttfamily axis} indicates the axis of the inputs (the other axis of {\ttfamily X} is assumed to be the batch index). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_af32483c4b5aff8743513d9eeec6d26fe}\label{classglow_1_1_function_af32483c4b5aff8743513d9eeec6d26fe}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Exp@{create\+Exp}}
+\index{create\+Exp@{create\+Exp}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Exp()}{createExp()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_exp_node}{Exp\+Node} $\ast$ Function\+::create\+Exp (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input }\end{DoxyParamCaption})}
+
+Create an Exp node with {\ttfamily name}, which calculates element-\/wise exponential of {\ttfamily input}. \mbox{\Hypertarget{classglow_1_1_function_a05272c5de8896a7f0110b620ae8ee3d9}\label{classglow_1_1_function_a05272c5de8896a7f0110b620ae8ee3d9}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Expand\+Dims@{create\+Expand\+Dims}}
+\index{create\+Expand\+Dims@{create\+Expand\+Dims}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Expand\+Dims()}{createExpandDims()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_reshape_node}{Reshape\+Node} $\ast$ Function\+::create\+Expand\+Dims (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{axes }\end{DoxyParamCaption})}
+
+Add single-\/dimensional entries to the shape of the {\ttfamily input} tensor at locations in {\ttfamily axes}. {\ttfamily axes} is listed as seen in the output tensor. Implemented as a single \hyperlink{classglow_1_1_reshape_node}{Reshape\+Node}. This is the opposite of Squeeze. \mbox{\Hypertarget{classglow_1_1_function_a5978750e2f05e9c022756e49e2591830}\label{classglow_1_1_function_a5978750e2f05e9c022756e49e2591830}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Flatten@{create\+Flatten}}
+\index{create\+Flatten@{create\+Flatten}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Flatten()}{createFlatten()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_reshape_node}{Reshape\+Node} $\ast$ Function\+::create\+Flatten (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{axis }\end{DoxyParamCaption})}
+
+Flattens the input tensor into a 2D matrix. If input tensor has shape (d\+\_\+0, d\+\_\+1, ... d\+\_\+n) then the output will have shape\+: (d\+\_\+0 X d\+\_\+1 ... d\+\_\+(axis-\/1), d\+\_\+axis X d\+\_\+(axis+1) ... X d\+\_\+n). \mbox{\Hypertarget{classglow_1_1_function_a369fe971f7e75ca38ff5d6bb0928be89}\label{classglow_1_1_function_a369fe971f7e75ca38ff5d6bb0928be89}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Fully\+Connected@{create\+Fully\+Connected}}
+\index{create\+Fully\+Connected@{create\+Fully\+Connected}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Fully\+Connected()}{createFullyConnected()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_fully_connected_node}{Fully\+Connected\+Node} $\ast$ Function\+::create\+Fully\+Connected (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{classglow_1_1_storage}{Storage} $\ast$}]{W,  }\item[{\hyperlink{classglow_1_1_storage}{Storage} $\ast$}]{B,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{axis = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Creates and \begin{DoxyReturn}{Returns}
+a \hyperlink{classglow_1_1_fully_connected_node}{Fully\+Connected\+Node} with {\ttfamily name}, {\ttfamily input}, weights {\ttfamily W}, bias {\ttfamily B}. If {\ttfamily input} is not 2 dimensional then it is flattened along {\ttfamily axis}. Note, output type and output\+Depth are inferred based on the input types. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_ad38b3e6dd3052c286126ab1239d97aa8}\label{classglow_1_1_function_ad38b3e6dd3052c286126ab1239d97aa8}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Fully\+Connected@{create\+Fully\+Connected}}
+\index{create\+Fully\+Connected@{create\+Fully\+Connected}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Fully\+Connected()}{createFullyConnected()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_fully_connected_node}{Fully\+Connected\+Node} $\ast$ Function\+::create\+Fully\+Connected (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{W,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{B,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{axis = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Creates and \begin{DoxyReturn}{Returns}
+a \hyperlink{classglow_1_1_fully_connected_node}{Fully\+Connected\+Node} with {\ttfamily name}, {\ttfamily input}, weights {\ttfamily W}, bias {\ttfamily B}, and {\ttfamily out\+Ty}. If {\ttfamily input} is not 2 dimensional then it is flattened along {\ttfamily axis}. Note, output\+Depth is inferred based on {\ttfamily out\+Ty}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_ade9306e5e5d5665e16fc64dcf8df3e94}\label{classglow_1_1_function_ade9306e5e5d5665e16fc64dcf8df3e94}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Fully\+Connected@{create\+Fully\+Connected}}
+\index{create\+Fully\+Connected@{create\+Fully\+Connected}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Fully\+Connected()}{createFullyConnected()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_fully_connected_node}{Fully\+Connected\+Node} $\ast$ Function\+::create\+Fully\+Connected (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings,  }\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{size\+\_\+t}]{out\+Depth,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{axis = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Creates and \begin{DoxyReturn}{Returns}
+a \hyperlink{classglow_1_1_fully_connected_node}{Fully\+Connected\+Node} with {\ttfamily name}, {\ttfamily input}, weights {\ttfamily W}, bias {\ttfamily B}. If {\ttfamily input} is not 2 dimensional then it is flattened along {\ttfamily axis}. Note, output type is inferred based on the input types. Trainable weight and bias variables are created implicitly. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_a1ec48696db840ba590510e6c282b3a38}\label{classglow_1_1_function_a1ec48696db840ba590510e6c282b3a38}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum@{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum}}
+\index{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum@{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum()}{createFusedRowwiseQuantizedSparseLengthsSum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_fused_rowwise_quantized_sparse_lengths_sum_node}{Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum\+Node} $\ast$ Function\+::create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths,  }\item[{bool}]{use\+F\+P16\+Accumulation = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Creates and \begin{DoxyReturn}{Returns}
+a node of {\ttfamily name}, performing the Sparse\+Lengths\+Sum operation, using fused rowwise quantization for the input {\ttfamily data} wherein the scales and offsets are fused inline with each row of data. {\ttfamily data} must be of a fused Elem\+Kind. Gathers slices of the outer-\/most dimension of data indexed by the {\ttfamily indices} vector, and then accumulates them into len({\ttfamily lengths}) entries\+: first Lengths\mbox{[}0\mbox{]} slices are aggregated to Result\mbox{[}0\mbox{]}, next Lengths\mbox{[}1\mbox{]} slices are aggregated to Result\mbox{[}1\mbox{]}, etc. I.\+e. sum(\+Lengths) must be equal to len(\+Indices). The precision for the Result is determined by the {\ttfamily data} input\textquotesingle{}s Elem\+Kind used for Scale and Offset. If {\ttfamily use\+F\+P16\+Accumulation}, then internal arithmetic will use F\+P16 accumulation; otherwise defaults to F\+P32. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_a50fe21630865f07b5fcaba7dcdeff6cb}\label{classglow_1_1_function_a50fe21630865f07b5fcaba7dcdeff6cb}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum@{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum}}
+\index{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum@{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum()}{createFusedRowwiseQuantizedSparseLengthsSum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_fused_rowwise_quantized_sparse_lengths_sum_node}{Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum\+Node} $\ast$ Function\+::create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{classglow_1_1_tensor}{Tensor} \&}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths,  }\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{fused\+Elem\+Kind = {\ttfamily ElemKind\+:\+:UInt8FusedQTy},  }\item[{bool}]{use\+F\+P16\+Accumulation = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Same as \hyperlink{classglow_1_1_function_a1ec48696db840ba590510e6c282b3a38}{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum()}, but expects float input {\ttfamily data}, which is rowwise-\/quantized and fused internally. {\ttfamily fused\+Elem\+Kind} represents the element kind to use for the final fused rowwise-\/quantized data. \mbox{\Hypertarget{classglow_1_1_function_acc35291a608ce9d7aa2806ed50fa1e1b}\label{classglow_1_1_function_acc35291a608ce9d7aa2806ed50fa1e1b}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum@{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum}}
+\index{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum@{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum()}{createFusedRowwiseQuantizedSparseLengthsWeightedSum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node}{Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ Function\+::create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{weights,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths,  }\item[{bool}]{use\+F\+P16\+Accumulation = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Same as \hyperlink{classglow_1_1_function_a1ec48696db840ba590510e6c282b3a38}{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum()}, but i-\/th slice is multiplied by weights\mbox{[}i\mbox{]}. len(weights) must be equal to len(indices). \mbox{\Hypertarget{classglow_1_1_function_a4463d76e607351b153d5c4704e9b26bb}\label{classglow_1_1_function_a4463d76e607351b153d5c4704e9b26bb}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum@{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum}}
+\index{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum@{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum()}{createFusedRowwiseQuantizedSparseLengthsWeightedSum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_fused_rowwise_quantized_sparse_lengths_weighted_sum_node}{Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ Function\+::create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{classglow_1_1_tensor}{Tensor} \&}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{weights,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths,  }\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{fused\+Elem\+Kind = {\ttfamily ElemKind\+:\+:UInt8FusedQTy},  }\item[{bool}]{use\+F\+P16\+Accumulation = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Same as \hyperlink{classglow_1_1_function_acc35291a608ce9d7aa2806ed50fa1e1b}{create\+Fused\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum()}, but expects float input {\ttfamily data}, which is rowwise-\/quantized and fused internally. {\ttfamily fused\+Elem\+Kind} represents the element kind to use for the final fused rowwise-\/quantized data. \mbox{\Hypertarget{classglow_1_1_function_a5dedd74fc1b4538ad12cd60d43339dc8}\label{classglow_1_1_function_a5dedd74fc1b4538ad12cd60d43339dc8}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Gather@{create\+Gather}}
+\index{create\+Gather@{create\+Gather}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Gather()}{createGather()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_gather_node}{Gather\+Node} $\ast$ Function\+::create\+Gather (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{batch\+Dims = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Gathers entries of the outer-\/most dimension of {\ttfamily data} indexed by {\ttfamily indices}, and concatenates them. A non-\/zero {\ttfamily batch\+Dims} specifies the batch, and the result is the concatenation of the operation on each sample in the batch. \mbox{\Hypertarget{classglow_1_1_function_aff08f2044b5486dc1df39158fd333ceb}\label{classglow_1_1_function_aff08f2044b5486dc1df39158fd333ceb}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Gather\+Ranges@{create\+Gather\+Ranges}}
+\index{create\+Gather\+Ranges@{create\+Gather\+Ranges}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Gather\+Ranges()}{createGatherRanges()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_gather_ranges_node}{Gather\+Ranges\+Node} $\ast$ Function\+::create\+Gather\+Ranges (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{ranges,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{max\+Output\+Size }\end{DoxyParamCaption})}
+
+Create a node, performing Gather\+Ranges operation\+: Gathers entries of {\ttfamily data} in groups specified by the \char`\"{}examples\char`\"{} in {\ttfamily ranges}. Each example in {\ttfamily ranges} contains a list of pairs of indices of the form (index, length) which specify which entries of {\ttfamily data} to gather. The ordering of elements in {\ttfamily ranges} and of pairs within an element is preserved in the output. In addition to the result of gathering (\char`\"{}output\char`\"{}), the lengths of the ranges gathered by each example in {\ttfamily ranges} is also produced as an output (\char`\"{}lengths\char`\"{}). {\ttfamily max\+Output\+Size} is the maximum possible size of \char`\"{}output\char`\"{} and is used to set its type. Users must use \char`\"{}lengths\char`\"{} to interpret \char`\"{}output\char`\"{} correctly. \begin{DoxyReturn}{Returns}
+the \hyperlink{classglow_1_1_gather_ranges_node}{Gather\+Ranges\+Node}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_a38073ffa1c63421716ee236d56178738}\label{classglow_1_1_function_a38073ffa1c63421716ee236d56178738}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+G\+RU@{create\+G\+RU}}
+\index{create\+G\+RU@{create\+G\+RU}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+G\+R\+U()}{createGRU()}}
+{\footnotesize\ttfamily void Function\+::create\+G\+RU (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings,  }\item[{llvm\+::\+String\+Ref}]{name\+Prefix,  }\item[{const llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$}]{inputs,  }\item[{unsigned}]{batch\+Size,  }\item[{unsigned}]{hidden\+Size,  }\item[{unsigned}]{output\+Size,  }\item[{std\+::vector$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ \&}]{outputs }\end{DoxyParamCaption})}
+
+Create an unrolled single-\/layer G\+RU cell with {\ttfamily hidden\+Size} dimensionality of the hidden state and {\ttfamily output\+Size} dimensionality of the output state. {\ttfamily inputs} define the input for the cell at each time step and the number of time steps is equal to the size of the {\ttfamily inputs}. The names of the created variables are prefixed by {\ttfamily name\+Prefix}. The output variables are written to {\ttfamily outputs}, they represent the activation of the output layer, unrolled over time. \mbox{\Hypertarget{classglow_1_1_function_aeacd10cc5da0f12caa196897ce7a6141}\label{classglow_1_1_function_aeacd10cc5da0f12caa196897ce7a6141}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Insert\+Tensor@{create\+Insert\+Tensor}}
+\index{create\+Insert\+Tensor@{create\+Insert\+Tensor}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Insert\+Tensor()}{createInsertTensor()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_insert_tensor_node}{Insert\+Tensor\+Node} $\ast$ Function\+::create\+Insert\+Tensor (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{big,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{small,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{start,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{count = {\ttfamily 1},  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{axis = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Create an insert tensor node {\ttfamily name}, which inserts {\ttfamily small} into {\ttfamily big} at offset into big {\ttfamily start} {\ttfamily count} times along {\ttfamily axis}. \mbox{\Hypertarget{classglow_1_1_function_ab6fb9971cd6af5a091098680ae2a26e0}\label{classglow_1_1_function_ab6fb9971cd6af5a091098680ae2a26e0}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Int\+Lookup\+Table@{create\+Int\+Lookup\+Table}}
+\index{create\+Int\+Lookup\+Table@{create\+Int\+Lookup\+Table}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Int\+Lookup\+Table()}{createIntLookupTable()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_int_lookup_table_node}{Int\+Lookup\+Table\+Node} $\ast$ Function\+::create\+Int\+Lookup\+Table (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{llvm\+::\+Array\+Ref$<$ int8\+\_\+t $>$}]{init\+Values,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty }\end{DoxyParamCaption})}
+
+Create lookup table for mapping between quantized numbers. {\ttfamily input} and {\ttfamily out\+Ty} must have quantized type. Table contains all numbers from the quantized range, e.\+g., 256 entries for int8. Position 0 in the {\ttfamily init\+Values} corresponds to the -\/128 input number, position 255 to 127. \mbox{\Hypertarget{classglow_1_1_function_a441d3bf4a13e444a8ddaa5e129e3acee}\label{classglow_1_1_function_a441d3bf4a13e444a8ddaa5e129e3acee}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Is\+NaN@{create\+Is\+NaN}}
+\index{create\+Is\+NaN@{create\+Is\+NaN}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Is\+Na\+N()}{createIsNaN()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_is_na_n_node}{Is\+Na\+N\+Node} $\ast$ Function\+::create\+Is\+NaN (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input }\end{DoxyParamCaption})}
+
+Create a node that produces an boolean output of the same shape as {\ttfamily input} in which each element indicates whether or not the corresponding element in {\ttfamily input} is NaN or not. \mbox{\Hypertarget{classglow_1_1_function_a0e83d1e9da4a42527cc13d24ac29c17b}\label{classglow_1_1_function_a0e83d1e9da4a42527cc13d24ac29c17b}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Lengths\+Range\+Fill@{create\+Lengths\+Range\+Fill}}
+\index{create\+Lengths\+Range\+Fill@{create\+Lengths\+Range\+Fill}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Lengths\+Range\+Fill()}{createLengthsRangeFill()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_lengths_range_fill_node}{Lengths\+Range\+Fill\+Node} $\ast$ Function\+::create\+Lengths\+Range\+Fill (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{max\+Output\+Size }\end{DoxyParamCaption})}
+
+Given a vector of {\ttfamily lengths}, \begin{DoxyReturn}{Returns}
+a \hyperlink{classglow_1_1_lengths_range_fill_node}{Lengths\+Range\+Fill\+Node}. This \hyperlink{classglow_1_1_node}{Node} calculates a range sequence given {\ttfamily lengths}, where the sum of the elements of {\ttfamily lengths} must be no greater than {\ttfamily max\+Output\+Size}, which is used to set the output type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_a24bdca6a0b3ac6ba120f98b28440e2bc}\label{classglow_1_1_function_a24bdca6a0b3ac6ba120f98b28440e2bc}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Lengths\+Sum@{create\+Lengths\+Sum}}
+\index{create\+Lengths\+Sum@{create\+Lengths\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Lengths\+Sum()}{createLengthsSum()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_lengths_sum_node}{Lengths\+Sum\+Node} $\ast$ Function\+::create\+Lengths\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths }\end{DoxyParamCaption})}
+
+Implements an operation that accumulates the values in {\ttfamily data} along the first dimension into len({\ttfamily lengths}) entries by summing together the first lengths\mbox{[}0\mbox{]} values, then the subsequent lengths\mbox{[}1\mbox{]} values, etc. sum({\ttfamily lengths}) must equal the first dimension of {\ttfamily data}. This operation is similar to Sparse\+Lengths\+Sum but the input is a dense represention instead of a sparse one. In other words, it has already been Gathered. \mbox{\Hypertarget{classglow_1_1_function_a98924f81beee494322bc1cb8e7f5e5e7}\label{classglow_1_1_function_a98924f81beee494322bc1cb8e7f5e5e7}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Lengths\+To\+Ranges@{create\+Lengths\+To\+Ranges}}
+\index{create\+Lengths\+To\+Ranges@{create\+Lengths\+To\+Ranges}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Lengths\+To\+Ranges()}{createLengthsToRanges()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_lengths_to_ranges_node}{Lengths\+To\+Ranges\+Node} $\ast$ Function\+::create\+Lengths\+To\+Ranges (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths }\end{DoxyParamCaption})}
+
+Given a vector of segment lengths, calculates offsets of each segment and packs them next to the lengths. For the input vector of length N the output is a Nx2 matrix with (offset, lengths) packaged for each segment. \mbox{\Hypertarget{classglow_1_1_function_a4fd96b3007929f8a2c534e72311cd6e8}\label{classglow_1_1_function_a4fd96b3007929f8a2c534e72311cd6e8}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Log@{create\+Log}}
+\index{create\+Log@{create\+Log}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Log()}{createLog()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_log_node}{Log\+Node} $\ast$ Function\+::create\+Log (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Create a Log node with {\ttfamily name}, which calculates element-\/wise natural log of {\ttfamily input}, with output type {\ttfamily out\+Ty}. \mbox{\Hypertarget{classglow_1_1_function_a81e3b70fd3322cc3ae6f733c7c818ff2}\label{classglow_1_1_function_a81e3b70fd3322cc3ae6f733c7c818ff2}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Logit@{create\+Logit}}
+\index{create\+Logit@{create\+Logit}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Logit()}{createLogit()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node} $\ast$ Function\+::create\+Logit (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{float}]{eps }\end{DoxyParamCaption})}
+
+Create a series of nodes with {\ttfamily name} that implements an element-\/wise logit transform. For each element of the {\ttfamily input} x, this is defined as\+:
+
+y = log(x / (1 -\/ x))
+
+where the {\ttfamily input} is clamped in ({\ttfamily eps}, 1 -\/ {\ttfamily eps}), and the transform parameter {\ttfamily eps} is a positive value ($<$ 0.\+5) (needed to avoid degenerate probabilities of 0 or 1, which would result in taking the logarithm of zero). The transform itself is implemented using element-\/wise Clip, Sub, Splat, Div, and Log nodes. \begin{DoxyReturn}{Returns}
+the final node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_a031dffcebc9798d481beaefaa927db61}\label{classglow_1_1_function_a031dffcebc9798d481beaefaa927db61}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+L\+S\+TM@{create\+L\+S\+TM}}
+\index{create\+L\+S\+TM@{create\+L\+S\+TM}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+L\+S\+T\+M()}{createLSTM()}}
+{\footnotesize\ttfamily void Function\+::create\+L\+S\+TM (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings,  }\item[{llvm\+::\+String\+Ref}]{name\+Prefix,  }\item[{const llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$}]{inputs,  }\item[{unsigned}]{batch\+Size,  }\item[{unsigned}]{hidden\+Size,  }\item[{unsigned}]{output\+Size,  }\item[{std\+::vector$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ \&}]{outputs }\end{DoxyParamCaption})}
+
+Create an unrolled single-\/layer L\+S\+TM cell with {\ttfamily hidden\+Size} dimensionality of the hidden state and {\ttfamily output\+Size} dimensionality of the output state. {\ttfamily inputs} define the input for the cell at each time step and the number of time steps is equal to the size of the {\ttfamily inputs}. The names of the created variables are prefixed by {\ttfamily name\+Prefix}. The output variables are written to {\ttfamily outputs}, they represent the activation of the output layer, unrolled over time. \mbox{\Hypertarget{classglow_1_1_function_ae2629554747ce321d9ea9fc688ecde30}\label{classglow_1_1_function_ae2629554747ce321d9ea9fc688ecde30}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Modulo@{create\+Modulo}}
+\index{create\+Modulo@{create\+Modulo}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Modulo()}{createModulo()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_modulo_node}{Modulo\+Node} $\ast$ Function\+::create\+Modulo (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{int64\+\_\+t}]{divisor,  }\item[{bool}]{sign\+Follow\+Divisor = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Create a \hyperlink{classglow_1_1_modulo_node}{Modulo\+Node} which performs the modulo operation elementwise on the {\ttfamily input} such that each element in the output is equal to the corresponding element in the input modulo {\ttfamily divisor}. If {\ttfamily sign\+Follow\+Divisor} is true then any negative elements in the output will have divisor added to their final values. \mbox{\Hypertarget{classglow_1_1_function_ad8b34304a6130cd64289773e212dba8b}\label{classglow_1_1_function_ad8b34304a6130cd64289773e212dba8b}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Node\+With\+Broadcast@{create\+Node\+With\+Broadcast}}
+\index{create\+Node\+With\+Broadcast@{create\+Node\+With\+Broadcast}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Node\+With\+Broadcast()}{createNodeWithBroadcast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class... Args$>$ \\
+enable\+\_\+if\+\_\+same\+\_\+t$<$T, \hyperlink{classglow_1_1_select_node}{Select\+Node}$>$\+::type$\ast$ glow\+::\+Function\+::create\+Node\+With\+Broadcast (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{axis,  }\item[{Args \&\&...}]{input\+Args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Template function that creates a node and normalizes its input shapes with the use of Broad\+Cast nodes. If axis is -\/1, it calculates it automatically for multi directional broadcast. Template function that creates a node and normalizes its input shapes with the use of Broad\+Cast nodes. If axis is -\/1, it calculates it automatically for multi directional broadcast. \mbox{\Hypertarget{classglow_1_1_function_a6b3c2945ca9381bc22dc01559dcdbbe9}\label{classglow_1_1_function_a6b3c2945ca9381bc22dc01559dcdbbe9}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Node\+With\+Broadcast@{create\+Node\+With\+Broadcast}}
+\index{create\+Node\+With\+Broadcast@{create\+Node\+With\+Broadcast}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Node\+With\+Broadcast()}{createNodeWithBroadcast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class... Args$>$ \\
+enable\+\_\+if\+\_\+same\+\_\+t$<$T, \hyperlink{classglow_1_1_cmp_l_t_node}{Cmp\+L\+T\+Node}$>$\+::type$\ast$ glow\+::\+Function\+::create\+Node\+With\+Broadcast (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{axis,  }\item[{Args \&\&...}]{input\+Args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Template function that creates a node and normalizes its input shapes with the use of Broad\+Cast nodes. If axis is -\/1, it calculates it automatically for multi directional broadcast. \mbox{\Hypertarget{classglow_1_1_function_a128f705eed37efbbb40cc644c36dd16e}\label{classglow_1_1_function_a128f705eed37efbbb40cc644c36dd16e}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+P\+R\+E\+LU@{create\+P\+R\+E\+LU}}
+\index{create\+P\+R\+E\+LU@{create\+P\+R\+E\+LU}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+P\+R\+E\+L\+U()}{createPRELU()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_p_relu_node}{P\+Relu\+Node} $\ast$ Function\+::create\+P\+R\+E\+LU (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{slope }\end{DoxyParamCaption})}
+
+Create a P\+Re\+LU node with the given {\ttfamily name}, {\ttfamily input} and {\ttfamily slope}. Result type will be implicitly set based on the {\ttfamily input} type. \mbox{\Hypertarget{classglow_1_1_function_a87131023c229abbfbc109c06485106a7}\label{classglow_1_1_function_a87131023c229abbfbc109c06485106a7}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+P\+R\+E\+LU@{create\+P\+R\+E\+LU}}
+\index{create\+P\+R\+E\+LU@{create\+P\+R\+E\+LU}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+P\+R\+E\+L\+U()}{createPRELU()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_p_relu_node}{P\+Relu\+Node} $\ast$ Function\+::create\+P\+R\+E\+LU (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{slope,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty }\end{DoxyParamCaption})}
+
+Create a P\+Re\+LU node with the given {\ttfamily name}, {\ttfamily input}, {\ttfamily slope} and output type {\ttfamily out\+Ty}. \mbox{\Hypertarget{classglow_1_1_function_ae9866986d73736c124e1bfaf3222aa13}\label{classglow_1_1_function_ae9866986d73736c124e1bfaf3222aa13}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Quantization\+Profile@{create\+Quantization\+Profile}}
+\index{create\+Quantization\+Profile@{create\+Quantization\+Profile}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Quantization\+Profile()}{createQuantizationProfile()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_quantization_profile_node}{Quantization\+Profile\+Node} $\ast$ Function\+::create\+Quantization\+Profile (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings,  }\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input }\end{DoxyParamCaption})}
+
+Create quantization profile node named {\ttfamily name} for the output tensor from {\ttfamily input} in \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} {\ttfamily bindings}. Capture observed node name in quantization profile node as original node can be replaced during lowering phase. \mbox{\Hypertarget{classglow_1_1_function_a5137409e46739131c920052ea550b003}\label{classglow_1_1_function_a5137409e46739131c920052ea550b003}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Quantize@{create\+Quantize}}
+\index{create\+Quantize@{create\+Quantize}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Quantize()}{createQuantize()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_quantize_node}{Quantize\+Node} $\ast$ Function\+::create\+Quantize (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty }\end{DoxyParamCaption})}
+
+Create quantization node which transforms floating point tensor to a quantized one with given Scale and Offset. Scale and Offset params are part of the {\ttfamily out\+Ty}. \mbox{\Hypertarget{classglow_1_1_function_ada1e5e0678dc0af5c17835ffea6c3367}\label{classglow_1_1_function_ada1e5e0678dc0af5c17835ffea6c3367}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+R\+E\+LU@{create\+R\+E\+LU}}
+\index{create\+R\+E\+LU@{create\+R\+E\+LU}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+R\+E\+L\+U()}{createRELU()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_relu_node}{Relu\+Node} $\ast$ Function\+::create\+R\+E\+LU (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input }\end{DoxyParamCaption})}
+
+Create a Re\+LU node with the given {\ttfamily name} and {\ttfamily input}. Result type will be implicitly set based on the {\ttfamily input} type. \mbox{\Hypertarget{classglow_1_1_function_a31145d8863286195749705d53a93b9b0}\label{classglow_1_1_function_a31145d8863286195749705d53a93b9b0}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+R\+E\+LU@{create\+R\+E\+LU}}
+\index{create\+R\+E\+LU@{create\+R\+E\+LU}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+R\+E\+L\+U()}{createRELU()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_relu_node}{Relu\+Node} $\ast$ Function\+::create\+R\+E\+LU (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty }\end{DoxyParamCaption})}
+
+Create a Re\+LU node with the given {\ttfamily name}, {\ttfamily input} and output type {\ttfamily out\+Ty}. \mbox{\Hypertarget{classglow_1_1_function_ad091697cc2cabe1ec8139eab16df6432}\label{classglow_1_1_function_ad091697cc2cabe1ec8139eab16df6432}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Replace\+NaN@{create\+Replace\+NaN}}
+\index{create\+Replace\+NaN@{create\+Replace\+NaN}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Replace\+Na\+N()}{createReplaceNaN()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_replace_na_n_node}{Replace\+Na\+N\+Node} $\ast$ Function\+::create\+Replace\+NaN (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{classglow_1_1_replace_na_n_node}{Replace\+Na\+N\+Node} given {\ttfamily name}, {\ttfamily input}, and {\ttfamily value}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_acac964783c66b57eb30d0d643cf73026}\label{classglow_1_1_function_acac964783c66b57eb30d0d643cf73026}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Rescale\+Quantized@{create\+Rescale\+Quantized}}
+\index{create\+Rescale\+Quantized@{create\+Rescale\+Quantized}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Rescale\+Quantized()}{createRescaleQuantized()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_rescale_quantized_node}{Rescale\+Quantized\+Node} $\ast$ Function\+::create\+Rescale\+Quantized (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty }\end{DoxyParamCaption})}
+
+Create transformation for quantized tensors to rescale based on the new Scale and Offset. \mbox{\Hypertarget{classglow_1_1_function_a3e21b55f20e481869522d45d6856f8ae}\label{classglow_1_1_function_a3e21b55f20e481869522d45d6856f8ae}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Resize\+Nearest@{create\+Resize\+Nearest}}
+\index{create\+Resize\+Nearest@{create\+Resize\+Nearest}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Resize\+Nearest()}{createResizeNearest()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_resize_nearest_node}{Resize\+Nearest\+Node} $\ast$ Function\+::create\+Resize\+Nearest (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{float}]{height\+Scale,  }\item[{float}]{width\+Scale }\end{DoxyParamCaption})}
+
+Given {\ttfamily input} tensor of \mbox{[}N,H,W,C\mbox{]}, where N is the batch, C is the channel or depth, H is the height and W is the width, generates an Output tensor with resized spatial dimensions using nearest neighbor interpolation. The Output tensor is of shape \mbox{[}N, floor(H $\ast$ {\ttfamily height\+Scale}), floor(W $\ast$ {\ttfamily width\+Scale}), C\mbox{]} \mbox{\Hypertarget{classglow_1_1_function_aa4b45584a08282fd6b027ce972c5f74d}\label{classglow_1_1_function_aa4b45584a08282fd6b027ce972c5f74d}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Rowwise\+Quantized\+Fully\+Connected@{create\+Rowwise\+Quantized\+Fully\+Connected}}
+\index{create\+Rowwise\+Quantized\+Fully\+Connected@{create\+Rowwise\+Quantized\+Fully\+Connected}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Rowwise\+Quantized\+Fully\+Connected()}{createRowwiseQuantizedFullyConnected()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_rowwise_quantized_fully_connected_node}{Rowwise\+Quantized\+Fully\+Connected\+Node} $\ast$ Function\+::create\+Rowwise\+Quantized\+Fully\+Connected (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{W,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{B,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{quantization\+::\+Schema}]{schema,  }\item[{bool}]{transpose\+Weight = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Create a row-\/wise quantized fully connected node. This node is only used in quantization. Args {\ttfamily input} and {\ttfamily B} are quantized in regular way, {\ttfamily W} is the constant weights and will be row-\/wise quantized during node creation time. The output is quantized in the regular way, and its type {\ttfamily out\+Ty} is a quantized type. if {\ttfamily transpose\+Weight} is true, {\ttfamily W} need to be transposed first. \mbox{\Hypertarget{classglow_1_1_function_a336683b0ec8e06e084caec12f60142fd}\label{classglow_1_1_function_a336683b0ec8e06e084caec12f60142fd}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum@{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum}}
+\index{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum@{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum()}{createRowwiseQuantizedSparseLengthsSum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_rowwise_quantized_sparse_lengths_weighted_sum_node}{Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ Function\+::create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{data,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{scales,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{offsets,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths,  }\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{precision = {\ttfamily ElemKind\+:\+:FloatTy},  }\item[{bool}]{use\+F\+P16\+Accumulation = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Creates and \begin{DoxyReturn}{Returns}
+a node of {\ttfamily name}, performing the Sparse\+Lengths\+Sum operation, using rowwise quantization for the input {\ttfamily data} with the {\ttfamily scales} and {\ttfamily offsets} as separate input tensors. Gathers slices of the outer-\/most dimension of data indexed by the {\ttfamily indices} vector, and then accumulates them into len({\ttfamily lengths}) entries\+: first Lengths\mbox{[}0\mbox{]} slices are aggregated to Result\mbox{[}0\mbox{]}, next Lengths\mbox{[}1\mbox{]} slices are aggregated to Result\mbox{[}1\mbox{]}, etc. I.\+e. sum(\+Lengths) must be equal to len(\+Indices). {\ttfamily precision} represents what precision to use for Scale, Offset, and Result. If {\ttfamily use\+F\+P16\+Accumulation}, then internal arithmetic will use F\+P16 accumulation; otherwise defaults to F\+P32. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_ae7977506330eaf13bc3c39d63d83c333}\label{classglow_1_1_function_ae7977506330eaf13bc3c39d63d83c333}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum@{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum}}
+\index{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum@{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum()}{createRowwiseQuantizedSparseLengthsSum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_rowwise_quantized_sparse_lengths_weighted_sum_node}{Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ Function\+::create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{classglow_1_1_tensor}{Tensor} \&}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths,  }\item[{quantization\+::\+Schema}]{schema,  }\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{precision = {\ttfamily ElemKind\+:\+:FloatTy},  }\item[{bool}]{use\+F\+P16\+Accumulation = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Same as \hyperlink{classglow_1_1_function_a336683b0ec8e06e084caec12f60142fd}{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum()}, but expects float input {\ttfamily data}, which is rowwise-\/quantized internally. \mbox{\Hypertarget{classglow_1_1_function_ae17510e67747d910c5ba7999ff498ea5}\label{classglow_1_1_function_ae17510e67747d910c5ba7999ff498ea5}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum@{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum}}
+\index{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum@{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum()}{createRowwiseQuantizedSparseLengthsWeightedSum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_rowwise_quantized_sparse_lengths_weighted_sum_node}{Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ Function\+::create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{data,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{scales,  }\item[{\hyperlink{classglow_1_1_constant}{Constant} $\ast$}]{offsets,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{weights,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths,  }\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{precision = {\ttfamily ElemKind\+:\+:FloatTy},  }\item[{bool}]{use\+F\+P16\+Accumulation = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Same as \hyperlink{classglow_1_1_function_a336683b0ec8e06e084caec12f60142fd}{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Sum()}, but i-\/th slice is multiplied by weights\mbox{[}i\mbox{]}. len(weights) must be equal to len(indices). \mbox{\Hypertarget{classglow_1_1_function_aae39e625ab8f247f03f7283dd7d0dd80}\label{classglow_1_1_function_aae39e625ab8f247f03f7283dd7d0dd80}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum@{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum}}
+\index{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum@{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum()}{createRowwiseQuantizedSparseLengthsWeightedSum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_rowwise_quantized_sparse_lengths_weighted_sum_node}{Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ Function\+::create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{classglow_1_1_tensor}{Tensor} \&}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{weights,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths,  }\item[{quantization\+::\+Schema}]{schema,  }\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{precision = {\ttfamily ElemKind\+:\+:FloatTy},  }\item[{bool}]{use\+F\+P16\+Accumulation = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Same as \hyperlink{classglow_1_1_function_ae17510e67747d910c5ba7999ff498ea5}{create\+Rowwise\+Quantized\+Sparse\+Lengths\+Weighted\+Sum()}, but expects float input {\ttfamily data}, which is rowwise-\/quantized internally. \mbox{\Hypertarget{classglow_1_1_function_acbe25057f5bb26ea1011b44b8815d6c9}\label{classglow_1_1_function_acbe25057f5bb26ea1011b44b8815d6c9}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Scatter\+Data@{create\+Scatter\+Data}}
+\index{create\+Scatter\+Data@{create\+Scatter\+Data}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Scatter\+Data()}{createScatterData()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_scatter_data_node}{Scatter\+Data\+Node} $\ast$ Function\+::create\+Scatter\+Data (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{slices,  }\item[{bool}]{cumulative = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Copies each slice from {\ttfamily slices} into {\ttfamily data} at the corresponding index in {\ttfamily indices}, and \begin{DoxyReturn}{Returns}
+this new version of data. For example, given input data \{\{1,2\},\{3,4\},\{5,6\}\}, slices \{\{-\/3,-\/4\}\}, and indices \{1\}, the result is \{\{1,2\},\{-\/3,-\/4\},\{5,6\}\}. If {\ttfamily cumulative} is true, this node adds values instead of copying. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_a8e62024d3d2033210f189b8f0fb19b04}\label{classglow_1_1_function_a8e62024d3d2033210f189b8f0fb19b04}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Sigmoid@{create\+Sigmoid}}
+\index{create\+Sigmoid@{create\+Sigmoid}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Sigmoid()}{createSigmoid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_sigmoid_node}{Sigmoid\+Node} $\ast$ Function\+::create\+Sigmoid (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input }\end{DoxyParamCaption})}
+
+Create a Sigmoid node with the given {\ttfamily name}, {\ttfamily input} and output type {\ttfamily out\+Ty}. \mbox{\Hypertarget{classglow_1_1_function_a5493f61de698fa74ca152bbb52b212aa}\label{classglow_1_1_function_a5493f61de698fa74ca152bbb52b212aa}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Sigmoid@{create\+Sigmoid}}
+\index{create\+Sigmoid@{create\+Sigmoid}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Sigmoid()}{createSigmoid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_sigmoid_node}{Sigmoid\+Node} $\ast$ Function\+::create\+Sigmoid (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input }\end{DoxyParamCaption})}
+
+Create a Sigmoid node with the given {\ttfamily name} and {\ttfamily input}. Result type will be implicitly set based on the {\ttfamily input} type. \mbox{\Hypertarget{classglow_1_1_function_a5aa2b425049f5e2868062da4ca7c438e}\label{classglow_1_1_function_a5aa2b425049f5e2868062da4ca7c438e}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Simple\+R\+NN@{create\+Simple\+R\+NN}}
+\index{create\+Simple\+R\+NN@{create\+Simple\+R\+NN}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Simple\+R\+N\+N()}{createSimpleRNN()}}
+{\footnotesize\ttfamily void Function\+::create\+Simple\+R\+NN (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings,  }\item[{llvm\+::\+String\+Ref}]{name\+Prefix,  }\item[{const llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$}]{inputs,  }\item[{unsigned}]{batch\+Size,  }\item[{unsigned}]{hidden\+Size,  }\item[{unsigned}]{output\+Size,  }\item[{std\+::vector$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ \&}]{outputs }\end{DoxyParamCaption})}
+
+Create an unrolled single-\/layer Simple R\+NN cell with {\ttfamily hidden\+Size} dimensionality of the hidden state and {\ttfamily output\+Size} dimensionality of the output state. {\ttfamily inputs} define the input for the cell at each time step and the number of time steps is equal to the size of the {\ttfamily inputs}. The names of the created variables are prefixed by {\ttfamily name\+Prefix}. The output variables are written to {\ttfamily outputs}, they represent the activations of the output layer, unrolled over time. \mbox{\Hypertarget{classglow_1_1_function_abdff3f5f232d5db7d7b7529516053964}\label{classglow_1_1_function_abdff3f5f232d5db7d7b7529516053964}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Slice@{create\+Slice}}
+\index{create\+Slice@{create\+Slice}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Slice()}{createSlice()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_slice_node}{Slice\+Node} $\ast$ Function\+::create\+Slice (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{start,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty }\end{DoxyParamCaption})}
+
+Create a slice node with the given starting point for each dimension. End points will be calculated based on the output type during execution. \mbox{\Hypertarget{classglow_1_1_function_aad17e40fffb4fe287d329c74a32256ea}\label{classglow_1_1_function_aad17e40fffb4fe287d329c74a32256ea}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Space\+To\+Depth@{create\+Space\+To\+Depth}}
+\index{create\+Space\+To\+Depth@{create\+Space\+To\+Depth}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Space\+To\+Depth()}{createSpaceToDepth()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_space_to_depth_node}{Space\+To\+Depth\+Node} $\ast$ Function\+::create\+Space\+To\+Depth (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{unsigned}]{block\+Size }\end{DoxyParamCaption})}
+
+Given Input tensor of \mbox{[}N,H,W,C\mbox{]}, where N is the batch axis, H is the height, W is the width, C is the channel or depth. This produces Output tensor of \mbox{[}N, H/block\+Size, W/block\+Size, C $\ast$ block\+Size $\ast$ block\+Size\mbox{]}. \mbox{\Hypertarget{classglow_1_1_function_a5dd07dd06c24d69113033f9ceb1135ed}\label{classglow_1_1_function_a5dd07dd06c24d69113033f9ceb1135ed}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Sparse\+Lengths\+Sum@{create\+Sparse\+Lengths\+Sum}}
+\index{create\+Sparse\+Lengths\+Sum@{create\+Sparse\+Lengths\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Sparse\+Lengths\+Sum()}{createSparseLengthsSum()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_sparse_lengths_sum_node}{Sparse\+Lengths\+Sum\+Node} $\ast$ Function\+::create\+Sparse\+Lengths\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths }\end{DoxyParamCaption})}
+
+Create a node, performing Sparse\+Lengths\+Sum operation\+: Gathers slices of the outer-\/most dimension of Data indexed by Indices vector, and then accumulates them into len(\+Lengths) entries\+: first Lengths\mbox{[}0\mbox{]} slices are aggregated to Result\mbox{[}0\mbox{]}, next Lengths\mbox{[}1\mbox{]} slices are aggregated to Result\mbox{[}1\mbox{]}, etc. I.\+e. sum(\+Lengths) must be equal to len(\+Indices). \mbox{\Hypertarget{classglow_1_1_function_a294f7aafb024ab39071832980f90fa8d}\label{classglow_1_1_function_a294f7aafb024ab39071832980f90fa8d}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Sparse\+Lengths\+Weighted\+Sum@{create\+Sparse\+Lengths\+Weighted\+Sum}}
+\index{create\+Sparse\+Lengths\+Weighted\+Sum@{create\+Sparse\+Lengths\+Weighted\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Sparse\+Lengths\+Weighted\+Sum()}{createSparseLengthsWeightedSum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_sparse_lengths_weighted_sum_node}{Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ Function\+::create\+Sparse\+Lengths\+Weighted\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{weights,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths }\end{DoxyParamCaption})}
+
+Same as Sparse\+Lengths\+Sum, but i-\/th slice is multiplied by weights\mbox{[}i\mbox{]}. len(weights) must be equal to len(indices). \mbox{\Hypertarget{classglow_1_1_function_a1f195f77eb6fefdaac84ff2e1b887d75}\label{classglow_1_1_function_a1f195f77eb6fefdaac84ff2e1b887d75}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Sparse\+Lengths\+Weighted\+Sum@{create\+Sparse\+Lengths\+Weighted\+Sum}}
+\index{create\+Sparse\+Lengths\+Weighted\+Sum@{create\+Sparse\+Lengths\+Weighted\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Sparse\+Lengths\+Weighted\+Sum()}{createSparseLengthsWeightedSum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_sparse_lengths_weighted_sum_node}{Sparse\+Lengths\+Weighted\+Sum\+Node} $\ast$ Function\+::create\+Sparse\+Lengths\+Weighted\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{data,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{weights,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths }\end{DoxyParamCaption})}
+
+Same as \hyperlink{classglow_1_1_function_a294f7aafb024ab39071832980f90fa8d}{create\+Sparse\+Lengths\+Weighted\+Sum()}, but with {\ttfamily out\+Ty} specified. \mbox{\Hypertarget{classglow_1_1_function_aa30faa862c948082d65911e42d9745e3}\label{classglow_1_1_function_aa30faa862c948082d65911e42d9745e3}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Sparse\+To\+Dense@{create\+Sparse\+To\+Dense}}
+\index{create\+Sparse\+To\+Dense@{create\+Sparse\+To\+Dense}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Sparse\+To\+Dense()}{createSparseToDense()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_sparse_to_dense_node}{Sparse\+To\+Dense\+Node} $\ast$ Function\+::create\+Sparse\+To\+Dense (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{values,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{data\+To\+Infer\+Dim }\end{DoxyParamCaption})}
+
+Implements an operation that converts the sparse representation given by the pair of {\ttfamily indices} and {\ttfamily values} into a dense representation. This representation contains each value of {\ttfamily values} at the corresponding index given by {\ttfamily indices}. All indices that are not present in {\ttfamily indices} are filled with zeroes. {\ttfamily indices} can contain duplicates, and in this case, the corresponding values in {\ttfamily values} are added.
+
+{\ttfamily data\+To\+Infer\+Dim} acts as a hint about the shape of the output. The first dimension of the output is the first dimension of this tensor. \mbox{\Hypertarget{classglow_1_1_function_a40c8dca4c538dfdf2d248bdb2c8d680a}\label{classglow_1_1_function_a40c8dca4c538dfdf2d248bdb2c8d680a}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Sparse\+To\+Dense\+Mask@{create\+Sparse\+To\+Dense\+Mask}}
+\index{create\+Sparse\+To\+Dense\+Mask@{create\+Sparse\+To\+Dense\+Mask}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Sparse\+To\+Dense\+Mask()}{createSparseToDenseMask()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_sparse_to_dense_mask_node}{Sparse\+To\+Dense\+Mask\+Node} $\ast$ Function\+::create\+Sparse\+To\+Dense\+Mask (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{indices,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{values,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{default\+Value,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{lengths,  }\item[{llvm\+::\+Array\+Ref$<$ int64\+\_\+t $>$}]{mask }\end{DoxyParamCaption})}
+
+Implements an operation that converts the sparse representation given by the pair of {\ttfamily indices} and {\ttfamily values} into a dense representation, which only contains I\+Ds from given {\ttfamily mask}. Indices cannot contain duplicates. {\ttfamily lengths} is used to distinguish elements that belong to different examples of one batch. That is, first {\ttfamily lengths}\mbox{[}0\mbox{]} index-\/value pairs belong to batch\textquotesingle{}s example 0, next {\ttfamily lengths}\mbox{[}1\mbox{]} pairs belong to example 1 and so on. \mbox{\Hypertarget{classglow_1_1_function_a9f77fd01d257c12ce44d64ee25c9a65f}\label{classglow_1_1_function_a9f77fd01d257c12ce44d64ee25c9a65f}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Split@{create\+Split}}
+\index{create\+Split@{create\+Split}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Split()}{createSplit()}}
+{\footnotesize\ttfamily void Function\+::create\+Split (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{output\+Num,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{axis,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{split,  }\item[{std\+::vector$<$ \hyperlink{classglow_1_1_slice_node}{Slice\+Node} $\ast$$>$ \&}]{outputs }\end{DoxyParamCaption})}
+
+Create {\ttfamily output\+Num} slice nodes of {\ttfamily input}. Slices happen along dimension number {\ttfamily axis}. Array {\ttfamily split} defines lengths of slices. If {\ttfamily split} is empty, {\ttfamily input} is split to equal sized parts. \mbox{\Hypertarget{classglow_1_1_function_a5fa046629fa2f742a28a49966c67e947}\label{classglow_1_1_function_a5fa046629fa2f742a28a49966c67e947}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Squeeze@{create\+Squeeze}}
+\index{create\+Squeeze@{create\+Squeeze}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Squeeze()}{createSqueeze()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_reshape_node}{Reshape\+Node} $\ast$ Function\+::create\+Squeeze (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{axes }\end{DoxyParamCaption})}
+
+Removes single-\/dimensional entries from the shape of a tensor. The parameter {\ttfamily axes} is a list of positive integers, indicating the dimensions to squeeze. Impelmented as a single \hyperlink{classglow_1_1_reshape_node}{Reshape\+Node}. This is the opposite of Expand\+Dims. \href{https://github.com/onnx/onnx/blob/master/docs/Operators.md#squeeze}{\tt https\+://github.\+com/onnx/onnx/blob/master/docs/\+Operators.\+md\#squeeze} \mbox{\Hypertarget{classglow_1_1_function_a859e8e441d4479750853cca69c357803}\label{classglow_1_1_function_a859e8e441d4479750853cca69c357803}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Tanh@{create\+Tanh}}
+\index{create\+Tanh@{create\+Tanh}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Tanh()}{createTanh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tanh_node}{Tanh\+Node} $\ast$ Function\+::create\+Tanh (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input }\end{DoxyParamCaption})}
+
+Create a Tanh node with the given {\ttfamily name}, {\ttfamily input} and output type {\ttfamily out\+Ty}. \mbox{\Hypertarget{classglow_1_1_function_a311e1981e013129cef4882a2598c36f4}\label{classglow_1_1_function_a311e1981e013129cef4882a2598c36f4}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Tanh@{create\+Tanh}}
+\index{create\+Tanh@{create\+Tanh}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Tanh()}{createTanh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tanh_node}{Tanh\+Node} $\ast$ Function\+::create\+Tanh (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input }\end{DoxyParamCaption})}
+
+Create a Tanh node with the given {\ttfamily name} and {\ttfamily input}. Result type will be implicitly set based on the {\ttfamily input} type. \mbox{\Hypertarget{classglow_1_1_function_aea101a646a4e71c0b513608587127217}\label{classglow_1_1_function_aea101a646a4e71c0b513608587127217}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Tile@{create\+Tile}}
+\index{create\+Tile@{create\+Tile}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Tile()}{createTile()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tile_node}{Tile\+Node} $\ast$ Function\+::create\+Tile (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{input,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{tiles,  }\item[{\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t}}]{axis,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{out\+Ty = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Create a quantized \hyperlink{classglow_1_1_tile_node}{Tile\+Node} with {\ttfamily name}, {\ttfamily input}, {\ttfamily tiles}, and {\ttfamily axis}. For example, an input tensor \{\{1,2,3,4\}\} of dimension 1x4 with tiles = 2 and axis = 0 would result in an output tensor \{\{1,2,3,4\}, \{1,2,3,4\}\} of dimension 2x4. \mbox{\Hypertarget{classglow_1_1_function_a85bff46320d22692796a98c44c785d36}\label{classglow_1_1_function_a85bff46320d22692796a98c44c785d36}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Trace\+Event@{create\+Trace\+Event}}
+\index{create\+Trace\+Event@{create\+Trace\+Event}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Trace\+Event()}{createTraceEvent()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_trace_event_node}{Trace\+Event\+Node} $\ast$ Function\+::create\+Trace\+Event (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{event\+Name,  }\item[{llvm\+::\+String\+Ref}]{event\+Type,  }\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{data,  }\item[{unsigned}]{index }\end{DoxyParamCaption})}
+
+Create a \hyperlink{structglow_1_1_trace_event}{Trace\+Event} in the runtime profile, which triggers collection of runtime statistics. \mbox{\Hypertarget{classglow_1_1_function_ab511da8a4555e0e9b7e62b2f378716c9}\label{classglow_1_1_function_ab511da8a4555e0e9b7e62b2f378716c9}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!create\+Weighted\+Sum@{create\+Weighted\+Sum}}
+\index{create\+Weighted\+Sum@{create\+Weighted\+Sum}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{create\+Weighted\+Sum()}{createWeightedSum()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node} $\ast$ Function\+::create\+Weighted\+Sum (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$}]{data,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$}]{weights }\end{DoxyParamCaption})}
+
+Create a series of nodes that implement a weighted sum. {\ttfamily data} and {\ttfamily weights} should have the same number of elements. The nodes in {\ttfamily weights} should all be of size 1. Each node d\+\_\+i in {\ttfamily data} is element-\/wise multiplied by the corresponding weight value w\+\_\+i found in {\ttfamily weights}, broadcasted to the same shape as d\+\_\+i, and resulting in r\+\_\+i. All r\+\_\+i are element-\/wise summed, and the final add node in this sum is returned. \mbox{\Hypertarget{classglow_1_1_function_a25f5f7d84157c8c3c20faeb82c083c2d}\label{classglow_1_1_function_a25f5f7d84157c8c3c20faeb82c083c2d}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!dump\+D\+AG@{dump\+D\+AG}}
+\index{dump\+D\+AG@{dump\+D\+AG}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{dump\+D\+A\+G()}{dumpDAG()}}
+{\footnotesize\ttfamily std\+::string Function\+::dump\+D\+AG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Dump a dotty graph that depicts the function into a file. \begin{DoxyReturn}{Returns}
+full path to the file. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_a0668c5170eedf2b84a292367cfb4fbac}\label{classglow_1_1_function_a0668c5170eedf2b84a292367cfb4fbac}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!find\+Constants@{find\+Constants}}
+\index{find\+Constants@{find\+Constants}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{find\+Constants()}{findConstants()}}
+{\footnotesize\ttfamily Const\+List Function\+::find\+Constants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Search the \hyperlink{classglow_1_1_module}{Module} containing the function to gather and return a list of constants that are used by the \hyperlink{classglow_1_1_function}{Function}. \mbox{\Hypertarget{classglow_1_1_function_abc73d2632bdeaaa7a2ec029196608ab7}\label{classglow_1_1_function_abc73d2632bdeaaa7a2ec029196608ab7}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!find\+Placeholders@{find\+Placeholders}}
+\index{find\+Placeholders@{find\+Placeholders}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{find\+Placeholders()}{findPlaceholders()}}
+{\footnotesize\ttfamily Placeholder\+List Function\+::find\+Placeholders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Search the \hyperlink{classglow_1_1_module}{Module} containing the function to gather and return a list of placeholders that are used by the \hyperlink{classglow_1_1_function}{Function}. \mbox{\Hypertarget{classglow_1_1_function_a26cfda31e823d1499173f1bd23f2d86c}\label{classglow_1_1_function_a26cfda31e823d1499173f1bd23f2d86c}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!get\+Node\+By\+Name@{get\+Node\+By\+Name}}
+\index{get\+Node\+By\+Name@{get\+Node\+By\+Name}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{get\+Node\+By\+Name()}{getNodeByName()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node} $\ast$ Function\+::get\+Node\+By\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+a node with the name {\ttfamily name} or nullptr if no node was found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_ad79bc51bcabb426b1f64e8a0700fba2d}\label{classglow_1_1_function_ad79bc51bcabb426b1f64e8a0700fba2d}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!get\+Nodes@{get\+Nodes}}
+\index{get\+Nodes@{get\+Nodes}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{get\+Nodes()}{getNodes()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_a4919b7ef01548e927f0a5acb3a7400b9}{Nodes\+List}\& glow\+::\+Function\+::get\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of nodes that the \hyperlink{classglow_1_1_function}{Function} owns. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_aa766431c358524e3dfeafc66d1cdcb4f}\label{classglow_1_1_function_aa766431c358524e3dfeafc66d1cdcb4f}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!get\+Nodes\+Member\+Ptr@{get\+Nodes\+Member\+Ptr}}
+\index{get\+Nodes\+Member\+Ptr@{get\+Nodes\+Member\+Ptr}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{get\+Nodes\+Member\+Ptr()}{getNodesMemberPtr()}}
+{\footnotesize\ttfamily static \hyperlink{namespaceglow_a4919b7ef01548e927f0a5acb3a7400b9}{Nodes\+List} Function\+::$\ast$ glow\+::\+Function\+::get\+Nodes\+Member\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+pointer to the class member for the nodes list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_ab1dabb8d94895004268410f672079f1a}\label{classglow_1_1_function_ab1dabb8d94895004268410f672079f1a}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!order\+Nodes@{order\+Nodes}}
+\index{order\+Nodes@{order\+Nodes}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{order\+Nodes()}{orderNodes()}}
+{\footnotesize\ttfamily void glow\+::\+Function\+::order\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Perform ordering of nodes\+\_\+ based on node\textquotesingle{}s name. This is to make sure that performing optimizations have a deterministic behavior on the graphs which have the same ops but different ordering in nodes\+\_\+. \mbox{\Hypertarget{classglow_1_1_function_a74703c0bb968ca968b65dbc20653940c}\label{classglow_1_1_function_a74703c0bb968ca968b65dbc20653940c}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!take\+Ownership\+Of\+Node@{take\+Ownership\+Of\+Node}}
+\index{take\+Ownership\+Of\+Node@{take\+Ownership\+Of\+Node}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{take\+Ownership\+Of\+Node()}{takeOwnershipOfNode()}}
+{\footnotesize\ttfamily void glow\+::\+Function\+::take\+Ownership\+Of\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{N }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Take ownership of {\ttfamily N} by removing it from its original \hyperlink{classglow_1_1_function}{Function}, add it to the current \hyperlink{classglow_1_1_function}{Function}, and also unique its name. \mbox{\Hypertarget{classglow_1_1_function_a73897a61138cf69eacb41357839815df}\label{classglow_1_1_function_a73897a61138cf69eacb41357839815df}} 
+\index{glow\+::\+Function@{glow\+::\+Function}!verify@{verify}}
+\index{verify@{verify}!glow\+::\+Function@{glow\+::\+Function}}
+\subsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily bool Function\+::verify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Verify the correctness of the \hyperlink{classglow_1_1_function}{Function}. \begin{DoxyReturn}{Returns}
+true when the function is valid. False otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Graph.\+h\item 
+lib/\+Graph/Graph.\+cpp\end{DoxyCompactItemize}

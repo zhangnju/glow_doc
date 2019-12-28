@@ -1,0 +1,117 @@
+\hypertarget{classglow_1_1_avg_pool_node}{}\section{glow\+:\+:Avg\+Pool\+Node Class Reference}
+\label{classglow_1_1_avg_pool_node}\index{glow\+::\+Avg\+Pool\+Node@{glow\+::\+Avg\+Pool\+Node}}
+
+
+Performs an Average Pool operation on the Input given provided Kernels, Strides, and Pads. Supported layouts are defined in the Convolution\+Layout enum\+: N\+H\+WC and N\+C\+HW.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Avg\+Pool\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_avg_pool_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_a517d310594db9d695a54267aec2ded23}\label{classglow_1_1_avg_pool_node_a517d310594db9d695a54267aec2ded23}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_a00dabcb15c3d6304eda688cadb0f6ed5}\label{classglow_1_1_avg_pool_node_a00dabcb15c3d6304eda688cadb0f6ed5}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_ab1d104d56fc303525297c8f440a0b883}\label{classglow_1_1_avg_pool_node_ab1d104d56fc303525297c8f440a0b883}} 
+{\bfseries Avg\+Pool\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Kernels, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Strides, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Layout)
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_a6997d975a1e28352b1a5c4c68027a1fd}\label{classglow_1_1_avg_pool_node_a6997d975a1e28352b1a5c4c68027a1fd}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_ab64b552890c3639aba877d3db204413d}\label{classglow_1_1_avg_pool_node_ab64b552890c3639aba877d3db204413d}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_a51ec1ba5e9768b9c490eaf70d792658c}\label{classglow_1_1_avg_pool_node_a51ec1ba5e9768b9c490eaf70d792658c}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_aedd008895b8d56670865d337c28cc8d5}\label{classglow_1_1_avg_pool_node_aedd008895b8d56670865d337c28cc8d5}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Kernels} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_afcf397308aaef165e1b6041bb11cbfa3}\label{classglow_1_1_avg_pool_node_afcf397308aaef165e1b6041bb11cbfa3}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Strides} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_a3b2608d1e7572e98da78b370e4dd8cae}\label{classglow_1_1_avg_pool_node_a3b2608d1e7572e98da78b370e4dd8cae}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Pads} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_ac00d2e2daf5c64b7be9e976982f6c859}\label{classglow_1_1_avg_pool_node_ac00d2e2daf5c64b7be9e976982f6c859}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Layout} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_a4565bd8cafac2c562b6f0532f1cbba7d}\label{classglow_1_1_avg_pool_node_a4565bd8cafac2c562b6f0532f1cbba7d}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_a9f887978570175519bc395a823a3ebbf}\label{classglow_1_1_avg_pool_node_a9f887978570175519bc395a823a3ebbf}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_ad3b32ee116014dd3c17d0dab4c131b8e}\label{classglow_1_1_avg_pool_node_ad3b32ee116014dd3c17d0dab4c131b8e}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_ad13d26eba4c96e57a3f3d188e03a43b2}\label{classglow_1_1_avg_pool_node_ad13d26eba4c96e57a3f3d188e03a43b2}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_a7594a543b290aa140e0f7db3b37f3064}\label{classglow_1_1_avg_pool_node_a7594a543b290aa140e0f7db3b37f3064}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_a3d65aef0bcd474dc1b65957afa9bfbc1}\label{classglow_1_1_avg_pool_node_a3d65aef0bcd474dc1b65957afa9bfbc1}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_ac7ba7a897a5298d8fc1f106099736229}\label{classglow_1_1_avg_pool_node_ac7ba7a897a5298d8fc1f106099736229}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_ad294cf3340c037c9ed574e25b188949a}\label{classglow_1_1_avg_pool_node_ad294cf3340c037c9ed574e25b188949a}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_afa689e1eefaf22fd476942b64009f0c9}\label{classglow_1_1_avg_pool_node_afa689e1eefaf22fd476942b64009f0c9}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_aa88969ea6a22a1b426e584206e6b74b4}\label{classglow_1_1_avg_pool_node_aa88969ea6a22a1b426e584206e6b74b4}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_avg_pool_node}{Avg\+Pool\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_ad8eca2c4d755c4872e79e97d95fbb5f8}\label{classglow_1_1_avg_pool_node_ad8eca2c4d755c4872e79e97d95fbb5f8}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_a507374e1669856f68eca9a7af972d039}\label{classglow_1_1_avg_pool_node_a507374e1669856f68eca9a7af972d039}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_abd95d5b96b4d2a909b709804af3a4f43}\label{classglow_1_1_avg_pool_node_abd95d5b96b4d2a909b709804af3a4f43}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_ac2a78a56bfdfb9d91a69614524633158}\label{classglow_1_1_avg_pool_node_ac2a78a56bfdfb9d91a69614524633158}} 
+bool {\bfseries verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_aa70479c27da646c338e4e04b021435c9}\label{classglow_1_1_avg_pool_node_aa70479c27da646c338e4e04b021435c9}} 
+\hyperlink{classglow_1_1_avg_pool_grad_node}{Avg\+Pool\+Grad\+Node} $\ast$ {\bfseries get\+Grad} (\hyperlink{classglow_1_1_graph_grad_mapper}{Graph\+Grad\+Mapper} \&builder)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_node_a00ecd552a2a99e38b38a0b2659d0f30e}\label{classglow_1_1_avg_pool_node_a00ecd552a2a99e38b38a0b2659d0f30e}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Performs an Average Pool operation on the Input given provided Kernels, Strides, and Pads. Supported layouts are defined in the Convolution\+Layout enum\+: N\+H\+WC and N\+C\+HW. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

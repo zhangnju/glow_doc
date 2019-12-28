@@ -1,0 +1,105 @@
+\hypertarget{classglow_1_1_transpose_node}{}\section{glow\+:\+:Transpose\+Node Class Reference}
+\label{classglow_1_1_transpose_node}\index{glow\+::\+Transpose\+Node@{glow\+::\+Transpose\+Node}}
+
+
+Transpose the Input tensor based on the vector Shuffle, which assigns a new axis for each dimension in Input.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Transpose\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_transpose_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a9d7b0f0f0bf4de1b484f28ace4046ba0}\label{classglow_1_1_transpose_node_a9d7b0f0f0bf4de1b484f28ace4046ba0}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a7d0297fe55b8a568a4933e3414e70b86}\label{classglow_1_1_transpose_node_a7d0297fe55b8a568a4933e3414e70b86}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a5d352fdf31fccb44f96519b4e68c49bf}\label{classglow_1_1_transpose_node_a5d352fdf31fccb44f96519b4e68c49bf}} 
+{\bfseries Transpose\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Shuffle)
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a9a0d2d6afbf92fb073acdc5a9d15cafa}\label{classglow_1_1_transpose_node_a9a0d2d6afbf92fb073acdc5a9d15cafa}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a6008a31f9e77d74f5079434954107fe2}\label{classglow_1_1_transpose_node_a6008a31f9e77d74f5079434954107fe2}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_aa744caa0dc2802bd573b89358906b3c6}\label{classglow_1_1_transpose_node_aa744caa0dc2802bd573b89358906b3c6}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a9fa74473c4b0da372d18a6105218233c}\label{classglow_1_1_transpose_node_a9fa74473c4b0da372d18a6105218233c}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Shuffle} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a0dcd48d62e769987e4a452e7c48458e3}\label{classglow_1_1_transpose_node_a0dcd48d62e769987e4a452e7c48458e3}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_ae40cdac0caf96bd612f1c2f47eaec401}\label{classglow_1_1_transpose_node_ae40cdac0caf96bd612f1c2f47eaec401}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_ae137d6d866d6654650200f44878f7e33}\label{classglow_1_1_transpose_node_ae137d6d866d6654650200f44878f7e33}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a6e1610ba6a400fab5a39d3a510d86b5d}\label{classglow_1_1_transpose_node_a6e1610ba6a400fab5a39d3a510d86b5d}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_ac2a24e4a04a379ed41cb67dda66fadfa}\label{classglow_1_1_transpose_node_ac2a24e4a04a379ed41cb67dda66fadfa}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_ae00b9068651c44ecd4256000e9f0bd80}\label{classglow_1_1_transpose_node_ae00b9068651c44ecd4256000e9f0bd80}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a11985f2449356319a48da1100f6afb26}\label{classglow_1_1_transpose_node_a11985f2449356319a48da1100f6afb26}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a17da59b4ac842efa4cefcb50f8f52e00}\label{classglow_1_1_transpose_node_a17da59b4ac842efa4cefcb50f8f52e00}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a52d59d2705d59785547dec80c5467490}\label{classglow_1_1_transpose_node_a52d59d2705d59785547dec80c5467490}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_ac0b4c3c2c9b429f2e339d23794e84555}\label{classglow_1_1_transpose_node_ac0b4c3c2c9b429f2e339d23794e84555}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_transpose_node}{Transpose\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a72dd2e87f10cb2aa3f6a4476d9920e35}\label{classglow_1_1_transpose_node_a72dd2e87f10cb2aa3f6a4476d9920e35}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a99cc8b2db407c5f31cc9fb664061f174}\label{classglow_1_1_transpose_node_a99cc8b2db407c5f31cc9fb664061f174}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a5a2044262ea0bfd710683100555c7224}\label{classglow_1_1_transpose_node_a5a2044262ea0bfd710683100555c7224}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_a93d39ee621f986a79bc6ad9a137216e4}\label{classglow_1_1_transpose_node_a93d39ee621f986a79bc6ad9a137216e4}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_transpose_node_ab4c2adb2ab62b6165d7a3afa7f62d85a}\label{classglow_1_1_transpose_node_ab4c2adb2ab62b6165d7a3afa7f62d85a}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Transpose the Input tensor based on the vector Shuffle, which assigns a new axis for each dimension in Input. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

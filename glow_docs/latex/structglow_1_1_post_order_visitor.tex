@@ -1,0 +1,69 @@
+\hypertarget{structglow_1_1_post_order_visitor}{}\section{glow\+:\+:Post\+Order\+Visitor Struct Reference}
+\label{structglow_1_1_post_order_visitor}\index{glow\+::\+Post\+Order\+Visitor@{glow\+::\+Post\+Order\+Visitor}}
+
+
+A helper class for ordering the nodes in a post-\/order order.  
+
+
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Post\+Order\+Visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structglow_1_1_post_order_visitor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structglow_1_1_post_order_visitor_aac9bad1f6f91fb1f9328061e4a4fce68}{should\+Visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node}{Node} $\ast$N) override
+\item 
+\mbox{\Hypertarget{structglow_1_1_post_order_visitor_afca53631a4fa01a286a5fd37d3f15865}\label{structglow_1_1_post_order_visitor_afca53631a4fa01a286a5fd37d3f15865}} 
+bool {\bfseries should\+Visit} (const \hyperlink{classglow_1_1_node}{Node} $\ast$parent, const \hyperlink{classglow_1_1_node}{Node} $\ast$N) override
+\item 
+\mbox{\Hypertarget{structglow_1_1_post_order_visitor_acb0712acf8e73438613802a4c963a74f}\label{structglow_1_1_post_order_visitor_acb0712acf8e73438613802a4c963a74f}} 
+void \hyperlink{structglow_1_1_post_order_visitor_acb0712acf8e73438613802a4c963a74f}{post} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node}{Node} $\ast$N) override
+\begin{DoxyCompactList}\small\item\em This callback is called after visiting the children of {\ttfamily N}. \end{DoxyCompactList}\item 
+llvm\+::\+Array\+Ref$<$ \hyperlink{classglow_1_1_node}{Node} $\ast$ $>$ \hyperlink{structglow_1_1_post_order_visitor_a781f079d8c1456522989adae267078fc}{get\+Post\+Order} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_post_order_visitor_a6981ced09710eaca86a6cae12899f4d4}\label{structglow_1_1_post_order_visitor_a6981ced09710eaca86a6cae12899f4d4}} 
+std\+::vector$<$ \hyperlink{classglow_1_1_node}{Node} $\ast$ $>$ \hyperlink{structglow_1_1_post_order_visitor_a6981ced09710eaca86a6cae12899f4d4}{post\+Order\+\_\+}
+\begin{DoxyCompactList}\small\item\em A post-\/order list of nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_post_order_visitor_a3b5b7598a7d520de1f821bd2be5bdf89}\label{structglow_1_1_post_order_visitor_a3b5b7598a7d520de1f821bd2be5bdf89}} 
+std\+::unordered\+\_\+set$<$ const \hyperlink{classglow_1_1_node}{Node} $\ast$ $>$ \hyperlink{structglow_1_1_post_order_visitor_a3b5b7598a7d520de1f821bd2be5bdf89}{visited\+\_\+}
+\begin{DoxyCompactList}\small\item\em A set of visited nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A helper class for ordering the nodes in a post-\/order order. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_post_order_visitor_a781f079d8c1456522989adae267078fc}\label{structglow_1_1_post_order_visitor_a781f079d8c1456522989adae267078fc}} 
+\index{glow\+::\+Post\+Order\+Visitor@{glow\+::\+Post\+Order\+Visitor}!get\+Post\+Order@{get\+Post\+Order}}
+\index{get\+Post\+Order@{get\+Post\+Order}!glow\+::\+Post\+Order\+Visitor@{glow\+::\+Post\+Order\+Visitor}}
+\subsubsection{\texorpdfstring{get\+Post\+Order()}{getPostOrder()}}
+{\footnotesize\ttfamily llvm\+::\+Array\+Ref$<$\hyperlink{classglow_1_1_node}{Node} $\ast$$>$ glow\+::\+Post\+Order\+Visitor\+::get\+Post\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the order. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_post_order_visitor_aac9bad1f6f91fb1f9328061e4a4fce68}\label{structglow_1_1_post_order_visitor_aac9bad1f6f91fb1f9328061e4a4fce68}} 
+\index{glow\+::\+Post\+Order\+Visitor@{glow\+::\+Post\+Order\+Visitor}!should\+Visit@{should\+Visit}}
+\index{should\+Visit@{should\+Visit}!glow\+::\+Post\+Order\+Visitor@{glow\+::\+Post\+Order\+Visitor}}
+\subsubsection{\texorpdfstring{should\+Visit()}{shouldVisit()}}
+{\footnotesize\ttfamily bool glow\+::\+Post\+Order\+Visitor\+::should\+Visit (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{parent,  }\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{N }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This callback is called before processing the graph. If the method returns false then we skip this node. 
+
+Reimplemented from \hyperlink{classglow_1_1_node_walker_a33532d7a4fe24f71c1b763c53182b20b}{glow\+::\+Node\+Walker}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Utils.\+h\end{DoxyCompactItemize}

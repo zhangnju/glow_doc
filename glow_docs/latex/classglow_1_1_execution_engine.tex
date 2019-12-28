@@ -1,0 +1,128 @@
+\hypertarget{classglow_1_1_execution_engine}{}\section{glow\+:\+:Execution\+Engine Class Reference}
+\label{classglow_1_1_execution_engine}\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+
+
+{\ttfamily \#include $<$Execution\+Engine.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_execution_engine_ad438cf3b34468a43b1d62cf1975635e0}{Execution\+Engine} (llvm\+::\+String\+Ref backend=\char`\"{}Interpreter\char`\"{}, uint64\+\_\+t device\+Memory=0, bool ignore\+User\+Device\+Config=false)
+\item 
+void \hyperlink{classglow_1_1_execution_engine_a35c2e984e60f079f6209de74d903f9a0}{set\+Backend\+Name} (llvm\+::\+String\+Ref backend)
+\begin{DoxyCompactList}\small\item\em Set the code generator to the given {\ttfamily backend}. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_execution_engine_aaf3231329fb5af46bfe5e37457ddf0cb}{set\+Device\+Memory} (uint64\+\_\+t mem)
+\item 
+\mbox{\Hypertarget{classglow_1_1_execution_engine_a7f4383a21f01fa1163af96e9498638b2}\label{classglow_1_1_execution_engine_a7f4383a21f01fa1163af96e9498638b2}} 
+llvm\+::\+String\+Ref \hyperlink{classglow_1_1_execution_engine_a7f4383a21f01fa1163af96e9498638b2}{get\+Backend\+Name} () const
+\begin{DoxyCompactList}\small\item\em Get the name of the current backend in use. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_module}{Module} \& \hyperlink{classglow_1_1_execution_engine_a3ba6de88789f0caaf7fd777f21462729}{get\+Module} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_execution_engine_a6f85b8fa2a571f457933619f1592a281}\label{classglow_1_1_execution_engine_a6f85b8fa2a571f457933619f1592a281}} 
+void \hyperlink{classglow_1_1_execution_engine_a6f85b8fa2a571f457933619f1592a281}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the \hyperlink{classglow_1_1_execution_engine}{Execution\+Engine} and all Compiled\+Functions. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{structglow_1_1runtime_1_1_d_a_g}{runtime\+::\+D\+AG} $\ast$ $>$ \hyperlink{classglow_1_1_execution_engine_a01943b9b5b551fe72e0bdb6e5ca84103}{get\+D\+AG} (llvm\+::\+String\+Ref network)
+\item 
+void \hyperlink{classglow_1_1_execution_engine_aba8c48da8a7a8868a4d42128ac2f05fe}{compile} (\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx)
+\item 
+void \hyperlink{classglow_1_1_execution_engine_a5a719c4411a5c8389e7bf656e37a7602}{compile} (\hyperlink{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014a}{Compilation\+Mode} mode)
+\item 
+void \hyperlink{classglow_1_1_execution_engine_ac923edda3691d2560632616145c3175f}{run} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} \&context)
+\item 
+void \hyperlink{classglow_1_1_execution_engine_a52453e762a5843e7727cdb83c32422ee}{run} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} \&context, llvm\+::\+String\+Ref name)
+\item 
+void \hyperlink{classglow_1_1_execution_engine_a4d13189ef64dea65a581caf4a9b88978}{run} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings)
+\item 
+void \hyperlink{classglow_1_1_execution_engine_aad11bc4c7de37155ee0f29d787d0da31}{run} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, llvm\+::\+String\+Ref name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the \hyperlink{classglow_1_1_execution_engine}{Execution\+Engine}. It encapsulates the Glow Runtime. It handles compilation and execution of a network. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_execution_engine_ad438cf3b34468a43b1d62cf1975635e0}\label{classglow_1_1_execution_engine_ad438cf3b34468a43b1d62cf1975635e0}} 
+\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}!Execution\+Engine@{Execution\+Engine}}
+\index{Execution\+Engine@{Execution\+Engine}!glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+\subsubsection{\texorpdfstring{Execution\+Engine()}{ExecutionEngine()}}
+{\footnotesize\ttfamily Execution\+Engine\+::\+Execution\+Engine (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{backend = {\ttfamily \char`\"{}Interpreter\char`\"{}},  }\item[{uint64\+\_\+t}]{device\+Memory = {\ttfamily 0},  }\item[{bool}]{ignore\+User\+Device\+Config = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor for an \hyperlink{classglow_1_1_execution_engine}{Execution\+Engine} with {\ttfamily backend} and memory {\ttfamily device\+Memory} in bytes. If {\ttfamily ignore\+User\+Device\+Config} then user device configs will be ignored. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_execution_engine_aba8c48da8a7a8868a4d42128ac2f05fe}\label{classglow_1_1_execution_engine_aba8c48da8a7a8868a4d42128ac2f05fe}} 
+\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}!compile@{compile}}
+\index{compile@{compile}!glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+\subsubsection{\texorpdfstring{compile()}{compile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Execution\+Engine\+::compile (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx }\end{DoxyParamCaption})}
+
+Compiles all functions in the \hyperlink{classglow_1_1_module}{Module} with the given {\ttfamily cctx}. This method should be invoked before the run method and can only be called once without resetting the backend. \mbox{\Hypertarget{classglow_1_1_execution_engine_a5a719c4411a5c8389e7bf656e37a7602}\label{classglow_1_1_execution_engine_a5a719c4411a5c8389e7bf656e37a7602}} 
+\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}!compile@{compile}}
+\index{compile@{compile}!glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+\subsubsection{\texorpdfstring{compile()}{compile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Execution\+Engine\+::compile (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014a}{Compilation\+Mode}}]{mode }\end{DoxyParamCaption})}
+
+A convenience function for the most common type of compile. Can only be called once without resetting the backend. \mbox{\Hypertarget{classglow_1_1_execution_engine_a01943b9b5b551fe72e0bdb6e5ca84103}\label{classglow_1_1_execution_engine_a01943b9b5b551fe72e0bdb6e5ca84103}} 
+\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}!get\+D\+AG@{get\+D\+AG}}
+\index{get\+D\+AG@{get\+D\+AG}!glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+\subsubsection{\texorpdfstring{get\+D\+A\+G()}{getDAG()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$\hyperlink{structglow_1_1runtime_1_1_d_a_g}{runtime\+::\+D\+AG} $\ast$$>$ glow\+::\+Execution\+Engine\+::get\+D\+AG (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{network }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the D\+AG for the specified {\ttfamily network}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_execution_engine_a3ba6de88789f0caaf7fd777f21462729}\label{classglow_1_1_execution_engine_a3ba6de88789f0caaf7fd777f21462729}} 
+\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}!get\+Module@{get\+Module}}
+\index{get\+Module@{get\+Module}!glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+\subsubsection{\texorpdfstring{get\+Module()}{getModule()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_module}{Module}\& glow\+::\+Execution\+Engine\+::get\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the internal graph. Note\+: After compilation the contents of the module will have been altered and raw pointers to elements of the graph may no longer be valid. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_execution_engine_ac923edda3691d2560632616145c3175f}\label{classglow_1_1_execution_engine_ac923edda3691d2560632616145c3175f}} 
+\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}!run@{run}}
+\index{run@{run}!glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+\subsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Execution\+Engine\+::run (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_execution_context}{Execution\+Context} \&}]{context }\end{DoxyParamCaption})}
+
+Context aware single execution of a function. If more than one function has been compiled by this \hyperlink{classglow_1_1_execution_engine}{Execution\+Engine} then a name must be supplied to specify which function to run. \mbox{\Hypertarget{classglow_1_1_execution_engine_a52453e762a5843e7727cdb83c32422ee}\label{classglow_1_1_execution_engine_a52453e762a5843e7727cdb83c32422ee}} 
+\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}!run@{run}}
+\index{run@{run}!glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+\subsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Execution\+Engine\+::run (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_execution_context}{Execution\+Context} \&}]{context,  }\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption})}
+
+Context aware single execution of a function with the given {\ttfamily name}. \mbox{\Hypertarget{classglow_1_1_execution_engine_a4d13189ef64dea65a581caf4a9b88978}\label{classglow_1_1_execution_engine_a4d13189ef64dea65a581caf4a9b88978}} 
+\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}!run@{run}}
+\index{run@{run}!glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+\subsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Execution\+Engine\+::run (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings }\end{DoxyParamCaption})}
+
+Context aware single execution of a function. If more than one function has been compiled by this \hyperlink{classglow_1_1_execution_engine}{Execution\+Engine} then a name must be supplied to specify which function to run. \mbox{\Hypertarget{classglow_1_1_execution_engine_aad11bc4c7de37155ee0f29d787d0da31}\label{classglow_1_1_execution_engine_aad11bc4c7de37155ee0f29d787d0da31}} 
+\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}!run@{run}}
+\index{run@{run}!glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+\subsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Execution\+Engine\+::run (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings,  }\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption})}
+
+Context aware single execution of a function with the given {\ttfamily name}. \mbox{\Hypertarget{classglow_1_1_execution_engine_a35c2e984e60f079f6209de74d903f9a0}\label{classglow_1_1_execution_engine_a35c2e984e60f079f6209de74d903f9a0}} 
+\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}!set\+Backend\+Name@{set\+Backend\+Name}}
+\index{set\+Backend\+Name@{set\+Backend\+Name}!glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+\subsubsection{\texorpdfstring{set\+Backend\+Name()}{setBackendName()}}
+{\footnotesize\ttfamily void Execution\+Engine\+::set\+Backend\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{backend }\end{DoxyParamCaption})}
+
+
+
+Set the code generator to the given {\ttfamily backend}. 
+
+Set the code generator to {\ttfamily backend}. New code will be generated using this backend. This clears all previously loaded functions and resets the \hyperlink{classglow_1_1_module}{Module}. \mbox{\Hypertarget{classglow_1_1_execution_engine_aaf3231329fb5af46bfe5e37457ddf0cb}\label{classglow_1_1_execution_engine_aaf3231329fb5af46bfe5e37457ddf0cb}} 
+\index{glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}!set\+Device\+Memory@{set\+Device\+Memory}}
+\index{set\+Device\+Memory@{set\+Device\+Memory}!glow\+::\+Execution\+Engine@{glow\+::\+Execution\+Engine}}
+\subsubsection{\texorpdfstring{set\+Device\+Memory()}{setDeviceMemory()}}
+{\footnotesize\ttfamily void glow\+::\+Execution\+Engine\+::set\+Device\+Memory (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{mem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the device memory to {\ttfamily mem}. This will reset the existing device, clearing all existing functions and resetting the module. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Execution\+Engine/Execution\+Engine.\+h\item 
+lib/\+Execution\+Engine/Execution\+Engine.\+cpp\end{DoxyCompactItemize}

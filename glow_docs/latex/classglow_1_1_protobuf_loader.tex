@@ -1,0 +1,216 @@
+\hypertarget{classglow_1_1_protobuf_loader}{}\section{glow\+:\+:Protobuf\+Loader Class Reference}
+\label{classglow_1_1_protobuf_loader}\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+
+
+Loads model\+: graph and weights.  
+
+
+
+
+{\ttfamily \#include $<$Protobuf\+Loader.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Protobuf\+Loader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.904685cm]{classglow_1_1_protobuf_loader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ \hyperlink{classglow_1_1_protobuf_loader_afe06768b43d8aa8398d8d4c0c9668540}{get\+Node\+Value\+By\+Name} (llvm\+::\+String\+Ref name) const
+\item 
+bool \hyperlink{classglow_1_1_protobuf_loader_a50508e4cbe83b3cafd7d7319199c0fb7}{has\+Node\+By\+Name} (llvm\+::\+String\+Ref name) const
+\item 
+\hyperlink{classglow_1_1_protobuf_loader_aebda831dd716c8c1056f520783a062ac}{Protobuf\+Loader} (llvm\+::\+Array\+Ref$<$ const char $\ast$$>$ tensor\+Names, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$ types, \hyperlink{classglow_1_1_function}{Function} \&F, \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$err\+Ptr=nullptr)
+\item 
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_a60f3f978f452dffff98a6dceed704240}\label{classglow_1_1_protobuf_loader_a60f3f978f452dffff98a6dceed704240}} 
+{\bfseries Protobuf\+Loader} (const \hyperlink{classglow_1_1_protobuf_loader}{Protobuf\+Loader} \&other)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_a993f1998ae3c5443c5fd5d0905bc0a89}\label{classglow_1_1_protobuf_loader_a993f1998ae3c5443c5fd5d0905bc0a89}} 
+\hyperlink{classglow_1_1_protobuf_loader}{Protobuf\+Loader} \& {\bfseries operator=} (const \hyperlink{classglow_1_1_protobuf_loader}{Protobuf\+Loader} \&)=delete
+\item 
+const llvm\+::\+String\+Map$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \& \hyperlink{classglow_1_1_protobuf_loader_a7e89514a172bff5eb02915725d26e315}{get\+Output\+Vars\+Mapping} () const
+\item 
+const llvm\+::\+String\+Map$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \& \hyperlink{classglow_1_1_protobuf_loader_ac07756504a756acf83d49ef59ae1ff2f}{get\+Input\+Vars\+Mapping} () const
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \hyperlink{classglow_1_1_protobuf_loader_a84d14ec2ce55c5fd11a96fe688435b40}{get\+Single\+Output} ()
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \hyperlink{classglow_1_1_protobuf_loader_aa74cf67a8dae7eb8c6793aae25589c24}{get\+Output\+By\+Name} (llvm\+::\+String\+Ref name) const
+\item 
+bool \hyperlink{classglow_1_1_protobuf_loader_a60ed5b8175104dffe27f3f88b45ceede}{is\+Constant\+Foldable} (llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ inputs, std\+::string type\+Name) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_a119e008b20c497b020e7bc706021d04d}\label{classglow_1_1_protobuf_loader_a119e008b20c497b020e7bc706021d04d}} 
+void {\bfseries delete\+Unused\+Constants} ()
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_protobuf_loader_ab6c3cd81547d30058fc6061e31353289}{create\+And\+Register\+Constant} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_tensor}{Tensor} \&\&tensor)
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \hyperlink{classglow_1_1_protobuf_loader_a423b742fbe850b05ee21e3dd06276fd2}{create\+And\+Register\+Placeholder} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} T)
+\item 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} \hyperlink{classglow_1_1_protobuf_loader_ac558da9000f7c4cf499e2b4862827e5c}{get\+Node\+Value\+By\+Name\+Or\+Null\+Node\+Value} (llvm\+::\+String\+Ref name) const
+\item 
+\hyperlink{classglow_1_1_constant}{Constant} $\ast$ \hyperlink{classglow_1_1_protobuf_loader_a85a86c2a07a5c396cc6a9fd25de6a2ae}{get\+Constant\+By\+Name\+Or\+Null} (llvm\+::\+String\+Ref name) const
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{classglow_1_1_constant}{Constant} $\ast$ $>$ \hyperlink{classglow_1_1_protobuf_loader_a622b34ab4bbe4cfc5bcc5b03af58c214}{get\+Constant\+By\+Name} (llvm\+::\+String\+Ref name) const
+\item 
+bool \hyperlink{classglow_1_1_protobuf_loader_abcb6af3498f15a1d84bc8800dda2a8e2}{has\+Constant\+By\+Name} (llvm\+::\+String\+Ref name) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_ac16d6a010eff091f2741bcd217330c20}\label{classglow_1_1_protobuf_loader_ac16d6a010eff091f2741bcd217330c20}} 
+\hyperlink{classglow_1_1_function}{Function} \& \hyperlink{classglow_1_1_protobuf_loader_ac16d6a010eff091f2741bcd217330c20}{G\+\_\+}
+\begin{DoxyCompactList}\small\item\em The graph that we are constructing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_aa0537bf30bcdeb245f90d266bec80146}\label{classglow_1_1_protobuf_loader_aa0537bf30bcdeb245f90d266bec80146}} 
+llvm\+::\+String\+Map$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ \hyperlink{classglow_1_1_protobuf_loader_aa0537bf30bcdeb245f90d266bec80146}{node\+Value\+By\+Name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Saves network nodes by name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_acd798ac70c0f8ebf3036b9dd25969484}\label{classglow_1_1_protobuf_loader_acd798ac70c0f8ebf3036b9dd25969484}} 
+llvm\+::\+String\+Map$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \hyperlink{classglow_1_1_protobuf_loader_acd798ac70c0f8ebf3036b9dd25969484}{output\+Vars\+By\+Name\+\_\+}
+\begin{DoxyCompactList}\small\item\em A map from names of the external outputs of the network to Variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_aa6a24b02060b09e46f0c8eed907e5b99}\label{classglow_1_1_protobuf_loader_aa6a24b02060b09e46f0c8eed907e5b99}} 
+llvm\+::\+String\+Map$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \hyperlink{classglow_1_1_protobuf_loader_aa6a24b02060b09e46f0c8eed907e5b99}{input\+Vars\+By\+Name\+\_\+}
+\begin{DoxyCompactList}\small\item\em A map from names of the external inputs of the network to Variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Loads model\+: graph and weights. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_aebda831dd716c8c1056f520783a062ac}\label{classglow_1_1_protobuf_loader_aebda831dd716c8c1056f520783a062ac}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!Protobuf\+Loader@{Protobuf\+Loader}}
+\index{Protobuf\+Loader@{Protobuf\+Loader}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{Protobuf\+Loader()}{ProtobufLoader()}}
+{\footnotesize\ttfamily glow\+::\+Protobuf\+Loader\+::\+Protobuf\+Loader (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ const char $\ast$$>$}]{tensor\+Names,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$}]{types,  }\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{F,  }\item[{\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$}]{err\+Ptr = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Constructs new \hyperlink{classglow_1_1_protobuf_loader}{Protobuf\+Loader} object. It will populate the network into {\ttfamily F}. The list {\ttfamily types} and {\ttfamily names} are used to initialized the inputs and outputs with specific names and types. If {\ttfamily err\+Ptr} is not null then if an error occurs it will get assigned there otherwise if an error occurs it will abort. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_ab6c3cd81547d30058fc6061e31353289}\label{classglow_1_1_protobuf_loader_ab6c3cd81547d30058fc6061e31353289}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!create\+And\+Register\+Constant@{create\+And\+Register\+Constant}}
+\index{create\+And\+Register\+Constant@{create\+And\+Register\+Constant}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{create\+And\+Register\+Constant()}{createAndRegisterConstant()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} glow\+::\+Protobuf\+Loader\+::create\+And\+Register\+Constant (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{classglow_1_1_tensor}{Tensor} \&\&}]{tensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create a new constant that\textquotesingle{}s initialized with {\ttfamily tensor}, and register it under the name {\ttfamily name}. If an existing \hyperlink{classglow_1_1_placeholder}{Placeholder} is already registered under the same name then the tensor is thrown out and no new \hyperlink{classglow_1_1_constant}{Constant} is created. \mbox{\Hypertarget{classglow_1_1_protobuf_loader_a423b742fbe850b05ee21e3dd06276fd2}\label{classglow_1_1_protobuf_loader_a423b742fbe850b05ee21e3dd06276fd2}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!create\+And\+Register\+Placeholder@{create\+And\+Register\+Placeholder}}
+\index{create\+And\+Register\+Placeholder@{create\+And\+Register\+Placeholder}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{create\+And\+Register\+Placeholder()}{createAndRegisterPlaceholder()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ glow\+::\+Protobuf\+Loader\+::create\+And\+Register\+Placeholder (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create a new \hyperlink{classglow_1_1_placeholder}{Placeholder} of type {\ttfamily T}, and register it under the name {\ttfamily name}. \begin{DoxyReturn}{Returns}
+The newly created placeholder. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_a622b34ab4bbe4cfc5bcc5b03af58c214}\label{classglow_1_1_protobuf_loader_a622b34ab4bbe4cfc5bcc5b03af58c214}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!get\+Constant\+By\+Name@{get\+Constant\+By\+Name}}
+\index{get\+Constant\+By\+Name@{get\+Constant\+By\+Name}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{get\+Constant\+By\+Name()}{getConstantByName()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{classglow_1_1_constant}{Constant} $\ast$ $>$ glow\+::\+Protobuf\+Loader\+::get\+Constant\+By\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+an Expected of the \hyperlink{classglow_1_1_constant}{Constant} registered with the given {\ttfamily name} and returns and Error if no \hyperlink{classglow_1_1_constant}{Constant} has been registered with this name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_a85a86c2a07a5c396cc6a9fd25de6a2ae}\label{classglow_1_1_protobuf_loader_a85a86c2a07a5c396cc6a9fd25de6a2ae}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!get\+Constant\+By\+Name\+Or\+Null@{get\+Constant\+By\+Name\+Or\+Null}}
+\index{get\+Constant\+By\+Name\+Or\+Null@{get\+Constant\+By\+Name\+Or\+Null}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{get\+Constant\+By\+Name\+Or\+Null()}{getConstantByNameOrNull()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_constant}{Constant} $\ast$ glow\+::\+Protobuf\+Loader\+::get\+Constant\+By\+Name\+Or\+Null (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classglow_1_1_constant}{Constant} registered with the given {\ttfamily name} and nullptr if no \hyperlink{classglow_1_1_constant}{Constant} has been registered with this name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_ac07756504a756acf83d49ef59ae1ff2f}\label{classglow_1_1_protobuf_loader_ac07756504a756acf83d49ef59ae1ff2f}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!get\+Input\+Vars\+Mapping@{get\+Input\+Vars\+Mapping}}
+\index{get\+Input\+Vars\+Mapping@{get\+Input\+Vars\+Mapping}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{get\+Input\+Vars\+Mapping()}{getInputVarsMapping()}}
+{\footnotesize\ttfamily const llvm\+::\+String\+Map$<$\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$\& glow\+::\+Protobuf\+Loader\+::get\+Input\+Vars\+Mapping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+mapping between external names and actual Glow input nodes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_afe06768b43d8aa8398d8d4c0c9668540}\label{classglow_1_1_protobuf_loader_afe06768b43d8aa8398d8d4c0c9668540}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!get\+Node\+Value\+By\+Name@{get\+Node\+Value\+By\+Name}}
+\index{get\+Node\+Value\+By\+Name@{get\+Node\+Value\+By\+Name}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{get\+Node\+Value\+By\+Name()}{getNodeValueByName()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ glow\+::\+Protobuf\+Loader\+::get\+Node\+Value\+By\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{structglow_1_1_node_value}{Node\+Value} that was registered with the name {\ttfamily name}. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+has\+Node\+By\+Name(name) 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_ac558da9000f7c4cf499e2b4862827e5c}\label{classglow_1_1_protobuf_loader_ac558da9000f7c4cf499e2b4862827e5c}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!get\+Node\+Value\+By\+Name\+Or\+Null\+Node\+Value@{get\+Node\+Value\+By\+Name\+Or\+Null\+Node\+Value}}
+\index{get\+Node\+Value\+By\+Name\+Or\+Null\+Node\+Value@{get\+Node\+Value\+By\+Name\+Or\+Null\+Node\+Value}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{get\+Node\+Value\+By\+Name\+Or\+Null\+Node\+Value()}{getNodeValueByNameOrNullNodeValue()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_node_value}{Node\+Value} glow\+::\+Protobuf\+Loader\+::get\+Node\+Value\+By\+Name\+Or\+Null\+Node\+Value (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{structglow_1_1_node_value}{Node\+Value} that was registered with the name {\ttfamily name} or a nullptr wrapped in a \hyperlink{structglow_1_1_node_value}{Node\+Value} if no node has been registered with this name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_aa74cf67a8dae7eb8c6793aae25589c24}\label{classglow_1_1_protobuf_loader_aa74cf67a8dae7eb8c6793aae25589c24}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!get\+Output\+By\+Name@{get\+Output\+By\+Name}}
+\index{get\+Output\+By\+Name@{get\+Output\+By\+Name}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{get\+Output\+By\+Name()}{getOutputByName()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ glow\+::\+Protobuf\+Loader\+::get\+Output\+By\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classglow_1_1_placeholder}{Placeholder} for the external output with {\ttfamily name}. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+output\+Vars\+By\+Name\+\_\+.\+find(name) != output\+Vars\+By\+Name\+\_\+.\+end() 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_a7e89514a172bff5eb02915725d26e315}\label{classglow_1_1_protobuf_loader_a7e89514a172bff5eb02915725d26e315}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!get\+Output\+Vars\+Mapping@{get\+Output\+Vars\+Mapping}}
+\index{get\+Output\+Vars\+Mapping@{get\+Output\+Vars\+Mapping}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{get\+Output\+Vars\+Mapping()}{getOutputVarsMapping()}}
+{\footnotesize\ttfamily const llvm\+::\+String\+Map$<$\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$\& glow\+::\+Protobuf\+Loader\+::get\+Output\+Vars\+Mapping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+mapping between external names and actual Glow output nodes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_a84d14ec2ce55c5fd11a96fe688435b40}\label{classglow_1_1_protobuf_loader_a84d14ec2ce55c5fd11a96fe688435b40}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!get\+Single\+Output@{get\+Single\+Output}}
+\index{get\+Single\+Output@{get\+Single\+Output}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{get\+Single\+Output()}{getSingleOutput()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$ glow\+::\+Protobuf\+Loader\+::get\+Single\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the single final output of the network. The function assumes that there is only one output, returns Error otherwise. For image classification, this single final output is usually the result of the last softmax or regression layer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_abcb6af3498f15a1d84bc8800dda2a8e2}\label{classglow_1_1_protobuf_loader_abcb6af3498f15a1d84bc8800dda2a8e2}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!has\+Constant\+By\+Name@{has\+Constant\+By\+Name}}
+\index{has\+Constant\+By\+Name@{has\+Constant\+By\+Name}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{has\+Constant\+By\+Name()}{hasConstantByName()}}
+{\footnotesize\ttfamily bool glow\+::\+Protobuf\+Loader\+::has\+Constant\+By\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+whether or not a \hyperlink{classglow_1_1_constant}{Constant} has been registered with the given {\ttfamily name}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_a50508e4cbe83b3cafd7d7319199c0fb7}\label{classglow_1_1_protobuf_loader_a50508e4cbe83b3cafd7d7319199c0fb7}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!has\+Node\+By\+Name@{has\+Node\+By\+Name}}
+\index{has\+Node\+By\+Name@{has\+Node\+By\+Name}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{has\+Node\+By\+Name()}{hasNodeByName()}}
+{\footnotesize\ttfamily bool glow\+::\+Protobuf\+Loader\+::has\+Node\+By\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if the node that\textquotesingle{}s registered using {\ttfamily name} exists. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_protobuf_loader_a60ed5b8175104dffe27f3f88b45ceede}\label{classglow_1_1_protobuf_loader_a60ed5b8175104dffe27f3f88b45ceede}} 
+\index{glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}!is\+Constant\+Foldable@{is\+Constant\+Foldable}}
+\index{is\+Constant\+Foldable@{is\+Constant\+Foldable}!glow\+::\+Protobuf\+Loader@{glow\+::\+Protobuf\+Loader}}
+\subsubsection{\texorpdfstring{is\+Constant\+Foldable()}{isConstantFoldable()}}
+{\footnotesize\ttfamily bool glow\+::\+Protobuf\+Loader\+::is\+Constant\+Foldable (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$}]{inputs,  }\item[{std\+::string}]{type\+Name }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if the operator with name {\ttfamily type\+Name} having input node list as {\ttfamily inputs} is constant foldable. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Importer/Protobuf\+Loader.\+h\item 
+lib/\+Importer/Protobuf\+Loader.\+cpp\end{DoxyCompactItemize}

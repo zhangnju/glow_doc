@@ -1,0 +1,105 @@
+\hypertarget{classglow_1_1_reshape_node}{}\section{glow\+:\+:Reshape\+Node Class Reference}
+\label{classglow_1_1_reshape_node}\index{glow\+::\+Reshape\+Node@{glow\+::\+Reshape\+Node}}
+
+
+Reshape the Input tensor to shape Dims.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Reshape\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_reshape_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_aa04c04cbeb68e801f51f3e166fa40f52}\label{classglow_1_1_reshape_node_aa04c04cbeb68e801f51f3e166fa40f52}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_ae6952a9921cb8065ef0290b3bb2be2ad}\label{classglow_1_1_reshape_node_ae6952a9921cb8065ef0290b3bb2be2ad}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_adf3226419a9311d99b6b319a6172d70f}\label{classglow_1_1_reshape_node_adf3226419a9311d99b6b319a6172d70f}} 
+{\bfseries Reshape\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, std\+::vector$<$ size\+\_\+t $>$ Dims)
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_a503d10e335a024e81b47dfd3c3721a5f}\label{classglow_1_1_reshape_node_a503d10e335a024e81b47dfd3c3721a5f}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_ae6fcf0d3217a14235c11a0bcd558a573}\label{classglow_1_1_reshape_node_ae6fcf0d3217a14235c11a0bcd558a573}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_ae32c9cf08820198f3088592547e523a5}\label{classglow_1_1_reshape_node_ae32c9cf08820198f3088592547e523a5}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_a6e77f479f6095a3483150c3e7091b75a}\label{classglow_1_1_reshape_node_a6e77f479f6095a3483150c3e7091b75a}} 
+llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ {\bfseries get\+Dims} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_a0720f9e7c0df7e5c35796dbb5ca9e3d9}\label{classglow_1_1_reshape_node_a0720f9e7c0df7e5c35796dbb5ca9e3d9}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_aad7d589f5f894c382131e53d43a7981b}\label{classglow_1_1_reshape_node_aad7d589f5f894c382131e53d43a7981b}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_a7376dfd7b5047ae1948066c20d006f78}\label{classglow_1_1_reshape_node_a7376dfd7b5047ae1948066c20d006f78}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_a87e04723cab7d91e62643f0a40097dfe}\label{classglow_1_1_reshape_node_a87e04723cab7d91e62643f0a40097dfe}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_a731bfc08e2a6d2f899a2a605a52a476d}\label{classglow_1_1_reshape_node_a731bfc08e2a6d2f899a2a605a52a476d}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_aa182b46502814d67b60c2f69de8848cb}\label{classglow_1_1_reshape_node_aa182b46502814d67b60c2f69de8848cb}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_a39d53c47c9fe7b4ed91cca158a67dabf}\label{classglow_1_1_reshape_node_a39d53c47c9fe7b4ed91cca158a67dabf}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_a7633cdcfa3506ae57dc135bd37021d89}\label{classglow_1_1_reshape_node_a7633cdcfa3506ae57dc135bd37021d89}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_afb1c73d4685b65fc4b90cd75ee3b55db}\label{classglow_1_1_reshape_node_afb1c73d4685b65fc4b90cd75ee3b55db}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_ac3ad9737ca20b42a1b044e704fd631b4}\label{classglow_1_1_reshape_node_ac3ad9737ca20b42a1b044e704fd631b4}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_reshape_node}{Reshape\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_ae00da78b315d39979c0c2a3a3db5b079}\label{classglow_1_1_reshape_node_ae00da78b315d39979c0c2a3a3db5b079}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_a4ffc59b928d939cacb21a534b8c2dee3}\label{classglow_1_1_reshape_node_a4ffc59b928d939cacb21a534b8c2dee3}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_a7f76493e25f26fda99fc4de3dce072ca}\label{classglow_1_1_reshape_node_a7f76493e25f26fda99fc4de3dce072ca}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_ac4f8326c88b41801eb0d9f47d115971e}\label{classglow_1_1_reshape_node_ac4f8326c88b41801eb0d9f47d115971e}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_reshape_node_aff7c2d67025f3309a191a3b277ba669b}\label{classglow_1_1_reshape_node_aff7c2d67025f3309a191a3b277ba669b}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Reshape the Input tensor to shape Dims. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

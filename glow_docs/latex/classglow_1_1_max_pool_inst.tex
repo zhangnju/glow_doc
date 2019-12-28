@@ -1,0 +1,57 @@
+\hypertarget{classglow_1_1_max_pool_inst}{}\section{glow\+:\+:Max\+Pool\+Inst Class Reference}
+\label{classglow_1_1_max_pool_inst}\index{glow\+::\+Max\+Pool\+Inst@{glow\+::\+Max\+Pool\+Inst}}
+Inheritance diagram for glow\+:\+:Max\+Pool\+Inst\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.991111cm]{classglow_1_1_max_pool_inst}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_a38b50b27dc27af0bc56e642f74085d2d}\label{classglow_1_1_max_pool_inst_a38b50b27dc27af0bc56e642f74085d2d}} 
+{\bfseries Max\+Pool\+Inst} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$Dest, \hyperlink{classglow_1_1_value}{Value} $\ast$Src, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Kernels, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Strides, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Layout)
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_a9a8cdf714ad169dc79cda5f3c8ef8ac4}\label{classglow_1_1_max_pool_inst_a9a8cdf714ad169dc79cda5f3c8ef8ac4}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Dest} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_a159647fee8ac30ea4e11620afa0b90dc}\label{classglow_1_1_max_pool_inst_a159647fee8ac30ea4e11620afa0b90dc}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Src} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_a0f4b806067a3552cec5bf4e18fdc17a2}\label{classglow_1_1_max_pool_inst_a0f4b806067a3552cec5bf4e18fdc17a2}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Kernels} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_a8d0276e52120a412d87022c4e4671115}\label{classglow_1_1_max_pool_inst_a8d0276e52120a412d87022c4e4671115}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Strides} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_aab5558e269781cc7e8576c30dbde1a6a}\label{classglow_1_1_max_pool_inst_aab5558e269781cc7e8576c30dbde1a6a}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Pads} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_a643447ea04b58d7f7a7067b871f30f58}\label{classglow_1_1_max_pool_inst_a643447ea04b58d7f7a7067b871f30f58}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Layout} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_a025891d0f3312442544e7e490c4d3c19}\label{classglow_1_1_max_pool_inst_a025891d0f3312442544e7e490c4d3c19}} 
+bool {\bfseries is\+Inplace\+Op} (unsigned dst\+Idx, unsigned src\+Idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_ac55d44325f4337a9d92c960ec30a9022}\label{classglow_1_1_max_pool_inst_ac55d44325f4337a9d92c960ec30a9022}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_a00c805d3210cb7689255a2c844679a05}\label{classglow_1_1_max_pool_inst_a00c805d3210cb7689255a2c844679a05}} 
+void {\bfseries dump} (llvm\+::raw\+\_\+ostream \&os) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_a9799cb488995633985a639706ad23250}\label{classglow_1_1_max_pool_inst_a9799cb488995633985a639706ad23250}} 
+void {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_inst_a38617a054783050bec39956756715f7d}\label{classglow_1_1_max_pool_inst_a38617a054783050bec39956756715f7d}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+h\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+cpp\end{DoxyCompactItemize}

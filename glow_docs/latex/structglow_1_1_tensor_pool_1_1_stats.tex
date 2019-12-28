@@ -1,0 +1,51 @@
+\hypertarget{structglow_1_1_tensor_pool_1_1_stats}{}\section{glow\+:\+:Tensor\+Pool\+:\+:Stats Struct Reference}
+\label{structglow_1_1_tensor_pool_1_1_stats}\index{glow\+::\+Tensor\+Pool\+::\+Stats@{glow\+::\+Tensor\+Pool\+::\+Stats}}
+
+
+Statistics relating to the usage of the pool.  
+
+
+
+
+{\ttfamily \#include $<$Tensor\+Pool.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_tensor_pool_1_1_stats_addabd15f18e11bafde03349aabba227f}\label{structglow_1_1_tensor_pool_1_1_stats_addabd15f18e11bafde03349aabba227f}} 
+std\+::atomic$<$ uint64\+\_\+t $>$ \hyperlink{structglow_1_1_tensor_pool_1_1_stats_addabd15f18e11bafde03349aabba227f}{total\+Types} \{0\}
+\begin{DoxyCompactList}\small\item\em The total number of Types that has ever been available in this pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_tensor_pool_1_1_stats_af956c077dae2fb2a2188bf2edbdab570}\label{structglow_1_1_tensor_pool_1_1_stats_af956c077dae2fb2a2188bf2edbdab570}} 
+std\+::atomic$<$ uint64\+\_\+t $>$ \hyperlink{structglow_1_1_tensor_pool_1_1_stats_af956c077dae2fb2a2188bf2edbdab570}{current\+Buffers} \{0\}
+\begin{DoxyCompactList}\small\item\em The number of Tensors currently allocated and available. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_tensor_pool_1_1_stats_ac41a1336dd8a5756d6a6581d5e664544}\label{structglow_1_1_tensor_pool_1_1_stats_ac41a1336dd8a5756d6a6581d5e664544}} 
+std\+::atomic$<$ uint64\+\_\+t $>$ \hyperlink{structglow_1_1_tensor_pool_1_1_stats_ac41a1336dd8a5756d6a6581d5e664544}{total\+Allocs} \{0\}
+\begin{DoxyCompactList}\small\item\em The number of \hyperlink{classglow_1_1_tensor}{Tensor} allocations ever done by the pool. \end{DoxyCompactList}\item 
+std\+::atomic$<$ uint64\+\_\+t $>$ \hyperlink{structglow_1_1_tensor_pool_1_1_stats_ac98e24cc1dc9bed9b00d33ae7387927d}{inline\+Allocs} \{0\}
+\item 
+\mbox{\Hypertarget{structglow_1_1_tensor_pool_1_1_stats_acb97f11eafe11c3a56dd185e55ee99b0}\label{structglow_1_1_tensor_pool_1_1_stats_acb97f11eafe11c3a56dd185e55ee99b0}} 
+std\+::atomic$<$ uint64\+\_\+t $>$ \hyperlink{structglow_1_1_tensor_pool_1_1_stats_acb97f11eafe11c3a56dd185e55ee99b0}{total\+Gets} \{0\}
+\begin{DoxyCompactList}\small\item\em The total number of times a \hyperlink{classglow_1_1_tensor}{Tensor} was retrieved from the pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_tensor_pool_1_1_stats_a1fe6baf6dc7fe3e80198940fb882e113}\label{structglow_1_1_tensor_pool_1_1_stats_a1fe6baf6dc7fe3e80198940fb882e113}} 
+std\+::atomic$<$ uint64\+\_\+t $>$ \hyperlink{structglow_1_1_tensor_pool_1_1_stats_a1fe6baf6dc7fe3e80198940fb882e113}{total\+Reclaims} \{0\}
+\begin{DoxyCompactList}\small\item\em The total number of times a \hyperlink{classglow_1_1_tensor}{Tensor} was returned to the pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_tensor_pool_1_1_stats_ae04ac5ea8f3e827ff7f457714e6d0f92}\label{structglow_1_1_tensor_pool_1_1_stats_ae04ac5ea8f3e827ff7f457714e6d0f92}} 
+std\+::atomic$<$ uint64\+\_\+t $>$ \hyperlink{structglow_1_1_tensor_pool_1_1_stats_ae04ac5ea8f3e827ff7f457714e6d0f92}{total\+Frees} \{0\}
+\begin{DoxyCompactList}\small\item\em The total number of times a \hyperlink{classglow_1_1_tensor}{Tensor} was freed (e.\+g. via \hyperlink{classglow_1_1_tensor_pool_a67ae82ff913ef17d2b18cb86182b0546}{clear()}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Statistics relating to the usage of the pool. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1_tensor_pool_1_1_stats_ac98e24cc1dc9bed9b00d33ae7387927d}\label{structglow_1_1_tensor_pool_1_1_stats_ac98e24cc1dc9bed9b00d33ae7387927d}} 
+\index{glow\+::\+Tensor\+Pool\+::\+Stats@{glow\+::\+Tensor\+Pool\+::\+Stats}!inline\+Allocs@{inline\+Allocs}}
+\index{inline\+Allocs@{inline\+Allocs}!glow\+::\+Tensor\+Pool\+::\+Stats@{glow\+::\+Tensor\+Pool\+::\+Stats}}
+\subsubsection{\texorpdfstring{inline\+Allocs}{inlineAllocs}}
+{\footnotesize\ttfamily std\+::atomic$<$uint64\+\_\+t$>$ glow\+::\+Tensor\+Pool\+::\+Stats\+::inline\+Allocs \{0\}}
+
+The number of \hyperlink{classglow_1_1_tensor}{Tensor} allocations that were done inline to get (as opposed to reserve). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Tensor\+Pool.\+h\end{DoxyCompactItemize}

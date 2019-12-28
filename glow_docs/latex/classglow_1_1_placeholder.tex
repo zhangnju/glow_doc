@@ -1,0 +1,71 @@
+\hypertarget{classglow_1_1_placeholder}{}\section{glow\+:\+:Placeholder Class Reference}
+\label{classglow_1_1_placeholder}\index{glow\+::\+Placeholder@{glow\+::\+Placeholder}}
+
+
+{\ttfamily \#include $<$Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Placeholder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.705314cm]{classglow_1_1_placeholder}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_a6d1912ade10ee4831479a486de62db4e}\label{classglow_1_1_placeholder_a6d1912ade10ee4831479a486de62db4e}} 
+\hyperlink{classglow_1_1_placeholder_a6d1912ade10ee4831479a486de62db4e}{Placeholder} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Ty, bool is\+Trainable)
+\begin{DoxyCompactList}\small\item\em Create a new placeholder. \end{DoxyCompactList}\item 
+bool \hyperlink{classglow_1_1_placeholder_ae55a57afde49e54d9f6a210f083645f1}{is\+Training} () const
+\item 
+bool \hyperlink{classglow_1_1_placeholder_a037101fe1379191f958f4f6ddcfbd1fb}{alloc\+Zero} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_aefa7a7826b6b7847e67aa03c4d8cac50}\label{classglow_1_1_placeholder_aefa7a7826b6b7847e67aa03c4d8cac50}} 
+void \hyperlink{classglow_1_1_placeholder_aefa7a7826b6b7847e67aa03c4d8cac50}{set\+Alloc\+Zero} (bool on=true)
+\begin{DoxyCompactList}\small\item\em Sets whether or not associated Tensors should be zeroed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_a8d64c7a0f16a423639e9a640e0a8d0ed}\label{classglow_1_1_placeholder_a8d64c7a0f16a423639e9a640e0a8d0ed}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_a59fb2755d53564f4e94e094abaa64b93}\label{classglow_1_1_placeholder_a59fb2755d53564f4e94e094abaa64b93}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_a0360a95e66eac6e6bf7d0b51862e8a5d}\label{classglow_1_1_placeholder_a0360a95e66eac6e6bf7d0b51862e8a5d}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_aab406d0a17d52f839a35c628e7423f2b}\label{classglow_1_1_placeholder_aab406d0a17d52f839a35c628e7423f2b}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classglow_1_1_placeholder}{Placeholder} nodes are unbound-\/storage. The content tensors are attached to this node at runtime. Placeholders are used as inputs and output nodes to the network. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_placeholder_a037101fe1379191f958f4f6ddcfbd1fb}\label{classglow_1_1_placeholder_a037101fe1379191f958f4f6ddcfbd1fb}} 
+\index{glow\+::\+Placeholder@{glow\+::\+Placeholder}!alloc\+Zero@{alloc\+Zero}}
+\index{alloc\+Zero@{alloc\+Zero}!glow\+::\+Placeholder@{glow\+::\+Placeholder}}
+\subsubsection{\texorpdfstring{alloc\+Zero()}{allocZero()}}
+{\footnotesize\ttfamily bool glow\+::\+Placeholder\+::alloc\+Zero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if associated Tensors should be zeroed when allocated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_placeholder_ae55a57afde49e54d9f6a210f083645f1}\label{classglow_1_1_placeholder_ae55a57afde49e54d9f6a210f083645f1}} 
+\index{glow\+::\+Placeholder@{glow\+::\+Placeholder}!is\+Training@{is\+Training}}
+\index{is\+Training@{is\+Training}!glow\+::\+Placeholder@{glow\+::\+Placeholder}}
+\subsubsection{\texorpdfstring{is\+Training()}{isTraining()}}
+{\footnotesize\ttfamily bool glow\+::\+Placeholder\+::is\+Training (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if the placeholder are trainable during differentiation. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,124 @@
+\hypertarget{classglow_1_1detail_1_1_glow_expected}{}\section{glow\+:\+:detail\+:\+:Glow\+Expected$<$ T $>$ Class Template Reference}
+\label{classglow_1_1detail_1_1_glow_expected}\index{glow\+::detail\+::\+Glow\+Expected$<$ T $>$@{glow\+::detail\+::\+Glow\+Expected$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Error.\+h$>$}
+
+Inheritance diagram for glow\+:\+:detail\+:\+:Glow\+Expected$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1detail_1_1_glow_expected}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected_aa21ba9bdd7c064878fd769bee6216712}{Glow\+Expected} (\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error} error)
+\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_abd74b8b0b12220c3797100124058c2db}\label{classglow_1_1detail_1_1_glow_expected_abd74b8b0b12220c3797100124058c2db}} 
+\hyperlink{classglow_1_1detail_1_1_glow_expected_abd74b8b0b12220c3797100124058c2db}{Glow\+Expected} (\hyperlink{classglow_1_1detail_1_1_glow_error_success}{Glow\+Error\+Success})=delete
+\begin{DoxyCompactList}\small\item\em Disallow construction of Expected from Error\+Success and Error\+Empty. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_a2953e58ad90e469dd025a98dd9590690}\label{classglow_1_1detail_1_1_glow_expected_a2953e58ad90e469dd025a98dd9590690}} 
+{\bfseries Glow\+Expected} (\hyperlink{classglow_1_1detail_1_1_glow_error_empty}{Glow\+Error\+Empty})=delete
+\item 
+{\footnotesize template$<$typename OtherT $>$ }\\\hyperlink{classglow_1_1detail_1_1_glow_expected_af574842af6b0354d6a73eaafd4a9eeed}{Glow\+Expected} (OtherT \&\&other, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ OtherT, T $>$\+::value $>$\+::type $\ast$=nullptr)
+\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_a0afaa30b589cf8ffa06f45b333d91828}\label{classglow_1_1detail_1_1_glow_expected_a0afaa30b589cf8ffa06f45b333d91828}} 
+\hyperlink{classglow_1_1detail_1_1_glow_expected_a0afaa30b589cf8ffa06f45b333d91828}{Glow\+Expected} (\hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move construct Expected$<$\+T$>$ from another Expected$<$\+T$>$. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename OtherT $>$ }\\\hyperlink{classglow_1_1detail_1_1_glow_expected_adefb9b97647f3b44c5442bf5d9295630}{Glow\+Expected} (\hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected}$<$ OtherT $>$ \&\&other, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ OtherT, T $>$\+::value $>$\+::type $\ast$=nullptr)
+\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_a9374b8773360544e44b195d79ff4be3d}\label{classglow_1_1detail_1_1_glow_expected_a9374b8773360544e44b195d79ff4be3d}} 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected} \& \hyperlink{classglow_1_1detail_1_1_glow_expected_a9374b8773360544e44b195d79ff4be3d}{operator=} (\hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move assign Expected$<$\+T$>$ from another Expected$<$\+T$>$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_a958e10595954eb2488e0adc018eb5ecc}\label{classglow_1_1detail_1_1_glow_expected_a958e10595954eb2488e0adc018eb5ecc}} 
+\hyperlink{classglow_1_1detail_1_1_glow_expected_a958e10595954eb2488e0adc018eb5ecc}{$\sim$\+Glow\+Expected} ()
+\begin{DoxyCompactList}\small\item\em Destructor for Expected, manually destroys the constents of payload\+\_\+. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected_a5f11ce0f16940007250f5e3c516903a1}{operator bool} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_abfeffb8f8a2235149b4af9470da05234}\label{classglow_1_1detail_1_1_glow_expected_abfeffb8f8a2235149b4af9470da05234}} 
+T \& \hyperlink{classglow_1_1detail_1_1_glow_expected_abfeffb8f8a2235149b4af9470da05234}{get} ()
+\begin{DoxyCompactList}\small\item\em Get a reference to a value contained by payload\+\_\+. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_a1bab1d511acf2fe90dfd67647f945393}\label{classglow_1_1detail_1_1_glow_expected_a1bab1d511acf2fe90dfd67647f945393}} 
+const T \& \hyperlink{classglow_1_1detail_1_1_glow_expected_a1bab1d511acf2fe90dfd67647f945393}{get} () const
+\begin{DoxyCompactList}\small\item\em Get a const reference to a value contained by payload\+\_\+. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error} \hyperlink{classglow_1_1detail_1_1_glow_expected_a694628a1468d324f12b2ecd6d553797f}{take\+Error} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_a17430386a9672441e0916b95670acb09}\label{classglow_1_1detail_1_1_glow_expected_a17430386a9672441e0916b95670acb09}} 
+T $\ast$ {\bfseries operator-\/$>$} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_aeec9ce61bf53d271f617c7670c91fc33}\label{classglow_1_1detail_1_1_glow_expected_aeec9ce61bf53d271f617c7670c91fc33}} 
+const T $\ast$ {\bfseries operator-\/$>$} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_ad24c4006c3031859614de80350886169}\label{classglow_1_1detail_1_1_glow_expected_ad24c4006c3031859614de80350886169}} 
+T \& {\bfseries operator$\ast$} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_aa73faab12594ffda1409cd8824284752}\label{classglow_1_1detail_1_1_glow_expected_aa73faab12594ffda1409cd8824284752}} 
+const T \& {\bfseries operator$\ast$} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_a9be753e31f76569c0e7cff1031c7e6c1}\label{classglow_1_1detail_1_1_glow_expected_a9be753e31f76569c0e7cff1031c7e6c1}} 
+{\footnotesize template$<$typename OtherT $>$ }\\class {\bfseries Glow\+Expected}
+\item 
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_a1472ffcb479db9fd31cfb0b4afe295af}\label{classglow_1_1detail_1_1_glow_expected_a1472ffcb479db9fd31cfb0b4afe295af}} 
+{\footnotesize template$<$typename TT $>$ }\\TT {\bfseries detail\+::exit\+On\+Error} (const char $\ast$file\+Name, size\+\_\+t line\+Number, \hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected}$<$ TT $>$ expected)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class glow\+::detail\+::\+Glow\+Expected$<$ T $>$}
+
+Expected is a templated container for either a value of type T or an Error\+Value. It is used for fallible processes that may return either a value or encounter an error. Expected ensures that its state has been checked for errors before destruction. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_aa21ba9bdd7c064878fd769bee6216712}\label{classglow_1_1detail_1_1_glow_expected_aa21ba9bdd7c064878fd769bee6216712}} 
+\index{glow\+::detail\+::\+Glow\+Expected@{glow\+::detail\+::\+Glow\+Expected}!Glow\+Expected@{Glow\+Expected}}
+\index{Glow\+Expected@{Glow\+Expected}!glow\+::detail\+::\+Glow\+Expected@{glow\+::detail\+::\+Glow\+Expected}}
+\subsubsection{\texorpdfstring{Glow\+Expected()}{GlowExpected()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{glow\+::detail\+::\+Glow\+Expected}$<$ T $>$\+::\hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected} (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error}}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct an Expected from an Error. The error must contain an Error\+Value. Marks the Error as checked. \mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_af574842af6b0354d6a73eaafd4a9eeed}\label{classglow_1_1detail_1_1_glow_expected_af574842af6b0354d6a73eaafd4a9eeed}} 
+\index{glow\+::detail\+::\+Glow\+Expected@{glow\+::detail\+::\+Glow\+Expected}!Glow\+Expected@{Glow\+Expected}}
+\index{Glow\+Expected@{Glow\+Expected}!glow\+::detail\+::\+Glow\+Expected@{glow\+::detail\+::\+Glow\+Expected}}
+\subsubsection{\texorpdfstring{Glow\+Expected()}{GlowExpected()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename OtherT $>$ \\
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{glow\+::detail\+::\+Glow\+Expected}$<$ T $>$\+::\hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected} (\begin{DoxyParamCaption}\item[{OtherT \&\&}]{other,  }\item[{typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ OtherT, T $>$\+::value $>$\+::type $\ast$}]{ = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move construct Expected$<$\+T$>$ from a value of type OtherT as long as OtherT is convertible to T. \mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_adefb9b97647f3b44c5442bf5d9295630}\label{classglow_1_1detail_1_1_glow_expected_adefb9b97647f3b44c5442bf5d9295630}} 
+\index{glow\+::detail\+::\+Glow\+Expected@{glow\+::detail\+::\+Glow\+Expected}!Glow\+Expected@{Glow\+Expected}}
+\index{Glow\+Expected@{Glow\+Expected}!glow\+::detail\+::\+Glow\+Expected@{glow\+::detail\+::\+Glow\+Expected}}
+\subsubsection{\texorpdfstring{Glow\+Expected()}{GlowExpected()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename OtherT $>$ \\
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{glow\+::detail\+::\+Glow\+Expected}$<$ T $>$\+::\hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected} (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1detail_1_1_glow_expected}{Glow\+Expected}$<$ OtherT $>$ \&\&}]{other,  }\item[{typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ OtherT, T $>$\+::value $>$\+::type $\ast$}]{ = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move construct Expected$<$\+T$>$ from Expected$<$\+Other\+T$>$ as long as OtherT is convertible to T. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_a5f11ce0f16940007250f5e3c516903a1}\label{classglow_1_1detail_1_1_glow_expected_a5f11ce0f16940007250f5e3c516903a1}} 
+\index{glow\+::detail\+::\+Glow\+Expected@{glow\+::detail\+::\+Glow\+Expected}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!glow\+::detail\+::\+Glow\+Expected@{glow\+::detail\+::\+Glow\+Expected}}
+\subsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{glow\+::detail\+::\+Glow\+Expected}$<$ T $>$\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Overload for operator bool that returns true if no Error\+Value is contained. Marks the state as checked if no Error\+Value is contained. \mbox{\Hypertarget{classglow_1_1detail_1_1_glow_expected_a694628a1468d324f12b2ecd6d553797f}\label{classglow_1_1detail_1_1_glow_expected_a694628a1468d324f12b2ecd6d553797f}} 
+\index{glow\+::detail\+::\+Glow\+Expected@{glow\+::detail\+::\+Glow\+Expected}!take\+Error@{take\+Error}}
+\index{take\+Error@{take\+Error}!glow\+::detail\+::\+Glow\+Expected@{glow\+::detail\+::\+Glow\+Expected}}
+\subsubsection{\texorpdfstring{take\+Error()}{takeError()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classglow_1_1detail_1_1_glow_error}{Glow\+Error} \hyperlink{classglow_1_1detail_1_1_glow_expected}{glow\+::detail\+::\+Glow\+Expected}$<$ T $>$\+::take\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct and \begin{DoxyReturn}{Returns}
+an Error and takes ownership of any Error\+Value in payload\+\_\+. If no Error\+Value is in payload\+\_\+ then return \hyperlink{classglow_1_1detail_1_1_glow_error_ace73703b37f7e894290547c34927dba7}{Error\+::success()}. Marks the Exected as checked no matter what. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Error.\+h\end{DoxyCompactItemize}

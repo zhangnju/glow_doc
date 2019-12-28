@@ -1,0 +1,40 @@
+\hypertarget{classglow_1_1_value_uses}{}\section{glow\+:\+:Value\+Uses Class Reference}
+\label{classglow_1_1_value_uses}\index{glow\+::\+Value\+Uses@{glow\+::\+Value\+Uses}}
+
+
+{\ttfamily \#include $<$I\+R\+Utils.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classglow_1_1_value_uses_1_1_value_uses_iterator}{Value\+Uses\+Iterator}
+\begin{DoxyCompactList}\small\item\em The actual iterator implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_value_uses_a1bf1bcc16d0a0d1de930242f63cd74a6}\label{classglow_1_1_value_uses_a1bf1bcc16d0a0d1de930242f63cd74a6}} 
+using {\bfseries const\+\_\+iterator} = \hyperlink{classglow_1_1_value_uses_1_1_value_uses_iterator}{Value\+Uses\+Iterator}$<$ true $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_value_uses_a708bfa8008a646e353de490e75eb1b32}\label{classglow_1_1_value_uses_a708bfa8008a646e353de490e75eb1b32}} 
+{\bfseries Value\+Uses} (const \hyperlink{classglow_1_1_value}{Value} $\ast$v)
+\item 
+\mbox{\Hypertarget{classglow_1_1_value_uses_a02c847a6b780a58571022a1b40ae1c22}\label{classglow_1_1_value_uses_a02c847a6b780a58571022a1b40ae1c22}} 
+{\bfseries Value\+Uses} (\hyperlink{classglow_1_1_value_uses}{Value\+Uses} \&VU)=default
+\item 
+\mbox{\Hypertarget{classglow_1_1_value_uses_adc6b1f804d1541a360a604f2e6dabf47}\label{classglow_1_1_value_uses_adc6b1f804d1541a360a604f2e6dabf47}} 
+\hyperlink{classglow_1_1_value_uses_1_1_value_uses_iterator}{const\+\_\+iterator} {\bfseries begin} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_value_uses_abaf0bad30d7779563f06616e720544bf}\label{classglow_1_1_value_uses_abaf0bad30d7779563f06616e720544bf}} 
+\hyperlink{classglow_1_1_value_uses_1_1_value_uses_iterator}{const\+\_\+iterator} {\bfseries end} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A helper class to iterate over all uses of a given \hyperlink{classglow_1_1_value}{Value}. It also recursively iterates over uses of any tensorview instructions aliasing this value. Iteration is performed by means of const iterators. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+I\+R/I\+R\+Utils.\+h\end{DoxyCompactItemize}

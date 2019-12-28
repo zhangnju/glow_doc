@@ -1,0 +1,33 @@
+\hypertarget{struct_dictionary}{}\section{Dictionary Struct Reference}
+\label{struct_dictionary}\index{Dictionary@{Dictionary}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_dictionary_a338673cd928e014f8f2a2cde452c00fd}\label{struct_dictionary_a338673cd928e014f8f2a2cde452c00fd}} 
+void \hyperlink{struct_dictionary_a338673cd928e014f8f2a2cde452c00fd}{add\+Word} (llvm\+::\+String\+Ref line)
+\begin{DoxyCompactList}\small\item\em Add a word from the {\ttfamily line} to the dictionary. \end{DoxyCompactList}\item 
+void \hyperlink{struct_dictionary_ab13706e0db58647f40c38bf4c56cd213}{load\+Dictionary\+From\+File} (llvm\+::\+String\+Ref filename)
+\item 
+\mbox{\Hypertarget{struct_dictionary_a9e81cedc3ed92cc682c98605f75652cd}\label{struct_dictionary_a9e81cedc3ed92cc682c98605f75652cd}} 
+size\+\_\+t \hyperlink{struct_dictionary_a9e81cedc3ed92cc682c98605f75652cd}{get\+Idx\+From\+Word} (llvm\+::\+String\+Ref word)
+\begin{DoxyCompactList}\small\item\em Get the index for the input {\ttfamily word} from the dictionary. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_dictionary_a19f9ad7cd0bafb9898b62a7cb9eabeb3}\label{struct_dictionary_a19f9ad7cd0bafb9898b62a7cb9eabeb3}} 
+std\+::string \hyperlink{struct_dictionary_a19f9ad7cd0bafb9898b62a7cb9eabeb3}{get\+Word\+From\+Idx} (size\+\_\+t idx)
+\begin{DoxyCompactList}\small\item\em Get the word for the input {\ttfamily index} from the dictionary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores dictionary of a language. Contains mapping from word to index and vice versa. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_dictionary_ab13706e0db58647f40c38bf4c56cd213}\label{struct_dictionary_ab13706e0db58647f40c38bf4c56cd213}} 
+\index{Dictionary@{Dictionary}!load\+Dictionary\+From\+File@{load\+Dictionary\+From\+File}}
+\index{load\+Dictionary\+From\+File@{load\+Dictionary\+From\+File}!Dictionary@{Dictionary}}
+\subsubsection{\texorpdfstring{load\+Dictionary\+From\+File()}{loadDictionaryFromFile()}}
+{\footnotesize\ttfamily void Dictionary\+::load\+Dictionary\+From\+File (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Load a dictionary from text file {\ttfamily filename}, adding each word from each line of the file. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tools/loader/Text\+Translator.\+cpp\end{DoxyCompactItemize}

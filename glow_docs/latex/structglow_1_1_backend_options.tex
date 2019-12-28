@@ -1,0 +1,42 @@
+\hypertarget{structglow_1_1_backend_options}{}\section{glow\+:\+:Backend\+Options Struct Reference}
+\label{structglow_1_1_backend_options}\index{glow\+::\+Backend\+Options@{glow\+::\+Backend\+Options}}
+
+
+Options relevant to Backends during compilation.  
+
+
+
+
+{\ttfamily \#include $<$Backend\+Options.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_backend_options_a3fff606445133b2d30b9ba8963bf7107}\label{structglow_1_1_backend_options_a3fff606445133b2d30b9ba8963bf7107}} 
+bool \hyperlink{structglow_1_1_backend_options_a3fff606445133b2d30b9ba8963bf7107}{collect\+Constants} \{true\}
+\begin{DoxyCompactList}\small\item\em Allocate and collect constant Tensors in the Runtime\+Bundle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_backend_options_ab0964700f34d1fbaff606c42583a6f4f}\label{structglow_1_1_backend_options_ab0964700f34d1fbaff606c42583a6f4f}} 
+bool \hyperlink{structglow_1_1_backend_options_ab0964700f34d1fbaff606c42583a6f4f}{auto\+Instrument} \{false\}
+\begin{DoxyCompactList}\small\item\em Insert Trace\+Events between all instructions for profiling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_backend_options_a8202550f206d059071376fbc215ada85}\label{structglow_1_1_backend_options_a8202550f206d059071376fbc215ada85}} 
+\hyperlink{structglow_1_1_backend_hints}{Backend\+Hints} \hyperlink{structglow_1_1_backend_options_a8202550f206d059071376fbc215ada85}{backend\+Hints}
+\begin{DoxyCompactList}\small\item\em Hints for the compiler for this compilation. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \hyperlink{structglow_1_1_backend_options_a512200407cdc1933ea8ceafd005e3ff4}{backend\+Specific\+Opts}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Options relevant to Backends during compilation. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1_backend_options_a512200407cdc1933ea8ceafd005e3ff4}\label{structglow_1_1_backend_options_a512200407cdc1933ea8ceafd005e3ff4}} 
+\index{glow\+::\+Backend\+Options@{glow\+::\+Backend\+Options}!backend\+Specific\+Opts@{backend\+Specific\+Opts}}
+\index{backend\+Specific\+Opts@{backend\+Specific\+Opts}!glow\+::\+Backend\+Options@{glow\+::\+Backend\+Options}}
+\subsubsection{\texorpdfstring{backend\+Specific\+Opts}{backendSpecificOpts}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ glow\+::\+Backend\+Options\+::backend\+Specific\+Opts}
+
+Options that are specific to a backend. \hyperlink{classglow_1_1_backend}{Backend} is responsible for parsing. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Backends/Backend\+Options.\+h\end{DoxyCompactItemize}

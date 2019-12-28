@@ -1,0 +1,64 @@
+\hypertarget{structglow_1_1runtime_1_1_device_config}{}\section{glow\+:\+:runtime\+:\+:Device\+Config Struct Reference}
+\label{structglow_1_1runtime_1_1_device_config}\index{glow\+::runtime\+::\+Device\+Config@{glow\+::runtime\+::\+Device\+Config}}
+
+
+{\ttfamily \#include $<$Runtime\+Types.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_adb02f90b78f5a7e1ba27a2cb3344c269}\label{structglow_1_1runtime_1_1_device_config_adb02f90b78f5a7e1ba27a2cb3344c269}} 
+{\bfseries Device\+Config} (llvm\+::\+String\+Ref \hyperlink{structglow_1_1runtime_1_1_device_config_af0b3f3f4020ac329221ee3e635405ba3}{backend\+Name})
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_ab9af86366ecac786863c89f75527f2af}\label{structglow_1_1runtime_1_1_device_config_ab9af86366ecac786863c89f75527f2af}} 
+{\bfseries Device\+Config} (llvm\+::\+String\+Ref \hyperlink{structglow_1_1runtime_1_1_device_config_af0b3f3f4020ac329221ee3e635405ba3}{backend\+Name}, llvm\+::\+String\+Ref \hyperlink{structglow_1_1runtime_1_1_device_config_a70b19bb94502b91856a2dd264fb066ac}{name})
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_a81636e08330dbd007c385789cdd96375}\label{structglow_1_1runtime_1_1_device_config_a81636e08330dbd007c385789cdd96375}} 
+{\bfseries Device\+Config} (llvm\+::\+String\+Ref \hyperlink{structglow_1_1runtime_1_1_device_config_af0b3f3f4020ac329221ee3e635405ba3}{backend\+Name}, llvm\+::\+String\+Ref \hyperlink{structglow_1_1runtime_1_1_device_config_a70b19bb94502b91856a2dd264fb066ac}{name}, llvm\+::\+String\+Map$<$ std\+::string $>$ \hyperlink{structglow_1_1runtime_1_1_device_config_abf420dfceeecb9303fe3b8668c9da723}{parameters})
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_a6834c1fe0d5f61a0150cd96aca240b59}\label{structglow_1_1runtime_1_1_device_config_a6834c1fe0d5f61a0150cd96aca240b59}} 
+bool {\bfseries has\+Name} () const
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_a1138d9618a18b486d1e3cc66ddee3d2b}\label{structglow_1_1runtime_1_1_device_config_a1138d9618a18b486d1e3cc66ddee3d2b}} 
+void {\bfseries set\+Device\+Memory} (uint64\+\_\+t mem\+Size)
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_afa7e1e12a8f1a3490edc3139781b78d1}\label{structglow_1_1runtime_1_1_device_config_afa7e1e12a8f1a3490edc3139781b78d1}} 
+uint64\+\_\+t {\bfseries get\+Device\+Memory} () const
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_a35b232cd14f5427b4fd55121d301c7b7}\label{structglow_1_1runtime_1_1_device_config_a35b232cd14f5427b4fd55121d301c7b7}} 
+uint64\+\_\+t {\bfseries get\+Device\+Memory} (uint64\+\_\+t default\+Memory) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \hyperlink{structglow_1_1runtime_1_1_device_config_af0b3f3f4020ac329221ee3e635405ba3}{backend\+Name}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_a70b19bb94502b91856a2dd264fb066ac}\label{structglow_1_1runtime_1_1_device_config_a70b19bb94502b91856a2dd264fb066ac}} 
+std\+::string \hyperlink{structglow_1_1runtime_1_1_device_config_a70b19bb94502b91856a2dd264fb066ac}{name}
+\begin{DoxyCompactList}\small\item\em A human readable name to identify the device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_a2209bcd879ef987ae7a2b3a35b8f571a}\label{structglow_1_1runtime_1_1_device_config_a2209bcd879ef987ae7a2b3a35b8f571a}} 
+unsigned \hyperlink{structglow_1_1runtime_1_1_device_config_a2209bcd879ef987ae7a2b3a35b8f571a}{device\+ID} \{0\}
+\begin{DoxyCompactList}\small\item\em A runtime assigned id for the device. This is used for stats reporting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_a802184b480686cc2cadd76ab8ee02d36}\label{structglow_1_1runtime_1_1_device_config_a802184b480686cc2cadd76ab8ee02d36}} 
+uint64\+\_\+t \hyperlink{structglow_1_1runtime_1_1_device_config_a802184b480686cc2cadd76ab8ee02d36}{device\+Memory} = 0
+\begin{DoxyCompactList}\small\item\em Device memory size in bytes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_abf420dfceeecb9303fe3b8668c9da723}\label{structglow_1_1runtime_1_1_device_config_abf420dfceeecb9303fe3b8668c9da723}} 
+llvm\+::\+String\+Map$<$ std\+::string $>$ \hyperlink{structglow_1_1runtime_1_1_device_config_abf420dfceeecb9303fe3b8668c9da723}{parameters} \{\}
+\begin{DoxyCompactList}\small\item\em A map of configuration parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the base class for \hyperlink{classglow_1_1runtime_1_1_device_manager}{Device\+Manager} configurations. Any specific device can extend this class to contain information to identify and configure the device manager. Additionally it needs to set it\textquotesingle{}s backend member variable to it\textquotesingle{}s correct \hyperlink{classglow_1_1_backend}{Backend}. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_config_af0b3f3f4020ac329221ee3e635405ba3}\label{structglow_1_1runtime_1_1_device_config_af0b3f3f4020ac329221ee3e635405ba3}} 
+\index{glow\+::runtime\+::\+Device\+Config@{glow\+::runtime\+::\+Device\+Config}!backend\+Name@{backend\+Name}}
+\index{backend\+Name@{backend\+Name}!glow\+::runtime\+::\+Device\+Config@{glow\+::runtime\+::\+Device\+Config}}
+\subsubsection{\texorpdfstring{backend\+Name}{backendName}}
+{\footnotesize\ttfamily const std\+::string glow\+::runtime\+::\+Device\+Config\+::backend\+Name}
+
+\hyperlink{classglow_1_1_backend}{Backend} used for this config. It is used in checking the type of config before casting to a derived class. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Runtime/Runtime\+Types.\+h\end{DoxyCompactItemize}

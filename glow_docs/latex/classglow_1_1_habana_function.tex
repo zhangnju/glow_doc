@@ -1,0 +1,70 @@
+\hypertarget{classglow_1_1_habana_function}{}\section{glow\+:\+:Habana\+Function Class Reference}
+\label{classglow_1_1_habana_function}\index{glow\+::\+Habana\+Function@{glow\+::\+Habana\+Function}}
+Inheritance diagram for glow\+:\+:Habana\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_habana_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_function_a669c7275a6defd8349ea51890a462ec4}\label{classglow_1_1_habana_function_a669c7275a6defd8349ea51890a462ec4}} 
+\hyperlink{classglow_1_1_habana_function_a669c7275a6defd8349ea51890a462ec4}{Habana\+Function} (\hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} \&\&bundle, const std\+::string \&recipe\+Name, \hyperlink{classglow_1_1_function}{Function} $\ast$F)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classglow_1_1_habana_function_a6bafdb9b97ae532ecc58edbba6e74daf}{get\+Compile\+Backend\+Name} () const override
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_function_ac950d8d51afade66739f1812716abdfa}\label{classglow_1_1_habana_function_ac950d8d51afade66739f1812716abdfa}} 
+const Placeholder\+List \& {\bfseries get\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_function_aab395244c0044358ff6066800c28184f}\label{classglow_1_1_habana_function_aab395244c0044358ff6066800c28184f}} 
+const Placeholder\+List \& {\bfseries get\+Outputs} () const
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Compiled\+Function interface}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_function_a6743d8e944ddac5ad3e034376f6c5130}\label{classglow_1_1_habana_function_a6743d8e944ddac5ad3e034376f6c5130}} 
+{\bfseries $\sim$\+Habana\+Function} () override
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_function_ac40e40838f27ed4cd187b1158786dc31}\label{classglow_1_1_habana_function_ac40e40838f27ed4cd187b1158786dc31}} 
+const std\+::string \& {\bfseries get\+Recipe\+Name} () const
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_habana_function_ad3984e53ddb4615368e53acdc2418890}{execute} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context) override
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_habana_function_ad3984e53ddb4615368e53acdc2418890}\label{classglow_1_1_habana_function_ad3984e53ddb4615368e53acdc2418890}} 
+\index{glow\+::\+Habana\+Function@{glow\+::\+Habana\+Function}!execute@{execute}}
+\index{execute@{execute}!glow\+::\+Habana\+Function@{glow\+::\+Habana\+Function}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} glow\+::\+Habana\+Function\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Execute the network and allocate \hyperlink{classglow_1_1_placeholder}{Placeholder} memory with given {\ttfamily bindings} providing mapping between \hyperlink{classglow_1_1_placeholder}{Placeholder} and populated tensor. \begin{DoxyReturn}{Returns}
+an Error if an error ocurred during execution. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1_compiled_function_ac8dd94f2ee7129a435f1701b6a9f419e}{glow\+::\+Compiled\+Function}.
+
+\mbox{\Hypertarget{classglow_1_1_habana_function_a6bafdb9b97ae532ecc58edbba6e74daf}\label{classglow_1_1_habana_function_a6bafdb9b97ae532ecc58edbba6e74daf}} 
+\index{glow\+::\+Habana\+Function@{glow\+::\+Habana\+Function}!get\+Compile\+Backend\+Name@{get\+Compile\+Backend\+Name}}
+\index{get\+Compile\+Backend\+Name@{get\+Compile\+Backend\+Name}!glow\+::\+Habana\+Function@{glow\+::\+Habana\+Function}}
+\subsubsection{\texorpdfstring{get\+Compile\+Backend\+Name()}{getCompileBackendName()}}
+{\footnotesize\ttfamily std\+::string glow\+::\+Habana\+Function\+::get\+Compile\+Backend\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the backend used to compile this function. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1_compiled_function_a7b3f2b17986d14706a1d1091d3c4df27}{glow\+::\+Compiled\+Function}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Habana/Habana\+Function.\+h\item 
+lib/\+Backends/\+Habana/Habana\+Function.\+cpp\end{DoxyCompactItemize}

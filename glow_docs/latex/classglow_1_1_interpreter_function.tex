@@ -1,0 +1,82 @@
+\hypertarget{classglow_1_1_interpreter_function}{}\section{glow\+:\+:Interpreter\+Function Class Reference}
+\label{classglow_1_1_interpreter_function}\index{glow\+::\+Interpreter\+Function@{glow\+::\+Interpreter\+Function}}
+
+
+\hyperlink{classglow_1_1_function}{Function} \char`\"{}compiled\char`\"{} for execution by the interpreter.  
+
+
+
+
+{\ttfamily \#include $<$Interpreter\+Function.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Interpreter\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_interpreter_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_interpreter_function_a2b1f2de082a6b0feae25bca71a51c4f7}\label{classglow_1_1_interpreter_function_a2b1f2de082a6b0feae25bca71a51c4f7}} 
+{\bfseries Interpreter\+Function} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $>$ F, \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} \&\&bundle)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Compiled\+Function interface}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_interpreter_function_aec3c7725bb28dae2397f551253b44973}\label{classglow_1_1_interpreter_function_aec3c7725bb28dae2397f551253b44973}} 
+{\bfseries $\sim$\+Interpreter\+Function} () override
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_interpreter_function_a6bc0763da64f449b7fda842397fc7c86}{execute} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context) override
+\item 
+\mbox{\Hypertarget{classglow_1_1_interpreter_function_a56fad079c3c368071d79141a286950a2}\label{classglow_1_1_interpreter_function_a56fad079c3c368071d79141a286950a2}} 
+void \hyperlink{classglow_1_1_interpreter_function_a56fad079c3c368071d79141a286950a2}{collect\+Constants} (const \hyperlink{classglow_1_1_module}{Module} $\ast$module) override
+\begin{DoxyCompactList}\small\item\em Collects constants for runtime. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_interpreter_function_aa01cf9cae2fa9a8aba7c539960dab04f}\label{classglow_1_1_interpreter_function_aa01cf9cae2fa9a8aba7c539960dab04f}} 
+\hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$ \hyperlink{classglow_1_1_interpreter_function_aa01cf9cae2fa9a8aba7c539960dab04f}{get\+IR} ()
+\begin{DoxyCompactList}\small\item\em Get reference to IR function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_interpreter_function_af1a7932b05fac2cefa0a7859f3a40ce3}\label{classglow_1_1_interpreter_function_af1a7932b05fac2cefa0a7859f3a40ce3}} 
+void \hyperlink{classglow_1_1_interpreter_function_af1a7932b05fac2cefa0a7859f3a40ce3}{translate\+Trace\+Events} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context) const override
+\begin{DoxyCompactList}\small\item\em Read trace events out of this func and write them into /p context. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classglow_1_1_interpreter_function_a7fe37f3e6fe47a7806ecc1cb6d05b2c2}{get\+Compile\+Backend\+Name} () const override
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classglow_1_1_function}{Function} \char`\"{}compiled\char`\"{} for execution by the interpreter. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_interpreter_function_a6bc0763da64f449b7fda842397fc7c86}\label{classglow_1_1_interpreter_function_a6bc0763da64f449b7fda842397fc7c86}} 
+\index{glow\+::\+Interpreter\+Function@{glow\+::\+Interpreter\+Function}!execute@{execute}}
+\index{execute@{execute}!glow\+::\+Interpreter\+Function@{glow\+::\+Interpreter\+Function}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} Interpreter\+Function\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Execute the network and allocate \hyperlink{classglow_1_1_placeholder}{Placeholder} memory with given {\ttfamily bindings} providing mapping between \hyperlink{classglow_1_1_placeholder}{Placeholder} and populated tensor. \begin{DoxyReturn}{Returns}
+an Error if an error ocurred during execution. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1_compiled_function_ac8dd94f2ee7129a435f1701b6a9f419e}{glow\+::\+Compiled\+Function}.
+
+\mbox{\Hypertarget{classglow_1_1_interpreter_function_a7fe37f3e6fe47a7806ecc1cb6d05b2c2}\label{classglow_1_1_interpreter_function_a7fe37f3e6fe47a7806ecc1cb6d05b2c2}} 
+\index{glow\+::\+Interpreter\+Function@{glow\+::\+Interpreter\+Function}!get\+Compile\+Backend\+Name@{get\+Compile\+Backend\+Name}}
+\index{get\+Compile\+Backend\+Name@{get\+Compile\+Backend\+Name}!glow\+::\+Interpreter\+Function@{glow\+::\+Interpreter\+Function}}
+\subsubsection{\texorpdfstring{get\+Compile\+Backend\+Name()}{getCompileBackendName()}}
+{\footnotesize\ttfamily virtual std\+::string glow\+::\+Interpreter\+Function\+::get\+Compile\+Backend\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the backend used to compile this function. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1_compiled_function_a7b3f2b17986d14706a1d1091d3c4df27}{glow\+::\+Compiled\+Function}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Interpreter/Interpreter\+Function.\+h\item 
+lib/\+Backends/\+Interpreter/Interpreter\+Function.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,282 @@
+\hypertarget{classglow_1_1_module}{}\section{glow\+:\+:Module Class Reference}
+\label{classglow_1_1_module}\index{glow\+::\+Module@{glow\+::\+Module}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a33a4f2f2f6f4a4c1b32f7b1e07990fa9}\label{classglow_1_1_module_a33a4f2f2f6f4a4c1b32f7b1e07990fa9}} 
+void \hyperlink{classglow_1_1_module_a33a4f2f2f6f4a4c1b32f7b1e07990fa9}{register\+Node\+Name} (llvm\+::\+String\+Ref name)
+\begin{DoxyCompactList}\small\item\em Registers a name as used by some \hyperlink{classglow_1_1_node}{Node} in this module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_ac96d5731fdf045e1252222de8dfc0480}\label{classglow_1_1_module_ac96d5731fdf045e1252222de8dfc0480}} 
+\hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_module_ac96d5731fdf045e1252222de8dfc0480}{unique\+Type} (const \hyperlink{structglow_1_1_type}{Type} \&T)
+\begin{DoxyCompactList}\small\item\em Return a pointer to a uniqued type {\ttfamily T}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_a7963c216efadb6473cb992b15ac46f64}\label{classglow_1_1_module_a7963c216efadb6473cb992b15ac46f64}} 
+\hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_module_a7963c216efadb6473cb992b15ac46f64}{unique\+Type} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims)
+\begin{DoxyCompactList}\small\item\em Return a pointer to a uniqued type {\ttfamily T}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_ad05154013ddf0b91c4948018db8e47b9}\label{classglow_1_1_module_ad05154013ddf0b91c4948018db8e47b9}} 
+\hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_module_ad05154013ddf0b91c4948018db8e47b9}{unique\+Type} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims, float scale, int32\+\_\+t offset)
+\begin{DoxyCompactList}\small\item\em Return a pointer to a uniqued type {\ttfamily T}. \end{DoxyCompactList}\item 
+\hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_module_a0059ec63c41976b08ccfb50e1c8fa020}{unique\+Type\+With\+New\+Shape} (\hyperlink{structglow_1_1_type}{Type\+Ref} T, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims)
+\item 
+\hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_module_aed10d548f781d837e842690c1810e784}{unique\+Type\+With\+New\+Shape} (\hyperlink{structglow_1_1_type}{Type\+Ref} T, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ alignments)
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a2c95f21c93c71aaac799638287bb2dc6}\label{classglow_1_1_module_a2c95f21c93c71aaac799638287bb2dc6}} 
+\hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_module_a2c95f21c93c71aaac799638287bb2dc6}{get\+Void\+Ty} ()
+\begin{DoxyCompactList}\small\item\em Return the void type. \end{DoxyCompactList}\item 
+bool \hyperlink{classglow_1_1_module_aedef87903f635a844d4d45a2b43aaf03}{has\+Function} (llvm\+::\+String\+Ref name)
+\item 
+\hyperlink{classglow_1_1_function}{Function} $\ast$ \hyperlink{classglow_1_1_module_a3c3312d6bcf9f805037de85a0aee0e39}{get\+Function} (llvm\+::\+String\+Ref name)
+\item 
+\hyperlink{classglow_1_1_function}{Function} $\ast$ \hyperlink{classglow_1_1_module_a4659c5ffb8ce5f876bb8ae0217dfbd2c}{create\+Function} (llvm\+::\+String\+Ref name)
+\item 
+\hyperlink{namespaceglow_ae6f6f350877931e8074457bbab671b5f}{Function\+List} \& \hyperlink{classglow_1_1_module_a88ea3d6d180c7bc843e5258ca625a416}{get\+Functions} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_ae6dad42e3263deefa3d6ec6af75dde0f}\label{classglow_1_1_module_ae6dad42e3263deefa3d6ec6af75dde0f}} 
+const \hyperlink{namespaceglow_ae6f6f350877931e8074457bbab671b5f}{Function\+List} \& {\bfseries get\+Functions} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_aa6f3539108b1e2e1332d26699beeef45}\label{classglow_1_1_module_aa6f3539108b1e2e1332d26699beeef45}} 
+void \hyperlink{classglow_1_1_module_aa6f3539108b1e2e1332d26699beeef45}{erase\+Constant} (\hyperlink{classglow_1_1_constant}{Constant} $\ast$N)
+\begin{DoxyCompactList}\small\item\em Erase the constant {\ttfamily N} from the \hyperlink{classglow_1_1_module}{Module}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_a8280940a14148e4446e9d5dacc6a050c}\label{classglow_1_1_module_a8280940a14148e4446e9d5dacc6a050c}} 
+void \hyperlink{classglow_1_1_module_a8280940a14148e4446e9d5dacc6a050c}{erase\+Constant} (Const\+List\+::iterator I)
+\begin{DoxyCompactList}\small\item\em Erase the constant {\ttfamily I} from the \hyperlink{classglow_1_1_module}{Module}. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_module_a34fbd55051e2bae7bb6fc87881292e69}{erase\+Placeholder} (Placeholder\+List\+::iterator I)
+\item 
+\hyperlink{classglow_1_1_constant}{Constant} $\ast$ \hyperlink{classglow_1_1_module_a09c077ffe069f8a8299bbeafa840dcb3}{get\+Constant\+By\+Name} (llvm\+::\+String\+Ref name) const
+\item 
+Const\+List \& \hyperlink{classglow_1_1_module_a07faea735d56effc579009af4a5c0a77}{get\+Constants} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a0206ee2f0d92903d1ff118331db56dc5}\label{classglow_1_1_module_a0206ee2f0d92903d1ff118331db56dc5}} 
+const Const\+List \& {\bfseries get\+Constants} () const
+\item 
+Placeholder\+List \& \hyperlink{classglow_1_1_module_a7ea4ac0582c7231b06575b12bd9e7915}{get\+Placeholders} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a501c574381da6a2517c2d2068c93e0e8}\label{classglow_1_1_module_a501c574381da6a2517c2d2068c93e0e8}} 
+const Placeholder\+List \& {\bfseries get\+Placeholders} () const
+\item 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ \hyperlink{classglow_1_1_module_a61347fa556eaf4265f5d1d3a9c848a61}{get\+Placeholder\+By\+Name} (llvm\+::\+String\+Ref name) const
+\item 
+bool \hyperlink{classglow_1_1_module_a4920a99a37f71fa1b75a2f9578d2f6b1}{verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_ae8d51553337a469c1a2951be4ede1a95}\label{classglow_1_1_module_ae8d51553337a469c1a2951be4ede1a95}} 
+\hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \& \hyperlink{classglow_1_1_module_ae8d51553337a469c1a2951be4ede1a95}{get\+P\+R\+NG} ()
+\begin{DoxyCompactList}\small\item\em Get the pseudo-\/random number generator used by this module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_a9b4c67a0936fe59c9511ff591b97f260}\label{classglow_1_1_module_a9b4c67a0936fe59c9511ff591b97f260}} 
+void \hyperlink{classglow_1_1_module_a9b4c67a0936fe59c9511ff591b97f260}{dump} () const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_module}{Module} into default output stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_ae9f413a5a2d88b97735a71a65ec2ff95}\label{classglow_1_1_module_ae9f413a5a2d88b97735a71a65ec2ff95}} 
+std\+::string \hyperlink{classglow_1_1_module_ae9f413a5a2d88b97735a71a65ec2ff95}{to\+String} () const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_module}{Module} to std\+::string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_a0ab82591c9e99b30321c4e7f883a1c58}\label{classglow_1_1_module_a0ab82591c9e99b30321c4e7f883a1c58}} 
+void \hyperlink{classglow_1_1_module_a0ab82591c9e99b30321c4e7f883a1c58}{dump} (llvm\+::raw\+\_\+ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_module}{Module} into provided output stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_ab7df0631737319eda725640b53586df0}\label{classglow_1_1_module_ab7df0631737319eda725640b53586df0}} 
+void \hyperlink{classglow_1_1_module_ab7df0631737319eda725640b53586df0}{dump\+D\+AG} ()
+\begin{DoxyCompactList}\small\item\em Dump a dotty graph that depicts the \hyperlink{classglow_1_1_module}{Module}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_a721b389cf6c97e09f0a9e61289b1db47}\label{classglow_1_1_module_a721b389cf6c97e09f0a9e61289b1db47}} 
+void \hyperlink{classglow_1_1_module_a721b389cf6c97e09f0a9e61289b1db47}{dump\+D\+AG} (llvm\+::\+String\+Ref dot\+Filename)
+\begin{DoxyCompactList}\small\item\em Dump a dotty graph that depicts the \hyperlink{classglow_1_1_module}{Module}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_a1182912a52f423851ac1c23f05e42be5}\label{classglow_1_1_module_a1182912a52f423851ac1c23f05e42be5}} 
+void \hyperlink{classglow_1_1_module_a1182912a52f423851ac1c23f05e42be5}{dump\+D\+AG} (const char $\ast$dot\+Filename)
+\begin{DoxyCompactList}\small\item\em Dump a dotty graph that depicts the \hyperlink{classglow_1_1_module}{Module}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_a331945be92fc828bc4835383d5ca0b4d}\label{classglow_1_1_module_a331945be92fc828bc4835383d5ca0b4d}} 
+void \hyperlink{classglow_1_1_module_a331945be92fc828bc4835383d5ca0b4d}{erase\+Functions} ()
+\begin{DoxyCompactList}\small\item\em Erase all of the functions from the module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_a2f39d2ca239d90ddbfc667a8f59ba1f7}\label{classglow_1_1_module_a2f39d2ca239d90ddbfc667a8f59ba1f7}} 
+void \hyperlink{classglow_1_1_module_a2f39d2ca239d90ddbfc667a8f59ba1f7}{clear} ()
+\begin{DoxyCompactList}\small\item\em Erase all the functions, Placeholders, Constants, etc. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_module_a6b31e53e57587b15d32b32c6a0db5c05}{strip} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a7411ee6e80c5440fdcb9933ac578842b}\label{classglow_1_1_module_a7411ee6e80c5440fdcb9933ac578842b}} 
+void \hyperlink{classglow_1_1_module_a7411ee6e80c5440fdcb9933ac578842b}{erase\+Function} (\hyperlink{classglow_1_1_function}{Function} $\ast$F)
+\begin{DoxyCompactList}\small\item\em Erase a function {\ttfamily F} from the module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_afb5b04bb6e293e248144830ca704a2eb}\label{classglow_1_1_module_afb5b04bb6e293e248144830ca704a2eb}} 
+uint64\+\_\+t \hyperlink{classglow_1_1_module_afb5b04bb6e293e248144830ca704a2eb}{get\+Constants\+Size} ()
+\begin{DoxyCompactList}\small\item\em the size in bytes of data used by constants. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_abfe5c5b0291110dd5b9d98c6ab3c3902}\label{classglow_1_1_module_abfe5c5b0291110dd5b9d98c6ab3c3902}} 
+\hyperlink{classglow_1_1_log_context}{Log\+Context} $\ast$ \hyperlink{classglow_1_1_module_abfe5c5b0291110dd5b9d98c6ab3c3902}{get\+Module\+Log\+Context} ()
+\begin{DoxyCompactList}\small\item\em the module log context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_module_a62d24a297e54e2f6e47f3ae54b573fa4}\label{classglow_1_1_module_a62d24a297e54e2f6e47f3ae54b573fa4}} 
+{\bfseries Module} (const \hyperlink{classglow_1_1_module}{Module} \&)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a16db90d7baa3a0b74328ac4437216f56}\label{classglow_1_1_module_a16db90d7baa3a0b74328ac4437216f56}} 
+{\bfseries Module} (\hyperlink{classglow_1_1_module}{Module} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_ac1fde9a6b9f333c76eff036c30df44bc}\label{classglow_1_1_module_ac1fde9a6b9f333c76eff036c30df44bc}} 
+\hyperlink{classglow_1_1_module}{Module} \& {\bfseries operator=} (const \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a1000231cfbba3b6340545b6aa49dd006}\label{classglow_1_1_module_a1000231cfbba3b6340545b6aa49dd006}} 
+\hyperlink{classglow_1_1_module}{Module} \& {\bfseries operator=} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&\&)=delete
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ High-\/level Storage builders.}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a947846775848c7a9176deda31efaf06c}\label{classglow_1_1_module_a947846775848c7a9176deda31efaf06c}} 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ {\bfseries create\+Placeholder} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} T, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims, llvm\+::\+String\+Ref name, bool is\+Trainable)
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a168c818666b4fb33fcdd4c8374b413ea}\label{classglow_1_1_module_a168c818666b4fb33fcdd4c8374b413ea}} 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ {\bfseries create\+Placeholder} (\hyperlink{structglow_1_1_type}{Type\+Ref} T, llvm\+::\+String\+Ref name, bool is\+Trainable)
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a311324d19c77e411f59e9a568902727b}\label{classglow_1_1_module_a311324d19c77e411f59e9a568902727b}} 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ {\bfseries create\+Placeholder} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} T, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims, float scale, int32\+\_\+t offset, llvm\+::\+String\+Ref name, bool is\+Trainable)
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a980dd0c05b2f8c65e89c2f2c926c58bc}\label{classglow_1_1_module_a980dd0c05b2f8c65e89c2f2c926c58bc}} 
+\hyperlink{classglow_1_1_constant}{Constant} $\ast$ {\bfseries create\+Constant} (\hyperlink{structglow_1_1_type}{Type\+Ref} T, llvm\+::\+String\+Ref name)
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_ad9e07b02bfae7fc49cafe2e1fafc698c}\label{classglow_1_1_module_ad9e07b02bfae7fc49cafe2e1fafc698c}} 
+\hyperlink{classglow_1_1_constant}{Constant} $\ast$ {\bfseries create\+Constant} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} T, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims, llvm\+::\+String\+Ref name)
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_ab14c253a054c889e19ec8e5aa1913d97}\label{classglow_1_1_module_ab14c253a054c889e19ec8e5aa1913d97}} 
+\hyperlink{classglow_1_1_constant}{Constant} $\ast$ {\bfseries create\+Constant} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} T, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims, float scale, int32\+\_\+t offset, llvm\+::\+String\+Ref name)
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_a83c282631e170a53b3ef5a6e67810192}\label{classglow_1_1_module_a83c282631e170a53b3ef5a6e67810192}} 
+\hyperlink{classglow_1_1_constant}{Constant} $\ast$ {\bfseries create\+Constant} (llvm\+::\+String\+Ref name, const \hyperlink{classglow_1_1_tensor}{Tensor} \&tensor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_aff2c4dbe7cd72a2524854e9eccdd7073}\label{classglow_1_1_module_aff2c4dbe7cd72a2524854e9eccdd7073}} 
+\hyperlink{classglow_1_1_constant}{Constant} $\ast$ {\bfseries create\+Constant} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_tensor}{Tensor} \&\&tensor)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \hyperlink{classglow_1_1_module_a467e5429bf807b3587748366c5a3bfd8}{get\+Prefix} (llvm\+::\+String\+Ref name)
+\item 
+static llvm\+::\+String\+Ref \hyperlink{classglow_1_1_module_a299f2b5203794b857dcb75d0ad069758}{unique\+Name} (llvm\+::\+String\+Ref name, const llvm\+::\+String\+Set$<$$>$ \&string\+Table, llvm\+::\+String\+Set$<$$>$ \&update\+Table)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_module_ab7194606aa12931e96f8f5448d418ed0}\label{classglow_1_1_module_ab7194606aa12931e96f8f5448d418ed0}} 
+class {\bfseries Function}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_module_a4659c5ffb8ce5f876bb8ae0217dfbd2c}\label{classglow_1_1_module_a4659c5ffb8ce5f876bb8ae0217dfbd2c}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!create\+Function@{create\+Function}}
+\index{create\+Function@{create\+Function}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{create\+Function()}{createFunction()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_function}{Function} $\ast$ Module\+::create\+Function (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+a new function with the name {\ttfamily name}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_module_a34fbd55051e2bae7bb6fc87881292e69}\label{classglow_1_1_module_a34fbd55051e2bae7bb6fc87881292e69}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!erase\+Placeholder@{erase\+Placeholder}}
+\index{erase\+Placeholder@{erase\+Placeholder}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{erase\+Placeholder()}{erasePlaceholder()}}
+{\footnotesize\ttfamily void Module\+::erase\+Placeholder (\begin{DoxyParamCaption}\item[{Placeholder\+List\+::iterator}]{I }\end{DoxyParamCaption})}
+
+Erase the placeholder {\ttfamily I} from the \hyperlink{classglow_1_1_module}{Module}. Note\+: we only provide an iterator version of this, as erasing Placeholders is often unsafe. \mbox{\Hypertarget{classglow_1_1_module_a09c077ffe069f8a8299bbeafa840dcb3}\label{classglow_1_1_module_a09c077ffe069f8a8299bbeafa840dcb3}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!get\+Constant\+By\+Name@{get\+Constant\+By\+Name}}
+\index{get\+Constant\+By\+Name@{get\+Constant\+By\+Name}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{get\+Constant\+By\+Name()}{getConstantByName()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_constant}{Constant} $\ast$ Module\+::get\+Constant\+By\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a pointer to the first \hyperlink{classglow_1_1_constant}{Constant} with the name {\ttfamily name} or nullptr if no node has this name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_module_a07faea735d56effc579009af4a5c0a77}\label{classglow_1_1_module_a07faea735d56effc579009af4a5c0a77}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!get\+Constants@{get\+Constants}}
+\index{get\+Constants@{get\+Constants}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{get\+Constants()}{getConstants()}}
+{\footnotesize\ttfamily Const\+List\& glow\+::\+Module\+::get\+Constants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of constants that the \hyperlink{classglow_1_1_module}{Module} owns. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_module_a3c3312d6bcf9f805037de85a0aee0e39}\label{classglow_1_1_module_a3c3312d6bcf9f805037de85a0aee0e39}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!get\+Function@{get\+Function}}
+\index{get\+Function@{get\+Function}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{get\+Function()}{getFunction()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_function}{Function} $\ast$ Module\+::get\+Function (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the function with the name {\ttfamily name}, or nullptr if the function does not exist. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_module_a88ea3d6d180c7bc843e5258ca625a416}\label{classglow_1_1_module_a88ea3d6d180c7bc843e5258ca625a416}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!get\+Functions@{get\+Functions}}
+\index{get\+Functions@{get\+Functions}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{get\+Functions()}{getFunctions()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_ae6f6f350877931e8074457bbab671b5f}{Function\+List}\& glow\+::\+Module\+::get\+Functions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of Functions that the \hyperlink{classglow_1_1_module}{Module} owns. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_module_a61347fa556eaf4265f5d1d3a9c848a61}\label{classglow_1_1_module_a61347fa556eaf4265f5d1d3a9c848a61}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!get\+Placeholder\+By\+Name@{get\+Placeholder\+By\+Name}}
+\index{get\+Placeholder\+By\+Name@{get\+Placeholder\+By\+Name}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{get\+Placeholder\+By\+Name()}{getPlaceholderByName()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ Module\+::get\+Placeholder\+By\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a pointer to the placeholder with the name {\ttfamily name} or nullptr if no placeholder has this name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_module_a7ea4ac0582c7231b06575b12bd9e7915}\label{classglow_1_1_module_a7ea4ac0582c7231b06575b12bd9e7915}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!get\+Placeholders@{get\+Placeholders}}
+\index{get\+Placeholders@{get\+Placeholders}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{get\+Placeholders()}{getPlaceholders()}}
+{\footnotesize\ttfamily Placeholder\+List\& glow\+::\+Module\+::get\+Placeholders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of placeholders that the \hyperlink{classglow_1_1_module}{Module} owns. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_module_a467e5429bf807b3587748366c5a3bfd8}\label{classglow_1_1_module_a467e5429bf807b3587748366c5a3bfd8}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!get\+Prefix@{get\+Prefix}}
+\index{get\+Prefix@{get\+Prefix}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{get\+Prefix()}{getPrefix()}}
+{\footnotesize\ttfamily std\+::string Module\+::get\+Prefix (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+the prefix part of the provided {\ttfamily name}. E.\+g. for an input of \char`\"{}relu\+\_\+\+\_\+2\char`\"{} returns \char`\"{}relu\char`\"{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_module_aedef87903f635a844d4d45a2b43aaf03}\label{classglow_1_1_module_aedef87903f635a844d4d45a2b43aaf03}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!has\+Function@{has\+Function}}
+\index{has\+Function@{has\+Function}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{has\+Function()}{hasFunction()}}
+{\footnotesize\ttfamily bool Module\+::has\+Function (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if a function by the name {\ttfamily name} exists in the module. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_module_a6b31e53e57587b15d32b32c6a0db5c05}\label{classglow_1_1_module_a6b31e53e57587b15d32b32c6a0db5c05}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!strip@{strip}}
+\index{strip@{strip}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{strip()}{strip()}}
+{\footnotesize\ttfamily void Module\+::strip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Strips payloads from constants. This is useful when the \hyperlink{classglow_1_1_module}{Module} will be kept around for metadata but we want to reduce memory use. Unlike clear this leaves P\+Hs and Constants in the module. \mbox{\Hypertarget{classglow_1_1_module_a299f2b5203794b857dcb75d0ad069758}\label{classglow_1_1_module_a299f2b5203794b857dcb75d0ad069758}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!unique\+Name@{unique\+Name}}
+\index{unique\+Name@{unique\+Name}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{unique\+Name()}{uniqueName()}}
+{\footnotesize\ttfamily llvm\+::\+String\+Ref Module\+::unique\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{const llvm\+::\+String\+Set$<$$>$ \&}]{string\+Table,  }\item[{llvm\+::\+String\+Set$<$$>$ \&}]{update\+Table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+unique legal name that\textquotesingle{}s based on the string {\ttfamily name}. Legal names are legal C identifiers in the form\+: \char`\"{}\mbox{[}a-\/z\+A-\/\+Z\+\_\+\mbox{]}\mbox{[}a-\/z\+A-\/\+Z0-\/9\+\_\+\mbox{]}$\ast$\char`\"{}. The name may not be in {\ttfamily string\+Table} or {\ttfamily update\+Table} and will be inserted into {\ttfamily update\+Table}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_module_a0059ec63c41976b08ccfb50e1c8fa020}\label{classglow_1_1_module_a0059ec63c41976b08ccfb50e1c8fa020}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!unique\+Type\+With\+New\+Shape@{unique\+Type\+With\+New\+Shape}}
+\index{unique\+Type\+With\+New\+Shape@{unique\+Type\+With\+New\+Shape}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{unique\+Type\+With\+New\+Shape()}{uniqueTypeWithNewShape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_type}{Type\+Ref} Module\+::unique\+Type\+With\+New\+Shape (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{T,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{dims }\end{DoxyParamCaption})}
+
+Return a pointer to a uniqued type {\ttfamily T}. The new type is identical to {\ttfamily T}, with a new shape {\ttfamily dims}. \mbox{\Hypertarget{classglow_1_1_module_aed10d548f781d837e842690c1810e784}\label{classglow_1_1_module_aed10d548f781d837e842690c1810e784}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!unique\+Type\+With\+New\+Shape@{unique\+Type\+With\+New\+Shape}}
+\index{unique\+Type\+With\+New\+Shape@{unique\+Type\+With\+New\+Shape}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{unique\+Type\+With\+New\+Shape()}{uniqueTypeWithNewShape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_type}{Type\+Ref} Module\+::unique\+Type\+With\+New\+Shape (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{T,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{dims,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{alignments }\end{DoxyParamCaption})}
+
+The new type is identical to {\ttfamily T}, with a new shape {\ttfamily dims} and new {\ttfamily alignments}. \mbox{\Hypertarget{classglow_1_1_module_a4920a99a37f71fa1b75a2f9578d2f6b1}\label{classglow_1_1_module_a4920a99a37f71fa1b75a2f9578d2f6b1}} 
+\index{glow\+::\+Module@{glow\+::\+Module}!verify@{verify}}
+\index{verify@{verify}!glow\+::\+Module@{glow\+::\+Module}}
+\subsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily bool Module\+::verify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Verify the correctness of the \hyperlink{classglow_1_1_module}{Module}. \begin{DoxyReturn}{Returns}
+true when the function is valid. False otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Graph.\+h\item 
+lib/\+Graph/Graph.\+cpp\end{DoxyCompactItemize}

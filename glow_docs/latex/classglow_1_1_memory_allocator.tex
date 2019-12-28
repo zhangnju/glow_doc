@@ -1,0 +1,188 @@
+\hypertarget{classglow_1_1_memory_allocator}{}\section{glow\+:\+:Memory\+Allocator Class Reference}
+\label{classglow_1_1_memory_allocator}\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+
+
+{\ttfamily \#include $<$Memory\+Allocator.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}\label{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}} 
+using \hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} = const void $\ast$
+\begin{DoxyCompactList}\small\item\em \hyperlink{structglow_1_1_type}{Type} that should be used as a handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_ac7c2e3ca37155e4266b2f7104dc9aeab}\label{classglow_1_1_memory_allocator_ac7c2e3ca37155e4266b2f7104dc9aeab}} 
+{\bfseries Memory\+Allocator} (const std\+::string \&name, uint64\+\_\+t pool\+Size, size\+\_\+t alignment=\hyperlink{namespaceglow_ad1e03f233498b5c733d2c0a68ffe2d57}{Tensor\+Alignment})
+\item 
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a3217f7c2173403554b5f53c1eccb269b}\label{classglow_1_1_memory_allocator_a3217f7c2173403554b5f53c1eccb269b}} 
+void {\bfseries reset} ()
+\item 
+bool \hyperlink{classglow_1_1_memory_allocator_a10a5be96f3d1ec9d09c911c841db3909}{contains} (uint64\+\_\+t idx) const
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1_memory_allocator_a8bd7c15304cb54909cbba8878ea57f7b}{allocate} (uint64\+\_\+t size, \hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} handle)
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1_memory_allocator_a10636a2d9429529641393c60a8f2e4d5}{allocate} (uint64\+\_\+t size, \hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} handle, const std\+::set$<$ \hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} $>$ \&must\+Not\+Evict, std\+::vector$<$ \hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} $>$ \&evicted)
+\item 
+\hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} \hyperlink{classglow_1_1_memory_allocator_ab5938e2f0d2b448f0c2e11dad152ef8a}{get\+Handle} (uint64\+\_\+t ptr) const
+\item 
+bool \hyperlink{classglow_1_1_memory_allocator_a8148e0d8a4e2e2db2d3a01022a8ceaad}{has\+Handle} (uint64\+\_\+t ptr) const
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1_memory_allocator_a3bb026995b47d35fdb5dd4193249e705}{get\+Address} (\hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} handle) const
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1_memory_allocator_a8357f913799b90d5c2279ac863f5a8c8}{get\+Size} (\hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} handle) const
+\item 
+bool \hyperlink{classglow_1_1_memory_allocator_ab16a406e4055fc4ceb6ad9b006cefc5d}{has\+Address} (\hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} handle) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_ab06ac4c835acd5fd4bbb934794242fab}\label{classglow_1_1_memory_allocator_ab06ac4c835acd5fd4bbb934794242fab}} 
+void \hyperlink{classglow_1_1_memory_allocator_ab06ac4c835acd5fd4bbb934794242fab}{deallocate} (\hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} handle)
+\begin{DoxyCompactList}\small\item\em Frees the allocation associated with {\ttfamily handle}. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classglow_1_1_memory_allocator_a0eb46056b93ae87117ead760dd1cbff6}{get\+Max\+Memory\+Usage} () const
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1_memory_allocator_a8d2b8991817b453831e7aadd67d139ea}{get\+Memory\+Size} () const
+\item 
+size\+\_\+t \hyperlink{classglow_1_1_memory_allocator_a6ca88b0c91e251a8c4fb320b768ef065}{get\+Alignment} () const
+\item 
+const std\+::string \& \hyperlink{classglow_1_1_memory_allocator_a7c51c4cd7710dd6b827034211db38e17}{get\+Name} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint64\+\_\+t \hyperlink{classglow_1_1_memory_allocator_a41dc4f17fc3b4e242406d9d4a9b419d5}{npos} = -\/1
+\begin{DoxyCompactList}\small\item\em A reserved value to mark invalid allocation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allocates segments of memory. Each allocation is associated with a user-\/defined handle, typically representing a client-\/specific object, e.\+g. a handle can be a {\ttfamily \hyperlink{classglow_1_1_value}{Value} $\ast$} and represent a value whose payload is going to be stored in the allocated memory block. This simplifies the clients of \hyperlink{classglow_1_1_memory_allocator}{Memory\+Allocator} and allows them to use higher-\/level client-\/side objects instead of raw allocated addresses to refer to the allocated memory blocks. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a8bd7c15304cb54909cbba8878ea57f7b}\label{classglow_1_1_memory_allocator_a8bd7c15304cb54909cbba8878ea57f7b}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!allocate@{allocate}}
+\index{allocate@{allocate}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{allocate()}{allocate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint64\+\_\+t Memory\+Allocator\+::allocate (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{size,  }\item[{\hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle}}]{handle }\end{DoxyParamCaption})}
+
+Allocate a region of size {\ttfamily size} and associate a {\ttfamily handle} with it. \begin{DoxyReturn}{Returns}
+the allocated pointer, or \hyperlink{classglow_1_1_memory_allocator_a41dc4f17fc3b4e242406d9d4a9b419d5}{Memory\+Allocator\+::npos}, if the allocation failed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a10636a2d9429529641393c60a8f2e4d5}\label{classglow_1_1_memory_allocator_a10636a2d9429529641393c60a8f2e4d5}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!allocate@{allocate}}
+\index{allocate@{allocate}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{allocate()}{allocate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint64\+\_\+t Memory\+Allocator\+::allocate (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{size,  }\item[{\hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle}}]{handle,  }\item[{const std\+::set$<$ \hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} $>$ \&}]{must\+Not\+Evict,  }\item[{std\+::vector$<$ \hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle} $>$ \&}]{evicted }\end{DoxyParamCaption})}
+
+Allocate a region of size {\ttfamily size} and associate a handle {\ttfamily \hyperlink{classglow_1_1_handle}{Handle}} with it. If the allocation is not possible, the allocator should try to evict some entries that are not needed at the moment, but it is not allowed to evict any entries from {\ttfamily must\+Not\+Evict} set. All evicted entries are stored in the {\ttfamily evicted} set.
+
+\begin{DoxyReturn}{Returns}
+the allocated pointer, or \hyperlink{classglow_1_1_memory_allocator_a41dc4f17fc3b4e242406d9d4a9b419d5}{Memory\+Allocator\+::npos}, if the allocation failed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a10a5be96f3d1ec9d09c911c841db3909}\label{classglow_1_1_memory_allocator_a10a5be96f3d1ec9d09c911c841db3909}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!contains@{contains}}
+\index{contains@{contains}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool glow\+::\+Memory\+Allocator\+::contains (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if the value {\ttfamily idx} is within the currently allocated range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a3bb026995b47d35fdb5dd4193249e705}\label{classglow_1_1_memory_allocator_a3bb026995b47d35fdb5dd4193249e705}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!get\+Address@{get\+Address}}
+\index{get\+Address@{get\+Address}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{get\+Address()}{getAddress()}}
+{\footnotesize\ttfamily uint64\+\_\+t Memory\+Allocator\+::get\+Address (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle}}]{handle }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the address currently associated with the {\ttfamily handle}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a6ca88b0c91e251a8c4fb320b768ef065}\label{classglow_1_1_memory_allocator_a6ca88b0c91e251a8c4fb320b768ef065}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!get\+Alignment@{get\+Alignment}}
+\index{get\+Alignment@{get\+Alignment}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{get\+Alignment()}{getAlignment()}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+Memory\+Allocator\+::get\+Alignment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the alignment boundary used to align segments. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_ab5938e2f0d2b448f0c2e11dad152ef8a}\label{classglow_1_1_memory_allocator_ab5938e2f0d2b448f0c2e11dad152ef8a}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!get\+Handle@{get\+Handle}}
+\index{get\+Handle@{get\+Handle}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{get\+Handle()}{getHandle()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Memory\+Allocator\+::\+Handle} Memory\+Allocator\+::get\+Handle (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ptr }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the handle currently associated with the allocation at {\ttfamily address}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a0eb46056b93ae87117ead760dd1cbff6}\label{classglow_1_1_memory_allocator_a0eb46056b93ae87117ead760dd1cbff6}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!get\+Max\+Memory\+Usage@{get\+Max\+Memory\+Usage}}
+\index{get\+Max\+Memory\+Usage@{get\+Max\+Memory\+Usage}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{get\+Max\+Memory\+Usage()}{getMaxMemoryUsage()}}
+{\footnotesize\ttfamily uint64\+\_\+t glow\+::\+Memory\+Allocator\+::get\+Max\+Memory\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the high water mark for the allocated memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a8d2b8991817b453831e7aadd67d139ea}\label{classglow_1_1_memory_allocator_a8d2b8991817b453831e7aadd67d139ea}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!get\+Memory\+Size@{get\+Memory\+Size}}
+\index{get\+Memory\+Size@{get\+Memory\+Size}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{get\+Memory\+Size()}{getMemorySize()}}
+{\footnotesize\ttfamily uint64\+\_\+t glow\+::\+Memory\+Allocator\+::get\+Memory\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the size of the whole memory region that we can allocate segments into. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a7c51c4cd7710dd6b827034211db38e17}\label{classglow_1_1_memory_allocator_a7c51c4cd7710dd6b827034211db38e17}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily const std\+::string\& glow\+::\+Memory\+Allocator\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the name of the memory region. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a8357f913799b90d5c2279ac863f5a8c8}\label{classglow_1_1_memory_allocator_a8357f913799b90d5c2279ac863f5a8c8}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily uint64\+\_\+t Memory\+Allocator\+::get\+Size (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle}}]{handle }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the size of the allocated block currently associated with the {\ttfamily handle}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_ab16a406e4055fc4ceb6ad9b006cefc5d}\label{classglow_1_1_memory_allocator_ab16a406e4055fc4ceb6ad9b006cefc5d}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!has\+Address@{has\+Address}}
+\index{has\+Address@{has\+Address}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{has\+Address()}{hasAddress()}}
+{\footnotesize\ttfamily bool Memory\+Allocator\+::has\+Address (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_memory_allocator_a8ebc21e1c9250f73f2e85aca3ae4ae9d}{Handle}}]{handle }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true if there is an address currently associated with the {\ttfamily handle}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a8148e0d8a4e2e2db2d3a01022a8ceaad}\label{classglow_1_1_memory_allocator_a8148e0d8a4e2e2db2d3a01022a8ceaad}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!has\+Handle@{has\+Handle}}
+\index{has\+Handle@{has\+Handle}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{has\+Handle()}{hasHandle()}}
+{\footnotesize\ttfamily bool Memory\+Allocator\+::has\+Handle (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ptr }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true if there is a handle currently associated with the allocation at {\ttfamily address}. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classglow_1_1_memory_allocator_a41dc4f17fc3b4e242406d9d4a9b419d5}\label{classglow_1_1_memory_allocator_a41dc4f17fc3b4e242406d9d4a9b419d5}} 
+\index{glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}!npos@{npos}}
+\index{npos@{npos}!glow\+::\+Memory\+Allocator@{glow\+::\+Memory\+Allocator}}
+\subsubsection{\texorpdfstring{npos}{npos}}
+{\footnotesize\ttfamily const uint64\+\_\+t Memory\+Allocator\+::npos = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A reserved value to mark invalid allocation. 
+
+The type of the address returned by \hyperlink{classglow_1_1_memory_allocator_a8bd7c15304cb54909cbba8878ea57f7b}{Memory\+Allocator\+::allocate} should be at least 64-\/bit wide. The type of the address returned by \hyperlink{classglow_1_1_memory_allocator_a8bd7c15304cb54909cbba8878ea57f7b}{Memory\+Allocator\+::allocate} should be unsigned 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Code\+Gen/Memory\+Allocator.\+h\item 
+lib/\+Code\+Gen/Memory\+Allocator.\+cpp\end{DoxyCompactItemize}

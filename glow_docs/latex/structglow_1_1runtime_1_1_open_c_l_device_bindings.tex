@@ -1,0 +1,70 @@
+\hypertarget{structglow_1_1runtime_1_1_open_c_l_device_bindings}{}\section{glow\+:\+:runtime\+:\+:Open\+C\+L\+Device\+Bindings Struct Reference}
+\label{structglow_1_1runtime_1_1_open_c_l_device_bindings}\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings}}
+
+
+{\ttfamily \#include $<$Open\+C\+L.\+h$>$}
+
+Inheritance diagram for glow\+:\+:runtime\+:\+:Open\+C\+L\+Device\+Bindings\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structglow_1_1runtime_1_1_open_c_l_device_bindings}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_open_c_l_device_bindings_a69d69f77749e11f252c297a896a93886}\label{structglow_1_1runtime_1_1_open_c_l_device_bindings_a69d69f77749e11f252c297a896a93886}} 
+{\bfseries Open\+C\+L\+Device\+Bindings} (cl\+\_\+mem buffer, cl\+\_\+command\+\_\+queue commands, cl\+\_\+device\+\_\+id device, cl\+\_\+context ctx, cl\+\_\+program prog)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cl\+\_\+mem \hyperlink{structglow_1_1runtime_1_1_open_c_l_device_bindings_a850b4f3047d8583f6e4e31687a8ce199}{device\+Buffer}
+\item 
+cl\+\_\+command\+\_\+queue \hyperlink{structglow_1_1runtime_1_1_open_c_l_device_bindings_aa2573935cebff1e159e36d1fd17ccd10}{command\+Queue}
+\item 
+cl\+\_\+device\+\_\+id \hyperlink{structglow_1_1runtime_1_1_open_c_l_device_bindings_a0b952fbbf354b67bb73de2626d5a6e6c}{device\+Id}
+\item 
+cl\+\_\+context \hyperlink{structglow_1_1runtime_1_1_open_c_l_device_bindings_ab6f3449dbe225eb437c87d497bbf688a}{context}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_open_c_l_device_bindings_a5873d44067d8fa3aeaf6ac669f14fc35}\label{structglow_1_1runtime_1_1_open_c_l_device_bindings_a5873d44067d8fa3aeaf6ac669f14fc35}} 
+cl\+\_\+program \hyperlink{structglow_1_1runtime_1_1_open_c_l_device_bindings_a5873d44067d8fa3aeaf6ac669f14fc35}{program}
+\begin{DoxyCompactList}\small\item\em CL program which was compiled at add\+Network. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_open_c_l_device_bindings_ae1f415d152e853ca962a4fabfb8e676c}\label{structglow_1_1runtime_1_1_open_c_l_device_bindings_ae1f415d152e853ca962a4fabfb8e676c}} 
+std\+::vector$<$ \hyperlink{structglow_1_1_kernel_launch}{Kernel\+Launch} $>$ \hyperlink{structglow_1_1runtime_1_1_open_c_l_device_bindings_ae1f415d152e853ca962a4fabfb8e676c}{kernel\+Launches}
+\begin{DoxyCompactList}\small\item\em A list of kernels and their associated events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structglow_1_1runtime_1_1_open_c_l_device_bindings}{Open\+C\+L\+Device\+Bindings} inherits from \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings}, it contains per run device specific information used to run a compiled function on a specific device. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_open_c_l_device_bindings_aa2573935cebff1e159e36d1fd17ccd10}\label{structglow_1_1runtime_1_1_open_c_l_device_bindings_aa2573935cebff1e159e36d1fd17ccd10}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings}!command\+Queue@{command\+Queue}}
+\index{command\+Queue@{command\+Queue}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings}}
+\subsubsection{\texorpdfstring{command\+Queue}{commandQueue}}
+{\footnotesize\ttfamily cl\+\_\+command\+\_\+queue glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings\+::command\+Queue}
+
+CL compute command queue. A per run queue for the specific device. \mbox{\Hypertarget{structglow_1_1runtime_1_1_open_c_l_device_bindings_ab6f3449dbe225eb437c87d497bbf688a}\label{structglow_1_1runtime_1_1_open_c_l_device_bindings_ab6f3449dbe225eb437c87d497bbf688a}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings}!context@{context}}
+\index{context@{context}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings}}
+\subsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily cl\+\_\+context glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings\+::context}
+
+CL compute context. Identifies a context on the CL device the computation will take place in. \mbox{\Hypertarget{structglow_1_1runtime_1_1_open_c_l_device_bindings_a850b4f3047d8583f6e4e31687a8ce199}\label{structglow_1_1runtime_1_1_open_c_l_device_bindings_a850b4f3047d8583f6e4e31687a8ce199}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings}!device\+Buffer@{device\+Buffer}}
+\index{device\+Buffer@{device\+Buffer}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings}}
+\subsubsection{\texorpdfstring{device\+Buffer}{deviceBuffer}}
+{\footnotesize\ttfamily cl\+\_\+mem glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings\+::device\+Buffer}
+
+CL memory buffer. Currently this contains both mutable and immutable weights, the buffer is allocated once when the network is added. \mbox{\Hypertarget{structglow_1_1runtime_1_1_open_c_l_device_bindings_a0b952fbbf354b67bb73de2626d5a6e6c}\label{structglow_1_1runtime_1_1_open_c_l_device_bindings_a0b952fbbf354b67bb73de2626d5a6e6c}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings}!device\+Id@{device\+Id}}
+\index{device\+Id@{device\+Id}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings}}
+\subsubsection{\texorpdfstring{device\+Id}{deviceId}}
+{\footnotesize\ttfamily cl\+\_\+device\+\_\+id glow\+::runtime\+::\+Open\+C\+L\+Device\+Bindings\+::device\+Id}
+
+CL compute device id. Identifies the CL device to be used. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Open\+C\+L/Open\+C\+L.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+\hypertarget{classglow_1_1onnxifi_1_1_event}{}\section{glow\+:\+:onnxifi\+:\+:Event Class Reference}
+\label{classglow_1_1onnxifi_1_1_event}\index{glow\+::onnxifi\+::\+Event@{glow\+::onnxifi\+::\+Event}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_event_aeeac3c3943a4a3d81fe939e1ad7481ef}\label{classglow_1_1onnxifi_1_1_event_aeeac3c3943a4a3d81fe939e1ad7481ef}} 
+bool \hyperlink{classglow_1_1onnxifi_1_1_event_aeeac3c3943a4a3d81fe939e1ad7481ef}{signal} (onnx\+Status status)
+\begin{DoxyCompactList}\small\item\em Signal the event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_event_a4384d6c1e3b48b2f441ddd656b60ef7d}\label{classglow_1_1onnxifi_1_1_event_a4384d6c1e3b48b2f441ddd656b60ef7d}} 
+onnx\+Status \hyperlink{classglow_1_1onnxifi_1_1_event_a4384d6c1e3b48b2f441ddd656b60ef7d}{wait} ()
+\begin{DoxyCompactList}\small\item\em Wait until the event is signalled. \end{DoxyCompactList}\item 
+std\+::pair$<$ bool, onnx\+Status $>$ \hyperlink{classglow_1_1onnxifi_1_1_event_abe39536375beee587f43b1f0d98c3543}{wait\+For} (size\+\_\+t timeout\+Ms)
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_event_a13c3bdce54cd8f889e0daedee087dfab}\label{classglow_1_1onnxifi_1_1_event_a13c3bdce54cd8f889e0daedee087dfab}} 
+bool \hyperlink{classglow_1_1onnxifi_1_1_event_a13c3bdce54cd8f889e0daedee087dfab}{is\+Signalled} ()
+\begin{DoxyCompactList}\small\item\em Check if event was signalled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_event_abe39536375beee587f43b1f0d98c3543}\label{classglow_1_1onnxifi_1_1_event_abe39536375beee587f43b1f0d98c3543}} 
+\index{glow\+::onnxifi\+::\+Event@{glow\+::onnxifi\+::\+Event}!wait\+For@{wait\+For}}
+\index{wait\+For@{wait\+For}!glow\+::onnxifi\+::\+Event@{glow\+::onnxifi\+::\+Event}}
+\subsubsection{\texorpdfstring{wait\+For()}{waitFor()}}
+{\footnotesize\ttfamily std\+::pair$<$ bool, onnx\+Status $>$ glow\+::onnxifi\+::\+Event\+::wait\+For (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{timeout\+Ms }\end{DoxyParamCaption})}
+
+Wait until the event is signalled or until at least {\ttfamily timeout\+Ms} milliseconds have elapsed. \begin{DoxyReturn}{Returns}
+a pair with the first value being a boolean that is true if the event was signalled (no timeout occurred) and the second is the value of the event\textquotesingle{}s status. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Onnxifi/Base.\+h\item 
+lib/\+Onnxifi/Base.\+cpp\end{DoxyCompactItemize}

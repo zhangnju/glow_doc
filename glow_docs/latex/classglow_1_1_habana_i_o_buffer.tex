@@ -1,0 +1,50 @@
+\hypertarget{classglow_1_1_habana_i_o_buffer}{}\section{glow\+:\+:Habana\+I\+O\+Buffer Class Reference}
+\label{classglow_1_1_habana_i_o_buffer}\index{glow\+::\+Habana\+I\+O\+Buffer@{glow\+::\+Habana\+I\+O\+Buffer}}
+
+
+{\ttfamily \#include $<$Habana\+Function.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_aa0d5cd030331fa31139d95aaa0f6e1e6}\label{classglow_1_1_habana_i_o_buffer_aa0d5cd030331fa31139d95aaa0f6e1e6}} 
+\hyperlink{classglow_1_1_habana_i_o_buffer_aa0d5cd030331fa31139d95aaa0f6e1e6}{Habana\+I\+O\+Buffer} (uint32\+\_\+t device\+Id, uint8\+\_\+t $\ast$buffer, const std\+::unordered\+\_\+map$<$ const \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$, off\+\_\+t $>$ \&offsets)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_ab1a5b8cef9f8f4c19b6adb0ee39d1591}\label{classglow_1_1_habana_i_o_buffer_ab1a5b8cef9f8f4c19b6adb0ee39d1591}} 
+\hyperlink{classglow_1_1_habana_i_o_buffer_ab1a5b8cef9f8f4c19b6adb0ee39d1591}{$\sim$\+Habana\+I\+O\+Buffer} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_aa6ee6c9f360c0e18b7efef71328a5d39}\label{classglow_1_1_habana_i_o_buffer_aa6ee6c9f360c0e18b7efef71328a5d39}} 
+\hyperlink{classglow_1_1_habana_i_o_buffer_aa6ee6c9f360c0e18b7efef71328a5d39}{Habana\+I\+O\+Buffer} (const \hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} \&src)=delete
+\begin{DoxyCompactList}\small\item\em Prohibit copy, assignment, and moves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_a1cd6ce6cb2f7e50a224fca07be2e7d9c}\label{classglow_1_1_habana_i_o_buffer_a1cd6ce6cb2f7e50a224fca07be2e7d9c}} 
+\hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} \& {\bfseries operator=} (const \hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} \&src)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_a67803be066dc3804ed2f3bd9630cb2e7}\label{classglow_1_1_habana_i_o_buffer_a67803be066dc3804ed2f3bd9630cb2e7}} 
+{\bfseries Habana\+I\+O\+Buffer} (\hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} \&\&src)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_a823ba4535accc6dfbaac5fb33360b477}\label{classglow_1_1_habana_i_o_buffer_a823ba4535accc6dfbaac5fb33360b477}} 
+\hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} \& {\bfseries operator=} (\hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} \&\&src)=delete
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ uint8\+\_\+t $\ast$ $>$ \hyperlink{classglow_1_1_habana_i_o_buffer_a5c879da6fe9a4ca093f29865cf4dfaad}{get} (const \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$p) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Buffer used for storing input/output tensors for a \hyperlink{classglow_1_1_habana_function}{Habana\+Function}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_a5c879da6fe9a4ca093f29865cf4dfaad}\label{classglow_1_1_habana_i_o_buffer_a5c879da6fe9a4ca093f29865cf4dfaad}} 
+\index{glow\+::\+Habana\+I\+O\+Buffer@{glow\+::\+Habana\+I\+O\+Buffer}!get@{get}}
+\index{get@{get}!glow\+::\+Habana\+I\+O\+Buffer@{glow\+::\+Habana\+I\+O\+Buffer}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ uint8\+\_\+t $\ast$ $>$ glow\+::\+Habana\+I\+O\+Buffer\+::get (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$}]{p }\end{DoxyParamCaption}) const}
+
+Get a pointer to the buffer at which to read/store \hyperlink{classglow_1_1_placeholder}{Placeholder} {\ttfamily p}. \begin{DoxyReturn}{Returns}
+a Error if an error occurred. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Habana/Habana\+Function.\+h\item 
+lib/\+Backends/\+Habana/Habana\+Function.\+cpp\end{DoxyCompactItemize}

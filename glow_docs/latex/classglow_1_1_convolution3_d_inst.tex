@@ -1,0 +1,63 @@
+\hypertarget{classglow_1_1_convolution3_d_inst}{}\section{glow\+:\+:Convolution3\+D\+Inst Class Reference}
+\label{classglow_1_1_convolution3_d_inst}\index{glow\+::\+Convolution3\+D\+Inst@{glow\+::\+Convolution3\+D\+Inst}}
+Inheritance diagram for glow\+:\+:Convolution3\+D\+Inst\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.991111cm]{classglow_1_1_convolution3_d_inst}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_a844a10d6c6664308ca7b76e432e85049}\label{classglow_1_1_convolution3_d_inst_a844a10d6c6664308ca7b76e432e85049}} 
+{\bfseries Convolution3\+D\+Inst} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$Dest, \hyperlink{classglow_1_1_value}{Value} $\ast$Src, \hyperlink{classglow_1_1_value}{Value} $\ast$Filter, \hyperlink{classglow_1_1_value}{Value} $\ast$Bias, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Kernels, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Strides, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Group)
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_aa232776d5dbab89c51bd413baad4e049}\label{classglow_1_1_convolution3_d_inst_aa232776d5dbab89c51bd413baad4e049}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Dest} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_a99d1e14c3e76e7776a8847156b6774dd}\label{classglow_1_1_convolution3_d_inst_a99d1e14c3e76e7776a8847156b6774dd}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Src} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_a5bc52f6e3bb6c9c0aa6aa8a8c859cc76}\label{classglow_1_1_convolution3_d_inst_a5bc52f6e3bb6c9c0aa6aa8a8c859cc76}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Filter} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_a8c103a98edca743e88ece3d1714a2a05}\label{classglow_1_1_convolution3_d_inst_a8c103a98edca743e88ece3d1714a2a05}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Bias} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_a24fe022e2a364a618e270086468ff026}\label{classglow_1_1_convolution3_d_inst_a24fe022e2a364a618e270086468ff026}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Kernels} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_acdae4c890cca8b147b6e679bfe651eb8}\label{classglow_1_1_convolution3_d_inst_acdae4c890cca8b147b6e679bfe651eb8}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Strides} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_a9884ca28e19ff506be7fb14a28226a44}\label{classglow_1_1_convolution3_d_inst_a9884ca28e19ff506be7fb14a28226a44}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Pads} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_a513b9238ae47a301e5cf6a084f1e8c75}\label{classglow_1_1_convolution3_d_inst_a513b9238ae47a301e5cf6a084f1e8c75}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Group} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_acf558ebff47efe51e28fd48141310b6c}\label{classglow_1_1_convolution3_d_inst_acf558ebff47efe51e28fd48141310b6c}} 
+bool {\bfseries is\+Inplace\+Op} (unsigned dst\+Idx, unsigned src\+Idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_a638530d23d84573bcbba94c076f6eec5}\label{classglow_1_1_convolution3_d_inst_a638530d23d84573bcbba94c076f6eec5}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_aba0a4029ffd52b5c0a645860a5916937}\label{classglow_1_1_convolution3_d_inst_aba0a4029ffd52b5c0a645860a5916937}} 
+void {\bfseries dump} (llvm\+::raw\+\_\+ostream \&os) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_a3f7032b2f06b75f03ebdd94cae7b96e6}\label{classglow_1_1_convolution3_d_inst_a3f7032b2f06b75f03ebdd94cae7b96e6}} 
+void {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution3_d_inst_a2e192e65774129908480946b06f0fb27}\label{classglow_1_1_convolution3_d_inst_a2e192e65774129908480946b06f0fb27}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+h\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+cpp\end{DoxyCompactItemize}

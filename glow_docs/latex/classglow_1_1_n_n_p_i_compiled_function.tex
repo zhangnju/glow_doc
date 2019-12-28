@@ -1,0 +1,112 @@
+\hypertarget{classglow_1_1_n_n_p_i_compiled_function}{}\section{glow\+:\+:N\+N\+P\+I\+Compiled\+Function Class Reference}
+\label{classglow_1_1_n_n_p_i_compiled_function}\index{glow\+::\+N\+N\+P\+I\+Compiled\+Function@{glow\+::\+N\+N\+P\+I\+Compiled\+Function}}
+
+
+\hyperlink{classglow_1_1_function}{Function} \char`\"{}compiled\char`\"{} for execution by the N\+N\+PI backend.  
+
+
+
+
+{\ttfamily \#include $<$N\+N\+P\+I\+Compiled\+Function.\+h$>$}
+
+Inheritance diagram for glow\+:\+:N\+N\+P\+I\+Compiled\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_n_n_p_i_compiled_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_compiled_function_ace4d4ebea948312e04abde877c74fdf2}\label{classglow_1_1_n_n_p_i_compiled_function_ace4d4ebea948312e04abde877c74fdf2}} 
+{\bfseries N\+N\+P\+I\+Compiled\+Function} (\hyperlink{classglow_1_1_function}{Function} $\ast$F)
+\end{DoxyCompactItemize}
+\subsection*{Compiled\+Function interface.}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_compiled_function_aae0e78fbbd34a6289edd139bb8d890ae}\label{classglow_1_1_n_n_p_i_compiled_function_aae0e78fbbd34a6289edd139bb8d890ae}} 
+{\bfseries $\sim$\+N\+N\+P\+I\+Compiled\+Function} () override
+\item 
+virtual \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_n_n_p_i_compiled_function_a60c241e9e44d70fe5486c44f5cddb7e6}{execute} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$ctx) override
+\item 
+virtual std\+::string \hyperlink{classglow_1_1_n_n_p_i_compiled_function_a389e936aa03cbbed8241a5d2b6477923}{get\+Compile\+Backend\+Name} () const override
+\item 
+N\+N\+P\+I\+Network \hyperlink{classglow_1_1_n_n_p_i_compiled_function_a54cda1e7ddc8111a0c8754ac4e749399}{get\+Compiled\+Network\+Handle} () const
+\item 
+N\+N\+P\+I\+Compilation\+Config \hyperlink{classglow_1_1_n_n_p_i_compiled_function_acb34aada4b36762ecd9bb6ffe5527bd1}{get\+Compilation\+Config} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_compiled_function_ad1613d19deb6843b21ca0612655b5204}\label{classglow_1_1_n_n_p_i_compiled_function_ad1613d19deb6843b21ca0612655b5204}} 
+\hyperlink{classglow_1_1_block_stream}{Block\+Stream} \& \hyperlink{classglow_1_1_n_n_p_i_compiled_function_ad1613d19deb6843b21ca0612655b5204}{lock\+Compiled\+Stream} ()
+\begin{DoxyCompactList}\small\item\em Locks the output stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_compiled_function_a6624bb5317105c992dc498ad31b68854}\label{classglow_1_1_n_n_p_i_compiled_function_a6624bb5317105c992dc498ad31b68854}} 
+void \hyperlink{classglow_1_1_n_n_p_i_compiled_function_a6624bb5317105c992dc498ad31b68854}{unlock\+Compiled\+Stream} ()
+\begin{DoxyCompactList}\small\item\em Unlocks the output stream. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classglow_1_1_n_n_p_i_compiled_function_aa1e428414a8a7183835f9293903682fb}{free\+Compilation\+Resources} () override
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_compiled_function_ab8e9471fbeb849a6c802d9747fd3348b}\label{classglow_1_1_n_n_p_i_compiled_function_ab8e9471fbeb849a6c802d9747fd3348b}} 
+virtual \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries compile} (\hyperlink{classglow_1_1_function}{Function} $\ast$F, const \hyperlink{structglow_1_1_backend_options}{Backend\+Options} \&opts)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classglow_1_1_function}{Function} \char`\"{}compiled\char`\"{} for execution by the N\+N\+PI backend. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_compiled_function_a60c241e9e44d70fe5486c44f5cddb7e6}\label{classglow_1_1_n_n_p_i_compiled_function_a60c241e9e44d70fe5486c44f5cddb7e6}} 
+\index{glow\+::\+N\+N\+P\+I\+Compiled\+Function@{glow\+::\+N\+N\+P\+I\+Compiled\+Function}!execute@{execute}}
+\index{execute@{execute}!glow\+::\+N\+N\+P\+I\+Compiled\+Function@{glow\+::\+N\+N\+P\+I\+Compiled\+Function}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} glow\+::\+N\+N\+P\+I\+Compiled\+Function\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Execute the network and allocate \hyperlink{classglow_1_1_placeholder}{Placeholder} memory with given {\ttfamily ctx} providing mapping between \hyperlink{classglow_1_1_placeholder}{Placeholder} and populated tensor. 
+
+Implements \hyperlink{classglow_1_1_compiled_function_ac8dd94f2ee7129a435f1701b6a9f419e}{glow\+::\+Compiled\+Function}.
+
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_compiled_function_aa1e428414a8a7183835f9293903682fb}\label{classglow_1_1_n_n_p_i_compiled_function_aa1e428414a8a7183835f9293903682fb}} 
+\index{glow\+::\+N\+N\+P\+I\+Compiled\+Function@{glow\+::\+N\+N\+P\+I\+Compiled\+Function}!free\+Compilation\+Resources@{free\+Compilation\+Resources}}
+\index{free\+Compilation\+Resources@{free\+Compilation\+Resources}!glow\+::\+N\+N\+P\+I\+Compiled\+Function@{glow\+::\+N\+N\+P\+I\+Compiled\+Function}}
+\subsubsection{\texorpdfstring{free\+Compilation\+Resources()}{freeCompilationResources()}}
+{\footnotesize\ttfamily void N\+N\+P\+I\+Compiled\+Function\+::free\+Compilation\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Once the compiled\+Function is done being added to devices calling this method will free any resources needed to load the network on the device but not needed for running on the device. 
+
+Reimplemented from \hyperlink{classglow_1_1_compiled_function_a0bd30fa8ff4f317ac14ae1c02898ed1a}{glow\+::\+Compiled\+Function}.
+
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_compiled_function_acb34aada4b36762ecd9bb6ffe5527bd1}\label{classglow_1_1_n_n_p_i_compiled_function_acb34aada4b36762ecd9bb6ffe5527bd1}} 
+\index{glow\+::\+N\+N\+P\+I\+Compiled\+Function@{glow\+::\+N\+N\+P\+I\+Compiled\+Function}!get\+Compilation\+Config@{get\+Compilation\+Config}}
+\index{get\+Compilation\+Config@{get\+Compilation\+Config}!glow\+::\+N\+N\+P\+I\+Compiled\+Function@{glow\+::\+N\+N\+P\+I\+Compiled\+Function}}
+\subsubsection{\texorpdfstring{get\+Compilation\+Config()}{getCompilationConfig()}}
+{\footnotesize\ttfamily N\+N\+P\+I\+Compilation\+Config glow\+::\+N\+N\+P\+I\+Compiled\+Function\+::get\+Compilation\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the compilation config object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_compiled_function_a389e936aa03cbbed8241a5d2b6477923}\label{classglow_1_1_n_n_p_i_compiled_function_a389e936aa03cbbed8241a5d2b6477923}} 
+\index{glow\+::\+N\+N\+P\+I\+Compiled\+Function@{glow\+::\+N\+N\+P\+I\+Compiled\+Function}!get\+Compile\+Backend\+Name@{get\+Compile\+Backend\+Name}}
+\index{get\+Compile\+Backend\+Name@{get\+Compile\+Backend\+Name}!glow\+::\+N\+N\+P\+I\+Compiled\+Function@{glow\+::\+N\+N\+P\+I\+Compiled\+Function}}
+\subsubsection{\texorpdfstring{get\+Compile\+Backend\+Name()}{getCompileBackendName()}}
+{\footnotesize\ttfamily virtual std\+::string glow\+::\+N\+N\+P\+I\+Compiled\+Function\+::get\+Compile\+Backend\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the Kind of \hyperlink{classglow_1_1_backend}{Backend} used to compile this function. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1_compiled_function_a7b3f2b17986d14706a1d1091d3c4df27}{glow\+::\+Compiled\+Function}.
+
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_compiled_function_a54cda1e7ddc8111a0c8754ac4e749399}\label{classglow_1_1_n_n_p_i_compiled_function_a54cda1e7ddc8111a0c8754ac4e749399}} 
+\index{glow\+::\+N\+N\+P\+I\+Compiled\+Function@{glow\+::\+N\+N\+P\+I\+Compiled\+Function}!get\+Compiled\+Network\+Handle@{get\+Compiled\+Network\+Handle}}
+\index{get\+Compiled\+Network\+Handle@{get\+Compiled\+Network\+Handle}!glow\+::\+N\+N\+P\+I\+Compiled\+Function@{glow\+::\+N\+N\+P\+I\+Compiled\+Function}}
+\subsubsection{\texorpdfstring{get\+Compiled\+Network\+Handle()}{getCompiledNetworkHandle()}}
+{\footnotesize\ttfamily N\+N\+P\+I\+Network glow\+::\+N\+N\+P\+I\+Compiled\+Function\+::get\+Compiled\+Network\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the compiled network handle. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+N\+N\+P\+I/N\+N\+P\+I\+Compiled\+Function.\+h\item 
+lib/\+Backends/\+N\+N\+P\+I/N\+N\+P\+I\+Compiled\+Function.\+cpp\end{DoxyCompactItemize}

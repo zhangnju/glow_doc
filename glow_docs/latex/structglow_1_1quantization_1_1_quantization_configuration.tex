@@ -1,0 +1,72 @@
+\hypertarget{structglow_1_1quantization_1_1_quantization_configuration}{}\section{glow\+:\+:quantization\+:\+:Quantization\+Configuration Struct Reference}
+\label{structglow_1_1quantization_1_1_quantization_configuration}\index{glow\+::quantization\+::\+Quantization\+Configuration@{glow\+::quantization\+::\+Quantization\+Configuration}}
+
+
+Configuration for Quantization, passed into quantize\+Function().  
+
+
+
+
+{\ttfamily \#include $<$Base.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1quantization_1_1_quantization_configuration_a3342ce64b04d677a602fe8d598c9a829}\label{structglow_1_1quantization_1_1_quantization_configuration_a3342ce64b04d677a602fe8d598c9a829}} 
+{\bfseries Quantization\+Configuration} (llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_quantization_info}{Node\+Quantization\+Info} $>$ i)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{structglow_1_1_node_quantization_info}{Node\+Quantization\+Info} $>$ \hyperlink{structglow_1_1quantization_1_1_quantization_configuration_aef3b75a36b8e5d3ce182f830916a1523}{infos} \{\}
+\item 
+\mbox{\Hypertarget{structglow_1_1quantization_1_1_quantization_configuration_a52c5fc8f37b6bbd733e9c566af71ec68}\label{structglow_1_1quantization_1_1_quantization_configuration_a52c5fc8f37b6bbd733e9c566af71ec68}} 
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{structglow_1_1quantization_1_1_quantization_configuration_a52c5fc8f37b6bbd733e9c566af71ec68}{precision} \{Elem\+Kind\+::\+Int8\+Q\+Ty\}
+\begin{DoxyCompactList}\small\item\em Precision to use when quantizing a \hyperlink{classglow_1_1_function}{Function}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1quantization_1_1_quantization_configuration_a20042b241af027985e29d9e5563cd467}\label{structglow_1_1quantization_1_1_quantization_configuration_a20042b241af027985e29d9e5563cd467}} 
+quantization\+::\+Schema \hyperlink{structglow_1_1quantization_1_1_quantization_configuration_a20042b241af027985e29d9e5563cd467}{schema} \{quantization\+::\+Schema\+::\+Asymmetric\}
+\begin{DoxyCompactList}\small\item\em Schema to use when quantizing a \hyperlink{classglow_1_1_function}{Function}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1quantization_1_1_quantization_configuration_af9e5e01ed93e69257bcfe2c0aba90e75}\label{structglow_1_1quantization_1_1_quantization_configuration_af9e5e01ed93e69257bcfe2c0aba90e75}} 
+bool \hyperlink{structglow_1_1quantization_1_1_quantization_configuration_af9e5e01ed93e69257bcfe2c0aba90e75}{enable\+Rowwise} \{false\}
+\begin{DoxyCompactList}\small\item\em Whether to use rowwise quantization when quantizing a \hyperlink{classglow_1_1_function}{Function}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structglow_1_1quantization_1_1_quantization_configuration_aa54e327517347c24380917155f2688bd}{new\+Func\+Name} \{\char`\"{}\char`\"{}\}
+\item 
+bool \hyperlink{structglow_1_1quantization_1_1_quantization_configuration_a47d1c3ee284fdd87954692372c6f3eec}{assert\+All\+Nodes\+Quantized} \{false\}
+\item 
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{structglow_1_1quantization_1_1_quantization_configuration_a898c5586b41bdecc7a1c3505639167e1}{precision\+Bias} \{Elem\+Kind\+::\+Int32\+Q\+Ty\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Configuration for Quantization, passed into quantize\+Function(). 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1quantization_1_1_quantization_configuration_a47d1c3ee284fdd87954692372c6f3eec}\label{structglow_1_1quantization_1_1_quantization_configuration_a47d1c3ee284fdd87954692372c6f3eec}} 
+\index{glow\+::quantization\+::\+Quantization\+Configuration@{glow\+::quantization\+::\+Quantization\+Configuration}!assert\+All\+Nodes\+Quantized@{assert\+All\+Nodes\+Quantized}}
+\index{assert\+All\+Nodes\+Quantized@{assert\+All\+Nodes\+Quantized}!glow\+::quantization\+::\+Quantization\+Configuration@{glow\+::quantization\+::\+Quantization\+Configuration}}
+\subsubsection{\texorpdfstring{assert\+All\+Nodes\+Quantized}{assertAllNodesQuantized}}
+{\footnotesize\ttfamily bool glow\+::quantization\+::\+Quantization\+Configuration\+::assert\+All\+Nodes\+Quantized \{false\}}
+
+If true, the quantizer will abort when encountering a node that it would like to quantize but the backend cannot support. Note that node kinds in do\+Not\+Quantize\+Kinds will skip this check and not cause an abort. \mbox{\Hypertarget{structglow_1_1quantization_1_1_quantization_configuration_aef3b75a36b8e5d3ce182f830916a1523}\label{structglow_1_1quantization_1_1_quantization_configuration_aef3b75a36b8e5d3ce182f830916a1523}} 
+\index{glow\+::quantization\+::\+Quantization\+Configuration@{glow\+::quantization\+::\+Quantization\+Configuration}!infos@{infos}}
+\index{infos@{infos}!glow\+::quantization\+::\+Quantization\+Configuration@{glow\+::quantization\+::\+Quantization\+Configuration}}
+\subsubsection{\texorpdfstring{infos}{infos}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structglow_1_1_node_quantization_info}{Node\+Quantization\+Info}$>$ glow\+::quantization\+::\+Quantization\+Configuration\+::infos \{\}}
+
+Infos to use when determining scale and offset for all Nodes inside, and Placeholders and Constants referenced by, a \hyperlink{classglow_1_1_function}{Function} being quantized. \mbox{\Hypertarget{structglow_1_1quantization_1_1_quantization_configuration_aa54e327517347c24380917155f2688bd}\label{structglow_1_1quantization_1_1_quantization_configuration_aa54e327517347c24380917155f2688bd}} 
+\index{glow\+::quantization\+::\+Quantization\+Configuration@{glow\+::quantization\+::\+Quantization\+Configuration}!new\+Func\+Name@{new\+Func\+Name}}
+\index{new\+Func\+Name@{new\+Func\+Name}!glow\+::quantization\+::\+Quantization\+Configuration@{glow\+::quantization\+::\+Quantization\+Configuration}}
+\subsubsection{\texorpdfstring{new\+Func\+Name}{newFuncName}}
+{\footnotesize\ttfamily std\+::string glow\+::quantization\+::\+Quantization\+Configuration\+::new\+Func\+Name \{\char`\"{}\char`\"{}\}}
+
+New name for the quantized function. If no name is given then quantize\+Function() will generate a name. \mbox{\Hypertarget{structglow_1_1quantization_1_1_quantization_configuration_a898c5586b41bdecc7a1c3505639167e1}\label{structglow_1_1quantization_1_1_quantization_configuration_a898c5586b41bdecc7a1c3505639167e1}} 
+\index{glow\+::quantization\+::\+Quantization\+Configuration@{glow\+::quantization\+::\+Quantization\+Configuration}!precision\+Bias@{precision\+Bias}}
+\index{precision\+Bias@{precision\+Bias}!glow\+::quantization\+::\+Quantization\+Configuration@{glow\+::quantization\+::\+Quantization\+Configuration}}
+\subsubsection{\texorpdfstring{precision\+Bias}{precisionBias}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} glow\+::quantization\+::\+Quantization\+Configuration\+::precision\+Bias \{Elem\+Kind\+::\+Int32\+Q\+Ty\}}
+
+Precision used for bias quantization for Convolution and Fully\+Connected. This allows specializing the bias quantization. Default is int32. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Quantization/\+Base/Base.\+h\end{DoxyCompactItemize}

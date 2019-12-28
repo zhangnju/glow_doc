@@ -1,0 +1,94 @@
+The Glow test suite contains four major categories\+: unit tests, regression tests, example programs, and the model loader. Unit tests are the small tests that stress specific parts of the compiler. These tests are added to the compiler when developing a feature. For example, we train a number of small network and perform a gradient check on the operators. We also compile networks to IR and look for specific patterns. Regression tests are tests that are added when we fix bugs. Both regression tests and feature tests are found under the \char`\"{}test/\char`\"{} directory. To run the feature and regression tests run \char`\"{}ninja test\char`\"{}.
+
+\subsection*{Example test suites.}
+
+We rely on external test suites to test the compiler. We use the data sets C\+I\+F\+A\+R10 and M\+N\+I\+ST (located in the \char`\"{}example/\char`\"{} directory) to test the correctness of the whole system. The script under \textquotesingle{}utils/\textquotesingle{} download and extract the data set.
+
+\subsection*{\hyperlink{struct_model}{Model} Loader}
+
+We test the correctness of the Glow implementation by loading Caffe2 and O\+N\+NX models and executing them end-\/to-\/end.
+
+\subsubsection*{Image Classification}
+
+The program {\ttfamily image-\/classifier} loads a model, a png file, and runs a single pass of inference. If everything goes right the output of the program is identical to the output of the original (Caffe2 or O\+N\+NX) model. Unfortunately, the models do not usually describe what the input format should be. Should the pixels be between zero and one, or negative 128 to positive 128? The user needs to be aware of these things when running the models. The script in the directory \textquotesingle{}utils/\textquotesingle{} downloads a number of pre-\/trained networks that we can use for testing.
+
+The Glow build scripts copy a few sample images and a run script that tests the {\ttfamily image-\/classifier} program. The script can be executed with the command\+:
+
+
+\begin{DoxyCode}
+build$./tests/images/run.sh
+\end{DoxyCode}
+
+
+\paragraph*{Calculating Top-\/1 and Top-\/5 Accuracy}
+
+The script {\ttfamily imagenet\+\_\+topk\+\_\+accuracy\+\_\+driver.\+py} located in the {\ttfamily utils/} directory can be used to calculate Top-\/1 and Top-\/5 accuracy. It can be run via a command like the following\+:
+
+
+\begin{DoxyCode}
+python utils/imagenet\_topk\_accuracy\_driver.py --batch-size=10 --validation-images-dir=$\{PATH\_TO\_IMAGES\}
+       --image-classifier-cmd="$\{PATH\_TO\_IMAGE\_CLASSIFIER\_BINARY\} -image-mode=0to1 -m=$\{PATH\_TO\_RESNET50\_PROTOS\_DIR\}
+       -model-input-name=gpu\_0/data -backend=CPU -topk=5 -"
+\end{DoxyCode}
+
+
+Note that the {\ttfamily -\/-\/image-\/classifier-\/cmd} must include {\ttfamily -\/topk=5} for printing the Top-\/5 labels, and {\ttfamily -\/} to run in streaming mode.
+
+The script expects the directory passed in via {\ttfamily -\/-\/validation-\/images-\/dir} to contain subdirectories alphabetically ordered in order of increasing label. For example, for Imagenet with 1000 labels, subdirectories could be listed as {\ttfamily label000/, label001/, ... , label999/}, where {\ttfamily label000/} contains all images that should be classified with label 0.
+
+The script can be used to resize and center crop images to 224x224 via {\ttfamily -\/-\/resize-\/input-\/images}. This resize and center cropping can be done by itself via {\ttfamily -\/-\/only-\/resize-\/and-\/save}, improving execution time of calculating Top-\/k accuracy more than once (this saves the processed images to {\ttfamily validation\+\_\+images\+\_\+dir/processed/}).
+
+\subsubsection*{Text Translation}
+
+The program {\ttfamily text-\/translator} loads a text translation model, reads a line from stdin in a source language, and then prints the translation to the command line in the destination language. The text translation model should be specified by a directory via {\ttfamily -\/m}, containing the source and destination dictionaries ({\ttfamily src\+\_\+dictionary.\+txt} and {\ttfamily dst\+\_\+dictionary.\+txt}), as well as the protobuf files for the model. A backend can be optionally specified, just like for the {\ttfamily image-\/classifier}.
+
+
+\begin{DoxyCode}
+$ ./bin/text-translator -m en2gr -backend=CPU
+
+Enter a sentence in English to translate to German: My favorite sport is basketball .
+mein Lieblingssport ist Basketball .
+\end{DoxyCode}
+
+
+This program expects a sequence-\/to-\/sequence model with beam search. Because Glow currently does not support models that contain control flow (e.\+g. the \href{https://caffe2.ai/docs/operators-catalogue.html#recurrentnetwork}{\tt Recurrent\+Network operator from Caffe2}), the input model must be unrolled to some maximum input and output length. These can be specified on the command line via {\ttfamily -\/max-\/input-\/len} and {\ttfamily -\/max-\/output-\/len}. Additionally, the beam search size can be specified via {\ttfamily -\/beam-\/size}. The default options for the {\ttfamily text-\/translator} match those for the en2gr model currently downloaded via {\ttfamily utils/download\+\_\+datasets\+\_\+and\+\_\+models.\+py} ({\ttfamily -\/max-\/input-\/len=10}, {\ttfamily -\/max-\/output-\/len=14}, {\ttfamily -\/beam-\/size=6}).
+
+\subsection*{Caffe2 and O\+N\+NX Models}
+
+\hyperlink{struct_model}{Model} loader programs (e.\+g. {\ttfamily image-\/classifier} and {\ttfamily text-\/translator}) load pre-\/trained models from protobuf file (either Caffe2 or O\+N\+NX). These pre-\/trained models are downloaded via {\ttfamily download\+\_\+datasets\+\_\+and\+\_\+models.\+py} script located in {\ttfamily utils/}.
+
+There is a more general way to run a pre-\/trained model, not related to images. The {\ttfamily model-\/runner} program loads and runs a self-\/contained model, i.\+e. a model, which has all its inputs initialized inside itself and does not ask for user\textquotesingle{}s input.
+
+\subsubsection*{Train and Save Caffe2 Models}
+
+The {\ttfamily caffe2\+\_\+train\+\_\+and\+\_\+dump\+\_\+pb.\+py} script in {\ttfamily utils/} allows the user to define their own models and input training set in Caffe2, and then dumps the network and weights to protobuf files (the network structure in {\ttfamily predict\+\_\+net.\+pb/pbtxt} and the pre-\/trained weights in {\ttfamily init\+\_\+net.\+pb}). Right now it trains either Le\+Net on M\+N\+I\+ST; an M\+LP is also available and can be used by setting {\ttfamily U\+S\+E\+\_\+\+L\+E\+N\+E\+T\+\_\+\+M\+O\+D\+EL = False}. This script is heavily based on the M\+N\+I\+S\+T.\+py tutorial from Caffe2.
+
+\subsubsection*{Run the pre-\/trained Caffe2 Models using Caffe2}
+
+The {\ttfamily caffe2\+\_\+pb\+\_\+runner.\+py} script in {\ttfamily utils/} loads and runs a pre-\/trained model using the protobuf files saved using {\ttfamily caffe2\+\_\+train\+\_\+and\+\_\+dump\+\_\+pb.\+py}. This can be used to compare the output from Glow to Caffe2. Its usage is similar to running the {\ttfamily image-\/classifier}, which is found in the {\ttfamily run.\+sh} script in {\ttfamily tests/images/}. For example, the following command will run the pre-\/trained resnet50 model using Caffe2\+:
+
+
+\begin{DoxyCode}
+python caffe2\_pb\_runner.py -i [location\_of\_image] -d resnet50
+\end{DoxyCode}
+
+
+\subsection*{Integrated Testing}
+
+Glow also comes with tests integrated with the build environment for our command line tools. We run those tests as part of our continuous integration (CI).
+
+Run them as part of your local build using the following 
+\begin{DoxyCode}
+cmake -G Ninja <glow\_src>  -DCMAKE\_BUILD\_TYPE=Release \(\backslash\)
+      -DCMAKE\_PREFIX\_PATH=/usr/local/opt/llvm         \(\backslash\)
+      -DGLOW\_MODELS\_DIR=<downloaded\_c2\_models>
+\end{DoxyCode}
+ Followed by 
+\begin{DoxyCode}
+ninja check\_expensive
+\end{DoxyCode}
+
+
+Note\+: {\ttfamily ninja check\+\_\+expensive} runs all of the tests that {\ttfamily ninja check} runs plus any tests that have been marked as E\+X\+P\+E\+N\+S\+I\+VE using add\+\_\+glow\+\_\+test(E\+X\+P\+E\+N\+S\+I\+VE ...) such as the integration tests.
+
+Note\+: The difference between {\ttfamily ninja test} and {\ttfamily ninja check} is that {\ttfamily ninja check} makes sure the build dependencies are current before running the tests. 

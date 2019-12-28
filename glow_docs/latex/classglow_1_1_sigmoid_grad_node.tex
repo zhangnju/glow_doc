@@ -1,0 +1,98 @@
+\hypertarget{classglow_1_1_sigmoid_grad_node}{}\section{glow\+:\+:Sigmoid\+Grad\+Node Class Reference}
+\label{classglow_1_1_sigmoid_grad_node}\index{glow\+::\+Sigmoid\+Grad\+Node@{glow\+::\+Sigmoid\+Grad\+Node}}
+Inheritance diagram for glow\+:\+:Sigmoid\+Grad\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_sigmoid_grad_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a9713663622d733f804e395400d553991}\label{classglow_1_1_sigmoid_grad_node_a9713663622d733f804e395400d553991}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0, 
+{\bfseries Original\+Output\+For\+Result\+Idx} = 1, 
+{\bfseries Grad\+Of\+Original\+Output\+Named\+Result\+Idx} = 2
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a0f3f5298fb50ca089f22359d0712db1b}\label{classglow_1_1_sigmoid_grad_node_a0f3f5298fb50ca089f22359d0712db1b}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Grad\+Of\+Input\+Named\+Input\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_aaf4388c7b142cbef5dad38f18ac3eecd}\label{classglow_1_1_sigmoid_grad_node_aaf4388c7b142cbef5dad38f18ac3eecd}} 
+{\bfseries Sigmoid\+Grad\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{structglow_1_1_node_value}{Node\+Value} Original\+Output\+For\+Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Grad\+Of\+Original\+Output\+Named\+Result)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_ad7fdeaec3e17456bef325016126fd364}\label{classglow_1_1_sigmoid_grad_node_ad7fdeaec3e17456bef325016126fd364}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a759caf07911604ebe442c7462045e7cd}\label{classglow_1_1_sigmoid_grad_node_a759caf07911604ebe442c7462045e7cd}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Original\+Output\+For\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_ae7d2653cc9f69f749a49c182f8c610fd}\label{classglow_1_1_sigmoid_grad_node_ae7d2653cc9f69f749a49c182f8c610fd}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Grad\+Of\+Original\+Output\+Named\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_af3282ce751d0f59844331346dc3307ad}\label{classglow_1_1_sigmoid_grad_node_af3282ce751d0f59844331346dc3307ad}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Grad\+Of\+Input\+Named\+Input} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_aaf88c5e2f2bc879839a2ff4ee38ff801}\label{classglow_1_1_sigmoid_grad_node_aaf88c5e2f2bc879839a2ff4ee38ff801}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Grad\+Of\+Input\+Named\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_acc6d085c405ff80445aed695721b66be}\label{classglow_1_1_sigmoid_grad_node_acc6d085c405ff80445aed695721b66be}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a147cef89cae0e5e5b5b6b57e6f2452c2}\label{classglow_1_1_sigmoid_grad_node_a147cef89cae0e5e5b5b6b57e6f2452c2}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a6009b5960a569a8c4e98961fae8929f6}\label{classglow_1_1_sigmoid_grad_node_a6009b5960a569a8c4e98961fae8929f6}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a6aa5c8b02124257c278de5dd71fa481b}\label{classglow_1_1_sigmoid_grad_node_a6aa5c8b02124257c278de5dd71fa481b}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_abc71781994df3a030e43f95933db2a84}\label{classglow_1_1_sigmoid_grad_node_abc71781994df3a030e43f95933db2a84}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a87e32452d6577a79e9e494bc39ab5de6}\label{classglow_1_1_sigmoid_grad_node_a87e32452d6577a79e9e494bc39ab5de6}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a622da0774557fb726e4838a67f8c3acc}\label{classglow_1_1_sigmoid_grad_node_a622da0774557fb726e4838a67f8c3acc}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a234794183bf3e6af6239dcbeef3df4f9}\label{classglow_1_1_sigmoid_grad_node_a234794183bf3e6af6239dcbeef3df4f9}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a1a7924178e9a3bcd35f199a7ce942d09}\label{classglow_1_1_sigmoid_grad_node_a1a7924178e9a3bcd35f199a7ce942d09}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a01a41c05e7d2d47b50c70b02409021b8}\label{classglow_1_1_sigmoid_grad_node_a01a41c05e7d2d47b50c70b02409021b8}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_sigmoid_grad_node}{Sigmoid\+Grad\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_ad8697795ec4f6a6047114073729d4b3a}\label{classglow_1_1_sigmoid_grad_node_ad8697795ec4f6a6047114073729d4b3a}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a2b6b5b119bb446c72a5af14802fed82d}\label{classglow_1_1_sigmoid_grad_node_a2b6b5b119bb446c72a5af14802fed82d}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_ac3e8a947cff916932de10d1d268cd5e9}\label{classglow_1_1_sigmoid_grad_node_ac3e8a947cff916932de10d1d268cd5e9}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a4c5c7e7f7a78c164e2603e95c9c803dc}\label{classglow_1_1_sigmoid_grad_node_a4c5c7e7f7a78c164e2603e95c9c803dc}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sigmoid_grad_node_a90fbd22f347e1bb99f41e23b131e3e3c}\label{classglow_1_1_sigmoid_grad_node_a90fbd22f347e1bb99f41e23b131e3e3c}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['backend',['backend',['../structglow_1_1_backend_info.html#aa86bd2f0dc9cbb259b3d76ed3fced1b0',1,'glow::BackendInfo']]],
+  ['backendhints',['backendHints',['../structglow_1_1_backend_options.html#a8202550f206d059071376fbc215ada85',1,'glow::BackendOptions::backendHints()'],['../structglow_1_1runtime_1_1_d_a_g_node.html#a95a261201a4131e48a2931068844b4a9',1,'glow::runtime::DAGNode::backendHints()']]],
+  ['backendname',['backendName',['../structglow_1_1runtime_1_1_device_info.html#a48fdaa5e39cc3cefc11d04d5fe15dd15',1,'glow::runtime::DeviceInfo::backendName()'],['../structglow_1_1runtime_1_1_d_a_g_node.html#a27896f2ef7d075261697cf3b6c4fe188',1,'glow::runtime::DAGNode::backendName()'],['../structglow_1_1runtime_1_1_device_config.html#af0b3f3f4020ac329221ee3e635405ba3',1,'glow::runtime::DeviceConfig::backendName()']]],
+  ['backendname_5f',['backendName_',['../structglow_1_1_device_config_helper.html#a504268fab5c818b13277fc878343c63b',1,'glow::DeviceConfigHelper']]],
+  ['backendnames',['backendNames',['../structglow_1_1runtime_1_1_partition_config.html#a6616e587419e2669246b44ac9ccffa08',1,'glow::runtime::PartitionConfig']]],
+  ['backendopts',['backendOpts',['../structglow_1_1_compilation_context.html#a342c91bb994ad5f0a8f4e2b58c9851aa',1,'glow::CompilationContext']]],
+  ['backendspecificopts',['backendSpecificOpts',['../structglow_1_1_backend_options.html#a512200407cdc1933ea8ceafd005e3ff4',1,'glow::BackendOptions']]],
+  ['baseactivationsaddr_5f',['baseActivationsAddr_',['../classglow_1_1_l_l_v_m_i_r_gen.html#aa7f7aad6b5cbcae0f9dcf0f45ad75b63',1,'glow::LLVMIRGen']]],
+  ['baseaddressesvariables_5f',['baseAddressesVariables_',['../structglow_1_1_debug_info.html#a717459e7223f04f86cd58a62445a92c0',1,'glow::DebugInfo']]],
+  ['baseaddressesvariablesnames_5f',['baseAddressesVariablesNames_',['../structglow_1_1_debug_info.html#aedd8c89215db736c9099b56e0c318c72',1,'glow::DebugInfo']]],
+  ['baseconstantweightvarsaddr_5f',['baseConstantWeightVarsAddr_',['../classglow_1_1_l_l_v_m_i_r_gen.html#a3a8bdf672c68d37cb51f6453d4bd499d',1,'glow::LLVMIRGen']]],
+  ['baseconstantweightvarsstore_5f',['baseConstantWeightVarsStore_',['../structglow_1_1_allocations_info.html#a3fca4d6e5d5b55e11e800dfead8b4487',1,'glow::AllocationsInfo']]],
+  ['basemutableweightvarsaddr_5f',['baseMutableWeightVarsAddr_',['../classglow_1_1_l_l_v_m_i_r_gen.html#a8dabbdec1164fe59ab4e2855765066ff',1,'glow::LLVMIRGen']]],
+  ['begin_5f',['begin_',['../classglow_1_1_segment.html#aa11a499a96603a528f150a102f6c7cd9',1,'glow::Segment']]],
+  ['begintype',['BeginType',['../structglow_1_1_trace_event.html#af2b2fc075debe344ecec4e5627d00032',1,'glow::TraceEvent']]],
+  ['bindings',['bindings',['../structglow_1_1_compilation_context.html#ac83a8c20aff85167069c3e188d4bf9b9',1,'glow::CompilationContext']]],
+  ['builder_5f',['builder_',['../classglow_1_1_l_l_v_m_i_r_gen.html#a1408eac0eb3af218c2bdc2bd031876ec',1,'glow::LLVMIRGen']]],
+  ['bundlename_5f',['bundleName_',['../classglow_1_1_l_l_v_m_i_r_gen.html#aaddc5bbe3db35bbfb9e32b942e46fcbb',1,'glow::LLVMIRGen']]]
+];

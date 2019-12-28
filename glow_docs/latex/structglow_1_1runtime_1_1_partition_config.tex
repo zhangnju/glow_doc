@@ -1,0 +1,56 @@
+\hypertarget{structglow_1_1runtime_1_1_partition_config}{}\section{glow\+:\+:runtime\+:\+:Partition\+Config Struct Reference}
+\label{structglow_1_1runtime_1_1_partition_config}\index{glow\+::runtime\+::\+Partition\+Config@{glow\+::runtime\+::\+Partition\+Config}}
+
+
+This is struct for user defined partition.  
+
+
+
+
+{\ttfamily \#include $<$Runtime\+Types.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_partition_config_a626f95eccbc00d3464c0352e6a5f8709}\label{structglow_1_1runtime_1_1_partition_config_a626f95eccbc00d3464c0352e6a5f8709}} 
+bool {\bfseries enabled} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_partition_config_ac8482eb011396bdcc81c9eeacc62530a}\label{structglow_1_1runtime_1_1_partition_config_ac8482eb011396bdcc81c9eeacc62530a}} 
+std\+::string \hyperlink{structglow_1_1runtime_1_1_partition_config_ac8482eb011396bdcc81c9eeacc62530a}{func\+Name}
+\begin{DoxyCompactList}\small\item\em The name of the function to be partitioned. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{structglow_1_1runtime_1_1_partition_config_a71d054f8aae8baf57efcee229470c8cb}{num\+Of\+Partitions}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_partition_config_a6616e587419e2669246b44ac9ccffa08}\label{structglow_1_1runtime_1_1_partition_config_a6616e587419e2669246b44ac9ccffa08}} 
+std\+::vector$<$ std\+::string $>$ \hyperlink{structglow_1_1runtime_1_1_partition_config_a6616e587419e2669246b44ac9ccffa08}{backend\+Names}
+\begin{DoxyCompactList}\small\item\em The backend for each partition. backend\+Names.\+size() == num\+Of\+Partitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_partition_config_a2323e78db5023db33dd17009764c3704}\label{structglow_1_1runtime_1_1_partition_config_a2323e78db5023db33dd17009764c3704}} 
+std\+::vector$<$ std\+::string $>$ \hyperlink{structglow_1_1runtime_1_1_partition_config_a2323e78db5023db33dd17009764c3704}{partition\+Names}
+\begin{DoxyCompactList}\small\item\em The name for each partition. partition\+Names.\+size() == num\+Of\+Partitions. \end{DoxyCompactList}\item 
+llvm\+::\+String\+Map$<$ size\+\_\+t $>$ \hyperlink{structglow_1_1runtime_1_1_partition_config_a9c69e065e0deae286621ec4f5960b120}{node\+To\+Partition}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is struct for user defined partition. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_partition_config_a9c69e065e0deae286621ec4f5960b120}\label{structglow_1_1runtime_1_1_partition_config_a9c69e065e0deae286621ec4f5960b120}} 
+\index{glow\+::runtime\+::\+Partition\+Config@{glow\+::runtime\+::\+Partition\+Config}!node\+To\+Partition@{node\+To\+Partition}}
+\index{node\+To\+Partition@{node\+To\+Partition}!glow\+::runtime\+::\+Partition\+Config@{glow\+::runtime\+::\+Partition\+Config}}
+\subsubsection{\texorpdfstring{node\+To\+Partition}{nodeToPartition}}
+{\footnotesize\ttfamily llvm\+::\+String\+Map$<$size\+\_\+t$>$ glow\+::runtime\+::\+Partition\+Config\+::node\+To\+Partition}
+
+The mapping between nodes\textquotesingle{} name to Partition ids. Assume there are n nodes and m partitions. We have 2 types of valid mapping\+: 1. all nodes are mapped to a partition. 2. For i-\/th (0 $<$= i $<$ m) partition, the nodes mapped to this partition id are not in this map, and the nodes mapped to other partitions ids must be in this map. The node\textquotesingle{}s name should be the name in Glow function and may be different from the original name from models. Since Glow will mangle names to make them unique. \mbox{\Hypertarget{structglow_1_1runtime_1_1_partition_config_a71d054f8aae8baf57efcee229470c8cb}\label{structglow_1_1runtime_1_1_partition_config_a71d054f8aae8baf57efcee229470c8cb}} 
+\index{glow\+::runtime\+::\+Partition\+Config@{glow\+::runtime\+::\+Partition\+Config}!num\+Of\+Partitions@{num\+Of\+Partitions}}
+\index{num\+Of\+Partitions@{num\+Of\+Partitions}!glow\+::runtime\+::\+Partition\+Config@{glow\+::runtime\+::\+Partition\+Config}}
+\subsubsection{\texorpdfstring{num\+Of\+Partitions}{numOfPartitions}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::runtime\+::\+Partition\+Config\+::num\+Of\+Partitions}
+
+The number of user defined partitions. The partition ids are between 0 and num\+Of\+Partitions -\/ 1, inclusive. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Runtime/Runtime\+Types.\+h\end{DoxyCompactItemize}

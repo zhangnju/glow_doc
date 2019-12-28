@@ -1,0 +1,28 @@
+\hypertarget{struct_vocabulary}{}\section{Vocabulary Struct Reference}
+\label{struct_vocabulary}\index{Vocabulary@{Vocabulary}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_vocabulary_a4e8abb56add8b240acba266f9cdedead}\label{struct_vocabulary_a4e8abb56add8b240acba266f9cdedead}} 
+void {\bfseries add\+Word} (llvm\+::\+String\+Ref word)
+\item 
+\mbox{\Hypertarget{struct_vocabulary_a009a3e907c84f7492d6ed0570c4badc5}\label{struct_vocabulary_a009a3e907c84f7492d6ed0570c4badc5}} 
+void {\bfseries load\+Vocabulary\+From\+File} (llvm\+::\+String\+Ref filename)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_vocabulary_a1e8cde58dc2c132fff02d2a51f78ecd4}\label{struct_vocabulary_a1e8cde58dc2c132fff02d2a51f78ecd4}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries index2word\+\_\+}
+\item 
+\mbox{\Hypertarget{struct_vocabulary_a3f5a5c62d317191e60cbd7c35889ba5d}\label{struct_vocabulary_a3f5a5c62d317191e60cbd7c35889ba5d}} 
+std\+::unordered\+\_\+map$<$ std\+::string, int64\+\_\+t $>$ {\bfseries word2index\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores vocabulary of a language. Contains mapping from word to index and vice versa. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+examples/fr2en.\+cpp\end{DoxyCompactItemize}

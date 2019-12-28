@@ -1,0 +1,56 @@
+\hypertarget{classglow_1_1_habana_i_o_buffer_pool}{}\section{glow\+:\+:Habana\+I\+O\+Buffer\+Pool Class Reference}
+\label{classglow_1_1_habana_i_o_buffer_pool}\index{glow\+::\+Habana\+I\+O\+Buffer\+Pool@{glow\+::\+Habana\+I\+O\+Buffer\+Pool}}
+
+
+{\ttfamily \#include $<$Habana\+Function.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_pool_a0cfe9540dbf66fca5c0b7a0c5b77816a}\label{classglow_1_1_habana_i_o_buffer_pool_a0cfe9540dbf66fca5c0b7a0c5b77816a}} 
+\hyperlink{classglow_1_1_habana_i_o_buffer_pool_a0cfe9540dbf66fca5c0b7a0c5b77816a}{Habana\+I\+O\+Buffer\+Pool} (uint32\+\_\+t device\+Id, const Placeholder\+List \&inputs, const Placeholder\+List \&outputs, unsigned num\+Buffers=k\+Default\+Num\+Buffers)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_pool_a07ad5d36aafbf9f3871393cb0ce16021}\label{classglow_1_1_habana_i_o_buffer_pool_a07ad5d36aafbf9f3871393cb0ce16021}} 
+\hyperlink{classglow_1_1_habana_i_o_buffer_pool_a07ad5d36aafbf9f3871393cb0ce16021}{$\sim$\+Habana\+I\+O\+Buffer\+Pool} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_pool_afab750ba3fee5713c74add8f58e500b5}\label{classglow_1_1_habana_i_o_buffer_pool_afab750ba3fee5713c74add8f58e500b5}} 
+\hyperlink{classglow_1_1_habana_i_o_buffer_pool_afab750ba3fee5713c74add8f58e500b5}{Habana\+I\+O\+Buffer\+Pool} (const \hyperlink{classglow_1_1_habana_i_o_buffer_pool}{Habana\+I\+O\+Buffer\+Pool} \&src)=delete
+\begin{DoxyCompactList}\small\item\em Prohibit copy, assignment, and moves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_pool_aa74083f864afb58c58d45b2aabaea2f5}\label{classglow_1_1_habana_i_o_buffer_pool_aa74083f864afb58c58d45b2aabaea2f5}} 
+\hyperlink{classglow_1_1_habana_i_o_buffer_pool}{Habana\+I\+O\+Buffer\+Pool} \& {\bfseries operator=} (const \hyperlink{classglow_1_1_habana_i_o_buffer_pool}{Habana\+I\+O\+Buffer\+Pool} \&src)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_pool_a69283bc0b81a0c55fad0077141238d0c}\label{classglow_1_1_habana_i_o_buffer_pool_a69283bc0b81a0c55fad0077141238d0c}} 
+{\bfseries Habana\+I\+O\+Buffer\+Pool} (\hyperlink{classglow_1_1_habana_i_o_buffer_pool}{Habana\+I\+O\+Buffer\+Pool} \&\&src)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_pool_a4100580e6be1b79f00fff599a9c66d90}\label{classglow_1_1_habana_i_o_buffer_pool_a4100580e6be1b79f00fff599a9c66d90}} 
+\hyperlink{classglow_1_1_habana_i_o_buffer_pool}{Habana\+I\+O\+Buffer\+Pool} \& {\bfseries operator=} (\hyperlink{classglow_1_1_habana_i_o_buffer_pool}{Habana\+I\+O\+Buffer\+Pool} \&\&src)=delete
+\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} $>$ \hyperlink{classglow_1_1_habana_i_o_buffer_pool_acd1ce8fdc668b037a9fcfe9cd11c91a2}{get} ()
+\item 
+void \hyperlink{classglow_1_1_habana_i_o_buffer_pool_a13398e7b08c52427ab3e9838a3d41697}{put} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} $>$ buffer)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A pool of \hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} objects that threads must \char`\"{}check
+out\char`\"{} before they execute a \hyperlink{classglow_1_1_habana_function}{Habana\+Function} and \char`\"{}check in\char`\"{} after execution is complete. To enable concurrency, this class can allocate several times the required memory for all input/output Placeholders to allow multiple threads to execute on the device at once. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_pool_acd1ce8fdc668b037a9fcfe9cd11c91a2}\label{classglow_1_1_habana_i_o_buffer_pool_acd1ce8fdc668b037a9fcfe9cd11c91a2}} 
+\index{glow\+::\+Habana\+I\+O\+Buffer\+Pool@{glow\+::\+Habana\+I\+O\+Buffer\+Pool}!get@{get}}
+\index{get@{get}!glow\+::\+Habana\+I\+O\+Buffer\+Pool@{glow\+::\+Habana\+I\+O\+Buffer\+Pool}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} $>$ glow\+::\+Habana\+I\+O\+Buffer\+Pool\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get a \hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} instance from the pool. This confers exclusive ownership to the calling thread. \mbox{\Hypertarget{classglow_1_1_habana_i_o_buffer_pool_a13398e7b08c52427ab3e9838a3d41697}\label{classglow_1_1_habana_i_o_buffer_pool_a13398e7b08c52427ab3e9838a3d41697}} 
+\index{glow\+::\+Habana\+I\+O\+Buffer\+Pool@{glow\+::\+Habana\+I\+O\+Buffer\+Pool}!put@{put}}
+\index{put@{put}!glow\+::\+Habana\+I\+O\+Buffer\+Pool@{glow\+::\+Habana\+I\+O\+Buffer\+Pool}}
+\subsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily void glow\+::\+Habana\+I\+O\+Buffer\+Pool\+::put (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} $>$}]{buffer }\end{DoxyParamCaption})}
+
+Return a \hyperlink{classglow_1_1_habana_i_o_buffer}{Habana\+I\+O\+Buffer} instance to the pool. This returns exclusive ownership back to the pool. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Habana/Habana\+Function.\+h\item 
+lib/\+Backends/\+Habana/Habana\+Function.\+cpp\end{DoxyCompactItemize}

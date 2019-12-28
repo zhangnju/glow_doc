@@ -1,0 +1,582 @@
+\hypertarget{classglow_1_1_l_l_v_m_i_r_gen}{}\section{glow\+:\+:L\+L\+V\+M\+I\+R\+Gen Class Reference}
+\label{classglow_1_1_l_l_v_m_i_r_gen}\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+
+
+{\ttfamily \#include $<$L\+L\+V\+M\+I\+R\+Gen.\+h$>$}
+
+Inheritance diagram for glow\+:\+:L\+L\+V\+M\+I\+R\+Gen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_l_l_v_m_i_r_gen}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_abe35676f1aeccb43fddc4b01585f372d}\label{classglow_1_1_l_l_v_m_i_r_gen_abe35676f1aeccb43fddc4b01585f372d}} 
+virtual \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_abe35676f1aeccb43fddc4b01585f372d}{$\sim$\+L\+L\+V\+M\+I\+R\+Gen} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a9bfb6f7f1baf45078e1686d0c0530fef}{L\+L\+V\+M\+I\+R\+Gen} (const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$M, \hyperlink{structglow_1_1_allocations_info}{Allocations\+Info} \&allocations\+Info, std\+::string main\+Entry\+Name, llvm\+::\+String\+Ref libjit\+BC)
+\item 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a712d537a8810928bb5b6836a3e1b36f6}{init\+Target\+Machine} (llvm\+::\+String\+Ref target, llvm\+::\+String\+Ref arch, llvm\+::\+String\+Ref cpu, const llvm\+::\+Small\+Vector\+Impl$<$ std\+::string $>$ \&target\+Features, llvm\+::\+Code\+Model\+::\+Model CM, llvm\+::\+Reloc\+::\+Model reloc\+Model)
+\item 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a8b36e4f70a5e436f3b29e54303ad1401}{generate\+L\+L\+V\+M\+I\+R\+For\+Instr} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, const \hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$I)
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a0aa96711f023e2256bd0264508c9d093}\label{classglow_1_1_l_l_v_m_i_r_gen_a0aa96711f023e2256bd0264508c9d093}} 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a0aa96711f023e2256bd0264508c9d093}{generate\+L\+L\+V\+M\+I\+R\+For\+Module} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder)
+\begin{DoxyCompactList}\small\item\em Emit L\+L\+V\+M-\/\+IR for the whole \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function}. \end{DoxyCompactList}\item 
+virtual llvm\+::\+Call\+Inst $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a01ce9483d4fc06df377217a0e7c4c855}{create\+Call} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, llvm\+::\+Function $\ast$callee, llvm\+::\+Array\+Ref$<$ llvm\+::\+Value $\ast$$>$ args)
+\item 
+virtual llvm\+::\+Function $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a573dc0804d60a5a7211f11f5d9e9b7b1}{get\+Function} (const std\+::string \&name)
+\item 
+virtual llvm\+::\+Function $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_ad7b34709fef04c6318ce086e2128ccb7}{get\+Function} (const std\+::string \&name, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{glow\+::\+Elem\+Kind} elem\+Ty)
+\item 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a044469a2bbd62d2ce24c1da0fce621a2}{optimize\+L\+L\+V\+M\+Module} (llvm\+::\+Module $\ast$M, llvm\+::\+Target\+Machine \&TM)
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a9021a869c4d7d8d79089d947c898cae5}\label{classglow_1_1_l_l_v_m_i_r_gen_a9021a869c4d7d8d79089d947c898cae5}} 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a9021a869c4d7d8d79089d947c898cae5}{perform\+Specialization} ()
+\begin{DoxyCompactList}\small\item\em Performs specialization of operations based on constant parameters. \end{DoxyCompactList}\item 
+virtual \hyperlink{structglow_1_1_allocations_info}{Allocations\+Info} \& \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a493cc6f5ebe4fae57ccce7c7bec07ead}{get\+Allocations\+Info} ()
+\item 
+llvm\+::\+String\+Ref \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_ad98b7ebc89eb4f9ff63466c190ac6935}{get\+Bundle\+Name} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a1129e6ac613511aa059b44b83026a831}\label{classglow_1_1_l_l_v_m_i_r_gen_a1129e6ac613511aa059b44b83026a831}} 
+void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a1129e6ac613511aa059b44b83026a831}{set\+Bundle\+Name} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Set the name of the bundle. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a7d552d8a207ea84b2e1c24585646df74}{get\+Main\+Entry\+Name} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a8a4007c0b6dffa3ea7ab30c859ad0e72}\label{classglow_1_1_l_l_v_m_i_r_gen_a8a4007c0b6dffa3ea7ab30c859ad0e72}} 
+void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a8a4007c0b6dffa3ea7ab30c859ad0e72}{set\+Main\+Entry\+Name} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Set the name of the main entry point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_ae6c3fef79f9e5fbb73ee60dc0f674a72}\label{classglow_1_1_l_l_v_m_i_r_gen_ae6c3fef79f9e5fbb73ee60dc0f674a72}} 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_ae6c3fef79f9e5fbb73ee60dc0f674a72}{init\+Code\+Gen} ()
+\begin{DoxyCompactList}\small\item\em Creates an L\+L\+VM module, the entry function, etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_ae535df4df4e4181344a7be894cfdb5d9}\label{classglow_1_1_l_l_v_m_i_r_gen_ae535df4df4e4181344a7be894cfdb5d9}} 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_ae535df4df4e4181344a7be894cfdb5d9}{perform\+Code\+Gen} ()
+\begin{DoxyCompactList}\small\item\em Emits the code of the entry function, performs optimizations, etc. \end{DoxyCompactList}\item 
+llvm\+::\+I\+R\+Builder \& \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a9aa6667b0dbd8911e385ceff4af57799}{get\+Builder} ()
+\item 
+llvm\+::\+Target\+Machine \& \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a36b7ddfbe2a68673d396ab06b10baf0e}{get\+Target\+Machine} ()
+\item 
+llvm\+::\+L\+L\+V\+M\+Context \& \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a07a0810110612b078218a35bb4673c99}{get\+L\+L\+V\+M\+Context} ()
+\item 
+std\+::unique\+\_\+ptr$<$ llvm\+::\+Module $>$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_aa5019f4a96a599dac11b3d8eb2886a26}{borrow\+Module} ()
+\item 
+llvm\+::\+Module \& \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a2d7e8150f5ab8f631a26711c39d00a3d}{get\+Module} () const
+\item 
+const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_afe99ac3179cc752f0d1acbad9676213e}{get\+I\+R\+Function} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_af9be8ef572613c2d6d0acbc30a41439e}\label{classglow_1_1_l_l_v_m_i_r_gen_af9be8ef572613c2d6d0acbc30a41439e}} 
+void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_af9be8ef572613c2d6d0acbc30a41439e}{set\+Output\+Dir} (llvm\+::\+String\+Ref output\+Dir)
+\begin{DoxyCompactList}\small\item\em Set output directory for bundles, debug info files, etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a81843ca4f785f138b7d88b35a9e7df61}\label{classglow_1_1_l_l_v_m_i_r_gen_a81843ca4f785f138b7d88b35a9e7df61}} 
+llvm\+::\+String\+Ref \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a81843ca4f785f138b7d88b35a9e7df61}{get\+Output\+Dir} () const
+\begin{DoxyCompactList}\small\item\em Get output directory for bundles, debug info files, etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_ae99d4cedbf1aedd16201a3f0c00af3a6}\label{classglow_1_1_l_l_v_m_i_r_gen_ae99d4cedbf1aedd16201a3f0c00af3a6}} 
+virtual llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_ae99d4cedbf1aedd16201a3f0c00af3a6}{emit\+Const\+Offsets\+Array} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, const \hyperlink{structglow_1_1_allocations_info}{Allocations\+Info} \&allocations\+Info)
+\begin{DoxyCompactList}\small\item\em Emit the array of constant offsets as provided by the {\ttfamily allocations\+Info}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a0b59669dd5d26b9f937b3f57727d7f62}\label{classglow_1_1_l_l_v_m_i_r_gen_a0b59669dd5d26b9f937b3f57727d7f62}} 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a0b59669dd5d26b9f937b3f57727d7f62}{generate\+Function\+Debug\+Info} (llvm\+::\+Function $\ast$F)
+\begin{DoxyCompactList}\small\item\em Generate debug info for a L\+L\+VM function {\ttfamily F}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a3fb32e0e9805be98150fab0a83b61940}\label{classglow_1_1_l_l_v_m_i_r_gen_a3fb32e0e9805be98150fab0a83b61940}} 
+virtual llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a3fb32e0e9805be98150fab0a83b61940}{emit\+String\+Const} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, llvm\+::\+String\+Ref str)
+\begin{DoxyCompactList}\small\item\em Generates L\+L\+VM IR that materializes the string literal {\ttfamily str}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_affd37d8ea2cc36dec91b7dfd9d3783fe}\label{classglow_1_1_l_l_v_m_i_r_gen_affd37d8ea2cc36dec91b7dfd9d3783fe}} 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_affd37d8ea2cc36dec91b7dfd9d3783fe}{mark\+Arg\+As\+Unspecialized} (llvm\+::\+Value $\ast$val)
+\begin{DoxyCompactList}\small\item\em Register {\ttfamily val} as an argument that should not be specialized. \end{DoxyCompactList}\item 
+virtual unsigned \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a6dd22a5eea9925c89897a8a24b747dec}{get\+Target\+Size\+T\+Width} () const
+\item 
+unsigned \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_aa6c45ee294639713b1eaefe4092576e2}{get\+Libjit\+Size\+T\+Width} () const
+\item 
+virtual bool \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a6d4377d61d03f0de9c285cf9b0448e8b}{is\+Eligible\+For\+Specialization} (const llvm\+::\+Call\+Inst $\ast$call)
+\item 
+virtual bool \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a1d5884c76fb5620ed1955a9846bf9b82}{preserve\+Symbol} (const llvm\+::\+Global\+Value \&GV)
+\item 
+virtual bool \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a7b41c0403ef1ff77626f35c5d4590118}{can\+Be\+Part\+Of\+Data\+Parallel\+Kernel} (const \hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$I) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a8f1f6b6418b0be48fbd933fe48491c2d}{emit\+Data\+Parallel\+Kernel\+Impl} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, llvm\+::\+Array\+Ref$<$ const \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$$>$ bundle, llvm\+::\+Array\+Ref$<$ llvm\+::\+Type $\ast$$>$ arg\+Types, llvm\+::\+Dense\+Map$<$ \hyperlink{classglow_1_1_value}{Value} $\ast$, int $>$ \&buffer\+To\+Arg\+Num, llvm\+::\+Array\+Ref$<$ llvm\+::\+Value $\ast$$>$ buffers)
+\item 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a78febfedef59f2e4dd47c4e8f7f11962}{emit\+Value\+Address} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, const \hyperlink{classglow_1_1_value}{glow\+::\+Value} $\ast$val)
+\item 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a99532ebebe16fe197d589073d07c4c92}{emit\+Buffer\+Address} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, \hyperlink{classglow_1_1_value}{Value} $\ast$val, llvm\+::\+Function $\ast$kernel, llvm\+::\+Dense\+Map$<$ \hyperlink{classglow_1_1_value}{Value} $\ast$, int $>$ \&buffer\+To\+Arg\+Num)
+\item 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a267fccf16ace7e109c96839e27112db1}{emit\+Value\+Size} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, const \hyperlink{classglow_1_1_value}{glow\+::\+Value} $\ast$val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a5c68d41607fb828c4718a3a4d3b9985c}\label{classglow_1_1_l_l_v_m_i_r_gen_a5c68d41607fb828c4718a3a4d3b9985c}} 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a5c68d41607fb828c4718a3a4d3b9985c}{emit\+Const\+F32} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, float val)
+\begin{DoxyCompactList}\small\item\em Generates L\+L\+VM IR that materializes the constant {\ttfamily val}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a5c170328a8dfc86b1db19b1698bea839}\label{classglow_1_1_l_l_v_m_i_r_gen_a5c170328a8dfc86b1db19b1698bea839}} 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a5c170328a8dfc86b1db19b1698bea839}{emit\+Const\+I32} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, int32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Generates L\+L\+VM IR that materializes the constant {\ttfamily val}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a2dcbdda1374355bd0341b24e702cab68}\label{classglow_1_1_l_l_v_m_i_r_gen_a2dcbdda1374355bd0341b24e702cab68}} 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a2dcbdda1374355bd0341b24e702cab68}{emit\+Const\+I8} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, int8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Generates L\+L\+VM IR that materializes the constant {\ttfamily val}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a616c59309bbe6426ee5c6efccac9c1c8}\label{classglow_1_1_l_l_v_m_i_r_gen_a616c59309bbe6426ee5c6efccac9c1c8}} 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a616c59309bbe6426ee5c6efccac9c1c8}{emit\+Const\+I1} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, bool val)
+\begin{DoxyCompactList}\small\item\em Generates L\+L\+VM IR that materializes the constant {\ttfamily val}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a21c89455b1c7f932fd0c30d2a5ceb5e3}\label{classglow_1_1_l_l_v_m_i_r_gen_a21c89455b1c7f932fd0c30d2a5ceb5e3}} 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a21c89455b1c7f932fd0c30d2a5ceb5e3}{emit\+Const\+SizeT} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, size\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Generates L\+L\+VM IR that materializes the constant {\ttfamily val}. \end{DoxyCompactList}\item 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a9058e2b14efacc79c28c71c74027e91b}{emit\+Const} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, float val, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{glow\+::\+Elem\+Kind} kind)
+\item 
+{\footnotesize template$<$typename T $>$ }\\llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_ada77060511b9c2cb322c04f88b414626}{emit\+Const\+Size\+T\+Array} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, llvm\+::\+Array\+Ref$<$ T $>$ vals)
+\item 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_ab48cd5bfd5d480f9f3d29b399132b8a5}{emit\+Const\+Array} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, llvm\+::\+Array\+Ref$<$ llvm\+::\+Constant $\ast$$>$ vals, llvm\+::\+Type $\ast$elem\+Ty)
+\item 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a48f4e8b52d60ed9688c2fbfbd233ee93}{emit\+Value\+Dims} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, const \hyperlink{classglow_1_1_value}{glow\+::\+Value} $\ast$val)
+\item 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_ac5f23be02496680d03496b598c653c49}{load\+Base\+Addresses} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder)
+\item 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_ae8c55abb7ab22bd32aee5d3472606475}{emit\+Data\+Parallel\+Kernel} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, llvm\+::\+Array\+Ref$<$ const \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$$>$ stacked\+Instrs)
+\item 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a638e1a6f88ef525a57fa03c7c0cae7cc}{generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, const \hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$I, llvm\+::\+Function $\ast$kernel, llvm\+::\+Dense\+Map$<$ \hyperlink{classglow_1_1_value}{Value} $\ast$, int $>$ \&buffer\+To\+Arg\+Num, llvm\+::\+Value $\ast$loop\+Count)
+\item 
+llvm\+::\+Type $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a4632479e0de5211cbb0131c232e9b014}{get\+Element\+Type} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, const \hyperlink{classglow_1_1_value}{Value} $\ast$val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a6363384b6ce32e716b773fa5bb6e748d}\label{classglow_1_1_l_l_v_m_i_r_gen_a6363384b6ce32e716b773fa5bb6e748d}} 
+llvm\+::\+D\+I\+Type $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a6363384b6ce32e716b773fa5bb6e748d}{get\+Debug\+Type} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, llvm\+::\+Type $\ast$ty)
+\begin{DoxyCompactList}\small\item\em Create a debug information for a given L\+L\+VM type {\ttfamily ty}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a335637a14e9b5a71196b26eec696e000}\label{classglow_1_1_l_l_v_m_i_r_gen_a335637a14e9b5a71196b26eec696e000}} 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a335637a14e9b5a71196b26eec696e000}{init\+Debug\+Info} ()
+\begin{DoxyCompactList}\small\item\em Init the generation of debug information. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a145218c1ebef2593a5bf5e59b1630e04}\label{classglow_1_1_l_l_v_m_i_r_gen_a145218c1ebef2593a5bf5e59b1630e04}} 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a145218c1ebef2593a5bf5e59b1630e04}{generate\+Debug\+Info} ()
+\begin{DoxyCompactList}\small\item\em Generate debug information. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_af5fa2e2bb6dc70638fb8cbbec579feef}{set\+Current\+Debug\+Location} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, const \hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$I)
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a9164764d6962ad3009ab2f8187ad315e}\label{classglow_1_1_l_l_v_m_i_r_gen_a9164764d6962ad3009ab2f8187ad315e}} 
+llvm\+::\+D\+I\+Subprogram $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a9164764d6962ad3009ab2f8187ad315e}{get\+Or\+Create\+Function\+Debug\+Info} (llvm\+::\+Function $\ast$F, llvm\+::\+D\+I\+Scope $\ast$scope, llvm\+::\+D\+I\+File $\ast$file, unsigned line\+No)
+\begin{DoxyCompactList}\small\item\em Get or create a debug information for a given L\+L\+VM function. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_af3caa35da86a7dbe2e02c35ee4f55e77}{emit\+Debug\+Global\+Variable\+For\+Value} (const \hyperlink{classglow_1_1_value}{Value} $\ast$val)
+\item 
+std\+::pair$<$ llvm\+::\+Basic\+Block $\ast$, llvm\+::\+Basic\+Block $\ast$ $>$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_aacdcfdb9538be24c455b90f3855b0f93}{create\+Loop} (llvm\+::\+I\+R\+Builder$<$$>$ \&builder, llvm\+::\+L\+L\+V\+M\+Context \&ctx, llvm\+::\+Value $\ast$num\+Elements) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a547b5f799b99850e524343291109ce9e}\label{classglow_1_1_l_l_v_m_i_r_gen_a547b5f799b99850e524343291109ce9e}} 
+const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a547b5f799b99850e524343291109ce9e}{F\+\_\+}
+\begin{DoxyCompactList}\small\item\em The IR to generate code for. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a46408754b14d6dbd25bb4a907c357d90}\label{classglow_1_1_l_l_v_m_i_r_gen_a46408754b14d6dbd25bb4a907c357d90}} 
+llvm\+::\+L\+L\+V\+M\+Context \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a46408754b14d6dbd25bb4a907c357d90}{ctx\+\_\+}
+\begin{DoxyCompactList}\small\item\em The L\+L\+VM context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_ae752832d01214abc7e30a8e43901952a}\label{classglow_1_1_l_l_v_m_i_r_gen_ae752832d01214abc7e30a8e43901952a}} 
+std\+::unique\+\_\+ptr$<$ llvm\+::\+Module $>$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_ae752832d01214abc7e30a8e43901952a}{llmodule\+\_\+} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em The L\+L\+VM IR module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a8b144416b9efb55ab1921850c0d2a187}\label{classglow_1_1_l_l_v_m_i_r_gen_a8b144416b9efb55ab1921850c0d2a187}} 
+std\+::unique\+\_\+ptr$<$ llvm\+::\+Target\+Machine $>$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a8b144416b9efb55ab1921850c0d2a187}{T\+M\+\_\+}
+\begin{DoxyCompactList}\small\item\em The target machine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a2bdc48bcce7fee3857a461cea91d0743}\label{classglow_1_1_l_l_v_m_i_r_gen_a2bdc48bcce7fee3857a461cea91d0743}} 
+\hyperlink{structglow_1_1_allocations_info}{Allocations\+Info} \& \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a2bdc48bcce7fee3857a461cea91d0743}{allocations\+Info\+\_\+}
+\begin{DoxyCompactList}\small\item\em Information about allocations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_aaddc5bbe3db35bbfb9e32b942e46fcbb}\label{classglow_1_1_l_l_v_m_i_r_gen_aaddc5bbe3db35bbfb9e32b942e46fcbb}} 
+std\+::string \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_aaddc5bbe3db35bbfb9e32b942e46fcbb}{bundle\+Name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the bundle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a686251b0e29406c6dde7e9e75a30b473}\label{classglow_1_1_l_l_v_m_i_r_gen_a686251b0e29406c6dde7e9e75a30b473}} 
+std\+::string \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a686251b0e29406c6dde7e9e75a30b473}{main\+Entry\+Name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the main entry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a9f512b8b99eb0c98509f95da66c65f30}\label{classglow_1_1_l_l_v_m_i_r_gen_a9f512b8b99eb0c98509f95da66c65f30}} 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_instruction_numbering}{Instruction\+Numbering} $>$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a9f512b8b99eb0c98509f95da66c65f30}{instr\+Numbering\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classglow_1_1_instruction}{Instruction} number for the module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_aa7f7aad6b5cbcae0f9dcf0f45ad75b63}\label{classglow_1_1_l_l_v_m_i_r_gen_aa7f7aad6b5cbcae0f9dcf0f45ad75b63}} 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_aa7f7aad6b5cbcae0f9dcf0f45ad75b63}{base\+Activations\+Addr\+\_\+} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classglow_1_1_value}{Value} holding the base address of the activations memory area. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a3a8bdf672c68d37cb51f6453d4bd499d}\label{classglow_1_1_l_l_v_m_i_r_gen_a3a8bdf672c68d37cb51f6453d4bd499d}} 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a3a8bdf672c68d37cb51f6453d4bd499d}{base\+Constant\+Weight\+Vars\+Addr\+\_\+} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classglow_1_1_value}{Value} holding the base address of the constant Weight\+Vars memory area. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a8dabbdec1164fe59ab4e2855765066ff}\label{classglow_1_1_l_l_v_m_i_r_gen_a8dabbdec1164fe59ab4e2855765066ff}} 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a8dabbdec1164fe59ab4e2855765066ff}{base\+Mutable\+Weight\+Vars\+Addr\+\_\+} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classglow_1_1_value}{Value} holding the base address of mutable Weight\+Vars memory area. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a5bdc9c17fb19d9693593b32bd5685004}\label{classglow_1_1_l_l_v_m_i_r_gen_a5bdc9c17fb19d9693593b32bd5685004}} 
+llvm\+::\+Value $\ast$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a5bdc9c17fb19d9693593b32bd5685004}{offsets\+Array\+\_\+} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classglow_1_1_value}{Value} holding the address of the offsets array. \end{DoxyCompactList}\item 
+llvm\+::\+Dense\+Map$<$ llvm\+::\+Constant $\ast$, llvm\+::\+Value $\ast$ $>$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a19a5a95f9c36d016cd02c6c1e5872117}{const\+Array\+Ptrs\+\_\+}
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a1408eac0eb3af218c2bdc2bd031876ec}\label{classglow_1_1_l_l_v_m_i_r_gen_a1408eac0eb3af218c2bdc2bd031876ec}} 
+std\+::unique\+\_\+ptr$<$ llvm\+::\+I\+R\+Builder$<$$>$ $>$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a1408eac0eb3af218c2bdc2bd031876ec}{builder\+\_\+}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classglow_1_1_i_r_builder}{I\+R\+Builder} used for the code generation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a547bb83a1485059e2084493bd191c12c}\label{classglow_1_1_l_l_v_m_i_r_gen_a547bb83a1485059e2084493bd191c12c}} 
+llvm\+::\+String\+Ref \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a547bb83a1485059e2084493bd191c12c}{output\+Dir\+\_\+}
+\begin{DoxyCompactList}\small\item\em Output directory for bundles, debug info files, etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_aa951b795aa652fd59f7cf00150bef465}\label{classglow_1_1_l_l_v_m_i_r_gen_aa951b795aa652fd59f7cf00150bef465}} 
+\hyperlink{structglow_1_1_debug_info}{Debug\+Info} \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_aa951b795aa652fd59f7cf00150bef465}{dbg\+Info\+\_\+}
+\begin{DoxyCompactList}\small\item\em Debug info emission support. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a6f4c6e477a326a2e9dc7018448e90764}\label{classglow_1_1_l_l_v_m_i_r_gen_a6f4c6e477a326a2e9dc7018448e90764}} 
+std\+::unique\+\_\+ptr$<$ llvm\+::\+D\+I\+Builder $>$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a6f4c6e477a326a2e9dc7018448e90764}{D\+I\+Builder\+\_\+}
+\begin{DoxyCompactList}\small\item\em Debug info builder. \end{DoxyCompactList}\item 
+llvm\+::\+Dense\+Set$<$ llvm\+::\+Value $\ast$ $>$ \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a7de29181c696a6c08cf26614ac84e1ba}{dont\+Specialize\+Args\+Set\+\_\+}
+\item 
+llvm\+::\+String\+Ref \hyperlink{classglow_1_1_l_l_v_m_i_r_gen_a851c519495ca16ec3f09a25e267e624a}{libjit\+B\+C\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a class containing a common logic for the generation of the L\+L\+VM IR from an \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function}. The primary clients of this class are J\+I\+Ts and bundlers. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a9bfb6f7f1baf45078e1686d0c0530fef}\label{classglow_1_1_l_l_v_m_i_r_gen_a9bfb6f7f1baf45078e1686d0c0530fef}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!L\+L\+V\+M\+I\+R\+Gen@{L\+L\+V\+M\+I\+R\+Gen}}
+\index{L\+L\+V\+M\+I\+R\+Gen@{L\+L\+V\+M\+I\+R\+Gen}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{L\+L\+V\+M\+I\+R\+Gen()}{LLVMIRGen()}}
+{\footnotesize\ttfamily L\+L\+V\+M\+I\+R\+Gen\+::\+L\+L\+V\+M\+I\+R\+Gen (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$}]{M,  }\item[{\hyperlink{structglow_1_1_allocations_info}{Allocations\+Info} \&}]{allocations\+Info,  }\item[{std\+::string}]{main\+Entry\+Name,  }\item[{llvm\+::\+String\+Ref}]{libjit\+BC }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Ctor. 
+\begin{DoxyParams}{Parameters}
+{\em M} & \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} to be converted into L\+L\+VM IR. \\
+\hline
+{\em allocations\+Info} & information about allocation of weights and activations. \\
+\hline
+{\em main\+Entry\+Name} & Name of the main entry. \\
+\hline
+{\em libjit\+BC} & bitcode of the backend\textquotesingle{}s libjit library. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_aa5019f4a96a599dac11b3d8eb2886a26}\label{classglow_1_1_l_l_v_m_i_r_gen_aa5019f4a96a599dac11b3d8eb2886a26}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!borrow\+Module@{borrow\+Module}}
+\index{borrow\+Module@{borrow\+Module}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{borrow\+Module()}{borrowModule()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$llvm\+::\+Module$>$ glow\+::\+L\+L\+V\+M\+I\+R\+Gen\+::borrow\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Borrows the L\+L\+VM module for further processing, e.\+g. by a J\+IT. The module cannot be used by the \hyperlink{classglow_1_1_l_l_v_m_i_r_gen}{L\+L\+V\+M\+I\+R\+Gen} afterwards. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a7b41c0403ef1ff77626f35c5d4590118}\label{classglow_1_1_l_l_v_m_i_r_gen_a7b41c0403ef1ff77626f35c5d4590118}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!can\+Be\+Part\+Of\+Data\+Parallel\+Kernel@{can\+Be\+Part\+Of\+Data\+Parallel\+Kernel}}
+\index{can\+Be\+Part\+Of\+Data\+Parallel\+Kernel@{can\+Be\+Part\+Of\+Data\+Parallel\+Kernel}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{can\+Be\+Part\+Of\+Data\+Parallel\+Kernel()}{canBePartOfDataParallelKernel()}}
+{\footnotesize\ttfamily bool L\+L\+V\+M\+I\+R\+Gen\+::can\+Be\+Part\+Of\+Data\+Parallel\+Kernel (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$}]{I }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if an instruction {\ttfamily I} can be part of a data parallel kernel. This gives backends a possibility to provide a custom logic to decide on a per-\/instruction basis what can be part of data parallel kernels. Typically an instruction which is is\+Data\+Parallel() can be part of a data parallel kernel. But a backend may decide that a specific instruction {\ttfamily I} cannot be part of data-\/parallel kernels, because there is no support for this functionality in this backend yet. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a01ce9483d4fc06df377217a0e7c4c855}\label{classglow_1_1_l_l_v_m_i_r_gen_a01ce9483d4fc06df377217a0e7c4c855}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!create\+Call@{create\+Call}}
+\index{create\+Call@{create\+Call}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{create\+Call()}{createCall()}}
+{\footnotesize\ttfamily llvm\+::\+Call\+Inst $\ast$ L\+L\+V\+M\+I\+R\+Gen\+::create\+Call (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{llvm\+::\+Function $\ast$}]{callee,  }\item[{llvm\+::\+Array\+Ref$<$ llvm\+::\+Value $\ast$$>$}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Helper function to create a new Call\+Inst, with the specified {\ttfamily builder}, {\ttfamily callee}, and {\ttfamily args}. Verifies that the function signature is correct, and then creates and \begin{DoxyReturn}{Returns}
+the Call\+Inst. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em builder} & the IR builder to be used for creating the Call instruction. \\
+\hline
+{\em callee} & the function to be called. \\
+\hline
+{\em args} & arguments to be passed in this call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+generated Call instruction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_aacdcfdb9538be24c455b90f3855b0f93}\label{classglow_1_1_l_l_v_m_i_r_gen_aacdcfdb9538be24c455b90f3855b0f93}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!create\+Loop@{create\+Loop}}
+\index{create\+Loop@{create\+Loop}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{create\+Loop()}{createLoop()}}
+{\footnotesize\ttfamily std\+::pair$<$ llvm\+::\+Basic\+Block $\ast$, llvm\+::\+Basic\+Block $\ast$ $>$ L\+L\+V\+M\+I\+R\+Gen\+::create\+Loop (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{llvm\+::\+L\+L\+V\+M\+Context \&}]{ctx,  }\item[{llvm\+::\+Value $\ast$}]{num\+Elements }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create L\+L\+VM IR for the for loop with a loop count specified by the only parameter of the enclosing function. \begin{DoxyReturn}{Returns}
+a pair of basic blocks. The first BB is the BB of the loop body, the second BB is the loop exit BB. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a99532ebebe16fe197d589073d07c4c92}\label{classglow_1_1_l_l_v_m_i_r_gen_a99532ebebe16fe197d589073d07c4c92}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!emit\+Buffer\+Address@{emit\+Buffer\+Address}}
+\index{emit\+Buffer\+Address@{emit\+Buffer\+Address}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{emit\+Buffer\+Address()}{emitBufferAddress()}}
+{\footnotesize\ttfamily llvm\+::\+Value $\ast$ L\+L\+V\+M\+I\+R\+Gen\+::emit\+Buffer\+Address (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{\hyperlink{classglow_1_1_value}{Value} $\ast$}]{val,  }\item[{llvm\+::\+Function $\ast$}]{kernel,  }\item[{llvm\+::\+Dense\+Map$<$ \hyperlink{classglow_1_1_value}{Value} $\ast$, int $>$ \&}]{buffer\+To\+Arg\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Emit the address of the buffer {\ttfamily v} inside a data-\/parallel kernel {\ttfamily kernel} using the mapping provided by {\ttfamily buffer\+To\+Arg\+Num}. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a9058e2b14efacc79c28c71c74027e91b}\label{classglow_1_1_l_l_v_m_i_r_gen_a9058e2b14efacc79c28c71c74027e91b}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!emit\+Const@{emit\+Const}}
+\index{emit\+Const@{emit\+Const}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{emit\+Const()}{emitConst()}}
+{\footnotesize\ttfamily llvm\+::\+Value $\ast$ L\+L\+V\+M\+I\+R\+Gen\+::emit\+Const (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{float}]{val,  }\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{glow\+::\+Elem\+Kind}}]{kind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Generates L\+L\+VM IR that materializes the constant {\ttfamily val} as a constant of the type specified by {\ttfamily kind}. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_ab48cd5bfd5d480f9f3d29b399132b8a5}\label{classglow_1_1_l_l_v_m_i_r_gen_ab48cd5bfd5d480f9f3d29b399132b8a5}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!emit\+Const\+Array@{emit\+Const\+Array}}
+\index{emit\+Const\+Array@{emit\+Const\+Array}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{emit\+Const\+Array()}{emitConstArray()}}
+{\footnotesize\ttfamily llvm\+::\+Value $\ast$ L\+L\+V\+M\+I\+R\+Gen\+::emit\+Const\+Array (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{llvm\+::\+Array\+Ref$<$ llvm\+::\+Constant $\ast$$>$}]{vals,  }\item[{llvm\+::\+Type $\ast$}]{elem\+Ty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Generates L\+L\+VM IR that materializes the constant array {\ttfamily vals}. Elements of vals have the type {\ttfamily elem\+Ty}. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_ada77060511b9c2cb322c04f88b414626}\label{classglow_1_1_l_l_v_m_i_r_gen_ada77060511b9c2cb322c04f88b414626}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!emit\+Const\+Size\+T\+Array@{emit\+Const\+Size\+T\+Array}}
+\index{emit\+Const\+Size\+T\+Array@{emit\+Const\+Size\+T\+Array}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{emit\+Const\+Size\+T\+Array()}{emitConstSizeTArray()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+llvm\+::\+Value $\ast$ L\+L\+V\+M\+I\+R\+Gen\+::emit\+Const\+Size\+T\+Array (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{llvm\+::\+Array\+Ref$<$ T $>$}]{vals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Generates L\+L\+VM IR that materializes the constant array {\ttfamily vals}. Note that it will cast non-\/size\+\_\+t types T into size\+\_\+t. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_ae8c55abb7ab22bd32aee5d3472606475}\label{classglow_1_1_l_l_v_m_i_r_gen_ae8c55abb7ab22bd32aee5d3472606475}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!emit\+Data\+Parallel\+Kernel@{emit\+Data\+Parallel\+Kernel}}
+\index{emit\+Data\+Parallel\+Kernel@{emit\+Data\+Parallel\+Kernel}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{emit\+Data\+Parallel\+Kernel()}{emitDataParallelKernel()}}
+{\footnotesize\ttfamily void L\+L\+V\+M\+I\+R\+Gen\+::emit\+Data\+Parallel\+Kernel (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{llvm\+::\+Array\+Ref$<$ const \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$$>$}]{bundle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Create a function representing a stacked kernel for instructions provided in {\ttfamily stacked\+Instrs}.
+
+Emit the function that implements a data-\/parallel kernel and calls it.
+
+The generated kernel functions get buffers as their parameters. The buffers are uniqued, so that any buffer is passed as argument to the kernel function only once. This allows us to mark all parameters of the generated kernel as noalias. As a result, the L\+L\+VM optimizer makes use of the noalias attributes and produces nicely vectorized code for the generated data-\/parallel kernels. Note that we will emit a kernel whenever the number of arguments (aka unique buffers) exceeds {\ttfamily k\+Arg\+Limit}. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a8f1f6b6418b0be48fbd933fe48491c2d}\label{classglow_1_1_l_l_v_m_i_r_gen_a8f1f6b6418b0be48fbd933fe48491c2d}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!emit\+Data\+Parallel\+Kernel\+Impl@{emit\+Data\+Parallel\+Kernel\+Impl}}
+\index{emit\+Data\+Parallel\+Kernel\+Impl@{emit\+Data\+Parallel\+Kernel\+Impl}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{emit\+Data\+Parallel\+Kernel\+Impl()}{emitDataParallelKernelImpl()}}
+{\footnotesize\ttfamily void L\+L\+V\+M\+I\+R\+Gen\+::emit\+Data\+Parallel\+Kernel\+Impl (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{llvm\+::\+Array\+Ref$<$ const \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$$>$}]{bundle,  }\item[{llvm\+::\+Array\+Ref$<$ llvm\+::\+Type $\ast$$>$}]{arg\+Types,  }\item[{llvm\+::\+Dense\+Map$<$ \hyperlink{classglow_1_1_value}{Value} $\ast$, int $>$ \&}]{buffer\+To\+Arg\+Num,  }\item[{llvm\+::\+Array\+Ref$<$ llvm\+::\+Value $\ast$$>$}]{buffers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Implementation of emit\+Data\+Parallel\+Kernel where we bound the number of inputs to 64. 
+\begin{DoxyParams}{Parameters}
+{\em builder} & \hyperlink{classglow_1_1_i_r_builder}{I\+R\+Builder} to be used for the L\+L\+VM IR code emission. \\
+\hline
+{\em bundle} & set of instructions to be emitted as a data-\/parallel kernel. \\
+\hline
+{\em arg\+Type} & types of arguments for the data-\/parallel kernel. \\
+\hline
+{\em buffer\+To\+Arg\+Num} & mapping from a buffer to its argument number in the data-\/parallel kernel. \\
+\hline
+{\em buffers} & buffers used by the data-\/parallel kernel.\\
+\hline
+\end{DoxyParams}
+Implementation of emit\+Data\+Parallel\+Kernel where we guarantee that the number of arguments will be bound by 64. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_af3caa35da86a7dbe2e02c35ee4f55e77}\label{classglow_1_1_l_l_v_m_i_r_gen_af3caa35da86a7dbe2e02c35ee4f55e77}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!emit\+Debug\+Global\+Variable\+For\+Value@{emit\+Debug\+Global\+Variable\+For\+Value}}
+\index{emit\+Debug\+Global\+Variable\+For\+Value@{emit\+Debug\+Global\+Variable\+For\+Value}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{emit\+Debug\+Global\+Variable\+For\+Value()}{emitDebugGlobalVariableForValue()}}
+{\footnotesize\ttfamily void L\+L\+V\+M\+I\+R\+Gen\+::emit\+Debug\+Global\+Variable\+For\+Value (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_value}{Value} $\ast$}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Emit a debug info for the logical global variable representing a weight or an activation described by {\ttfamily val}. This allows for inspecting the values of weights and activations when using a debugger. Logical global variables are not materialized and do not require any additional memory to be reserved or allocated. Instead, they reside at offsets described by \hyperlink{structglow_1_1_allocations_info}{Allocations\+Info} inside the memory blocks dynamically allocated by clients for weights and activations, but behave like regular global variables from the debugger\textquotesingle{}s perspective. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a78febfedef59f2e4dd47c4e8f7f11962}\label{classglow_1_1_l_l_v_m_i_r_gen_a78febfedef59f2e4dd47c4e8f7f11962}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!emit\+Value\+Address@{emit\+Value\+Address}}
+\index{emit\+Value\+Address@{emit\+Value\+Address}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{emit\+Value\+Address()}{emitValueAddress()}}
+{\footnotesize\ttfamily llvm\+::\+Value $\ast$ L\+L\+V\+M\+I\+R\+Gen\+::emit\+Value\+Address (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{const \hyperlink{classglow_1_1_value}{glow\+::\+Value} $\ast$}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Generates L\+L\+VM IR that computes the address of {\ttfamily val} using {\ttfamily builder}. The address type is specified by {\ttfamily ptr\+Ty}. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a48f4e8b52d60ed9688c2fbfbd233ee93}\label{classglow_1_1_l_l_v_m_i_r_gen_a48f4e8b52d60ed9688c2fbfbd233ee93}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!emit\+Value\+Dims@{emit\+Value\+Dims}}
+\index{emit\+Value\+Dims@{emit\+Value\+Dims}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{emit\+Value\+Dims()}{emitValueDims()}}
+{\footnotesize\ttfamily llvm\+::\+Value $\ast$ L\+L\+V\+M\+I\+R\+Gen\+::emit\+Value\+Dims (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{const \hyperlink{classglow_1_1_value}{glow\+::\+Value} $\ast$}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Generates L\+L\+VM IR that computes the dimensions of {\ttfamily val} using {\ttfamily builder}. The result type is \char`\"{}size\+\_\+t$\ast$\char`\"{}. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a267fccf16ace7e109c96839e27112db1}\label{classglow_1_1_l_l_v_m_i_r_gen_a267fccf16ace7e109c96839e27112db1}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!emit\+Value\+Size@{emit\+Value\+Size}}
+\index{emit\+Value\+Size@{emit\+Value\+Size}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{emit\+Value\+Size()}{emitValueSize()}}
+{\footnotesize\ttfamily llvm\+::\+Value $\ast$ L\+L\+V\+M\+I\+R\+Gen\+::emit\+Value\+Size (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{const \hyperlink{classglow_1_1_value}{glow\+::\+Value} $\ast$}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Generates L\+L\+VM IR that computes the size of the tensor of {\ttfamily val} using {\ttfamily builder}. The size type is native to the machine (size\+\_\+t). \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a638e1a6f88ef525a57fa03c7c0cae7cc}\label{classglow_1_1_l_l_v_m_i_r_gen_a638e1a6f88ef525a57fa03c7c0cae7cc}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr@{generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr}}
+\index{generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr@{generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr()}{generateLLVMIRForDataParallelInstr()}}
+{\footnotesize\ttfamily void L\+L\+V\+M\+I\+R\+Gen\+::generate\+L\+L\+V\+M\+I\+R\+For\+Data\+Parallel\+Instr (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{const \hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$}]{I,  }\item[{llvm\+::\+Function $\ast$}]{kernel,  }\item[{llvm\+::\+Dense\+Map$<$ \hyperlink{classglow_1_1_value}{Value} $\ast$, int $>$ \&}]{buffer\+To\+Arg\+Num,  }\item[{llvm\+::\+Value $\ast$}]{loop\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Emit IR for the data parallel instruction {\ttfamily I} which is invoked inside the stacked {\ttfamily kernel}. The current loop count is described by {\ttfamily loop\+Count}. The {\ttfamily buffer\+To\+Arg\+Num} map can be used to find the required buffers, which are provided as arguments to the stacked {\ttfamily kernel}. Derived classes may want to override this function to implement a backend-\/specific L\+L\+VM IR generation logic for some intructions. 
+
+Reimplemented in \hyperlink{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_adbc69b398e182458dc67c93c3357b606}{glow\+::\+C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen}.
+
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a8b36e4f70a5e436f3b29e54303ad1401}\label{classglow_1_1_l_l_v_m_i_r_gen_a8b36e4f70a5e436f3b29e54303ad1401}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!generate\+L\+L\+V\+M\+I\+R\+For\+Instr@{generate\+L\+L\+V\+M\+I\+R\+For\+Instr}}
+\index{generate\+L\+L\+V\+M\+I\+R\+For\+Instr@{generate\+L\+L\+V\+M\+I\+R\+For\+Instr}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{generate\+L\+L\+V\+M\+I\+R\+For\+Instr()}{generateLLVMIRForInstr()}}
+{\footnotesize\ttfamily void L\+L\+V\+M\+I\+R\+Gen\+::generate\+L\+L\+V\+M\+I\+R\+For\+Instr (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{const \hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$}]{I }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Emit L\+L\+V\+M-\/\+IR for the instruction {\ttfamily I}, using the builder {\ttfamily builder}. Derived classes may want to override this function to implement a backend-\/specific L\+L\+VM IR generation logic for some intructions. 
+\begin{DoxyParams}{Parameters}
+{\em builder} & \hyperlink{classglow_1_1_i_r_builder}{I\+R\+Builder} to be used to emit L\+L\+VM IR code. \\
+\hline
+{\em I} & IR instruction which should be compiled into L\+L\+VM IR. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classglow_1_1_c_p_u_l_l_v_m_i_r_gen_a396fcac8c5710b807e7fd670c33cd4bb}{glow\+::\+C\+P\+U\+L\+L\+V\+M\+I\+R\+Gen}.
+
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a493cc6f5ebe4fae57ccce7c7bec07ead}\label{classglow_1_1_l_l_v_m_i_r_gen_a493cc6f5ebe4fae57ccce7c7bec07ead}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+Allocations\+Info@{get\+Allocations\+Info}}
+\index{get\+Allocations\+Info@{get\+Allocations\+Info}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+Allocations\+Info()}{getAllocationsInfo()}}
+{\footnotesize\ttfamily virtual \hyperlink{structglow_1_1_allocations_info}{Allocations\+Info}\& glow\+::\+L\+L\+V\+M\+I\+R\+Gen\+::get\+Allocations\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+allocations info. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a9aa6667b0dbd8911e385ceff4af57799}\label{classglow_1_1_l_l_v_m_i_r_gen_a9aa6667b0dbd8911e385ceff4af57799}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+Builder@{get\+Builder}}
+\index{get\+Builder@{get\+Builder}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+Builder()}{getBuilder()}}
+{\footnotesize\ttfamily llvm\+::\+I\+R\+Builder\& glow\+::\+L\+L\+V\+M\+I\+R\+Gen\+::get\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the current builder. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_ad98b7ebc89eb4f9ff63466c190ac6935}\label{classglow_1_1_l_l_v_m_i_r_gen_ad98b7ebc89eb4f9ff63466c190ac6935}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+Bundle\+Name@{get\+Bundle\+Name}}
+\index{get\+Bundle\+Name@{get\+Bundle\+Name}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+Bundle\+Name()}{getBundleName()}}
+{\footnotesize\ttfamily llvm\+::\+String\+Ref L\+L\+V\+M\+I\+R\+Gen\+::get\+Bundle\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the name of the bundle, to be used for filename when saving. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a4632479e0de5211cbb0131c232e9b014}\label{classglow_1_1_l_l_v_m_i_r_gen_a4632479e0de5211cbb0131c232e9b014}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+Element\+Type@{get\+Element\+Type}}
+\index{get\+Element\+Type@{get\+Element\+Type}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+Element\+Type()}{getElementType()}}
+{\footnotesize\ttfamily llvm\+::\+Type $\ast$ L\+L\+V\+M\+I\+R\+Gen\+::get\+Element\+Type (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{const \hyperlink{classglow_1_1_value}{Value} $\ast$}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+the llvm type of the glow vale {\ttfamily val}.
+
+the L\+L\+VM type corresponding to the type of elements stored in {\ttfamily val}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a573dc0804d60a5a7211f11f5d9e9b7b1}\label{classglow_1_1_l_l_v_m_i_r_gen_a573dc0804d60a5a7211f11f5d9e9b7b1}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+Function@{get\+Function}}
+\index{get\+Function@{get\+Function}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+Function()}{getFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily llvm\+::\+Function $\ast$ L\+L\+V\+M\+I\+R\+Gen\+::get\+Function (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+a libjit A\+PI function by name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_ad7b34709fef04c6318ce086e2128ccb7}\label{classglow_1_1_l_l_v_m_i_r_gen_ad7b34709fef04c6318ce086e2128ccb7}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+Function@{get\+Function}}
+\index{get\+Function@{get\+Function}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+Function()}{getFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily llvm\+::\+Function $\ast$ L\+L\+V\+M\+I\+R\+Gen\+::get\+Function (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{glow\+::\+Elem\+Kind}}]{elem\+Ty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+a libjit A\+PI function by name and tensor element type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_afe99ac3179cc752f0d1acbad9676213e}\label{classglow_1_1_l_l_v_m_i_r_gen_afe99ac3179cc752f0d1acbad9676213e}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+I\+R\+Function@{get\+I\+R\+Function}}
+\index{get\+I\+R\+Function@{get\+I\+R\+Function}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+I\+R\+Function()}{getIRFunction()}}
+{\footnotesize\ttfamily const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function}$\ast$ glow\+::\+L\+L\+V\+M\+I\+R\+Gen\+::get\+I\+R\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the IR function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_aa6c45ee294639713b1eaefe4092576e2}\label{classglow_1_1_l_l_v_m_i_r_gen_aa6c45ee294639713b1eaefe4092576e2}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+Libjit\+Size\+T\+Width@{get\+Libjit\+Size\+T\+Width}}
+\index{get\+Libjit\+Size\+T\+Width@{get\+Libjit\+Size\+T\+Width}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+Libjit\+Size\+T\+Width()}{getLibjitSizeTWidth()}}
+{\footnotesize\ttfamily unsigned L\+L\+V\+M\+I\+R\+Gen\+::get\+Libjit\+Size\+T\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the sizeof(size\+\_\+t) of the actual target-\/specific size\+\_\+t type that was used to compile libjit into L\+L\+VM bitcode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a07a0810110612b078218a35bb4673c99}\label{classglow_1_1_l_l_v_m_i_r_gen_a07a0810110612b078218a35bb4673c99}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+L\+L\+V\+M\+Context@{get\+L\+L\+V\+M\+Context}}
+\index{get\+L\+L\+V\+M\+Context@{get\+L\+L\+V\+M\+Context}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+L\+L\+V\+M\+Context()}{getLLVMContext()}}
+{\footnotesize\ttfamily llvm\+::\+L\+L\+V\+M\+Context\& glow\+::\+L\+L\+V\+M\+I\+R\+Gen\+::get\+L\+L\+V\+M\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the L\+L\+V\+M\+Context being used. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a7d552d8a207ea84b2e1c24585646df74}\label{classglow_1_1_l_l_v_m_i_r_gen_a7d552d8a207ea84b2e1c24585646df74}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+Main\+Entry\+Name@{get\+Main\+Entry\+Name}}
+\index{get\+Main\+Entry\+Name@{get\+Main\+Entry\+Name}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+Main\+Entry\+Name()}{getMainEntryName()}}
+{\footnotesize\ttfamily std\+::string L\+L\+V\+M\+I\+R\+Gen\+::get\+Main\+Entry\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the name of the main entry point. When J\+I\+Tting, it will be \char`\"{}main\char`\"{}. In case of bundling it will be the name of the bundle. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a2d7e8150f5ab8f631a26711c39d00a3d}\label{classglow_1_1_l_l_v_m_i_r_gen_a2d7e8150f5ab8f631a26711c39d00a3d}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+Module@{get\+Module}}
+\index{get\+Module@{get\+Module}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+Module()}{getModule()}}
+{\footnotesize\ttfamily llvm\+::\+Module\& glow\+::\+L\+L\+V\+M\+I\+R\+Gen\+::get\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+current L\+L\+VM module. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a36b7ddfbe2a68673d396ab06b10baf0e}\label{classglow_1_1_l_l_v_m_i_r_gen_a36b7ddfbe2a68673d396ab06b10baf0e}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+Target\+Machine@{get\+Target\+Machine}}
+\index{get\+Target\+Machine@{get\+Target\+Machine}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+Target\+Machine()}{getTargetMachine()}}
+{\footnotesize\ttfamily llvm\+::\+Target\+Machine\& glow\+::\+L\+L\+V\+M\+I\+R\+Gen\+::get\+Target\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the target machine description. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a6dd22a5eea9925c89897a8a24b747dec}\label{classglow_1_1_l_l_v_m_i_r_gen_a6dd22a5eea9925c89897a8a24b747dec}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!get\+Target\+Size\+T\+Width@{get\+Target\+Size\+T\+Width}}
+\index{get\+Target\+Size\+T\+Width@{get\+Target\+Size\+T\+Width}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{get\+Target\+Size\+T\+Width()}{getTargetSizeTWidth()}}
+{\footnotesize\ttfamily unsigned L\+L\+V\+M\+I\+R\+Gen\+::get\+Target\+Size\+T\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+bit-\/width of the target size\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a712d537a8810928bb5b6836a3e1b36f6}\label{classglow_1_1_l_l_v_m_i_r_gen_a712d537a8810928bb5b6836a3e1b36f6}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!init\+Target\+Machine@{init\+Target\+Machine}}
+\index{init\+Target\+Machine@{init\+Target\+Machine}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{init\+Target\+Machine()}{initTargetMachine()}}
+{\footnotesize\ttfamily void L\+L\+V\+M\+I\+R\+Gen\+::init\+Target\+Machine (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{target,  }\item[{llvm\+::\+String\+Ref}]{arch,  }\item[{llvm\+::\+String\+Ref}]{cpu,  }\item[{const llvm\+::\+Small\+Vector\+Impl$<$ std\+::string $>$ \&}]{target\+Features,  }\item[{llvm\+::\+Code\+Model\+::\+Model}]{CM,  }\item[{llvm\+::\+Reloc\+::\+Model}]{reloc\+Model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Init the Target\+Machine using a given {\ttfamily target}, {\ttfamily arch}, {\ttfamily cpu}, {\ttfamily target\+Features} and code model. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a6d4377d61d03f0de9c285cf9b0448e8b}\label{classglow_1_1_l_l_v_m_i_r_gen_a6d4377d61d03f0de9c285cf9b0448e8b}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!is\+Eligible\+For\+Specialization@{is\+Eligible\+For\+Specialization}}
+\index{is\+Eligible\+For\+Specialization@{is\+Eligible\+For\+Specialization}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{is\+Eligible\+For\+Specialization()}{isEligibleForSpecialization()}}
+{\footnotesize\ttfamily bool L\+L\+V\+M\+I\+R\+Gen\+::is\+Eligible\+For\+Specialization (\begin{DoxyParamCaption}\item[{const llvm\+::\+Call\+Inst $\ast$}]{call }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if a call is eligible for specialization. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_ac5f23be02496680d03496b598c653c49}\label{classglow_1_1_l_l_v_m_i_r_gen_ac5f23be02496680d03496b598c653c49}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!load\+Base\+Addresses@{load\+Base\+Addresses}}
+\index{load\+Base\+Addresses@{load\+Base\+Addresses}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{load\+Base\+Addresses()}{loadBaseAddresses()}}
+{\footnotesize\ttfamily void L\+L\+V\+M\+I\+R\+Gen\+::load\+Base\+Addresses (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Load base addresses of different memory areas (activations, const weightvars, mutable weight vars) so that they can be reused inside the body of the function.
+
+Load base addresses of different memory areas so that they can be easily reused during codegen. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a044469a2bbd62d2ce24c1da0fce621a2}\label{classglow_1_1_l_l_v_m_i_r_gen_a044469a2bbd62d2ce24c1da0fce621a2}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!optimize\+L\+L\+V\+M\+Module@{optimize\+L\+L\+V\+M\+Module}}
+\index{optimize\+L\+L\+V\+M\+Module@{optimize\+L\+L\+V\+M\+Module}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{optimize\+L\+L\+V\+M\+Module()}{optimizeLLVMModule()}}
+{\footnotesize\ttfamily void L\+L\+V\+M\+I\+R\+Gen\+::optimize\+L\+L\+V\+M\+Module (\begin{DoxyParamCaption}\item[{llvm\+::\+Module $\ast$}]{M,  }\item[{llvm\+::\+Target\+Machine \&}]{TM }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Optimize the function {\ttfamily F} and the module that owns it. \hyperlink{structglow_1_1_use}{Use} the target information from the {\ttfamily TM} target machine. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a1d5884c76fb5620ed1955a9846bf9b82}\label{classglow_1_1_l_l_v_m_i_r_gen_a1d5884c76fb5620ed1955a9846bf9b82}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!preserve\+Symbol@{preserve\+Symbol}}
+\index{preserve\+Symbol@{preserve\+Symbol}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{preserve\+Symbol()}{preserveSymbol()}}
+{\footnotesize\ttfamily bool L\+L\+V\+M\+I\+R\+Gen\+::preserve\+Symbol (\begin{DoxyParamCaption}\item[{const llvm\+::\+Global\+Value \&}]{GV }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if a global symbol {\ttfamily GV} needs to be preserved in the module and not interalized during optimizations. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_af5fa2e2bb6dc70638fb8cbbec579feef}\label{classglow_1_1_l_l_v_m_i_r_gen_af5fa2e2bb6dc70638fb8cbbec579feef}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!set\+Current\+Debug\+Location@{set\+Current\+Debug\+Location}}
+\index{set\+Current\+Debug\+Location@{set\+Current\+Debug\+Location}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{set\+Current\+Debug\+Location()}{setCurrentDebugLocation()}}
+{\footnotesize\ttfamily void L\+L\+V\+M\+I\+R\+Gen\+::set\+Current\+Debug\+Location (\begin{DoxyParamCaption}\item[{llvm\+::\+I\+R\+Builder$<$$>$ \&}]{builder,  }\item[{const \hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$}]{I }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Set the debug location for the {\ttfamily builder}, so that it corresponds to the instruction {\ttfamily I} in the textual representation of the Glow IR. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a19a5a95f9c36d016cd02c6c1e5872117}\label{classglow_1_1_l_l_v_m_i_r_gen_a19a5a95f9c36d016cd02c6c1e5872117}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!const\+Array\+Ptrs\+\_\+@{const\+Array\+Ptrs\+\_\+}}
+\index{const\+Array\+Ptrs\+\_\+@{const\+Array\+Ptrs\+\_\+}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{const\+Array\+Ptrs\+\_\+}{constArrayPtrs\_}}
+{\footnotesize\ttfamily llvm\+::\+Dense\+Map$<$llvm\+::\+Constant $\ast$, llvm\+::\+Value $\ast$$>$ glow\+::\+L\+L\+V\+M\+I\+R\+Gen\+::const\+Array\+Ptrs\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Maps constant arrays to the constant expressions representing size\+\_\+t pointers to these arrays. This is done to ensure the proper uniqueness semantics of such pointers just like it is done for llvm\+::\+Constants. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a7de29181c696a6c08cf26614ac84e1ba}\label{classglow_1_1_l_l_v_m_i_r_gen_a7de29181c696a6c08cf26614ac84e1ba}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!dont\+Specialize\+Args\+Set\+\_\+@{dont\+Specialize\+Args\+Set\+\_\+}}
+\index{dont\+Specialize\+Args\+Set\+\_\+@{dont\+Specialize\+Args\+Set\+\_\+}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{dont\+Specialize\+Args\+Set\+\_\+}{dontSpecializeArgsSet\_}}
+{\footnotesize\ttfamily llvm\+::\+Dense\+Set$<$llvm\+::\+Value $\ast$$>$ glow\+::\+L\+L\+V\+M\+I\+R\+Gen\+::dont\+Specialize\+Args\+Set\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+A set that contains all of the argument that we request from the specializer not to specialize. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_i_r_gen_a851c519495ca16ec3f09a25e267e624a}\label{classglow_1_1_l_l_v_m_i_r_gen_a851c519495ca16ec3f09a25e267e624a}} 
+\index{glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}!libjit\+B\+C\+\_\+@{libjit\+B\+C\+\_\+}}
+\index{libjit\+B\+C\+\_\+@{libjit\+B\+C\+\_\+}!glow\+::\+L\+L\+V\+M\+I\+R\+Gen@{glow\+::\+L\+L\+V\+M\+I\+R\+Gen}}
+\subsubsection{\texorpdfstring{libjit\+B\+C\+\_\+}{libjitBC\_}}
+{\footnotesize\ttfamily llvm\+::\+String\+Ref glow\+::\+L\+L\+V\+M\+I\+R\+Gen\+::libjit\+B\+C\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Bitcode of the libjit. Containts the starting address and the length of the bitcode. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+L\+L\+V\+M\+I\+R\+Code\+Gen/L\+L\+V\+M\+I\+R\+Gen.\+h\item 
+lib/\+L\+L\+V\+M\+I\+R\+Code\+Gen/Debug\+Info.\+cpp\item 
+lib/\+L\+L\+V\+M\+I\+R\+Code\+Gen/Function\+Specializer.\+cpp\item 
+lib/\+L\+L\+V\+M\+I\+R\+Code\+Gen/L\+L\+V\+M\+I\+R\+Gen.\+cpp\item 
+lib/\+L\+L\+V\+M\+I\+R\+Code\+Gen/Pipeline.\+cpp\end{DoxyCompactItemize}

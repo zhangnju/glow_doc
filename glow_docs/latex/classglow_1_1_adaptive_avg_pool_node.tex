@@ -1,0 +1,105 @@
+\hypertarget{classglow_1_1_adaptive_avg_pool_node}{}\section{glow\+:\+:Adaptive\+Avg\+Pool\+Node Class Reference}
+\label{classglow_1_1_adaptive_avg_pool_node}\index{glow\+::\+Adaptive\+Avg\+Pool\+Node@{glow\+::\+Adaptive\+Avg\+Pool\+Node}}
+
+
+Performs an Adaptive Average Pool operation on the Input given.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Adaptive\+Avg\+Pool\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_adaptive_avg_pool_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_ae99898a399ed2026ffefeacd9d05e26b}\label{classglow_1_1_adaptive_avg_pool_node_ae99898a399ed2026ffefeacd9d05e26b}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a7d78a352b93be6afc6546f7e82fd34bf}\label{classglow_1_1_adaptive_avg_pool_node_a7d78a352b93be6afc6546f7e82fd34bf}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a9dc69701d7d0149986116d003eeeb838}\label{classglow_1_1_adaptive_avg_pool_node_a9dc69701d7d0149986116d003eeeb838}} 
+{\bfseries Adaptive\+Avg\+Pool\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input)
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a97d16adf4fec70c960771292ae016403}\label{classglow_1_1_adaptive_avg_pool_node_a97d16adf4fec70c960771292ae016403}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a861853fc8a0bc55e1863e666a99daf4f}\label{classglow_1_1_adaptive_avg_pool_node_a861853fc8a0bc55e1863e666a99daf4f}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_ada7b7a492da56c4b190176f03c014501}\label{classglow_1_1_adaptive_avg_pool_node_ada7b7a492da56c4b190176f03c014501}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a3630eabf7a039b301993d319935464f1}\label{classglow_1_1_adaptive_avg_pool_node_a3630eabf7a039b301993d319935464f1}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a92ae38f1b02343ffdfc81ee2f3dc298b}\label{classglow_1_1_adaptive_avg_pool_node_a92ae38f1b02343ffdfc81ee2f3dc298b}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a4b9b6f4fdb38042c4f595d7b6e26236b}\label{classglow_1_1_adaptive_avg_pool_node_a4b9b6f4fdb38042c4f595d7b6e26236b}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a38799ee7fe7c672a2456f4e62febde95}\label{classglow_1_1_adaptive_avg_pool_node_a38799ee7fe7c672a2456f4e62febde95}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a4e97331eb058323273c672e8b850e8b4}\label{classglow_1_1_adaptive_avg_pool_node_a4e97331eb058323273c672e8b850e8b4}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a2a1e2c5d5b693069d1573d52e87a823a}\label{classglow_1_1_adaptive_avg_pool_node_a2a1e2c5d5b693069d1573d52e87a823a}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a67b525004252afd4ed712fc21c7e9707}\label{classglow_1_1_adaptive_avg_pool_node_a67b525004252afd4ed712fc21c7e9707}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a325c1d09cc6c976d784679c12decc9cf}\label{classglow_1_1_adaptive_avg_pool_node_a325c1d09cc6c976d784679c12decc9cf}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_ae4291b1c560f1953ec6c1da970a9ccb8}\label{classglow_1_1_adaptive_avg_pool_node_ae4291b1c560f1953ec6c1da970a9ccb8}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a015d464248d021e1742275bcf6aa4ea7}\label{classglow_1_1_adaptive_avg_pool_node_a015d464248d021e1742275bcf6aa4ea7}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_adaptive_avg_pool_node}{Adaptive\+Avg\+Pool\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_aa683ed73b8658cc9d3d570003fce8e9d}\label{classglow_1_1_adaptive_avg_pool_node_aa683ed73b8658cc9d3d570003fce8e9d}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a145d6507d1e15583f28c369e21f94749}\label{classglow_1_1_adaptive_avg_pool_node_a145d6507d1e15583f28c369e21f94749}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_ad563046c25ac0d0b63549d61b8b082ae}\label{classglow_1_1_adaptive_avg_pool_node_ad563046c25ac0d0b63549d61b8b082ae}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a9d25aa40fd8b4c3b51b1a999c8c83ab4}\label{classglow_1_1_adaptive_avg_pool_node_a9d25aa40fd8b4c3b51b1a999c8c83ab4}} 
+bool {\bfseries verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a78163c45ecc424988ff66a4ba02c6fb8}\label{classglow_1_1_adaptive_avg_pool_node_a78163c45ecc424988ff66a4ba02c6fb8}} 
+\hyperlink{classglow_1_1_adaptive_avg_pool_grad_node}{Adaptive\+Avg\+Pool\+Grad\+Node} $\ast$ {\bfseries get\+Grad} (\hyperlink{classglow_1_1_graph_grad_mapper}{Graph\+Grad\+Mapper} \&builder)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_adaptive_avg_pool_node_a9945cc08a10480233dfb9f381c093437}\label{classglow_1_1_adaptive_avg_pool_node_a9945cc08a10480233dfb9f381c093437}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Performs an Adaptive Average Pool operation on the Input given. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

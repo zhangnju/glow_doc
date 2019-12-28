@@ -1,0 +1,71 @@
+\hypertarget{classglow_1_1_function_pass_config}{}\section{glow\+:\+:Function\+Pass\+Config Class Reference}
+\label{classglow_1_1_function_pass_config}\index{glow\+::\+Function\+Pass\+Config@{glow\+::\+Function\+Pass\+Config}}
+
+
+{\ttfamily \#include $<$Pipeline.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_config_a1bd37df36d6f87e05c0a38bea7c3b6d7}\label{classglow_1_1_function_pass_config_a1bd37df36d6f87e05c0a38bea7c3b6d7}} 
+{\bfseries Function\+Pass\+Config} (\hyperlink{namespaceglow_a3157945b92abd634c79fa9d4724472eb}{Function\+Pass\+ID} ID, \hyperlink{namespaceglow_a56845b9c860fa69d01d2084361d7c1f0}{Convergence\+Mode} convergence\+Mode=\hyperlink{namespaceglow_a56845b9c860fa69d01d2084361d7c1f0accd4cef52fe08da3eeac0e4396a2aca2}{Convergence\+Mode\+::\+One\+Pass}, const std\+::set$<$ \hyperlink{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014a}{Compilation\+Mode} $>$ \&enabled\+Comp\+Modes=\{\hyperlink{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014aa442b0d534b230e2f2c9b562974652f79}{Compilation\+Mode\+::\+Infer}, Compilation\+Mode\+::\+Train\}, \hyperlink{namespaceglow_a6b85539f22b3e3292adf202254f0da1e}{D\+C\+E\+Required\+Mode} dce\+Mode=\hyperlink{namespaceglow_a6b85539f22b3e3292adf202254f0da1eaff7ad7af6ac42e36a5d538e74cde072d}{D\+C\+E\+Required\+Mode\+::\+Before\+Pass})
+\item 
+\hyperlink{namespaceglow_a3157945b92abd634c79fa9d4724472eb}{Function\+Pass\+ID} \hyperlink{classglow_1_1_function_pass_config_aca17ec5444201ab7fa0fa0aa535168a0}{get\+Function\+Pass\+ID} () const
+\item 
+\hyperlink{namespaceglow_a56845b9c860fa69d01d2084361d7c1f0}{Convergence\+Mode} \hyperlink{classglow_1_1_function_pass_config_a3dbd1251a57ecf108bd6157a34743e6d}{get\+Convergence\+Mode} () const
+\item 
+\hyperlink{namespaceglow_a6b85539f22b3e3292adf202254f0da1e}{D\+C\+E\+Required\+Mode} \hyperlink{classglow_1_1_function_pass_config_a1f6b2b49e58dc51bc1bc66246a6bb270}{get\+D\+C\+E\+Required\+Mode} () const
+\item 
+bool \hyperlink{classglow_1_1_function_pass_config_a9caada9d436194e152e8d33404a1aa08}{is\+Enabled\+For\+Compilation\+Mode} (\hyperlink{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014a}{Compilation\+Mode} mode) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_config_ae2320b7777ea122b3abaec25c8ed2bc5}\label{classglow_1_1_function_pass_config_ae2320b7777ea122b3abaec25c8ed2bc5}} 
+void \hyperlink{classglow_1_1_function_pass_config_ae2320b7777ea122b3abaec25c8ed2bc5}{dump} (llvm\+::raw\+\_\+ostream \&os=llvm\+::outs()) const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of this config to {\ttfamily os}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Specifies a configuration for running a \hyperlink{classglow_1_1_function_pass}{Function\+Pass} when used in a \hyperlink{classglow_1_1_function_pass_pipeline}{Function\+Pass\+Pipeline}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_function_pass_config_a3dbd1251a57ecf108bd6157a34743e6d}\label{classglow_1_1_function_pass_config_a3dbd1251a57ecf108bd6157a34743e6d}} 
+\index{glow\+::\+Function\+Pass\+Config@{glow\+::\+Function\+Pass\+Config}!get\+Convergence\+Mode@{get\+Convergence\+Mode}}
+\index{get\+Convergence\+Mode@{get\+Convergence\+Mode}!glow\+::\+Function\+Pass\+Config@{glow\+::\+Function\+Pass\+Config}}
+\subsubsection{\texorpdfstring{get\+Convergence\+Mode()}{getConvergenceMode()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_a56845b9c860fa69d01d2084361d7c1f0}{Convergence\+Mode} glow\+::\+Function\+Pass\+Config\+::get\+Convergence\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the Convergence\+Mode of this config. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_pass_config_a1f6b2b49e58dc51bc1bc66246a6bb270}\label{classglow_1_1_function_pass_config_a1f6b2b49e58dc51bc1bc66246a6bb270}} 
+\index{glow\+::\+Function\+Pass\+Config@{glow\+::\+Function\+Pass\+Config}!get\+D\+C\+E\+Required\+Mode@{get\+D\+C\+E\+Required\+Mode}}
+\index{get\+D\+C\+E\+Required\+Mode@{get\+D\+C\+E\+Required\+Mode}!glow\+::\+Function\+Pass\+Config@{glow\+::\+Function\+Pass\+Config}}
+\subsubsection{\texorpdfstring{get\+D\+C\+E\+Required\+Mode()}{getDCERequiredMode()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_a6b85539f22b3e3292adf202254f0da1e}{D\+C\+E\+Required\+Mode} glow\+::\+Function\+Pass\+Config\+::get\+D\+C\+E\+Required\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the D\+C\+E\+Required\+Mode of this config. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_pass_config_aca17ec5444201ab7fa0fa0aa535168a0}\label{classglow_1_1_function_pass_config_aca17ec5444201ab7fa0fa0aa535168a0}} 
+\index{glow\+::\+Function\+Pass\+Config@{glow\+::\+Function\+Pass\+Config}!get\+Function\+Pass\+ID@{get\+Function\+Pass\+ID}}
+\index{get\+Function\+Pass\+ID@{get\+Function\+Pass\+ID}!glow\+::\+Function\+Pass\+Config@{glow\+::\+Function\+Pass\+Config}}
+\subsubsection{\texorpdfstring{get\+Function\+Pass\+I\+D()}{getFunctionPassID()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_a3157945b92abd634c79fa9d4724472eb}{Function\+Pass\+ID} glow\+::\+Function\+Pass\+Config\+::get\+Function\+Pass\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the Function\+Pass\+ID of this config. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_function_pass_config_a9caada9d436194e152e8d33404a1aa08}\label{classglow_1_1_function_pass_config_a9caada9d436194e152e8d33404a1aa08}} 
+\index{glow\+::\+Function\+Pass\+Config@{glow\+::\+Function\+Pass\+Config}!is\+Enabled\+For\+Compilation\+Mode@{is\+Enabled\+For\+Compilation\+Mode}}
+\index{is\+Enabled\+For\+Compilation\+Mode@{is\+Enabled\+For\+Compilation\+Mode}!glow\+::\+Function\+Pass\+Config@{glow\+::\+Function\+Pass\+Config}}
+\subsubsection{\texorpdfstring{is\+Enabled\+For\+Compilation\+Mode()}{isEnabledForCompilationMode()}}
+{\footnotesize\ttfamily bool glow\+::\+Function\+Pass\+Config\+::is\+Enabled\+For\+Compilation\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014a}{Compilation\+Mode}}]{mode }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+whether {\ttfamily mode} is an enabled mode for this config. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Optimizer/\+Graph\+Optimizer\+Pipeline/Pipeline.\+h\item 
+lib/\+Optimizer/\+Graph\+Optimizer\+Pipeline/Pipeline.\+cpp\end{DoxyCompactItemize}

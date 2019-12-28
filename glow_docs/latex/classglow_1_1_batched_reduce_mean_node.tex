@@ -1,0 +1,105 @@
+\hypertarget{classglow_1_1_batched_reduce_mean_node}{}\section{glow\+:\+:Batched\+Reduce\+Mean\+Node Class Reference}
+\label{classglow_1_1_batched_reduce_mean_node}\index{glow\+::\+Batched\+Reduce\+Mean\+Node@{glow\+::\+Batched\+Reduce\+Mean\+Node}}
+
+
+Performs Average Mean operation on the Input given Axes.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Batched\+Reduce\+Mean\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_batched_reduce_mean_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_ab2923aadf119ec1526e43549a2e45abb}\label{classglow_1_1_batched_reduce_mean_node_ab2923aadf119ec1526e43549a2e45abb}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Batch\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a0028f9c4274c152f8262134b63382a48}\label{classglow_1_1_batched_reduce_mean_node_a0028f9c4274c152f8262134b63382a48}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a9edb19e8aed83cfc6bc850da0181076f}\label{classglow_1_1_batched_reduce_mean_node_a9edb19e8aed83cfc6bc850da0181076f}} 
+{\bfseries Batched\+Reduce\+Mean\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Batch, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Axes)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_ab06bd2ddf6f036754a5b137753e17924}\label{classglow_1_1_batched_reduce_mean_node_ab06bd2ddf6f036754a5b137753e17924}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Batch} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_aefce64a4e1f07e88e746cdf39a0617b5}\label{classglow_1_1_batched_reduce_mean_node_aefce64a4e1f07e88e746cdf39a0617b5}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_ab0bda42b0ec8d6c449d83256b80628a1}\label{classglow_1_1_batched_reduce_mean_node_ab0bda42b0ec8d6c449d83256b80628a1}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a9187dd6606f69167a9c740cd660b2ad9}\label{classglow_1_1_batched_reduce_mean_node_a9187dd6606f69167a9c740cd660b2ad9}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Axes} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a533074770dc5ee9c4944c00f494fb477}\label{classglow_1_1_batched_reduce_mean_node_a533074770dc5ee9c4944c00f494fb477}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a1601f2d20eb60e7e39fb961f5ef0565c}\label{classglow_1_1_batched_reduce_mean_node_a1601f2d20eb60e7e39fb961f5ef0565c}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a023883b3e90c5940c1ee2c1195e9b281}\label{classglow_1_1_batched_reduce_mean_node_a023883b3e90c5940c1ee2c1195e9b281}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_ac739fab130270528208fbff9d84c388a}\label{classglow_1_1_batched_reduce_mean_node_ac739fab130270528208fbff9d84c388a}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_ad5c16ca97f74011f60c490caf6135090}\label{classglow_1_1_batched_reduce_mean_node_ad5c16ca97f74011f60c490caf6135090}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a13de882ab7d97f17ddb7ab38bf43f85f}\label{classglow_1_1_batched_reduce_mean_node_a13de882ab7d97f17ddb7ab38bf43f85f}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a8d2ddd4b4463c17cbe53eced3feb993b}\label{classglow_1_1_batched_reduce_mean_node_a8d2ddd4b4463c17cbe53eced3feb993b}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_ac65f19f60460a5a880d5237f33acf491}\label{classglow_1_1_batched_reduce_mean_node_ac65f19f60460a5a880d5237f33acf491}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a696b118ddf0c8530b8fe5cd33b54acac}\label{classglow_1_1_batched_reduce_mean_node_a696b118ddf0c8530b8fe5cd33b54acac}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a298c6b55671852563807cd3ed81537e5}\label{classglow_1_1_batched_reduce_mean_node_a298c6b55671852563807cd3ed81537e5}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_batched_reduce_mean_node}{Batched\+Reduce\+Mean\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a290df2838f4c21e11d03dadc21a4e412}\label{classglow_1_1_batched_reduce_mean_node_a290df2838f4c21e11d03dadc21a4e412}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a986c5fcf13094ba2650a2ac5b453ed38}\label{classglow_1_1_batched_reduce_mean_node_a986c5fcf13094ba2650a2ac5b453ed38}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a9a985f46829bf598760f6585d1d6dd7d}\label{classglow_1_1_batched_reduce_mean_node_a9a985f46829bf598760f6585d1d6dd7d}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_a5dd3d8bd416207efdec404714a10d34e}\label{classglow_1_1_batched_reduce_mean_node_a5dd3d8bd416207efdec404714a10d34e}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_reduce_mean_node_ae9b3eeb581bdb56ef21748292435a30f}\label{classglow_1_1_batched_reduce_mean_node_ae9b3eeb581bdb56ef21748292435a30f}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Performs Average Mean operation on the Input given Axes. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,115 @@
+\hypertarget{classglow_1_1_quantization_profile_node}{}\section{glow\+:\+:Quantization\+Profile\+Node Class Reference}
+\label{classglow_1_1_quantization_profile_node}\index{glow\+::\+Quantization\+Profile\+Node@{glow\+::\+Quantization\+Profile\+Node}}
+
+
+Generate profile (distribution of values) of the Input tensor. This data is used for quantization of the tensor later on. Profiled\+Node\+Name contains the name of the node which is profiled by the Quantization\+Profile node. Profiled\+Node\+Name is helpful as lowering might transform the original graph. Profiled\+Output\+Number contains the position of the node\textquotesingle{}s output which gets profiled.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Quantization\+Profile\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_quantization_profile_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a14f730de956c2aa7db83a5402e11e694}\label{classglow_1_1_quantization_profile_node_a14f730de956c2aa7db83a5402e11e694}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0, 
+{\bfseries Histogram\+Idx} = 1, 
+{\bfseries Computation\+Info\+Idx} = 2
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_ad40161e401ab11d4c918b3f1ec199add}\label{classglow_1_1_quantization_profile_node_ad40161e401ab11d4c918b3f1ec199add}} 
+enum {\bfseries Result\+Indices} 
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a70e41337e08c2c618fe4ed28989b0e3d}\label{classglow_1_1_quantization_profile_node_a70e41337e08c2c618fe4ed28989b0e3d}} 
+{\bfseries Quantization\+Profile\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{structglow_1_1_node_value}{Node\+Value} Histogram, \hyperlink{structglow_1_1_node_value}{Node\+Value} Computation\+Info, std\+::string Profiled\+Node\+Name, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Profiled\+Output\+Number)
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a2f7c67f5a90243f61034ace3f5a549e8}\label{classglow_1_1_quantization_profile_node_a2f7c67f5a90243f61034ace3f5a549e8}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_af91fc411a1d60b39dbac1bcc6131cf32}\label{classglow_1_1_quantization_profile_node_af91fc411a1d60b39dbac1bcc6131cf32}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Histogram} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a4dcb7cb1d5523ebcb2ac4686ee002d5d}\label{classglow_1_1_quantization_profile_node_a4dcb7cb1d5523ebcb2ac4686ee002d5d}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Computation\+Info} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a01be1424d28ada4db9f52e2dc03dc664}\label{classglow_1_1_quantization_profile_node_a01be1424d28ada4db9f52e2dc03dc664}} 
+std\+::string {\bfseries get\+Profiled\+Node\+Name} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a1571fdd51151587bfa749a9666721fce}\label{classglow_1_1_quantization_profile_node_a1571fdd51151587bfa749a9666721fce}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Profiled\+Output\+Number} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_af8a885f356a4d03cf0c7b1e37364ed1e}\label{classglow_1_1_quantization_profile_node_af8a885f356a4d03cf0c7b1e37364ed1e}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_ae073b86d543fbf7714655d8bc3a6c8d9}\label{classglow_1_1_quantization_profile_node_ae073b86d543fbf7714655d8bc3a6c8d9}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_adb049a6bd91729d0870bad94bda421b8}\label{classglow_1_1_quantization_profile_node_adb049a6bd91729d0870bad94bda421b8}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a55a041a6a422a8de235e6d438c195b70}\label{classglow_1_1_quantization_profile_node_a55a041a6a422a8de235e6d438c195b70}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_aba5bce7dd503ec977e8e66a5e4418594}\label{classglow_1_1_quantization_profile_node_aba5bce7dd503ec977e8e66a5e4418594}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a9c4721c9d897d711a1c653377bca04da}\label{classglow_1_1_quantization_profile_node_a9c4721c9d897d711a1c653377bca04da}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a3aeb81683fd6601da907963172347ade}\label{classglow_1_1_quantization_profile_node_a3aeb81683fd6601da907963172347ade}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a0ce0f185f22e05601d727ee1011e76d4}\label{classglow_1_1_quantization_profile_node_a0ce0f185f22e05601d727ee1011e76d4}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a364a0bba8dc1ed403e2260c9483b6dbf}\label{classglow_1_1_quantization_profile_node_a364a0bba8dc1ed403e2260c9483b6dbf}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_af979ace7b5c8678964c876a43bfb8e26}\label{classglow_1_1_quantization_profile_node_af979ace7b5c8678964c876a43bfb8e26}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_quantization_profile_node}{Quantization\+Profile\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a75eb84218fde8863162b19a104c17c55}\label{classglow_1_1_quantization_profile_node_a75eb84218fde8863162b19a104c17c55}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_af00a3afa27676a1304604a009855cde3}\label{classglow_1_1_quantization_profile_node_af00a3afa27676a1304604a009855cde3}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_aeb0af99e85fbda5e7cf1155b0c1d5eeb}\label{classglow_1_1_quantization_profile_node_aeb0af99e85fbda5e7cf1155b0c1d5eeb}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a91b0e6257411fa7692cd7a5a2a8a8dd5}\label{classglow_1_1_quantization_profile_node_a91b0e6257411fa7692cd7a5a2a8a8dd5}} 
+bool {\bfseries verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a0ebdbaff344aae7379511b3d1abd8ca1}\label{classglow_1_1_quantization_profile_node_a0ebdbaff344aae7379511b3d1abd8ca1}} 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ {\bfseries get\+Histogram\+Placeholder} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a3175bd4d2600373b353b7822a76cebc3}\label{classglow_1_1_quantization_profile_node_a3175bd4d2600373b353b7822a76cebc3}} 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ {\bfseries get\+Computation\+Info\+Placeholder} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantization_profile_node_a46d0abfc7ddff300f0bba9b62d7ee7e7}\label{classglow_1_1_quantization_profile_node_a46d0abfc7ddff300f0bba9b62d7ee7e7}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Generate profile (distribution of values) of the Input tensor. This data is used for quantization of the tensor later on. Profiled\+Node\+Name contains the name of the node which is profiled by the Quantization\+Profile node. Profiled\+Node\+Name is helpful as lowering might transform the original graph. Profiled\+Output\+Number contains the position of the node\textquotesingle{}s output which gets profiled. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

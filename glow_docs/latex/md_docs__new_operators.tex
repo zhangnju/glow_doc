@@ -1,0 +1,40 @@
+{\itshape Note\+: It\textquotesingle{}s best to avoid implementing new Glow IR nodes and instructions. If support for a new operator is needed, it\textquotesingle{}s best to first check to see if this operator can be implemented using an existing glow IR node or nodes. For example F\+C\+Transposed can be implemented using a regular FC node. If this is the case then the operator can be implemented by instantiating existing glow IR nodes in the loader or by simply creating a new node creation method in {\ttfamily Graph/\+Graph.\+cpp} which would create the sequence of operators that implements the new operator. Only in the event that this is not possible should new Glow IR nodes/instructions be created.}
+
+\begin{quote}
+Example PR\+: \href{https://github.com/pytorch/glow/pull/2334}{\tt https\+://github.\+com/pytorch/glow/pull/2334} \end{quote}
+
+
+\subsubsection*{Implementation}
+
+\paragraph*{High level IR}
+
+
+\begin{DoxyItemize}
+\item Create a new Glow high level IR node in {\ttfamily Class\+Gen/\+Node\+Gen.\+cpp}. Run {\ttfamily ninja all} to generate the node. In the build directory, check {\ttfamily \hyperlink{_auto_gen_nodes_8h_source}{glow/\+Auto\+Gen\+Nodes.\+h}} to ensure the node has been generated.
+\item Implement the {\ttfamily verify()} method for the new node in {\ttfamily Graph/\+Nodes.\+cpp}.
+\item Implement a node creation method in {\ttfamily Graph/\+Graph.\+cpp}.
+\item Implement logic to load model that contains the operator in {\ttfamily Importer/\+Caffe2\+Model\+Loader.\+cpp} or {\ttfamily Importer/\+O\+N\+N\+X\+Model\+Loader.\+cpp} depending on which type of model the operator comes from. Add the operator to {\ttfamily \hyperlink{_common_operator_loader_8h_source}{Importer/\+Common\+Operator\+Loader.\+h}} instead if the loading logic can be shared between Caffe2 and O\+N\+NX. Add as much validation logic as possible here in the loader for the operator because it\textquotesingle{}s crucial to catch errors at this stage. Once the operator is loaded, it is assumed that Glow will be able to successfully run the operator so any issues must be caught here. \paragraph*{Low level IR}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Create a new Glow low level IR instruction in {\ttfamily Class\+Gen/\+Instr\+Gen.\+cpp}.
+\item If a custom translation from high level IR node to low level IR instruction is necessary then implement a new case in {\ttfamily I\+R/\+I\+R\+Gen} otherwise just use {\ttfamily auto\+I\+R\+Gen(name)} in the definition of the new IR instruction in {\ttfamily Class\+Gen/\+Instr\+Gen.\+cpp}. {\ttfamily auto\+I\+R\+Gen(name)} will create code to automatically generate IR at compile time from the high level IR node with the name {\ttfamily name}. If the high level IR node as the same name as the low level instruction then the {\ttfamily name} parameter can be omitted.
+\item If the new node can be natively supported on some backends but not all backends then consider implementing a lowering in {\ttfamily Optimizer/\+Lower.\+cpp} to lower the high level IR node to other high level IR nodes instead of generating the low level IR instruction for the backends which cannot natively implement the new instruction.
+\item Implement the interpreter implementation of the instruction in {\ttfamily Interpreter/\+Interpreter\+Nodes.\+cpp}. An implementation for interpreter backend is required for all instructions but implementations for other backends are encouraged as well. For example, it\textquotesingle{}s strongly encouraged to also create a C\+PU implementation for each instruction because of the significantly greater performance of the C\+PU backend over the interpreter.
+\end{DoxyItemize}
+
+\subsubsection*{Testing}
+
+
+\begin{DoxyItemize}
+\item Test the operator implementation by writing unit tests in {\ttfamily unittests/\+Operator\+Test.\+cpp}.
+\item Test the operator importing logic by creating a new model in {\ttfamily tests/models/caffe2\+Models} or {\ttfamily tests/models/onnx2\+Models} directory then write unit tests in {\ttfamily unittests/\+Caffe2\+Importer\+Test.\+cpp} or {\ttfamily tests/unittests/\+Onnx\+Importer\+Test.\+cpp} using that model.
+\end{DoxyItemize}
+
+\subsubsection*{PR}
+
+
+\begin{DoxyItemize}
+\item ../\+P\+U\+L\+L\+\_\+\+R\+E\+Q\+U\+E\+ST.md \char`\"{}\+Create a pull request\char`\"{} and prefix the title with \char`\"{}\mbox{[}\+New operator\mbox{]}\char`\"{}. 
+\end{DoxyItemize}

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['habanabackend',['HabanaBackend',['../classglow_1_1_habana_backend.html#af98b56680c9b726f60320fc24080237c',1,'glow::HabanaBackend']]],
+  ['habanadevicemanager',['HabanaDeviceManager',['../classglow_1_1runtime_1_1_habana_device_manager.html#af813436dab0903d1a60a0ffa8b425bc5',1,'glow::runtime::HabanaDeviceManager']]],
+  ['habanafunction',['HabanaFunction',['../classglow_1_1_habana_function.html#a669c7275a6defd8349ea51890a462ec4',1,'glow::HabanaFunction']]],
+  ['habanaiobuffer',['HabanaIOBuffer',['../classglow_1_1_habana_i_o_buffer.html#aa0d5cd030331fa31139d95aaa0f6e1e6',1,'glow::HabanaIOBuffer::HabanaIOBuffer(uint32_t deviceId, uint8_t *buffer, const std::unordered_map&lt; const Placeholder *, off_t &gt; &amp;offsets)'],['../classglow_1_1_habana_i_o_buffer.html#aa6ee6c9f360c0e18b7efef71328a5d39',1,'glow::HabanaIOBuffer::HabanaIOBuffer(const HabanaIOBuffer &amp;src)=delete']]],
+  ['habanaiobufferpool',['HabanaIOBufferPool',['../classglow_1_1_habana_i_o_buffer_pool.html#a0cfe9540dbf66fca5c0b7a0c5b77816a',1,'glow::HabanaIOBufferPool::HabanaIOBufferPool(uint32_t deviceId, const PlaceholderList &amp;inputs, const PlaceholderList &amp;outputs, unsigned numBuffers=kDefaultNumBuffers)'],['../classglow_1_1_habana_i_o_buffer_pool.html#afab750ba3fee5713c74add8f58e500b5',1,'glow::HabanaIOBufferPool::HabanaIOBufferPool(const HabanaIOBufferPool &amp;src)=delete']]],
+  ['habanawaithandle',['HabanaWaitHandle',['../classglow_1_1_habana_wait_handle.html#a2eab78071cddfb6fcc45568e17218025',1,'glow::HabanaWaitHandle::HabanaWaitHandle()'],['../classglow_1_1_habana_wait_handle.html#ad793416bd47a5fcc6f1fa477b60ca43a',1,'glow::HabanaWaitHandle::HabanaWaitHandle(HabanaWaitHandle &amp;&amp;)'],['../classglow_1_1_habana_wait_handle.html#af2353bd0a1f814845bbb9a216a46e14f',1,'glow::HabanaWaitHandle::HabanaWaitHandle(const HabanaWaitHandle &amp;)=delete']]],
+  ['handle',['Handle',['../classglow_1_1_handle.html#a9c2df11f63a6d74d56f9630ab0d5b213',1,'glow::Handle']]],
+  ['hasaddress',['hasAddress',['../classglow_1_1_memory_allocator.html#ab16a406e4055fc4ceb6ad9b006cefc5d',1,'glow::MemoryAllocator']]],
+  ['hasconstantbyname',['hasConstantByName',['../classglow_1_1_protobuf_loader.html#abcb6af3498f15a1d84bc8800dda2a8e2',1,'glow::ProtobufLoader']]],
+  ['hasfunction',['hasFunction',['../classglow_1_1_module.html#aedef87903f635a844d4d45a2b43aaf03',1,'glow::Module']]],
+  ['hasgradient',['hasGradient',['../classglow_1_1_graph_grad_mapper.html#a65988a9626ac25e16111a35c50b7d65e',1,'glow::GraphGradMapper']]],
+  ['hashandle',['hasHandle',['../classglow_1_1_memory_allocator.html#a8148e0d8a4e2e2db2d3a01022a8ceaad',1,'glow::MemoryAllocator']]],
+  ['hasmultidirectionalbroadcast',['hasMultidirectionalBroadcast',['../classglow_1_1_common_operator_loader.html#a4e079eed244e7047b09040ca209d15e0',1,'glow::CommonOperatorLoader']]],
+  ['hasname',['hasName',['../classglow_1_1_named.html#aafdd13e8cd2d61adbbc9cb6fedd0acd4',1,'glow::Named']]],
+  ['hasnodebyname',['hasNodeByName',['../classglow_1_1_protobuf_loader.html#a50508e4cbe83b3cafd7d7319199c0fb7',1,'glow::ProtobufLoader']]],
+  ['hasoneuse',['hasOneUse',['../structglow_1_1_node_value.html#a66d673c39f2eb82ea606764b51ba6f99',1,'glow::NodeValue::hasOneUse()'],['../classglow_1_1_use_def.html#aff3381f7085f27c6053426920b42147c',1,'glow::UseDef::hasOneUse()']]],
+  ['haspredicate',['hasPredicate',['../classglow_1_1_node.html#a36202286cf4467a177d8e1844d9e9f0a',1,'glow::Node::hasPredicate()'],['../classglow_1_1_instruction.html#a28f880bf3d4d9fdd7339b90de85cc0ad',1,'glow::Instruction::hasPredicate()']]],
+  ['hasuser',['hasUser',['../classglow_1_1_use_def.html#a9b0a173f02a51a77ce3e9e342ae416c9',1,'glow::UseDef']]],
+  ['hasusers',['hasUsers',['../classglow_1_1_use_def.html#a57e259466504c1b589ff4f84dc5bcbb9',1,'glow::UseDef']]],
+  ['heterogeneouspartition',['heterogeneousPartition',['../classglow_1_1_partitioner.html#adb733cf9c471edeb7cac89224c403368',1,'glow::Partitioner']]],
+  ['hostmanager',['HostManager',['../classglow_1_1runtime_1_1_host_manager.html#ab6c8d08c393bd511544b59b66c173b58',1,'glow::runtime::HostManager::HostManager()=default'],['../classglow_1_1runtime_1_1_host_manager.html#ad30a764e2aa235864bda22cb417481d3',1,'glow::runtime::HostManager::HostManager(const HostConfig &amp;hostConfig)'],['../classglow_1_1runtime_1_1_host_manager.html#a993540bff98f21c7f7a63a7b012b0697',1,'glow::runtime::HostManager::HostManager(std::vector&lt; std::unique_ptr&lt; DeviceConfig &gt;&gt; deviceConfigs)'],['../classglow_1_1runtime_1_1_host_manager.html#a89b0b6ca1d8a1daa7c97b48cf622f82a',1,'glow::runtime::HostManager::HostManager(std::vector&lt; std::unique_ptr&lt; DeviceConfig &gt;&gt; deviceConfigs, const HostConfig &amp;hostConfig)']]],
+  ['hostmanagerbackend',['HostManagerBackend',['../classglow_1_1onnxifi_1_1_host_manager_backend.html#a1e685c23b29ab980ca2636c4b828b854',1,'glow::onnxifi::HostManagerBackend']]]
+];

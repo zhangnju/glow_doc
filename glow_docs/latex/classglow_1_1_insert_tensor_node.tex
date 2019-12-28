@@ -1,0 +1,115 @@
+\hypertarget{classglow_1_1_insert_tensor_node}{}\section{glow\+:\+:Insert\+Tensor\+Node Class Reference}
+\label{classglow_1_1_insert_tensor_node}\index{glow\+::\+Insert\+Tensor\+Node@{glow\+::\+Insert\+Tensor\+Node}}
+
+
+Insert tensor Small into tensor Big given indices Start. Small is inserted Count times along Axis. The resulting \hyperlink{classglow_1_1_tensor}{Tensor} will have the same type as the input Big tensor.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Insert\+Tensor\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_insert_tensor_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a53f919d8f73c88c52b643f260c9dd222}\label{classglow_1_1_insert_tensor_node_a53f919d8f73c88c52b643f260c9dd222}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Big\+Idx} = 0, 
+{\bfseries Small\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_abab9ae46ea6593718fe6291a998072ce}\label{classglow_1_1_insert_tensor_node_abab9ae46ea6593718fe6291a998072ce}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a97e7060373c90e0c61076bb80907ecac}\label{classglow_1_1_insert_tensor_node_a97e7060373c90e0c61076bb80907ecac}} 
+{\bfseries Insert\+Tensor\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Big, \hyperlink{structglow_1_1_node_value}{Node\+Value} Small, std\+::vector$<$ size\+\_\+t $>$ Start, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Count, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Axis)
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a869f9fcfd51a9621e3bf342953abf25d}\label{classglow_1_1_insert_tensor_node_a869f9fcfd51a9621e3bf342953abf25d}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Big} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a2a462b54fce9dd45cef80a8577696bea}\label{classglow_1_1_insert_tensor_node_a2a462b54fce9dd45cef80a8577696bea}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Small} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a8c01a128ab09e83cdc7e6b0d56c85c8e}\label{classglow_1_1_insert_tensor_node_a8c01a128ab09e83cdc7e6b0d56c85c8e}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_aacc2348bf9c627ae4bba6d0744ca7e91}\label{classglow_1_1_insert_tensor_node_aacc2348bf9c627ae4bba6d0744ca7e91}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a33fe9cc0ef4a565218634bac0bb66951}\label{classglow_1_1_insert_tensor_node_a33fe9cc0ef4a565218634bac0bb66951}} 
+llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ {\bfseries get\+Start} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_ac3b62e48b3057217e6e83cd3a6d52fb5}\label{classglow_1_1_insert_tensor_node_ac3b62e48b3057217e6e83cd3a6d52fb5}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Count} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a17de8a67d77eb5d852aa0c412e2f2a64}\label{classglow_1_1_insert_tensor_node_a17de8a67d77eb5d852aa0c412e2f2a64}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Axis} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a8fb9cbdf067692c1c5271ecc60901f87}\label{classglow_1_1_insert_tensor_node_a8fb9cbdf067692c1c5271ecc60901f87}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a2d2b26679e0a6c48667beb55bf7b19e5}\label{classglow_1_1_insert_tensor_node_a2d2b26679e0a6c48667beb55bf7b19e5}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a6521586951d996656da4038233e26647}\label{classglow_1_1_insert_tensor_node_a6521586951d996656da4038233e26647}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a580877786947e27a57629ac5ea515ae7}\label{classglow_1_1_insert_tensor_node_a580877786947e27a57629ac5ea515ae7}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a733be853bde24c3a8a21deafe478b456}\label{classglow_1_1_insert_tensor_node_a733be853bde24c3a8a21deafe478b456}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_af950e9239a0cd4425fbedd63f55abbb1}\label{classglow_1_1_insert_tensor_node_af950e9239a0cd4425fbedd63f55abbb1}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a86d371b98dc88f8c1857505059899643}\label{classglow_1_1_insert_tensor_node_a86d371b98dc88f8c1857505059899643}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a14dc111605f8492d051e3f100ccc2a57}\label{classglow_1_1_insert_tensor_node_a14dc111605f8492d051e3f100ccc2a57}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_ad53fa658bcce6d55a6d964a7f6cb558e}\label{classglow_1_1_insert_tensor_node_ad53fa658bcce6d55a6d964a7f6cb558e}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a51e13397c5abe16f850483d7a2dafa69}\label{classglow_1_1_insert_tensor_node_a51e13397c5abe16f850483d7a2dafa69}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_insert_tensor_node}{Insert\+Tensor\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_aceddce0cf8b611ba075a1fd47e2446e6}\label{classglow_1_1_insert_tensor_node_aceddce0cf8b611ba075a1fd47e2446e6}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a834a0c99767d7c1eff1ecf4d8beb2680}\label{classglow_1_1_insert_tensor_node_a834a0c99767d7c1eff1ecf4d8beb2680}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_acf06e812e3624ec4940d31e733187e12}\label{classglow_1_1_insert_tensor_node_acf06e812e3624ec4940d31e733187e12}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a79c003dd3c585d69daaa56f766a37828}\label{classglow_1_1_insert_tensor_node_a79c003dd3c585d69daaa56f766a37828}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_insert_tensor_node_a5a32a81845c75c9fa2fc5f70640586a6}\label{classglow_1_1_insert_tensor_node_a5a32a81845c75c9fa2fc5f70640586a6}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Insert tensor Small into tensor Big given indices Start. Small is inserted Count times along Axis. The resulting \hyperlink{classglow_1_1_tensor}{Tensor} will have the same type as the input Big tensor. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

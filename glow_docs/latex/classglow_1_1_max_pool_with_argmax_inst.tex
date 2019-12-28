@@ -1,0 +1,60 @@
+\hypertarget{classglow_1_1_max_pool_with_argmax_inst}{}\section{glow\+:\+:Max\+Pool\+With\+Argmax\+Inst Class Reference}
+\label{classglow_1_1_max_pool_with_argmax_inst}\index{glow\+::\+Max\+Pool\+With\+Argmax\+Inst@{glow\+::\+Max\+Pool\+With\+Argmax\+Inst}}
+Inheritance diagram for glow\+:\+:Max\+Pool\+With\+Argmax\+Inst\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.991111cm]{classglow_1_1_max_pool_with_argmax_inst}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_a7836b28c3547ebfaa1e4cead3b42f523}\label{classglow_1_1_max_pool_with_argmax_inst_a7836b28c3547ebfaa1e4cead3b42f523}} 
+{\bfseries Max\+Pool\+With\+Argmax\+Inst} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$Dest, \hyperlink{classglow_1_1_value}{Value} $\ast$Src, \hyperlink{classglow_1_1_value}{Value} $\ast$Argmax, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Kernels, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Strides, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Layout)
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_a193a75b0a4834728eafedb39c58c6052}\label{classglow_1_1_max_pool_with_argmax_inst_a193a75b0a4834728eafedb39c58c6052}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Dest} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_a05415c903a0b3112a816143e0eb15843}\label{classglow_1_1_max_pool_with_argmax_inst_a05415c903a0b3112a816143e0eb15843}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Src} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_ac4cff5d8eda2f88a2dd33e279c800d3e}\label{classglow_1_1_max_pool_with_argmax_inst_ac4cff5d8eda2f88a2dd33e279c800d3e}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Argmax} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_a56acdd6b4a238804290e5d9780fae92b}\label{classglow_1_1_max_pool_with_argmax_inst_a56acdd6b4a238804290e5d9780fae92b}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Kernels} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_afe975f73b3fe860d23156c80d83eba0d}\label{classglow_1_1_max_pool_with_argmax_inst_afe975f73b3fe860d23156c80d83eba0d}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Strides} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_a16983af5b36da7c5a4ba1036e459bbfb}\label{classglow_1_1_max_pool_with_argmax_inst_a16983af5b36da7c5a4ba1036e459bbfb}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Pads} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_a6f0784398dc5d641cc0145a7665f730f}\label{classglow_1_1_max_pool_with_argmax_inst_a6f0784398dc5d641cc0145a7665f730f}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Layout} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_a53580a413604f9000dd5210322782d5b}\label{classglow_1_1_max_pool_with_argmax_inst_a53580a413604f9000dd5210322782d5b}} 
+bool {\bfseries is\+Inplace\+Op} (unsigned dst\+Idx, unsigned src\+Idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_a5aba307f68dcc3154337eb63ddc5554f}\label{classglow_1_1_max_pool_with_argmax_inst_a5aba307f68dcc3154337eb63ddc5554f}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_a7a7129c501f1cf0602a6f881d3744644}\label{classglow_1_1_max_pool_with_argmax_inst_a7a7129c501f1cf0602a6f881d3744644}} 
+void {\bfseries dump} (llvm\+::raw\+\_\+ostream \&os) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_ad9f1596fe0e87a2e8187bfc9c3e5ac37}\label{classglow_1_1_max_pool_with_argmax_inst_ad9f1596fe0e87a2e8187bfc9c3e5ac37}} 
+void {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_with_argmax_inst_a448e0cd52211192131e418d03ca26e0e}\label{classglow_1_1_max_pool_with_argmax_inst_a448e0cd52211192131e418d03ca26e0e}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+h\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+cpp\end{DoxyCompactItemize}

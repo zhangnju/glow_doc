@@ -1,0 +1,198 @@
+\hypertarget{classglow_1_1_placeholder_bindings}{}\section{glow\+:\+:Placeholder\+Bindings Class Reference}
+\label{classglow_1_1_placeholder_bindings}\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+
+
+{\ttfamily \#include $<$Placeholder\+Bindings.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_ae0ff382e6d2719f72120f35909dd1862}\label{classglow_1_1_placeholder_bindings_ae0ff382e6d2719f72120f35909dd1862}} 
+using \hyperlink{classglow_1_1_placeholder_bindings_ae0ff382e6d2719f72120f35909dd1862}{Placeholder\+Map} = std\+::unordered\+\_\+map$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$, \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$ $>$
+\begin{DoxyCompactList}\small\item\em Maps placeholders to the tensors that back them. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_aeaa4cf5f6bc00b52420eefe8f15a4d7f}\label{classglow_1_1_placeholder_bindings_aeaa4cf5f6bc00b52420eefe8f15a4d7f}} 
+using \hyperlink{classglow_1_1_placeholder_bindings_aeaa4cf5f6bc00b52420eefe8f15a4d7f}{Placeholder\+Name\+Map} = std\+::unordered\+\_\+map$<$ std\+::string, \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$
+\begin{DoxyCompactList}\small\item\em Maps \hyperlink{classglow_1_1_placeholder}{Placeholder} names to Placeholders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_tensor}{Tensor} $\ast$ \hyperlink{classglow_1_1_placeholder_bindings_a98bdcb9a47a36f8dce6d0f2d86a0080c}{get} (\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$P) const
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ or null of the Placeholder is not}\par
+{\em \begin{DoxyReturn}{Returns}
+the \hyperlink{classglow_1_1_placeholder}{Placeholder} named found. 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a6aea74bf3119ead471f251110900d2d6}\label{classglow_1_1_placeholder_bindings_a6aea74bf3119ead471f251110900d2d6}} 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ {\bfseries get\+Placeholder\+By\+Name} (llvm\+::\+String\+Ref name) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a6232665aca76609836c22fbf7485c7ca}\label{classglow_1_1_placeholder_bindings_a6232665aca76609836c22fbf7485c7ca}} 
+void \hyperlink{classglow_1_1_placeholder_bindings_a6232665aca76609836c22fbf7485c7ca}{insert} (\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$P, \hyperlink{classglow_1_1_tensor}{Tensor} \&\&T)
+\begin{DoxyCompactList}\small\item\em Inserts the Placeholder-\/\+Tensor pair. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a53d62844619653f2e11ec1724fa8ee8f}\label{classglow_1_1_placeholder_bindings_a53d62844619653f2e11ec1724fa8ee8f}} 
+void \hyperlink{classglow_1_1_placeholder_bindings_a53d62844619653f2e11ec1724fa8ee8f}{insert} (\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$P, \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$T)
+\begin{DoxyCompactList}\small\item\em Inserts the Placeholder-\/\+Tensor pair. This takes ownership of the \hyperlink{classglow_1_1_tensor}{Tensor}. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_placeholder_bindings_a2c65bd5f6c7bb198e1432d6fc058b2e9}{copy\+To\+Target} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&dst)
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a55ac325bc3ca5743b42a0130b4a23bd3}\label{classglow_1_1_placeholder_bindings_a55ac325bc3ca5743b42a0130b4a23bd3}} 
+void \hyperlink{classglow_1_1_placeholder_bindings_a55ac325bc3ca5743b42a0130b4a23bd3}{copy\+Trainable\+Weights\+To} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&dst)
+\begin{DoxyCompactList}\small\item\em Transfer all trainable weights to target \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} {\ttfamily dst}. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_tensor}{Tensor} $\ast$ \hyperlink{classglow_1_1_placeholder_bindings_a25e8442dbf233cf922f866e4802c8d70}{allocate} (\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$P)
+\item 
+unsigned \hyperlink{classglow_1_1_placeholder_bindings_a9786fe1975e69d07a06c326ba8d7b730}{allocate} (const std\+::list$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$ \&lst)
+\item 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ \hyperlink{classglow_1_1_placeholder_bindings_a00ccce9fce94434ef6c3462a34fcef2d}{get\+First\+Unallocated} (const std\+::list$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$ \&lst) const
+\item 
+size\+\_\+t \hyperlink{classglow_1_1_placeholder_bindings_a8c344e5f81fbce432159f4e5c791bc85}{count} (\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$P) const
+\item 
+void \hyperlink{classglow_1_1_placeholder_bindings_a0cc0e5f3957e8372a34bf3de811e96bd}{clear} ()
+\item 
+void \hyperlink{classglow_1_1_placeholder_bindings_a48eb62785028290edafa91239f671ddb}{erase} (\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$P)
+\item 
+\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \hyperlink{classglow_1_1_placeholder_bindings_a9129910138390bf1a3254478500683ab}{clone} () const
+\item 
+const \hyperlink{classglow_1_1_placeholder_bindings_ae0ff382e6d2719f72120f35909dd1862}{Placeholder\+Map} \& \hyperlink{classglow_1_1_placeholder_bindings_a1652efb98579b145068c17ddcbb5bfb4}{pairs} () const
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1_placeholder_bindings_a685ce6158dca1118a743fb60ec9c7182}{get\+Data\+Size} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a53f875de6aa4fe8768d9027d60152bc5}\label{classglow_1_1_placeholder_bindings_a53f875de6aa4fe8768d9027d60152bc5}} 
+{\bfseries Placeholder\+Bindings} ()=default
+\item 
+\hyperlink{classglow_1_1_placeholder_bindings_a9d3fc7d15e95e583d24f8b1a66aff54f}{Placeholder\+Bindings} (llvm\+::\+Array\+Ref$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$ placeholders, llvm\+::\+Array\+Ref$<$ \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$$>$ inputs)
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_ad5484de3efb4567a0cf870ad67166ee7}\label{classglow_1_1_placeholder_bindings_ad5484de3efb4567a0cf870ad67166ee7}} 
+{\bfseries Placeholder\+Bindings} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&\&other)
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_af9557fbb520f13a81ea7b99e1829dde3}\label{classglow_1_1_placeholder_bindings_af9557fbb520f13a81ea7b99e1829dde3}} 
+{\bfseries $\sim$\+Placeholder\+Bindings} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a3ebd8843f7adf5692cbcc94b14514af8}\label{classglow_1_1_placeholder_bindings_a3ebd8843f7adf5692cbcc94b14514af8}} 
+{\bfseries Placeholder\+Bindings} (const \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&other)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_afa82636e9da2c416007f27e653443752}\label{classglow_1_1_placeholder_bindings_afa82636e9da2c416007f27e653443752}} 
+\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \& {\bfseries operator=} (const \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&other)=delete
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classglow_1_1_placeholder_bindings_a003d57e22107d779b7de70cd53336c19}{compare} (const \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$A, const \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$B)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides a mapping between some graph nodes, which are a symbolic representation of some computation, and concrete tensors that represent the inputs and outputs to the graph. The \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} owns the tensors and the graph uses these values as runtime. This is useful for the multi-\/threaded execution of code, where each thread has a different execution context. The difference between this class and a regular map is that the \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} owns the Tensors (not only the pointers) and manages their lifetime. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a9d3fc7d15e95e583d24f8b1a66aff54f}\label{classglow_1_1_placeholder_bindings_a9d3fc7d15e95e583d24f8b1a66aff54f}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!Placeholder\+Bindings@{Placeholder\+Bindings}}
+\index{Placeholder\+Bindings@{Placeholder\+Bindings}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{Placeholder\+Bindings()}{PlaceholderBindings()}}
+{\footnotesize\ttfamily Placeholder\+Bindings\+::\+Placeholder\+Bindings (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$}]{placeholders,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$$>$}]{inputs }\end{DoxyParamCaption})}
+
+Construct the \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} with an initial mapping between {\ttfamily placeholders} and {\ttfamily inputs}; Create a reference to the original tensor and hand it to the \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a25e8442dbf233cf922f866e4802c8d70}\label{classglow_1_1_placeholder_bindings_a25e8442dbf233cf922f866e4802c8d70}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!allocate@{allocate}}
+\index{allocate@{allocate}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{allocate()}{allocate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$ Placeholder\+Bindings\+::allocate (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$}]{P }\end{DoxyParamCaption})}
+
+Allocates a tensor to back the placeholder {\ttfamily P}. The new tensor has the type of P. \mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a9786fe1975e69d07a06c326ba8d7b730}\label{classglow_1_1_placeholder_bindings_a9786fe1975e69d07a06c326ba8d7b730}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!allocate@{allocate}}
+\index{allocate@{allocate}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{allocate()}{allocate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned Placeholder\+Bindings\+::allocate (\begin{DoxyParamCaption}\item[{const std\+::list$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$ \&}]{lst }\end{DoxyParamCaption})}
+
+Allocates zero-\/initialized backing tensors to all placeholders in {\ttfamily lst} that are not currently allocated in the bindings. \begin{DoxyReturn}{Returns}
+the number of tensors that were allocated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a0cc0e5f3957e8372a34bf3de811e96bd}\label{classglow_1_1_placeholder_bindings_a0cc0e5f3957e8372a34bf3de811e96bd}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!clear@{clear}}
+\index{clear@{clear}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Placeholder\+Bindings\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Deletes all tensors and clears the mapping between Placeholders and tensors. \mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a9129910138390bf1a3254478500683ab}\label{classglow_1_1_placeholder_bindings_a9129910138390bf1a3254478500683ab}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!clone@{clone}}
+\index{clone@{clone}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} Placeholder\+Bindings\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a copy of the \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings}, with each placeholder mapped to a new \hyperlink{classglow_1_1_tensor}{Tensor}, with their own memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a003d57e22107d779b7de70cd53336c19}\label{classglow_1_1_placeholder_bindings_a003d57e22107d779b7de70cd53336c19}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!compare@{compare}}
+\index{compare@{compare}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily bool Placeholder\+Bindings\+::compare (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$}]{A,  }\item[{const \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$}]{B }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\ttfamily A} and {\ttfamily B} contain the same Placeholders mapped to equivalent Tensors. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a2c65bd5f6c7bb198e1432d6fc058b2e9}\label{classglow_1_1_placeholder_bindings_a2c65bd5f6c7bb198e1432d6fc058b2e9}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!copy\+To\+Target@{copy\+To\+Target}}
+\index{copy\+To\+Target@{copy\+To\+Target}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{copy\+To\+Target()}{copyToTarget()}}
+{\footnotesize\ttfamily void Placeholder\+Bindings\+::copy\+To\+Target (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{dst }\end{DoxyParamCaption})}
+
+Copy values from this \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} to another, {\ttfamily dst}, by {\ttfamily name}. This is useful when trained weights need to be transferred between bindings of two different modules. \mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a8c344e5f81fbce432159f4e5c791bc85}\label{classglow_1_1_placeholder_bindings_a8c344e5f81fbce432159f4e5c791bc85}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!count@{count}}
+\index{count@{count}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily size\+\_\+t Placeholder\+Bindings\+::count (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$}]{P }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily P} is a registered \hyperlink{classglow_1_1_placeholder}{Placeholder}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a48eb62785028290edafa91239f671ddb}\label{classglow_1_1_placeholder_bindings_a48eb62785028290edafa91239f671ddb}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!erase@{erase}}
+\index{erase@{erase}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily void Placeholder\+Bindings\+::erase (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$}]{P }\end{DoxyParamCaption})}
+
+Removes the \hyperlink{classglow_1_1_tensor}{Tensor} backing \hyperlink{classglow_1_1_placeholder}{Placeholder} {\ttfamily P}; {\ttfamily P} must be a valid \hyperlink{classglow_1_1_placeholder}{Placeholder} registered in the bindings. \mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a98bdcb9a47a36f8dce6d0f2d86a0080c}\label{classglow_1_1_placeholder_bindings_a98bdcb9a47a36f8dce6d0f2d86a0080c}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!get@{get}}
+\index{get@{get}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$ Placeholder\+Bindings\+::get (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$}]{P }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the tensor that corresponds to \hyperlink{classglow_1_1_placeholder}{Placeholder} {\ttfamily P} or Null if the tensor is not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a685ce6158dca1118a743fb60ec9c7182}\label{classglow_1_1_placeholder_bindings_a685ce6158dca1118a743fb60ec9c7182}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!get\+Data\+Size@{get\+Data\+Size}}
+\index{get\+Data\+Size@{get\+Data\+Size}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{get\+Data\+Size()}{getDataSize()}}
+{\footnotesize\ttfamily uint64\+\_\+t Placeholder\+Bindings\+::get\+Data\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the size in bytes of allocated Tensors owned by \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a00ccce9fce94434ef6c3462a34fcef2d}\label{classglow_1_1_placeholder_bindings_a00ccce9fce94434ef6c3462a34fcef2d}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!get\+First\+Unallocated@{get\+First\+Unallocated}}
+\index{get\+First\+Unallocated@{get\+First\+Unallocated}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{get\+First\+Unallocated()}{getFirstUnallocated()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ Placeholder\+Bindings\+::get\+First\+Unallocated (\begin{DoxyParamCaption}\item[{const std\+::list$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$ \&}]{lst }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the first placeholder in {\ttfamily list} that is not allocated by this bindings. This method returns null if all placeholders in the list are allocated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_placeholder_bindings_a1652efb98579b145068c17ddcbb5bfb4}\label{classglow_1_1_placeholder_bindings_a1652efb98579b145068c17ddcbb5bfb4}} 
+\index{glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}!pairs@{pairs}}
+\index{pairs@{pairs}!glow\+::\+Placeholder\+Bindings@{glow\+::\+Placeholder\+Bindings}}
+\subsubsection{\texorpdfstring{pairs()}{pairs()}}
+{\footnotesize\ttfamily const \hyperlink{classglow_1_1_placeholder_bindings_ae0ff382e6d2719f72120f35909dd1862}{Placeholder\+Map}\& glow\+::\+Placeholder\+Bindings\+::pairs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the mapping between placeholder to tensors. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Placeholder\+Bindings.\+h\item 
+lib/\+Graph/Placeholder\+Bindings.\+cpp\end{DoxyCompactItemize}

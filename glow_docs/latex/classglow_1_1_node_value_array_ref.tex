@@ -1,0 +1,50 @@
+\hypertarget{classglow_1_1_node_value_array_ref}{}\section{glow\+:\+:Node\+Value\+Array\+Ref Class Reference}
+\label{classglow_1_1_node_value_array_ref}\index{glow\+::\+Node\+Value\+Array\+Ref@{glow\+::\+Node\+Value\+Array\+Ref}}
+
+
+{\ttfamily \#include $<$Node\+Value.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_array_ref_acc697ac650c1ac41c95d8276e4478ea6}\label{classglow_1_1_node_value_array_ref_acc697ac650c1ac41c95d8276e4478ea6}} 
+using {\bfseries const\+\_\+iterator} = llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_handle}{Node\+Handle} $>$\+::const\+\_\+iterator
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_array_ref_ab34ca69176b12759e2e837ecde5f94c8}\label{classglow_1_1_node_value_array_ref_ab34ca69176b12759e2e837ecde5f94c8}} 
+{\bfseries Node\+Value\+Array\+Ref} (llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_node_handle}{Node\+Handle} $>$ ref)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_array_ref_a8e178b1020fce4a79978557d8e01db8e}\label{classglow_1_1_node_value_array_ref_a8e178b1020fce4a79978557d8e01db8e}} 
+{\bfseries Node\+Value\+Array\+Ref} (const std\+::vector$<$ \hyperlink{structglow_1_1_node_handle}{Node\+Handle} $>$ \&ref)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_array_ref_a5fba7c15b63ec9bedd38f74d97c39567}\label{classglow_1_1_node_value_array_ref_a5fba7c15b63ec9bedd38f74d97c39567}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_array_ref_a53abeee156bc1a8481e0be739f4aefc3}\label{classglow_1_1_node_value_array_ref_a53abeee156bc1a8481e0be739f4aefc3}} 
+{\bfseries operator std\+::vector$<$ Node\+Value $>$} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_array_ref_aa7351a9e48e73b23614b4386ca487c60}\label{classglow_1_1_node_value_array_ref_aa7351a9e48e73b23614b4386ca487c60}} 
+size\+\_\+t {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_array_ref_abe143e25e4e3760ffed0e937233695b1}\label{classglow_1_1_node_value_array_ref_abe143e25e4e3760ffed0e937233695b1}} 
+bool {\bfseries empty} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_array_ref_aec1bed3875af791631670fac42752388}\label{classglow_1_1_node_value_array_ref_aec1bed3875af791631670fac42752388}} 
+const\+\_\+iterator {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_array_ref_a602ad44453233e83a0eb65c433f42fe5}\label{classglow_1_1_node_value_array_ref_a602ad44453233e83a0eb65c433f42fe5}} 
+const\+\_\+iterator {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_array_ref_ad3ed89c47261a53cd0a25c02674061cf}\label{classglow_1_1_node_value_array_ref_ad3ed89c47261a53cd0a25c02674061cf}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries front} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A wrapper class to expose a vector of Node\+Handles inside an object as a vector of Node\+Values. This is done to avoid leaking of Node\+Handles from Nodes into the user-\/code. This type can be used as a return type of e.\+g. \hyperlink{namespaceglow_a589ee9d58bb8726a5e764b1dd74f8070}{get\+Inputs()} and similar functions. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Node\+Value.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{classglow_1_1_trace_event_node}{}\section{glow\+:\+:Trace\+Event\+Node Class Reference}
+\label{classglow_1_1_trace_event_node}\index{glow\+::\+Trace\+Event\+Node@{glow\+::\+Trace\+Event\+Node}}
+
+
+Inserts a \hyperlink{structglow_1_1_trace_event}{Trace\+Event} for profiling.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Trace\+Event\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_trace_event_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_a6fc0a8a93acac700704fd967f0de206c}\label{classglow_1_1_trace_event_node_a6fc0a8a93acac700704fd967f0de206c}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Data\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_aa4676e556c26cbb106f0c0eac678ed24}\label{classglow_1_1_trace_event_node_aa4676e556c26cbb106f0c0eac678ed24}} 
+enum {\bfseries Result\+Indices} 
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_a943c657dc6a3518f60e16477f3ab811e}\label{classglow_1_1_trace_event_node_a943c657dc6a3518f60e16477f3ab811e}} 
+{\bfseries Trace\+Event\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Data, std\+::string Event\+Name, std\+::string Event\+Type, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Index)
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_a868f3bf1afe46858fd93498b28ad25b2}\label{classglow_1_1_trace_event_node_a868f3bf1afe46858fd93498b28ad25b2}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Data} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_af7baf57e71a312976e20f2f2c39bd25c}\label{classglow_1_1_trace_event_node_af7baf57e71a312976e20f2f2c39bd25c}} 
+std\+::string {\bfseries get\+Event\+Name} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_a030c1075f4c6903bd067e373ded8d5e8}\label{classglow_1_1_trace_event_node_a030c1075f4c6903bd067e373ded8d5e8}} 
+std\+::string {\bfseries get\+Event\+Type} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_acd513ddbe5d18d98b1a61ca5540ce4e2}\label{classglow_1_1_trace_event_node_acd513ddbe5d18d98b1a61ca5540ce4e2}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Index} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_a805cbb4a47b506d690df36bf198bb413}\label{classglow_1_1_trace_event_node_a805cbb4a47b506d690df36bf198bb413}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_ac8bdb5f0addf80edd8a31a6cede6b36c}\label{classglow_1_1_trace_event_node_ac8bdb5f0addf80edd8a31a6cede6b36c}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_aa131dde42999e98f3c62fd190b724681}\label{classglow_1_1_trace_event_node_aa131dde42999e98f3c62fd190b724681}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_ae69ed0aaf692c95cbdcfc46f644a980c}\label{classglow_1_1_trace_event_node_ae69ed0aaf692c95cbdcfc46f644a980c}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_aa32084fd3de23ee3dfd111af1b8e6882}\label{classglow_1_1_trace_event_node_aa32084fd3de23ee3dfd111af1b8e6882}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_abedfa37bc8139045892e27f56e40ba38}\label{classglow_1_1_trace_event_node_abedfa37bc8139045892e27f56e40ba38}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_a8de40f5be57fa41dd7516805750485fe}\label{classglow_1_1_trace_event_node_a8de40f5be57fa41dd7516805750485fe}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_a6949530a56f1a803c3f5c88f9f3ad17e}\label{classglow_1_1_trace_event_node_a6949530a56f1a803c3f5c88f9f3ad17e}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_afa4939883d530de7d5b04ae8dd2a6540}\label{classglow_1_1_trace_event_node_afa4939883d530de7d5b04ae8dd2a6540}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_af5d33f97c0fe598dfaa423bd5a66fd9e}\label{classglow_1_1_trace_event_node_af5d33f97c0fe598dfaa423bd5a66fd9e}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_trace_event_node}{Trace\+Event\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_add241b15e45bf016ebc322055ecfed4d}\label{classglow_1_1_trace_event_node_add241b15e45bf016ebc322055ecfed4d}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_a0836a3142d66fd21989c737d75e865c8}\label{classglow_1_1_trace_event_node_a0836a3142d66fd21989c737d75e865c8}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_a148860716955bf577e5f6e8bf97c86e8}\label{classglow_1_1_trace_event_node_a148860716955bf577e5f6e8bf97c86e8}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_aa885476548a1d00d014fec3c6f8a5853}\label{classglow_1_1_trace_event_node_aa885476548a1d00d014fec3c6f8a5853}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_event_node_afd7a0e1f67856ae6a1922dd08fe12be3}\label{classglow_1_1_trace_event_node_afd7a0e1f67856ae6a1922dd08fe12be3}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Inserts a \hyperlink{structglow_1_1_trace_event}{Trace\+Event} for profiling. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

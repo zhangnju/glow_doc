@@ -1,0 +1,106 @@
+\hypertarget{classglow_1_1_lengths_sum_node}{}\section{glow\+:\+:Lengths\+Sum\+Node Class Reference}
+\label{classglow_1_1_lengths_sum_node}\index{glow\+::\+Lengths\+Sum\+Node@{glow\+::\+Lengths\+Sum\+Node}}
+
+
+Sums slices of the outermost dimension of Data in groups defined by Lengths. The first Lengths\mbox{[}0\mbox{]} slices are added together and stored in Result\mbox{[}0\mbox{]}, the subsequent Lengths\mbox{[}1\mbox{]} slices are added together and stored in Result\mbox{[}1\mbox{]}, etc.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Lengths\+Sum\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_lengths_sum_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_ab224722529fd27995cef98fc6a962b19}\label{classglow_1_1_lengths_sum_node_ab224722529fd27995cef98fc6a962b19}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Data\+Idx} = 0, 
+{\bfseries Lengths\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_aa9fc8a0d98a4a6ce660171c2c231dd5c}\label{classglow_1_1_lengths_sum_node_aa9fc8a0d98a4a6ce660171c2c231dd5c}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_acd22fb1d7299eb5cd9724cb8dd709a5b}\label{classglow_1_1_lengths_sum_node_acd22fb1d7299eb5cd9724cb8dd709a5b}} 
+{\bfseries Lengths\+Sum\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Data, \hyperlink{structglow_1_1_node_value}{Node\+Value} Lengths)
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_a921454ec1466e20ad88e7ac712c6b081}\label{classglow_1_1_lengths_sum_node_a921454ec1466e20ad88e7ac712c6b081}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Data} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_ad3799293f5950c43de4e68f4c72b49fc}\label{classglow_1_1_lengths_sum_node_ad3799293f5950c43de4e68f4c72b49fc}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Lengths} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_ace1ecf981303d5bdd03211dedd955604}\label{classglow_1_1_lengths_sum_node_ace1ecf981303d5bdd03211dedd955604}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_ac2c8de12527c33a3ae590506004053fa}\label{classglow_1_1_lengths_sum_node_ac2c8de12527c33a3ae590506004053fa}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_af9f6e971528bb62894981c64cd368ec2}\label{classglow_1_1_lengths_sum_node_af9f6e971528bb62894981c64cd368ec2}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_aad6d060b0b8323319382e4b817167827}\label{classglow_1_1_lengths_sum_node_aad6d060b0b8323319382e4b817167827}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_a7ae51482cee1ea057d1e2d26ba5fb23d}\label{classglow_1_1_lengths_sum_node_a7ae51482cee1ea057d1e2d26ba5fb23d}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_ad7a24c850d8a58145b652785ddc21f8b}\label{classglow_1_1_lengths_sum_node_ad7a24c850d8a58145b652785ddc21f8b}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_a186b41829602ab2e297a1ca729467ea3}\label{classglow_1_1_lengths_sum_node_a186b41829602ab2e297a1ca729467ea3}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_a1f53109e9b5da7535c4518a780e0413f}\label{classglow_1_1_lengths_sum_node_a1f53109e9b5da7535c4518a780e0413f}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_a2f10cc3e81aa682bc59cb4d8c8443ad0}\label{classglow_1_1_lengths_sum_node_a2f10cc3e81aa682bc59cb4d8c8443ad0}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_a61f9632ae241dd81799b49ac3812008b}\label{classglow_1_1_lengths_sum_node_a61f9632ae241dd81799b49ac3812008b}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_a8a78724926b0900a59c2283c736ab937}\label{classglow_1_1_lengths_sum_node_a8a78724926b0900a59c2283c736ab937}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_aebae6bc94f1da6f5faea430eea6333b1}\label{classglow_1_1_lengths_sum_node_aebae6bc94f1da6f5faea430eea6333b1}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_lengths_sum_node}{Lengths\+Sum\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_abc0ff190ff3e68cc47c7e2136c5f22e7}\label{classglow_1_1_lengths_sum_node_abc0ff190ff3e68cc47c7e2136c5f22e7}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_ab8985c9227fa777e43ca4d616e03e6b6}\label{classglow_1_1_lengths_sum_node_ab8985c9227fa777e43ca4d616e03e6b6}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_abd47edfc05aeef9b7306c7c9f57a650d}\label{classglow_1_1_lengths_sum_node_abd47edfc05aeef9b7306c7c9f57a650d}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_ab916f9a01782514ab907c4471cd716d8}\label{classglow_1_1_lengths_sum_node_ab916f9a01782514ab907c4471cd716d8}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_lengths_sum_node_a1953bcf25ef45579086a7cb3773e174f}\label{classglow_1_1_lengths_sum_node_a1953bcf25ef45579086a7cb3773e174f}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Sums slices of the outermost dimension of Data in groups defined by Lengths. The first Lengths\mbox{[}0\mbox{]} slices are added together and stored in Result\mbox{[}0\mbox{]}, the subsequent Lengths\mbox{[}1\mbox{]} slices are added together and stored in Result\mbox{[}1\mbox{]}, etc. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

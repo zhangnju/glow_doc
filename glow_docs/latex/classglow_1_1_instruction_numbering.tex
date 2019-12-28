@@ -1,0 +1,45 @@
+\hypertarget{classglow_1_1_instruction_numbering}{}\section{glow\+:\+:Instruction\+Numbering Class Reference}
+\label{classglow_1_1_instruction_numbering}\index{glow\+::\+Instruction\+Numbering@{glow\+::\+Instruction\+Numbering}}
+
+
+A helper class used for instructions numbering.  
+
+
+
+
+{\ttfamily \#include $<$I\+R.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_numbering_aee4473162534f2e0f0cf9ef5c5934e4f}\label{classglow_1_1_instruction_numbering_aee4473162534f2e0f0cf9ef5c5934e4f}} 
+{\bfseries Instruction\+Numbering} (const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} \&M)
+\item 
+const \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$ \hyperlink{classglow_1_1_instruction_numbering_ad67ba4410eeb3e6f3ad8371c4c4b010a}{get\+Instr} (size\+\_\+t Instr\+Number) const
+\item 
+int64\+\_\+t \hyperlink{classglow_1_1_instruction_numbering_a7e2781897999a53f1181b2410c614ecc}{get\+Instr\+Number} (const \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$I) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A helper class used for instructions numbering. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_instruction_numbering_ad67ba4410eeb3e6f3ad8371c4c4b010a}\label{classglow_1_1_instruction_numbering_ad67ba4410eeb3e6f3ad8371c4c4b010a}} 
+\index{glow\+::\+Instruction\+Numbering@{glow\+::\+Instruction\+Numbering}!get\+Instr@{get\+Instr}}
+\index{get\+Instr@{get\+Instr}!glow\+::\+Instruction\+Numbering@{glow\+::\+Instruction\+Numbering}}
+\subsubsection{\texorpdfstring{get\+Instr()}{getInstr()}}
+{\footnotesize\ttfamily const \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$ Instruction\+Numbering\+::get\+Instr (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{Instr\+Number }\end{DoxyParamCaption}) const}
+
+Return the instruction with a given number or M.\+get\+Instrs().end() if this instruction is not assigned any number. \mbox{\Hypertarget{classglow_1_1_instruction_numbering_a7e2781897999a53f1181b2410c614ecc}\label{classglow_1_1_instruction_numbering_a7e2781897999a53f1181b2410c614ecc}} 
+\index{glow\+::\+Instruction\+Numbering@{glow\+::\+Instruction\+Numbering}!get\+Instr\+Number@{get\+Instr\+Number}}
+\index{get\+Instr\+Number@{get\+Instr\+Number}!glow\+::\+Instruction\+Numbering@{glow\+::\+Instruction\+Numbering}}
+\subsubsection{\texorpdfstring{get\+Instr\+Number()}{getInstrNumber()}}
+{\footnotesize\ttfamily int64\+\_\+t Instruction\+Numbering\+::get\+Instr\+Number (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$}]{I }\end{DoxyParamCaption}) const}
+
+Return the number of an instruction or a negative value if no number was assigned to this instruction. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+I\+R/I\+R.\+h\item 
+lib/\+I\+R/I\+R.\+cpp\end{DoxyCompactItemize}

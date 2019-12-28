@@ -1,0 +1,66 @@
+\hypertarget{structglow_1_1_node_use}{}\section{glow\+:\+:Node\+Use Struct Reference}
+\label{structglow_1_1_node_use}\index{glow\+::\+Node\+Use@{glow\+::\+Node\+Use}}
+
+
+A \textquotesingle{}\hyperlink{structglow_1_1_use}{Use}\textquotesingle{} is a use-\/list representation of a \hyperlink{classglow_1_1_node}{Node} operand.  
+
+
+
+
+{\ttfamily \#include $<$Node\+Value.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_use_ac2c322af415363f4098efe66874d3ed4}\label{structglow_1_1_node_use_ac2c322af415363f4098efe66874d3ed4}} 
+{\bfseries Node\+Use} (\hyperlink{structglow_1_1_node_handle}{Node\+Handle} $\ast$site)
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_use_a9741e1c8b5aaf976c7cb76c10c5bb260}\label{structglow_1_1_node_use_a9741e1c8b5aaf976c7cb76c10c5bb260}} 
+bool {\bfseries operator==} (const \hyperlink{structglow_1_1_node_use}{Node\+Use} \&other) const
+\item 
+\hyperlink{structglow_1_1_node_handle}{Node\+Handle} $\ast$ \hyperlink{structglow_1_1_node_use_aee3154b05759438b149f938279d0a93c}{get} () const
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_use_a3d4d049c959bb70fde84f4c7c4ebdf41}\label{structglow_1_1_node_use_a3d4d049c959bb70fde84f4c7c4ebdf41}} 
+const \hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{structglow_1_1_node_use_a3d4d049c959bb70fde84f4c7c4ebdf41}{get\+User} () const
+\begin{DoxyCompactList}\small\item\em Get the node containing this use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_use_a740287d6dd72dc75aac98701d8593b37}\label{structglow_1_1_node_use_a740287d6dd72dc75aac98701d8593b37}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries get\+User} ()
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_use_aad143eaba5ceff7cceb890836a83eede}\label{structglow_1_1_node_use_aad143eaba5ceff7cceb890836a83eede}} 
+void \hyperlink{structglow_1_1_node_use_aad143eaba5ceff7cceb890836a83eede}{set\+Operand} (\hyperlink{structglow_1_1_node_handle}{Node\+Handle} \&site)
+\begin{DoxyCompactList}\small\item\em Sets the operand to a new value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structglow_1_1_node_handle}{Node\+Handle} $\ast$ \hyperlink{structglow_1_1_node_use_a8d4fa47bff5fb0762b9f49b36d3d3323}{site\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \textquotesingle{}\hyperlink{structglow_1_1_use}{Use}\textquotesingle{} is a use-\/list representation of a \hyperlink{classglow_1_1_node}{Node} operand. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_node_use_aee3154b05759438b149f938279d0a93c}\label{structglow_1_1_node_use_aee3154b05759438b149f938279d0a93c}} 
+\index{glow\+::\+Node\+Use@{glow\+::\+Node\+Use}!get@{get}}
+\index{get@{get}!glow\+::\+Node\+Use@{glow\+::\+Node\+Use}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_node_handle}{Node\+Handle}$\ast$ glow\+::\+Node\+Use\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the instruction that the use refers to. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1_node_use_a8d4fa47bff5fb0762b9f49b36d3d3323}\label{structglow_1_1_node_use_a8d4fa47bff5fb0762b9f49b36d3d3323}} 
+\index{glow\+::\+Node\+Use@{glow\+::\+Node\+Use}!site\+\_\+@{site\+\_\+}}
+\index{site\+\_\+@{site\+\_\+}!glow\+::\+Node\+Use@{glow\+::\+Node\+Use}}
+\subsubsection{\texorpdfstring{site\+\_\+}{site\_}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_node_handle}{Node\+Handle}$\ast$ glow\+::\+Node\+Use\+::site\+\_\+}
+
+The operand site. This is the address of the operand that points to our node. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Node\+Value.\+h\item 
+lib/\+Graph/Node\+Value.\+cpp\end{DoxyCompactItemize}

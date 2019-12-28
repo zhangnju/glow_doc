@@ -1,0 +1,121 @@
+\hypertarget{classglow_1_1_s_g_d_node}{}\section{glow\+:\+:S\+G\+D\+Node Class Reference}
+\label{classglow_1_1_s_g_d_node}\index{glow\+::\+S\+G\+D\+Node@{glow\+::\+S\+G\+D\+Node}}
+
+
+Stochastic Gradient Descent node used during training. Produces the updated weight that needs to be used instead of Weight for the next iteration.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:S\+G\+D\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_s_g_d_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a9bdae92e60c5c3cf8710ac3f171e66be}\label{classglow_1_1_s_g_d_node_a9bdae92e60c5c3cf8710ac3f171e66be}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Gradient\+Idx} = 0, 
+{\bfseries Weight\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_ae10f5c40b10d58a74134e34cc0835eea}\label{classglow_1_1_s_g_d_node_ae10f5c40b10d58a74134e34cc0835eea}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Updated\+Weight\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_ac3c09a68b02a34452b415f160c753ea7}\label{classglow_1_1_s_g_d_node_ac3c09a68b02a34452b415f160c753ea7}} 
+{\bfseries S\+G\+D\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Gradient, \hyperlink{structglow_1_1_node_value}{Node\+Value} Weight, float L1\+Decay, float L2\+Decay, float Learning\+Rate, float Momentum, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Batch\+Size)
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_abdf3dceed5d666f24013adcf5465233f}\label{classglow_1_1_s_g_d_node_abdf3dceed5d666f24013adcf5465233f}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Gradient} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a7f0c1dc5646c9585f56daa51b81f65f8}\label{classglow_1_1_s_g_d_node_a7f0c1dc5646c9585f56daa51b81f65f8}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Weight} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a38bbac358cfd1ee38f08ef0984b21780}\label{classglow_1_1_s_g_d_node_a38bbac358cfd1ee38f08ef0984b21780}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Updated\+Weight} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a5311a6d805fb0da879ba88c60364f9c2}\label{classglow_1_1_s_g_d_node_a5311a6d805fb0da879ba88c60364f9c2}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Updated\+Weight} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_ad376c63e21f5823f671e7979a9e5b98b}\label{classglow_1_1_s_g_d_node_ad376c63e21f5823f671e7979a9e5b98b}} 
+float {\bfseries get\+L1\+Decay} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_ac52647514b04eb89d2854e410874e533}\label{classglow_1_1_s_g_d_node_ac52647514b04eb89d2854e410874e533}} 
+float {\bfseries get\+L2\+Decay} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a0d42e98047547f08994a6b9c2ec25b0a}\label{classglow_1_1_s_g_d_node_a0d42e98047547f08994a6b9c2ec25b0a}} 
+float {\bfseries get\+Learning\+Rate} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a39c6dd123ca8b50e49e7253f32e31bd0}\label{classglow_1_1_s_g_d_node_a39c6dd123ca8b50e49e7253f32e31bd0}} 
+float {\bfseries get\+Momentum} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a1aa20342ede03f3c8b881b11706bb420}\label{classglow_1_1_s_g_d_node_a1aa20342ede03f3c8b881b11706bb420}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Batch\+Size} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a3d76639ef57e6849125417d2c4321ebb}\label{classglow_1_1_s_g_d_node_a3d76639ef57e6849125417d2c4321ebb}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a63f8666cb00c8b6ddddbe87b8cbdaf84}\label{classglow_1_1_s_g_d_node_a63f8666cb00c8b6ddddbe87b8cbdaf84}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a57379b33ba700662d9456c85032a739a}\label{classglow_1_1_s_g_d_node_a57379b33ba700662d9456c85032a739a}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_af17f18545557a7ff2096aeb5975b5c9f}\label{classglow_1_1_s_g_d_node_af17f18545557a7ff2096aeb5975b5c9f}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a79530677ea350f3b6fccea64737eeb75}\label{classglow_1_1_s_g_d_node_a79530677ea350f3b6fccea64737eeb75}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_ad0e7d564ca49964752045d48a5766ac3}\label{classglow_1_1_s_g_d_node_ad0e7d564ca49964752045d48a5766ac3}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a0fe40a5b1fc9eaf8155361812ebc5449}\label{classglow_1_1_s_g_d_node_a0fe40a5b1fc9eaf8155361812ebc5449}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_aa881ae307f63fa9c18617ff9650888d4}\label{classglow_1_1_s_g_d_node_aa881ae307f63fa9c18617ff9650888d4}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a45fc222d05f0ab26e57d92660cd9ac29}\label{classglow_1_1_s_g_d_node_a45fc222d05f0ab26e57d92660cd9ac29}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_acb42ef579603a5da423d0a202ce8ced9}\label{classglow_1_1_s_g_d_node_acb42ef579603a5da423d0a202ce8ced9}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_s_g_d_node}{S\+G\+D\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a8c6328b452a05b379208f2a687b0e97f}\label{classglow_1_1_s_g_d_node_a8c6328b452a05b379208f2a687b0e97f}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a51274e8bb2edb57a82818a501cd02514}\label{classglow_1_1_s_g_d_node_a51274e8bb2edb57a82818a501cd02514}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a2aa0fac3610c32b2d71cd3f98ec2bbba}\label{classglow_1_1_s_g_d_node_a2aa0fac3610c32b2d71cd3f98ec2bbba}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_a7b808977c551ee94b295fbc9fd9d7c01}\label{classglow_1_1_s_g_d_node_a7b808977c551ee94b295fbc9fd9d7c01}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_s_g_d_node_af7708bc0ba6eb17103af56117da616ed}\label{classglow_1_1_s_g_d_node_af7708bc0ba6eb17103af56117da616ed}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Stochastic Gradient Descent node used during training. Produces the updated weight that needs to be used instead of Weight for the next iteration. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

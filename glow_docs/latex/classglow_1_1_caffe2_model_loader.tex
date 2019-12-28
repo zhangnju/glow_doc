@@ -1,0 +1,70 @@
+\hypertarget{classglow_1_1_caffe2_model_loader}{}\section{glow\+:\+:Caffe2\+Model\+Loader Class Reference}
+\label{classglow_1_1_caffe2_model_loader}\index{glow\+::\+Caffe2\+Model\+Loader@{glow\+::\+Caffe2\+Model\+Loader}}
+
+
+Loads \hyperlink{namespacecaffe2}{caffe2} models.  
+
+
+
+
+{\ttfamily \#include $<$Caffe2\+Model\+Loader.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Caffe2\+Model\+Loader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classglow_1_1_caffe2_model_loader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_caffe2_model_loader_a1b5e4ecb2ee703dbb2656e953c7a6146}{Caffe2\+Model\+Loader} (const std\+::string \&net\+Desc\+Filename, const std\+::string \&net\+Weight\+Filename, llvm\+::\+Array\+Ref$<$ const char $\ast$$>$ names, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$ types, \hyperlink{classglow_1_1_function}{Function} \&F, \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$err\+Ptr=nullptr)
+\item 
+\hyperlink{classglow_1_1_caffe2_model_loader_a7d346f6d6f2339138d94a001fc344938}{Caffe2\+Model\+Loader} (\hyperlink{classglow_1_1_function}{Function} \&F, \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$err\+Ptr)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_caffe2_model_loader_a2261b7d10ab59af231f02aaa75b7829a}\label{classglow_1_1_caffe2_model_loader_a2261b7d10ab59af231f02aaa75b7829a}} 
+class {\bfseries O\+N\+N\+X\+I\+F\+I\+Model\+Loader}
+\item 
+{\footnotesize template$<$class Loader\+Type , class Op\+Type $>$ }\\\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_caffe2_model_loader_a80921ed3db9c22615413812ec08923de}{constant\+Fold\+In\+Loader} (\hyperlink{classglow_1_1_function}{Function} $\ast$F, Loader\+Type \&tmp\+Loader, Loader\+Type $\ast$loader, const Op\+Type \&op)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Loads \hyperlink{namespacecaffe2}{caffe2} models. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_caffe2_model_loader_a1b5e4ecb2ee703dbb2656e953c7a6146}\label{classglow_1_1_caffe2_model_loader_a1b5e4ecb2ee703dbb2656e953c7a6146}} 
+\index{glow\+::\+Caffe2\+Model\+Loader@{glow\+::\+Caffe2\+Model\+Loader}!Caffe2\+Model\+Loader@{Caffe2\+Model\+Loader}}
+\index{Caffe2\+Model\+Loader@{Caffe2\+Model\+Loader}!glow\+::\+Caffe2\+Model\+Loader@{glow\+::\+Caffe2\+Model\+Loader}}
+\subsubsection{\texorpdfstring{Caffe2\+Model\+Loader()}{Caffe2ModelLoader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Caffe2\+Model\+Loader\+::\+Caffe2\+Model\+Loader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{net\+Desc\+Filename,  }\item[{const std\+::string \&}]{net\+Weight\+Filename,  }\item[{llvm\+::\+Array\+Ref$<$ const char $\ast$$>$}]{names,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$}]{types,  }\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{F,  }\item[{\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$}]{err\+Ptr = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Loads the \hyperlink{namespacecaffe2}{caffe2} model that\textquotesingle{}s represented by a network description file, serialized in {\ttfamily net\+Desc\+Filename}, and weights file, serialized in {\ttfamily net\+Weight\+Filename}, and populates the network in {\ttfamily F}. The list {\ttfamily types} and {\ttfamily names} are used to initialized the inputs and outputs with specific names and types. If {\ttfamily err\+Ptr} is not null then if an error occurs it will get assigned there otherwise if an error occurs it will abort. \mbox{\Hypertarget{classglow_1_1_caffe2_model_loader_a7d346f6d6f2339138d94a001fc344938}\label{classglow_1_1_caffe2_model_loader_a7d346f6d6f2339138d94a001fc344938}} 
+\index{glow\+::\+Caffe2\+Model\+Loader@{glow\+::\+Caffe2\+Model\+Loader}!Caffe2\+Model\+Loader@{Caffe2\+Model\+Loader}}
+\index{Caffe2\+Model\+Loader@{Caffe2\+Model\+Loader}!glow\+::\+Caffe2\+Model\+Loader@{glow\+::\+Caffe2\+Model\+Loader}}
+\subsubsection{\texorpdfstring{Caffe2\+Model\+Loader()}{Caffe2ModelLoader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Caffe2\+Model\+Loader\+::\+Caffe2\+Model\+Loader (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{F,  }\item[{\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$}]{err\+Ptr }\end{DoxyParamCaption})}
+
+Creates a Caffe2 model loader to build {\ttfamily F}. If {\ttfamily err\+Ptr} is not null then if an error occurs it will get assigned there otherwise if an error occurs it will abort. 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_caffe2_model_loader_a80921ed3db9c22615413812ec08923de}\label{classglow_1_1_caffe2_model_loader_a80921ed3db9c22615413812ec08923de}} 
+\index{glow\+::\+Caffe2\+Model\+Loader@{glow\+::\+Caffe2\+Model\+Loader}!constant\+Fold\+In\+Loader@{constant\+Fold\+In\+Loader}}
+\index{constant\+Fold\+In\+Loader@{constant\+Fold\+In\+Loader}!glow\+::\+Caffe2\+Model\+Loader@{glow\+::\+Caffe2\+Model\+Loader}}
+\subsubsection{\texorpdfstring{constant\+Fold\+In\+Loader}{constantFoldInLoader}}
+{\footnotesize\ttfamily template$<$class Loader\+Type , class Op\+Type $>$ \\
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} constant\+Fold\+In\+Loader (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} $\ast$}]{F,  }\item[{Loader\+Type \&}]{tmp\+Loader,  }\item[{Loader\+Type $\ast$}]{loader,  }\item[{const Op\+Type \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyReturn}{Returns}
+success if the folding of operator {\ttfamily op} in the loader {\ttfamily loader} is successful. The folding utility uses temporary loader {\ttfamily tmp\+Loader}, and associated temporary function {\ttfamily F}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Importer/Caffe2\+Model\+Loader.\+h\item 
+lib/\+Importer/Caffe2\+Model\+Loader.\+cpp\end{DoxyCompactItemize}

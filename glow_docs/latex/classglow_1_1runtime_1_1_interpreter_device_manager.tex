@@ -1,0 +1,95 @@
+\hypertarget{classglow_1_1runtime_1_1_interpreter_device_manager}{}\section{glow\+:\+:runtime\+:\+:Interpreter\+Device\+Manager Class Reference}
+\label{classglow_1_1runtime_1_1_interpreter_device_manager}\index{glow\+::runtime\+::\+Interpreter\+Device\+Manager@{glow\+::runtime\+::\+Interpreter\+Device\+Manager}}
+
+
+{\ttfamily \#include $<$Interpreter\+Device\+Manager.\+h$>$}
+
+Inheritance diagram for glow\+:\+:runtime\+:\+:Interpreter\+Device\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classglow_1_1runtime_1_1_interpreter_device_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_interpreter_device_manager_a7364c982959bdfd9235d1e0c0115a2be}\label{classglow_1_1runtime_1_1_interpreter_device_manager_a7364c982959bdfd9235d1e0c0115a2be}} 
+{\bfseries Interpreter\+Device\+Manager} (const \hyperlink{structglow_1_1runtime_1_1_device_config}{Device\+Config} \&config)
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1runtime_1_1_interpreter_device_manager_a6b7d0747cee65050a106437a55997036}{get\+Maximum\+Memory} () const override
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_interpreter_device_manager_aad7c95da9a3fe8627093a3ba8ad224d4}\label{classglow_1_1runtime_1_1_interpreter_device_manager_aad7c95da9a3fe8627093a3ba8ad224d4}} 
+uint64\+\_\+t \hyperlink{classglow_1_1runtime_1_1_interpreter_device_manager_aad7c95da9a3fe8627093a3ba8ad224d4}{get\+Available\+Memory} () const override
+\begin{DoxyCompactList}\small\item\em Returns the amount of memory in bytes currently availbe on the device. \end{DoxyCompactList}\item 
+bool \hyperlink{classglow_1_1runtime_1_1_interpreter_device_manager_a04615e8203b6f581e8646f631346418a}{is\+Memory\+Available} (uint64\+\_\+t estimate) const override
+\item 
+\hyperlink{structglow_1_1runtime_1_1_device_info}{Device\+Info} \hyperlink{classglow_1_1runtime_1_1_interpreter_device_manager_a02839dd04dcd6e6c3d768f39c666b67b}{get\+Device\+Info} () const override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classglow_1_1runtime_1_1_interpreter_device_manager_acb6a52ac1d6b704796f52da6c26d2774}{add\+Network\+Impl} (const \hyperlink{classglow_1_1_module}{Module} $\ast$module, Function\+Map\+Ty functions, Ready\+C\+B\+Ty cb) override
+\begin{DoxyCompactList}\small\item\em Load and compile the \hyperlink{classglow_1_1_module}{Module}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_interpreter_device_manager_a3c3a19ad225d7310b6a21f0411ce683c}\label{classglow_1_1runtime_1_1_interpreter_device_manager_a3c3a19ad225d7310b6a21f0411ce683c}} 
+void \hyperlink{classglow_1_1runtime_1_1_interpreter_device_manager_a3c3a19ad225d7310b6a21f0411ce683c}{evict\+Network\+Impl} (std\+::string function\+Name, Evict\+Function\+C\+B\+Ty evict\+CB) override
+\begin{DoxyCompactList}\small\item\em Remove the module and reclaim its memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_interpreter_device_manager_abc5651aafe034e073e6244224bd20070}\label{classglow_1_1runtime_1_1_interpreter_device_manager_abc5651aafe034e073e6244224bd20070}} 
+void \hyperlink{classglow_1_1runtime_1_1_interpreter_device_manager_abc5651aafe034e073e6244224bd20070}{run\+Function\+Impl} (runtime\+::\+Run\+Identifier\+Ty id, std\+::string function\+Name, std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ context, Result\+C\+B\+Ty cb) override
+\begin{DoxyCompactList}\small\item\em Execute provided \hyperlink{classglow_1_1_function}{Function}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A class controlling a single \char`\"{}\+Interpreter Device\char`\"{}, a thread of execution in the I\+R-\/\+Interpreter. Many Interpreter\+Functions may be added, but only one inference is executed at a time. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_interpreter_device_manager_acb6a52ac1d6b704796f52da6c26d2774}\label{classglow_1_1runtime_1_1_interpreter_device_manager_acb6a52ac1d6b704796f52da6c26d2774}} 
+\index{glow\+::runtime\+::\+Interpreter\+Device\+Manager@{glow\+::runtime\+::\+Interpreter\+Device\+Manager}!add\+Network\+Impl@{add\+Network\+Impl}}
+\index{add\+Network\+Impl@{add\+Network\+Impl}!glow\+::runtime\+::\+Interpreter\+Device\+Manager@{glow\+::runtime\+::\+Interpreter\+Device\+Manager}}
+\subsubsection{\texorpdfstring{add\+Network\+Impl()}{addNetworkImpl()}}
+{\footnotesize\ttfamily void glow\+::runtime\+::\+Interpreter\+Device\+Manager\+::add\+Network\+Impl (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_module}{Module} $\ast$}]{,  }\item[{Function\+Map\+Ty}]{,  }\item[{Ready\+C\+B\+Ty}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Load and compile the \hyperlink{classglow_1_1_module}{Module}. 
+
+Operator handling methods to be implemented in subclasses (i.\+e. per Device type). 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_queue_backed_device_manager_a47a2b12e364f822961c904c7c123924a}{glow\+::runtime\+::\+Queue\+Backed\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_interpreter_device_manager_a02839dd04dcd6e6c3d768f39c666b67b}\label{classglow_1_1runtime_1_1_interpreter_device_manager_a02839dd04dcd6e6c3d768f39c666b67b}} 
+\index{glow\+::runtime\+::\+Interpreter\+Device\+Manager@{glow\+::runtime\+::\+Interpreter\+Device\+Manager}!get\+Device\+Info@{get\+Device\+Info}}
+\index{get\+Device\+Info@{get\+Device\+Info}!glow\+::runtime\+::\+Interpreter\+Device\+Manager@{glow\+::runtime\+::\+Interpreter\+Device\+Manager}}
+\subsubsection{\texorpdfstring{get\+Device\+Info()}{getDeviceInfo()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1runtime_1_1_device_info}{Device\+Info} glow\+::runtime\+::\+Interpreter\+Device\+Manager\+::get\+Device\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the \hyperlink{structglow_1_1runtime_1_1_device_info}{Device\+Info} for this device containing peak limits for compute and bandwidths (used in partitioning). 
+
+Reimplemented from \hyperlink{classglow_1_1runtime_1_1_device_manager_aaf319fc3b9aa67c5e053bdf690e89d34}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_interpreter_device_manager_a6b7d0747cee65050a106437a55997036}\label{classglow_1_1runtime_1_1_interpreter_device_manager_a6b7d0747cee65050a106437a55997036}} 
+\index{glow\+::runtime\+::\+Interpreter\+Device\+Manager@{glow\+::runtime\+::\+Interpreter\+Device\+Manager}!get\+Maximum\+Memory@{get\+Maximum\+Memory}}
+\index{get\+Maximum\+Memory@{get\+Maximum\+Memory}!glow\+::runtime\+::\+Interpreter\+Device\+Manager@{glow\+::runtime\+::\+Interpreter\+Device\+Manager}}
+\subsubsection{\texorpdfstring{get\+Maximum\+Memory()}{getMaximumMemory()}}
+{\footnotesize\ttfamily uint64\+\_\+t glow\+::runtime\+::\+Interpreter\+Device\+Manager\+::get\+Maximum\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the amount of memory in bytes available on the device when no models are loaded. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_ad158f1c1f9f32b48927f50d48f80decb}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_interpreter_device_manager_a04615e8203b6f581e8646f631346418a}\label{classglow_1_1runtime_1_1_interpreter_device_manager_a04615e8203b6f581e8646f631346418a}} 
+\index{glow\+::runtime\+::\+Interpreter\+Device\+Manager@{glow\+::runtime\+::\+Interpreter\+Device\+Manager}!is\+Memory\+Available@{is\+Memory\+Available}}
+\index{is\+Memory\+Available@{is\+Memory\+Available}!glow\+::runtime\+::\+Interpreter\+Device\+Manager@{glow\+::runtime\+::\+Interpreter\+Device\+Manager}}
+\subsubsection{\texorpdfstring{is\+Memory\+Available()}{isMemoryAvailable()}}
+{\footnotesize\ttfamily bool glow\+::runtime\+::\+Interpreter\+Device\+Manager\+::is\+Memory\+Available (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{estimate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns true if a function requiring the {\ttfamily estimate} size will fit on the device. This is not a promise as memory cost could vary due to alignment, etc. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_ae9bba4abda9cb6aa1359a69e942feb22}{glow\+::runtime\+::\+Device\+Manager}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Interpreter/Interpreter\+Device\+Manager.\+h\item 
+lib/\+Backends/\+Interpreter/Interpreter\+Device\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\hypertarget{classglow_1_1_resize_nearest_node}{}\section{glow\+:\+:Resize\+Nearest\+Node Class Reference}
+\label{classglow_1_1_resize_nearest_node}\index{glow\+::\+Resize\+Nearest\+Node@{glow\+::\+Resize\+Nearest\+Node}}
+
+
+Given Input tensor of \mbox{[}N,H,W,C\mbox{]}, where N is the batch, C is the channel or depth, H is the height and W is the width, Generates an Output tensor with resized spatial dimensions using nearest neighbor interpolation. The Output tensor is of shape \mbox{[}N, floor(\+H$\ast$\+Height\+Scale), floor(\+W$\ast$\+Width\+Scale), C\mbox{]}.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Resize\+Nearest\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_resize_nearest_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a96967c627c96e4b2485b373afda328e8}\label{classglow_1_1_resize_nearest_node_a96967c627c96e4b2485b373afda328e8}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_aa1979c2cf5452f73899f01a1dff3bde3}\label{classglow_1_1_resize_nearest_node_aa1979c2cf5452f73899f01a1dff3bde3}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a4777f8cc2dac5c4a2f502276adc351be}\label{classglow_1_1_resize_nearest_node_a4777f8cc2dac5c4a2f502276adc351be}} 
+{\bfseries Resize\+Nearest\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, float Height\+Scale, float Width\+Scale)
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_aa512f672979f2c005c7f832b0f31cf6d}\label{classglow_1_1_resize_nearest_node_aa512f672979f2c005c7f832b0f31cf6d}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a6a5378362b7eab79bf50d13d4e6897d1}\label{classglow_1_1_resize_nearest_node_a6a5378362b7eab79bf50d13d4e6897d1}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_abd18c4ef2f027dc541ff066cd6c74d07}\label{classglow_1_1_resize_nearest_node_abd18c4ef2f027dc541ff066cd6c74d07}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a47aabe489060ddb9dca2540cb8eb5387}\label{classglow_1_1_resize_nearest_node_a47aabe489060ddb9dca2540cb8eb5387}} 
+float {\bfseries get\+Height\+Scale} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a4079df4a61433a2337e835d5f34fa14f}\label{classglow_1_1_resize_nearest_node_a4079df4a61433a2337e835d5f34fa14f}} 
+float {\bfseries get\+Width\+Scale} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_aa30d4cc9a56f204d6fb30c4ad0ac9d13}\label{classglow_1_1_resize_nearest_node_aa30d4cc9a56f204d6fb30c4ad0ac9d13}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_acab8bf3d8b18cb4dd84d71bfd69de113}\label{classglow_1_1_resize_nearest_node_acab8bf3d8b18cb4dd84d71bfd69de113}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_aa4df3b5cad48f3f831b98c8cc9416a56}\label{classglow_1_1_resize_nearest_node_aa4df3b5cad48f3f831b98c8cc9416a56}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a4c80339b8240195634bc32bac430593e}\label{classglow_1_1_resize_nearest_node_a4c80339b8240195634bc32bac430593e}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_adcde9bbc1c2e70ce02f883779461774c}\label{classglow_1_1_resize_nearest_node_adcde9bbc1c2e70ce02f883779461774c}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a258dc452a67c159f31ecba3dc06be37b}\label{classglow_1_1_resize_nearest_node_a258dc452a67c159f31ecba3dc06be37b}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a29b9d63ff776c5e29b8db956bbadb018}\label{classglow_1_1_resize_nearest_node_a29b9d63ff776c5e29b8db956bbadb018}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a03ddee88fc0b6d8e3e244904fd3b1346}\label{classglow_1_1_resize_nearest_node_a03ddee88fc0b6d8e3e244904fd3b1346}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_ae61d5020e72a667d07a9c2dfd08e9ed0}\label{classglow_1_1_resize_nearest_node_ae61d5020e72a667d07a9c2dfd08e9ed0}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_afb62bbd824250bd9634b3e13710489fd}\label{classglow_1_1_resize_nearest_node_afb62bbd824250bd9634b3e13710489fd}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_resize_nearest_node}{Resize\+Nearest\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_ac7d7e8e63567523233d237cd6dfa35e2}\label{classglow_1_1_resize_nearest_node_ac7d7e8e63567523233d237cd6dfa35e2}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a91fe374ac9230aa7ba36b690d8e467f1}\label{classglow_1_1_resize_nearest_node_a91fe374ac9230aa7ba36b690d8e467f1}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a94d2290aef6f5a2b71409c3f1ca419e6}\label{classglow_1_1_resize_nearest_node_a94d2290aef6f5a2b71409c3f1ca419e6}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a31f6cdcf96b9221cce02a44cbc7ae2cf}\label{classglow_1_1_resize_nearest_node_a31f6cdcf96b9221cce02a44cbc7ae2cf}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_resize_nearest_node_a64e05f522c711f2224be4ea332169b8e}\label{classglow_1_1_resize_nearest_node_a64e05f522c711f2224be4ea332169b8e}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Given Input tensor of \mbox{[}N,H,W,C\mbox{]}, where N is the batch, C is the channel or depth, H is the height and W is the width, Generates an Output tensor with resized spatial dimensions using nearest neighbor interpolation. The Output tensor is of shape \mbox{[}N, floor(\+H$\ast$\+Height\+Scale), floor(\+W$\ast$\+Width\+Scale), C\mbox{]}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

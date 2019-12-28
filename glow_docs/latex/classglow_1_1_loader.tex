@@ -1,0 +1,140 @@
+\hypertarget{classglow_1_1_loader}{}\section{glow\+:\+:Loader Class Reference}
+\label{classglow_1_1_loader}\index{glow\+::\+Loader@{glow\+::\+Loader}}
+
+
+{\ttfamily \#include $<$Loader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1runtime_1_1_host_manager}{runtime\+::\+Host\+Manager} $\ast$ \hyperlink{classglow_1_1_loader_a8c264157d286f806b93c09d08a06d004}{get\+Host\+Manager} ()
+\item 
+\hyperlink{classglow_1_1_function}{Function} $\ast$ \hyperlink{classglow_1_1_loader_aab4ded493e718300df251a1841523c3d}{get\+Function} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_loader_a73fb01768b1c20f41e2121f5585817d2}\label{classglow_1_1_loader_a73fb01768b1c20f41e2121f5585817d2}} 
+std\+::string \hyperlink{classglow_1_1_loader_a73fb01768b1c20f41e2121f5585817d2}{get\+Function\+Name} ()
+\begin{DoxyCompactList}\small\item\em Getter for function name. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_module}{Module} $\ast$ \hyperlink{classglow_1_1_loader_a24825fa4a696f20bc4e2eb90ac840f16}{get\+Module} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_loader_aa417156999972e8cdb4f9515ee2995a0}\label{classglow_1_1_loader_aa417156999972e8cdb4f9515ee2995a0}} 
+llvm\+::\+String\+Ref \hyperlink{classglow_1_1_loader_aa417156999972e8cdb4f9515ee2995a0}{get\+Caffe2\+Net\+Desc\+Filename} ()
+\begin{DoxyCompactList}\small\item\em Getter for the Caffe2 network file name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_loader_a1053137878cd321ac5152f93b1a9366a}\label{classglow_1_1_loader_a1053137878cd321ac5152f93b1a9366a}} 
+llvm\+::\+String\+Ref \hyperlink{classglow_1_1_loader_a1053137878cd321ac5152f93b1a9366a}{get\+Caffe2\+Net\+Weight\+Filename} ()
+\begin{DoxyCompactList}\small\item\em Getter for the Caffe2 weights file name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_loader_a191c0e3b65fa20ce9fc9fd09864ba905}\label{classglow_1_1_loader_a191c0e3b65fa20ce9fc9fd09864ba905}} 
+llvm\+::\+String\+Ref \hyperlink{classglow_1_1_loader_a191c0e3b65fa20ce9fc9fd09864ba905}{get\+Onnx\+Model\+Filename} ()
+\begin{DoxyCompactList}\small\item\em Getter for the O\+N\+NX model file name. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_loader_ae4de9bae2b55c206b465ca7bef1c84fc}{compile} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings)
+\item 
+void \hyperlink{classglow_1_1_loader_a7e9422518c187cb81a554c4cc1b87769}{compile} (\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx)
+\item 
+void \hyperlink{classglow_1_1_loader_aa0768ad9d8b71e237706a674b25d4376}{run\+Inference} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings, size\+\_\+t batch\+Size=1)
+\item 
+void \hyperlink{classglow_1_1_loader_a0ccdbb5f29cb349efe8f3e34ff6a0fcd}{run\+Inference} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context, size\+\_\+t batch\+Size=1)
+\item 
+void \hyperlink{classglow_1_1_loader_a4f1ea05794900ee3b6228f4d32229cfb}{generate\+And\+Serialize\+Quantization\+Infos} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&bindings)
+\item 
+\mbox{\Hypertarget{classglow_1_1_loader_a7bc9da9be2c78f9207d47fd43bb9a8c7}\label{classglow_1_1_loader_a7bc9da9be2c78f9207d47fd43bb9a8c7}} 
+\hyperlink{classglow_1_1_loader_a7bc9da9be2c78f9207d47fd43bb9a8c7}{Loader} ()
+\begin{DoxyCompactList}\small\item\em Create the \hyperlink{classglow_1_1_loader}{Loader} driver object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \hyperlink{classglow_1_1_loader_af71f07b76373e50b28366c9250aedc84}{get\+Model\+Opt\+Path} ()
+\item 
+static llvm\+::\+String\+Ref \hyperlink{classglow_1_1_loader_a4b7a9059016c43c4f81fa33d500a65f3}{get\+Model\+Opt\+Dir} ()
+\item 
+static void \hyperlink{classglow_1_1_loader_ae2b9d671348ef892b4a752988414b39f}{get\+Model\+Inputs} (std\+::vector$<$ std\+::string $>$ \&input\+Names, std\+::vector$<$ \hyperlink{structglow_1_1_type}{Type} $>$ \&input\+Types)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Driver class for loading, compiling, and running inference for O\+N\+NX and Caffe2 models. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_loader_ae4de9bae2b55c206b465ca7bef1c84fc}\label{classglow_1_1_loader_ae4de9bae2b55c206b465ca7bef1c84fc}} 
+\index{glow\+::\+Loader@{glow\+::\+Loader}!compile@{compile}}
+\index{compile@{compile}!glow\+::\+Loader@{glow\+::\+Loader}}
+\subsubsection{\texorpdfstring{compile()}{compile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Loader\+::compile (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings }\end{DoxyParamCaption})}
+
+Compiles the \hyperlink{classglow_1_1_function}{Function} F\+\_\+. Handles quantization, emitting bundles, and dumping debug information. {\ttfamily bindings} bind specific placeholders to concrete tensors. The concrete tensors include quantization profile guided information. \mbox{\Hypertarget{classglow_1_1_loader_a7e9422518c187cb81a554c4cc1b87769}\label{classglow_1_1_loader_a7e9422518c187cb81a554c4cc1b87769}} 
+\index{glow\+::\+Loader@{glow\+::\+Loader}!compile@{compile}}
+\index{compile@{compile}!glow\+::\+Loader@{glow\+::\+Loader}}
+\subsubsection{\texorpdfstring{compile()}{compile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Loader\+::compile (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx }\end{DoxyParamCaption})}
+
+Compiles the \hyperlink{classglow_1_1_function}{Function} F\+\_\+. Handles quantization, emitting bundles, and dumping debug information. {\ttfamily cctx} is used for compiling F\+\_\+. \mbox{\Hypertarget{classglow_1_1_loader_a4f1ea05794900ee3b6228f4d32229cfb}\label{classglow_1_1_loader_a4f1ea05794900ee3b6228f4d32229cfb}} 
+\index{glow\+::\+Loader@{glow\+::\+Loader}!generate\+And\+Serialize\+Quantization\+Infos@{generate\+And\+Serialize\+Quantization\+Infos}}
+\index{generate\+And\+Serialize\+Quantization\+Infos@{generate\+And\+Serialize\+Quantization\+Infos}!glow\+::\+Loader@{glow\+::\+Loader}}
+\subsubsection{\texorpdfstring{generate\+And\+Serialize\+Quantization\+Infos()}{generateAndSerializeQuantizationInfos()}}
+{\footnotesize\ttfamily void Loader\+::generate\+And\+Serialize\+Quantization\+Infos (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings }\end{DoxyParamCaption})}
+
+Generates and serializes the quantization infos after gathering a profile by running inference one or more times. {\ttfamily bindings} binds specific placeholders to concrete tensors. The concrete tensors include quantization profile guided information. \mbox{\Hypertarget{classglow_1_1_loader_aab4ded493e718300df251a1841523c3d}\label{classglow_1_1_loader_aab4ded493e718300df251a1841523c3d}} 
+\index{glow\+::\+Loader@{glow\+::\+Loader}!get\+Function@{get\+Function}}
+\index{get\+Function@{get\+Function}!glow\+::\+Loader@{glow\+::\+Loader}}
+\subsubsection{\texorpdfstring{get\+Function()}{getFunction()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_function}{Function}$\ast$ glow\+::\+Loader\+::get\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the \hyperlink{classglow_1_1_function}{Function}. This should not be called after compile since the compile process is destructive on the original function. \mbox{\Hypertarget{classglow_1_1_loader_a8c264157d286f806b93c09d08a06d004}\label{classglow_1_1_loader_a8c264157d286f806b93c09d08a06d004}} 
+\index{glow\+::\+Loader@{glow\+::\+Loader}!get\+Host\+Manager@{get\+Host\+Manager}}
+\index{get\+Host\+Manager@{get\+Host\+Manager}!glow\+::\+Loader@{glow\+::\+Loader}}
+\subsubsection{\texorpdfstring{get\+Host\+Manager()}{getHostManager()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1runtime_1_1_host_manager}{runtime\+::\+Host\+Manager}$\ast$ glow\+::\+Loader\+::get\+Host\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the host\+Manager, this can be useful for calling int othe Host\+Manager directly. \mbox{\Hypertarget{classglow_1_1_loader_ae2b9d671348ef892b4a752988414b39f}\label{classglow_1_1_loader_ae2b9d671348ef892b4a752988414b39f}} 
+\index{glow\+::\+Loader@{glow\+::\+Loader}!get\+Model\+Inputs@{get\+Model\+Inputs}}
+\index{get\+Model\+Inputs@{get\+Model\+Inputs}!glow\+::\+Loader@{glow\+::\+Loader}}
+\subsubsection{\texorpdfstring{get\+Model\+Inputs()}{getModelInputs()}}
+{\footnotesize\ttfamily void Loader\+::get\+Model\+Inputs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{input\+Names,  }\item[{std\+::vector$<$ \hyperlink{structglow_1_1_type}{Type} $>$ \&}]{input\+Types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get the description of the model inputs provided through the command line interface to the \hyperlink{classglow_1_1_loader}{Loader} by providing separately the names in the vector {\ttfamily input\+Names} and the input types in the vector {\ttfamily input\+Types}.
+
+Parse the \textquotesingle{}model\+Inputs\+Opt\textquotesingle{} option and get the model input names and types. The expected format is one of the following\+:
+\begin{DoxyItemize}
+\item $<$name$>$ (default type is \textquotesingle{}float\textquotesingle{}, default shape is \textquotesingle{}\mbox{[}1\mbox{]}\textquotesingle{})
+\item $<$name$>$,$<$type$>$,$<$shape$>$ for non-\/quantized types.
+\item $<$name$>$,$<$type$>$,$<$scale$>$,$<$offset$>$,$<$shape$>$ for quantized types. 
+\end{DoxyItemize}\mbox{\Hypertarget{classglow_1_1_loader_a4b7a9059016c43c4f81fa33d500a65f3}\label{classglow_1_1_loader_a4b7a9059016c43c4f81fa33d500a65f3}} 
+\index{glow\+::\+Loader@{glow\+::\+Loader}!get\+Model\+Opt\+Dir@{get\+Model\+Opt\+Dir}}
+\index{get\+Model\+Opt\+Dir@{get\+Model\+Opt\+Dir}!glow\+::\+Loader@{glow\+::\+Loader}}
+\subsubsection{\texorpdfstring{get\+Model\+Opt\+Dir()}{getModelOptDir()}}
+{\footnotesize\ttfamily llvm\+::\+String\+Ref Loader\+::get\+Model\+Opt\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Getter for the model path, expected to be a directory. \begin{DoxyPrecond}{Precondition}
+(model\+Path\+Opt.\+size() == 1) 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classglow_1_1_loader_af71f07b76373e50b28366c9250aedc84}\label{classglow_1_1_loader_af71f07b76373e50b28366c9250aedc84}} 
+\index{glow\+::\+Loader@{glow\+::\+Loader}!get\+Model\+Opt\+Path@{get\+Model\+Opt\+Path}}
+\index{get\+Model\+Opt\+Path@{get\+Model\+Opt\+Path}!glow\+::\+Loader@{glow\+::\+Loader}}
+\subsubsection{\texorpdfstring{get\+Model\+Opt\+Path()}{getModelOptPath()}}
+{\footnotesize\ttfamily std\+::string Loader\+::get\+Model\+Opt\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Getter for the model path. \begin{DoxyPrecond}{Precondition}
+(model\+Path\+Opt.\+size() == 1) 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classglow_1_1_loader_a24825fa4a696f20bc4e2eb90ac840f16}\label{classglow_1_1_loader_a24825fa4a696f20bc4e2eb90ac840f16}} 
+\index{glow\+::\+Loader@{glow\+::\+Loader}!get\+Module@{get\+Module}}
+\index{get\+Module@{get\+Module}!glow\+::\+Loader@{glow\+::\+Loader}}
+\subsubsection{\texorpdfstring{get\+Module()}{getModule()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_module}{Module}$\ast$ glow\+::\+Loader\+::get\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the \hyperlink{classglow_1_1_module}{Module}. This should not be called after compile since the compile process is destructive on the original function and module. \mbox{\Hypertarget{classglow_1_1_loader_aa0768ad9d8b71e237706a674b25d4376}\label{classglow_1_1_loader_aa0768ad9d8b71e237706a674b25d4376}} 
+\index{glow\+::\+Loader@{glow\+::\+Loader}!run\+Inference@{run\+Inference}}
+\index{run\+Inference@{run\+Inference}!glow\+::\+Loader@{glow\+::\+Loader}}
+\subsubsection{\texorpdfstring{run\+Inference()}{runInference()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Loader\+::run\+Inference (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} \&}]{bindings,  }\item[{size\+\_\+t}]{batch\+Size = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Runs inference, unless emit bundle mode is enabled. {\ttfamily bindings} binds specific placeholders to concrete tensors. The concrete tensors include quantization profile guided information. \mbox{\Hypertarget{classglow_1_1_loader_a0ccdbb5f29cb349efe8f3e34ff6a0fcd}\label{classglow_1_1_loader_a0ccdbb5f29cb349efe8f3e34ff6a0fcd}} 
+\index{glow\+::\+Loader@{glow\+::\+Loader}!run\+Inference@{run\+Inference}}
+\index{run\+Inference@{run\+Inference}!glow\+::\+Loader@{glow\+::\+Loader}}
+\subsubsection{\texorpdfstring{run\+Inference()}{runInference()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Loader\+::run\+Inference (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$}]{context,  }\item[{size\+\_\+t}]{batch\+Size = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Runs inference, {\ttfamily context} binds both Tensors to Placeholders and potentially holds a \hyperlink{classglow_1_1_trace_context}{Trace\+Context}. This method allows obtaining Trace\+Events from the run. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tools/loader/Loader.\+h\item 
+tools/loader/Loader.\+cpp\end{DoxyCompactItemize}

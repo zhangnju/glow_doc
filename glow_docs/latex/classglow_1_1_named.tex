@@ -1,0 +1,74 @@
+\hypertarget{classglow_1_1_named}{}\section{glow\+:\+:Named Class Reference}
+\label{classglow_1_1_named}\index{glow\+::\+Named@{glow\+::\+Named}}
+
+
+This add the capability to name subclasses.  
+
+
+
+
+{\ttfamily \#include $<$Traits.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Named\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classglow_1_1_named}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_named_ac406265dc7c227a235ef0967c1ca3b78}\label{classglow_1_1_named_ac406265dc7c227a235ef0967c1ca3b78}} 
+{\bfseries Named} (llvm\+::\+String\+Ref name)
+\item 
+llvm\+::\+String\+Ref \hyperlink{classglow_1_1_named_a953e8bbe0c565edf52e374d461579c4e}{get\+Name} () const
+\item 
+bool \hyperlink{classglow_1_1_named_aafdd13e8cd2d61adbbc9cb6fedd0acd4}{has\+Name} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_named_ac99fea3a80a29c8177bbba36232ba850}\label{classglow_1_1_named_ac99fea3a80a29c8177bbba36232ba850}} 
+void \hyperlink{classglow_1_1_named_ac99fea3a80a29c8177bbba36232ba850}{set\+Name} (llvm\+::\+String\+Ref name)
+\begin{DoxyCompactList}\small\item\em Set the name of the instruction to {\ttfamily name}. \end{DoxyCompactList}\item 
+bool \hyperlink{classglow_1_1_named_a199b7443a774b5268848a783ef6cb186}{compare\+By\+Name} (const \hyperlink{classglow_1_1_named}{Named} \&x) const
+\begin{DoxyCompactList}\small\item\em Compares by names,. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This add the capability to name subclasses. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_named_a199b7443a774b5268848a783ef6cb186}\label{classglow_1_1_named_a199b7443a774b5268848a783ef6cb186}} 
+\index{glow\+::\+Named@{glow\+::\+Named}!compare\+By\+Name@{compare\+By\+Name}}
+\index{compare\+By\+Name@{compare\+By\+Name}!glow\+::\+Named@{glow\+::\+Named}}
+\subsubsection{\texorpdfstring{compare\+By\+Name()}{compareByName()}}
+{\footnotesize\ttfamily bool glow\+::\+Named\+::compare\+By\+Name (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_named}{Named} \&}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares by names,. 
+
+\begin{DoxyReturn}{Returns}
+true if name\+\_\+ $<$ x.\+name\+\_\+. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_named_a953e8bbe0c565edf52e374d461579c4e}\label{classglow_1_1_named_a953e8bbe0c565edf52e374d461579c4e}} 
+\index{glow\+::\+Named@{glow\+::\+Named}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!glow\+::\+Named@{glow\+::\+Named}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily llvm\+::\+String\+Ref glow\+::\+Named\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the name of the instruction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_named_aafdd13e8cd2d61adbbc9cb6fedd0acd4}\label{classglow_1_1_named_aafdd13e8cd2d61adbbc9cb6fedd0acd4}} 
+\index{glow\+::\+Named@{glow\+::\+Named}!has\+Name@{has\+Name}}
+\index{has\+Name@{has\+Name}!glow\+::\+Named@{glow\+::\+Named}}
+\subsubsection{\texorpdfstring{has\+Name()}{hasName()}}
+{\footnotesize\ttfamily bool glow\+::\+Named\+::has\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the name of the instruction. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Base/Traits.\+h\end{DoxyCompactItemize}

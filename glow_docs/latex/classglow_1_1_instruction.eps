@@ -1,0 +1,545 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: ClassName
+%%Creator: Doxygen
+%%CreationDate: Time
+%%For: 
+%Magnification: 1.00
+%%Orientation: Portrait
+%%BoundingBox: 0 0 500 870.967742
+%%Pages: 0
+%%BeginSetup
+%%EndSetup
+%%EndComments
+
+% ----- variables -----
+
+/boxwidth 0 def
+/boxheight 40 def
+/fontheight 24 def
+/marginwidth 10 def
+/distx 20 def
+/disty 40 def
+/boundaspect 0.574074 def  % aspect ratio of the BoundingBox (width/height)
+/boundx 500 def
+/boundy boundx boundaspect div def
+/xspacing 0 def
+/yspacing 0 def
+/rows 81 def
+/cols 5 def
+/scalefactor 0 def
+/boxfont /Times-Roman findfont fontheight scalefont def
+
+% ----- procedures -----
+
+/dotted { [1 4] 0 setdash } def
+/dashed { [5] 0 setdash } def
+/solid  { [] 0 setdash } def
+
+/max % result = MAX(arg1,arg2)
+{
+  /a exch def
+  /b exch def
+  a b gt {a} {b} ifelse
+} def
+
+/xoffset % result = MAX(0,(scalefactor-(boxwidth*cols+distx*(cols-1)))/2)
+{
+  0 scalefactor boxwidth cols mul distx cols 1 sub mul add sub 2 div max
+} def
+
+/cw % boxwidth = MAX(boxwidth, stringwidth(arg1))
+{
+  /str exch def
+  /boxwidth boxwidth str stringwidth pop max def
+} def
+
+/box % draws a box with text `arg1' at grid pos (arg2,arg3)
+{ gsave
+  2 setlinewidth
+  newpath
+  exch xspacing mul xoffset add
+  exch yspacing mul
+  moveto
+  boxwidth 0 rlineto 
+  0 boxheight rlineto 
+  boxwidth neg 0 rlineto 
+  0 boxheight neg rlineto 
+  closepath
+  dup stringwidth pop neg boxwidth add 2 div
+  boxheight fontheight 2 div sub 2 div
+  rmoveto show stroke
+  grestore
+} def  
+
+/mark
+{ newpath
+  exch xspacing mul xoffset add boxwidth add
+  exch yspacing mul
+  moveto
+  0 boxheight 4 div rlineto
+  boxheight neg 4 div boxheight neg 4 div rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/arrow
+{ newpath
+  moveto
+  3 -8 rlineto
+  -6 0 rlineto
+  3 8 rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/out % draws an output connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight add
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto 
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/in % draws an input connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul disty 2 div sub
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/hedge
+{
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight 2 div sub
+  /y exch def
+  /x exch def
+  newpath
+  x y moveto
+  boxwidth 2 div distx add 0 rlineto
+  stroke
+  1 eq
+  { newpath x boxwidth 2 div distx add add y moveto
+    -8 3 rlineto
+    0 -6 rlineto
+    8 3 rlineto
+    closepath
+    eofill
+    stroke
+  } if
+} def
+
+/vedge
+{
+  /ye exch def
+  /ys exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add dup
+  ys yspacing mul boxheight 2 div sub
+  moveto
+  ye yspacing mul boxheight 2 div sub
+  lineto
+  stroke
+} def
+
+/conn % connections the blocks from col `arg1' to `arg2' of row `arg3'
+{
+  /ys exch def
+  /xe exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add
+  ys yspacing mul disty 2 div sub
+  moveto
+  xspacing xe xs sub mul 0
+  rlineto
+  stroke
+} def
+
+% ----- main ------
+
+boxfont setfont
+1 boundaspect scale
+(glow::Instruction) cw
+(glow::Value) cw
+(glow::TaggedListNode< Instruction >) cw
+(glow::Named) cw
+(glow::UseDef< Instruction, Use >) cw
+(glow::Typed) cw
+(glow::Kinded) cw
+(glow::tagged_list_details::NodeBase) cw
+(glow::AdaptiveAvgPoolGradInst) cw
+(glow::AdaptiveAvgPoolInst) cw
+(glow::AllocActivationInst) cw
+(glow::ArgMaxInst) cw
+(glow::AvgPoolGradInst) cw
+(glow::AvgPoolInst) cw
+(glow::BatchedAddInst) cw
+(glow::BatchedReduceAddInst) cw
+(glow::BatchedReduceMinInst) cw
+(glow::BatchOneHotInst) cw
+(glow::ChannelwiseQuantizedConvolutionInst) cw
+(glow::ConvertToInst) cw
+(glow::Convolution3DGradInst) cw
+(glow::Convolution3DInst) cw
+(glow::ConvolutionGradInst) cw
+(glow::ConvolutionInst) cw
+(glow::CopyInst) cw
+(glow::CPUConvDKKC8Inst) cw
+(glow::CPUMaxSplatInst) cw
+(glow::CrossEntropyLossGradInst) cw
+(glow::CrossEntropyLossInst) cw
+(glow::DeallocActivationInst) cw
+(glow::DebugPrintInst) cw
+(glow::DequantizeInst) cw
+(glow::ElementAddInst) cw
+(glow::ElementCmpEQInst) cw
+(glow::ElementCmpLTEInst) cw
+(glow::ElementCmpLTInst) cw
+(glow::ElementDivInst) cw
+(glow::ElementExpInst) cw
+(glow::ElementIsNaNInst) cw
+(glow::ElementLogInst) cw
+(glow::ElementMaxInst) cw
+(glow::ElementMinInst) cw
+(glow::ElementMulInst) cw
+(glow::ElementPowInst) cw
+(glow::ElementSelectInst) cw
+(glow::ElementSubInst) cw
+(glow::ExtractTensorInst) cw
+(glow::FusedRowwiseQuantizedSparseLengthsWeightedSumInst) cw
+(glow::GatherInst) cw
+(glow::GatherRangesInst) cw
+(glow::InsertTensorInst) cw
+(glow::IntLookupTableInst) cw
+(glow::LengthsRangeFillInst) cw
+(glow::LengthsSumInst) cw
+(glow::LengthsToRangesInst) cw
+(glow::LocalResponseNormalizationGradInst) cw
+(glow::LocalResponseNormalizationInst) cw
+(glow::MatMulInst) cw
+(glow::MaxPoolInst) cw
+(glow::MaxPoolWithArgmaxGradInst) cw
+(glow::MaxPoolWithArgmaxInst) cw
+(glow::ModuloInst) cw
+(glow::QuantizationProfileInst) cw
+(glow::QuantizeInst) cw
+(glow::ReluInst) cw
+(glow::RescaleQuantizedInst) cw
+(glow::ResizeNearestInst) cw
+(glow::RowwiseQuantizedFullyConnectedInst) cw
+(glow::RowwiseQuantizedSparseLengthsWeightedSumInst) cw
+(glow::ScatterDataInst) cw
+(glow::SigmoidInst) cw
+(glow::SoftMaxGradInst) cw
+(glow::SoftMaxInst) cw
+(glow::SpaceToDepthInst) cw
+(glow::SparseLengthsSumInst) cw
+(glow::SparseLengthsWeightedSumGradInst) cw
+(glow::SparseLengthsWeightedSumInst) cw
+(glow::SparseLengthsWeightedSumOffsetsInst) cw
+(glow::SparseToDenseInst) cw
+(glow::SparseToDenseMaskInst) cw
+(glow::SplatInst) cw
+(glow::TanhInst) cw
+(glow::TensorViewInst) cw
+(glow::TopKInst) cw
+(glow::TraceEventInst) cw
+(glow::TransposeInst) cw
+/boxwidth boxwidth marginwidth 2 mul add def
+/xspacing boxwidth distx add def
+/yspacing boxheight disty add def
+/scalefactor 
+  boxwidth cols mul distx cols 1 sub mul add
+  boxheight rows mul disty rows 1 sub mul add boundaspect mul 
+  max def
+boundx scalefactor div boundy scalefactor div scale
+
+% ----- classes -----
+
+ (glow::Instruction) 2.750000 78.000000 box
+ (glow::Value) 1.500000 79.000000 box
+ (glow::TaggedListNode< Instruction >) 4.000000 79.000000 box
+ (glow::Named) 0.000000 80.000000 box
+ (glow::UseDef< Instruction, Use >) 1.000000 80.000000 box
+ (glow::Typed) 2.000000 80.000000 box
+ (glow::Kinded) 3.000000 80.000000 box
+ (glow::tagged_list_details::NodeBase) 4.000000 80.000000 box
+ (glow::AdaptiveAvgPoolGradInst) 3.750000 77.000000 box
+ (glow::AdaptiveAvgPoolInst) 3.750000 76.000000 box
+ (glow::AllocActivationInst) 3.750000 75.000000 box
+ (glow::ArgMaxInst) 3.750000 74.000000 box
+ (glow::AvgPoolGradInst) 3.750000 73.000000 box
+ (glow::AvgPoolInst) 3.750000 72.000000 box
+ (glow::BatchedAddInst) 3.750000 71.000000 box
+ (glow::BatchedReduceAddInst) 3.750000 70.000000 box
+ (glow::BatchedReduceMinInst) 3.750000 69.000000 box
+ (glow::BatchOneHotInst) 3.750000 68.000000 box
+ (glow::ChannelwiseQuantizedConvolutionInst) 3.750000 67.000000 box
+ (glow::ConvertToInst) 3.750000 66.000000 box
+ (glow::Convolution3DGradInst) 3.750000 65.000000 box
+ (glow::Convolution3DInst) 3.750000 64.000000 box
+ (glow::ConvolutionGradInst) 3.750000 63.000000 box
+ (glow::ConvolutionInst) 3.750000 62.000000 box
+ (glow::CopyInst) 3.750000 61.000000 box
+ (glow::CPUConvDKKC8Inst) 3.750000 60.000000 box
+ (glow::CPUMaxSplatInst) 3.750000 59.000000 box
+ (glow::CrossEntropyLossGradInst) 3.750000 58.000000 box
+ (glow::CrossEntropyLossInst) 3.750000 57.000000 box
+ (glow::DeallocActivationInst) 3.750000 56.000000 box
+ (glow::DebugPrintInst) 3.750000 55.000000 box
+ (glow::DequantizeInst) 3.750000 54.000000 box
+ (glow::ElementAddInst) 3.750000 53.000000 box
+ (glow::ElementCmpEQInst) 3.750000 52.000000 box
+ (glow::ElementCmpLTEInst) 3.750000 51.000000 box
+ (glow::ElementCmpLTInst) 3.750000 50.000000 box
+ (glow::ElementDivInst) 3.750000 49.000000 box
+ (glow::ElementExpInst) 3.750000 48.000000 box
+ (glow::ElementIsNaNInst) 3.750000 47.000000 box
+ (glow::ElementLogInst) 3.750000 46.000000 box
+ (glow::ElementMaxInst) 3.750000 45.000000 box
+ (glow::ElementMinInst) 3.750000 44.000000 box
+ (glow::ElementMulInst) 3.750000 43.000000 box
+ (glow::ElementPowInst) 3.750000 42.000000 box
+ (glow::ElementSelectInst) 3.750000 41.000000 box
+ (glow::ElementSubInst) 3.750000 40.000000 box
+ (glow::ExtractTensorInst) 3.750000 39.000000 box
+ (glow::FusedRowwiseQuantizedSparseLengthsWeightedSumInst) 3.750000 38.000000 box
+ (glow::GatherInst) 3.750000 37.000000 box
+ (glow::GatherRangesInst) 3.750000 36.000000 box
+ (glow::InsertTensorInst) 3.750000 35.000000 box
+ (glow::IntLookupTableInst) 3.750000 34.000000 box
+ (glow::LengthsRangeFillInst) 3.750000 33.000000 box
+ (glow::LengthsSumInst) 3.750000 32.000000 box
+ (glow::LengthsToRangesInst) 3.750000 31.000000 box
+ (glow::LocalResponseNormalizationGradInst) 3.750000 30.000000 box
+ (glow::LocalResponseNormalizationInst) 3.750000 29.000000 box
+ (glow::MatMulInst) 3.750000 28.000000 box
+ (glow::MaxPoolInst) 3.750000 27.000000 box
+ (glow::MaxPoolWithArgmaxGradInst) 3.750000 26.000000 box
+ (glow::MaxPoolWithArgmaxInst) 3.750000 25.000000 box
+ (glow::ModuloInst) 3.750000 24.000000 box
+ (glow::QuantizationProfileInst) 3.750000 23.000000 box
+ (glow::QuantizeInst) 3.750000 22.000000 box
+ (glow::ReluInst) 3.750000 21.000000 box
+ (glow::RescaleQuantizedInst) 3.750000 20.000000 box
+ (glow::ResizeNearestInst) 3.750000 19.000000 box
+ (glow::RowwiseQuantizedFullyConnectedInst) 3.750000 18.000000 box
+ (glow::RowwiseQuantizedSparseLengthsWeightedSumInst) 3.750000 17.000000 box
+ (glow::ScatterDataInst) 3.750000 16.000000 box
+ (glow::SigmoidInst) 3.750000 15.000000 box
+ (glow::SoftMaxGradInst) 3.750000 14.000000 box
+ (glow::SoftMaxInst) 3.750000 13.000000 box
+ (glow::SpaceToDepthInst) 3.750000 12.000000 box
+ (glow::SparseLengthsSumInst) 3.750000 11.000000 box
+ (glow::SparseLengthsWeightedSumGradInst) 3.750000 10.000000 box
+ (glow::SparseLengthsWeightedSumInst) 3.750000 9.000000 box
+ (glow::SparseLengthsWeightedSumOffsetsInst) 3.750000 8.000000 box
+ (glow::SparseToDenseInst) 3.750000 7.000000 box
+ (glow::SparseToDenseMaskInst) 3.750000 6.000000 box
+ (glow::SplatInst) 3.750000 5.000000 box
+ (glow::TanhInst) 3.750000 4.000000 box
+ (glow::TensorViewInst) 3.750000 3.000000 box
+ (glow::TopKInst) 3.750000 2.000000 box
+ (glow::TraceEventInst) 3.750000 1.000000 box
+ (glow::TransposeInst) 3.750000 0.000000 box
+
+% ----- relations -----
+
+solid
+0 2.750000 78.000000 out
+solid
+1.500000 4.000000 79.000000 conn
+solid
+1 1.500000 79.000000 in
+solid
+0 1.500000 79.000000 out
+solid
+0.000000 3.000000 80.000000 conn
+solid
+1 4.000000 79.000000 in
+solid
+0 4.000000 79.000000 out
+solid
+1 0.000000 80.000000 in
+solid
+1 1.000000 80.000000 in
+solid
+1 2.000000 80.000000 in
+solid
+1 3.000000 80.000000 in
+solid
+1 4.000000 80.000000 in
+solid
+1 2.750000 77.250000 out
+solid
+0 2.750000 77.500000 hedge
+solid
+0 2.750000 76.500000 hedge
+solid
+0 2.750000 75.500000 hedge
+solid
+0 2.750000 74.500000 hedge
+solid
+0 2.750000 73.500000 hedge
+solid
+0 2.750000 72.500000 hedge
+solid
+0 2.750000 71.500000 hedge
+solid
+0 2.750000 70.500000 hedge
+solid
+0 2.750000 69.500000 hedge
+solid
+0 2.750000 68.500000 hedge
+solid
+0 2.750000 67.500000 hedge
+solid
+0 2.750000 66.500000 hedge
+solid
+0 2.750000 65.500000 hedge
+solid
+0 2.750000 64.500000 hedge
+solid
+0 2.750000 63.500000 hedge
+solid
+0 2.750000 62.500000 hedge
+solid
+0 2.750000 61.500000 hedge
+solid
+0 2.750000 60.500000 hedge
+solid
+0 2.750000 59.500000 hedge
+solid
+0 2.750000 58.500000 hedge
+solid
+0 2.750000 57.500000 hedge
+solid
+0 2.750000 56.500000 hedge
+solid
+0 2.750000 55.500000 hedge
+solid
+0 2.750000 54.500000 hedge
+solid
+0 2.750000 53.500000 hedge
+solid
+0 2.750000 52.500000 hedge
+solid
+0 2.750000 51.500000 hedge
+solid
+0 2.750000 50.500000 hedge
+solid
+0 2.750000 49.500000 hedge
+solid
+0 2.750000 48.500000 hedge
+solid
+0 2.750000 47.500000 hedge
+solid
+0 2.750000 46.500000 hedge
+solid
+0 2.750000 45.500000 hedge
+solid
+0 2.750000 44.500000 hedge
+solid
+0 2.750000 43.500000 hedge
+solid
+0 2.750000 42.500000 hedge
+solid
+0 2.750000 41.500000 hedge
+solid
+0 2.750000 40.500000 hedge
+solid
+0 2.750000 39.500000 hedge
+solid
+0 2.750000 38.500000 hedge
+solid
+0 2.750000 37.500000 hedge
+solid
+0 2.750000 36.500000 hedge
+solid
+0 2.750000 35.500000 hedge
+solid
+0 2.750000 34.500000 hedge
+solid
+0 2.750000 33.500000 hedge
+solid
+0 2.750000 32.500000 hedge
+solid
+0 2.750000 31.500000 hedge
+solid
+0 2.750000 30.500000 hedge
+solid
+0 2.750000 29.500000 hedge
+solid
+0 2.750000 28.500000 hedge
+solid
+0 2.750000 27.500000 hedge
+solid
+0 2.750000 26.500000 hedge
+solid
+0 2.750000 25.500000 hedge
+solid
+0 2.750000 24.500000 hedge
+solid
+0 2.750000 23.500000 hedge
+solid
+0 2.750000 22.500000 hedge
+solid
+0 2.750000 21.500000 hedge
+solid
+0 2.750000 20.500000 hedge
+solid
+0 2.750000 19.500000 hedge
+solid
+0 2.750000 18.500000 hedge
+solid
+0 2.750000 17.500000 hedge
+solid
+0 2.750000 16.500000 hedge
+solid
+0 2.750000 15.500000 hedge
+solid
+0 2.750000 14.500000 hedge
+solid
+0 2.750000 13.500000 hedge
+solid
+0 2.750000 12.500000 hedge
+solid
+0 2.750000 11.500000 hedge
+solid
+0 2.750000 10.500000 hedge
+solid
+0 2.750000 9.500000 hedge
+solid
+0 2.750000 8.500000 hedge
+solid
+0 2.750000 7.500000 hedge
+solid
+0 2.750000 6.500000 hedge
+solid
+0 2.750000 5.500000 hedge
+solid
+0 2.750000 4.500000 hedge
+solid
+0 2.750000 3.500000 hedge
+solid
+0 2.750000 2.500000 hedge
+solid
+0 2.750000 1.500000 hedge
+solid
+0 2.750000 0.500000 hedge
+solid
+2.750000 78.000000 0.500000 vedge

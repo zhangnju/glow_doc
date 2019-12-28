@@ -1,0 +1,110 @@
+\hypertarget{classglow_1_1tagged__list__details_1_1_iterator}{}\section{glow\+:\+:tagged\+\_\+list\+\_\+details\+:\+:Iterator$<$ T, Is\+Reverse, Is\+Const $>$ Class Template Reference}
+\label{classglow_1_1tagged__list__details_1_1_iterator}\index{glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator$<$ T, Is\+Reverse, Is\+Const $>$@{glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator$<$ T, Is\+Reverse, Is\+Const $>$}}
+
+
+\hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator} for a Tagged\+List$<$\+T$>$.  
+
+
+
+
+{\ttfamily \#include $<$Tagged\+List.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a7866f29c844d64ea8076bd87d9224fcf}\label{classglow_1_1tagged__list__details_1_1_iterator_a7866f29c844d64ea8076bd87d9224fcf}} 
+using {\bfseries difference\+\_\+type} = std\+::ptrdiff\+\_\+t
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_aba945697049bd97d41572ba7be30170d}\label{classglow_1_1tagged__list__details_1_1_iterator_aba945697049bd97d41572ba7be30170d}} 
+using {\bfseries value\+\_\+type} = typename Traits\+::\+Value\+Type
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_af5d5a738b64955f1a59281b6f2287031}\label{classglow_1_1tagged__list__details_1_1_iterator_af5d5a738b64955f1a59281b6f2287031}} 
+using {\bfseries pointer} = value\+\_\+type $\ast$
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a695cf105911cfa278c927983c888c675}\label{classglow_1_1tagged__list__details_1_1_iterator_a695cf105911cfa278c927983c888c675}} 
+using {\bfseries reference} = value\+\_\+type \&
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a3c95fd157513a909fdc4b0c6d499cb2f}\label{classglow_1_1tagged__list__details_1_1_iterator_a3c95fd157513a909fdc4b0c6d499cb2f}} 
+using {\bfseries iterator\+\_\+category} = std\+::bidirectional\+\_\+iterator\+\_\+tag
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a3ebfc8cff52ed850932de47ab93a2767}\label{classglow_1_1tagged__list__details_1_1_iterator_a3ebfc8cff52ed850932de47ab93a2767}} 
+\hyperlink{classglow_1_1tagged__list__details_1_1_iterator_a3ebfc8cff52ed850932de47ab93a2767}{Iterator} (value\+\_\+type $\ast$n)
+\begin{DoxyCompactList}\small\item\em Create an iterator pointing at n. \end{DoxyCompactList}\item 
+{\footnotesize template$<$bool Orig\+Is\+Const$>$ }\\\hyperlink{classglow_1_1tagged__list__details_1_1_iterator_a011e03d00ac0a027f807f7524f94cda8}{Iterator} (const \hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator}$<$ T, Is\+Reverse, Orig\+Is\+Const $>$ \&orig, typename std\+::enable\+\_\+if$<$ Is\+Const$\vert$$\vert$!Orig\+Is\+Const, void $\ast$$>$\+::type=nullptr)
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a9156203f70f98d9d72d609b23a0d81c4}\label{classglow_1_1tagged__list__details_1_1_iterator_a9156203f70f98d9d72d609b23a0d81c4}} 
+value\+\_\+type \& \hyperlink{classglow_1_1tagged__list__details_1_1_iterator_a9156203f70f98d9d72d609b23a0d81c4}{operator$\ast$} ()
+\begin{DoxyCompactList}\small\item\em Dereferencing with {\ttfamily $\ast$i}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a2c41e3f79d5ea79b3bc47d4a2d9d2b9e}\label{classglow_1_1tagged__list__details_1_1_iterator_a2c41e3f79d5ea79b3bc47d4a2d9d2b9e}} 
+value\+\_\+type $\ast$ \hyperlink{classglow_1_1tagged__list__details_1_1_iterator_a2c41e3f79d5ea79b3bc47d4a2d9d2b9e}{operator-\/$>$} ()
+\begin{DoxyCompactList}\small\item\em Dereferencing with {\ttfamily i-\/$>$field}. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classglow_1_1tagged__list__details_1_1_iterator_a582ecf91ea38bfe45e5dd09cc255acfc}{get\+Node\+Ordering} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a297d03f5bb6b8110a1e824559b827da5}\label{classglow_1_1tagged__list__details_1_1_iterator_a297d03f5bb6b8110a1e824559b827da5}} 
+\hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator} \& \hyperlink{classglow_1_1tagged__list__details_1_1_iterator_a297d03f5bb6b8110a1e824559b827da5}{operator++} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/increment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_ae47000e036a93b20a9e427256025cde3}\label{classglow_1_1tagged__list__details_1_1_iterator_ae47000e036a93b20a9e427256025cde3}} 
+\hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator} \hyperlink{classglow_1_1tagged__list__details_1_1_iterator_ae47000e036a93b20a9e427256025cde3}{operator++} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/increment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_ae74aee44c2ee2ceda1c00b9732754399}\label{classglow_1_1tagged__list__details_1_1_iterator_ae74aee44c2ee2ceda1c00b9732754399}} 
+\hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator} \& {\bfseries operator-\/-\/} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_ac2d3ce3a6ef12ef685beefbe040c99da}\label{classglow_1_1tagged__list__details_1_1_iterator_ac2d3ce3a6ef12ef685beefbe040c99da}} 
+\hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator} \hyperlink{classglow_1_1tagged__list__details_1_1_iterator_ac2d3ce3a6ef12ef685beefbe040c99da}{operator-\/-\/} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/decrement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a9a56653266ecaea749ca94516a403d9a}\label{classglow_1_1tagged__list__details_1_1_iterator_a9a56653266ecaea749ca94516a403d9a}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\class {\bfseries glow\+::\+Tagged\+List}
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a34a3c470ca8b99fa9ef4deeffd6bb857}\label{classglow_1_1tagged__list__details_1_1_iterator_a34a3c470ca8b99fa9ef4deeffd6bb857}} 
+class {\bfseries glow\+::\+Tagged\+List\+Node$<$ T $>$}
+\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a287ad3a6bd1f713d9aa5440f8f04eb27}\label{classglow_1_1tagged__list__details_1_1_iterator_a287ad3a6bd1f713d9aa5440f8f04eb27}} 
+bool \hyperlink{classglow_1_1tagged__list__details_1_1_iterator_a287ad3a6bd1f713d9aa5440f8f04eb27}{operator==} (const \hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator} \&L\+HS, const \hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator} \&R\+HS)
+\begin{DoxyCompactList}\small\item\em Comparing iterators for equality. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_ae9bcaf0b683f96c35d4f1656e4200325}\label{classglow_1_1tagged__list__details_1_1_iterator_ae9bcaf0b683f96c35d4f1656e4200325}} 
+bool {\bfseries operator!=} (const \hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator} \&L\+HS, const \hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator} \&R\+HS)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T, bool Is\+Reverse, bool Is\+Const$>$\newline
+class glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator$<$ T, Is\+Reverse, Is\+Const $>$}
+
+\hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator} for a Tagged\+List$<$\+T$>$. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a011e03d00ac0a027f807f7524f94cda8}\label{classglow_1_1tagged__list__details_1_1_iterator_a011e03d00ac0a027f807f7524f94cda8}} 
+\index{glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator@{glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator@{glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator}}
+\subsubsection{\texorpdfstring{Iterator()}{Iterator()}}
+{\footnotesize\ttfamily template$<$typename T, bool Is\+Reverse, bool Is\+Const$>$ \\
+template$<$bool Orig\+Is\+Const$>$ \\
+\hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator}$<$ T, Is\+Reverse, Is\+Const $>$\+::\hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator} (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Iterator}$<$ T, Is\+Reverse, Orig\+Is\+Const $>$ \&}]{orig,  }\item[{typename std\+::enable\+\_\+if$<$ Is\+Const$\vert$$\vert$!Orig\+Is\+Const, void $\ast$$>$\+::type}]{ = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Copy constructor is templated so a const iterator can be initialized with a non-\/const iterator, but not the other way around. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1tagged__list__details_1_1_iterator_a582ecf91ea38bfe45e5dd09cc255acfc}\label{classglow_1_1tagged__list__details_1_1_iterator_a582ecf91ea38bfe45e5dd09cc255acfc}} 
+\index{glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator@{glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator}!get\+Node\+Ordering@{get\+Node\+Ordering}}
+\index{get\+Node\+Ordering@{get\+Node\+Ordering}!glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator@{glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator}}
+\subsubsection{\texorpdfstring{get\+Node\+Ordering()}{getNodeOrdering()}}
+{\footnotesize\ttfamily template$<$typename T, bool Is\+Reverse, bool Is\+Const$>$ \\
+uint32\+\_\+t \hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{glow\+::tagged\+\_\+list\+\_\+details\+::\+Iterator}$<$ T, Is\+Reverse, Is\+Const $>$\+::get\+Node\+Ordering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Comparing iterators for inequality.
+
+This is the defining feature of \hyperlink{classglow_1_1_tagged_list}{Tagged\+List} -- It is possible to compare the relative positions of list nodes in constant time.
+
+Returns a node ordering key that is always monotonic.
+
+The key returned for an end() iterator is greater than any other key. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Base/Tagged\+List.\+h\end{DoxyCompactItemize}

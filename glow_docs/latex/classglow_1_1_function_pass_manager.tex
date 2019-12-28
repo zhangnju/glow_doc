@@ -1,0 +1,47 @@
+\hypertarget{classglow_1_1_function_pass_manager}{}\section{glow\+:\+:Function\+Pass\+Manager Class Reference}
+\label{classglow_1_1_function_pass_manager}\index{glow\+::\+Function\+Pass\+Manager@{glow\+::\+Function\+Pass\+Manager}}
+
+
+{\ttfamily \#include $<$Pass\+Manager.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Function\+Pass\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_function_pass_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_manager_aacb987bbb3ae15f4afc84a4bcb23fb42}\label{classglow_1_1_function_pass_manager_aacb987bbb3ae15f4afc84a4bcb23fb42}} 
+{\bfseries Function\+Pass\+Manager} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_function_pass_pipeline}{Function\+Pass\+Pipeline} pipeline, const \hyperlink{classglow_1_1_backend}{Backend} $\ast$backend=nullptr)
+\item 
+bool \hyperlink{classglow_1_1_function_pass_manager_ac2c8fd23e1415a40177ec7e0cadd5930}{run} (\hyperlink{classglow_1_1_function}{Function} $\ast$F, const \hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_manager_a8771d26bc6f66bf8163e1397d250d601}\label{classglow_1_1_function_pass_manager_a8771d26bc6f66bf8163e1397d250d601}} 
+const \hyperlink{classglow_1_1_function_pass_pipeline}{Function\+Pass\+Pipeline} \& \hyperlink{classglow_1_1_function_pass_manager_a8771d26bc6f66bf8163e1397d250d601}{get\+Pipeline} () const
+\begin{DoxyCompactList}\small\item\em Getter for a reference to the Pipeline used by this Pass\+Manager.. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_manager_ac0a103c6b97dce87a63020fb98f2049f}\label{classglow_1_1_function_pass_manager_ac0a103c6b97dce87a63020fb98f2049f}} 
+void \hyperlink{classglow_1_1_function_pass_manager_ac0a103c6b97dce87a63020fb98f2049f}{dump} (llvm\+::raw\+\_\+ostream \&os=llvm\+::outs()) const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_function_pass_manager}{Function\+Pass\+Manager} to {\ttfamily os}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manager for running a series of Function\+Passes. Given some \hyperlink{classglow_1_1_function}{Function}, \hyperlink{structglow_1_1_compilation_context}{Compilation\+Context}, and provided Pipeline, it will run all passes on the \hyperlink{classglow_1_1_function}{Function}. Enables easier debugging given run\+Pre\+Pass() and run\+Post\+Pass() calls, which can be modified to run some code before or before every pass. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_function_pass_manager_ac2c8fd23e1415a40177ec7e0cadd5930}\label{classglow_1_1_function_pass_manager_ac2c8fd23e1415a40177ec7e0cadd5930}} 
+\index{glow\+::\+Function\+Pass\+Manager@{glow\+::\+Function\+Pass\+Manager}!run@{run}}
+\index{run@{run}!glow\+::\+Function\+Pass\+Manager@{glow\+::\+Function\+Pass\+Manager}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily bool Function\+Pass\+Manager\+::run (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} $\ast$}]{F,  }\item[{const \hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx }\end{DoxyParamCaption})}
+
+Run the \hyperlink{classglow_1_1_function_pass_pipeline}{Function\+Pass\+Pipeline} given the pipeline\+\_\+ and {\ttfamily cctx}. \begin{DoxyReturn}{Returns}
+whether {\ttfamily F} was modified. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Optimizer/\+Graph\+Optimizer/Pass\+Manager.\+h\item 
+lib/\+Optimizer/\+Graph\+Optimizer/Pass\+Manager.\+cpp\end{DoxyCompactItemize}

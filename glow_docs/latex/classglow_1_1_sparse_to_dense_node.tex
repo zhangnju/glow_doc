@@ -1,0 +1,106 @@
+\hypertarget{classglow_1_1_sparse_to_dense_node}{}\section{glow\+:\+:Sparse\+To\+Dense\+Node Class Reference}
+\label{classglow_1_1_sparse_to_dense_node}\index{glow\+::\+Sparse\+To\+Dense\+Node@{glow\+::\+Sparse\+To\+Dense\+Node}}
+
+
+Converts the sparse representation specified by the pair (Indices, Values) into a dense one. This dense representation contains each value from Values at the corresponding index specified in Indices. Unspecified indices are filled with zeroes. Indices may contain duplicate values and in this case, all of the corresponding values in Values are added together.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Sparse\+To\+Dense\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_sparse_to_dense_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_ac275b7928184060613e0e17cae98f953}\label{classglow_1_1_sparse_to_dense_node_ac275b7928184060613e0e17cae98f953}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Indices\+Idx} = 0, 
+{\bfseries Values\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a2e4c41bf206dd7263d053f28226ace25}\label{classglow_1_1_sparse_to_dense_node_a2e4c41bf206dd7263d053f28226ace25}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a163f44bee977c3b7066c01e13d07fe54}\label{classglow_1_1_sparse_to_dense_node_a163f44bee977c3b7066c01e13d07fe54}} 
+{\bfseries Sparse\+To\+Dense\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} Values)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a1ae3169aac5ba1321639c3113fb9944b}\label{classglow_1_1_sparse_to_dense_node_a1ae3169aac5ba1321639c3113fb9944b}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Indices} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a22a90303e1df5a7caa4d2233deed0881}\label{classglow_1_1_sparse_to_dense_node_a22a90303e1df5a7caa4d2233deed0881}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Values} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_acbdf772e84548ecfb3ea69b4c42276f5}\label{classglow_1_1_sparse_to_dense_node_acbdf772e84548ecfb3ea69b4c42276f5}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a46fbb8abafa831c68f174e3f4bb0df5b}\label{classglow_1_1_sparse_to_dense_node_a46fbb8abafa831c68f174e3f4bb0df5b}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_ab12d82ba06ecfc6e21e42933ce20b2c0}\label{classglow_1_1_sparse_to_dense_node_ab12d82ba06ecfc6e21e42933ce20b2c0}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_abdef5c7fb65b33ad1ad0f7be1ccc2d12}\label{classglow_1_1_sparse_to_dense_node_abdef5c7fb65b33ad1ad0f7be1ccc2d12}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a60733d49f311bdca07c0d657a1040bcf}\label{classglow_1_1_sparse_to_dense_node_a60733d49f311bdca07c0d657a1040bcf}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a13224c8c2a733d98cc2f6931c77ec478}\label{classglow_1_1_sparse_to_dense_node_a13224c8c2a733d98cc2f6931c77ec478}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a1946b574a0417b8855ee18547219b8a1}\label{classglow_1_1_sparse_to_dense_node_a1946b574a0417b8855ee18547219b8a1}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a04b286d8ec54c513a0e9c766f959def3}\label{classglow_1_1_sparse_to_dense_node_a04b286d8ec54c513a0e9c766f959def3}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a35e810f50c3c5cd42c6f7277fa224431}\label{classglow_1_1_sparse_to_dense_node_a35e810f50c3c5cd42c6f7277fa224431}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a2da2981e620d0f5e48d5734432cc7710}\label{classglow_1_1_sparse_to_dense_node_a2da2981e620d0f5e48d5734432cc7710}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_af04fee08f8c9fd920e21326a46a9264f}\label{classglow_1_1_sparse_to_dense_node_af04fee08f8c9fd920e21326a46a9264f}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_abc232df565b4c6e269dbeebbc7ff7e51}\label{classglow_1_1_sparse_to_dense_node_abc232df565b4c6e269dbeebbc7ff7e51}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_sparse_to_dense_node}{Sparse\+To\+Dense\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a18e0205cf44555df4d99aaf3f192331d}\label{classglow_1_1_sparse_to_dense_node_a18e0205cf44555df4d99aaf3f192331d}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a6562532d8402e39eeababdf69af10fbc}\label{classglow_1_1_sparse_to_dense_node_a6562532d8402e39eeababdf69af10fbc}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a24d59ac29e86e679c7182897157b7761}\label{classglow_1_1_sparse_to_dense_node_a24d59ac29e86e679c7182897157b7761}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_a6ea76821a0e1a83f0dc501974fe62061}\label{classglow_1_1_sparse_to_dense_node_a6ea76821a0e1a83f0dc501974fe62061}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_to_dense_node_adabb75cb0175a80cf0044e0b7feedb55}\label{classglow_1_1_sparse_to_dense_node_adabb75cb0175a80cf0044e0b7feedb55}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Converts the sparse representation specified by the pair (Indices, Values) into a dense one. This dense representation contains each value from Values at the corresponding index specified in Indices. Unspecified indices are filled with zeroes. Indices may contain duplicate values and in this case, all of the corresponding values in Values are added together. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

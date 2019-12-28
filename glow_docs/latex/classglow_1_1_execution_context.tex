@@ -1,0 +1,155 @@
+\hypertarget{classglow_1_1_execution_context}{}\section{glow\+:\+:Execution\+Context Class Reference}
+\label{classglow_1_1_execution_context}\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+
+
+{\ttfamily \#include $<$Execution\+Context.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_execution_context_a2c83ff142ac1034d32f1e7cea8641b82}\label{classglow_1_1_execution_context_a2c83ff142ac1034d32f1e7cea8641b82}} 
+\hyperlink{classglow_1_1_execution_context_a2c83ff142ac1034d32f1e7cea8641b82}{Execution\+Context} ()
+\begin{DoxyCompactList}\small\item\em Trace Events recorded during this run. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_execution_context_a67e137ead22a7b1ec385cc05649e90ce}\label{classglow_1_1_execution_context_a67e137ead22a7b1ec385cc05649e90ce}} 
+{\bfseries Execution\+Context} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $>$ bindings)
+\item 
+\mbox{\Hypertarget{classglow_1_1_execution_context_ad41253f57ca17adc5144141398f7a2d0}\label{classglow_1_1_execution_context_ad41253f57ca17adc5144141398f7a2d0}} 
+{\bfseries Execution\+Context} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $>$ bindings, std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings} $>$ devices)
+\item 
+\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$ \hyperlink{classglow_1_1_execution_context_a12a98468e7e9884864da752c7bf14c40}{get\+Placeholder\+Bindings} ()
+\item 
+const \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$ \hyperlink{classglow_1_1_execution_context_a67b9cf8da73f45da3aba2a250164dfb3}{get\+Placeholder\+Bindings} () const
+\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $>$ \hyperlink{classglow_1_1_execution_context_ab16953545c9c9c181083425f8e319a17}{move\+Placeholder\+Bindings} ()
+\item 
+\hyperlink{classglow_1_1_device_bindings}{Device\+Bindings} $\ast$ \hyperlink{classglow_1_1_execution_context_ae85ee88daa4fe05462d263357f04b37d}{get\+Device\+Bindings} ()
+\item 
+const \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings} $\ast$ \hyperlink{classglow_1_1_execution_context_ad618b65cd4698dbe9bac4e442e0c8750}{get\+Device\+Bindings} () const
+\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings} $>$ \hyperlink{classglow_1_1_execution_context_a557287e56fe650dd6f3ce11109d3788d}{set\+Device\+Bindings} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings} $>$ bindings)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings} and. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_trace_context}{Trace\+Context} $\ast$ \hyperlink{classglow_1_1_execution_context_a45f5097c2594757a50c7c9579b2d2ed9}{get\+Trace\+Context} ()
+\item 
+const \hyperlink{classglow_1_1_trace_context}{Trace\+Context} $\ast$ \hyperlink{classglow_1_1_execution_context_a2a7b10635c0b5d13f7234b3edc1ea30d}{get\+Trace\+Context} () const
+\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_trace_context}{Trace\+Context} $>$ \hyperlink{classglow_1_1_execution_context_a72b3080f584f93d53717c9c083222559}{set\+Trace\+Context} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_trace_context}{Trace\+Context} $>$ trace\+Context)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classglow_1_1_trace_context}{Trace\+Context} and. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_execution_context_a685f89c25b5b17a15d82b406f966f335}\label{classglow_1_1_execution_context_a685f89c25b5b17a15d82b406f966f335}} 
+\hyperlink{classglow_1_1_execution_context}{Execution\+Context} \hyperlink{classglow_1_1_execution_context_a685f89c25b5b17a15d82b406f966f335}{clone} ()
+\begin{DoxyCompactList}\small\item\em Clones this \hyperlink{classglow_1_1_execution_context}{Execution\+Context}, but does not clone underlying Tensors. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_scoped_trace_block}{Scoped\+Trace\+Block} \hyperlink{classglow_1_1_execution_context_a81cef00fa3055426a4949c2f08f628a5}{scoped\+Event} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} level)
+\item 
+void \hyperlink{classglow_1_1_execution_context_a47595ddf5237caa5b6bb901bba1733fe}{log\+Trace\+Event} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} level, char type=Trace\+Event\+::\+Instant\+Type, std\+::map$<$ std\+::string, std\+::string $>$ args=\{\})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The runtime context for a single execution (Inferance or Training) in the the Glow Execution Engine or Host\+Manager. This class includes the mapping between Input/\+Output Placeholders and the materialized Tensors used for this run, the set of Device specific details required to execute the function, and stores Trace\+Events that were generated as a result of the run. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_execution_context_ae85ee88daa4fe05462d263357f04b37d}\label{classglow_1_1_execution_context_ae85ee88daa4fe05462d263357f04b37d}} 
+\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}!get\+Device\+Bindings@{get\+Device\+Bindings}}
+\index{get\+Device\+Bindings@{get\+Device\+Bindings}!glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+\subsubsection{\texorpdfstring{get\+Device\+Bindings()}{getDeviceBindings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings}$\ast$ glow\+::\+Execution\+Context\+::get\+Device\+Bindings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a non-\/owning pointer to the \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_execution_context_ad618b65cd4698dbe9bac4e442e0c8750}\label{classglow_1_1_execution_context_ad618b65cd4698dbe9bac4e442e0c8750}} 
+\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}!get\+Device\+Bindings@{get\+Device\+Bindings}}
+\index{get\+Device\+Bindings@{get\+Device\+Bindings}!glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+\subsubsection{\texorpdfstring{get\+Device\+Bindings()}{getDeviceBindings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings}$\ast$ glow\+::\+Execution\+Context\+::get\+Device\+Bindings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a const non-\/owning pointer to the \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_execution_context_a12a98468e7e9884864da752c7bf14c40}\label{classglow_1_1_execution_context_a12a98468e7e9884864da752c7bf14c40}} 
+\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}!get\+Placeholder\+Bindings@{get\+Placeholder\+Bindings}}
+\index{get\+Placeholder\+Bindings@{get\+Placeholder\+Bindings}!glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+\subsubsection{\texorpdfstring{get\+Placeholder\+Bindings()}{getPlaceholderBindings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings}$\ast$ glow\+::\+Execution\+Context\+::get\+Placeholder\+Bindings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a non-\/owning pointer to the \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_execution_context_a67b9cf8da73f45da3aba2a250164dfb3}\label{classglow_1_1_execution_context_a67b9cf8da73f45da3aba2a250164dfb3}} 
+\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}!get\+Placeholder\+Bindings@{get\+Placeholder\+Bindings}}
+\index{get\+Placeholder\+Bindings@{get\+Placeholder\+Bindings}!glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+\subsubsection{\texorpdfstring{get\+Placeholder\+Bindings()}{getPlaceholderBindings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings}$\ast$ glow\+::\+Execution\+Context\+::get\+Placeholder\+Bindings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a const non-\/owning pointer to the \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_execution_context_a45f5097c2594757a50c7c9579b2d2ed9}\label{classglow_1_1_execution_context_a45f5097c2594757a50c7c9579b2d2ed9}} 
+\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}!get\+Trace\+Context@{get\+Trace\+Context}}
+\index{get\+Trace\+Context@{get\+Trace\+Context}!glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+\subsubsection{\texorpdfstring{get\+Trace\+Context()}{getTraceContext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_trace_context}{Trace\+Context}$\ast$ glow\+::\+Execution\+Context\+::get\+Trace\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a non-\/owning pointer to the \hyperlink{classglow_1_1_trace_context}{Trace\+Context}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_execution_context_a2a7b10635c0b5d13f7234b3edc1ea30d}\label{classglow_1_1_execution_context_a2a7b10635c0b5d13f7234b3edc1ea30d}} 
+\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}!get\+Trace\+Context@{get\+Trace\+Context}}
+\index{get\+Trace\+Context@{get\+Trace\+Context}!glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+\subsubsection{\texorpdfstring{get\+Trace\+Context()}{getTraceContext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{classglow_1_1_trace_context}{Trace\+Context}$\ast$ glow\+::\+Execution\+Context\+::get\+Trace\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a const non-\/owning pointer to the \hyperlink{classglow_1_1_trace_context}{Trace\+Context}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_execution_context_a47595ddf5237caa5b6bb901bba1733fe}\label{classglow_1_1_execution_context_a47595ddf5237caa5b6bb901bba1733fe}} 
+\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}!log\+Trace\+Event@{log\+Trace\+Event}}
+\index{log\+Trace\+Event@{log\+Trace\+Event}!glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+\subsubsection{\texorpdfstring{log\+Trace\+Event()}{logTraceEvent()}}
+{\footnotesize\ttfamily void glow\+::\+Execution\+Context\+::log\+Trace\+Event (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level}}]{level,  }\item[{char}]{type = {\ttfamily TraceEvent\+:\+:InstantType},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{args = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A helper function to log a \hyperlink{structglow_1_1_trace_event}{Trace\+Event} at the current time, if there is a \hyperlink{classglow_1_1_trace_context}{Trace\+Context} available. \mbox{\Hypertarget{classglow_1_1_execution_context_ab16953545c9c9c181083425f8e319a17}\label{classglow_1_1_execution_context_ab16953545c9c9c181083425f8e319a17}} 
+\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}!move\+Placeholder\+Bindings@{move\+Placeholder\+Bindings}}
+\index{move\+Placeholder\+Bindings@{move\+Placeholder\+Bindings}!glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+\subsubsection{\texorpdfstring{move\+Placeholder\+Bindings()}{movePlaceholderBindings()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings}$>$ glow\+::\+Execution\+Context\+::move\+Placeholder\+Bindings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an owning pointer to the \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_execution_context_a81cef00fa3055426a4949c2f08f628a5}\label{classglow_1_1_execution_context_a81cef00fa3055426a4949c2f08f628a5}} 
+\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}!scoped\+Event@{scoped\+Event}}
+\index{scoped\+Event@{scoped\+Event}!glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+\subsubsection{\texorpdfstring{scoped\+Event()}{scopedEvent()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_scoped_trace_block}{Scoped\+Trace\+Block} glow\+::\+Execution\+Context\+::scoped\+Event (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level}}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A helper function to create a scoped \hyperlink{structglow_1_1_trace_event}{Trace\+Event} builder. If there is no \hyperlink{classglow_1_1_trace_context}{Trace\+Context}, this will still create an object, but it will do nothing. \mbox{\Hypertarget{classglow_1_1_execution_context_a557287e56fe650dd6f3ce11109d3788d}\label{classglow_1_1_execution_context_a557287e56fe650dd6f3ce11109d3788d}} 
+\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}!set\+Device\+Bindings@{set\+Device\+Bindings}}
+\index{set\+Device\+Bindings@{set\+Device\+Bindings}!glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+\subsubsection{\texorpdfstring{set\+Device\+Bindings()}{setDeviceBindings()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\hyperlink{classglow_1_1_device_bindings}{Device\+Bindings}$>$ glow\+::\+Execution\+Context\+::set\+Device\+Bindings (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings} $>$}]{bindings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \hyperlink{classglow_1_1_device_bindings}{Device\+Bindings} and. 
+
+\begin{DoxyReturn}{Returns}
+the existing value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_execution_context_a72b3080f584f93d53717c9c083222559}\label{classglow_1_1_execution_context_a72b3080f584f93d53717c9c083222559}} 
+\index{glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}!set\+Trace\+Context@{set\+Trace\+Context}}
+\index{set\+Trace\+Context@{set\+Trace\+Context}!glow\+::\+Execution\+Context@{glow\+::\+Execution\+Context}}
+\subsubsection{\texorpdfstring{set\+Trace\+Context()}{setTraceContext()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\hyperlink{classglow_1_1_trace_context}{Trace\+Context}$>$ glow\+::\+Execution\+Context\+::set\+Trace\+Context (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_trace_context}{Trace\+Context} $>$}]{trace\+Context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \hyperlink{classglow_1_1_trace_context}{Trace\+Context} and. 
+
+\begin{DoxyReturn}{Returns}
+the existing value. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Execution\+Context/Execution\+Context.\+h\end{DoxyCompactItemize}

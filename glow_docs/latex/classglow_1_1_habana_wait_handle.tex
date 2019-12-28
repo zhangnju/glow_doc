@@ -1,0 +1,53 @@
+\hypertarget{classglow_1_1_habana_wait_handle}{}\section{glow\+:\+:Habana\+Wait\+Handle Class Reference}
+\label{classglow_1_1_habana_wait_handle}\index{glow\+::\+Habana\+Wait\+Handle@{glow\+::\+Habana\+Wait\+Handle}}
+
+
+{\ttfamily \#include $<$Habana\+Function.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_wait_handle_a2eab78071cddfb6fcc45568e17218025}\label{classglow_1_1_habana_wait_handle_a2eab78071cddfb6fcc45568e17218025}} 
+\hyperlink{classglow_1_1_habana_wait_handle_a2eab78071cddfb6fcc45568e17218025}{Habana\+Wait\+Handle} ()
+\begin{DoxyCompactList}\small\item\em Constructors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_habana_wait_handle_aa233682cf15e8569a40b8ca50882fa21}\label{classglow_1_1_habana_wait_handle_aa233682cf15e8569a40b8ca50882fa21}} 
+{\bfseries Habana\+Wait\+Handle} (uint32\+\_\+t device\+Id, syn\+Wait\+Handle handle, std\+::vector$<$ Enqueue\+Tensor\+Info $>$ \&\&input\+Info, std\+::vector$<$ Enqueue\+Tensor\+Info $>$ \&\&output\+Info)
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_wait_handle_a00c27cc1cb084a65da5ad5aaeedc857e}\label{classglow_1_1_habana_wait_handle_a00c27cc1cb084a65da5ad5aaeedc857e}} 
+\hyperlink{classglow_1_1_habana_wait_handle_a00c27cc1cb084a65da5ad5aaeedc857e}{$\sim$\+Habana\+Wait\+Handle} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_habana_wait_handle_ad793416bd47a5fcc6f1fa477b60ca43a}\label{classglow_1_1_habana_wait_handle_ad793416bd47a5fcc6f1fa477b60ca43a}} 
+\hyperlink{classglow_1_1_habana_wait_handle_ad793416bd47a5fcc6f1fa477b60ca43a}{Habana\+Wait\+Handle} (\hyperlink{classglow_1_1_habana_wait_handle}{Habana\+Wait\+Handle} \&\&)
+\begin{DoxyCompactList}\small\item\em Allow moves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_habana_wait_handle_a167510ecfeb5172de628309e539ed49e}\label{classglow_1_1_habana_wait_handle_a167510ecfeb5172de628309e539ed49e}} 
+\hyperlink{classglow_1_1_habana_wait_handle}{Habana\+Wait\+Handle} \& {\bfseries operator=} (\hyperlink{classglow_1_1_habana_wait_handle}{Habana\+Wait\+Handle} \&\&)
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_wait_handle_af2353bd0a1f814845bbb9a216a46e14f}\label{classglow_1_1_habana_wait_handle_af2353bd0a1f814845bbb9a216a46e14f}} 
+\hyperlink{classglow_1_1_habana_wait_handle_af2353bd0a1f814845bbb9a216a46e14f}{Habana\+Wait\+Handle} (const \hyperlink{classglow_1_1_habana_wait_handle}{Habana\+Wait\+Handle} \&)=delete
+\begin{DoxyCompactList}\small\item\em Prohibit copy and assignment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_habana_wait_handle_af2bb79e423353e4d92b1b3fc37516cac}\label{classglow_1_1_habana_wait_handle_af2bb79e423353e4d92b1b3fc37516cac}} 
+\hyperlink{classglow_1_1_habana_wait_handle}{Habana\+Wait\+Handle} \& {\bfseries operator=} (const \hyperlink{classglow_1_1_habana_wait_handle}{Habana\+Wait\+Handle} \&)=delete
+\item 
+bool \hyperlink{classglow_1_1_habana_wait_handle_abe89943429bca91c7a0f796fb12c4548}{wait} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wrapper class for syn\+Wait\+Handle and all related state that must persist until the handle is waited on. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_habana_wait_handle_abe89943429bca91c7a0f796fb12c4548}\label{classglow_1_1_habana_wait_handle_abe89943429bca91c7a0f796fb12c4548}} 
+\index{glow\+::\+Habana\+Wait\+Handle@{glow\+::\+Habana\+Wait\+Handle}!wait@{wait}}
+\index{wait@{wait}!glow\+::\+Habana\+Wait\+Handle@{glow\+::\+Habana\+Wait\+Handle}}
+\subsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily bool glow\+::\+Habana\+Wait\+Handle\+::wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wait on the underlying handle. \begin{DoxyReturn}{Returns}
+true if wait succeeded, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Habana/Habana\+Function.\+h\item 
+lib/\+Backends/\+Habana/Habana\+Function.\+cpp\end{DoxyCompactItemize}

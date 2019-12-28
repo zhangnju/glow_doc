@@ -1,0 +1,99 @@
+\hypertarget{classglow_1_1_concat_node}{}\section{glow\+:\+:Concat\+Node Class Reference}
+\label{classglow_1_1_concat_node}\index{glow\+::\+Concat\+Node@{glow\+::\+Concat\+Node}}
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Concat\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_concat_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a8ad645a036a6cb6dc6098c26486a3fea}\label{classglow_1_1_concat_node_a8ad645a036a6cb6dc6098c26486a3fea}} 
+enum {\bfseries Input\+Indices} 
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a26ebcc8a81b5d1c16a289939008eec28}\label{classglow_1_1_concat_node_a26ebcc8a81b5d1c16a289939008eec28}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a39cb34618b1ab7dadc83027c79bb37e5}\label{classglow_1_1_concat_node_a39cb34618b1ab7dadc83027c79bb37e5}} 
+{\bfseries Concat\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, std\+::vector$<$ \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$ Inputs, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Dim)
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a176726b784cdc653cd46e039a6f926e6}\label{classglow_1_1_concat_node_a176726b784cdc653cd46e039a6f926e6}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a9bc9b77248642da12fc6fe5dd440b8dc}\label{classglow_1_1_concat_node_a9bc9b77248642da12fc6fe5dd440b8dc}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a803b2eb3c74d9da2ba98223628ec5e10}\label{classglow_1_1_concat_node_a803b2eb3c74d9da2ba98223628ec5e10}} 
+\hyperlink{classglow_1_1_node_value_array_ref}{Node\+Value\+Array\+Ref} {\bfseries get\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a178a3c5521065d1461f13837c9a6a3b8}\label{classglow_1_1_concat_node_a178a3c5521065d1461f13837c9a6a3b8}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Dim} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a83884b6972a44a772e5f2d862e1dd54e}\label{classglow_1_1_concat_node_a83884b6972a44a772e5f2d862e1dd54e}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a4e47c6ae9c47e1a5965a284b6e93926d}\label{classglow_1_1_concat_node_a4e47c6ae9c47e1a5965a284b6e93926d}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a4c726e60b31fad9977f87256770358d8}\label{classglow_1_1_concat_node_a4c726e60b31fad9977f87256770358d8}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a4263951d9d15be0640343d72291cb81e}\label{classglow_1_1_concat_node_a4263951d9d15be0640343d72291cb81e}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a2b4f892d022079145406345f96e9e344}\label{classglow_1_1_concat_node_a2b4f892d022079145406345f96e9e344}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_af2568b1ea111fa3534a8e535569793f7}\label{classglow_1_1_concat_node_af2568b1ea111fa3534a8e535569793f7}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_ac2468fcebe13bcdf70ca40561f357c8d}\label{classglow_1_1_concat_node_ac2468fcebe13bcdf70ca40561f357c8d}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a95b5a8909c4bbc0c8d84ab6f4d6a48eb}\label{classglow_1_1_concat_node_a95b5a8909c4bbc0c8d84ab6f4d6a48eb}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a88c8abcb384d25ec83105017863c0fe3}\label{classglow_1_1_concat_node_a88c8abcb384d25ec83105017863c0fe3}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_acfc6382ccca44294f8bab9cf8962ad39}\label{classglow_1_1_concat_node_acfc6382ccca44294f8bab9cf8962ad39}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_concat_node}{Concat\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_adc71c9b29a598580055a5f29e596743d}\label{classglow_1_1_concat_node_adc71c9b29a598580055a5f29e596743d}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a809c737c8ddc31c6775409571f769a0e}\label{classglow_1_1_concat_node_a809c737c8ddc31c6775409571f769a0e}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_aea278297182b799215a8e84ab63139ef}\label{classglow_1_1_concat_node_aea278297182b799215a8e84ab63139ef}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a019f7269d2a971b8cc18f44dba758497}\label{classglow_1_1_concat_node_a019f7269d2a971b8cc18f44dba758497}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_concat_node_a747b2cfa8c9e6b17de405ed994370427}\label{classglow_1_1_concat_node_a747b2cfa8c9e6b17de405ed994370427}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The concat operator adds two tensors together. The parameter \textquotesingle{}dim\textquotesingle{} specifies the dimension to use when joining the tensors. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

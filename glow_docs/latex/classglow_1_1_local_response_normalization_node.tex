@@ -1,0 +1,117 @@
+\hypertarget{classglow_1_1_local_response_normalization_node}{}\section{glow\+:\+:Local\+Response\+Normalization\+Node Class Reference}
+\label{classglow_1_1_local_response_normalization_node}\index{glow\+::\+Local\+Response\+Normalization\+Node@{glow\+::\+Local\+Response\+Normalization\+Node}}
+
+
+Performs local response normalization on the Input tensor with the provided Scale, Bias, Mean, Var, Channel\+Idx, Epsilon, and Momentum. Similar to Caffe2 and O\+N\+NX L\+RN.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Local\+Response\+Normalization\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.721312cm]{classglow_1_1_local_response_normalization_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_abc942754be30f03ebf13d81183974276}\label{classglow_1_1_local_response_normalization_node_abc942754be30f03ebf13d81183974276}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_af1c3e7edbc60ae77ed50a0ec9ab981fe}\label{classglow_1_1_local_response_normalization_node_af1c3e7edbc60ae77ed50a0ec9ab981fe}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_ac63ee57c90ca93789758beefda57cfe5}\label{classglow_1_1_local_response_normalization_node_ac63ee57c90ca93789758beefda57cfe5}} 
+{\bfseries Local\+Response\+Normalization\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Half\+Window\+Size, float Alpha, float Beta, float K)
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a854f3848cd78c7f3694026012a520956}\label{classglow_1_1_local_response_normalization_node_a854f3848cd78c7f3694026012a520956}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a99851025f7840829533e4b507da2d561}\label{classglow_1_1_local_response_normalization_node_a99851025f7840829533e4b507da2d561}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a5035d3d25f92b6c4c6b1bcce3fd7a46c}\label{classglow_1_1_local_response_normalization_node_a5035d3d25f92b6c4c6b1bcce3fd7a46c}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a3643d296ae8303978269b98aafe18966}\label{classglow_1_1_local_response_normalization_node_a3643d296ae8303978269b98aafe18966}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Half\+Window\+Size} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_ae8af33bd0dbc1dee78c945733da5cc49}\label{classglow_1_1_local_response_normalization_node_ae8af33bd0dbc1dee78c945733da5cc49}} 
+float {\bfseries get\+Alpha} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a84e36c28e2b9061ee723a175e77b662a}\label{classglow_1_1_local_response_normalization_node_a84e36c28e2b9061ee723a175e77b662a}} 
+float {\bfseries get\+Beta} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a2fd20f140dbf374e224b346bed4f917f}\label{classglow_1_1_local_response_normalization_node_a2fd20f140dbf374e224b346bed4f917f}} 
+float {\bfseries getK} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_ab36c0df6da591f790d57643b835a1fe3}\label{classglow_1_1_local_response_normalization_node_ab36c0df6da591f790d57643b835a1fe3}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a6cd82f7d9a633168ff7d984a54c474ac}\label{classglow_1_1_local_response_normalization_node_a6cd82f7d9a633168ff7d984a54c474ac}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a5da7771d57a92c295288ae639e8fd111}\label{classglow_1_1_local_response_normalization_node_a5da7771d57a92c295288ae639e8fd111}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a669134c90e1ddded6ce2895221541c0f}\label{classglow_1_1_local_response_normalization_node_a669134c90e1ddded6ce2895221541c0f}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a40f36629a74fddd4d8b399496cd4a3b5}\label{classglow_1_1_local_response_normalization_node_a40f36629a74fddd4d8b399496cd4a3b5}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_ab9ef674d6b94efeb1b3dc1566972c772}\label{classglow_1_1_local_response_normalization_node_ab9ef674d6b94efeb1b3dc1566972c772}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_afe2d72357b55b807f0e545190007ec15}\label{classglow_1_1_local_response_normalization_node_afe2d72357b55b807f0e545190007ec15}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_ad280dab5e056f91ed1b8ed4719054f1e}\label{classglow_1_1_local_response_normalization_node_ad280dab5e056f91ed1b8ed4719054f1e}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a4576f47baa280e8c3f2ffa6ac78e3c9a}\label{classglow_1_1_local_response_normalization_node_a4576f47baa280e8c3f2ffa6ac78e3c9a}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a9dd84d234231d3eac7c3c41d69271688}\label{classglow_1_1_local_response_normalization_node_a9dd84d234231d3eac7c3c41d69271688}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_local_response_normalization_node}{Local\+Response\+Normalization\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a7daa606c224290857e859b0a141f30ec}\label{classglow_1_1_local_response_normalization_node_a7daa606c224290857e859b0a141f30ec}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a50ee7b0ae9e1de04c58586872b722dcd}\label{classglow_1_1_local_response_normalization_node_a50ee7b0ae9e1de04c58586872b722dcd}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a9bbaeea4512099e6ba0a1830d1e1a175}\label{classglow_1_1_local_response_normalization_node_a9bbaeea4512099e6ba0a1830d1e1a175}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_aab6378b8a395982fada4427fb8e688e7}\label{classglow_1_1_local_response_normalization_node_aab6378b8a395982fada4427fb8e688e7}} 
+bool {\bfseries verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a5a4e13144a65366234a60cb422191fd2}\label{classglow_1_1_local_response_normalization_node_a5a4e13144a65366234a60cb422191fd2}} 
+\hyperlink{classglow_1_1_local_response_normalization_grad_node}{Local\+Response\+Normalization\+Grad\+Node} $\ast$ {\bfseries get\+Grad} (\hyperlink{classglow_1_1_graph_grad_mapper}{Graph\+Grad\+Mapper} \&builder)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_node_a1a12f1f9591d745f3195508f613764bc}\label{classglow_1_1_local_response_normalization_node_a1a12f1f9591d745f3195508f613764bc}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Performs local response normalization on the Input tensor with the provided Scale, Bias, Mean, Var, Channel\+Idx, Epsilon, and Momentum. Similar to Caffe2 and O\+N\+NX L\+RN. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

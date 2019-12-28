@@ -1,0 +1,96 @@
+\hypertarget{classglow_1_1onnxifi_1_1_graph}{}\section{glow\+:\+:onnxifi\+:\+:Graph Class Reference}
+\label{classglow_1_1onnxifi_1_1_graph}\index{glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}}
+Inheritance diagram for glow\+:\+:onnxifi\+:\+:Graph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1onnxifi_1_1_graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_graph_a4b44951488df2f1d54ee36b35d17b70a}\label{classglow_1_1onnxifi_1_1_graph_a4b44951488df2f1d54ee36b35d17b70a}} 
+{\bfseries Graph} (\hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr} backend\+Ptr)
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_graph_ac1abaeab6d1703aec7253b377011a6a6}\label{classglow_1_1onnxifi_1_1_graph_ac1abaeab6d1703aec7253b377011a6a6}} 
+\hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr} {\bfseries backend} ()
+\item 
+onnx\+Status \hyperlink{classglow_1_1onnxifi_1_1_graph_a3439d113f0153c6cb41331658ed0ccc2}{set\+I\+O\+And\+Run} (uint32\+\_\+t inputs\+Count, const onnx\+Tensor\+Descriptor\+V1 $\ast$input\+Descriptors, uint32\+\_\+t outputs\+Count, const onnx\+Tensor\+Descriptor\+V1 $\ast$output\+Descriptors, \hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr} output\+Event, onnx\+Trace\+Event\+List $\ast$trace\+Events)
+\item 
+virtual onnx\+Status \hyperlink{classglow_1_1onnxifi_1_1_graph_a5f1ec69446852a2515d8aeec487a521a}{init\+Graph} (const void $\ast$onnx\+Model, size\+\_\+t onnx\+Model\+Size, uint32\+\_\+t weight\+Count, const onnx\+Tensor\+Descriptor\+V1 $\ast$weight\+Descriptors, void $\ast$defered\+Blob\+Reader)=0
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_graph_a2c4e460e6651e515c257b9d9ad448f70}\label{classglow_1_1onnxifi_1_1_graph_a2c4e460e6651e515c257b9d9ad448f70}} 
+virtual onnx\+Status {\bfseries run} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ ctx, \hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr} output\+Event, onnx\+Trace\+Event\+List $\ast$trace\+Events)=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classglow_1_1onnxifi_1_1_graph_ac767c69072721e62c27aaa443d9f0e60}{set\+Trace\+Events} (onnx\+Trace\+Event\+List $\ast$trace\+Events, \hyperlink{classglow_1_1_trace_context}{Trace\+Context} $\ast$trace\+Context)
+\item 
+static void \hyperlink{classglow_1_1onnxifi_1_1_graph_a8fcbaaff1388becad2a7e3a1ee1a3439}{release\+Trace\+Events} (onnx\+Trace\+Event\+List $\ast$trace\+Events)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_graph_af0c5bd4d946858e8be3316dff24d3ec9}\label{classglow_1_1onnxifi_1_1_graph_af0c5bd4d946858e8be3316dff24d3ec9}} 
+\hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr} {\bfseries backend\+Ptr\+\_\+}
+\item 
+llvm\+::\+String\+Map$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \hyperlink{classglow_1_1onnxifi_1_1_graph_ab96d99570b4e9549fba9670b479223e6}{onnx\+Input\+To\+Placeholder\+\_\+}
+\item 
+llvm\+::\+String\+Map$<$ \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \hyperlink{classglow_1_1onnxifi_1_1_graph_a624dc38c4ec10e3314425eb8155114b8}{onnx\+Output\+To\+Placeholder\+\_\+}
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_graph_a4ce599126cc4eb83d5d97d145913d4fd}\label{classglow_1_1onnxifi_1_1_graph_a4ce599126cc4eb83d5d97d145913d4fd}} 
+\hyperlink{classglow_1_1_tensor_pool}{Tensor\+Pool} \hyperlink{classglow_1_1onnxifi_1_1_graph_a4ce599126cc4eb83d5d97d145913d4fd}{tensor\+Pool\+\_\+}
+\begin{DoxyCompactList}\small\item\em An object pool for tensors, to share allocations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_graph_a5f1ec69446852a2515d8aeec487a521a}\label{classglow_1_1onnxifi_1_1_graph_a5f1ec69446852a2515d8aeec487a521a}} 
+\index{glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}!init\+Graph@{init\+Graph}}
+\index{init\+Graph@{init\+Graph}!glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}}
+\subsubsection{\texorpdfstring{init\+Graph()}{initGraph()}}
+{\footnotesize\ttfamily virtual onnx\+Status glow\+::onnxifi\+::\+Graph\+::init\+Graph (\begin{DoxyParamCaption}\item[{const void $\ast$}]{onnx\+Model,  }\item[{size\+\_\+t}]{onnx\+Model\+Size,  }\item[{uint32\+\_\+t}]{weight\+Count,  }\item[{const onnx\+Tensor\+Descriptor\+V1 $\ast$}]{weight\+Descriptors,  }\item[{void $\ast$}]{defered\+Blob\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Init Glow graph based on the O\+N\+NX model {\ttfamily onnx\+Model} and static trained weights {\ttfamily weight\+Descriptors}. Weights can be read in later by a {\ttfamily defered\+Blob\+Reader}. 
+
+Implemented in \hyperlink{classglow_1_1onnxifi_1_1_host_manager_graph_a58234ef078e7db198825b214881fe7ef}{glow\+::onnxifi\+::\+Host\+Manager\+Graph}, and \hyperlink{classglow_1_1onnxifi_1_1_inline_graph_a989222c5a599a06aef3f7fc1c394f5eb}{glow\+::onnxifi\+::\+Inline\+Graph}.
+
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_graph_a8fcbaaff1388becad2a7e3a1ee1a3439}\label{classglow_1_1onnxifi_1_1_graph_a8fcbaaff1388becad2a7e3a1ee1a3439}} 
+\index{glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}!release\+Trace\+Events@{release\+Trace\+Events}}
+\index{release\+Trace\+Events@{release\+Trace\+Events}!glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}}
+\subsubsection{\texorpdfstring{release\+Trace\+Events()}{releaseTraceEvents()}}
+{\footnotesize\ttfamily void glow\+::onnxifi\+::\+Graph\+::release\+Trace\+Events (\begin{DoxyParamCaption}\item[{onnx\+Trace\+Event\+List $\ast$}]{trace\+Events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Free all memory that was allocated by set\+Trace\+Events when creating {\ttfamily trace\+Events}. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_graph_a3439d113f0153c6cb41331658ed0ccc2}\label{classglow_1_1onnxifi_1_1_graph_a3439d113f0153c6cb41331658ed0ccc2}} 
+\index{glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}!set\+I\+O\+And\+Run@{set\+I\+O\+And\+Run}}
+\index{set\+I\+O\+And\+Run@{set\+I\+O\+And\+Run}!glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}}
+\subsubsection{\texorpdfstring{set\+I\+O\+And\+Run()}{setIOAndRun()}}
+{\footnotesize\ttfamily onnx\+Status glow\+::onnxifi\+::\+Graph\+::set\+I\+O\+And\+Run (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{inputs\+Count,  }\item[{const onnx\+Tensor\+Descriptor\+V1 $\ast$}]{input\+Descriptors,  }\item[{uint32\+\_\+t}]{outputs\+Count,  }\item[{const onnx\+Tensor\+Descriptor\+V1 $\ast$}]{output\+Descriptors,  }\item[{\hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr}}]{output\+Event,  }\item[{onnx\+Trace\+Event\+List $\ast$}]{trace\+Events }\end{DoxyParamCaption})}
+
+Setup Glow graph in preparation for the inference and run. Set input memory addresses for inputs based on the {\ttfamily input\+Descriptors}. Set output memory addresses for outputs based on the {\ttfamily output\+Descriptors}. Will async signal the {\ttfamily output\+Event} when run is complete. {\ttfamily trace\+Events} is a pointer to onnx\+Trace\+Event\+List, if it is not null then it is expected that this will be populated with trace events from the run before signalling the output\+Event. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_graph_ac767c69072721e62c27aaa443d9f0e60}\label{classglow_1_1onnxifi_1_1_graph_ac767c69072721e62c27aaa443d9f0e60}} 
+\index{glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}!set\+Trace\+Events@{set\+Trace\+Events}}
+\index{set\+Trace\+Events@{set\+Trace\+Events}!glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}}
+\subsubsection{\texorpdfstring{set\+Trace\+Events()}{setTraceEvents()}}
+{\footnotesize\ttfamily void glow\+::onnxifi\+::\+Graph\+::set\+Trace\+Events (\begin{DoxyParamCaption}\item[{onnx\+Trace\+Event\+List $\ast$}]{trace\+Events,  }\item[{\hyperlink{classglow_1_1_trace_context}{Trace\+Context} $\ast$}]{trace\+Context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Copy any trace events {\ttfamily trace\+Context} into {\ttfamily trace\+Events}. If {\ttfamily trace\+Events} is null then do nothing. Internally we use steady\+\_\+clock, but our interface is system\+\_\+clock timestamps. Do a simple conversion. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_graph_ab96d99570b4e9549fba9670b479223e6}\label{classglow_1_1onnxifi_1_1_graph_ab96d99570b4e9549fba9670b479223e6}} 
+\index{glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}!onnx\+Input\+To\+Placeholder\+\_\+@{onnx\+Input\+To\+Placeholder\+\_\+}}
+\index{onnx\+Input\+To\+Placeholder\+\_\+@{onnx\+Input\+To\+Placeholder\+\_\+}!glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}}
+\subsubsection{\texorpdfstring{onnx\+Input\+To\+Placeholder\+\_\+}{onnxInputToPlaceholder\_}}
+{\footnotesize\ttfamily llvm\+::\+String\+Map$<$\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$ glow\+::onnxifi\+::\+Graph\+::onnx\+Input\+To\+Placeholder\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Mapping between O\+N\+NX name for the input variable and Glow placeholder for input. \mbox{\Hypertarget{classglow_1_1onnxifi_1_1_graph_a624dc38c4ec10e3314425eb8155114b8}\label{classglow_1_1onnxifi_1_1_graph_a624dc38c4ec10e3314425eb8155114b8}} 
+\index{glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}!onnx\+Output\+To\+Placeholder\+\_\+@{onnx\+Output\+To\+Placeholder\+\_\+}}
+\index{onnx\+Output\+To\+Placeholder\+\_\+@{onnx\+Output\+To\+Placeholder\+\_\+}!glow\+::onnxifi\+::\+Graph@{glow\+::onnxifi\+::\+Graph}}
+\subsubsection{\texorpdfstring{onnx\+Output\+To\+Placeholder\+\_\+}{onnxOutputToPlaceholder\_}}
+{\footnotesize\ttfamily llvm\+::\+String\+Map$<$\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$$>$ glow\+::onnxifi\+::\+Graph\+::onnx\+Output\+To\+Placeholder\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Mapping between O\+N\+NX name for the output variable and Glow placeholder for output. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Onnxifi/Base.\+h\item 
+lib/\+Onnxifi/Base.\+cpp\end{DoxyCompactItemize}

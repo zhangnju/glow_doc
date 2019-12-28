@@ -1,0 +1,102 @@
+\hypertarget{classglow_1_1_rescale_quantized_node}{}\section{glow\+:\+:Rescale\+Quantized\+Node Class Reference}
+\label{classglow_1_1_rescale_quantized_node}\index{glow\+::\+Rescale\+Quantized\+Node@{glow\+::\+Rescale\+Quantized\+Node}}
+
+
+Rescale the input quantized tensor to a new Scale and Offset. The new Scale and Offset are specified by the output type passed to the constructor.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Rescale\+Quantized\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_rescale_quantized_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_a1c0c45cd33ad45258e2064ba62aa95ae}\label{classglow_1_1_rescale_quantized_node_a1c0c45cd33ad45258e2064ba62aa95ae}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_aaea0b91ffeef79532bfe6e6245efabab}\label{classglow_1_1_rescale_quantized_node_aaea0b91ffeef79532bfe6e6245efabab}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_aee9823f635973f94d69bf51ac5ee3a7d}\label{classglow_1_1_rescale_quantized_node_aee9823f635973f94d69bf51ac5ee3a7d}} 
+{\bfseries Rescale\+Quantized\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input)
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_ad00b5942167cec60a5e4cf9bb630bb43}\label{classglow_1_1_rescale_quantized_node_ad00b5942167cec60a5e4cf9bb630bb43}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_aa1ecba6daccef59ace13f1bc357723be}\label{classglow_1_1_rescale_quantized_node_aa1ecba6daccef59ace13f1bc357723be}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_a9b1be3dd50c3de80f73e9d3b99dc97bb}\label{classglow_1_1_rescale_quantized_node_a9b1be3dd50c3de80f73e9d3b99dc97bb}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_ab9a418fa37c6ca1796383239f1135e72}\label{classglow_1_1_rescale_quantized_node_ab9a418fa37c6ca1796383239f1135e72}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_af33fdfc400b661e7631017b4f1889847}\label{classglow_1_1_rescale_quantized_node_af33fdfc400b661e7631017b4f1889847}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_acf0cb40c35632da18c6935d5bc0f6b96}\label{classglow_1_1_rescale_quantized_node_acf0cb40c35632da18c6935d5bc0f6b96}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_a9917c2391aaa594279e5b9e5c2e2a456}\label{classglow_1_1_rescale_quantized_node_a9917c2391aaa594279e5b9e5c2e2a456}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_a1bf9c0b284712c07833c94a308f960e4}\label{classglow_1_1_rescale_quantized_node_a1bf9c0b284712c07833c94a308f960e4}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_a1529e084c7318054b97b825e5eca75db}\label{classglow_1_1_rescale_quantized_node_a1529e084c7318054b97b825e5eca75db}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_a2139f2265d097106d65c873a916afdc7}\label{classglow_1_1_rescale_quantized_node_a2139f2265d097106d65c873a916afdc7}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_a03d39474f65318e282e31b6de21c6b7e}\label{classglow_1_1_rescale_quantized_node_a03d39474f65318e282e31b6de21c6b7e}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_a4c4bc07ada1141ce2a717e454fca6d37}\label{classglow_1_1_rescale_quantized_node_a4c4bc07ada1141ce2a717e454fca6d37}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_ac27e58ca9cdc2dfb950cd041378dbae1}\label{classglow_1_1_rescale_quantized_node_ac27e58ca9cdc2dfb950cd041378dbae1}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_rescale_quantized_node}{Rescale\+Quantized\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_a8e9d814c2c2483ab76ee3e173496063a}\label{classglow_1_1_rescale_quantized_node_a8e9d814c2c2483ab76ee3e173496063a}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_ad6c01fab384ae05d1f5617fe400c3c35}\label{classglow_1_1_rescale_quantized_node_ad6c01fab384ae05d1f5617fe400c3c35}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_af6c543be34b2e95aee89ff319d552e3d}\label{classglow_1_1_rescale_quantized_node_af6c543be34b2e95aee89ff319d552e3d}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_af67d9a234336c9aef84f8691ecc01291}\label{classglow_1_1_rescale_quantized_node_af67d9a234336c9aef84f8691ecc01291}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_rescale_quantized_node_a0432ee14d2329f6224ebeaa28785f002}\label{classglow_1_1_rescale_quantized_node_a0432ee14d2329f6224ebeaa28785f002}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Rescale the input quantized tensor to a new Scale and Offset. The new Scale and Offset are specified by the output type passed to the constructor. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

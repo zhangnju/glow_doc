@@ -1,0 +1,120 @@
+\hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node}{}\section{glow\+:\+:Rowwise\+Quantized\+Fully\+Connected\+Node Class Reference}
+\label{classglow_1_1_rowwise_quantized_fully_connected_node}\index{glow\+::\+Rowwise\+Quantized\+Fully\+Connected\+Node@{glow\+::\+Rowwise\+Quantized\+Fully\+Connected\+Node}}
+
+
+Creates a Rowwise\+Quantized\+Fully\+Connected node where the Input matrix and the transpose of Weights matrix are multiplied, and then the Bias vector is broadcast-\/added to the result. Input, Bias and Result are regularly quantized, while Weights use row-\/wisequantization.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Rowwise\+Quantized\+Fully\+Connected\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.516245cm]{classglow_1_1_rowwise_quantized_fully_connected_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a16845e8f72ad2ad857119d49f4ed100b}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a16845e8f72ad2ad857119d49f4ed100b}} 
+enum {\bfseries Input\+Indices} \{ \newline
+{\bfseries Input\+Idx} = 0, 
+{\bfseries Weights\+Idx} = 1, 
+{\bfseries Scales\+Idx} = 2, 
+{\bfseries Offsets\+Idx} = 3, 
+\newline
+{\bfseries Bias\+Idx} = 4
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_aa1685baca4cc5623a18c22f3c95d9eb2}\label{classglow_1_1_rowwise_quantized_fully_connected_node_aa1685baca4cc5623a18c22f3c95d9eb2}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a8e7fe4fc4a532581396bea6efc8da8bf}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a8e7fe4fc4a532581396bea6efc8da8bf}} 
+{\bfseries Rowwise\+Quantized\+Fully\+Connected\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{structglow_1_1_node_value}{Node\+Value} Weights, \hyperlink{structglow_1_1_node_value}{Node\+Value} Scales, \hyperlink{structglow_1_1_node_value}{Node\+Value} Offsets, \hyperlink{structglow_1_1_node_value}{Node\+Value} Bias)
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a5f15ca7634b38234d21e9e6738ec46ad}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a5f15ca7634b38234d21e9e6738ec46ad}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a6d20b08280dee2b3ae5418afcaae38ae}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a6d20b08280dee2b3ae5418afcaae38ae}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Weights} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_aaa305e8fbd75c6505b3d6eea5e07ff4c}\label{classglow_1_1_rowwise_quantized_fully_connected_node_aaa305e8fbd75c6505b3d6eea5e07ff4c}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Scales} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_ac7b610c17ca5b0abb436bd126eb92728}\label{classglow_1_1_rowwise_quantized_fully_connected_node_ac7b610c17ca5b0abb436bd126eb92728}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Offsets} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a00bad6556449f4899d11c017288c3814}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a00bad6556449f4899d11c017288c3814}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Bias} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a3c4176e9326c639cf42ed6ca1389f375}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a3c4176e9326c639cf42ed6ca1389f375}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a1ebfc597bf86e2817c79e361a015dbc2}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a1ebfc597bf86e2817c79e361a015dbc2}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_aa570eacfc66196cdfc908c251fc338e9}\label{classglow_1_1_rowwise_quantized_fully_connected_node_aa570eacfc66196cdfc908c251fc338e9}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_adab9b90a1457b4b8a30295ca9ca8b74f}\label{classglow_1_1_rowwise_quantized_fully_connected_node_adab9b90a1457b4b8a30295ca9ca8b74f}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a2ebf06e0460a419d41b6d316cd8aa87a}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a2ebf06e0460a419d41b6d316cd8aa87a}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_afc4080125f764a90853d9c253d0015cf}\label{classglow_1_1_rowwise_quantized_fully_connected_node_afc4080125f764a90853d9c253d0015cf}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a70d65c1199009d9df09d5db9f199e2e2}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a70d65c1199009d9df09d5db9f199e2e2}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a5fbfa899c1c1d1de4fac67857678649b}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a5fbfa899c1c1d1de4fac67857678649b}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a7e807c11b725ac54219bb4819e9aa7ff}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a7e807c11b725ac54219bb4819e9aa7ff}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_acdf00900d0e1fdb38353aa09e35ae394}\label{classglow_1_1_rowwise_quantized_fully_connected_node_acdf00900d0e1fdb38353aa09e35ae394}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_ab97e67f737396f99d322fd816050c00d}\label{classglow_1_1_rowwise_quantized_fully_connected_node_ab97e67f737396f99d322fd816050c00d}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_ad3ac355e731d399f812d2e579493fa80}\label{classglow_1_1_rowwise_quantized_fully_connected_node_ad3ac355e731d399f812d2e579493fa80}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_rowwise_quantized_fully_connected_node}{Rowwise\+Quantized\+Fully\+Connected\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a7ee902c461de51b053635f5dda4d1423}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a7ee902c461de51b053635f5dda4d1423}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a8506e4cc775fde4019505e07696eac15}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a8506e4cc775fde4019505e07696eac15}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a7aed7d753ede757d74cf179de194d828}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a7aed7d753ede757d74cf179de194d828}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a0123a6b04076ca55872d5d7c3bc114f6}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a0123a6b04076ca55872d5d7c3bc114f6}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_rowwise_quantized_fully_connected_node_a90d060e487dc45bd521c86e4c03f8019}\label{classglow_1_1_rowwise_quantized_fully_connected_node_a90d060e487dc45bd521c86e4c03f8019}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Creates a Rowwise\+Quantized\+Fully\+Connected node where the Input matrix and the transpose of Weights matrix are multiplied, and then the Bias vector is broadcast-\/added to the result. Input, Bias and Result are regularly quantized, while Weights use row-\/wisequantization. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

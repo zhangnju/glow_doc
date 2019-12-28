@@ -1,0 +1,102 @@
+\hypertarget{classglow_1_1_quantize_node}{}\section{glow\+:\+:Quantize\+Node Class Reference}
+\label{classglow_1_1_quantize_node}\index{glow\+::\+Quantize\+Node@{glow\+::\+Quantize\+Node}}
+
+
+Quantize floating point tensor. This operation converts floating point numbers to integers based on the given Scale and Offset. Scale and Offset are deduced from the type of the output.\+x\+\_\+q = clip(round(x/\+Scale) + Offset, -\/128, 127)  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Quantize\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_quantize_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a2f57d9a7d3e68ef73e7a732af8d98997}\label{classglow_1_1_quantize_node_a2f57d9a7d3e68ef73e7a732af8d98997}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a0dc9056da58fbaf538037b3af4a68cea}\label{classglow_1_1_quantize_node_a0dc9056da58fbaf538037b3af4a68cea}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_ad9ae98fabf8b6a99a9bf354c754eb358}\label{classglow_1_1_quantize_node_ad9ae98fabf8b6a99a9bf354c754eb358}} 
+{\bfseries Quantize\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input)
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a4da6714893ebc1835a2cbf8d5315cd27}\label{classglow_1_1_quantize_node_a4da6714893ebc1835a2cbf8d5315cd27}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a6132d71fd259ef5b5698772dd47cbaf1}\label{classglow_1_1_quantize_node_a6132d71fd259ef5b5698772dd47cbaf1}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a049435d48a8161eae87df63514714a19}\label{classglow_1_1_quantize_node_a049435d48a8161eae87df63514714a19}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a84048f3edcf946bcd6bee94de81e3412}\label{classglow_1_1_quantize_node_a84048f3edcf946bcd6bee94de81e3412}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a027c649fe7bb140452f5d1038f7a3f30}\label{classglow_1_1_quantize_node_a027c649fe7bb140452f5d1038f7a3f30}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_affa4e80f9381714b45a54019370cca0a}\label{classglow_1_1_quantize_node_affa4e80f9381714b45a54019370cca0a}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a90a01b979f7dac0bce51d29671cf1163}\label{classglow_1_1_quantize_node_a90a01b979f7dac0bce51d29671cf1163}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a9b821bca9fcbc0018a239135a899c6b8}\label{classglow_1_1_quantize_node_a9b821bca9fcbc0018a239135a899c6b8}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a01b2e3031ad5eefd939a530440365d7c}\label{classglow_1_1_quantize_node_a01b2e3031ad5eefd939a530440365d7c}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a95a1c677bb9acdef8e766d7ef31f7155}\label{classglow_1_1_quantize_node_a95a1c677bb9acdef8e766d7ef31f7155}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_ae60242a1655adf514023581a2ea6c7b0}\label{classglow_1_1_quantize_node_ae60242a1655adf514023581a2ea6c7b0}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a54fa21c05e8b96c8d28bc7801edc54a0}\label{classglow_1_1_quantize_node_a54fa21c05e8b96c8d28bc7801edc54a0}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a4e8ee7eaf30ebc2fa435a27f2401cb3b}\label{classglow_1_1_quantize_node_a4e8ee7eaf30ebc2fa435a27f2401cb3b}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_quantize_node}{Quantize\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a14947b5bead8f68561cfe6529ae643d7}\label{classglow_1_1_quantize_node_a14947b5bead8f68561cfe6529ae643d7}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a238b030d1ab2137f360aa633fece94d6}\label{classglow_1_1_quantize_node_a238b030d1ab2137f360aa633fece94d6}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_aeebb70bc86b0c83a7fbea102b2a1d4ce}\label{classglow_1_1_quantize_node_aeebb70bc86b0c83a7fbea102b2a1d4ce}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a98f2e884844312648cc4b87f8005b267}\label{classglow_1_1_quantize_node_a98f2e884844312648cc4b87f8005b267}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_quantize_node_a6fc1e64164e35ff4f89c5ae559e51a0d}\label{classglow_1_1_quantize_node_a6fc1e64164e35ff4f89c5ae559e51a0d}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Quantize floating point tensor. This operation converts floating point numbers to integers based on the given Scale and Offset. Scale and Offset are deduced from the type of the output.\+x\+\_\+q = clip(round(x/\+Scale) + Offset, -\/128, 127) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

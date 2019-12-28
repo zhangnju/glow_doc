@@ -1,0 +1,86 @@
+\hypertarget{classglow_1_1_function_pass_pipeline}{}\section{glow\+:\+:Function\+Pass\+Pipeline Class Reference}
+\label{classglow_1_1_function_pass_pipeline}\index{glow\+::\+Function\+Pass\+Pipeline@{glow\+::\+Function\+Pass\+Pipeline}}
+
+
+Implementation of a pipeline for executing a series of Function\+Passes.  
+
+
+
+
+{\ttfamily \#include $<$Pipeline.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Function\+Pass\+Pipeline\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_function_pass_pipeline}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_pipeline_a72bd932bd113d85439839409f6325ecb}\label{classglow_1_1_function_pass_pipeline_a72bd932bd113d85439839409f6325ecb}} 
+\hyperlink{classglow_1_1_function_pass_pipeline_a72bd932bd113d85439839409f6325ecb}{Function\+Pass\+Pipeline} (std\+::initializer\+\_\+list$<$ \hyperlink{classglow_1_1_function_pass_config}{Function\+Pass\+Config} $>$ IL)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classglow_1_1_function_pass_pipeline}{Function\+Pass\+Pipeline} from an initializer\+\_\+list {\ttfamily IL}. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classglow_1_1_function_pass_pipeline_acf021b258120117a9235f8b3226d97bf}{size} () const
+\begin{DoxyCompactList}\small\item\em Forward to parent \hyperlink{classglow_1_1_function_pass_pipeline_acf021b258120117a9235f8b3226d97bf}{size()} method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_pipeline_a31a0a5185a516472c9b362bb61938460}\label{classglow_1_1_function_pass_pipeline_a31a0a5185a516472c9b362bb61938460}} 
+const \hyperlink{classglow_1_1_function_pass_config}{Function\+Pass\+Config} \hyperlink{classglow_1_1_function_pass_pipeline_a31a0a5185a516472c9b362bb61938460}{at} (size\+\_\+t i) const
+\begin{DoxyCompactList}\small\item\em Helper to get the \hyperlink{classglow_1_1_function_pass_config}{Function\+Pass\+Config} at index {\ttfamily i} in the pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_pipeline_a077f862f56d745dac40a6cd9b588a633}\label{classglow_1_1_function_pass_pipeline_a077f862f56d745dac40a6cd9b588a633}} 
+void \hyperlink{classglow_1_1_function_pass_pipeline_a077f862f56d745dac40a6cd9b588a633}{push\+Back} (\hyperlink{classglow_1_1_function_pass_config}{Function\+Pass\+Config} F\+PC)
+\begin{DoxyCompactList}\small\item\em Push a new {\ttfamily F\+PC} to the end of the pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_pipeline_a216864da6e220eeb694ef3f2a01cd1e0}\label{classglow_1_1_function_pass_pipeline_a216864da6e220eeb694ef3f2a01cd1e0}} 
+void \hyperlink{classglow_1_1_function_pass_pipeline_a216864da6e220eeb694ef3f2a01cd1e0}{push\+Front} (\hyperlink{classglow_1_1_function_pass_config}{Function\+Pass\+Config} F\+PC)
+\begin{DoxyCompactList}\small\item\em Push a new {\ttfamily F\+PC} to the start of the pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_pipeline_a28cce56dc5a9581c3b2a748374b7680d}\label{classglow_1_1_function_pass_pipeline_a28cce56dc5a9581c3b2a748374b7680d}} 
+void \hyperlink{classglow_1_1_function_pass_pipeline_a28cce56dc5a9581c3b2a748374b7680d}{remove\+All\+Instances\+Of\+Pass} (\hyperlink{namespaceglow_a3157945b92abd634c79fa9d4724472eb}{Function\+Pass\+ID} F\+P\+ID)
+\begin{DoxyCompactList}\small\item\em Removes all instances of a pass with ID {\ttfamily F\+P\+ID}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_pipeline_aed5d754238d8d6b4981c2ab5a29e5a00}\label{classglow_1_1_function_pass_pipeline_aed5d754238d8d6b4981c2ab5a29e5a00}} 
+void \hyperlink{classglow_1_1_function_pass_pipeline_aed5d754238d8d6b4981c2ab5a29e5a00}{dump} (llvm\+::raw\+\_\+ostream \&os=llvm\+::outs()) const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the pipeline to {\ttfamily os}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+iterator \hyperlink{classglow_1_1_function_pass_pipeline_a83ba1e6d68321e940295252d4e646b2e}{begin} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_pipeline_a55a882951cea5d4ff51d6ab5951ddcb1}\label{classglow_1_1_function_pass_pipeline_a55a882951cea5d4ff51d6ab5951ddcb1}} 
+const\+\_\+iterator {\bfseries begin} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_pipeline_a8be0b2c869719fac390e1bf6ae954c63}\label{classglow_1_1_function_pass_pipeline_a8be0b2c869719fac390e1bf6ae954c63}} 
+iterator {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_pass_pipeline_a96c8f87f940bfbb247edb4c2e05a08b1}\label{classglow_1_1_function_pass_pipeline_a96c8f87f940bfbb247edb4c2e05a08b1}} 
+const\+\_\+iterator {\bfseries end} () const
+\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+Implementation of a pipeline for executing a series of Function\+Passes. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_function_pass_pipeline_a83ba1e6d68321e940295252d4e646b2e}\label{classglow_1_1_function_pass_pipeline_a83ba1e6d68321e940295252d4e646b2e}} 
+\index{glow\+::\+Function\+Pass\+Pipeline@{glow\+::\+Function\+Pass\+Pipeline}!begin@{begin}}
+\index{begin@{begin}!glow\+::\+Function\+Pass\+Pipeline@{glow\+::\+Function\+Pass\+Pipeline}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily iterator glow\+::\+Function\+Pass\+Pipeline\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Forward iterator creation methods. \mbox{\Hypertarget{classglow_1_1_function_pass_pipeline_acf021b258120117a9235f8b3226d97bf}\label{classglow_1_1_function_pass_pipeline_acf021b258120117a9235f8b3226d97bf}} 
+\index{glow\+::\+Function\+Pass\+Pipeline@{glow\+::\+Function\+Pass\+Pipeline}!size@{size}}
+\index{size@{size}!glow\+::\+Function\+Pass\+Pipeline@{glow\+::\+Function\+Pass\+Pipeline}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+Function\+Pass\+Pipeline\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Forward to parent \hyperlink{classglow_1_1_function_pass_pipeline_acf021b258120117a9235f8b3226d97bf}{size()} method. 
+
+\begin{DoxyReturn}{Returns}
+size of pipeline. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Optimizer/\+Graph\+Optimizer\+Pipeline/Pipeline.\+h\item 
+lib/\+Optimizer/\+Graph\+Optimizer\+Pipeline/Pipeline.\+cpp\end{DoxyCompactItemize}

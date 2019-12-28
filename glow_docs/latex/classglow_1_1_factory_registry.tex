@@ -1,0 +1,58 @@
+\hypertarget{classglow_1_1_factory_registry}{}\section{glow\+:\+:Factory\+Registry$<$ Key, Base $>$ Class Template Reference}
+\label{classglow_1_1_factory_registry}\index{glow\+::\+Factory\+Registry$<$ Key, Base $>$@{glow\+::\+Factory\+Registry$<$ Key, Base $>$}}
+
+
+{\ttfamily \#include $<$Register.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_factory_registry_a20511cc66b6f3a12e4833b4c565f5f0f}\label{classglow_1_1_factory_registry_a20511cc66b6f3a12e4833b4c565f5f0f}} 
+using {\bfseries Factory\+Map} = std\+::map$<$ Key, \hyperlink{classglow_1_1_base_factory}{Base\+Factory}$<$ Key, Base $>$ $\ast$ $>$
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_factory_registry_a9278f0f5491b29ebf3b4603b639a8335}\label{classglow_1_1_factory_registry_a9278f0f5491b29ebf3b4603b639a8335}} 
+static void \hyperlink{classglow_1_1_factory_registry_a9278f0f5491b29ebf3b4603b639a8335}{register\+Factory} (\hyperlink{classglow_1_1_base_factory}{Base\+Factory}$<$ Key, Base $>$ \&factory)
+\begin{DoxyCompactList}\small\item\em Register {\ttfamily factory} in a static map. \end{DoxyCompactList}\item 
+static Base $\ast$ \hyperlink{classglow_1_1_factory_registry_a47327249d018b64fdba09cc525e338ca}{get} (const Key \&key)
+\item 
+static Factory\+Map \& \hyperlink{classglow_1_1_factory_registry_a9f52e9f03175b729d272d8587ad9c259}{factories} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Key, class Base$>$\newline
+class glow\+::\+Factory\+Registry$<$ Key, Base $>$}
+
+General registry for implementation factories. The registry is templated by the Key class and Base class that a set of factories inherits from. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_factory_registry_a9f52e9f03175b729d272d8587ad9c259}\label{classglow_1_1_factory_registry_a9f52e9f03175b729d272d8587ad9c259}} 
+\index{glow\+::\+Factory\+Registry@{glow\+::\+Factory\+Registry}!factories@{factories}}
+\index{factories@{factories}!glow\+::\+Factory\+Registry@{glow\+::\+Factory\+Registry}}
+\subsubsection{\texorpdfstring{factories()}{factories()}}
+{\footnotesize\ttfamily template$<$class Key , class Base $>$ \\
+static Factory\+Map\& \hyperlink{classglow_1_1_factory_registry}{glow\+::\+Factory\+Registry}$<$ Key, Base $>$\+::factories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+all registered factories. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_factory_registry_a47327249d018b64fdba09cc525e338ca}\label{classglow_1_1_factory_registry_a47327249d018b64fdba09cc525e338ca}} 
+\index{glow\+::\+Factory\+Registry@{glow\+::\+Factory\+Registry}!get@{get}}
+\index{get@{get}!glow\+::\+Factory\+Registry@{glow\+::\+Factory\+Registry}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$class Key , class Base $>$ \\
+static Base$\ast$ \hyperlink{classglow_1_1_factory_registry}{glow\+::\+Factory\+Registry}$<$ Key, Base $>$\+::get (\begin{DoxyParamCaption}\item[{const Key \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+newly created object from factory keyed by {\ttfamily key}. 
+
+nullptr if there is no factory registered with {\ttfamily key}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Register.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{classglow_1_1runtime_1_1_executor}{}\section{glow\+:\+:runtime\+:\+:Executor Class Reference}
+\label{classglow_1_1runtime_1_1_executor}\index{glow\+::runtime\+::\+Executor@{glow\+::runtime\+::\+Executor}}
+
+
+{\ttfamily \#include $<$Executor.\+h$>$}
+
+Inheritance diagram for glow\+:\+:runtime\+:\+:Executor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1runtime_1_1_executor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_executor_ab6404a4fbeba2a333ccbd67db5ab51cc}\label{classglow_1_1runtime_1_1_executor_ab6404a4fbeba2a333ccbd67db5ab51cc}} 
+virtual \hyperlink{classglow_1_1runtime_1_1_executor_ab6404a4fbeba2a333ccbd67db5ab51cc}{$\sim$\+Executor} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classglow_1_1runtime_1_1_executor_aeeef3270a1cdab1923bc75b02be16c07}{run} (const \hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$root, std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ context, Run\+Identifier\+Ty run\+Id, Result\+C\+B\+Ty cb)=0
+\item 
+virtual void \hyperlink{classglow_1_1runtime_1_1_executor_a2cbbc3a3fef585aed34aba34def2318a}{shutdown} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is an interface to an executor that can run and results the results of a partitioned graph. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_executor_aeeef3270a1cdab1923bc75b02be16c07}\label{classglow_1_1runtime_1_1_executor_aeeef3270a1cdab1923bc75b02be16c07}} 
+\index{glow\+::runtime\+::\+Executor@{glow\+::runtime\+::\+Executor}!run@{run}}
+\index{run@{run}!glow\+::runtime\+::\+Executor@{glow\+::runtime\+::\+Executor}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void glow\+::runtime\+::\+Executor\+::run (\begin{DoxyParamCaption}\item[{const \hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$}]{root,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$}]{context,  }\item[{Run\+Identifier\+Ty}]{run\+Id,  }\item[{Result\+C\+B\+Ty}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Run the \hyperlink{structglow_1_1runtime_1_1_d_a_g}{D\+AG} specified by {\ttfamily root} using {\ttfamily bindings} and call  with the results. {\ttfamily run\+Id} is used to identify the run for logging and metrics purposes. cb will be called with a result code, the run ID and a \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} containing placeholder-\/tensor mappings for the nodes in the \hyperlink{structglow_1_1runtime_1_1_d_a_g}{D\+AG} that have no postrequisites (i.\+e. the final results) in addition to the mappings present in {\ttfamily bindings}. 
+
+Implemented in \hyperlink{classglow_1_1runtime_1_1_thread_pool_executor_a2f0225f88e53cf550e98db5b5037449e}{glow\+::runtime\+::\+Thread\+Pool\+Executor}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_executor_a2cbbc3a3fef585aed34aba34def2318a}\label{classglow_1_1runtime_1_1_executor_a2cbbc3a3fef585aed34aba34def2318a}} 
+\index{glow\+::runtime\+::\+Executor@{glow\+::runtime\+::\+Executor}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!glow\+::runtime\+::\+Executor@{glow\+::runtime\+::\+Executor}}
+\subsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily virtual void glow\+::runtime\+::\+Executor\+::shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Shutdown the \hyperlink{classglow_1_1runtime_1_1_executor}{Executor}. Should block until all active requests are complete and prevent new requests from being initiated. 
+
+Implemented in \hyperlink{classglow_1_1runtime_1_1_thread_pool_executor_ad77508bfa19d1ebaad7547b1bbce68f8}{glow\+::runtime\+::\+Thread\+Pool\+Executor}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Runtime/\+Executor/Executor.\+h\end{DoxyCompactItemize}

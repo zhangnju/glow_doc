@@ -1,0 +1,132 @@
+\hypertarget{classglow_1_1_node_info}{}\section{glow\+:\+:Node\+Info Class Reference}
+\label{classglow_1_1_node_info}\index{glow\+::\+Node\+Info@{glow\+::\+Node\+Info}}
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Node\+Info\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_node_info}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_info_a0712e3479ddd6adf44e530a622364d3a}\label{classglow_1_1_node_info_a0712e3479ddd6adf44e530a622364d3a}} 
+{\bfseries Node\+Info} (Kinded\+::\+Kind kind, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$ in\+Types, llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$ out\+Types)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_info_a1ecda7dc2bd683a011239c7abe755cf5}\label{classglow_1_1_node_info_a1ecda7dc2bd683a011239c7abe755cf5}} 
+{\bfseries Node\+Info} (const \hyperlink{classglow_1_1_node}{Node} \&N)
+\item 
+llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$ \hyperlink{classglow_1_1_node_info_aec9acac75fd1d5cf16ad3337392902c3}{get\+In\+Types} () const
+\item 
+llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_type}{Type\+Ref} $>$ \hyperlink{classglow_1_1_node_info_a0054dece1b1c57116ddb4fe7d5749cc7}{get\+Out\+Types} () const
+\item 
+const \hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_node_info_a8f1cb453edfdfd694c8e345a5ba53d23}{get\+In\+Ty} (size\+\_\+t idx) const
+\item 
+const \hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_node_info_a3a315e1307eb6c1114174e98f60d7232}{get\+Out\+Ty} (size\+\_\+t idx) const
+\item 
+const \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{classglow_1_1_node_info_acf9bbfa62aa8ae0f0bc716c7054bdb52}{get\+In\+Elem\+Ty} (size\+\_\+t idx) const
+\item 
+const \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{classglow_1_1_node_info_abcd1099dede4ba394348542891e32a30}{get\+Out\+Elem\+Ty} (size\+\_\+t idx) const
+\item 
+llvm\+::\+String\+Ref \hyperlink{classglow_1_1_node_info_a0c55e6a0f96c6afd990d4d545d8e9000}{get\+Name} () const
+\item 
+bool \hyperlink{classglow_1_1_node_info_aea1836c8e7b145dff07b80342485a5ff}{all\+Inputs\+And\+Outputs\+Have\+Same\+Elem\+Kind} (llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} $>$ allowed\+Elem\+Kinds, const Indices\+Set \&ignore\+In=\{\}, const Indices\+Set \&ignore\+Out=\{\}) const
+\item 
+std\+::string \hyperlink{classglow_1_1_node_info_ad3444cb445c3a8d9e8bbbd4601f989e7}{get\+Debug\+Desc} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Helper class to hold info of a \hyperlink{classglow_1_1_node}{Node}, containing its {\ttfamily op\+Kind}, {\ttfamily in\+Types}, and {\ttfamily out\+Types} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_node_info_aea1836c8e7b145dff07b80342485a5ff}\label{classglow_1_1_node_info_aea1836c8e7b145dff07b80342485a5ff}} 
+\index{glow\+::\+Node\+Info@{glow\+::\+Node\+Info}!all\+Inputs\+And\+Outputs\+Have\+Same\+Elem\+Kind@{all\+Inputs\+And\+Outputs\+Have\+Same\+Elem\+Kind}}
+\index{all\+Inputs\+And\+Outputs\+Have\+Same\+Elem\+Kind@{all\+Inputs\+And\+Outputs\+Have\+Same\+Elem\+Kind}!glow\+::\+Node\+Info@{glow\+::\+Node\+Info}}
+\subsubsection{\texorpdfstring{all\+Inputs\+And\+Outputs\+Have\+Same\+Elem\+Kind()}{allInputsAndOutputsHaveSameElemKind()}}
+{\footnotesize\ttfamily bool glow\+::\+Node\+Info\+::all\+Inputs\+And\+Outputs\+Have\+Same\+Elem\+Kind (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} $>$}]{allowed\+Elem\+Kinds,  }\item[{const Indices\+Set \&}]{ignore\+In = {\ttfamily \{\}},  }\item[{const Indices\+Set \&}]{ignore\+Out = {\ttfamily \{\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+whether all of the element types of in\+Types\+\_\+ and out\+Types\+\_\+ are all the same and one of those found in {\ttfamily allowed\+Elem\+Kinds}. {\ttfamily ignore\+In} and {\ttfamily ignore\+Out} represent indices that can be skipped in in\+Types\+\_\+ and out\+Types\+\_\+ respectively. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_info_ad3444cb445c3a8d9e8bbbd4601f989e7}\label{classglow_1_1_node_info_ad3444cb445c3a8d9e8bbbd4601f989e7}} 
+\index{glow\+::\+Node\+Info@{glow\+::\+Node\+Info}!get\+Debug\+Desc@{get\+Debug\+Desc}}
+\index{get\+Debug\+Desc@{get\+Debug\+Desc}!glow\+::\+Node\+Info@{glow\+::\+Node\+Info}}
+\subsubsection{\texorpdfstring{get\+Debug\+Desc()}{getDebugDesc()}}
+{\footnotesize\ttfamily std\+::string glow\+::\+Node\+Info\+::get\+Debug\+Desc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Helper for debugging which \begin{DoxyReturn}{Returns}
+a string representation for the \hyperlink{classglow_1_1_node_info}{Node\+Info}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_info_acf9bbfa62aa8ae0f0bc716c7054bdb52}\label{classglow_1_1_node_info_acf9bbfa62aa8ae0f0bc716c7054bdb52}} 
+\index{glow\+::\+Node\+Info@{glow\+::\+Node\+Info}!get\+In\+Elem\+Ty@{get\+In\+Elem\+Ty}}
+\index{get\+In\+Elem\+Ty@{get\+In\+Elem\+Ty}!glow\+::\+Node\+Info@{glow\+::\+Node\+Info}}
+\subsubsection{\texorpdfstring{get\+In\+Elem\+Ty()}{getInElemTy()}}
+{\footnotesize\ttfamily const \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} glow\+::\+Node\+Info\+::get\+In\+Elem\+Ty (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the input type located at {\ttfamily idx}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_info_a8f1cb453edfdfd694c8e345a5ba53d23}\label{classglow_1_1_node_info_a8f1cb453edfdfd694c8e345a5ba53d23}} 
+\index{glow\+::\+Node\+Info@{glow\+::\+Node\+Info}!get\+In\+Ty@{get\+In\+Ty}}
+\index{get\+In\+Ty@{get\+In\+Ty}!glow\+::\+Node\+Info@{glow\+::\+Node\+Info}}
+\subsubsection{\texorpdfstring{get\+In\+Ty()}{getInTy()}}
+{\footnotesize\ttfamily const \hyperlink{structglow_1_1_type}{Type\+Ref} glow\+::\+Node\+Info\+::get\+In\+Ty (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the input type located at {\ttfamily idx}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_info_aec9acac75fd1d5cf16ad3337392902c3}\label{classglow_1_1_node_info_aec9acac75fd1d5cf16ad3337392902c3}} 
+\index{glow\+::\+Node\+Info@{glow\+::\+Node\+Info}!get\+In\+Types@{get\+In\+Types}}
+\index{get\+In\+Types@{get\+In\+Types}!glow\+::\+Node\+Info@{glow\+::\+Node\+Info}}
+\subsubsection{\texorpdfstring{get\+In\+Types()}{getInTypes()}}
+{\footnotesize\ttfamily llvm\+::\+Array\+Ref$<$\hyperlink{structglow_1_1_type}{Type\+Ref}$>$ glow\+::\+Node\+Info\+::get\+In\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the input types. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_info_a0c55e6a0f96c6afd990d4d545d8e9000}\label{classglow_1_1_node_info_a0c55e6a0f96c6afd990d4d545d8e9000}} 
+\index{glow\+::\+Node\+Info@{glow\+::\+Node\+Info}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!glow\+::\+Node\+Info@{glow\+::\+Node\+Info}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily llvm\+::\+String\+Ref glow\+::\+Node\+Info\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the name of the node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_info_abcd1099dede4ba394348542891e32a30}\label{classglow_1_1_node_info_abcd1099dede4ba394348542891e32a30}} 
+\index{glow\+::\+Node\+Info@{glow\+::\+Node\+Info}!get\+Out\+Elem\+Ty@{get\+Out\+Elem\+Ty}}
+\index{get\+Out\+Elem\+Ty@{get\+Out\+Elem\+Ty}!glow\+::\+Node\+Info@{glow\+::\+Node\+Info}}
+\subsubsection{\texorpdfstring{get\+Out\+Elem\+Ty()}{getOutElemTy()}}
+{\footnotesize\ttfamily const \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} glow\+::\+Node\+Info\+::get\+Out\+Elem\+Ty (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the output type located at {\ttfamily idx}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_info_a3a315e1307eb6c1114174e98f60d7232}\label{classglow_1_1_node_info_a3a315e1307eb6c1114174e98f60d7232}} 
+\index{glow\+::\+Node\+Info@{glow\+::\+Node\+Info}!get\+Out\+Ty@{get\+Out\+Ty}}
+\index{get\+Out\+Ty@{get\+Out\+Ty}!glow\+::\+Node\+Info@{glow\+::\+Node\+Info}}
+\subsubsection{\texorpdfstring{get\+Out\+Ty()}{getOutTy()}}
+{\footnotesize\ttfamily const \hyperlink{structglow_1_1_type}{Type\+Ref} glow\+::\+Node\+Info\+::get\+Out\+Ty (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the output type located at {\ttfamily idx}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_info_a0054dece1b1c57116ddb4fe7d5749cc7}\label{classglow_1_1_node_info_a0054dece1b1c57116ddb4fe7d5749cc7}} 
+\index{glow\+::\+Node\+Info@{glow\+::\+Node\+Info}!get\+Out\+Types@{get\+Out\+Types}}
+\index{get\+Out\+Types@{get\+Out\+Types}!glow\+::\+Node\+Info@{glow\+::\+Node\+Info}}
+\subsubsection{\texorpdfstring{get\+Out\+Types()}{getOutTypes()}}
+{\footnotesize\ttfamily llvm\+::\+Array\+Ref$<$\hyperlink{structglow_1_1_type}{Type\+Ref}$>$ glow\+::\+Node\+Info\+::get\+Out\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the output types. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Node.\+h\end{DoxyCompactItemize}

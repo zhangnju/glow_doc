@@ -1,0 +1,49 @@
+\hypertarget{classglow_1_1_tensor_view_inst}{}\section{glow\+:\+:Tensor\+View\+Inst Class Reference}
+\label{classglow_1_1_tensor_view_inst}\index{glow\+::\+Tensor\+View\+Inst@{glow\+::\+Tensor\+View\+Inst}}
+Inheritance diagram for glow\+:\+:Tensor\+View\+Inst\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.991111cm]{classglow_1_1_tensor_view_inst}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_view_inst_a2381cf2d8b78d4ab452f3e2422384809}\label{classglow_1_1_tensor_view_inst_a2381cf2d8b78d4ab452f3e2422384809}} 
+{\bfseries Tensor\+View\+Inst} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$Src, \hyperlink{structglow_1_1_type}{Type\+Ref} Ty, std\+::vector$<$ size\+\_\+t $>$ Offsets)
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_view_inst_a94686ffc00a8912ba38e2ecf4568d577}\label{classglow_1_1_tensor_view_inst_a94686ffc00a8912ba38e2ecf4568d577}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Src} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_view_inst_ab2949653409f8a7b777acc80c3b25a0e}\label{classglow_1_1_tensor_view_inst_ab2949653409f8a7b777acc80c3b25a0e}} 
+\hyperlink{structglow_1_1_type}{Type\+Ref} {\bfseries get\+Ty} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_view_inst_ade682d30e2ddeaec32052c33a97d81f8}\label{classglow_1_1_tensor_view_inst_ade682d30e2ddeaec32052c33a97d81f8}} 
+llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ {\bfseries get\+Offsets} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_view_inst_a33e31bff5d24d9e7a979ee1842f5f1f7}\label{classglow_1_1_tensor_view_inst_a33e31bff5d24d9e7a979ee1842f5f1f7}} 
+bool {\bfseries is\+Inplace\+Op} (unsigned dst\+Idx, unsigned src\+Idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_view_inst_a2fac53ecf3eeb1a46dce285a3c6ed125}\label{classglow_1_1_tensor_view_inst_a2fac53ecf3eeb1a46dce285a3c6ed125}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_view_inst_a0da1ff00f1cce159139b721d975b6283}\label{classglow_1_1_tensor_view_inst_a0da1ff00f1cce159139b721d975b6283}} 
+void {\bfseries dump} (llvm\+::raw\+\_\+ostream \&os) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_view_inst_a8f2b67c2fbfde0aa15b10ea3068aa275}\label{classglow_1_1_tensor_view_inst_a8f2b67c2fbfde0aa15b10ea3068aa275}} 
+void {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_view_inst_a579b1eaf971b1729e44866d22124b456}\label{classglow_1_1_tensor_view_inst_a579b1eaf971b1729e44866d22124b456}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+h\item 
+lib/\+I\+R/Instrs.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+cpp\end{DoxyCompactItemize}

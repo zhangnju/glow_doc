@@ -1,0 +1,106 @@
+\hypertarget{classglow_1_1_batched_add_node}{}\section{glow\+:\+:Batched\+Add\+Node Class Reference}
+\label{classglow_1_1_batched_add_node}\index{glow\+::\+Batched\+Add\+Node@{glow\+::\+Batched\+Add\+Node}}
+
+
+Adds the \textquotesingle{}Slice\textquotesingle{} operand to each one of the slices in the batch.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Batched\+Add\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_batched_add_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a3223ce52d444b496f532d40c75daf0fd}\label{classglow_1_1_batched_add_node_a3223ce52d444b496f532d40c75daf0fd}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Batch\+Idx} = 0, 
+{\bfseries Slice\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_ab36fcd6401617444404fac4a6f4e2e62}\label{classglow_1_1_batched_add_node_ab36fcd6401617444404fac4a6f4e2e62}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a4f06652af0977b2faccf0562abe731d6}\label{classglow_1_1_batched_add_node_a4f06652af0977b2faccf0562abe731d6}} 
+{\bfseries Batched\+Add\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Batch, \hyperlink{structglow_1_1_node_value}{Node\+Value} Slice)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a811c53c40ed596611486c3d6d0014bbd}\label{classglow_1_1_batched_add_node_a811c53c40ed596611486c3d6d0014bbd}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Batch} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a401965023fc1fb72c33f719a1f0f17a8}\label{classglow_1_1_batched_add_node_a401965023fc1fb72c33f719a1f0f17a8}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Slice} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a57dc635ecff491e5990f4309b8e7cfc2}\label{classglow_1_1_batched_add_node_a57dc635ecff491e5990f4309b8e7cfc2}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a24787c087cd89f756ee04556d4d6c55f}\label{classglow_1_1_batched_add_node_a24787c087cd89f756ee04556d4d6c55f}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_ac9f4b521066f2f12defffd4399568d86}\label{classglow_1_1_batched_add_node_ac9f4b521066f2f12defffd4399568d86}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a05cd6679ae36aaa2c2fe4e461959d276}\label{classglow_1_1_batched_add_node_a05cd6679ae36aaa2c2fe4e461959d276}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_acaa27fcaab86a4be2a8cfce4b8f7d2a8}\label{classglow_1_1_batched_add_node_acaa27fcaab86a4be2a8cfce4b8f7d2a8}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a4dca70d06013c76ffaff580dd731e6ed}\label{classglow_1_1_batched_add_node_a4dca70d06013c76ffaff580dd731e6ed}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a626e4fc620587cc09a1d09448e090200}\label{classglow_1_1_batched_add_node_a626e4fc620587cc09a1d09448e090200}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a43b7e6d3f6793f8ecf22f591fdbcf129}\label{classglow_1_1_batched_add_node_a43b7e6d3f6793f8ecf22f591fdbcf129}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_acacbfb44a2b611e4c21e6c8e86ce6cc3}\label{classglow_1_1_batched_add_node_acacbfb44a2b611e4c21e6c8e86ce6cc3}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_acc88bec7328402ed7452f84296e17d00}\label{classglow_1_1_batched_add_node_acc88bec7328402ed7452f84296e17d00}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_ad55a0cc4e86cbc7a8f539f1f365352cf}\label{classglow_1_1_batched_add_node_ad55a0cc4e86cbc7a8f539f1f365352cf}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a06f28d6b3ab0cdff39d65f2b58fcc708}\label{classglow_1_1_batched_add_node_a06f28d6b3ab0cdff39d65f2b58fcc708}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_batched_add_node}{Batched\+Add\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a73e71e29ba1306cc6b1de4cf3948cf39}\label{classglow_1_1_batched_add_node_a73e71e29ba1306cc6b1de4cf3948cf39}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a8cf66176c72cb97ccf7bd36fe8f3b52a}\label{classglow_1_1_batched_add_node_a8cf66176c72cb97ccf7bd36fe8f3b52a}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a5356bf28aaefa52611dc26b9ee7ed3c7}\label{classglow_1_1_batched_add_node_a5356bf28aaefa52611dc26b9ee7ed3c7}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_ac236bb9a4f8b216f646debdd1a9428c5}\label{classglow_1_1_batched_add_node_ac236bb9a4f8b216f646debdd1a9428c5}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batched_add_node_a77abe43f23cac28574d4986f7d982e77}\label{classglow_1_1_batched_add_node_a77abe43f23cac28574d4986f7d982e77}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Adds the \textquotesingle{}Slice\textquotesingle{} operand to each one of the slices in the batch. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

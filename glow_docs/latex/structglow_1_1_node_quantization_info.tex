@@ -1,0 +1,54 @@
+\hypertarget{structglow_1_1_node_quantization_info}{}\section{glow\+:\+:Node\+Quantization\+Info Struct Reference}
+\label{structglow_1_1_node_quantization_info}\index{glow\+::\+Node\+Quantization\+Info@{glow\+::\+Node\+Quantization\+Info}}
+
+
+\hyperlink{classglow_1_1_tensor}{Tensor} quantization parameters for a given node.  
+
+
+
+
+{\ttfamily \#include $<$Base.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_quantization_info_af4df818cf66c1ba584a3ac7f6b1f9cdd}\label{structglow_1_1_node_quantization_info_af4df818cf66c1ba584a3ac7f6b1f9cdd}} 
+{\bfseries Node\+Quantization\+Info} (const std\+::string \&node\+Output\+Name, const \hyperlink{structglow_1_1_tensor_quantization_params}{Tensor\+Quantization\+Params} \&tensor\+Quantization\+Params)
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_quantization_info_a40a5e8af87fea2fae5b2a6478da9b4ee}\label{structglow_1_1_node_quantization_info_a40a5e8af87fea2fae5b2a6478da9b4ee}} 
+float {\bfseries Scale} () const
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_quantization_info_a789d67eff0049ec18564ff8be7b425c9}\label{structglow_1_1_node_quantization_info_a789d67eff0049ec18564ff8be7b425c9}} 
+int32\+\_\+t {\bfseries Offset} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \hyperlink{structglow_1_1_node_quantization_info_a95eecb61266bd5b736d50b7904a6c95d}{generate\+Node\+Output\+Name} (const std\+::string \&node\+Name, unsigned output\+Number=0)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_quantization_info_a8236317f6635e7dd3ef365ed35fd754b}\label{structglow_1_1_node_quantization_info_a8236317f6635e7dd3ef365ed35fd754b}} 
+std\+::string {\bfseries node\+Output\+Name\+\_\+}
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_quantization_info_a3ff1014f217f2ac53b0abb6fb113f9a7}\label{structglow_1_1_node_quantization_info_a3ff1014f217f2ac53b0abb6fb113f9a7}} 
+\hyperlink{structglow_1_1_tensor_quantization_params}{Tensor\+Quantization\+Params} {\bfseries tensor\+Quantization\+Params\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classglow_1_1_tensor}{Tensor} quantization parameters for a given node. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_node_quantization_info_a95eecb61266bd5b736d50b7904a6c95d}\label{structglow_1_1_node_quantization_info_a95eecb61266bd5b736d50b7904a6c95d}} 
+\index{glow\+::\+Node\+Quantization\+Info@{glow\+::\+Node\+Quantization\+Info}!generate\+Node\+Output\+Name@{generate\+Node\+Output\+Name}}
+\index{generate\+Node\+Output\+Name@{generate\+Node\+Output\+Name}!glow\+::\+Node\+Quantization\+Info@{glow\+::\+Node\+Quantization\+Info}}
+\subsubsection{\texorpdfstring{generate\+Node\+Output\+Name()}{generateNodeOutputName()}}
+{\footnotesize\ttfamily static std\+::string glow\+::\+Node\+Quantization\+Info\+::generate\+Node\+Output\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{node\+Name,  }\item[{unsigned}]{output\+Number = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get the full node output name based on the node name and output number. The following format is used\+: nodename\+:output\+Number 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Quantization/\+Base/Base.\+h\end{DoxyCompactItemize}

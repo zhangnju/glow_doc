@@ -1,0 +1,42 @@
+\hypertarget{classglow_1_1_scoped_trace_block}{}\section{glow\+:\+:Scoped\+Trace\+Block Class Reference}
+\label{classglow_1_1_scoped_trace_block}\index{glow\+::\+Scoped\+Trace\+Block@{glow\+::\+Scoped\+Trace\+Block}}
+
+
+{\ttfamily \#include $<$Trace\+Events.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_scoped_trace_block_aab70a32f631354f1e9500282632c7c13}\label{classglow_1_1_scoped_trace_block_aab70a32f631354f1e9500282632c7c13}} 
+{\bfseries Scoped\+Trace\+Block} (\hyperlink{classglow_1_1_trace_context}{Trace\+Context} $\ast$context, \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} level, llvm\+::\+String\+Ref name)
+\item 
+\mbox{\Hypertarget{classglow_1_1_scoped_trace_block_af39210ef4c490db6c377cdc259630b40}\label{classglow_1_1_scoped_trace_block_af39210ef4c490db6c377cdc259630b40}} 
+{\bfseries Scoped\+Trace\+Block} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context, \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} level, llvm\+::\+String\+Ref name)
+\item 
+\mbox{\Hypertarget{classglow_1_1_scoped_trace_block_ae79d5f2a28d0526a5a686f4d8f0117f5}\label{classglow_1_1_scoped_trace_block_ae79d5f2a28d0526a5a686f4d8f0117f5}} 
+\hyperlink{classglow_1_1_scoped_trace_block}{Scoped\+Trace\+Block} \& \hyperlink{classglow_1_1_scoped_trace_block_ae79d5f2a28d0526a5a686f4d8f0117f5}{add\+Arg} (llvm\+::\+String\+Ref key, llvm\+::\+String\+Ref value)
+\begin{DoxyCompactList}\small\item\em Adds an argument to the metadata for this object. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_scoped_trace_block_a8bd958641c7a2118a0e96343514e7b39}{end} ()
+\begin{DoxyCompactList}\small\item\em Triggers the \char`\"{}end\char`\"{} event before destruction of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class which uses R\+A\+II for the start and end times of a \hyperlink{structglow_1_1_trace_event}{Trace\+Event}. At creation will create a \char`\"{}begin\char`\"{} \hyperlink{structglow_1_1_trace_event}{Trace\+Event} and at destuction (or \hyperlink{classglow_1_1_scoped_trace_block_a8bd958641c7a2118a0e96343514e7b39}{end()}) will create an \char`\"{}end\char`\"{} \hyperlink{structglow_1_1_trace_event}{Trace\+Event}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_scoped_trace_block_a8bd958641c7a2118a0e96343514e7b39}\label{classglow_1_1_scoped_trace_block_a8bd958641c7a2118a0e96343514e7b39}} 
+\index{glow\+::\+Scoped\+Trace\+Block@{glow\+::\+Scoped\+Trace\+Block}!end@{end}}
+\index{end@{end}!glow\+::\+Scoped\+Trace\+Block@{glow\+::\+Scoped\+Trace\+Block}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void glow\+::\+Scoped\+Trace\+Block\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Triggers the \char`\"{}end\char`\"{} event before destruction of the object. 
+
+A local memory fence to prevent the compiler reordering intructions to after the end timestamp. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Execution\+Context/Trace\+Events.\+h\item 
+lib/\+Execution\+Context/Trace\+Events.\+cpp\end{DoxyCompactItemize}

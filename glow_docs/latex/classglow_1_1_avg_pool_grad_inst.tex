@@ -1,0 +1,63 @@
+\hypertarget{classglow_1_1_avg_pool_grad_inst}{}\section{glow\+:\+:Avg\+Pool\+Grad\+Inst Class Reference}
+\label{classglow_1_1_avg_pool_grad_inst}\index{glow\+::\+Avg\+Pool\+Grad\+Inst@{glow\+::\+Avg\+Pool\+Grad\+Inst}}
+Inheritance diagram for glow\+:\+:Avg\+Pool\+Grad\+Inst\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.991111cm]{classglow_1_1_avg_pool_grad_inst}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_a853dd5ec14555cd291d5e958459ecce8}\label{classglow_1_1_avg_pool_grad_inst_a853dd5ec14555cd291d5e958459ecce8}} 
+{\bfseries Avg\+Pool\+Grad\+Inst} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$Dest, \hyperlink{classglow_1_1_value}{Value} $\ast$Src, \hyperlink{classglow_1_1_value}{Value} $\ast$Dest\+Grad, \hyperlink{classglow_1_1_value}{Value} $\ast$Src\+Grad, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Kernels, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Strides, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Layout)
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_ad442e82ad99f87c33d64ab6b9a0fcc51}\label{classglow_1_1_avg_pool_grad_inst_ad442e82ad99f87c33d64ab6b9a0fcc51}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Dest} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_ab2ba93651a76cb9da87a557e997fecf0}\label{classglow_1_1_avg_pool_grad_inst_ab2ba93651a76cb9da87a557e997fecf0}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Src} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_a208ce11d4254265d644d6d6e2d4e9e5d}\label{classglow_1_1_avg_pool_grad_inst_a208ce11d4254265d644d6d6e2d4e9e5d}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Dest\+Grad} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_ae10c05395d59469e2a63122fbd034bcf}\label{classglow_1_1_avg_pool_grad_inst_ae10c05395d59469e2a63122fbd034bcf}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Src\+Grad} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_a44c4d337b7c86c36f5c5c394e19eec78}\label{classglow_1_1_avg_pool_grad_inst_a44c4d337b7c86c36f5c5c394e19eec78}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Kernels} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_a840ba0be51726fa4cfb54ff88efc77b4}\label{classglow_1_1_avg_pool_grad_inst_a840ba0be51726fa4cfb54ff88efc77b4}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Strides} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_ad059f944e78e13d9a770db4b986dd2fb}\label{classglow_1_1_avg_pool_grad_inst_ad059f944e78e13d9a770db4b986dd2fb}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Pads} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_abcb6967424bad0d383da7c53340664b3}\label{classglow_1_1_avg_pool_grad_inst_abcb6967424bad0d383da7c53340664b3}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Layout} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_acb05a7aaba4543540b58dbe2dd7ec447}\label{classglow_1_1_avg_pool_grad_inst_acb05a7aaba4543540b58dbe2dd7ec447}} 
+bool {\bfseries is\+Inplace\+Op} (unsigned dst\+Idx, unsigned src\+Idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_aedb9be2684c9d1bc624712074e025b6d}\label{classglow_1_1_avg_pool_grad_inst_aedb9be2684c9d1bc624712074e025b6d}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_ae0f9634f654ebb6314af1d787e925a96}\label{classglow_1_1_avg_pool_grad_inst_ae0f9634f654ebb6314af1d787e925a96}} 
+void {\bfseries dump} (llvm\+::raw\+\_\+ostream \&os) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_a9ae37d77c39592bb93b6c440cfce4ab1}\label{classglow_1_1_avg_pool_grad_inst_a9ae37d77c39592bb93b6c440cfce4ab1}} 
+void {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_avg_pool_grad_inst_a23c065853815af1ab0c32d7f7c06529f}\label{classglow_1_1_avg_pool_grad_inst_a23c065853815af1ab0c32d7f7c06529f}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+h\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+cpp\end{DoxyCompactItemize}

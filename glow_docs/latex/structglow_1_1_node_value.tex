@@ -1,0 +1,134 @@
+\hypertarget{structglow_1_1_node_value}{}\section{glow\+:\+:Node\+Value Struct Reference}
+\label{structglow_1_1_node_value}\index{glow\+::\+Node\+Value@{glow\+::\+Node\+Value}}
+
+
+{\ttfamily \#include $<$Node\+Value.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Node\+Value\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structglow_1_1_node_value}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_adc2bbd2c7c2da72c9cf6c5703a8854af}\label{structglow_1_1_node_value_adc2bbd2c7c2da72c9cf6c5703a8854af}} 
+\hyperlink{structglow_1_1_node_value_adc2bbd2c7c2da72c9cf6c5703a8854af}{Node\+Value} ()=default
+\begin{DoxyCompactList}\small\item\em Create a new value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_ac86c744a619e510e7672d7f68f728dc8}\label{structglow_1_1_node_value_ac86c744a619e510e7672d7f68f728dc8}} 
+\hyperlink{structglow_1_1_node_value_ac86c744a619e510e7672d7f68f728dc8}{Node\+Value} (\hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\begin{DoxyCompactList}\small\item\em Create a new value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_a4e2bcd9dedf212e1878741360700a8fb}\label{structglow_1_1_node_value_a4e2bcd9dedf212e1878741360700a8fb}} 
+\hyperlink{structglow_1_1_node_value_a4e2bcd9dedf212e1878741360700a8fb}{Node\+Value} (\hyperlink{classglow_1_1_node}{Node} $\ast$N, unsigned res\+No)
+\begin{DoxyCompactList}\small\item\em Create a new value for result {\ttfamily res\+No}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_af053093ae6e8431a0ff21cdaf5f5c0e5}\label{structglow_1_1_node_value_af053093ae6e8431a0ff21cdaf5f5c0e5}} 
+\hyperlink{structglow_1_1_node_value_af053093ae6e8431a0ff21cdaf5f5c0e5}{Node\+Value} (const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&that)
+\begin{DoxyCompactList}\small\item\em Create a new value from an existing one. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_af82cf14406121119e24e568fd25ee8ce}\label{structglow_1_1_node_value_af82cf14406121119e24e568fd25ee8ce}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} \& \hyperlink{structglow_1_1_node_value_af82cf14406121119e24e568fd25ee8ce}{operator=} (const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&that)
+\begin{DoxyCompactList}\small\item\em Assignment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_aad7f9e771cd3a633b3f36c3a7c94d924}\label{structglow_1_1_node_value_aad7f9e771cd3a633b3f36c3a7c94d924}} 
+\hyperlink{structglow_1_1_node_value_aad7f9e771cd3a633b3f36c3a7c94d924}{$\sim$\+Node\+Value} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_aaddd5c84f5d64898659917b5062a711c}\label{structglow_1_1_node_value_aaddd5c84f5d64898659917b5062a711c}} 
+unsigned \hyperlink{structglow_1_1_node_value_aaddd5c84f5d64898659917b5062a711c}{get\+Res\+No} () const
+\begin{DoxyCompactList}\small\item\em Get the index which selects a specific result in the S\+D\+Node. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{structglow_1_1_node_value_a3b7a782893423f54d671b17d9dc61b3c}{get\+Node} () const
+\item 
+\hyperlink{structglow_1_1_node_value_a6c13650fac87ad2bde4d217b89b67cd0}{operator Node $\ast$} () const
+\item 
+void \hyperlink{structglow_1_1_node_value_a9817ddc27b8f7ce8627a3427bb93cc4c}{replace\+All\+Uses\+Of\+With} (\hyperlink{structglow_1_1_node_value}{Node\+Value} v, const \hyperlink{classglow_1_1_function}{Function} $\ast$F=nullptr) const
+\item 
+void \hyperlink{structglow_1_1_node_value_a189050953f05aa071d0ea42e0c96ca1d}{type\+Unsafe\+Replace\+All\+Uses\+Of\+With} (\hyperlink{structglow_1_1_node_value}{Node\+Value} v, const \hyperlink{classglow_1_1_function}{Function} $\ast$F=nullptr) const
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_a45452b6a56367075c07c09154fd1e6a2}\label{structglow_1_1_node_value_a45452b6a56367075c07c09154fd1e6a2}} 
+\hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{structglow_1_1_node_value_a45452b6a56367075c07c09154fd1e6a2}{get\+Type} () const
+\begin{DoxyCompactList}\small\item\em Return the Type\+Ref of the referenced return value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_a7e3825c4331b92b861f9e7390513f983}\label{structglow_1_1_node_value_a7e3825c4331b92b861f9e7390513f983}} 
+void \hyperlink{structglow_1_1_node_value_a7e3825c4331b92b861f9e7390513f983}{set\+Type} (\hyperlink{structglow_1_1_type}{Type\+Ref} ty)
+\begin{DoxyCompactList}\small\item\em Set the type of the referenced value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_aecd95ca1f640eea6bd3d3d4efb2afa49}\label{structglow_1_1_node_value_aecd95ca1f640eea6bd3d3d4efb2afa49}} 
+bool {\bfseries operator==} (const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&O) const
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_a251f4601a1272045394c376a1b1ec067}\label{structglow_1_1_node_value_a251f4601a1272045394c376a1b1ec067}} 
+bool {\bfseries operator$<$} (const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&O) const
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_a66d673c39f2eb82ea606764b51ba6f99}\label{structglow_1_1_node_value_a66d673c39f2eb82ea606764b51ba6f99}} 
+bool \hyperlink{structglow_1_1_node_value_a66d673c39f2eb82ea606764b51ba6f99}{has\+One\+Use} () const
+\begin{DoxyCompactList}\small\item\em Check if this \hyperlink{structglow_1_1_node_value}{Node\+Value} has exactly one use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_a1e1587400646cbdcc55cb4e429776918}\label{structglow_1_1_node_value_a1e1587400646cbdcc55cb4e429776918}} 
+unsigned \hyperlink{structglow_1_1_node_value_a1e1587400646cbdcc55cb4e429776918}{get\+Num\+Users} () const
+\begin{DoxyCompactList}\small\item\em Get the number of users of this \hyperlink{structglow_1_1_node_value}{Node\+Value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_abfc5db28fbf6283170eb089ee5a54341}\label{structglow_1_1_node_value_abfc5db28fbf6283170eb089ee5a54341}} 
+llvm\+::iterator\+\_\+range$<$ \hyperlink{classglow_1_1_node_value_iterator_impl}{Node\+Value\+Iterator} $>$ \hyperlink{structglow_1_1_node_value_abfc5db28fbf6283170eb089ee5a54341}{get\+Users} ()
+\begin{DoxyCompactList}\small\item\em Get the list of users of this \hyperlink{structglow_1_1_node_value}{Node\+Value}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_a952af3279023e7ed63db98db588fa855}\label{structglow_1_1_node_value_a952af3279023e7ed63db98db588fa855}} 
+llvm\+::iterator\+\_\+range$<$ \hyperlink{classglow_1_1_node_value_iterator_impl}{Node\+Value\+Const\+Iterator} $>$ {\bfseries get\+Users} () const
+\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{structglow_1_1_node_value_a44dc07623558f626625ef99f06b98668}{get\+Element\+Type} () const
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_aecc88cfe8334d77fe5bfbaa892bd3ac7}\label{structglow_1_1_node_value_aecc88cfe8334d77fe5bfbaa892bd3ac7}} 
+llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ {\bfseries dims} () const
+\end{DoxyCompactItemize}
+
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_a550b1d5a8f680719955e29eab1bd867f}\label{structglow_1_1_node_value_a550b1d5a8f680719955e29eab1bd867f}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{structglow_1_1_node_value_a550b1d5a8f680719955e29eab1bd867f}{node\+\_\+} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em A pointer to the node (owned by the graph). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_node_value_a7db7ad30de53cb23f229c2f88b54e083}\label{structglow_1_1_node_value_a7db7ad30de53cb23f229c2f88b54e083}} 
+unsigned \hyperlink{structglow_1_1_node_value_a7db7ad30de53cb23f229c2f88b54e083}{res\+No\+\_\+} \{0\}
+\begin{DoxyCompactList}\small\item\em Specifies the node result number to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Unlike L\+L\+VM values, graph nodes may return multiple values as the result of a computation. Gradient-\/calculating nodes such as conv-\/grad return multiple values. As such, each use of a node computation must indicate the node that computes it as well as which return value to use from that node. This pair of information is represented in this class. \hyperlink{structglow_1_1_node_value}{Node\+Value} is a simple P\+OD struct that contains a reference to a node and a result number. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_node_value_a44dc07623558f626625ef99f06b98668}\label{structglow_1_1_node_value_a44dc07623558f626625ef99f06b98668}} 
+\index{glow\+::\+Node\+Value@{glow\+::\+Node\+Value}!get\+Element\+Type@{get\+Element\+Type}}
+\index{get\+Element\+Type@{get\+Element\+Type}!glow\+::\+Node\+Value@{glow\+::\+Node\+Value}}
+\subsubsection{\texorpdfstring{get\+Element\+Type()}{getElementType()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} Node\+Value\+::get\+Element\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Methods that forward to the result type (that must be valid)\+: \mbox{\Hypertarget{structglow_1_1_node_value_a3b7a782893423f54d671b17d9dc61b3c}\label{structglow_1_1_node_value_a3b7a782893423f54d671b17d9dc61b3c}} 
+\index{glow\+::\+Node\+Value@{glow\+::\+Node\+Value}!get\+Node@{get\+Node}}
+\index{get\+Node@{get\+Node}!glow\+::\+Node\+Value@{glow\+::\+Node\+Value}}
+\subsubsection{\texorpdfstring{get\+Node()}{getNode()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node}$\ast$ glow\+::\+Node\+Value\+::get\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the underlying pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_node_value_a6c13650fac87ad2bde4d217b89b67cd0}\label{structglow_1_1_node_value_a6c13650fac87ad2bde4d217b89b67cd0}} 
+\index{glow\+::\+Node\+Value@{glow\+::\+Node\+Value}!operator Node $\ast$@{operator Node $\ast$}}
+\index{operator Node $\ast$@{operator Node $\ast$}!glow\+::\+Node\+Value@{glow\+::\+Node\+Value}}
+\subsubsection{\texorpdfstring{operator Node $\ast$()}{operator Node *()}}
+{\footnotesize\ttfamily glow\+::\+Node\+Value\+::operator \hyperlink{classglow_1_1_node}{Node} $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the underlying pointer when casting. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_node_value_a9817ddc27b8f7ce8627a3427bb93cc4c}\label{structglow_1_1_node_value_a9817ddc27b8f7ce8627a3427bb93cc4c}} 
+\index{glow\+::\+Node\+Value@{glow\+::\+Node\+Value}!replace\+All\+Uses\+Of\+With@{replace\+All\+Uses\+Of\+With}}
+\index{replace\+All\+Uses\+Of\+With@{replace\+All\+Uses\+Of\+With}!glow\+::\+Node\+Value@{glow\+::\+Node\+Value}}
+\subsubsection{\texorpdfstring{replace\+All\+Uses\+Of\+With()}{replaceAllUsesOfWith()}}
+{\footnotesize\ttfamily void Node\+Value\+::replace\+All\+Uses\+Of\+With (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{v,  }\item[{const \hyperlink{classglow_1_1_function}{Function} $\ast$}]{F = {\ttfamily nullptr} }\end{DoxyParamCaption}) const}
+
+Replace all of the uses in {\ttfamily F} of this value with {\ttfamily v}. Types of the node value and {\ttfamily v} should be exactly the same. \mbox{\Hypertarget{structglow_1_1_node_value_a189050953f05aa071d0ea42e0c96ca1d}\label{structglow_1_1_node_value_a189050953f05aa071d0ea42e0c96ca1d}} 
+\index{glow\+::\+Node\+Value@{glow\+::\+Node\+Value}!type\+Unsafe\+Replace\+All\+Uses\+Of\+With@{type\+Unsafe\+Replace\+All\+Uses\+Of\+With}}
+\index{type\+Unsafe\+Replace\+All\+Uses\+Of\+With@{type\+Unsafe\+Replace\+All\+Uses\+Of\+With}!glow\+::\+Node\+Value@{glow\+::\+Node\+Value}}
+\subsubsection{\texorpdfstring{type\+Unsafe\+Replace\+All\+Uses\+Of\+With()}{typeUnsafeReplaceAllUsesOfWith()}}
+{\footnotesize\ttfamily void Node\+Value\+::type\+Unsafe\+Replace\+All\+Uses\+Of\+With (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{v,  }\item[{const \hyperlink{classglow_1_1_function}{Function} $\ast$}]{F = {\ttfamily nullptr} }\end{DoxyParamCaption}) const}
+
+Replace all of the uses in {\ttfamily F} of this value with {\ttfamily v}. Types of the node value and {\ttfamily v} can be different. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Node\+Value.\+h\item 
+lib/\+Graph/Node\+Value.\+cpp\end{DoxyCompactItemize}

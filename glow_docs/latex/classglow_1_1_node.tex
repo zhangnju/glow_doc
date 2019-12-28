@@ -1,0 +1,309 @@
+\hypertarget{classglow_1_1_node}{}\section{glow\+:\+:Node Class Reference}
+\label{classglow_1_1_node}\index{glow\+::\+Node@{glow\+::\+Node}}
+
+
+Represents a node in the compute graph.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classglow_1_1_node}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_a763bc613775e465454739bec23862f0c}\label{classglow_1_1_node_a763bc613775e465454739bec23862f0c}} 
+{\bfseries Node} (Kinded\+::\+Kind k, llvm\+::\+String\+Ref name)
+\item 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} \hyperlink{classglow_1_1_node_aa8d2dcebd65cef8d43ca2e90f3b59d05}{get\+Predicate} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_ab626908f81e8d10eb4f42376ecb152eb}\label{classglow_1_1_node_ab626908f81e8d10eb4f42376ecb152eb}} 
+void \hyperlink{classglow_1_1_node_ab626908f81e8d10eb4f42376ecb152eb}{set\+Predicate} (const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&P)
+\begin{DoxyCompactList}\small\item\em Assigns a nullable predicate to the current node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_a36202286cf4467a177d8e1844d9e9f0a}\label{classglow_1_1_node_a36202286cf4467a177d8e1844d9e9f0a}} 
+bool \hyperlink{classglow_1_1_node_a36202286cf4467a177d8e1844d9e9f0a}{has\+Predicate} () const
+\begin{DoxyCompactList}\small\item\em Checks if a predicate is assigned to the current node. \end{DoxyCompactList}\item 
+unsigned \hyperlink{classglow_1_1_node_ac3b7b40d0aaef77d50648124cf310bbb}{get\+Num\+Results} () const
+\item 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} \hyperlink{classglow_1_1_node_a2bcdbc1727fd5ee405409168fe834f5f}{get\+Nth\+Result} (unsigned idx)
+\item 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} \hyperlink{classglow_1_1_node_aa570f3b0b2125e3b18b125d3c557f12b}{get\+Nth\+Result} (unsigned idx) const
+\item 
+const \hyperlink{classglow_1_1_function}{Function} $\ast$ \hyperlink{classglow_1_1_node_a11974fd21979f60789e6c02533e17fda}{get\+Parent} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_aca46f50522cc94fa461869821552adb7}\label{classglow_1_1_node_aca46f50522cc94fa461869821552adb7}} 
+\hyperlink{classglow_1_1_function}{Function} $\ast$ {\bfseries get\+Parent} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_ab320e5e60178b9a7913c0a816109a0fd}\label{classglow_1_1_node_ab320e5e60178b9a7913c0a816109a0fd}} 
+void \hyperlink{classglow_1_1_node_ab320e5e60178b9a7913c0a816109a0fd}{set\+Parent} (\hyperlink{classglow_1_1_function}{Function} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Set the link to the function that holds this node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_a8b5702e4c8358c22a904cc3f874b1dc9}\label{classglow_1_1_node_a8b5702e4c8358c22a904cc3f874b1dc9}} 
+unsigned \hyperlink{classglow_1_1_node_a8b5702e4c8358c22a904cc3f874b1dc9}{get\+Num\+Inputs} () const
+\begin{DoxyCompactList}\small\item\em Getters/setters to access \hyperlink{classglow_1_1_node}{Node}\textquotesingle{}s inputs and outputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_afed63a8a5fcbcb158cb8e2765da8f9d6}\label{classglow_1_1_node_afed63a8a5fcbcb158cb8e2765da8f9d6}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_ad62cc118b0b1c8a9e23e6d431c41a11c}\label{classglow_1_1_node_ad62cc118b0b1c8a9e23e6d431c41a11c}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_ab1daab7e145aa2f9dc9c7a68fd17cfda}\label{classglow_1_1_node_ab1daab7e145aa2f9dc9c7a68fd17cfda}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_a551df6e3d3985f7746f30874b8e96a37}\label{classglow_1_1_node_a551df6e3d3985f7746f30874b8e96a37}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_a5ff71bc7d431207970d996b14782b0db}\label{classglow_1_1_node_a5ff71bc7d431207970d996b14782b0db}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_abac711f231a8c8eb69954a0502281d22}\label{classglow_1_1_node_abac711f231a8c8eb69954a0502281d22}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_a73a1c392e41b65c95833bd163927e504}\label{classglow_1_1_node_a73a1c392e41b65c95833bd163927e504}} 
+bool {\bfseries is\+Arithmetic} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_a7f7fd2ca7503d3c8dc19bea6969cf440}\label{classglow_1_1_node_a7f7fd2ca7503d3c8dc19bea6969cf440}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+bool \hyperlink{classglow_1_1_node_af8d2b902d958cac587be871b69df1bdf}{is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+std\+::string \hyperlink{classglow_1_1_node_a0d828791f94bf520faf9c00c2f678135}{get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_a85a6afd99a1fa9ec17411c719f3170bc}\label{classglow_1_1_node_a85a6afd99a1fa9ec17411c719f3170bc}} 
+void \hyperlink{classglow_1_1_node_a85a6afd99a1fa9ec17411c719f3170bc}{dump} (llvm\+::raw\+\_\+ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_node}{Node} into provided output stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_ac0b8b415ec930f1c5444128c1825a1fd}\label{classglow_1_1_node_ac0b8b415ec930f1c5444128c1825a1fd}} 
+void \hyperlink{classglow_1_1_node_ac0b8b415ec930f1c5444128c1825a1fd}{dump} () const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_node}{Node} into default output stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_a3a5d17c95876fa6030ddabbdb1cb88d6}\label{classglow_1_1_node_a3a5d17c95876fa6030ddabbdb1cb88d6}} 
+std\+::string \hyperlink{classglow_1_1_node_a3a5d17c95876fa6030ddabbdb1cb88d6}{to\+String} () const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_node}{Node} to std\+::string. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{classglow_1_1_node_ae1e518ef19a5ddea3fff4d9a146c4f37}{clone} () const
+\item 
+bool \hyperlink{classglow_1_1_node_aafeb437c040985884ff29c1ccd7946a5}{is\+Equal} (const \hyperlink{classglow_1_1_node}{Node} \&other) const
+\item 
+bool \hyperlink{classglow_1_1_node_ad4f15015ad48947f9e6d329e94f4a29d}{operator==} (const \hyperlink{classglow_1_1_node}{Node} \&O) const
+\item 
+llvm\+::hash\+\_\+code \hyperlink{classglow_1_1_node_a64701a874397cb291e62b74d782f8729}{get\+Hash} () const
+\item 
+void \hyperlink{classglow_1_1_node_a3cf56aeb0f2601d389efd276691ba0cc}{visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_acc090e9f629b4a63a5b7a68173f21ecd}\label{classglow_1_1_node_acc090e9f629b4a63a5b7a68173f21ecd}} 
+void {\bfseries visit} (const \hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor) const
+\item 
+bool \hyperlink{classglow_1_1_node_a68444a674fcec690542184620c62f3f9}{verify} () const
+\item 
+void \hyperlink{classglow_1_1_node_a3f0e43cd641d23ef79cbed7977406956}{release\+Users} ()
+\item 
+\hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_node_a5fbfc4b0def2722bb3b8a18499111d69}{get\+Type} (unsigned idx) const
+\item 
+void \hyperlink{classglow_1_1_node_a6dc4d836519ee24333cf01500ba76a00}{set\+Type} (unsigned idx, \hyperlink{structglow_1_1_type}{Type\+Ref} ty)
+\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{classglow_1_1_node_ac8ff415675b1bdffe7ed357d87932023}{get\+Element\+Type} (unsigned res\+No) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_ad9bf0a7be9caaf273e176f2f97eb9c7f}\label{classglow_1_1_node_ad9bf0a7be9caaf273e176f2f97eb9c7f}} 
+llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ {\bfseries dims} (unsigned res\+No) const
+\end{DoxyCompactItemize}
+
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_ae650ba4d94f1a206e5a495de6ac2d512}\label{classglow_1_1_node_ae650ba4d94f1a206e5a495de6ac2d512}} 
+void \hyperlink{classglow_1_1_node_ae650ba4d94f1a206e5a495de6ac2d512}{add\+Result} (\hyperlink{structglow_1_1_type}{Type\+Ref} T)
+\begin{DoxyCompactList}\small\item\em When constructing the node, add a new result of type {\ttfamily T}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classglow_1_1_node_aca9c9027bff8aa59822a0e79d1c1914d}{destroy\+Node} (\hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_afd0dabbd2c342c80c33f16d2ed30102a}\label{classglow_1_1_node_afd0dabbd2c342c80c33f16d2ed30102a}} 
+llvm\+::\+Small\+Vector$<$ \hyperlink{structglow_1_1_type}{Type\+Ref}, 6 $>$ \hyperlink{classglow_1_1_node_afd0dabbd2c342c80c33f16d2ed30102a}{types\+\_\+}
+\begin{DoxyCompactList}\small\item\em The output types for the results of the node. \end{DoxyCompactList}\item 
+\hyperlink{structglow_1_1_node_handle}{Node\+Handle} \hyperlink{classglow_1_1_node_abff87321fccd69d8c1feb8b453c28e13}{predicate\+\_\+}
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_aba7da8db8229694ff1a01c4364d9f68d}\label{classglow_1_1_node_aba7da8db8229694ff1a01c4364d9f68d}} 
+\hyperlink{classglow_1_1_function}{Function} $\ast$ \hyperlink{classglow_1_1_node_aba7da8db8229694ff1a01c4364d9f68d}{parent\+\_\+}
+\begin{DoxyCompactList}\small\item\em Link to the function holding this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a node in the compute graph. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_node_ae1e518ef19a5ddea3fff4d9a146c4f37}\label{classglow_1_1_node_ae1e518ef19a5ddea3fff4d9a146c4f37}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!clone@{clone}}
+\index{clone@{clone}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node} $\ast$ Node\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+copy of the current node. Notice that the new node is not inserted into any D\+AG. The caller of this method should add it to some node-\/list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_aca9c9027bff8aa59822a0e79d1c1914d}\label{classglow_1_1_node_aca9c9027bff8aa59822a0e79d1c1914d}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!destroy\+Node@{destroy\+Node}}
+\index{destroy\+Node@{destroy\+Node}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{destroy\+Node()}{destroyNode()}}
+{\footnotesize\ttfamily void Node\+::destroy\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{N }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Destroys a node and deallocates the memory. This method is typically implicitly invoked when a node is being removed from the intrusive list of nodes. \mbox{\Hypertarget{classglow_1_1_node_a0d828791f94bf520faf9c00c2f678135}\label{classglow_1_1_node_a0d828791f94bf520faf9c00c2f678135}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!get\+Debug\+Desc@{get\+Debug\+Desc}}
+\index{get\+Debug\+Desc@{get\+Debug\+Desc}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Debug\+Desc()}{getDebugDesc()}}
+{\footnotesize\ttfamily std\+::string Node\+::get\+Debug\+Desc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a textual description of the node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_ac8ff415675b1bdffe7ed357d87932023}\label{classglow_1_1_node_ac8ff415675b1bdffe7ed357d87932023}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!get\+Element\+Type@{get\+Element\+Type}}
+\index{get\+Element\+Type@{get\+Element\+Type}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Element\+Type()}{getElementType()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} Node\+::get\+Element\+Type (\begin{DoxyParamCaption}\item[{unsigned}]{res\+No }\end{DoxyParamCaption}) const}
+
+Methods that forward to the result type (that must be valid)\+: \mbox{\Hypertarget{classglow_1_1_node_a64701a874397cb291e62b74d782f8729}\label{classglow_1_1_node_a64701a874397cb291e62b74d782f8729}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!get\+Hash@{get\+Hash}}
+\index{get\+Hash@{get\+Hash}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Hash()}{getHash()}}
+{\footnotesize\ttfamily llvm\+::hash\+\_\+code Node\+::get\+Hash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a hash code of the node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_a2bcdbc1727fd5ee405409168fe834f5f}\label{classglow_1_1_node_a2bcdbc1727fd5ee405409168fe834f5f}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!get\+Nth\+Result@{get\+Nth\+Result}}
+\index{get\+Nth\+Result@{get\+Nth\+Result}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Nth\+Result()}{getNthResult()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_node_value}{Node\+Value} Node\+::get\+Nth\+Result (\begin{DoxyParamCaption}\item[{unsigned}]{idx }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the {\ttfamily idx} result of the node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_aa570f3b0b2125e3b18b125d3c557f12b}\label{classglow_1_1_node_aa570f3b0b2125e3b18b125d3c557f12b}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!get\+Nth\+Result@{get\+Nth\+Result}}
+\index{get\+Nth\+Result@{get\+Nth\+Result}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Nth\+Result()}{getNthResult()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{structglow_1_1_node_value}{Node\+Value} Node\+::get\+Nth\+Result (\begin{DoxyParamCaption}\item[{unsigned}]{idx }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the n\textquotesingle{}th result of the node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_ac3b7b40d0aaef77d50648124cf310bbb}\label{classglow_1_1_node_ac3b7b40d0aaef77d50648124cf310bbb}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!get\+Num\+Results@{get\+Num\+Results}}
+\index{get\+Num\+Results@{get\+Num\+Results}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Num\+Results()}{getNumResults()}}
+{\footnotesize\ttfamily unsigned glow\+::\+Node\+::get\+Num\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of results that the node has. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_a11974fd21979f60789e6c02533e17fda}\label{classglow_1_1_node_a11974fd21979f60789e6c02533e17fda}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!get\+Parent@{get\+Parent}}
+\index{get\+Parent@{get\+Parent}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Parent()}{getParent()}}
+{\footnotesize\ttfamily const \hyperlink{classglow_1_1_function}{Function}$\ast$ glow\+::\+Node\+::get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the function holding this node. If that node does not belong to any function, this is nullptr. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_aa8d2dcebd65cef8d43ca2e90f3b59d05}\label{classglow_1_1_node_aa8d2dcebd65cef8d43ca2e90f3b59d05}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!get\+Predicate@{get\+Predicate}}
+\index{get\+Predicate@{get\+Predicate}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Predicate()}{getPredicate()}}
+{\footnotesize\ttfamily const \hyperlink{structglow_1_1_node_value}{Node\+Value} Node\+::get\+Predicate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the nullable predicate of the current node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_a5fbfc4b0def2722bb3b8a18499111d69}\label{classglow_1_1_node_a5fbfc4b0def2722bb3b8a18499111d69}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_type}{Type\+Ref} Node\+::get\+Type (\begin{DoxyParamCaption}\item[{unsigned}]{idx }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the n\textquotesingle{}th result type of the node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_aafeb437c040985884ff29c1ccd7946a5}\label{classglow_1_1_node_aafeb437c040985884ff29c1ccd7946a5}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!is\+Equal@{is\+Equal}}
+\index{is\+Equal@{is\+Equal}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{is\+Equal()}{isEqual()}}
+{\footnotesize\ttfamily bool Node\+::is\+Equal (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node}{Node} \&}]{other }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true if the node is equal to the other node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_af8d2b902d958cac587be871b69df1bdf}\label{classglow_1_1_node_af8d2b902d958cac587be871b69df1bdf}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!is\+Overwritten\+Nth\+Input@{is\+Overwritten\+Nth\+Input}}
+\index{is\+Overwritten\+Nth\+Input@{is\+Overwritten\+Nth\+Input}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{is\+Overwritten\+Nth\+Input()}{isOverwrittenNthInput()}}
+{\footnotesize\ttfamily bool Node\+::is\+Overwritten\+Nth\+Input (\begin{DoxyParamCaption}\item[{unsigned}]{idx }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true if this input is being overwritten by the node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_ad4f15015ad48947f9e6d329e94f4a29d}\label{classglow_1_1_node_ad4f15015ad48947f9e6d329e94f4a29d}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!operator==@{operator==}}
+\index{operator==@{operator==}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool glow\+::\+Node\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node}{Node} \&}]{O }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the node is equal to the other node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_a3f0e43cd641d23ef79cbed7977406956}\label{classglow_1_1_node_a3f0e43cd641d23ef79cbed7977406956}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!release\+Users@{release\+Users}}
+\index{release\+Users@{release\+Users}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{release\+Users()}{releaseUsers()}}
+{\footnotesize\ttfamily void glow\+::\+Node\+::release\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Replace all uses of this node with null. This method is used by the destruction sequence. When the node is deleted we need to unregister all users. This allows us to deconstruct the graph in an arbitrary order. \mbox{\Hypertarget{classglow_1_1_node_a6dc4d836519ee24333cf01500ba76a00}\label{classglow_1_1_node_a6dc4d836519ee24333cf01500ba76a00}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{set\+Type()}{setType()}}
+{\footnotesize\ttfamily void Node\+::set\+Type (\begin{DoxyParamCaption}\item[{unsigned}]{idx,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{ty }\end{DoxyParamCaption})}
+
+Set the {\ttfamily idx\textquotesingle{}th} result type of the node. \begin{DoxyNote}{Note}
+This setter only changes the type of this one result. If that type is incompatible with the inputs of the node, the caller is responsible to update these if need be. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classglow_1_1_node_a68444a674fcec690542184620c62f3f9}\label{classglow_1_1_node_a68444a674fcec690542184620c62f3f9}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!verify@{verify}}
+\index{verify@{verify}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily bool Node\+::verify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Verify node. \begin{DoxyReturn}{Returns}
+True if the node is valid. False otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_node_a3cf56aeb0f2601d389efd276691ba0cc}\label{classglow_1_1_node_a3cf56aeb0f2601d389efd276691ba0cc}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!visit@{visit}}
+\index{visit@{visit}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily void Node\+::visit (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{parent,  }\item[{\hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$}]{visitor }\end{DoxyParamCaption})}
+
+This method implements the visitor pattern that scans the compute D\+AG top to bottom. The visitor {\ttfamily visitor} is sent by the parent node {\ttfamily parent}, or nullptr if this is the first node to be visited. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classglow_1_1_node_abff87321fccd69d8c1feb8b453c28e13}\label{classglow_1_1_node_abff87321fccd69d8c1feb8b453c28e13}} 
+\index{glow\+::\+Node@{glow\+::\+Node}!predicate\+\_\+@{predicate\+\_\+}}
+\index{predicate\+\_\+@{predicate\+\_\+}!glow\+::\+Node@{glow\+::\+Node}}
+\subsubsection{\texorpdfstring{predicate\+\_\+}{predicate\_}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_node_handle}{Node\+Handle} glow\+::\+Node\+::predicate\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+A nullable reference to some tensor value that may predicate the execution of the current node. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Node.\+h\item 
+lib/\+Graph/Node.\+cpp\end{DoxyCompactItemize}

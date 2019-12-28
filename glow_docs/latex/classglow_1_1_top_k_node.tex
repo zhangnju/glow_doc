@@ -1,0 +1,112 @@
+\hypertarget{classglow_1_1_top_k_node}{}\section{glow\+:\+:Top\+K\+Node Class Reference}
+\label{classglow_1_1_top_k_node}\index{glow\+::\+Top\+K\+Node@{glow\+::\+Top\+K\+Node}}
+
+
+Finds the top K maximal elements for each vector in the tensor. Vectors are defined as the last dimension in the tensor. The input shape \{D\+\_\+0, D\+\_\+1, ... D\+\_\+n\} results in the outputs \{D\+\_\+0, D\+\_\+1, ... D\+\_\+n-\/1, K\}, sorted in non-\/decreasing order.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Top\+K\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_top_k_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a30f566569da863201d7974974b8bc1c9}\label{classglow_1_1_top_k_node_a30f566569da863201d7974974b8bc1c9}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_af8a3d1e241736e8f28f5fc9283ec4464}\label{classglow_1_1_top_k_node_af8a3d1e241736e8f28f5fc9283ec4464}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Values\+Idx} = 0, 
+{\bfseries Indices\+Idx} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_aa1323bac481b78b6a8a01e426310672b}\label{classglow_1_1_top_k_node_aa1323bac481b78b6a8a01e426310672b}} 
+{\bfseries Top\+K\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Values, \hyperlink{structglow_1_1_type}{Type\+Ref} Indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} K)
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_abcf37659f267192b7243792bf255212c}\label{classglow_1_1_top_k_node_abcf37659f267192b7243792bf255212c}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a8aad392af0e15c87242c4eaa03393423}\label{classglow_1_1_top_k_node_a8aad392af0e15c87242c4eaa03393423}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Values} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a958f9f9b87707753f5888cb008e8a6e6}\label{classglow_1_1_top_k_node_a958f9f9b87707753f5888cb008e8a6e6}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Values} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a9794e6464325055e213673734112baa0}\label{classglow_1_1_top_k_node_a9794e6464325055e213673734112baa0}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Indices} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_acfacec8776cb4d74d7139a2081770b4c}\label{classglow_1_1_top_k_node_acfacec8776cb4d74d7139a2081770b4c}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Indices} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a5e316332096a63ab10f5d2103886dbe9}\label{classglow_1_1_top_k_node_a5e316332096a63ab10f5d2103886dbe9}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries getK} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a8e2b425e1a7d5d0a6b0c7fd183e25ee6}\label{classglow_1_1_top_k_node_a8e2b425e1a7d5d0a6b0c7fd183e25ee6}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_ac7ca648391288d451a21561c4b8e6c7a}\label{classglow_1_1_top_k_node_ac7ca648391288d451a21561c4b8e6c7a}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a5c78e5dd3f20763ffe9efcbcbc4a3e4e}\label{classglow_1_1_top_k_node_a5c78e5dd3f20763ffe9efcbcbc4a3e4e}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a1d1e7a3742ae7e923977db6ed63b5b50}\label{classglow_1_1_top_k_node_a1d1e7a3742ae7e923977db6ed63b5b50}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a04b65393949b4e95e956a48473255b83}\label{classglow_1_1_top_k_node_a04b65393949b4e95e956a48473255b83}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a374c6695800c4d32e6044368dc968f08}\label{classglow_1_1_top_k_node_a374c6695800c4d32e6044368dc968f08}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a692b79bf0273484c4df0af54dd574531}\label{classglow_1_1_top_k_node_a692b79bf0273484c4df0af54dd574531}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_aaf051a96cb2cca413ee7d1d884090917}\label{classglow_1_1_top_k_node_aaf051a96cb2cca413ee7d1d884090917}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a9d30a5014a73b01a3b8455e1e40df0f8}\label{classglow_1_1_top_k_node_a9d30a5014a73b01a3b8455e1e40df0f8}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a049b98df3f8d13463af274c73fd1b8de}\label{classglow_1_1_top_k_node_a049b98df3f8d13463af274c73fd1b8de}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_top_k_node}{Top\+K\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a4573e6a58b4cd449a4a83132eaa65ced}\label{classglow_1_1_top_k_node_a4573e6a58b4cd449a4a83132eaa65ced}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a4f86f244ab07cb9c52bb67b596d36d55}\label{classglow_1_1_top_k_node_a4f86f244ab07cb9c52bb67b596d36d55}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_a2da67d5cf94c31505dd0531af72ef06c}\label{classglow_1_1_top_k_node_a2da67d5cf94c31505dd0531af72ef06c}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_aa9162a50b135fbecbbc223722d591aa2}\label{classglow_1_1_top_k_node_aa9162a50b135fbecbbc223722d591aa2}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_top_k_node_af6200930809945a5ce29fdd91002b49a}\label{classglow_1_1_top_k_node_af6200930809945a5ce29fdd91002b49a}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Finds the top K maximal elements for each vector in the tensor. Vectors are defined as the last dimension in the tensor. The input shape \{D\+\_\+0, D\+\_\+1, ... D\+\_\+n\} results in the outputs \{D\+\_\+0, D\+\_\+1, ... D\+\_\+n-\/1, K\}, sorted in non-\/decreasing order. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

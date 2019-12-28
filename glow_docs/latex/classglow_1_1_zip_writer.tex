@@ -1,0 +1,41 @@
+\hypertarget{classglow_1_1_zip_writer}{}\section{glow\+:\+:Zip\+Writer Class Reference}
+\label{classglow_1_1_zip_writer}\index{glow\+::\+Zip\+Writer@{glow\+::\+Zip\+Writer}}
+
+
+Zip Writer.  
+
+
+
+
+{\ttfamily \#include $<$Zip\+Utils.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_zip_writer_a823613141dcb5b2d024a8e4e64282914}\label{classglow_1_1_zip_writer_a823613141dcb5b2d024a8e4e64282914}} 
+{\bfseries Zip\+Writer} (std\+::ostream $\ast$out, const std\+::string \&archive\+\_\+name)
+\item 
+\mbox{\Hypertarget{classglow_1_1_zip_writer_a9fa741779d1e97aa753e14f82449b3b6}\label{classglow_1_1_zip_writer_a9fa741779d1e97aa753e14f82449b3b6}} 
+void {\bfseries write\+Record} (const std\+::string \&name, const void $\ast$data, size\+\_\+t size, bool compress)
+\item 
+\mbox{\Hypertarget{classglow_1_1_zip_writer_af7d53e0867611de0ddc9d502a0a19012}\label{classglow_1_1_zip_writer_af7d53e0867611de0ddc9d502a0a19012}} 
+void {\bfseries write\+End\+Of\+File} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_zip_writer_a30a6977c2387fb1c86c3a771bcba7768}\label{classglow_1_1_zip_writer_a30a6977c2387fb1c86c3a771bcba7768}} 
+void {\bfseries valid} (const char $\ast$what, const char $\ast$info)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_zip_writer_a178eae10d142fcd9777c5f215520980a}\label{classglow_1_1_zip_writer_a178eae10d142fcd9777c5f215520980a}} 
+size\+\_\+t {\bfseries ostream\+Write\+Func} (void $\ast$p\+Opaque, uint64\+\_\+t file\+\_\+ofs, const void $\ast$p\+Buf, size\+\_\+t n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Zip Writer. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Zip\+Utils.\+h\item 
+lib/\+Support/Zip\+Utils.\+cpp\end{DoxyCompactItemize}

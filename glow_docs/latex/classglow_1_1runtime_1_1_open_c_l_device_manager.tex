@@ -1,0 +1,140 @@
+\hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager}{}\section{glow\+:\+:runtime\+:\+:Open\+C\+L\+Device\+Manager Class Reference}
+\label{classglow_1_1runtime_1_1_open_c_l_device_manager}\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}}
+
+
+{\ttfamily \#include $<$Open\+C\+L\+Device\+Manager.\+h$>$}
+
+Inheritance diagram for glow\+:\+:runtime\+:\+:Open\+C\+L\+Device\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classglow_1_1runtime_1_1_open_c_l_device_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_ac1f828f52c1b3777296c91a13a189a77}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_ac1f828f52c1b3777296c91a13a189a77}} 
+{\bfseries Open\+C\+L\+Device\+Manager} (const \hyperlink{structglow_1_1runtime_1_1_device_config}{Device\+Config} \&config)
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_open_c_l_device_manager_a2706d96882b6a599abd732449f96bdab}{init} () override
+\begin{DoxyCompactList}\small\item\em Initialize the device. \end{DoxyCompactList}\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_open_c_l_device_manager_af95560876335be09bca28b465d895687}{parse\+Config} ()
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1runtime_1_1_open_c_l_device_manager_aec918b4dd4a7a0cd926844cf225db306}{get\+Maximum\+Memory} () const override
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_a8ed9fd00ebbed793fd430f9dd227a2cd}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_a8ed9fd00ebbed793fd430f9dd227a2cd}} 
+uint64\+\_\+t \hyperlink{classglow_1_1runtime_1_1_open_c_l_device_manager_a8ed9fd00ebbed793fd430f9dd227a2cd}{get\+Available\+Memory} () const override
+\begin{DoxyCompactList}\small\item\em Returns the amount of memory in bytes currently available on the device. \end{DoxyCompactList}\item 
+bool \hyperlink{classglow_1_1runtime_1_1_open_c_l_device_manager_ab94967240f9d1ef5ae26f3a242488809}{is\+Memory\+Available} (uint64\+\_\+t estimate) const override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classglow_1_1runtime_1_1_open_c_l_device_manager_a062d49988e839e94d4b56ef18851d0f2}{add\+Network\+Impl} (const \hyperlink{classglow_1_1_module}{Module} $\ast$module, Function\+Map\+Ty functions, Ready\+C\+B\+Ty cb) override
+\item 
+void \hyperlink{classglow_1_1runtime_1_1_open_c_l_device_manager_ab74a531a691b91c1f16ff21ae6096e33}{evict\+Network\+Impl} (std\+::string function\+Name, Evict\+Function\+C\+B\+Ty evict\+CB) override
+\item 
+void \hyperlink{classglow_1_1runtime_1_1_open_c_l_device_manager_a1c5fc269e46e652747d1df4e90a5317e}{run\+Function\+Impl} (runtime\+::\+Run\+Identifier\+Ty id, std\+::string function\+Name, std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ context, Result\+C\+B\+Ty cb) override
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_a32765c7bbc5cb16d79aba7c179ff940e}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_a32765c7bbc5cb16d79aba7c179ff940e}} 
+void \hyperlink{classglow_1_1runtime_1_1_open_c_l_device_manager_a32765c7bbc5cb16d79aba7c179ff940e}{copy\+Inputs\+To\+Device} (const \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle} \&runtime\+Bundle, \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context, \hyperlink{structglow_1_1runtime_1_1_open_c_l_device_bindings}{runtime\+::\+Open\+C\+L\+Device\+Bindings} $\ast$dev\+Bindings)
+\begin{DoxyCompactList}\small\item\em Load inputs from {\ttfamily context} onto the device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_aef5cd2d2708069573d966faa166d55cf}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_aef5cd2d2708069573d966faa166d55cf}} 
+void \hyperlink{classglow_1_1runtime_1_1_open_c_l_device_manager_aef5cd2d2708069573d966faa166d55cf}{copy\+Outputs\+From\+Device} (const \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle} \&runtime\+Bundle, \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context, \hyperlink{structglow_1_1runtime_1_1_open_c_l_device_bindings}{runtime\+::\+Open\+C\+L\+Device\+Bindings} $\ast$dev\+Bindings)
+\begin{DoxyCompactList}\small\item\em Copy back results from the device to the host. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1runtime_1_1_open_c_l_device_manager_a32a22b300fdef9738ed026af279e296a}{translate\+Trace\+Events} (Manual\+Event\+Map \&manual\+Trace\+Events, \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context, \hyperlink{structglow_1_1runtime_1_1_open_c_l_device_bindings}{runtime\+::\+Open\+C\+L\+Device\+Bindings} $\ast$dev\+Bindings)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A class controlling a single Open\+CL device. Many Open\+C\+L\+Functions may be added, but only one inference is executed at a time. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_a062d49988e839e94d4b56ef18851d0f2}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_a062d49988e839e94d4b56ef18851d0f2}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}!add\+Network\+Impl@{add\+Network\+Impl}}
+\index{add\+Network\+Impl@{add\+Network\+Impl}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}}
+\subsubsection{\texorpdfstring{add\+Network\+Impl()}{addNetworkImpl()}}
+{\footnotesize\ttfamily void Open\+C\+L\+Device\+Manager\+::add\+Network\+Impl (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_module}{Module} $\ast$}]{module,  }\item[{Function\+Map\+Ty}]{functions,  }\item[{Ready\+C\+B\+Ty}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Adds functions to the device. Calls to this are serialized so concurrency is not an issue. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_queue_backed_device_manager_a47a2b12e364f822961c904c7c123924a}{glow\+::runtime\+::\+Queue\+Backed\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_ab74a531a691b91c1f16ff21ae6096e33}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_ab74a531a691b91c1f16ff21ae6096e33}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}!evict\+Network\+Impl@{evict\+Network\+Impl}}
+\index{evict\+Network\+Impl@{evict\+Network\+Impl}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}}
+\subsubsection{\texorpdfstring{evict\+Network\+Impl()}{evictNetworkImpl()}}
+{\footnotesize\ttfamily void Open\+C\+L\+Device\+Manager\+::evict\+Network\+Impl (\begin{DoxyParamCaption}\item[{std\+::string}]{function\+Name,  }\item[{Evict\+Function\+C\+B\+Ty}]{evict\+CB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Remove network from the device. Also serialized so concurrency is not an issue. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_queue_backed_device_manager_a4b3ae3ad0f78cd72b2d35cac4a10280f}{glow\+::runtime\+::\+Queue\+Backed\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_aec918b4dd4a7a0cd926844cf225db306}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_aec918b4dd4a7a0cd926844cf225db306}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}!get\+Maximum\+Memory@{get\+Maximum\+Memory}}
+\index{get\+Maximum\+Memory@{get\+Maximum\+Memory}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}}
+\subsubsection{\texorpdfstring{get\+Maximum\+Memory()}{getMaximumMemory()}}
+{\footnotesize\ttfamily uint64\+\_\+t Open\+C\+L\+Device\+Manager\+::get\+Maximum\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the amount of memory in bytes available on the device when no models are loaded. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_ad158f1c1f9f32b48927f50d48f80decb}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_a2706d96882b6a599abd732449f96bdab}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_a2706d96882b6a599abd732449f96bdab}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}!init@{init}}
+\index{init@{init}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} Open\+C\+L\+Device\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialize the device. 
+
+Prime thread ids for this device.
+
+It looks nicer if the host thread is before the device thread, so prevent reordering. 
+
+Reimplemented from \hyperlink{classglow_1_1runtime_1_1_queue_backed_device_manager_a25d93d146f471024d9a8c9d0da193838}{glow\+::runtime\+::\+Queue\+Backed\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_ab94967240f9d1ef5ae26f3a242488809}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_ab94967240f9d1ef5ae26f3a242488809}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}!is\+Memory\+Available@{is\+Memory\+Available}}
+\index{is\+Memory\+Available@{is\+Memory\+Available}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}}
+\subsubsection{\texorpdfstring{is\+Memory\+Available()}{isMemoryAvailable()}}
+{\footnotesize\ttfamily bool Open\+C\+L\+Device\+Manager\+::is\+Memory\+Available (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{estimate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns true if a function requiring the {\ttfamily estimate} size will fit on the device. This is not a promise as memory cost could vary due to alignment, etc. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_ae9bba4abda9cb6aa1359a69e942feb22}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_af95560876335be09bca28b465d895687}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_af95560876335be09bca28b465d895687}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}!parse\+Config@{parse\+Config}}
+\index{parse\+Config@{parse\+Config}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}}
+\subsubsection{\texorpdfstring{parse\+Config()}{parseConfig()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} Open\+C\+L\+Device\+Manager\+::parse\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Parse config object provided at initialization \begin{DoxyReturn}{Returns}
+Error indicating success/failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_a1c5fc269e46e652747d1df4e90a5317e}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_a1c5fc269e46e652747d1df4e90a5317e}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}!run\+Function\+Impl@{run\+Function\+Impl}}
+\index{run\+Function\+Impl@{run\+Function\+Impl}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}}
+\subsubsection{\texorpdfstring{run\+Function\+Impl()}{runFunctionImpl()}}
+{\footnotesize\ttfamily void Open\+C\+L\+Device\+Manager\+::run\+Function\+Impl (\begin{DoxyParamCaption}\item[{runtime\+::\+Run\+Identifier\+Ty}]{id,  }\item[{std\+::string}]{function\+Name,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$}]{context,  }\item[{Result\+C\+B\+Ty}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Run the function on the device, there is a single thread of execution so only one function can execute at a time. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_queue_backed_device_manager_a9ff4d91593080b083667b4270f05a850}{glow\+::runtime\+::\+Queue\+Backed\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_device_manager_a32a22b300fdef9738ed026af279e296a}\label{classglow_1_1runtime_1_1_open_c_l_device_manager_a32a22b300fdef9738ed026af279e296a}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}!translate\+Trace\+Events@{translate\+Trace\+Events}}
+\index{translate\+Trace\+Events@{translate\+Trace\+Events}!glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager@{glow\+::runtime\+::\+Open\+C\+L\+Device\+Manager}}
+\subsubsection{\texorpdfstring{translate\+Trace\+Events()}{translateTraceEvents()}}
+{\footnotesize\ttfamily void Open\+C\+L\+Device\+Manager\+::translate\+Trace\+Events (\begin{DoxyParamCaption}\item[{Manual\+Event\+Map \&}]{manual\+Trace\+Events,  }\item[{\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$}]{context,  }\item[{\hyperlink{structglow_1_1runtime_1_1_open_c_l_device_bindings}{runtime\+::\+Open\+C\+L\+Device\+Bindings} $\ast$}]{dev\+Bindings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get profiling information for each kernel\+Launch. This must happen after copy\+Outputs\+From\+Device. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Open\+C\+L/Open\+C\+L\+Device\+Manager.\+h\item 
+lib/\+Backends/\+Open\+C\+L/Open\+C\+L\+Device\+Manager.\+cpp\end{DoxyCompactItemize}

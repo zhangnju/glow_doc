@@ -1,0 +1,105 @@
+\hypertarget{classglow_1_1_tanh_node}{}\section{glow\+:\+:Tanh\+Node Class Reference}
+\label{classglow_1_1_tanh_node}\index{glow\+::\+Tanh\+Node@{glow\+::\+Tanh\+Node}}
+
+
+Applies hyperbolic tangent to each element in the Input tensor.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Tanh\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_tanh_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_ad0bb1520b7df3035d6a739816e8a7a89}\label{classglow_1_1_tanh_node_ad0bb1520b7df3035d6a739816e8a7a89}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_aedd809be363017be0c6a6e509ad33a15}\label{classglow_1_1_tanh_node_aedd809be363017be0c6a6e509ad33a15}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a7f10878ef5d82f228046273deb725d4a}\label{classglow_1_1_tanh_node_a7f10878ef5d82f228046273deb725d4a}} 
+{\bfseries Tanh\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input)
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a11aa3f369feb436e4e58d780e03aa549}\label{classglow_1_1_tanh_node_a11aa3f369feb436e4e58d780e03aa549}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_ab69daf091a764421d1b5e500734ea6a7}\label{classglow_1_1_tanh_node_ab69daf091a764421d1b5e500734ea6a7}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a1bb1d6b6eab2e945e91c9a655ee3ee7c}\label{classglow_1_1_tanh_node_a1bb1d6b6eab2e945e91c9a655ee3ee7c}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a11cd34b66dd8c0a55cbd63f59a0a70e6}\label{classglow_1_1_tanh_node_a11cd34b66dd8c0a55cbd63f59a0a70e6}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a2addeaf0a686dd5a6c0c8c6940951353}\label{classglow_1_1_tanh_node_a2addeaf0a686dd5a6c0c8c6940951353}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_ae33b6cbdbc3b5acb78ce84378bc03638}\label{classglow_1_1_tanh_node_ae33b6cbdbc3b5acb78ce84378bc03638}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_ae08c8497c9710c7fd2ed72ccfc1522df}\label{classglow_1_1_tanh_node_ae08c8497c9710c7fd2ed72ccfc1522df}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a51ad5ddb68ccf2edf76eef90a9ba9b7e}\label{classglow_1_1_tanh_node_a51ad5ddb68ccf2edf76eef90a9ba9b7e}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a14052f43ae5c3cf8de9e1f66147ca4af}\label{classglow_1_1_tanh_node_a14052f43ae5c3cf8de9e1f66147ca4af}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_ab257d898b099aa05c252541f279b1314}\label{classglow_1_1_tanh_node_ab257d898b099aa05c252541f279b1314}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a9c65f9842ebc5a37c87cc05cc5802544}\label{classglow_1_1_tanh_node_a9c65f9842ebc5a37c87cc05cc5802544}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a5293bcbe86207286ed5e1f6c4fe7a4d8}\label{classglow_1_1_tanh_node_a5293bcbe86207286ed5e1f6c4fe7a4d8}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_aa6544dd7879fd31041d680b40e940ff3}\label{classglow_1_1_tanh_node_aa6544dd7879fd31041d680b40e940ff3}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_tanh_node}{Tanh\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a9c690bdf005831f4a0f026aedf359e68}\label{classglow_1_1_tanh_node_a9c690bdf005831f4a0f026aedf359e68}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a05f26a66b1d2e653896bcf0a5e0e5fc5}\label{classglow_1_1_tanh_node_a05f26a66b1d2e653896bcf0a5e0e5fc5}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a9766d75ebabfd8462323e3376ae5b7c1}\label{classglow_1_1_tanh_node_a9766d75ebabfd8462323e3376ae5b7c1}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_a346bd6b4b590f2bffee1d2f213aa4278}\label{classglow_1_1_tanh_node_a346bd6b4b590f2bffee1d2f213aa4278}} 
+bool {\bfseries verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_ab3cbd503c497733b3f8b442976084265}\label{classglow_1_1_tanh_node_ab3cbd503c497733b3f8b442976084265}} 
+\hyperlink{classglow_1_1_tanh_grad_node}{Tanh\+Grad\+Node} $\ast$ {\bfseries get\+Grad} (\hyperlink{classglow_1_1_graph_grad_mapper}{Graph\+Grad\+Mapper} \&builder)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_tanh_node_ae8a5eb748702c9193e5884149b6a1463}\label{classglow_1_1_tanh_node_ae8a5eb748702c9193e5884149b6a1463}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Applies hyperbolic tangent to each element in the Input tensor. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

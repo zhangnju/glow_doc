@@ -1,0 +1,56 @@
+\hypertarget{structglow_1_1_log_input_change}{}\section{glow\+:\+:Log\+Input\+Change Struct Reference}
+\label{structglow_1_1_log_input_change}\index{glow\+::\+Log\+Input\+Change@{glow\+::\+Log\+Input\+Change}}
+Inheritance diagram for glow\+:\+:Log\+Input\+Change\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structglow_1_1_log_input_change}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_input_change_a988a2dcd28f3936482fb229333460165}\label{structglow_1_1_log_input_change_a988a2dcd28f3936482fb229333460165}} 
+{\bfseries Log\+Input\+Change} (const \hyperlink{classglow_1_1_node}{Node} $\ast$user, const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&before, const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&after)
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_input_change_a487b711c038361b6cd56e846c9fff81d}\label{structglow_1_1_log_input_change_a487b711c038361b6cd56e846c9fff81d}} 
+{\bfseries Log\+Input\+Change} (llvm\+::\+String\+Ref n, llvm\+::\+String\+Ref k, llvm\+::\+String\+Ref b, llvm\+::\+String\+Ref a)
+\item 
+bool \hyperlink{structglow_1_1_log_input_change_abe24dc999f25edf277ec308940827431}{dump} (llvm\+::raw\+\_\+fd\+\_\+ostream \&ostream) override
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_input_change_a58d3a45f90c684d0ac571ffe7194c37b}\label{structglow_1_1_log_input_change_a58d3a45f90c684d0ac571ffe7194c37b}} 
+\hyperlink{structglow_1_1_log_event}{Log\+Event} $\ast$ {\bfseries clone} () override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_input_change_a40fb083a01a81d1464eb2ca7d9037dd5}\label{structglow_1_1_log_input_change_a40fb083a01a81d1464eb2ca7d9037dd5}} 
+std\+::string {\bfseries kind\+Name}
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_input_change_afed9af06766e5a17efa7b9d4b4488d9c}\label{structglow_1_1_log_input_change_afed9af06766e5a17efa7b9d4b4488d9c}} 
+std\+::string {\bfseries before\+Name}
+\item 
+\mbox{\Hypertarget{structglow_1_1_log_input_change_a62063203e1eed419abe881d557303f0f}\label{structglow_1_1_log_input_change_a62063203e1eed419abe881d557303f0f}} 
+std\+::string {\bfseries after\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_log_input_change_abe24dc999f25edf277ec308940827431}\label{structglow_1_1_log_input_change_abe24dc999f25edf277ec308940827431}} 
+\index{glow\+::\+Log\+Input\+Change@{glow\+::\+Log\+Input\+Change}!dump@{dump}}
+\index{dump@{dump}!glow\+::\+Log\+Input\+Change@{glow\+::\+Log\+Input\+Change}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily bool glow\+::\+Log\+Input\+Change\+::dump (\begin{DoxyParamCaption}\item[{llvm\+::raw\+\_\+fd\+\_\+ostream \&}]{ostream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+writes this Event and all children to the provided stream. \begin{DoxyReturn}{Returns}
+true if anything was written. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{structglow_1_1_log_event_a1c25aa690ea65f6b184ba3133fd6c564}{glow\+::\+Log\+Event}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Log.\+h\item 
+lib/\+Graph/Log.\+cpp\end{DoxyCompactItemize}

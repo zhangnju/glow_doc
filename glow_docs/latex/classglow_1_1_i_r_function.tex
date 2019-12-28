@@ -1,0 +1,247 @@
+\hypertarget{classglow_1_1_i_r_function}{}\section{glow\+:\+:I\+R\+Function Class Reference}
+\label{classglow_1_1_i_r_function}\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+
+
+A function that represents the compilation unit.  
+
+
+
+
+{\ttfamily \#include $<$I\+R.\+h$>$}
+
+Inheritance diagram for glow\+:\+:I\+R\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_i_r_function}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_ac39ac110ee7d7b9773ce979fc6702e7e}\label{classglow_1_1_i_r_function_ac39ac110ee7d7b9773ce979fc6702e7e}} 
+using {\bfseries Variable\+Map} = llvm\+::\+Map\+Vector$<$ const \hyperlink{classglow_1_1_storage}{Storage} $\ast$, \hyperlink{classglow_1_1_value}{Value} $\ast$ $>$
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_aa31cfb4442740abc3fefed751e36f6cb}\label{classglow_1_1_i_r_function_aa31cfb4442740abc3fefed751e36f6cb}} 
+using {\bfseries Inst\+List\+Ty} = \hyperlink{classglow_1_1_tagged_list}{Tagged\+List}$<$ \hyperlink{classglow_1_1_instruction}{Instruction}, \hyperlink{structglow_1_1_instruction_traits}{Instruction\+Traits} $>$
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a89c666cab8c011bb5092cdaa0a2e306b}\label{classglow_1_1_i_r_function_a89c666cab8c011bb5092cdaa0a2e306b}} 
+using {\bfseries Instr\+Iterator} = \hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Inst\+List\+Ty\+::iterator}
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_aaff9065d9b6753b3a22ca9b8eab23c9b}\label{classglow_1_1_i_r_function_aaff9065d9b6753b3a22ca9b8eab23c9b}} 
+using {\bfseries Instr\+Const\+Iterator} = \hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Inst\+List\+Ty\+::const\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_adf3b8b922c63d18841be49e1abde440d}\label{classglow_1_1_i_r_function_adf3b8b922c63d18841be49e1abde440d}} 
+using {\bfseries Weight\+Var\+List\+Ty} = std\+::list$<$ \hyperlink{classglow_1_1_weight_var}{Weight\+Var} $\ast$ $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a25843b2f4343991c633482ff6e5f9836}\label{classglow_1_1_i_r_function_a25843b2f4343991c633482ff6e5f9836}} 
+void \hyperlink{classglow_1_1_i_r_function_a25843b2f4343991c633482ff6e5f9836}{push\+Instr} (\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$I)
+\begin{DoxyCompactList}\small\item\em Add an instruction to the instr stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a39dd25d665ed7ccca20b8ed7617f97af}\label{classglow_1_1_i_r_function_a39dd25d665ed7ccca20b8ed7617f97af}} 
+{\bfseries I\+R\+Function} (\hyperlink{classglow_1_1_function}{Function} $\ast$G=nullptr)
+\item 
+void \hyperlink{classglow_1_1_i_r_function_ad4e28beb9ad08629d4f9f479dfd2b993}{generate\+IR} (const \hyperlink{classglow_1_1_backend}{Backend} \&B)
+\item 
+void \hyperlink{classglow_1_1_i_r_function_ae55c9c317c085a417b8e814fed07d16e}{clear} ()
+\item 
+\hyperlink{classglow_1_1_function}{Function} $\ast$ \hyperlink{classglow_1_1_i_r_function_aa92aac0064e63f593b6f6f1c43c1cec7}{get\+Graph} ()
+\item 
+const \hyperlink{classglow_1_1_function}{Function} $\ast$ \hyperlink{classglow_1_1_i_r_function_ad86f50fe3418ea5acd411afeda573dae}{get\+Graph} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_ab3259845f867bb7ec7552bd6efc42d31}\label{classglow_1_1_i_r_function_ab3259845f867bb7ec7552bd6efc42d31}} 
+void \hyperlink{classglow_1_1_i_r_function_ab3259845f867bb7ec7552bd6efc42d31}{set\+Graph} (\hyperlink{classglow_1_1_function}{Function} $\ast$F)
+\begin{DoxyCompactList}\small\item\em Sets the high-\/level graph corresponding to this function. \end{DoxyCompactList}\item 
+llvm\+::\+String\+Ref \hyperlink{classglow_1_1_i_r_function_abab74f68d9282d91dd7fbe004e5b1abc}{unique\+Name} (llvm\+::\+String\+Ref name)
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a3add272c76243daef4950bf3ff68338c}\label{classglow_1_1_i_r_function_a3add272c76243daef4950bf3ff68338c}} 
+void \hyperlink{classglow_1_1_i_r_function_a3add272c76243daef4950bf3ff68338c}{verify} () const
+\begin{DoxyCompactList}\small\item\em Verify the correctness of the function. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_i_r_function_ac3d4b9c36b9ef614759bd355e20eedb6}{dump} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a6fa1e4edc00f3f589c8af2bba22f5f30}\label{classglow_1_1_i_r_function_a6fa1e4edc00f3f589c8af2bba22f5f30}} 
+std\+::string \hyperlink{classglow_1_1_i_r_function_a6fa1e4edc00f3f589c8af2bba22f5f30}{to\+String} () const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} to std\+::string. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_i_r_function_a04e36395c1598b4e9df9e2c453963fcc}{dump} (llvm\+::raw\+\_\+ostream \&OS) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a38a50e3f4b56393ef0c149eacf09285f}\label{classglow_1_1_i_r_function_a38a50e3f4b56393ef0c149eacf09285f}} 
+void \hyperlink{classglow_1_1_i_r_function_a38a50e3f4b56393ef0c149eacf09285f}{dump\+D\+AG} (llvm\+::\+String\+Ref dot\+Filename) const
+\begin{DoxyCompactList}\small\item\em Dump a dotty graph that depicts the function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_ac7e1d0dbd7351e5ac9b861f54cc3e720}\label{classglow_1_1_i_r_function_ac7e1d0dbd7351e5ac9b861f54cc3e720}} 
+void \hyperlink{classglow_1_1_i_r_function_ac7e1d0dbd7351e5ac9b861f54cc3e720}{dump\+D\+AG} (const char $\ast$dot\+Filename) const
+\begin{DoxyCompactList}\small\item\em Dump a dotty graph that depicts the function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_aa6168d2cbbaa221b4f3fac7183332200}\label{classglow_1_1_i_r_function_aa6168d2cbbaa221b4f3fac7183332200}} 
+void \hyperlink{classglow_1_1_i_r_function_aa6168d2cbbaa221b4f3fac7183332200}{dump\+D\+AG} () const
+\begin{DoxyCompactList}\small\item\em Dump a dotty graph that depicts the function. \end{DoxyCompactList}\item 
+Variable\+Map \& \hyperlink{classglow_1_1_i_r_function_afbbe6354fff6b20e0bf625d98e635122}{get\+Variable\+Map} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_ae0257baa175ef21e96da12dd79849982}\label{classglow_1_1_i_r_function_ae0257baa175ef21e96da12dd79849982}} 
+std\+::vector$<$ const \hyperlink{classglow_1_1_constant}{Constant} $\ast$ $>$ \hyperlink{classglow_1_1_i_r_function_ae0257baa175ef21e96da12dd79849982}{find\+Constants} () const
+\begin{DoxyCompactList}\small\item\em Returns a list of constants associated with function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a6f81abb6cf86f8eb22b947a54541ab4f}\label{classglow_1_1_i_r_function_a6f81abb6cf86f8eb22b947a54541ab4f}} 
+std\+::vector$<$ const \hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ $>$ \hyperlink{classglow_1_1_i_r_function_a6f81abb6cf86f8eb22b947a54541ab4f}{find\+Placeholders} () const
+\begin{DoxyCompactList}\small\item\em Returns a list of placeholders associated with the function. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ \hyperlink{classglow_1_1_i_r_function_ad4d42412e7c2532d1ab2de26c632582a}{get\+Weight\+For\+Node} (const \hyperlink{classglow_1_1_storage}{Storage} $\ast$V) const
+\item 
+\hyperlink{classglow_1_1_tagged_list}{Inst\+List\+Ty} \& \hyperlink{classglow_1_1_i_r_function_a79a1864f27ee4ae0289e2ede9876ea88}{get\+Instrs} ()
+\item 
+const \hyperlink{classglow_1_1_tagged_list}{Inst\+List\+Ty} \& \hyperlink{classglow_1_1_i_r_function_a5f9664e97529ed80dd6e1a2efe742b1f}{get\+Instrs} () const
+\item 
+Weight\+Var\+List\+Ty \& \hyperlink{classglow_1_1_i_r_function_aecff6fd57fe2f0390545d88b3561ffcb}{get\+Weights} ()
+\item 
+const Weight\+Var\+List\+Ty \& \hyperlink{classglow_1_1_i_r_function_a58d8ca16575cd947d9b44fcafddfd18f}{get\+Weights} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a2169c4c753c9cc2472bcf504ede531bf}\label{classglow_1_1_i_r_function_a2169c4c753c9cc2472bcf504ede531bf}} 
+void \hyperlink{classglow_1_1_i_r_function_a2169c4c753c9cc2472bcf504ede531bf}{erase\+Instruction} (\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$I)
+\begin{DoxyCompactList}\small\item\em Erase the instruction from the function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_ab1c34e439de497a85d64e59fc0a9f19a}\label{classglow_1_1_i_r_function_ab1c34e439de497a85d64e59fc0a9f19a}} 
+\hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Instr\+Iterator} \hyperlink{classglow_1_1_i_r_function_ab1c34e439de497a85d64e59fc0a9f19a}{remove\+Instruction} (\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$I)
+\begin{DoxyCompactList}\small\item\em Remove the instruction from the function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a8178fc2d546721e9e05c8fd358fe2801}\label{classglow_1_1_i_r_function_a8178fc2d546721e9e05c8fd358fe2801}} 
+\hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Instr\+Iterator} \hyperlink{classglow_1_1_i_r_function_a8178fc2d546721e9e05c8fd358fe2801}{insert\+Instruction} (\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$where, \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$I)
+\begin{DoxyCompactList}\small\item\em Inserts an instruction at the place described by . \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_function_ae4817c7b35cb5ee5d6791de1338d5d3e}\label{classglow_1_1_i_r_function_ae4817c7b35cb5ee5d6791de1338d5d3e}} 
+void \hyperlink{classglow_1_1_i_r_function_ae4817c7b35cb5ee5d6791de1338d5d3e}{insert\+Instruction} (\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$I)
+\begin{DoxyCompactList}\small\item\em Inserts an instruction at the end of the instructions list. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Instr\+Iterator} \hyperlink{classglow_1_1_i_r_function_a67e0ae4e7d97fba252dd6921a2cb4b74}{move\+Instruction} (\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$where, \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$I)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classglow_1_1_tagged_list}{Inst\+List\+Ty} I\+R\+Function\+::$\ast$ \hyperlink{classglow_1_1_i_r_function_a18e37ad4e8852cdb792335ff64c8239c}{get\+Instrs\+Member\+Ptr} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A function that represents the compilation unit. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_i_r_function_ae55c9c317c085a417b8e814fed07d16e}\label{classglow_1_1_i_r_function_ae55c9c317c085a417b8e814fed07d16e}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!clear@{clear}}
+\index{clear@{clear}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void I\+R\+Function\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wipe out the content of the function. This allows the function to be used again for another round of code generation. \mbox{\Hypertarget{classglow_1_1_i_r_function_ac3d4b9c36b9ef614759bd355e20eedb6}\label{classglow_1_1_i_r_function_ac3d4b9c36b9ef614759bd355e20eedb6}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!dump@{dump}}
+\index{dump@{dump}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{dump()}{dump()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void I\+R\+Function\+::dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Dump a textual representation of the \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} into default output stream. \mbox{\Hypertarget{classglow_1_1_i_r_function_a04e36395c1598b4e9df9e2c453963fcc}\label{classglow_1_1_i_r_function_a04e36395c1598b4e9df9e2c453963fcc}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!dump@{dump}}
+\index{dump@{dump}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{dump()}{dump()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void I\+R\+Function\+::dump (\begin{DoxyParamCaption}\item[{llvm\+::raw\+\_\+ostream \&}]{OS }\end{DoxyParamCaption}) const}
+
+Dump a textual representation of the \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} into provided output stream. \mbox{\Hypertarget{classglow_1_1_i_r_function_ad4e28beb9ad08629d4f9f479dfd2b993}\label{classglow_1_1_i_r_function_ad4e28beb9ad08629d4f9f479dfd2b993}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!generate\+IR@{generate\+IR}}
+\index{generate\+IR@{generate\+IR}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{generate\+I\+R()}{generateIR()}}
+{\footnotesize\ttfamily void I\+R\+Function\+::generate\+IR (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_backend}{Backend} \&}]{B }\end{DoxyParamCaption})}
+
+Generate IR from the graph nodes. If the compilation mode is \textquotesingle{}training\textquotesingle{} then this procedure will also generate the code for the backward pass. It allows \hyperlink{classglow_1_1_backend}{Backend} /p B to custom translate from a \hyperlink{classglow_1_1_node}{Node} to \hyperlink{classglow_1_1_instruction}{Instruction} IR. \mbox{\Hypertarget{classglow_1_1_i_r_function_aa92aac0064e63f593b6f6f1c43c1cec7}\label{classglow_1_1_i_r_function_aa92aac0064e63f593b6f6f1c43c1cec7}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!get\+Graph@{get\+Graph}}
+\index{get\+Graph@{get\+Graph}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{get\+Graph()}{getGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_function}{Function}$\ast$ glow\+::\+I\+R\+Function\+::get\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a reference to the high-\/level graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_i_r_function_ad86f50fe3418ea5acd411afeda573dae}\label{classglow_1_1_i_r_function_ad86f50fe3418ea5acd411afeda573dae}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!get\+Graph@{get\+Graph}}
+\index{get\+Graph@{get\+Graph}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{get\+Graph()}{getGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{classglow_1_1_function}{Function}$\ast$ glow\+::\+I\+R\+Function\+::get\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a reference to the high-\/level graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a79a1864f27ee4ae0289e2ede9876ea88}\label{classglow_1_1_i_r_function_a79a1864f27ee4ae0289e2ede9876ea88}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!get\+Instrs@{get\+Instrs}}
+\index{get\+Instrs@{get\+Instrs}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{get\+Instrs()}{getInstrs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tagged_list}{Inst\+List\+Ty}\& glow\+::\+I\+R\+Function\+::get\+Instrs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of instructions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a5f9664e97529ed80dd6e1a2efe742b1f}\label{classglow_1_1_i_r_function_a5f9664e97529ed80dd6e1a2efe742b1f}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!get\+Instrs@{get\+Instrs}}
+\index{get\+Instrs@{get\+Instrs}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{get\+Instrs()}{getInstrs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{classglow_1_1_tagged_list}{Inst\+List\+Ty}\& glow\+::\+I\+R\+Function\+::get\+Instrs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of instructions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a18e37ad4e8852cdb792335ff64c8239c}\label{classglow_1_1_i_r_function_a18e37ad4e8852cdb792335ff64c8239c}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!get\+Instrs\+Member\+Ptr@{get\+Instrs\+Member\+Ptr}}
+\index{get\+Instrs\+Member\+Ptr@{get\+Instrs\+Member\+Ptr}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{get\+Instrs\+Member\+Ptr()}{getInstrsMemberPtr()}}
+{\footnotesize\ttfamily static \hyperlink{classglow_1_1_tagged_list}{Inst\+List\+Ty} I\+R\+Function\+::$\ast$ glow\+::\+I\+R\+Function\+::get\+Instrs\+Member\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+pointer to the class member for the instruction list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_i_r_function_afbbe6354fff6b20e0bf625d98e635122}\label{classglow_1_1_i_r_function_afbbe6354fff6b20e0bf625d98e635122}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!get\+Variable\+Map@{get\+Variable\+Map}}
+\index{get\+Variable\+Map@{get\+Variable\+Map}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{get\+Variable\+Map()}{getVariableMap()}}
+{\footnotesize\ttfamily Variable\+Map\& glow\+::\+I\+R\+Function\+::get\+Variable\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the variable map. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_i_r_function_ad4d42412e7c2532d1ab2de26c632582a}\label{classglow_1_1_i_r_function_ad4d42412e7c2532d1ab2de26c632582a}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!get\+Weight\+For\+Node@{get\+Weight\+For\+Node}}
+\index{get\+Weight\+For\+Node@{get\+Weight\+For\+Node}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{get\+Weight\+For\+Node()}{getWeightForNode()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_value}{Value} $\ast$ I\+R\+Function\+::get\+Weight\+For\+Node (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_storage}{Storage} $\ast$}]{V }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the weight that the variable {\ttfamily v} is lowered into, or null if the variable is unknown. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_i_r_function_aecff6fd57fe2f0390545d88b3561ffcb}\label{classglow_1_1_i_r_function_aecff6fd57fe2f0390545d88b3561ffcb}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!get\+Weights@{get\+Weights}}
+\index{get\+Weights@{get\+Weights}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{get\+Weights()}{getWeights()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Weight\+Var\+List\+Ty\& glow\+::\+I\+R\+Function\+::get\+Weights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of weights. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a58d8ca16575cd947d9b44fcafddfd18f}\label{classglow_1_1_i_r_function_a58d8ca16575cd947d9b44fcafddfd18f}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!get\+Weights@{get\+Weights}}
+\index{get\+Weights@{get\+Weights}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{get\+Weights()}{getWeights()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const Weight\+Var\+List\+Ty\& glow\+::\+I\+R\+Function\+::get\+Weights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of weights. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_i_r_function_a67e0ae4e7d97fba252dd6921a2cb4b74}\label{classglow_1_1_i_r_function_a67e0ae4e7d97fba252dd6921a2cb4b74}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!move\+Instruction@{move\+Instruction}}
+\index{move\+Instruction@{move\+Instruction}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{move\+Instruction()}{moveInstruction()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1tagged__list__details_1_1_iterator}{Instr\+Iterator} I\+R\+Function\+::move\+Instruction (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_instruction}{Instruction} $\ast$}]{where,  }\item[{\hyperlink{classglow_1_1_instruction}{glow\+::\+Instruction} $\ast$}]{I }\end{DoxyParamCaption})}
+
+Moves an instruction belonging to a function before the place described by . \mbox{\Hypertarget{classglow_1_1_i_r_function_abab74f68d9282d91dd7fbe004e5b1abc}\label{classglow_1_1_i_r_function_abab74f68d9282d91dd7fbe004e5b1abc}} 
+\index{glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}!unique\+Name@{unique\+Name}}
+\index{unique\+Name@{unique\+Name}!glow\+::\+I\+R\+Function@{glow\+::\+I\+R\+Function}}
+\subsubsection{\texorpdfstring{unique\+Name()}{uniqueName()}}
+{\footnotesize\ttfamily llvm\+::\+String\+Ref glow\+::\+I\+R\+Function\+::unique\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a unique legal name that\textquotesingle{}s based on the string {\ttfamily name}. Legal names are legal C identifiers in the form\+: \char`\"{}\mbox{[}a-\/z\+A-\/\+Z\+\_\+\mbox{]}\mbox{[}a-\/z\+A-\/\+Z0-\/9\+\_\+\mbox{]}$\ast$\char`\"{}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+I\+R/I\+R.\+h\item 
+lib/\+I\+R/Graph\+Scheduler.\+cpp\item 
+lib/\+I\+R/I\+R.\+cpp\item 
+lib/\+I\+R/I\+R\+Gen.\+cpp\end{DoxyCompactItemize}

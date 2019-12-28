@@ -1,0 +1,105 @@
+\hypertarget{classglow_1_1_min_node}{}\section{glow\+:\+:Min\+Node Class Reference}
+\label{classglow_1_1_min_node}\index{glow\+::\+Min\+Node@{glow\+::\+Min\+Node}}
+
+
+Performs Min on the L\+HS and R\+HS operands.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Min\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_min_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a89b3dad42fe15f2e6fd6c5ebd282c558}\label{classglow_1_1_min_node_a89b3dad42fe15f2e6fd6c5ebd282c558}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries L\+H\+S\+Idx} = 0, 
+{\bfseries R\+H\+S\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a2ef83d2b0d6b12f902bdc3a761d85570}\label{classglow_1_1_min_node_a2ef83d2b0d6b12f902bdc3a761d85570}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_ad11ba9f3a9d9b8d717746e2d28a0802a}\label{classglow_1_1_min_node_ad11ba9f3a9d9b8d717746e2d28a0802a}} 
+{\bfseries Min\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} L\+HS, \hyperlink{structglow_1_1_node_value}{Node\+Value} R\+HS)
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a94de95be9f23576f0c360b8295139975}\label{classglow_1_1_min_node_a94de95be9f23576f0c360b8295139975}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+L\+HS} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a3fc31b118173b5ba81670bcc7986bed8}\label{classglow_1_1_min_node_a3fc31b118173b5ba81670bcc7986bed8}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+R\+HS} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a70740a7ad244d55cbce1f2871c955a81}\label{classglow_1_1_min_node_a70740a7ad244d55cbce1f2871c955a81}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_ad1c56d0a026c45ec50fc5c3d9667853b}\label{classglow_1_1_min_node_ad1c56d0a026c45ec50fc5c3d9667853b}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a0092f51239a39a06f39e850643a07c8c}\label{classglow_1_1_min_node_a0092f51239a39a06f39e850643a07c8c}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_ac2eb3ed04d185ef7f1849dd143fb11ab}\label{classglow_1_1_min_node_ac2eb3ed04d185ef7f1849dd143fb11ab}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a1253351044e2a6e51c94ee88ee6beee0}\label{classglow_1_1_min_node_a1253351044e2a6e51c94ee88ee6beee0}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a679e468d1518102eed262124fc1837bc}\label{classglow_1_1_min_node_a679e468d1518102eed262124fc1837bc}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a55bd225714e473d73d8f4776a68e172c}\label{classglow_1_1_min_node_a55bd225714e473d73d8f4776a68e172c}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_aa5069f3beb3b7d0f250e930c523ecb6e}\label{classglow_1_1_min_node_aa5069f3beb3b7d0f250e930c523ecb6e}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_af7e522475de137e64d3b0bcf95b67c35}\label{classglow_1_1_min_node_af7e522475de137e64d3b0bcf95b67c35}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_ab415be8fd202ab8b936c03fb044d7ecc}\label{classglow_1_1_min_node_ab415be8fd202ab8b936c03fb044d7ecc}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_ae752d3f4b96c2de7d297ed48846f5a15}\label{classglow_1_1_min_node_ae752d3f4b96c2de7d297ed48846f5a15}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a49d74cdac1a52a9a6641dcb171a18fe4}\label{classglow_1_1_min_node_a49d74cdac1a52a9a6641dcb171a18fe4}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_min_node}{Min\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_ae112ee2dd8d27036700d38bde87ba0a3}\label{classglow_1_1_min_node_ae112ee2dd8d27036700d38bde87ba0a3}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_afd92781b90e26811ab932dfb359d6ef0}\label{classglow_1_1_min_node_afd92781b90e26811ab932dfb359d6ef0}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_ac579ad53985df70906ce8158aa63a56a}\label{classglow_1_1_min_node_ac579ad53985df70906ce8158aa63a56a}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a0651a0b28c2e7bf762c1b6bbe934ce29}\label{classglow_1_1_min_node_a0651a0b28c2e7bf762c1b6bbe934ce29}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_min_node_a442c2a93590e93890a5538b767ec4f59}\label{classglow_1_1_min_node_a442c2a93590e93890a5538b767ec4f59}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Performs Min on the L\+HS and R\+HS operands. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

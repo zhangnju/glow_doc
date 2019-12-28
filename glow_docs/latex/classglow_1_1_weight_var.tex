@@ -1,0 +1,74 @@
+\hypertarget{classglow_1_1_weight_var}{}\section{glow\+:\+:Weight\+Var Class Reference}
+\label{classglow_1_1_weight_var}\index{glow\+::\+Weight\+Var@{glow\+::\+Weight\+Var}}
+Inheritance diagram for glow\+:\+:Weight\+Var\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.048780cm]{classglow_1_1_weight_var}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_weight_var_a170464b9d454b830266214b318d3bace}\label{classglow_1_1_weight_var_a170464b9d454b830266214b318d3bace}} 
+enum {\bfseries Mutability\+Kind} \{ {\bfseries Constant}, 
+{\bfseries Mutable}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_weight_var_a8d1d4085945fa8851839e7511a4b6637}\label{classglow_1_1_weight_var_a8d1d4085945fa8851839e7511a4b6637}} 
+{\bfseries Weight\+Var} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Ty, Mutability\+Kind mut)
+\item 
+\mbox{\Hypertarget{classglow_1_1_weight_var_ab0b3b1e99a3d79df45a6418ebeab8b28}\label{classglow_1_1_weight_var_ab0b3b1e99a3d79df45a6418ebeab8b28}} 
+const char $\ast$ {\bfseries get\+Mutability\+Str} () const
+\item 
+bool \hyperlink{classglow_1_1_weight_var_a7b6e1db89415271742303e738217e858}{is\+Constant} () const
+\item 
+Mutability\+Kind \hyperlink{classglow_1_1_weight_var_a1041b9e284dc6297d660d41d426da66e}{get\+Mutability} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_weight_var_a6f13c056c8522a704f3e4e88d763d1f6}\label{classglow_1_1_weight_var_a6f13c056c8522a704f3e4e88d763d1f6}} 
+void \hyperlink{classglow_1_1_weight_var_a6f13c056c8522a704f3e4e88d763d1f6}{set\+Mutability} (Mutability\+Kind mut)
+\begin{DoxyCompactList}\small\item\em Updates the mutability kind of the weight to {\ttfamily mut}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_weight_var_a44ad7042028fc3d3dc129dfab28b88b7}\label{classglow_1_1_weight_var_a44ad7042028fc3d3dc129dfab28b88b7}} 
+void {\bfseries dump} (llvm\+::raw\+\_\+ostream \&os) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_weight_var_a27af35c8dabe1259e91c95a16695dfa3}\label{classglow_1_1_weight_var_a27af35c8dabe1259e91c95a16695dfa3}} 
+void {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_weight_var_a119e48a2d384f6a116ed29921cad0ffa}\label{classglow_1_1_weight_var_a119e48a2d384f6a116ed29921cad0ffa}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\item 
+\mbox{\Hypertarget{classglow_1_1_weight_var_aa851926bc54aaa4b9b7f391015af0399}\label{classglow_1_1_weight_var_aa851926bc54aaa4b9b7f391015af0399}} 
+static const char $\ast$ {\bfseries get\+Mutability\+Str} (Mutability\+Kind mut)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_weight_var_a1041b9e284dc6297d660d41d426da66e}\label{classglow_1_1_weight_var_a1041b9e284dc6297d660d41d426da66e}} 
+\index{glow\+::\+Weight\+Var@{glow\+::\+Weight\+Var}!get\+Mutability@{get\+Mutability}}
+\index{get\+Mutability@{get\+Mutability}!glow\+::\+Weight\+Var@{glow\+::\+Weight\+Var}}
+\subsubsection{\texorpdfstring{get\+Mutability()}{getMutability()}}
+{\footnotesize\ttfamily Mutability\+Kind glow\+::\+Weight\+Var\+::get\+Mutability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the mutability kind of the weight. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_weight_var_a7b6e1db89415271742303e738217e858}\label{classglow_1_1_weight_var_a7b6e1db89415271742303e738217e858}} 
+\index{glow\+::\+Weight\+Var@{glow\+::\+Weight\+Var}!is\+Constant@{is\+Constant}}
+\index{is\+Constant@{is\+Constant}!glow\+::\+Weight\+Var@{glow\+::\+Weight\+Var}}
+\subsubsection{\texorpdfstring{is\+Constant()}{isConstant()}}
+{\footnotesize\ttfamily bool glow\+::\+Weight\+Var\+::is\+Constant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the mutability kind of the weight is constant. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+I\+R/Instrs.\+h\item 
+lib/\+I\+R/Instrs.\+cpp\end{DoxyCompactItemize}

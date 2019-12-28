@@ -1,0 +1,99 @@
+\hypertarget{structglow_1_1runtime_1_1_d_a_g_node}{}\section{glow\+:\+:runtime\+:\+:D\+A\+G\+Node Struct Reference}
+\label{structglow_1_1runtime_1_1_d_a_g_node}\index{glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}}
+
+
+{\ttfamily \#include $<$Runtime\+Types.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_ac704552c942969fc24be9863c93b19e4}\label{structglow_1_1runtime_1_1_d_a_g_node_ac704552c942969fc24be9863c93b19e4}} 
+Device\+I\+D\+Ty {\bfseries get\+Next\+Device} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$ $>$ \hyperlink{structglow_1_1runtime_1_1_d_a_g_node_ad17c934bef11d35dafe4101c7baccd46}{children}
+\item 
+std\+::vector$<$ \hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$ $>$ \hyperlink{structglow_1_1runtime_1_1_d_a_g_node_aa7caed7ac1821e8f5be54dbc252eb6ed}{parents}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_a27ed8e91ec7dc700083d7c11e2302a7a}\label{structglow_1_1runtime_1_1_d_a_g_node_a27ed8e91ec7dc700083d7c11e2302a7a}} 
+std\+::vector$<$ Device\+I\+D\+Ty $>$ \hyperlink{structglow_1_1runtime_1_1_d_a_g_node_a27ed8e91ec7dc700083d7c11e2302a7a}{device\+I\+Ds}
+\begin{DoxyCompactList}\small\item\em I\+Ds of the device\+Managers that this network is assigned to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_a27896f2ef7d075261697cf3b6c4fe188}\label{structglow_1_1runtime_1_1_d_a_g_node_a27896f2ef7d075261697cf3b6c4fe188}} 
+std\+::string \hyperlink{structglow_1_1runtime_1_1_d_a_g_node_a27896f2ef7d075261697cf3b6c4fe188}{backend\+Name}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classglow_1_1_backend}{Backend} name for this network. \end{DoxyCompactList}\item 
+std\+::vector$<$ Device\+I\+D\+Ty $>$ \hyperlink{structglow_1_1runtime_1_1_d_a_g_node_a8954611af692b9637220ab94417fa67b}{logical\+Devices}
+\item 
+unsigned \hyperlink{structglow_1_1runtime_1_1_d_a_g_node_a63142a24d84bd3397f08a6aab8b4e26b}{current\+Device\+Idx} \{0\}
+\item 
+std\+::string \hyperlink{structglow_1_1runtime_1_1_d_a_g_node_aab073cf1b6f7dfd082d2b9e25c9a9537}{name}
+\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle} $>$ \hyperlink{structglow_1_1runtime_1_1_d_a_g_node_a39192dae64c44795d60b4cc36e8d7e1d}{runtime\+Bundle}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_a7e223803837d7d338fea030e7cca6dea}\label{structglow_1_1runtime_1_1_d_a_g_node_a7e223803837d7d338fea030e7cca6dea}} 
+uint64\+\_\+t \hyperlink{structglow_1_1runtime_1_1_d_a_g_node_a7e223803837d7d338fea030e7cca6dea}{size} \{0\}
+\begin{DoxyCompactList}\small\item\em Size of constants and placeholders used by the function. \end{DoxyCompactList}\item 
+\hyperlink{structglow_1_1_backend_hints}{Backend\+Hints} \hyperlink{structglow_1_1runtime_1_1_d_a_g_node_a95a261201a4131e48a2931068844b4a9}{backend\+Hints} \{\}
+\item 
+\hyperlink{classglow_1_1_module}{Module} $\ast$ \hyperlink{structglow_1_1runtime_1_1_d_a_g_node_a9374ab2aed40d204c22539b94c3adcc5}{module} \{nullptr\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Individual \hyperlink{classglow_1_1_node}{Node} in the \hyperlink{structglow_1_1runtime_1_1_d_a_g}{D\+AG} for a given network. This contains all the information needed to run the sub-\/network at inference time. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_a95a261201a4131e48a2931068844b4a9}\label{structglow_1_1runtime_1_1_d_a_g_node_a95a261201a4131e48a2931068844b4a9}} 
+\index{glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}!backend\+Hints@{backend\+Hints}}
+\index{backend\+Hints@{backend\+Hints}!glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}}
+\subsubsection{\texorpdfstring{backend\+Hints}{backendHints}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_backend_hints}{Backend\+Hints} glow\+::runtime\+::\+D\+A\+G\+Node\+::backend\+Hints \{\}}
+
+\hyperlink{classglow_1_1_backend}{Backend} Hints object, this is populated by the \hyperlink{classglow_1_1_partitioner}{Partitioner} and is used to communicated hints to the compiler, like S\+R\+AM pinning and resource reservation. \mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_ad17c934bef11d35dafe4101c7baccd46}\label{structglow_1_1runtime_1_1_d_a_g_node_ad17c934bef11d35dafe4101c7baccd46}} 
+\index{glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}!children@{children}}
+\index{children@{children}!glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}}
+\subsubsection{\texorpdfstring{children}{children}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$$>$ glow\+::runtime\+::\+D\+A\+G\+Node\+::children}
+
+The children of this node, these are nodes that depend on the current node. \mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_a63142a24d84bd3397f08a6aab8b4e26b}\label{structglow_1_1runtime_1_1_d_a_g_node_a63142a24d84bd3397f08a6aab8b4e26b}} 
+\index{glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}!current\+Device\+Idx@{current\+Device\+Idx}}
+\index{current\+Device\+Idx@{current\+Device\+Idx}!glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}}
+\subsubsection{\texorpdfstring{current\+Device\+Idx}{currentDeviceIdx}}
+{\footnotesize\ttfamily unsigned glow\+::runtime\+::\+D\+A\+G\+Node\+::current\+Device\+Idx \{0\}}
+
+Index of the current device\+ID in device\+I\+Ds. This is used by the \hyperlink{classglow_1_1runtime_1_1_executor}{Executor} when picking a device to request a network run. \mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_a8954611af692b9637220ab94417fa67b}\label{structglow_1_1runtime_1_1_d_a_g_node_a8954611af692b9637220ab94417fa67b}} 
+\index{glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}!logical\+Devices@{logical\+Devices}}
+\index{logical\+Devices@{logical\+Devices}!glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}}
+\subsubsection{\texorpdfstring{logical\+Devices}{logicalDevices}}
+{\footnotesize\ttfamily std\+::vector$<$Device\+I\+D\+Ty$>$ glow\+::runtime\+::\+D\+A\+G\+Node\+::logical\+Devices}
+
+The logical\+Device is an output of the \hyperlink{classglow_1_1_partitioner}{Partitioner} to indicate that two networks should be assigned to the same device. Multiple logical devices indicates the network should be duplicated. \mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_a9374ab2aed40d204c22539b94c3adcc5}\label{structglow_1_1runtime_1_1_d_a_g_node_a9374ab2aed40d204c22539b94c3adcc5}} 
+\index{glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}!module@{module}}
+\index{module@{module}!glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}}
+\subsubsection{\texorpdfstring{module}{module}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_module}{Module}$\ast$ glow\+::runtime\+::\+D\+A\+G\+Node\+::module \{nullptr\}}
+
+Pointer to module the function came from. This is so the executor can access the associated P\+Hs for the function that are stored in the \hyperlink{classglow_1_1_module}{Module}. \mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_aab073cf1b6f7dfd082d2b9e25c9a9537}\label{structglow_1_1runtime_1_1_d_a_g_node_aab073cf1b6f7dfd082d2b9e25c9a9537}} 
+\index{glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}!name@{name}}
+\index{name@{name}!glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string glow\+::runtime\+::\+D\+A\+G\+Node\+::name}
+
+Name assigned to the sub-\/network, this is the id that will be passed to the \hyperlink{classglow_1_1runtime_1_1_device_manager}{Device\+Manager} when requesting a run of the network. \mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_aa7caed7ac1821e8f5be54dbc252eb6ed}\label{structglow_1_1runtime_1_1_d_a_g_node_aa7caed7ac1821e8f5be54dbc252eb6ed}} 
+\index{glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}!parents@{parents}}
+\index{parents@{parents}!glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}}
+\subsubsection{\texorpdfstring{parents}{parents}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$$>$ glow\+::runtime\+::\+D\+A\+G\+Node\+::parents}
+
+Pointers to the parents of this node. This is used by the executor for determining if a given node has all dependencies met. \mbox{\Hypertarget{structglow_1_1runtime_1_1_d_a_g_node_a39192dae64c44795d60b4cc36e8d7e1d}\label{structglow_1_1runtime_1_1_d_a_g_node_a39192dae64c44795d60b4cc36e8d7e1d}} 
+\index{glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}!runtime\+Bundle@{runtime\+Bundle}}
+\index{runtime\+Bundle@{runtime\+Bundle}!glow\+::runtime\+::\+D\+A\+G\+Node@{glow\+::runtime\+::\+D\+A\+G\+Node}}
+\subsubsection{\texorpdfstring{runtime\+Bundle}{runtimeBundle}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{Runtime\+Bundle}$>$ glow\+::runtime\+::\+D\+A\+G\+Node\+::runtime\+Bundle}
+
+Runtime bundle containing all the symbol information for this network at runtime. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Runtime/Runtime\+Types.\+h\end{DoxyCompactItemize}

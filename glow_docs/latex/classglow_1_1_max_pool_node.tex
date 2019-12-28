@@ -1,0 +1,124 @@
+\hypertarget{classglow_1_1_max_pool_node}{}\section{glow\+:\+:Max\+Pool\+Node Class Reference}
+\label{classglow_1_1_max_pool_node}\index{glow\+::\+Max\+Pool\+Node@{glow\+::\+Max\+Pool\+Node}}
+
+
+Performs a Max Pool with Argmax operation on the Input given provided Kernels, Strides, and Pads. Argmax is a flattened index corresponding to respective max element. Supported layouts are defined in the Convolution\+Layout enum\+: N\+H\+WC and N\+C\+HW.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Max\+Pool\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_max_pool_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a9936918cc65c34955e0c40c2b31630f7}\label{classglow_1_1_max_pool_node_a9936918cc65c34955e0c40c2b31630f7}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_addcbe83d1f3b233d4e7ab90f58bd341c}\label{classglow_1_1_max_pool_node_addcbe83d1f3b233d4e7ab90f58bd341c}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0, 
+{\bfseries Argmax\+Idx} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_ad52a016a985230efbde56f136fcc7e67}\label{classglow_1_1_max_pool_node_ad52a016a985230efbde56f136fcc7e67}} 
+{\bfseries Max\+Pool\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_type}{Type\+Ref} Argmax, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Kernels, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Strides, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Layout)
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_adb59ca1fd0b1e0da689962f838502a50}\label{classglow_1_1_max_pool_node_adb59ca1fd0b1e0da689962f838502a50}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a465ec55ad0df6b73b9bcbfd4c9b559c6}\label{classglow_1_1_max_pool_node_a465ec55ad0df6b73b9bcbfd4c9b559c6}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a98c463a96a19f571de7c0804980fe1cd}\label{classglow_1_1_max_pool_node_a98c463a96a19f571de7c0804980fe1cd}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a8770b1b2385fddb1990b551cce9985f0}\label{classglow_1_1_max_pool_node_a8770b1b2385fddb1990b551cce9985f0}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Argmax} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a6c11cc7587f4b5ca738ba2cd45814bdc}\label{classglow_1_1_max_pool_node_a6c11cc7587f4b5ca738ba2cd45814bdc}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Argmax} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_ace98fbeacc38889247d840a1515080bf}\label{classglow_1_1_max_pool_node_ace98fbeacc38889247d840a1515080bf}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Kernels} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a3109df27a328f4360e681cebd622605d}\label{classglow_1_1_max_pool_node_a3109df27a328f4360e681cebd622605d}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Strides} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a7bfdbbc4346025a0be2246b1fd999131}\label{classglow_1_1_max_pool_node_a7bfdbbc4346025a0be2246b1fd999131}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Pads} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_ab276a883613d6d9dfeea1fedc84aaf3d}\label{classglow_1_1_max_pool_node_ab276a883613d6d9dfeea1fedc84aaf3d}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Layout} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_afa78334f86f0e0c21135ac0dd75b6552}\label{classglow_1_1_max_pool_node_afa78334f86f0e0c21135ac0dd75b6552}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a1a65d2d5a40787c9fdff9307875c41e6}\label{classglow_1_1_max_pool_node_a1a65d2d5a40787c9fdff9307875c41e6}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a26c595a82ed4caf20d4ebf6e68078a0e}\label{classglow_1_1_max_pool_node_a26c595a82ed4caf20d4ebf6e68078a0e}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a3912a70c99b7b28020ba1f316c49e250}\label{classglow_1_1_max_pool_node_a3912a70c99b7b28020ba1f316c49e250}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a42d70de9282923f27e67ab01c8447059}\label{classglow_1_1_max_pool_node_a42d70de9282923f27e67ab01c8447059}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a0aca16fc3499c523da003f65d175c001}\label{classglow_1_1_max_pool_node_a0aca16fc3499c523da003f65d175c001}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_ae58089ae8fdfe7d18372ab25e0bae125}\label{classglow_1_1_max_pool_node_ae58089ae8fdfe7d18372ab25e0bae125}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a87753d103c6c396520099ca924672bef}\label{classglow_1_1_max_pool_node_a87753d103c6c396520099ca924672bef}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a34f7619ca67c33bbe86bb6a74aaecbed}\label{classglow_1_1_max_pool_node_a34f7619ca67c33bbe86bb6a74aaecbed}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a1cf5b12d2d23c57133552c84b381a61a}\label{classglow_1_1_max_pool_node_a1cf5b12d2d23c57133552c84b381a61a}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_max_pool_node}{Max\+Pool\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a9bbfbc6343c4866b6bec84e497b91f97}\label{classglow_1_1_max_pool_node_a9bbfbc6343c4866b6bec84e497b91f97}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a795f59f4e7cfe7a11cf0d96846eedd14}\label{classglow_1_1_max_pool_node_a795f59f4e7cfe7a11cf0d96846eedd14}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_ab6613353720ce67f049ef0052432a6d1}\label{classglow_1_1_max_pool_node_ab6613353720ce67f049ef0052432a6d1}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_aac84c52d47db01f97b7ab755f5a6a2b8}\label{classglow_1_1_max_pool_node_aac84c52d47db01f97b7ab755f5a6a2b8}} 
+bool {\bfseries verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a4ceb5f99a46cd3d4f7722db13743102a}\label{classglow_1_1_max_pool_node_a4ceb5f99a46cd3d4f7722db13743102a}} 
+\hyperlink{classglow_1_1_max_pool_grad_node}{Max\+Pool\+Grad\+Node} $\ast$ {\bfseries get\+Grad} (\hyperlink{classglow_1_1_graph_grad_mapper}{Graph\+Grad\+Mapper} \&builder)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_max_pool_node_a31cc60d3b4aa5149cb0d791b7149de9b}\label{classglow_1_1_max_pool_node_a31cc60d3b4aa5149cb0d791b7149de9b}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Performs a Max Pool with Argmax operation on the Input given provided Kernels, Strides, and Pads. Argmax is a flattened index corresponding to respective max element. Supported layouts are defined in the Convolution\+Layout enum\+: N\+H\+WC and N\+C\+HW. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

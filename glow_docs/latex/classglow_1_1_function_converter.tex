@@ -1,0 +1,215 @@
+\hypertarget{classglow_1_1_function_converter}{}\section{glow\+:\+:Function\+Converter Class Reference}
+\label{classglow_1_1_function_converter}\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+
+
+{\ttfamily \#include $<$Function\+Converter.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Function\+Converter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_function_converter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_function_converter_a38d2ef15178da614c3ffb48cdeeade76}{Function\+Converter} (\hyperlink{classglow_1_1_function}{Function} \&F)
+\item 
+void \hyperlink{classglow_1_1_function_converter_ab8873d75c864d9e92359f70424394e70}{convert} ()
+\item 
+void \hyperlink{classglow_1_1_function_converter_a2cd1261cd954bfdff28d3f7a08136dad}{convert\+Placeholder} (\hyperlink{classglow_1_1_placeholder}{Placeholder} \&placeholder, \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$context)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_function_converter_a015dfed23796395ce34c7ca4766c7854}{get\+Target\+Type\+For\+Output} (const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&out) const
+\item 
+virtual \hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_function_converter_a2039ff94d1abe52dc89d3f7d3350c772}{get\+Target\+Type\+For\+Input} (const \hyperlink{classglow_1_1_node}{Node} \&use, unsigned idx) const
+\item 
+virtual bool \hyperlink{classglow_1_1_function_converter_a6f49461b0e1845488f1dfac4531ec898}{can\+Convert} (const \hyperlink{classglow_1_1_node}{Node} \&node) const
+\item 
+virtual \hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{classglow_1_1_function_converter_a03251a5ce1b3485e0fa5dd70faaa0a35}{create\+Conversion} (\hyperlink{classglow_1_1_function}{Function} \&function, const \hyperlink{classglow_1_1_node}{Node} \&node, \hyperlink{structglow_1_1_node_value}{Node\+Value} \&val, \hyperlink{structglow_1_1_type}{Type\+Ref} dest\+Ty)=0
+\item 
+virtual \hyperlink{structglow_1_1_node_value}{Node\+Value} \hyperlink{classglow_1_1_function_converter_a37f0cb91037a83c63f9a7a7e6a987ad6}{get\+Conversion\+Output} (\hyperlink{classglow_1_1_node}{Node} \&conversion) const
+\item 
+void \hyperlink{classglow_1_1_function_converter_a43d6b9f872bceb962dfb3e492158e112}{convert\+Outputs} (\hyperlink{classglow_1_1_node}{Node} \&node)
+\item 
+void \hyperlink{classglow_1_1_function_converter_adb30ff2f805fc710e1a2ca325afbebe9}{convert\+Inputs} (\hyperlink{classglow_1_1_node}{Node} \&node)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_converter_aee4d972d366a6edeaa7d71f97d9315e9}\label{classglow_1_1_function_converter_aee4d972d366a6edeaa7d71f97d9315e9}} 
+virtual void \hyperlink{classglow_1_1_function_converter_aee4d972d366a6edeaa7d71f97d9315e9}{convert\+Tensor} (\hyperlink{classglow_1_1_tensor}{Tensor} \&input, \hyperlink{structglow_1_1_type}{Type\+Ref} dest\+Ty)=0
+\begin{DoxyCompactList}\small\item\em Convert the {\ttfamily input} tensor to the {\ttfamily dest\+Ty} destination type. \end{DoxyCompactList}\item 
+virtual \hyperlink{classglow_1_1_node}{Node} \& \hyperlink{classglow_1_1_function_converter_a2e2d68b35109983d63e5b38cabe7b652}{morph\+Node} (\hyperlink{classglow_1_1_node}{Node} \&node)
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_converter_aeee98175ffd8d13a1fdd7e38d38811b2}\label{classglow_1_1_function_converter_aeee98175ffd8d13a1fdd7e38d38811b2}} 
+virtual void \hyperlink{classglow_1_1_function_converter_aeee98175ffd8d13a1fdd7e38d38811b2}{post\+Processing} (\hyperlink{classglow_1_1_node}{Node} \&node)
+\begin{DoxyCompactList}\small\item\em Hook to perform some post processing on the final morphed node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_function_converter_a503372fedd4a868e3a500f4efd7c0eab}\label{classglow_1_1_function_converter_a503372fedd4a868e3a500f4efd7c0eab}} 
+virtual void \hyperlink{classglow_1_1_function_converter_a503372fedd4a868e3a500f4efd7c0eab}{clean\+Up} ()
+\begin{DoxyCompactList}\small\item\em Hook to do a final clean-\/up after all operations have been converted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_function_converter_af9e16a4f397f0440e21cdd3f54e6151e}\label{classglow_1_1_function_converter_af9e16a4f397f0440e21cdd3f54e6151e}} 
+\hyperlink{classglow_1_1_function}{Function} \& \hyperlink{classglow_1_1_function_converter_af9e16a4f397f0440e21cdd3f54e6151e}{function\+\_\+}
+\begin{DoxyCompactList}\small\item\em The function to be converted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements the high-\/level A\+P\+Is used to convert a function from one type to another. The actual conversions must be implemented by derived classes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_function_converter_a38d2ef15178da614c3ffb48cdeeade76}\label{classglow_1_1_function_converter_a38d2ef15178da614c3ffb48cdeeade76}} 
+\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}!Function\+Converter@{Function\+Converter}}
+\index{Function\+Converter@{Function\+Converter}!glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+\subsubsection{\texorpdfstring{Function\+Converter()}{FunctionConverter()}}
+{\footnotesize\ttfamily glow\+::\+Function\+Converter\+::\+Function\+Converter (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{F }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a function converter for {\ttfamily F}.
+
+\begin{DoxyNote}{Note}
+This method will modify {\ttfamily F} when calling \+::convert. If one wants to keep the original function around, they need to clone it before creating this converter. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_function_converter_a6f49461b0e1845488f1dfac4531ec898}\label{classglow_1_1_function_converter_a6f49461b0e1845488f1dfac4531ec898}} 
+\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}!can\+Convert@{can\+Convert}}
+\index{can\+Convert@{can\+Convert}!glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+\subsubsection{\texorpdfstring{can\+Convert()}{canConvert()}}
+{\footnotesize\ttfamily bool Function\+Converter\+::can\+Convert (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node}{Node} \&}]{node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Check if {\ttfamily node} can be converted. \begin{DoxyReturn}{Returns}
+false if {\ttfamily node} shouldn\textquotesingle{}t be considered for conversion. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_acb83d144def5ae09b64f354430c2f643}{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}.
+
+\mbox{\Hypertarget{classglow_1_1_function_converter_ab8873d75c864d9e92359f70424394e70}\label{classglow_1_1_function_converter_ab8873d75c864d9e92359f70424394e70}} 
+\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}!convert@{convert}}
+\index{convert@{convert}!glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+\subsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily void Function\+Converter\+::convert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Convert {\ttfamily F} according to \+::get\+Target\+Type\+For\+Output and \+::get\+Target\+Type\+For\+Input.
+
+The high level algorithm looks like\+: 
+\begin{DoxyCode}
+\textcolor{keywordflow}{for each} node in \textcolor{keyword}{function}:
+  insert conversions \textcolor{keywordflow}{for} the inputs of node
+  update the inputs of node to use the results of the conversions
+  mutate the type of the outputs of node
+  insert conversions \textcolor{keywordflow}{for} the outputs of node
+  morph node
+  \hyperlink{classglow_1_1_function_converter_aeee98175ffd8d13a1fdd7e38d38811b2}{postProcessing} node
+\hyperlink{classglow_1_1_function_converter_a503372fedd4a868e3a500f4efd7c0eab}{cleanUp}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classglow_1_1_function_converter_adb30ff2f805fc710e1a2ca325afbebe9}\label{classglow_1_1_function_converter_adb30ff2f805fc710e1a2ca325afbebe9}} 
+\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}!convert\+Inputs@{convert\+Inputs}}
+\index{convert\+Inputs@{convert\+Inputs}!glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+\subsubsection{\texorpdfstring{convert\+Inputs()}{convertInputs()}}
+{\footnotesize\ttfamily void Function\+Converter\+::convert\+Inputs (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Insert conversion node for each input of {\ttfamily node} that don\textquotesingle{}t match get\+Target\+Type\+For\+Input. \mbox{\Hypertarget{classglow_1_1_function_converter_a43d6b9f872bceb962dfb3e492158e112}\label{classglow_1_1_function_converter_a43d6b9f872bceb962dfb3e492158e112}} 
+\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}!convert\+Outputs@{convert\+Outputs}}
+\index{convert\+Outputs@{convert\+Outputs}!glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+\subsubsection{\texorpdfstring{convert\+Outputs()}{convertOutputs()}}
+{\footnotesize\ttfamily void Function\+Converter\+::convert\+Outputs (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Mutate the outputs of {\ttfamily node} to the expected output target type (\begin{DoxySeeAlso}{See also}
+\hyperlink{classglow_1_1_function_converter_a015dfed23796395ce34c7ca4766c7854}{get\+Target\+Type\+For\+Output}) and insert the conversions to preserve the type consistency with the rest of the network. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classglow_1_1_function_converter_a2cd1261cd954bfdff28d3f7a08136dad}\label{classglow_1_1_function_converter_a2cd1261cd954bfdff28d3f7a08136dad}} 
+\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}!convert\+Placeholder@{convert\+Placeholder}}
+\index{convert\+Placeholder@{convert\+Placeholder}!glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+\subsubsection{\texorpdfstring{convert\+Placeholder()}{convertPlaceholder()}}
+{\footnotesize\ttfamily void Function\+Converter\+::convert\+Placeholder (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder}{Placeholder} \&}]{placeholder,  }\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$}]{context }\end{DoxyParamCaption})}
+
+Modify the type of {\ttfamily placeholder} according to get\+Target\+Type\+For\+Output. If the {\ttfamily context} is provided and {\ttfamily placeholder} has a backing tensor, this tensor is also updated. Note\+: If {\ttfamily placeholder} is used in functions other than F, changes to those functions will be made as well to accommodate the converted placeholder. \mbox{\Hypertarget{classglow_1_1_function_converter_a03251a5ce1b3485e0fa5dd70faaa0a35}\label{classglow_1_1_function_converter_a03251a5ce1b3485e0fa5dd70faaa0a35}} 
+\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}!create\+Conversion@{create\+Conversion}}
+\index{create\+Conversion@{create\+Conversion}!glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+\subsubsection{\texorpdfstring{create\+Conversion()}{createConversion()}}
+{\footnotesize\ttfamily virtual \hyperlink{classglow_1_1_node}{Node}$\ast$ glow\+::\+Function\+Converter\+::create\+Conversion (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{function,  }\item[{const \hyperlink{classglow_1_1_node}{Node} \&}]{node,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value} \&}]{val,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{dest\+Ty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Create a conversion with {\ttfamily val} as input and {\ttfamily dest\+Ty} as the destination type in {\ttfamily function}, given {\ttfamily node}. In other words, creates something like cast val to dest\+Ty. 
+
+Implemented in \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_a875e9ce5a9b356ca34d8f8f52c9b7bf1}{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}.
+
+\mbox{\Hypertarget{classglow_1_1_function_converter_a37f0cb91037a83c63f9a7a7e6a987ad6}\label{classglow_1_1_function_converter_a37f0cb91037a83c63f9a7a7e6a987ad6}} 
+\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}!get\+Conversion\+Output@{get\+Conversion\+Output}}
+\index{get\+Conversion\+Output@{get\+Conversion\+Output}!glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+\subsubsection{\texorpdfstring{get\+Conversion\+Output()}{getConversionOutput()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_node_value}{Node\+Value} Function\+Converter\+::get\+Conversion\+Output (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} \&}]{conversion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Given a {\ttfamily conversion}, get its output value. The default implementation returns the zero-\/th result. If a conversion node defined more than one value, this method must be overloaded. \mbox{\Hypertarget{classglow_1_1_function_converter_a2039ff94d1abe52dc89d3f7d3350c772}\label{classglow_1_1_function_converter_a2039ff94d1abe52dc89d3f7d3350c772}} 
+\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}!get\+Target\+Type\+For\+Input@{get\+Target\+Type\+For\+Input}}
+\index{get\+Target\+Type\+For\+Input@{get\+Target\+Type\+For\+Input}!glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+\subsubsection{\texorpdfstring{get\+Target\+Type\+For\+Input()}{getTargetTypeForInput()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_type}{Type\+Ref} Function\+Converter\+::get\+Target\+Type\+For\+Input (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node}{Node} \&}]{use,  }\item[{unsigned}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type that the input operand described by {\ttfamily idx-\/th} input of {\ttfamily use} needs to have at the end of the conversion procedure. In other words, this is the type this value will have at the end of \+::convert. E.\+g., let say we want to convert\+: \begin{DoxyVerb}/// res = matmul float A, B
+/// \end{DoxyVerb}
+ into \begin{DoxyVerb}/// res = matmul fp16 A, B
+/// \end{DoxyVerb}
+ The target type for A (i.\+e., (matmul, 0)) is fp16.
+\end{DoxyReturn}
+Using this information, the conversion procedure will insert a conversion of ({\ttfamily node}, {\ttfamily idx}) from its current type to the returned type. \begin{DoxyVerb}/// convertedA = convert A's current type A to returned type
+/// res = matmul fp16 convertedA, B
+/// \end{DoxyVerb}
+ \begin{DoxyVerb}If nullptr is returned or the returned type is identical to the current
+type of the related value, no conversion will be inserted by the
+conversion procedure.  \end{DoxyVerb}
+ 
+
+Reimplemented in \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_a19c5372966cc435b4043c0b9f7f014b8}{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}.
+
+\mbox{\Hypertarget{classglow_1_1_function_converter_a015dfed23796395ce34c7ca4766c7854}\label{classglow_1_1_function_converter_a015dfed23796395ce34c7ca4766c7854}} 
+\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}!get\+Target\+Type\+For\+Output@{get\+Target\+Type\+For\+Output}}
+\index{get\+Target\+Type\+For\+Output@{get\+Target\+Type\+For\+Output}!glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+\subsubsection{\texorpdfstring{get\+Target\+Type\+For\+Output()}{getTargetTypeForOutput()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_type}{Type\+Ref} Function\+Converter\+::get\+Target\+Type\+For\+Output (\begin{DoxyParamCaption}\item[{const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type that {\ttfamily out} needs to have at the end of the conversion procedure. In other words, this is the type this value will have at the end of \+::convert. E.\+g., let say we want to convert\+: \begin{DoxyVerb}/// res = matmul float
+/// \end{DoxyVerb}
+ into \begin{DoxyVerb}/// res = matmul fp16
+/// \end{DoxyVerb}
+ The target type for res is fp16.
+\end{DoxyReturn}
+Using this information, the conversion procedure will insert a conversion of {\ttfamily out} from this type to the current type of {\ttfamily out}. \begin{DoxyVerb}/// res = matmul fp16
+/// ... = convert fp16 res to res's current type
+/// \end{DoxyVerb}
+ \begin{DoxyVerb}If nullptr is returned or the returned type is identical to the current
+type of the related value, no conversion will be inserted by the
+conversion procedure.  \end{DoxyVerb}
+ 
+
+Reimplemented in \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_a98b9d067d1afe5811ed48d38e5029d63}{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}.
+
+\mbox{\Hypertarget{classglow_1_1_function_converter_a2e2d68b35109983d63e5b38cabe7b652}\label{classglow_1_1_function_converter_a2e2d68b35109983d63e5b38cabe7b652}} 
+\index{glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}!morph\+Node@{morph\+Node}}
+\index{morph\+Node@{morph\+Node}!glow\+::\+Function\+Converter@{glow\+::\+Function\+Converter}}
+\subsubsection{\texorpdfstring{morph\+Node()}{morphNode()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node} \& Function\+Converter\+::morph\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Morph {\ttfamily node} into its final form. For the most part this method should be a noop and just return {\ttfamily node}. However, this hook provides a way to perform changes on more than just the type of the inputs and outputs, like changing the opcode of an operation.
+
+\begin{DoxyWarning}{Warning}
+{\ttfamily node} must not be deleted.
+\end{DoxyWarning}
+\begin{DoxyPrecond}{Precondition}
+All the inputs of {\ttfamily node} have been converted to their target type using \+::get\+Target\+Type\+For\+Input. 
+
+All the results of {\ttfamily node} have been converted to their target type using \+::get\+Target\+Type\+For\+Output.
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+the final morphed node. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Converter/Function\+Converter.\+h\item 
+lib/\+Converter/Function\+Converter.\+cpp\end{DoxyCompactItemize}

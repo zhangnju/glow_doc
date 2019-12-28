@@ -1,0 +1,55 @@
+\hypertarget{classglow_1_1_protobuf_writer}{}\section{glow\+:\+:Protobuf\+Writer Class Reference}
+\label{classglow_1_1_protobuf_writer}\index{glow\+::\+Protobuf\+Writer@{glow\+::\+Protobuf\+Writer}}
+
+
+Writes model\+: graph and weights.  
+
+
+
+
+{\ttfamily \#include $<$Protobuf\+Writer.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Protobuf\+Writer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.847458cm]{classglow_1_1_protobuf_writer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_protobuf_writer_a4c960b5cc47d4d309c109d2cf9043fd9}{Protobuf\+Writer} (const std\+::string \&model\+Filename, \hyperlink{classglow_1_1_function}{Function} \&F, \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$err\+Ptr=nullptr)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_protobuf_writer_aecac8f4b7fe432f5910f2cd0cb81f74a}\label{classglow_1_1_protobuf_writer_aecac8f4b7fe432f5910f2cd0cb81f74a}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} {\bfseries write\+Model} (const \+::google\+::protobuf\+::\+Message \&model\+Proto, bool text\+Mode=false)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_protobuf_writer_a6bdd4b02f8ff5f5b4ea7c23b7d923909}\label{classglow_1_1_protobuf_writer_a6bdd4b02f8ff5f5b4ea7c23b7d923909}} 
+\hyperlink{classglow_1_1_function}{Function} \& \hyperlink{classglow_1_1_protobuf_writer_a6bdd4b02f8ff5f5b4ea7c23b7d923909}{G\+\_\+}
+\begin{DoxyCompactList}\small\item\em The graph that we are constructing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_protobuf_writer_aa979402a6c014fcacdc87c3fa8715a50}\label{classglow_1_1_protobuf_writer_aa979402a6c014fcacdc87c3fa8715a50}} 
+std\+::ofstream \hyperlink{classglow_1_1_protobuf_writer_aa979402a6c014fcacdc87c3fa8715a50}{ff\+\_\+}
+\begin{DoxyCompactList}\small\item\em Output file stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Writes model\+: graph and weights. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_protobuf_writer_a4c960b5cc47d4d309c109d2cf9043fd9}\label{classglow_1_1_protobuf_writer_a4c960b5cc47d4d309c109d2cf9043fd9}} 
+\index{glow\+::\+Protobuf\+Writer@{glow\+::\+Protobuf\+Writer}!Protobuf\+Writer@{Protobuf\+Writer}}
+\index{Protobuf\+Writer@{Protobuf\+Writer}!glow\+::\+Protobuf\+Writer@{glow\+::\+Protobuf\+Writer}}
+\subsubsection{\texorpdfstring{Protobuf\+Writer()}{ProtobufWriter()}}
+{\footnotesize\ttfamily glow\+::\+Protobuf\+Writer\+::\+Protobuf\+Writer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{model\+Filename,  }\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{F,  }\item[{\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} $\ast$}]{err\+Ptr = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Constructs new \hyperlink{classglow_1_1_protobuf_writer}{Protobuf\+Writer} object. It will write protopuf messages into {\ttfamily model\+Filename} using graph and constants from {\ttfamily F}. If {\ttfamily err\+Ptr} is not null then if an error occurs it will get assigned there otherwise if an error occurs it will abort. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Exporter/Protobuf\+Writer.\+h\item 
+lib/\+Exporter/Protobuf\+Writer.\+cpp\end{DoxyCompactItemize}

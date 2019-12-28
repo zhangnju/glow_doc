@@ -1,0 +1,110 @@
+\hypertarget{classglow_1_1_batch_one_hot_node}{}\section{glow\+:\+:Batch\+One\+Hot\+Node Class Reference}
+\label{classglow_1_1_batch_one_hot_node}\index{glow\+::\+Batch\+One\+Hot\+Node@{glow\+::\+Batch\+One\+Hot\+Node}}
+
+
+Expands each row of the Data to a row of zeros and ones, according to One Hot Encoding. i-\/th element of Result\textquotesingle{}s row is one iff Values\mbox{[}i\mbox{]} equals to the corresponding element of Data.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Batch\+One\+Hot\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_batch_one_hot_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_aaa6a515445a5ac6c17926fb6881681f5}\label{classglow_1_1_batch_one_hot_node_aaa6a515445a5ac6c17926fb6881681f5}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Data\+Idx} = 0, 
+{\bfseries Lengths\+Idx} = 1, 
+{\bfseries Values\+Idx} = 2
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_aee3261ff0810fb025ced783de6fff5a4}\label{classglow_1_1_batch_one_hot_node_aee3261ff0810fb025ced783de6fff5a4}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_abd188558470270fbcd1804ba0ab1bf32}\label{classglow_1_1_batch_one_hot_node_abd188558470270fbcd1804ba0ab1bf32}} 
+{\bfseries Batch\+One\+Hot\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Data, \hyperlink{structglow_1_1_node_value}{Node\+Value} Lengths, \hyperlink{structglow_1_1_node_value}{Node\+Value} Values)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_af42cc408f5c57dbfdb3f3b660e0ba966}\label{classglow_1_1_batch_one_hot_node_af42cc408f5c57dbfdb3f3b660e0ba966}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Data} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a41279c4c0526f7448857f6dc6e8f90bd}\label{classglow_1_1_batch_one_hot_node_a41279c4c0526f7448857f6dc6e8f90bd}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Lengths} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_abc1f375ef88a4dfd1255321ec2c6f452}\label{classglow_1_1_batch_one_hot_node_abc1f375ef88a4dfd1255321ec2c6f452}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Values} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a54f5605c9659a09fa654730f2993f491}\label{classglow_1_1_batch_one_hot_node_a54f5605c9659a09fa654730f2993f491}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_aba1e8b39b3d453b05e74450a930e1224}\label{classglow_1_1_batch_one_hot_node_aba1e8b39b3d453b05e74450a930e1224}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a1e28bfb6d3815ede7a40ae53bea38b72}\label{classglow_1_1_batch_one_hot_node_a1e28bfb6d3815ede7a40ae53bea38b72}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a910b888001f17798625d57868f0a9c51}\label{classglow_1_1_batch_one_hot_node_a910b888001f17798625d57868f0a9c51}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_aed3eb23270627aaa427be18899cd3a17}\label{classglow_1_1_batch_one_hot_node_aed3eb23270627aaa427be18899cd3a17}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a4248cc9cd758de981c925f3b5ee8af0b}\label{classglow_1_1_batch_one_hot_node_a4248cc9cd758de981c925f3b5ee8af0b}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_aaaa587bde2672c57187b8ea7b1c314c6}\label{classglow_1_1_batch_one_hot_node_aaaa587bde2672c57187b8ea7b1c314c6}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a9d8d853a4f71f15eab6f52939ae63dc3}\label{classglow_1_1_batch_one_hot_node_a9d8d853a4f71f15eab6f52939ae63dc3}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_ae92d18032563260be2542d32d8302d0c}\label{classglow_1_1_batch_one_hot_node_ae92d18032563260be2542d32d8302d0c}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a8c95c22d3cb0f4b7a1f5ffb04e7f5154}\label{classglow_1_1_batch_one_hot_node_a8c95c22d3cb0f4b7a1f5ffb04e7f5154}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a332532eba60798937a634fcbf125ca3b}\label{classglow_1_1_batch_one_hot_node_a332532eba60798937a634fcbf125ca3b}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a8b8dbc9cf15368ba84a444a5625b943d}\label{classglow_1_1_batch_one_hot_node_a8b8dbc9cf15368ba84a444a5625b943d}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_batch_one_hot_node}{Batch\+One\+Hot\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a77e496b19bd0168360c0b1d41bdc9b1f}\label{classglow_1_1_batch_one_hot_node_a77e496b19bd0168360c0b1d41bdc9b1f}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a194c8bf4b2adfc1ba7af64ba5502c060}\label{classglow_1_1_batch_one_hot_node_a194c8bf4b2adfc1ba7af64ba5502c060}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a54b784ea0e92550ff9f786eae7e3532c}\label{classglow_1_1_batch_one_hot_node_a54b784ea0e92550ff9f786eae7e3532c}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a235a640de134b2bb1478fa3c2c7c8b17}\label{classglow_1_1_batch_one_hot_node_a235a640de134b2bb1478fa3c2c7c8b17}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_one_hot_node_a91dbbb1799fa98ebb1647fb6691158a0}\label{classglow_1_1_batch_one_hot_node_a91dbbb1799fa98ebb1647fb6691158a0}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Expands each row of the Data to a row of zeros and ones, according to One Hot Encoding. i-\/th element of Result\textquotesingle{}s row is one iff Values\mbox{[}i\mbox{]} equals to the corresponding element of Data. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

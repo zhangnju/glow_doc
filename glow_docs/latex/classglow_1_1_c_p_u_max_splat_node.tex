@@ -1,0 +1,104 @@
+\hypertarget{classglow_1_1_c_p_u_max_splat_node}{}\section{glow\+:\+:C\+P\+U\+Max\+Splat\+Node Class Reference}
+\label{classglow_1_1_c_p_u_max_splat_node}\index{glow\+::\+C\+P\+U\+Max\+Splat\+Node@{glow\+::\+C\+P\+U\+Max\+Splat\+Node}}
+
+
+A Max node with one splat input; C\+PU specific.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:C\+P\+U\+Max\+Splat\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_c_p_u_max_splat_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_ac5c6a6563f933affc80f863a08bde672}\label{classglow_1_1_c_p_u_max_splat_node_ac5c6a6563f933affc80f863a08bde672}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_aa2ee22f972d0a168692626fb8442ca08}\label{classglow_1_1_c_p_u_max_splat_node_aa2ee22f972d0a168692626fb8442ca08}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_a20b2ec23d19203e7166bc9dc3ef08c2c}\label{classglow_1_1_c_p_u_max_splat_node_a20b2ec23d19203e7166bc9dc3ef08c2c}} 
+{\bfseries C\+P\+U\+Max\+Splat\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, float Splat\+Value)
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_af769acb2366e6d0e9ba999446b68b3ab}\label{classglow_1_1_c_p_u_max_splat_node_af769acb2366e6d0e9ba999446b68b3ab}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_a0003a229093c199abcc15fce72fba068}\label{classglow_1_1_c_p_u_max_splat_node_a0003a229093c199abcc15fce72fba068}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_a9b35d51db338a347239614d4cd2ce0df}\label{classglow_1_1_c_p_u_max_splat_node_a9b35d51db338a347239614d4cd2ce0df}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_acf741a0be3d3543918d9b8a00a60ab88}\label{classglow_1_1_c_p_u_max_splat_node_acf741a0be3d3543918d9b8a00a60ab88}} 
+float {\bfseries get\+Splat\+Value} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_a71d3b37f12ffb8f4737a08c73a3b48fa}\label{classglow_1_1_c_p_u_max_splat_node_a71d3b37f12ffb8f4737a08c73a3b48fa}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_a2490d14b2847263949b6969983b02d9d}\label{classglow_1_1_c_p_u_max_splat_node_a2490d14b2847263949b6969983b02d9d}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_afc164754858825a1d42b0f73873b1d46}\label{classglow_1_1_c_p_u_max_splat_node_afc164754858825a1d42b0f73873b1d46}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_acb1929e9b808c2a83e07acd857641bfe}\label{classglow_1_1_c_p_u_max_splat_node_acb1929e9b808c2a83e07acd857641bfe}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_abcfb16a7c39e5125a0fc8875e792ea6e}\label{classglow_1_1_c_p_u_max_splat_node_abcfb16a7c39e5125a0fc8875e792ea6e}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_ab91801d425c2df49b2db7ab7c11a776b}\label{classglow_1_1_c_p_u_max_splat_node_ab91801d425c2df49b2db7ab7c11a776b}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_a41e402d737e4a286c7cf7655e6730fea}\label{classglow_1_1_c_p_u_max_splat_node_a41e402d737e4a286c7cf7655e6730fea}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_ad913a2370bc95b70aafa339c374e2d6b}\label{classglow_1_1_c_p_u_max_splat_node_ad913a2370bc95b70aafa339c374e2d6b}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_afc528fc5825da502f040bae5814509bc}\label{classglow_1_1_c_p_u_max_splat_node_afc528fc5825da502f040bae5814509bc}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_a27fff34ac14615f0b417512198dd565b}\label{classglow_1_1_c_p_u_max_splat_node_a27fff34ac14615f0b417512198dd565b}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_c_p_u_max_splat_node}{C\+P\+U\+Max\+Splat\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_aa04379934693630ca68e4d9285c0e510}\label{classglow_1_1_c_p_u_max_splat_node_aa04379934693630ca68e4d9285c0e510}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_a0c58ac90d4baf49e081c4fed7932abda}\label{classglow_1_1_c_p_u_max_splat_node_a0c58ac90d4baf49e081c4fed7932abda}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_a8d76c8a3d3ceb204b7e44456698c4722}\label{classglow_1_1_c_p_u_max_splat_node_a8d76c8a3d3ceb204b7e44456698c4722}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_a581002990f6ada6b1cb3379321db23ec}\label{classglow_1_1_c_p_u_max_splat_node_a581002990f6ada6b1cb3379321db23ec}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_c_p_u_max_splat_node_a48630dfe79ed01a9cdc3afa2684d5510}\label{classglow_1_1_c_p_u_max_splat_node_a48630dfe79ed01a9cdc3afa2684d5510}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A Max node with one splat input; C\+PU specific. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\hypertarget{structglow_1_1_kernel_launch}{}\section{glow\+:\+:Kernel\+Launch Struct Reference}
+\label{structglow_1_1_kernel_launch}\index{glow\+::\+Kernel\+Launch@{glow\+::\+Kernel\+Launch}}
+
+
+A helper struct with information about kernels launches.  
+
+
+
+
+{\ttfamily \#include $<$Open\+C\+L.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_kernel_launch_a5bafc098c9cf71841216482f455ed304}\label{structglow_1_1_kernel_launch_a5bafc098c9cf71841216482f455ed304}} 
+\hyperlink{structglow_1_1_kernel_launch_a5bafc098c9cf71841216482f455ed304}{Kernel\+Launch} (cl\+\_\+kernel kernel, std\+::string name, std\+::string type, cl\+\_\+event event)
+\begin{DoxyCompactList}\small\item\em Constructor to be used by launching Glow\textquotesingle{}s CL kernels. \end{DoxyCompactList}\item 
+\hyperlink{structglow_1_1_kernel_launch_a48a8021551c969a239135dcf3ea403d5}{Kernel\+Launch} (const std\+::string \&name, std\+::string type, cl\+\_\+event event)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_kernel_launch_afc88188533704f9d1175297f059ffc8a}\label{structglow_1_1_kernel_launch_afc88188533704f9d1175297f059ffc8a}} 
+cl\+\_\+kernel \hyperlink{structglow_1_1_kernel_launch_afc88188533704f9d1175297f059ffc8a}{kernel\+\_\+}
+\begin{DoxyCompactList}\small\item\em Kernel that was launched. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_kernel_launch_ada2e5b50337745f7738b7fd8f7ee851f}\label{structglow_1_1_kernel_launch_ada2e5b50337745f7738b7fd8f7ee851f}} 
+std\+::string \hyperlink{structglow_1_1_kernel_launch_ada2e5b50337745f7738b7fd8f7ee851f}{name\+\_\+}
+\begin{DoxyCompactList}\small\item\em The name of the kernel that was launched. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_kernel_launch_a5e6002fae69fd7a59ea729ff0689ac95}\label{structglow_1_1_kernel_launch_a5e6002fae69fd7a59ea729ff0689ac95}} 
+std\+::string \hyperlink{structglow_1_1_kernel_launch_a5e6002fae69fd7a59ea729ff0689ac95}{type\+\_\+}
+\begin{DoxyCompactList}\small\item\em The type of the kernel that was launched. \end{DoxyCompactList}\item 
+cl\+\_\+event \hyperlink{structglow_1_1_kernel_launch_a2f84c430a76b24b6e12a32812a00db8c}{event\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A helper struct with information about kernels launches. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structglow_1_1_kernel_launch_a48a8021551c969a239135dcf3ea403d5}\label{structglow_1_1_kernel_launch_a48a8021551c969a239135dcf3ea403d5}} 
+\index{glow\+::\+Kernel\+Launch@{glow\+::\+Kernel\+Launch}!Kernel\+Launch@{Kernel\+Launch}}
+\index{Kernel\+Launch@{Kernel\+Launch}!glow\+::\+Kernel\+Launch@{glow\+::\+Kernel\+Launch}}
+\subsubsection{\texorpdfstring{Kernel\+Launch()}{KernelLaunch()}}
+{\footnotesize\ttfamily glow\+::\+Kernel\+Launch\+::\+Kernel\+Launch (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{std\+::string}]{type,  }\item[{cl\+\_\+event}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor to be used when launching an \char`\"{}external\char`\"{} CL kernel, e.\+g. provided by such libraries like C\+L\+Blast, etc. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1_kernel_launch_a2f84c430a76b24b6e12a32812a00db8c}\label{structglow_1_1_kernel_launch_a2f84c430a76b24b6e12a32812a00db8c}} 
+\index{glow\+::\+Kernel\+Launch@{glow\+::\+Kernel\+Launch}!event\+\_\+@{event\+\_\+}}
+\index{event\+\_\+@{event\+\_\+}!glow\+::\+Kernel\+Launch@{glow\+::\+Kernel\+Launch}}
+\subsubsection{\texorpdfstring{event\+\_\+}{event\_}}
+{\footnotesize\ttfamily cl\+\_\+event glow\+::\+Kernel\+Launch\+::event\+\_\+}
+
+Event associated with the start of the kernel. Used only when profiling is enabled. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Open\+C\+L/Open\+C\+L.\+h\end{DoxyCompactItemize}

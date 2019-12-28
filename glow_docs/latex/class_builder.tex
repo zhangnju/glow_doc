@@ -1,0 +1,76 @@
+\hypertarget{class_builder}{}\section{Builder Class Reference}
+\label{class_builder}\index{Builder@{Builder}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_builder_ad8b47f32295c7b773fa6d504bb347c70}{Builder} (std\+::ofstream \&H, std\+::ofstream \&C, std\+::ofstream \&D, std\+::ofstream \&BH, std\+::ofstream \&BC, std\+::ofstream \&I)
+\item 
+\mbox{\Hypertarget{class_builder_aad0dea44e77bb3b3764f789f990d030c}\label{class_builder_aad0dea44e77bb3b3764f789f990d030c}} 
+\hyperlink{class_instr_builder}{Instr\+Builder} \hyperlink{class_builder_aad0dea44e77bb3b3764f789f990d030c}{new\+Instr} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Declare a new instruction and generate code for it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_builder_a069d21eea35c18677834e111e19470a7}\label{class_builder_a069d21eea35c18677834e111e19470a7}} 
+\hyperlink{class_instr_builder}{Instr\+Builder} \hyperlink{class_builder_a069d21eea35c18677834e111e19470a7}{new\+Backend\+Specific\+Instr} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Declare a new backend-\/specific instruction and generate code for it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_builder_a1daf38f32fb67e66aab8a09816c2da89}\label{class_builder_a1daf38f32fb67e66aab8a09816c2da89}} 
+void \hyperlink{class_builder_a1daf38f32fb67e66aab8a09816c2da89}{declare\+Instr} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Declare the instruction in the def file but don\textquotesingle{}t generate code for it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_builder_adf3bbe78f298430862ea6a9b2729164a}\label{class_builder_adf3bbe78f298430862ea6a9b2729164a}} 
+void \hyperlink{class_builder_adf3bbe78f298430862ea6a9b2729164a}{declare\+Value} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Declare the value in the def file but don\textquotesingle{}t generate code for it. \end{DoxyCompactList}\item 
+void \hyperlink{class_builder_ab3a71329b155fa1c5f1a032cc0a99ada}{include\+Backend\+Specific\+Verification} (const std\+::string \&filename)
+\item 
+\mbox{\Hypertarget{class_builder_ada675cf949abede7bead34d8dba2c5c4}\label{class_builder_ada675cf949abede7bead34d8dba2c5c4}} 
+void \hyperlink{class_builder_ada675cf949abede7bead34d8dba2c5c4}{include\+Header} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Include header into the auto-\/generated Instrs include file. \end{DoxyCompactList}\item 
+\hyperlink{class_builder_a1a3f96e2daf78e66733ecd941d0eb5ec}{Builder} (std\+::ofstream \&H, std\+::ofstream \&C, std\+::ofstream \&D)
+\item 
+\mbox{\Hypertarget{class_builder_a088818890b456f7c4abeea3958f6a787}\label{class_builder_a088818890b456f7c4abeea3958f6a787}} 
+\hyperlink{class_node_builder}{Node\+Builder} \hyperlink{class_builder_a088818890b456f7c4abeea3958f6a787}{new\+Node} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Declare a new node and generate code for it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_builder_a4d7ab24c750aff72ec00291c2274654f}\label{class_builder_a4d7ab24c750aff72ec00291c2274654f}} 
+\hyperlink{class_node_builder}{Node\+Builder} \hyperlink{class_builder_a4d7ab24c750aff72ec00291c2274654f}{new\+Backend\+Specific\+Node} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Declare a new backend specific node and generate code for it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_builder_ab369a6b4fd595029929a71930b543638}\label{class_builder_ab369a6b4fd595029929a71930b543638}} 
+void \hyperlink{class_builder_ab369a6b4fd595029929a71930b543638}{declare\+Node} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Declare the node in the def file but don\textquotesingle{}t generate code for it. \end{DoxyCompactList}\item 
+void \hyperlink{class_builder_ab3a71329b155fa1c5f1a032cc0a99ada}{include\+Backend\+Specific\+Verification} (const std\+::string \&filename)
+\item 
+\mbox{\Hypertarget{class_builder_ada675cf949abede7bead34d8dba2c5c4}\label{class_builder_ada675cf949abede7bead34d8dba2c5c4}} 
+void \hyperlink{class_builder_ada675cf949abede7bead34d8dba2c5c4}{include\+Header} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Include header into the auto-\/generated Nodes include file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_builder_ad8b47f32295c7b773fa6d504bb347c70}\label{class_builder_ad8b47f32295c7b773fa6d504bb347c70}} 
+\index{Builder@{Builder}!Builder@{Builder}}
+\index{Builder@{Builder}!Builder@{Builder}}
+\subsubsection{\texorpdfstring{Builder()}{Builder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Builder\+::\+Builder (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{H,  }\item[{std\+::ofstream \&}]{C,  }\item[{std\+::ofstream \&}]{D,  }\item[{std\+::ofstream \&}]{BH,  }\item[{std\+::ofstream \&}]{BC,  }\item[{std\+::ofstream \&}]{I }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new top-\/level builder that holds the output streams that point to the header file, cpp file and enum definition file, as well as the builder and IR Gen files. \mbox{\Hypertarget{class_builder_a1a3f96e2daf78e66733ecd941d0eb5ec}\label{class_builder_a1a3f96e2daf78e66733ecd941d0eb5ec}} 
+\index{Builder@{Builder}!Builder@{Builder}}
+\index{Builder@{Builder}!Builder@{Builder}}
+\subsubsection{\texorpdfstring{Builder()}{Builder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Builder\+::\+Builder (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{H,  }\item[{std\+::ofstream \&}]{C,  }\item[{std\+::ofstream \&}]{D }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new top-\/level builder that holds the three output streams that point to the header file, cpp file and enum definition file. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_builder_ab3a71329b155fa1c5f1a032cc0a99ada}\label{class_builder_ab3a71329b155fa1c5f1a032cc0a99ada}} 
+\index{Builder@{Builder}!include\+Backend\+Specific\+Verification@{include\+Backend\+Specific\+Verification}}
+\index{include\+Backend\+Specific\+Verification@{include\+Backend\+Specific\+Verification}!Builder@{Builder}}
+\subsubsection{\texorpdfstring{include\+Backend\+Specific\+Verification()}{includeBackendSpecificVerification()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Builder\+::include\+Backend\+Specific\+Verification (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Include backend-\/specific verification at the end of the auto-\/generated Nodes cpp file. \mbox{\Hypertarget{class_builder_ab3a71329b155fa1c5f1a032cc0a99ada}\label{class_builder_ab3a71329b155fa1c5f1a032cc0a99ada}} 
+\index{Builder@{Builder}!include\+Backend\+Specific\+Verification@{include\+Backend\+Specific\+Verification}}
+\index{include\+Backend\+Specific\+Verification@{include\+Backend\+Specific\+Verification}!Builder@{Builder}}
+\subsubsection{\texorpdfstring{include\+Backend\+Specific\+Verification()}{includeBackendSpecificVerification()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Builder\+::include\+Backend\+Specific\+Verification (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Include backend-\/specific verification at the end of the auto-\/generated Instrs cpp file. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tools/\+Class\+Gen/Instr\+Builder.\+h\item 
+tools/\+Class\+Gen/Node\+Builder.\+h\end{DoxyCompactItemize}

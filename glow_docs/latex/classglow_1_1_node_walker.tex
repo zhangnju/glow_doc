@@ -1,0 +1,61 @@
+\hypertarget{classglow_1_1_node_walker}{}\section{glow\+:\+:Node\+Walker Class Reference}
+\label{classglow_1_1_node_walker}\index{glow\+::\+Node\+Walker@{glow\+::\+Node\+Walker}}
+
+
+A walker that recursively visits a node and its children.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Node\+Walker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classglow_1_1_node_walker}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_walker_a9a56569c7d0cbb178dc529fdd50d40ea}\label{classglow_1_1_node_walker_a9a56569c7d0cbb178dc529fdd50d40ea}} 
+virtual void \hyperlink{classglow_1_1_node_walker_a9a56569c7d0cbb178dc529fdd50d40ea}{pre} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\begin{DoxyCompactList}\small\item\em This callback is called before visiting the children of {\ttfamily N}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_walker_a458185932e62fcb94c46be5ec2f9c05e}\label{classglow_1_1_node_walker_a458185932e62fcb94c46be5ec2f9c05e}} 
+virtual void {\bfseries pre} (const \hyperlink{classglow_1_1_node}{Node} $\ast$parent, const \hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_walker_a73b1dd6252113a9ebbe94dc956004512}\label{classglow_1_1_node_walker_a73b1dd6252113a9ebbe94dc956004512}} 
+virtual void \hyperlink{classglow_1_1_node_walker_a73b1dd6252113a9ebbe94dc956004512}{post} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\begin{DoxyCompactList}\small\item\em This callback is called after visiting the children of {\ttfamily N}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_walker_ab6a7ffd507136e91b032773ece8af230}\label{classglow_1_1_node_walker_ab6a7ffd507136e91b032773ece8af230}} 
+virtual void {\bfseries post} (const \hyperlink{classglow_1_1_node}{Node} $\ast$parent, const \hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\item 
+virtual bool \hyperlink{classglow_1_1_node_walker_a33532d7a4fe24f71c1b763c53182b20b}{should\+Visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_walker_a5e2f69eaa9a50fbb4319d37726e6b867}\label{classglow_1_1_node_walker_a5e2f69eaa9a50fbb4319d37726e6b867}} 
+virtual bool {\bfseries should\+Visit} (const \hyperlink{classglow_1_1_node}{Node} $\ast$parent, const \hyperlink{classglow_1_1_node}{Node} $\ast$N)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_walker_a7f5b4d28ff8e36c508c5a9d5971ba5a5}\label{classglow_1_1_node_walker_a7f5b4d28ff8e36c508c5a9d5971ba5a5}} 
+virtual \hyperlink{classglow_1_1_node_walker_a7f5b4d28ff8e36c508c5a9d5971ba5a5}{$\sim$\+Node\+Walker} ()=default
+\begin{DoxyCompactList}\small\item\em Dtor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A walker that recursively visits a node and its children. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_node_walker_a33532d7a4fe24f71c1b763c53182b20b}\label{classglow_1_1_node_walker_a33532d7a4fe24f71c1b763c53182b20b}} 
+\index{glow\+::\+Node\+Walker@{glow\+::\+Node\+Walker}!should\+Visit@{should\+Visit}}
+\index{should\+Visit@{should\+Visit}!glow\+::\+Node\+Walker@{glow\+::\+Node\+Walker}}
+\subsubsection{\texorpdfstring{should\+Visit()}{shouldVisit()}}
+{\footnotesize\ttfamily virtual bool glow\+::\+Node\+Walker\+::should\+Visit (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{parent,  }\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{N }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This callback is called before processing the graph. If the method returns false then we skip this node. 
+
+Reimplemented in \hyperlink{structglow_1_1_pre_order_visitor_ac8c137afc60efc698bfcaca489b073db}{glow\+::\+Pre\+Order\+Visitor}, \hyperlink{classglow_1_1_i_r_gen_visitor_a5f5fe967edc74e4a65e5c4d76affac80}{glow\+::\+I\+R\+Gen\+Visitor}, and \hyperlink{structglow_1_1_post_order_visitor_aac9bad1f6f91fb1f9328061e4a4fce68}{glow\+::\+Post\+Order\+Visitor}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Node.\+h\end{DoxyCompactItemize}

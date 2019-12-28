@@ -1,0 +1,66 @@
+\hypertarget{classglow_1_1runtime_1_1_open_c_l_command_queue_pool}{}\section{glow\+:\+:runtime\+:\+:Open\+C\+L\+Command\+Queue\+Pool Class Reference}
+\label{classglow_1_1runtime_1_1_open_c_l_command_queue_pool}\index{glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool@{glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool}}
+
+
+{\ttfamily \#include $<$Open\+C\+L\+Device\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a7756db863fae18ddfa60d93385c14c9c}\label{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a7756db863fae18ddfa60d93385c14c9c}} 
+\hyperlink{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a7756db863fae18ddfa60d93385c14c9c}{Open\+C\+L\+Command\+Queue\+Pool} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a9c09b49d821c59938bb9c1eafcdb2d15}\label{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a9c09b49d821c59938bb9c1eafcdb2d15}} 
+\hyperlink{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a9c09b49d821c59938bb9c1eafcdb2d15}{$\sim$\+Open\+C\+L\+Command\+Queue\+Pool} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a5548dd592b22f1cb8545a7db1e00ac15}\label{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a5548dd592b22f1cb8545a7db1e00ac15}} 
+void \hyperlink{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a5548dd592b22f1cb8545a7db1e00ac15}{set\+Context} (const cl\+\_\+context context)
+\begin{DoxyCompactList}\small\item\em Set the Open\+CL context for the pool to {\ttfamily context}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_ae86ba1f4173952866531d18bdd2052c1}\label{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_ae86ba1f4173952866531d18bdd2052c1}} 
+void \hyperlink{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_ae86ba1f4173952866531d18bdd2052c1}{set\+Device} (const cl\+\_\+device\+\_\+id device)
+\begin{DoxyCompactList}\small\item\em Set the Open\+CL device for the pool to {\ttfamily device}. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{structglow_1_1runtime_1_1_open_c_l_command_queue}{Open\+C\+L\+Command\+Queue} $>$ \hyperlink{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a2486ee8c7684f5a6fc420fbb19c3166f}{request\+Command\+Queue} (cl\+\_\+command\+\_\+queue\+\_\+properties properties=0)
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_af68ee89be676152c73d3c54325958528}\label{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_af68ee89be676152c73d3c54325958528}} 
+void \hyperlink{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_af68ee89be676152c73d3c54325958528}{return\+Command\+Queue} (\hyperlink{structglow_1_1runtime_1_1_open_c_l_command_queue}{Open\+C\+L\+Command\+Queue} \&queue)
+\begin{DoxyCompactList}\small\item\em Return the command queue {\ttfamily queue} to the pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a563432249a3ab3d751f378edd82da085}\label{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a563432249a3ab3d751f378edd82da085}} 
+unsigned \hyperlink{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a563432249a3ab3d751f378edd82da085}{get\+Num\+Allocated\+Queues} () const
+\begin{DoxyCompactList}\small\item\em Return the total number of queues allocated by the pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a89f72e6cfc197123f4dd322d1073d3b4}\label{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a89f72e6cfc197123f4dd322d1073d3b4}} 
+unsigned \hyperlink{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a89f72e6cfc197123f4dd322d1073d3b4}{get\+Num\+Queues\+Available} () const
+\begin{DoxyCompactList}\small\item\em Return the total number of queues available to request. \end{DoxyCompactList}\item 
+unsigned \hyperlink{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a586609f9e0e09548475b65a4a4316872}{get\+Num\+Allocated\+Queues\+For\+Properties} (cl\+\_\+command\+\_\+queue\+\_\+properties props) const
+\item 
+unsigned \hyperlink{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a58fe81267fed85fdf99ef443faf9a286}{get\+Num\+Queues\+Available\+For\+Properties} (cl\+\_\+command\+\_\+queue\+\_\+properties props) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that contains a pool of reusable Open\+CL command queues 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a586609f9e0e09548475b65a4a4316872}\label{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a586609f9e0e09548475b65a4a4316872}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool@{glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool}!get\+Num\+Allocated\+Queues\+For\+Properties@{get\+Num\+Allocated\+Queues\+For\+Properties}}
+\index{get\+Num\+Allocated\+Queues\+For\+Properties@{get\+Num\+Allocated\+Queues\+For\+Properties}!glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool@{glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool}}
+\subsubsection{\texorpdfstring{get\+Num\+Allocated\+Queues\+For\+Properties()}{getNumAllocatedQueuesForProperties()}}
+{\footnotesize\ttfamily unsigned Open\+C\+L\+Command\+Queue\+Pool\+::get\+Num\+Allocated\+Queues\+For\+Properties (\begin{DoxyParamCaption}\item[{cl\+\_\+command\+\_\+queue\+\_\+properties}]{props }\end{DoxyParamCaption}) const}
+
+Return the total number of queues allocated by the pool with the properties {\ttfamily props}. \mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a58fe81267fed85fdf99ef443faf9a286}\label{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a58fe81267fed85fdf99ef443faf9a286}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool@{glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool}!get\+Num\+Queues\+Available\+For\+Properties@{get\+Num\+Queues\+Available\+For\+Properties}}
+\index{get\+Num\+Queues\+Available\+For\+Properties@{get\+Num\+Queues\+Available\+For\+Properties}!glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool@{glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool}}
+\subsubsection{\texorpdfstring{get\+Num\+Queues\+Available\+For\+Properties()}{getNumQueuesAvailableForProperties()}}
+{\footnotesize\ttfamily unsigned Open\+C\+L\+Command\+Queue\+Pool\+::get\+Num\+Queues\+Available\+For\+Properties (\begin{DoxyParamCaption}\item[{cl\+\_\+command\+\_\+queue\+\_\+properties}]{props }\end{DoxyParamCaption}) const}
+
+Return the total number of queues available to request with the properties {\ttfamily props}. \mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a2486ee8c7684f5a6fc420fbb19c3166f}\label{classglow_1_1runtime_1_1_open_c_l_command_queue_pool_a2486ee8c7684f5a6fc420fbb19c3166f}} 
+\index{glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool@{glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool}!request\+Command\+Queue@{request\+Command\+Queue}}
+\index{request\+Command\+Queue@{request\+Command\+Queue}!glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool@{glow\+::runtime\+::\+Open\+C\+L\+Command\+Queue\+Pool}}
+\subsubsection{\texorpdfstring{request\+Command\+Queue()}{requestCommandQueue()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ \hyperlink{structglow_1_1runtime_1_1_open_c_l_command_queue}{Open\+C\+L\+Command\+Queue} $>$ Open\+C\+L\+Command\+Queue\+Pool\+::request\+Command\+Queue (\begin{DoxyParamCaption}\item[{cl\+\_\+command\+\_\+queue\+\_\+properties}]{properties = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Request a command queue from the pool that has the properties specified in {\ttfamily properties}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Open\+C\+L/Open\+C\+L\+Device\+Manager.\+h\item 
+lib/\+Backends/\+Open\+C\+L/Open\+C\+L\+Device\+Manager.\+cpp\end{DoxyCompactItemize}

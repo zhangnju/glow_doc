@@ -1,0 +1,109 @@
+\hypertarget{classglow_1_1_i_r_builder}{}\section{glow\+:\+:I\+R\+Builder Class Reference}
+\label{classglow_1_1_i_r_builder}\index{glow\+::\+I\+R\+Builder@{glow\+::\+I\+R\+Builder}}
+
+
+The \hyperlink{classglow_1_1_i_r_builder}{I\+R\+Builder} constructs the IR in the function.  
+
+
+
+
+{\ttfamily \#include $<$I\+R\+Builder.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a6fafc3cead408c9df74381c906389f26}\label{classglow_1_1_i_r_builder_a6fafc3cead408c9df74381c906389f26}} 
+{\bfseries I\+R\+Builder} (\hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$F)
+\item 
+\hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} \& \hyperlink{classglow_1_1_i_r_builder_ad641d03c18c361fbf0f13ba844aa53d1}{get\+I\+R\+Function} ()
+\item 
+void \hyperlink{classglow_1_1_i_r_builder_a8b3101183daa13d185a6d89875a01294}{deallocate\+Active\+Instrs} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ High-\/level, operation-\/level I\+R\+Builder.}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a793289d737a4d74f2ca5d9020922105b}\label{classglow_1_1_i_r_builder_a793289d737a4d74f2ca5d9020922105b}} 
+\hyperlink{classglow_1_1_max_pool_with_argmax_inst}{Max\+Pool\+With\+Argmax\+Inst} $\ast$ {\bfseries create\+Max\+Pool\+With\+Argmax\+Op} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$input, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ kernels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ strides, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} layout)
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a2f1e43764975c46f24883f41208c37ed}\label{classglow_1_1_i_r_builder_a2f1e43764975c46f24883f41208c37ed}} 
+\hyperlink{classglow_1_1_arg_max_inst}{Arg\+Max\+Inst} $\ast$ {\bfseries create\+Arg\+Max\+Op} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} axis, bool keep\+Dims)
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a696640026207924a269d9ef0a8a287d1}\label{classglow_1_1_i_r_builder_a696640026207924a269d9ef0a8a287d1}} 
+\hyperlink{classglow_1_1_avg_pool_inst}{Avg\+Pool\+Inst} $\ast$ {\bfseries create\+Avg\+Pool\+Op} (\hyperlink{classglow_1_1_value}{Value} $\ast$input, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ kernels, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ strides, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} layout)
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_af6c38718346f32588deecf3759b9d5cd}\label{classglow_1_1_i_r_builder_af6c38718346f32588deecf3759b9d5cd}} 
+\hyperlink{classglow_1_1_cross_entropy_loss_inst}{Cross\+Entropy\+Loss\+Inst} $\ast$ {\bfseries create\+Cross\+Entropy\+Loss\+Op} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$P, \hyperlink{classglow_1_1_value}{Value} $\ast$labels)
+\item 
+\hyperlink{classglow_1_1_tensor_view_inst}{Tensor\+View\+Inst} $\ast$ \hyperlink{classglow_1_1_i_r_builder_a20f136fcda917bfe15800467a9ef94dc}{create\+Tensor\+View} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Kind, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims, \hyperlink{classglow_1_1_value}{Value} $\ast$src, llvm\+::\+String\+Ref name, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ offsets=\{\})
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a67b7c66b1f2747cd2884dc119d8312c1}\label{classglow_1_1_i_r_builder_a67b7c66b1f2747cd2884dc119d8312c1}} 
+\hyperlink{classglow_1_1_local_response_normalization_inst}{Local\+Response\+Normalization\+Inst} $\ast$ {\bfseries create\+Local\+Response\+Normalization\+Op} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$input, size\+\_\+t half\+Window\+Size=2, float alpha=1e-\/4, float beta=0.\+75, float k=2.\+0)
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a9f7a588a3961723fb5517e10e3a415a2}\label{classglow_1_1_i_r_builder_a9f7a588a3961723fb5517e10e3a415a2}} 
+\hyperlink{classglow_1_1_top_k_inst}{Top\+K\+Inst} $\ast$ {\bfseries create\+Top\+K\+Op} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$input, size\+\_\+t k)
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a31c08879fb0553e907ea0c309d944e54}\label{classglow_1_1_i_r_builder_a31c08879fb0553e907ea0c309d944e54}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries create\+Return\+Op} (\hyperlink{classglow_1_1_value}{Value} $\ast$input)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Low-\/level, instruction-\/level I\+R\+Builder.}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a69e5f48ff30dc959cff577db07091dc4}\label{classglow_1_1_i_r_builder_a69e5f48ff30dc959cff577db07091dc4}} 
+\hyperlink{classglow_1_1_weight_var}{Weight\+Var} $\ast$ {\bfseries create\+Weight\+Var} (\hyperlink{structglow_1_1_type}{Type\+Ref} T, llvm\+::\+String\+Ref name=\char`\"{}\char`\"{}, Mutability\+Kind m=Mutability\+Kind\+::\+Mutable)
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a253be63420f6267ef74aa36726dc659a}\label{classglow_1_1_i_r_builder_a253be63420f6267ef74aa36726dc659a}} 
+\hyperlink{classglow_1_1_weight_var}{Weight\+Var} $\ast$ {\bfseries create\+Weight\+Var} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims, llvm\+::\+String\+Ref name=\char`\"{}\char`\"{}, Mutability\+Kind m=Mutability\+Kind\+::\+Mutable)
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a2d0d2cf0068685693c804870258d560a}\label{classglow_1_1_i_r_builder_a2d0d2cf0068685693c804870258d560a}} 
+\hyperlink{classglow_1_1_weight_var}{Weight\+Var} $\ast$ {\bfseries create\+Weight\+Var} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims, float scale, int32\+\_\+t offset, llvm\+::\+String\+Ref name=\char`\"{}\char`\"{}, Mutability\+Kind m=Mutability\+Kind\+::\+Mutable)
+\item 
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a1db80a32bbe4e6b19e7a5d0cd72277cf}\label{classglow_1_1_i_r_builder_a1db80a32bbe4e6b19e7a5d0cd72277cf}} 
+\hyperlink{classglow_1_1_alloc_activation_inst}{Alloc\+Activation\+Inst} $\ast$ {\bfseries create\+Alloc\+Activation\+Inst} (llvm\+::\+String\+Ref name, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ dims)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classglow_1_1_i_r_builder}{I\+R\+Builder} constructs the IR in the function. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a20f136fcda917bfe15800467a9ef94dc}\label{classglow_1_1_i_r_builder_a20f136fcda917bfe15800467a9ef94dc}} 
+\index{glow\+::\+I\+R\+Builder@{glow\+::\+I\+R\+Builder}!create\+Tensor\+View@{create\+Tensor\+View}}
+\index{create\+Tensor\+View@{create\+Tensor\+View}!glow\+::\+I\+R\+Builder@{glow\+::\+I\+R\+Builder}}
+\subsubsection{\texorpdfstring{create\+Tensor\+View()}{createTensorView()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tensor_view_inst}{Tensor\+View\+Inst} $\ast$ I\+R\+Builder\+::create\+Tensor\+View (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{elem\+Kind,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{dims,  }\item[{\hyperlink{classglow_1_1_value}{Value} $\ast$}]{src,  }\item[{llvm\+::\+String\+Ref}]{name,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{offsets = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+Creates a tensorview instruction with the following parameters\+: 
+\begin{DoxyParams}{Parameters}
+{\em elem\+Kind} & the type of elements in a tensor \\
+\hline
+{\em dims} & dimensions of the view, such that the number of elements in the view is the same as the number of elements in the source tensor {\ttfamily src} \\
+\hline
+{\em src} & the source tensor used to create the unowned tensor. \\
+\hline
+{\em offsets} & is a vector of offsets into the \hyperlink{classglow_1_1_tensor}{Tensor} for this view of the \hyperlink{classglow_1_1_tensor}{Tensor}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classglow_1_1_i_r_builder_a8b3101183daa13d185a6d89875a01294}\label{classglow_1_1_i_r_builder_a8b3101183daa13d185a6d89875a01294}} 
+\index{glow\+::\+I\+R\+Builder@{glow\+::\+I\+R\+Builder}!deallocate\+Active\+Instrs@{deallocate\+Active\+Instrs}}
+\index{deallocate\+Active\+Instrs@{deallocate\+Active\+Instrs}!glow\+::\+I\+R\+Builder@{glow\+::\+I\+R\+Builder}}
+\subsubsection{\texorpdfstring{deallocate\+Active\+Instrs()}{deallocateActiveInstrs()}}
+{\footnotesize\ttfamily void I\+R\+Builder\+::deallocate\+Active\+Instrs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Inserts the deallocation instructions for all \textquotesingle{}alloc\textquotesingle{} instructions that need to be terminated. \mbox{\Hypertarget{classglow_1_1_i_r_builder_ad641d03c18c361fbf0f13ba844aa53d1}\label{classglow_1_1_i_r_builder_ad641d03c18c361fbf0f13ba844aa53d1}} 
+\index{glow\+::\+I\+R\+Builder@{glow\+::\+I\+R\+Builder}!get\+I\+R\+Function@{get\+I\+R\+Function}}
+\index{get\+I\+R\+Function@{get\+I\+R\+Function}!glow\+::\+I\+R\+Builder@{glow\+::\+I\+R\+Builder}}
+\subsubsection{\texorpdfstring{get\+I\+R\+Function()}{getIRFunction()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function}\& glow\+::\+I\+R\+Builder\+::get\+I\+R\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the function of the current builder. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+I\+R/I\+R\+Builder.\+h\item 
+lib/\+I\+R/I\+R\+Builder.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+I\+R\+Builder.\+cpp\end{DoxyCompactItemize}

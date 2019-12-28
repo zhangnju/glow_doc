@@ -1,0 +1,60 @@
+\hypertarget{classglow_1_1_local_response_normalization_inst}{}\section{glow\+:\+:Local\+Response\+Normalization\+Inst Class Reference}
+\label{classglow_1_1_local_response_normalization_inst}\index{glow\+::\+Local\+Response\+Normalization\+Inst@{glow\+::\+Local\+Response\+Normalization\+Inst}}
+Inheritance diagram for glow\+:\+:Local\+Response\+Normalization\+Inst\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.922747cm]{classglow_1_1_local_response_normalization_inst}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_a39de593b38734175fd7bbab21690488c}\label{classglow_1_1_local_response_normalization_inst_a39de593b38734175fd7bbab21690488c}} 
+{\bfseries Local\+Response\+Normalization\+Inst} (llvm\+::\+String\+Ref name, \hyperlink{classglow_1_1_value}{Value} $\ast$Dest, \hyperlink{classglow_1_1_value}{Value} $\ast$Src, \hyperlink{classglow_1_1_value}{Value} $\ast$Scale, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Half\+Window\+Size, float Alpha, float Beta, float K)
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_a0b5c95463122424078445d6f2af85deb}\label{classglow_1_1_local_response_normalization_inst_a0b5c95463122424078445d6f2af85deb}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Dest} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_afdaacde4aebc9454ba3ea3c4cf2dd157}\label{classglow_1_1_local_response_normalization_inst_afdaacde4aebc9454ba3ea3c4cf2dd157}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Src} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_abcb5f5cd4f68f9d07019273194d662bd}\label{classglow_1_1_local_response_normalization_inst_abcb5f5cd4f68f9d07019273194d662bd}} 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ {\bfseries get\+Scale} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_a2765b36e739412453a8b14bbe5d3376e}\label{classglow_1_1_local_response_normalization_inst_a2765b36e739412453a8b14bbe5d3376e}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Half\+Window\+Size} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_a90c881a7ec40eef4a77df55d10f1935f}\label{classglow_1_1_local_response_normalization_inst_a90c881a7ec40eef4a77df55d10f1935f}} 
+float {\bfseries get\+Alpha} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_ac7e7ac7b6ae12e9c2a2ed6391896734e}\label{classglow_1_1_local_response_normalization_inst_ac7e7ac7b6ae12e9c2a2ed6391896734e}} 
+float {\bfseries get\+Beta} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_ad0b04059f807a3cb8fff96019c47a4ee}\label{classglow_1_1_local_response_normalization_inst_ad0b04059f807a3cb8fff96019c47a4ee}} 
+float {\bfseries getK} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_a83e2d0f5f66c89b925e95d434063c4a4}\label{classglow_1_1_local_response_normalization_inst_a83e2d0f5f66c89b925e95d434063c4a4}} 
+bool {\bfseries is\+Inplace\+Op} (unsigned dst\+Idx, unsigned src\+Idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_a5047848847dda75979422c91f69e30aa}\label{classglow_1_1_local_response_normalization_inst_a5047848847dda75979422c91f69e30aa}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_ad050ff54514cdd916dbbb30899a06b65}\label{classglow_1_1_local_response_normalization_inst_ad050ff54514cdd916dbbb30899a06b65}} 
+void {\bfseries dump} (llvm\+::raw\+\_\+ostream \&os) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_a0ce8001e40090173d40e7dcfbee2b0a3}\label{classglow_1_1_local_response_normalization_inst_a0ce8001e40090173d40e7dcfbee2b0a3}} 
+void {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_local_response_normalization_inst_a965690126fa584f7be7a0b722d80be5f}\label{classglow_1_1_local_response_normalization_inst_a965690126fa584f7be7a0b722d80be5f}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+h\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Instr.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,150 @@
+\hypertarget{classglow_1_1_trace_context}{}\section{glow\+:\+:Trace\+Context Class Reference}
+\label{classglow_1_1_trace_context}\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+
+
+{\ttfamily \#include $<$Trace\+Events.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_context_a8b1f102152d13b9d85388cdaed2d4e15}\label{classglow_1_1_trace_context_a8b1f102152d13b9d85388cdaed2d4e15}} 
+{\bfseries Trace\+Context} (\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} level)
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_context_a28016f401b06729a28d43d611708f570}\label{classglow_1_1_trace_context_a28016f401b06729a28d43d611708f570}} 
+{\bfseries Trace\+Context} (int level)
+\item 
+std\+::vector$<$ \hyperlink{structglow_1_1_trace_event}{Trace\+Event} $>$ \& \hyperlink{classglow_1_1_trace_context_ac70c1c3538abbb536854e37ce1b37537}{get\+Trace\+Events} ()
+\item 
+llvm\+::\+Array\+Ref$<$ \hyperlink{structglow_1_1_trace_event}{Trace\+Event} $>$ \hyperlink{classglow_1_1_trace_context_ab0bb924d7e2cdc2f0097959f4e5cfb3f}{get\+Trace\+Events} () const
+\item 
+\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} \hyperlink{classglow_1_1_trace_context_aa1f486de9cc4c4d535900eb6054b8634}{get\+Trace\+Level} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_context_ab5de52a61d170850aaae5f3470598dab}\label{classglow_1_1_trace_context_ab5de52a61d170850aaae5f3470598dab}} 
+void \hyperlink{classglow_1_1_trace_context_ab5de52a61d170850aaae5f3470598dab}{set\+Trace\+Level} (\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} level)
+\begin{DoxyCompactList}\small\item\em Sets the level of verbosity for Trace\+Events. \end{DoxyCompactList}\item 
+bool \hyperlink{classglow_1_1_trace_context_a9b38e028fc617b1dd53e9c11c01ca506}{should\+Log} (\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} level)
+\item 
+void \hyperlink{classglow_1_1_trace_context_ac3d59447d63663657a5c31f46d817d06}{log\+Trace\+Event} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} level, char type=Trace\+Event\+::\+Instant\+Type, std\+::map$<$ std\+::string, std\+::string $>$ additional\+Attributes=\{\}, size\+\_\+t tid=threads\+::get\+Thread\+Id(), int id=-\/1)
+\item 
+void \hyperlink{classglow_1_1_trace_context_aa08041f9fb3daf7e095b1806af87d779}{log\+Trace\+Event} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} level, char type, uint64\+\_\+t timestamp, std\+::map$<$ std\+::string, std\+::string $>$ additional\+Attributes=\{\}, size\+\_\+t tid=threads\+::get\+Thread\+Id(), int id=-\/1)
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_context_aa3df5c08fa1c8c16ab0a51eaaaf850e5}\label{classglow_1_1_trace_context_aa3df5c08fa1c8c16ab0a51eaaaf850e5}} 
+void \hyperlink{classglow_1_1_trace_context_aa3df5c08fa1c8c16ab0a51eaaaf850e5}{log\+Trace\+Event} (\hyperlink{structglow_1_1_trace_event}{Trace\+Event} \&\&ev)
+\begin{DoxyCompactList}\small\item\em Check if event should be logged and then log pre-\/created \hyperlink{structglow_1_1_trace_event}{Trace\+Event}. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_trace_context_aac75f25ff3479645e161d5c13c34ff34}{log\+Complete\+Trace\+Event} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} level, uint64\+\_\+t start\+Timestamp, std\+::map$<$ std\+::string, std\+::string $>$ additional\+Attributes=\{\})
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_context_a28d1e54f379674d087afd75fd1082cdc}\label{classglow_1_1_trace_context_a28d1e54f379674d087afd75fd1082cdc}} 
+void {\bfseries log\+Complete\+Trace\+Event} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} level, uint64\+\_\+t start\+Timestamp, std\+::map$<$ std\+::string, std\+::string $>$ additional\+Attributes, size\+\_\+t tid)
+\item 
+\mbox{\Hypertarget{classglow_1_1_trace_context_ab00976ef787c4a5b6ba8404a11622876}\label{classglow_1_1_trace_context_ab00976ef787c4a5b6ba8404a11622876}} 
+void \hyperlink{classglow_1_1_trace_context_ab00976ef787c4a5b6ba8404a11622876}{set\+Thread\+Name} (int tid, llvm\+::\+String\+Ref name)
+\begin{DoxyCompactList}\small\item\em Sets the human readable {\ttfamily name} for thread . \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_trace_context_ac663b3fff088f7c9a70c0d31f5501ea0}{set\+Thread\+Name} (llvm\+::\+String\+Ref name)
+\item 
+std\+::map$<$ int, std\+::string $>$ \& \hyperlink{classglow_1_1_trace_context_a57fb8a38c0ab7d3b17c1e61e504bd359}{get\+Thread\+Names} ()
+\item 
+void \hyperlink{classglow_1_1_trace_context_aa24c1e719b7a562bdafcd9079d98c680}{dump} (llvm\+::\+String\+Ref filename, const std\+::string \&process\+Name=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classglow_1_1_trace_context_a8692d50a5df71cd51a2906a0943de4c8}{merge} (\hyperlink{classglow_1_1_trace_context}{Trace\+Context} $\ast$other)
+\item 
+void \hyperlink{classglow_1_1_trace_context_a440b03f909dacec97974f02ba41ec2f7}{merge} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_trace_context}{Trace\+Context} $>$ other)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A context for storing Trace\+Events throughout a run (ie. between partitioned Compiled\+Functions). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_trace_context_aa24c1e719b7a562bdafcd9079d98c680}\label{classglow_1_1_trace_context_aa24c1e719b7a562bdafcd9079d98c680}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!dump@{dump}}
+\index{dump@{dump}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily void glow\+::\+Trace\+Context\+::dump (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{filename,  }\item[{const std\+::string \&}]{process\+Name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Dumps all Trace\+Events in json format to the given {\ttfamily filename}, optionally with a provided {\ttfamily process\+Name}. \mbox{\Hypertarget{classglow_1_1_trace_context_a57fb8a38c0ab7d3b17c1e61e504bd359}\label{classglow_1_1_trace_context_a57fb8a38c0ab7d3b17c1e61e504bd359}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!get\+Thread\+Names@{get\+Thread\+Names}}
+\index{get\+Thread\+Names@{get\+Thread\+Names}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{get\+Thread\+Names()}{getThreadNames()}}
+{\footnotesize\ttfamily std\+::map$<$int, std\+::string$>$\& glow\+::\+Trace\+Context\+::get\+Thread\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of human readable thread names. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_trace_context_ac70c1c3538abbb536854e37ce1b37537}\label{classglow_1_1_trace_context_ac70c1c3538abbb536854e37ce1b37537}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!get\+Trace\+Events@{get\+Trace\+Events}}
+\index{get\+Trace\+Events@{get\+Trace\+Events}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{get\+Trace\+Events()}{getTraceEvents()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structglow_1_1_trace_event}{Trace\+Event}$>$\& glow\+::\+Trace\+Context\+::get\+Trace\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Trace\+Events for the last run. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_trace_context_ab0bb924d7e2cdc2f0097959f4e5cfb3f}\label{classglow_1_1_trace_context_ab0bb924d7e2cdc2f0097959f4e5cfb3f}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!get\+Trace\+Events@{get\+Trace\+Events}}
+\index{get\+Trace\+Events@{get\+Trace\+Events}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{get\+Trace\+Events()}{getTraceEvents()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily llvm\+::\+Array\+Ref$<$\hyperlink{structglow_1_1_trace_event}{Trace\+Event}$>$ glow\+::\+Trace\+Context\+::get\+Trace\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Trace\+Events for the last run. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_trace_context_aa1f486de9cc4c4d535900eb6054b8634}\label{classglow_1_1_trace_context_aa1f486de9cc4c4d535900eb6054b8634}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!get\+Trace\+Level@{get\+Trace\+Level}}
+\index{get\+Trace\+Level@{get\+Trace\+Level}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{get\+Trace\+Level()}{getTraceLevel()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level} glow\+::\+Trace\+Context\+::get\+Trace\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the level of verbosity allowed for Trace\+Events. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_trace_context_aac75f25ff3479645e161d5c13c34ff34}\label{classglow_1_1_trace_context_aac75f25ff3479645e161d5c13c34ff34}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!log\+Complete\+Trace\+Event@{log\+Complete\+Trace\+Event}}
+\index{log\+Complete\+Trace\+Event@{log\+Complete\+Trace\+Event}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{log\+Complete\+Trace\+Event()}{logCompleteTraceEvent()}}
+{\footnotesize\ttfamily void glow\+::\+Trace\+Context\+::log\+Complete\+Trace\+Event (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level}}]{level,  }\item[{uint64\+\_\+t}]{start\+Timestamp,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{additional\+Attributes = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+Logs a new \hyperlink{structglow_1_1_trace_event}{Trace\+Event} with the Complete event type, the start time is provided and uses the current time to determine duration. \mbox{\Hypertarget{classglow_1_1_trace_context_ac3d59447d63663657a5c31f46d817d06}\label{classglow_1_1_trace_context_ac3d59447d63663657a5c31f46d817d06}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!log\+Trace\+Event@{log\+Trace\+Event}}
+\index{log\+Trace\+Event@{log\+Trace\+Event}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{log\+Trace\+Event()}{logTraceEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void glow\+::\+Trace\+Context\+::log\+Trace\+Event (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level}}]{level,  }\item[{char}]{type = {\ttfamily TraceEvent\+:\+:InstantType},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{additional\+Attributes = {\ttfamily \{\}},  }\item[{size\+\_\+t}]{tid = {\ttfamily threads\+:\+:getThreadId()},  }\item[{int}]{id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+Logs a new \hyperlink{structglow_1_1_trace_event}{Trace\+Event} at the current time with the given {\ttfamily name}, {\ttfamily type} and optionally additional attributes and thread\+Id. \mbox{\Hypertarget{classglow_1_1_trace_context_aa08041f9fb3daf7e095b1806af87d779}\label{classglow_1_1_trace_context_aa08041f9fb3daf7e095b1806af87d779}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!log\+Trace\+Event@{log\+Trace\+Event}}
+\index{log\+Trace\+Event@{log\+Trace\+Event}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{log\+Trace\+Event()}{logTraceEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void glow\+::\+Trace\+Context\+::log\+Trace\+Event (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name,  }\item[{\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level}}]{level,  }\item[{char}]{type,  }\item[{uint64\+\_\+t}]{timestamp,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{additional\+Attributes = {\ttfamily \{\}},  }\item[{size\+\_\+t}]{tid = {\ttfamily threads\+:\+:getThreadId()},  }\item[{int}]{id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+Logs a new \hyperlink{structglow_1_1_trace_event}{Trace\+Event} at the provided {\ttfamily timestamp}, with the given {\ttfamily name}, {\ttfamily type} and optionally additional attributes. \mbox{\Hypertarget{classglow_1_1_trace_context_a8692d50a5df71cd51a2906a0943de4c8}\label{classglow_1_1_trace_context_a8692d50a5df71cd51a2906a0943de4c8}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!merge@{merge}}
+\index{merge@{merge}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{merge()}{merge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void glow\+::\+Trace\+Context\+::merge (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_trace_context}{Trace\+Context} $\ast$}]{other }\end{DoxyParamCaption})}
+
+Moves all Trace\+Events and thread names in {\ttfamily other} into this context. This will clear in the input \hyperlink{classglow_1_1_trace_context}{Trace\+Context}. \mbox{\Hypertarget{classglow_1_1_trace_context_a440b03f909dacec97974f02ba41ec2f7}\label{classglow_1_1_trace_context_a440b03f909dacec97974f02ba41ec2f7}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!merge@{merge}}
+\index{merge@{merge}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{merge()}{merge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void glow\+::\+Trace\+Context\+::merge (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_trace_context}{Trace\+Context} $>$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Moves all Trace\+Events and thread names in {\ttfamily other} into this context. This will clear in the input \hyperlink{classglow_1_1_trace_context}{Trace\+Context}. \mbox{\Hypertarget{classglow_1_1_trace_context_ac663b3fff088f7c9a70c0d31f5501ea0}\label{classglow_1_1_trace_context_ac663b3fff088f7c9a70c0d31f5501ea0}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!set\+Thread\+Name@{set\+Thread\+Name}}
+\index{set\+Thread\+Name@{set\+Thread\+Name}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{set\+Thread\+Name()}{setThreadName()}}
+{\footnotesize\ttfamily void glow\+::\+Trace\+Context\+::set\+Thread\+Name (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{name }\end{DoxyParamCaption})}
+
+Sets the human readable {\ttfamily name} for the current thread (by threads\+::get\+Thread\+Id()). \mbox{\Hypertarget{classglow_1_1_trace_context_a9b38e028fc617b1dd53e9c11c01ca506}\label{classglow_1_1_trace_context_a9b38e028fc617b1dd53e9c11c01ca506}} 
+\index{glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}!should\+Log@{should\+Log}}
+\index{should\+Log@{should\+Log}!glow\+::\+Trace\+Context@{glow\+::\+Trace\+Context}}
+\subsubsection{\texorpdfstring{should\+Log()}{shouldLog()}}
+{\footnotesize\ttfamily bool glow\+::\+Trace\+Context\+::should\+Log (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_trace_event_a10132a384d74408a112510cbe1b7d978}{Trace\+Level}}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if should log an event of the provided {\ttfamily level}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Execution\+Context/Trace\+Events.\+h\item 
+lib/\+Execution\+Context/Trace\+Events.\+cpp\end{DoxyCompactItemize}

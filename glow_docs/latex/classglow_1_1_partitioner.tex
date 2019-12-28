@@ -1,0 +1,100 @@
+\hypertarget{classglow_1_1_partitioner}{}\section{glow\+:\+:Partitioner Class Reference}
+\label{classglow_1_1_partitioner}\index{glow\+::\+Partitioner@{glow\+::\+Partitioner}}
+
+
+{\ttfamily \#include $<$Partitioner.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Partitioner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_partitioner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_partitioner_a96c68cbdf64decc46911e4a4a67e432b}{Partitioner} (\hyperlink{classglow_1_1_module}{Module} $\ast$parent, const std\+::vector$<$ \hyperlink{structglow_1_1runtime_1_1_device_info}{Device\+Info} $>$ \&devices, bool saturate\+Host=false, bool optimized=false, \hyperlink{structglow_1_1runtime_1_1_partition_config}{Partition\+Config} partition\+Config=\hyperlink{structglow_1_1runtime_1_1_partition_config}{Partition\+Config}())
+\item 
+\hyperlink{classglow_1_1_partitioner_a7de345d695b595b2ade385ee1cd82644}{Partitioner} (\hyperlink{classglow_1_1_module}{Module} $\ast$parent, const std\+::vector$<$ \hyperlink{structglow_1_1runtime_1_1_device_info}{Device\+Info} $>$ \&devices, const std\+::vector$<$ \hyperlink{classglow_1_1_backend}{Backend} $\ast$$>$ \&backends, bool saturate\+Host=false, bool optimized=false)
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ D\+A\+G\+List\+Ty $>$ \hyperlink{classglow_1_1_partitioner_a8d9623d32a7ebfc467e2baea9eb8ae7a}{partition\+From\+Config} (const \hyperlink{structglow_1_1runtime_1_1_partition_config}{Partition\+Config} \&partition\+Config)
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ D\+A\+G\+List\+Ty $>$ \hyperlink{classglow_1_1_partitioner_afa9a4f53e01814f1ddd292af1fecff4a}{quantization\+Profiling\+Partition} (\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx)
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ D\+A\+G\+List\+Ty $>$ \hyperlink{classglow_1_1_partitioner_adb733cf9c471edeb7cac89224c403368}{heterogeneous\+Partition} (\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx)
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ D\+A\+G\+List\+Ty $>$ \hyperlink{classglow_1_1_partitioner_aa1f821ee76481495e079c7fd9325b357}{load\+Balanced\+Partition} (\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx, size\+\_\+t num\+Devices=0)
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ D\+A\+G\+List\+Ty $>$ \hyperlink{classglow_1_1_partitioner_a41d81aa72c7c6105def11a06097166fb}{partition} (\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Given a module, partitions each of the its functions into multiple ones based on memory constraints and minimizes the communication cost. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_partitioner_a96c68cbdf64decc46911e4a4a67e432b}\label{classglow_1_1_partitioner_a96c68cbdf64decc46911e4a4a67e432b}} 
+\index{glow\+::\+Partitioner@{glow\+::\+Partitioner}!Partitioner@{Partitioner}}
+\index{Partitioner@{Partitioner}!glow\+::\+Partitioner@{glow\+::\+Partitioner}}
+\subsubsection{\texorpdfstring{Partitioner()}{Partitioner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Partitioner\+::\+Partitioner (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_module}{Module} $\ast$}]{parent,  }\item[{const std\+::vector$<$ \hyperlink{structglow_1_1runtime_1_1_device_info}{Device\+Info} $>$ \&}]{devices,  }\item[{bool}]{saturate\+Host = {\ttfamily false},  }\item[{bool}]{optimized = {\ttfamily false},  }\item[{\hyperlink{structglow_1_1runtime_1_1_partition_config}{Partition\+Config}}]{partition\+Config = {\ttfamily \hyperlink{structglow_1_1runtime_1_1_partition_config}{Partition\+Config}()} }\end{DoxyParamCaption})}
+
+{\ttfamily parent} is the module which contains the functions need to be divided. Here we assume that all the functions in one module belong to a same \char`\"{}\+Function Family\char`\"{}, that is, without considerting the \char`\"{}dynamic stuff\char`\"{} (i.\+e. batch size, input/output shape of each op), all the functions are identical. The required memory and computation cost for each op can be found in \hyperlink{classglow_1_1_module}{Module}. The {\ttfamily devices} provides the cost model related to devices. Saturating the host will be enabled if {\ttfamily saturate\+Host} is true. {\ttfamily optimized} is false by default, which means the functions in this module are not optimized. {\ttfamily partition\+Config} contains the user defined partition info. \mbox{\Hypertarget{classglow_1_1_partitioner_a7de345d695b595b2ade385ee1cd82644}\label{classglow_1_1_partitioner_a7de345d695b595b2ade385ee1cd82644}} 
+\index{glow\+::\+Partitioner@{glow\+::\+Partitioner}!Partitioner@{Partitioner}}
+\index{Partitioner@{Partitioner}!glow\+::\+Partitioner@{glow\+::\+Partitioner}}
+\subsubsection{\texorpdfstring{Partitioner()}{Partitioner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Partitioner\+::\+Partitioner (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_module}{Module} $\ast$}]{parent,  }\item[{const std\+::vector$<$ \hyperlink{structglow_1_1runtime_1_1_device_info}{Device\+Info} $>$ \&}]{devices,  }\item[{const std\+::vector$<$ \hyperlink{classglow_1_1_backend}{Backend} $\ast$$>$ \&}]{backends,  }\item[{bool}]{saturate\+Host = {\ttfamily false},  }\item[{bool}]{optimized = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Users can create Mock Backends and pass their points to test Graph Partitioning without actually register them in G\+L\+OW. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_partitioner_adb733cf9c471edeb7cac89224c403368}\label{classglow_1_1_partitioner_adb733cf9c471edeb7cac89224c403368}} 
+\index{glow\+::\+Partitioner@{glow\+::\+Partitioner}!heterogeneous\+Partition@{heterogeneous\+Partition}}
+\index{heterogeneous\+Partition@{heterogeneous\+Partition}!glow\+::\+Partitioner@{glow\+::\+Partitioner}}
+\subsubsection{\texorpdfstring{heterogeneous\+Partition()}{heterogeneousPartition()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ D\+A\+G\+List\+Ty $>$ Partitioner\+::heterogeneous\+Partition (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx }\end{DoxyParamCaption})}
+
+This partition approch first do the partition based on backend types, and then based on cost models(memory usage and performance). {\ttfamily cctx} is used for function optimization. \begin{DoxyReturn}{Returns}
+the partition result or an error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_partitioner_aa1f821ee76481495e079c7fd9325b357}\label{classglow_1_1_partitioner_aa1f821ee76481495e079c7fd9325b357}} 
+\index{glow\+::\+Partitioner@{glow\+::\+Partitioner}!load\+Balanced\+Partition@{load\+Balanced\+Partition}}
+\index{load\+Balanced\+Partition@{load\+Balanced\+Partition}!glow\+::\+Partitioner@{glow\+::\+Partitioner}}
+\subsubsection{\texorpdfstring{load\+Balanced\+Partition()}{loadBalancedPartition()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ D\+A\+G\+List\+Ty $>$ Partitioner\+::load\+Balanced\+Partition (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx,  }\item[{size\+\_\+t}]{num\+Devices = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+This partition approach is an experimental one. It tries to balance the workloads of each accelerator/device in addition to respecting memory constraints. {\ttfamily num\+Devices} is the minimal number of partition. That is, after load\+Balanced\+Partition, the network will be devided up into at lease {\ttfamily num\+Devices} sub-\/networks. Now it is overwritten inside of load\+Balcned\+Partition. But in the future, it can be manually defined by users. \mbox{\Hypertarget{classglow_1_1_partitioner_a41d81aa72c7c6105def11a06097166fb}\label{classglow_1_1_partitioner_a41d81aa72c7c6105def11a06097166fb}} 
+\index{glow\+::\+Partitioner@{glow\+::\+Partitioner}!partition@{partition}}
+\index{partition@{partition}!glow\+::\+Partitioner@{glow\+::\+Partitioner}}
+\subsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ D\+A\+G\+List\+Ty $>$ Partitioner\+::partition (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Decompose each function in a module. Given the parameters, this function will choose different partition approches supported in this class\+: heterogeneous partition, user-\/defined partition or quantization profiling. {\ttfamily cctx} is used for function optimization. \begin{DoxyReturn}{Returns}
+the partition result or an error. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1_partitioner_base_ac51c9b3cf875b52d6aa0282aebcc941d}{glow\+::\+Partitioner\+Base}.
+
+\mbox{\Hypertarget{classglow_1_1_partitioner_a8d9623d32a7ebfc467e2baea9eb8ae7a}\label{classglow_1_1_partitioner_a8d9623d32a7ebfc467e2baea9eb8ae7a}} 
+\index{glow\+::\+Partitioner@{glow\+::\+Partitioner}!partition\+From\+Config@{partition\+From\+Config}}
+\index{partition\+From\+Config@{partition\+From\+Config}!glow\+::\+Partitioner@{glow\+::\+Partitioner}}
+\subsubsection{\texorpdfstring{partition\+From\+Config()}{partitionFromConfig()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ D\+A\+G\+List\+Ty $>$ Partitioner\+::partition\+From\+Config (\begin{DoxyParamCaption}\item[{const \hyperlink{structglow_1_1runtime_1_1_partition_config}{Partition\+Config} \&}]{partition\+Config }\end{DoxyParamCaption})}
+
+Based on {\ttfamily partition\+Config} passed into \hyperlink{classglow_1_1_partitioner}{Partitioner}, do user-\/defined partition. \mbox{\Hypertarget{classglow_1_1_partitioner_afa9a4f53e01814f1ddd292af1fecff4a}\label{classglow_1_1_partitioner_afa9a4f53e01814f1ddd292af1fecff4a}} 
+\index{glow\+::\+Partitioner@{glow\+::\+Partitioner}!quantization\+Profiling\+Partition@{quantization\+Profiling\+Partition}}
+\index{quantization\+Profiling\+Partition@{quantization\+Profiling\+Partition}!glow\+::\+Partitioner@{glow\+::\+Partitioner}}
+\subsubsection{\texorpdfstring{quantization\+Profiling\+Partition()}{quantizationProfilingPartition()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ D\+A\+G\+List\+Ty $>$ Partitioner\+::quantization\+Profiling\+Partition (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx }\end{DoxyParamCaption})}
+
+This partition approach is used in Glow Quantization Profiling flow. The backend\+Based\+Partition is applied first in case there are heterogeneous backends. Then each sub-\/function will be compiled and run in C\+PU backend for profiling. {\ttfamily cctx} is used for function optimization. \begin{DoxyReturn}{Returns}
+the partition result or an error. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Partitioner/Partitioner.\+h\item 
+lib/\+Partitioner/Partitioner.\+cpp\end{DoxyCompactItemize}

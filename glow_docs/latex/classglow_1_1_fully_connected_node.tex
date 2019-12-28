@@ -1,0 +1,113 @@
+\hypertarget{classglow_1_1_fully_connected_node}{}\section{glow\+:\+:Fully\+Connected\+Node Class Reference}
+\label{classglow_1_1_fully_connected_node}\index{glow\+::\+Fully\+Connected\+Node@{glow\+::\+Fully\+Connected\+Node}}
+
+
+Creates a Fully\+Connected node where the Input tensor and Weights tensor are multiplied, and then the Bias tensor is added to it, producing the Output.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Fully\+Connected\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_fully_connected_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a974b47da624577f30a43f17cf887d855}\label{classglow_1_1_fully_connected_node_a974b47da624577f30a43f17cf887d855}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0, 
+{\bfseries Weights\+Idx} = 1, 
+{\bfseries Bias\+Idx} = 2
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_af4d98fefca7b8ac0f01a558df4050958}\label{classglow_1_1_fully_connected_node_af4d98fefca7b8ac0f01a558df4050958}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_ac06fd81535f84893cc4aad5a00a78198}\label{classglow_1_1_fully_connected_node_ac06fd81535f84893cc4aad5a00a78198}} 
+{\bfseries Fully\+Connected\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{structglow_1_1_node_value}{Node\+Value} Weights, \hyperlink{structglow_1_1_node_value}{Node\+Value} Bias)
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_ad3fd4813898816de0083413dbeb3ad1a}\label{classglow_1_1_fully_connected_node_ad3fd4813898816de0083413dbeb3ad1a}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a81be0d43e9e5bdeb5c770418cbc5af5e}\label{classglow_1_1_fully_connected_node_a81be0d43e9e5bdeb5c770418cbc5af5e}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Weights} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_ab612d6270b4a746cb1f1f98a7226c28f}\label{classglow_1_1_fully_connected_node_ab612d6270b4a746cb1f1f98a7226c28f}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Bias} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a53bdcb854c5fdff67ab67eed1b22a78a}\label{classglow_1_1_fully_connected_node_a53bdcb854c5fdff67ab67eed1b22a78a}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_ae9d35d384e5f33687838592523b354ef}\label{classglow_1_1_fully_connected_node_ae9d35d384e5f33687838592523b354ef}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a789cc5951568c56bbade5d315a356b76}\label{classglow_1_1_fully_connected_node_a789cc5951568c56bbade5d315a356b76}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_ac7a5b0948d2ec22a6509e7fd09b8a921}\label{classglow_1_1_fully_connected_node_ac7a5b0948d2ec22a6509e7fd09b8a921}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_af86295e5553ff1c5889885a3623cbf94}\label{classglow_1_1_fully_connected_node_af86295e5553ff1c5889885a3623cbf94}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_ab17b97126f3d697cf6e2b0695e35fc42}\label{classglow_1_1_fully_connected_node_ab17b97126f3d697cf6e2b0695e35fc42}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_ab6210e70f736814a971c5f40398cead5}\label{classglow_1_1_fully_connected_node_ab6210e70f736814a971c5f40398cead5}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a0d07329fac5524440a275adc62ed48f7}\label{classglow_1_1_fully_connected_node_a0d07329fac5524440a275adc62ed48f7}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_ad803d9d56837a62377e537a61d5a7431}\label{classglow_1_1_fully_connected_node_ad803d9d56837a62377e537a61d5a7431}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a07f763f388d4960bbb1518a0059d1e01}\label{classglow_1_1_fully_connected_node_a07f763f388d4960bbb1518a0059d1e01}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a162da9fb4fefe9c84fd2927163827860}\label{classglow_1_1_fully_connected_node_a162da9fb4fefe9c84fd2927163827860}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a7bdd686ed0f0735a6394c72f0ff07b0c}\label{classglow_1_1_fully_connected_node_a7bdd686ed0f0735a6394c72f0ff07b0c}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_fully_connected_node}{Fully\+Connected\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a6ec4c9a36ebfc20acc5d94e1cb6cc487}\label{classglow_1_1_fully_connected_node_a6ec4c9a36ebfc20acc5d94e1cb6cc487}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a47b2af3ac56dff5e7e4a59ae77d4191d}\label{classglow_1_1_fully_connected_node_a47b2af3ac56dff5e7e4a59ae77d4191d}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a11ed7a575b947266eef1daa6b091fbb5}\label{classglow_1_1_fully_connected_node_a11ed7a575b947266eef1daa6b091fbb5}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_ab3ac657d31f9129d0fa0c1c2a75c385f}\label{classglow_1_1_fully_connected_node_ab3ac657d31f9129d0fa0c1c2a75c385f}} 
+bool {\bfseries verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_a9bf67f16c782e5cc35ebde6a0b4af6f2}\label{classglow_1_1_fully_connected_node_a9bf67f16c782e5cc35ebde6a0b4af6f2}} 
+\hyperlink{classglow_1_1_fully_connected_grad_node}{Fully\+Connected\+Grad\+Node} $\ast$ {\bfseries get\+Grad} (\hyperlink{classglow_1_1_graph_grad_mapper}{Graph\+Grad\+Mapper} \&builder)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_fully_connected_node_ae990afb2a0e5338a2ad4a1722c57c50a}\label{classglow_1_1_fully_connected_node_ae990afb2a0e5338a2ad4a1722c57c50a}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Creates a Fully\+Connected node where the Input tensor and Weights tensor are multiplied, and then the Bias tensor is added to it, producing the Output. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

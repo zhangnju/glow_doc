@@ -1,0 +1,25 @@
+\hypertarget{classglow_1_1_bundle_saver}{}\section{glow\+:\+:Bundle\+Saver Class Reference}
+\label{classglow_1_1_bundle_saver}\index{glow\+::\+Bundle\+Saver@{glow\+::\+Bundle\+Saver}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_bundle_saver_a76c82e498be587f686cc1bc615e695f9}\label{classglow_1_1_bundle_saver_a76c82e498be587f686cc1bc615e695f9}} 
+\hyperlink{classglow_1_1_bundle_saver_a76c82e498be587f686cc1bc615e695f9}{Bundle\+Saver} (const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$F, const \hyperlink{classglow_1_1_l_l_v_m_backend}{L\+L\+V\+M\+Backend} \&llvm\+Backend)
+\begin{DoxyCompactList}\small\item\em Ctor. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_bundle_saver_ac116e0fb9acbfc13fc8a5d6c3abaedb0}{save} (llvm\+::\+String\+Ref target, llvm\+::\+String\+Ref arch, llvm\+::\+String\+Ref cpu, const llvm\+::\+Small\+Vector\+Impl$<$ std\+::string $>$ \&target\+Features, llvm\+::\+String\+Ref output\+Dir, llvm\+::\+String\+Ref bundle\+Name, llvm\+::\+String\+Ref main\+Entry\+Name, llvm\+::\+Code\+Model\+::\+Model code\+Model, llvm\+::\+Reloc\+::\+Model reloc\+Model)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_bundle_saver_ac116e0fb9acbfc13fc8a5d6c3abaedb0}\label{classglow_1_1_bundle_saver_ac116e0fb9acbfc13fc8a5d6c3abaedb0}} 
+\index{glow\+::\+Bundle\+Saver@{glow\+::\+Bundle\+Saver}!save@{save}}
+\index{save@{save}!glow\+::\+Bundle\+Saver@{glow\+::\+Bundle\+Saver}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Bundle\+Saver\+::save (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{target,  }\item[{llvm\+::\+String\+Ref}]{arch,  }\item[{llvm\+::\+String\+Ref}]{cpu,  }\item[{const llvm\+::\+Small\+Vector\+Impl$<$ std\+::string $>$ \&}]{target\+Features,  }\item[{llvm\+::\+String\+Ref}]{output\+Dir,  }\item[{llvm\+::\+String\+Ref}]{bundle\+Name,  }\item[{llvm\+::\+String\+Ref}]{main\+Entry\+Name,  }\item[{llvm\+::\+Code\+Model\+::\+Model}]{code\+Model,  }\item[{llvm\+::\+Reloc\+::\+Model}]{reloc\+Model }\end{DoxyParamCaption})}
+
+Save code bundle built for {\ttfamily target}, {\ttfamily arch}, {\ttfamily cpu} and {\ttfamily target\+Features} to {\ttfamily output\+Dir} under name {\ttfamily bundle\+Name}. Make {\ttfamily main\+Entry\+Name} the function name for the entry point of the network and prepend all generated files with this name. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+L\+L\+V\+M\+I\+R\+Code\+Gen/Bundle\+Saver.\+h\item 
+lib/\+L\+L\+V\+M\+I\+R\+Code\+Gen/Bundle\+Saver.\+cpp\end{DoxyCompactItemize}

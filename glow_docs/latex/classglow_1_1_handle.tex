@@ -1,0 +1,359 @@
+\hypertarget{classglow_1_1_handle}{}\section{glow\+:\+:Handle$<$ Elem\+Ty $>$ Class Template Reference}
+\label{classglow_1_1_handle}\index{glow\+::\+Handle$<$ Elem\+Ty $>$@{glow\+::\+Handle$<$ Elem\+Ty $>$}}
+
+
+{\ttfamily \#include $<$Tensor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator}$<$ Elem\+Ty, false $>$ \hyperlink{classglow_1_1_handle_a1870bb8d89827d3db93c0bf6500bda1f}{begin} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_a416d1e52f79b0719837637ba9f24edcb}\label{classglow_1_1_handle_a416d1e52f79b0719837637ba9f24edcb}} 
+\hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator}$<$ Elem\+Ty, true $>$ {\bfseries begin} () const
+\item 
+\hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator}$<$ Elem\+Ty, false $>$ \hyperlink{classglow_1_1_handle_a9fb451dd6a54e840ff39a403a655097b}{end} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_a0e5540aa3fca1906bbe77343d36023dd}\label{classglow_1_1_handle_a0e5540aa3fca1906bbe77343d36023dd}} 
+\hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator}$<$ Elem\+Ty, true $>$ {\bfseries end} () const
+\item 
+bool \hyperlink{classglow_1_1_handle_ae201c577bfa7423f14722f365bbb8ddd}{is\+Valid} () const
+\item 
+size\+\_\+t \hyperlink{classglow_1_1_handle_aa2c31f9861ab398e8e244dde4bf7a122}{get\+Element\+Ptr} (llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ indices) const
+\item 
+size\+\_\+t \hyperlink{classglow_1_1_handle_ad3f6b264d70213e15a0f1fc8560b5a04}{get\+Dim\+For\+Ptr} (size\+\_\+t dim, size\+\_\+t idx) const
+\item 
+const \hyperlink{structglow_1_1_type}{Type} \& \hyperlink{classglow_1_1_handle_a012e00131edb5c3112c630c0e957c4cf}{get\+Type} () const
+\item 
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{classglow_1_1_handle_a2d71a692770a4dcb8654485d74965294}{get\+Element\+Type} () const
+\item 
+\hyperlink{classglow_1_1_handle_a9c2df11f63a6d74d56f9630ab0d5b213}{Handle} (\hyperlink{classglow_1_1_tensor}{Tensor} $\ast$tensor)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classglow_1_1_tensor}{Tensor} handle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_handle_ade42ad6f343eca2623f33e0db0845426}\label{classglow_1_1_handle_ade42ad6f343eca2623f33e0db0845426}} 
+llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ {\bfseries dims} () const
+\item 
+size\+\_\+t \hyperlink{classglow_1_1_handle_a7322ebb8b8d2d57f4ea9ec93f238b7a5}{size} () const
+\item 
+size\+\_\+t \hyperlink{classglow_1_1_handle_a1e2e96d19c373742cc3e667720958097}{actual\+Size} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_ac6e32121664e86e9ef7ca79967494cc8}\label{classglow_1_1_handle_ac6e32121664e86e9ef7ca79967494cc8}} 
+bool {\bfseries is\+In\+Bounds} (llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ indices) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_a9dc0c4a5e81c496abca71df14e08b605}\label{classglow_1_1_handle_a9dc0c4a5e81c496abca71df14e08b605}} 
+void {\bfseries clear} (Elem\+Ty value=0)
+\item 
+Elem\+Ty \& \hyperlink{classglow_1_1_handle_a4170feefa1d97ce95bbdf7c880811c2b}{at} (llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ indices)
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_aff86c3f4eec15f312089c498a9426486}\label{classglow_1_1_handle_aff86c3f4eec15f312089c498a9426486}} 
+const Elem\+Ty \& {\bfseries at} (llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ indices) const
+\item 
+Elem\+Ty \& \hyperlink{classglow_1_1_handle_aea03569f22a6d701b671403b5d4c2d43}{raw} (size\+\_\+t index)
+\item 
+const Elem\+Ty \& \hyperlink{classglow_1_1_handle_ae9004553e87770e18aa2396d88bfeeff}{raw} (size\+\_\+t index) const
+\item 
+\hyperlink{classglow_1_1_tensor}{Tensor} \hyperlink{classglow_1_1_handle_a602cde4751f83f7a3b11a3b099ade080}{extract\+Slice} (size\+\_\+t idx) const
+\item 
+void \hyperlink{classglow_1_1_handle_a4f14f140791e25024d601c91ca2f8ced}{insert\+Slice} (const \hyperlink{classglow_1_1_tensor}{Tensor} \&slice, size\+\_\+t idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_a2b958e66171d3824c9c7e67972c419ea}\label{classglow_1_1_handle_a2b958e66171d3824c9c7e67972c419ea}} 
+\hyperlink{classglow_1_1_tensor}{Tensor} \hyperlink{classglow_1_1_handle_a2b958e66171d3824c9c7e67972c419ea}{clone} () const
+\begin{DoxyCompactList}\small\item\em Create a new copy of the current tensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_handle_afe50bb3902caf5a41a874e93fedfc872}\label{classglow_1_1_handle_afe50bb3902caf5a41a874e93fedfc872}} 
+void \hyperlink{classglow_1_1_handle_afe50bb3902caf5a41a874e93fedfc872}{operator=} (const std\+::initializer\+\_\+list$<$ Elem\+Ty $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Update the content of the tensor from a literal list\+: \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_handle_a827aa2c9d05d80c7b0cd0947012e30bc}\label{classglow_1_1_handle_a827aa2c9d05d80c7b0cd0947012e30bc}} 
+void {\bfseries operator=} (llvm\+::\+Array\+Ref$<$ Elem\+Ty $>$ array)
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_a19ab471b0a2db4245382692a87d8d117}\label{classglow_1_1_handle_a19ab471b0a2db4245382692a87d8d117}} 
+void {\bfseries dump\+Ascii} (llvm\+::raw\+\_\+ostream \&os) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_a71aa58ad75ec36c3abbd673c552b4d67}\label{classglow_1_1_handle_a71aa58ad75ec36c3abbd673c552b4d67}} 
+void {\bfseries dump\+Ascii} () const
+\item 
+std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \hyperlink{classglow_1_1_handle_ac4004af33a68096e15f642e5e91d954d}{min\+Max\+Arg} () const
+\item 
+bool \hyperlink{classglow_1_1_handle_add064d7f0e9c193dd326e237a3a2f767}{is\+Zero} (float allowed\+Error=0.\+0) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_ab2855b35850a35e27d81c184c1e9a035}\label{classglow_1_1_handle_ab2855b35850a35e27d81c184c1e9a035}} 
+void {\bfseries dump} (llvm\+::raw\+\_\+ostream \&os, unsigned max\+Num\+Elem=M\+A\+X\+\_\+\+D\+U\+M\+P\+\_\+\+E\+L\+E\+MS) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_a71d7eb7099d95288357f7946c7ab8f4b}\label{classglow_1_1_handle_a71d7eb7099d95288357f7946c7ab8f4b}} 
+void {\bfseries dump} (unsigned max\+Num\+Elem) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_a73265b9bb46df7b521110d93b3777708}\label{classglow_1_1_handle_a73265b9bb46df7b521110d93b3777708}} 
+void {\bfseries dump} () const
+\item 
+void \hyperlink{classglow_1_1_handle_aebb37b02423e68e306cd4e0067e8689e}{init\+Xavier} (size\+\_\+t filter\+Size, \hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \&P\+R\+NG)
+\item 
+{\footnotesize template$<$typename T  = Elem\+Ty$>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+floating\+\_\+point$<$ T $>$\+::value $>$\+::type \hyperlink{classglow_1_1_handle_aba569359ae39c17970cbfba5bbb6fa79}{randomize} (float low, float high, \hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \&P\+R\+NG)
+\item 
+{\footnotesize template$<$typename T  = Elem\+Ty$>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral$<$ T $>$\+::value $>$\+::type \hyperlink{classglow_1_1_handle_a7b66d372800e15c009ee8d4aae8d32c2}{randomize} (int low, int high, \hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \&P\+R\+NG)
+\item 
+{\footnotesize template$<$typename T  = Elem\+Ty$>$ }\\std\+::enable\+\_\+if$<$!std\+::is\+\_\+floating\+\_\+point$<$ T $>$\+::value \&\&!std\+::is\+\_\+integral$<$ T $>$\+::value $>$\+::type \hyperlink{classglow_1_1_handle_afc9f5d40382d7db26e117c2e7b3636a3}{randomize} (float low, float high, \hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \&P\+R\+NG)
+\item 
+std\+::pair$<$ double, double $>$ \hyperlink{classglow_1_1_handle_a542bc11508e42c8e2d2b1d2b07a40e8d}{calculate\+Mean\+Variance} () const
+\item 
+void \hyperlink{classglow_1_1_handle_a8e46eccc2e9bd998d798f19f368cf400}{insert\+Tensors} (\hyperlink{classglow_1_1_handle}{Handle}$<$ Elem\+Ty $>$ \&slice, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ offset, size\+\_\+t count=1, size\+\_\+t axis=0)
+\item 
+void \hyperlink{classglow_1_1_handle_ae4ce4936e95b70768a705074098e0f30}{extract\+Tensors} (\hyperlink{classglow_1_1_handle}{Handle}$<$ Elem\+Ty $>$ \&slice, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ offset)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::pair$<$ T, T $>$ \hyperlink{classglow_1_1_handle_ae8cf4cea87ecab8304875b1b609a6591}{get\+Fused\+Scale\+Offset\+From\+Row} (size\+\_\+t row\+Idx)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classglow_1_1_handle_a885d9052ce52d0125e99e47b45bc5fcc}{set\+Fused\+Scale\+Offset\+In\+Row} (size\+\_\+t row\+Idx, T scale, T offset)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_handle_a0a6464ed0e2ca10bb7847227586f36f2}\label{classglow_1_1_handle_a0a6464ed0e2ca10bb7847227586f36f2}} 
+static \hyperlink{classglow_1_1_handle}{Handle} \hyperlink{classglow_1_1_handle_a0a6464ed0e2ca10bb7847227586f36f2}{create\+Invalid\+Handle} ()
+\begin{DoxyCompactList}\small\item\em Allocate a new invalid handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Elem\+Ty$>$\newline
+class glow\+::\+Handle$<$ Elem\+Ty $>$}
+
+A class that provides indexed access to a tensor. This class has value semantics and it\textquotesingle{}s copied around. One of the reasons for making this class value semantics is to allow efficient index calculation that the compiler can optimize (because stack allocated structures don\textquotesingle{}t alias). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_handle_a9c2df11f63a6d74d56f9630ab0d5b213}\label{classglow_1_1_handle_a9c2df11f63a6d74d56f9630ab0d5b213}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!Handle@{Handle}}
+\index{Handle@{Handle}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{Handle()}{Handle()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+\hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::\hyperlink{classglow_1_1_handle}{Handle} (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_tensor}{Tensor} $\ast$}]{tensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a \hyperlink{classglow_1_1_tensor}{Tensor} handle. 
+
+We allow handles that wrap uninitialized tensors. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_handle_a1e2e96d19c373742cc3e667720958097}\label{classglow_1_1_handle_a1e2e96d19c373742cc3e667720958097}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!actual\+Size@{actual\+Size}}
+\index{actual\+Size@{actual\+Size}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{actual\+Size()}{actualSize()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+size\+\_\+t \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::actual\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the actual number of elements in the tensor taking striding into account. Since \hyperlink{classglow_1_1_handle_a7322ebb8b8d2d57f4ea9ec93f238b7a5}{size()} does not take striding into account, \hyperlink{classglow_1_1_handle_a7322ebb8b8d2d57f4ea9ec93f238b7a5}{size()} is always $<$= \hyperlink{classglow_1_1_handle_a1e2e96d19c373742cc3e667720958097}{actual\+Size()}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_a4170feefa1d97ce95bbdf7c880811c2b}\label{classglow_1_1_handle_a4170feefa1d97ce95bbdf7c880811c2b}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!at@{at}}
+\index{at@{at}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+Elem\+Ty\& \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::at (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns reference to a meaningful data element. This method does not address padding elements. \mbox{\Hypertarget{classglow_1_1_handle_a1870bb8d89827d3db93c0bf6500bda1f}\label{classglow_1_1_handle_a1870bb8d89827d3db93c0bf6500bda1f}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!begin@{begin}}
+\index{begin@{begin}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+\hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator}$<$Elem\+Ty, false$>$ \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an iterator to the first element of the tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_a542bc11508e42c8e2d2b1d2b07a40e8d}\label{classglow_1_1_handle_a542bc11508e42c8e2d2b1d2b07a40e8d}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!calculate\+Mean\+Variance@{calculate\+Mean\+Variance}}
+\index{calculate\+Mean\+Variance@{calculate\+Mean\+Variance}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{calculate\+Mean\+Variance()}{calculateMeanVariance()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+std\+::pair$<$double, double$>$ \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::calculate\+Mean\+Variance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the mean and variance of the tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_a9fb451dd6a54e840ff39a403a655097b}\label{classglow_1_1_handle_a9fb451dd6a54e840ff39a403a655097b}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!end@{end}}
+\index{end@{end}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+\hyperlink{classglow_1_1_handle_iterator}{Handle\+Iterator}$<$Elem\+Ty, false$>$ \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an iterator referring to the past-\/the-\/end element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_a602cde4751f83f7a3b11a3b099ade080}\label{classglow_1_1_handle_a602cde4751f83f7a3b11a3b099ade080}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!extract\+Slice@{extract\+Slice}}
+\index{extract\+Slice@{extract\+Slice}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{extract\+Slice()}{extractSlice()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+\hyperlink{classglow_1_1_tensor}{Tensor} \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::extract\+Slice (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Extract a smaller dimension tensor from a specific slice (that has to be the first dimension). \mbox{\Hypertarget{classglow_1_1_handle_ae4ce4936e95b70768a705074098e0f30}\label{classglow_1_1_handle_ae4ce4936e95b70768a705074098e0f30}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!extract\+Tensors@{extract\+Tensors}}
+\index{extract\+Tensors@{extract\+Tensors}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{extract\+Tensors()}{extractTensors()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+void \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::extract\+Tensors (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_handle}{Handle}$<$ Elem\+Ty $>$ \&}]{slice,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Extract the tensor {\ttfamily slice} at location {\ttfamily offset}. This operation is equivalent to the operation of scanning the destination tensor, and copying into the cell at coordinate \{d\+\_\+0, d\+\_\+1, ... d\+\_\+n\} a value from the tensor at \{d\+\_\+0 + O\+\_\+0, d\+\_\+1 + O\+\_\+1, ... d\+\_\+n + O\+\_\+n\}, where O is the offset vector. The tensors must be of the right dimensions. \mbox{\Hypertarget{classglow_1_1_handle_ad3f6b264d70213e15a0f1fc8560b5a04}\label{classglow_1_1_handle_ad3f6b264d70213e15a0f1fc8560b5a04}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!get\+Dim\+For\+Ptr@{get\+Dim\+For\+Ptr}}
+\index{get\+Dim\+For\+Ptr@{get\+Dim\+For\+Ptr}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{get\+Dim\+For\+Ptr()}{getDimForPtr()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+size\+\_\+t \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::get\+Dim\+For\+Ptr (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{dim,  }\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the value of the n\textquotesingle{}th dimension {\ttfamily dim}, for the index {\ttfamily idx}. 0 $<$= idx $<$ \hyperlink{classglow_1_1_handle_a7322ebb8b8d2d57f4ea9ec93f238b7a5}{size()}, meaning that {\ttfamily idx} addresses a real data elements, not paddings. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_aa2c31f9861ab398e8e244dde4bf7a122}\label{classglow_1_1_handle_aa2c31f9861ab398e8e244dde4bf7a122}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!get\+Element\+Ptr@{get\+Element\+Ptr}}
+\index{get\+Element\+Ptr@{get\+Element\+Ptr}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{get\+Element\+Ptr()}{getElementPtr()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+size\+\_\+t \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::get\+Element\+Ptr (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{indices }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculate the index for a specific element in the tensor. Notice that the list of indices may be incomplete. This method provides access to padding elements, meaning that it\textquotesingle{}s possible to get an index pointing at data, added to meet alignment requirements. \mbox{\Hypertarget{classglow_1_1_handle_a2d71a692770a4dcb8654485d74965294}\label{classglow_1_1_handle_a2d71a692770a4dcb8654485d74965294}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!get\+Element\+Type@{get\+Element\+Type}}
+\index{get\+Element\+Type@{get\+Element\+Type}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{get\+Element\+Type()}{getElementType()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::get\+Element\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the element type of the tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_ae8cf4cea87ecab8304875b1b609a6591}\label{classglow_1_1_handle_ae8cf4cea87ecab8304875b1b609a6591}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!get\+Fused\+Scale\+Offset\+From\+Row@{get\+Fused\+Scale\+Offset\+From\+Row}}
+\index{get\+Fused\+Scale\+Offset\+From\+Row@{get\+Fused\+Scale\+Offset\+From\+Row}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{get\+Fused\+Scale\+Offset\+From\+Row()}{getFusedScaleOffsetFromRow()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+template$<$typename T $>$ \\
+std\+::pair$<$T, T$>$ \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::get\+Fused\+Scale\+Offset\+From\+Row (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{row\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a pair of the scale and offset from a row {\ttfamily row\+Idx} of a Fused\+Rowwise\+Quantized \hyperlink{classglow_1_1_tensor}{Tensor}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_a012e00131edb5c3112c630c0e957c4cf}\label{classglow_1_1_handle_a012e00131edb5c3112c630c0e957c4cf}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+const \hyperlink{structglow_1_1_type}{Type}\& \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the type of the tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_aebb37b02423e68e306cd4e0067e8689e}\label{classglow_1_1_handle_aebb37b02423e68e306cd4e0067e8689e}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!init\+Xavier@{init\+Xavier}}
+\index{init\+Xavier@{init\+Xavier}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{init\+Xavier()}{initXavier()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+void \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::init\+Xavier (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{filter\+Size,  }\item[{\hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \&}]{P\+R\+NG }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fill the array with random data that\textquotesingle{}s close to zero using the Xavier method, based on the paper \mbox{[}Bengio and Glorot 2010\mbox{]}. This type of initialization facilitates better training performance. The parameter {\ttfamily filter\+Size} is the number of \char`\"{}input\char`\"{} neurons in the tensor (or the relevant slice). For example, consider case of Mat\+Mul\+: NxM ({\ttfamily input}) $\ast$ MxK ({\ttfamily weights}) == NxK ({\ttfamily result}) Correct {\ttfamily filter\+Size} for weights tensor is M, so that norm for each row of {\ttfamily input} equals to norm of corresponding row of {\ttfamily result}. \mbox{\Hypertarget{classglow_1_1_handle_a4f14f140791e25024d601c91ca2f8ced}\label{classglow_1_1_handle_a4f14f140791e25024d601c91ca2f8ced}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!insert\+Slice@{insert\+Slice}}
+\index{insert\+Slice@{insert\+Slice}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{insert\+Slice()}{insertSlice()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+void \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::insert\+Slice (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_tensor}{Tensor} \&}]{slice,  }\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert a smaller dimension tensor into a larger tensor at a specific first-\/dimension index. \mbox{\Hypertarget{classglow_1_1_handle_a8e46eccc2e9bd998d798f19f368cf400}\label{classglow_1_1_handle_a8e46eccc2e9bd998d798f19f368cf400}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!insert\+Tensors@{insert\+Tensors}}
+\index{insert\+Tensors@{insert\+Tensors}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{insert\+Tensors()}{insertTensors()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+void \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::insert\+Tensors (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_handle}{Handle}$<$ Elem\+Ty $>$ \&}]{slice,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{offset,  }\item[{size\+\_\+t}]{count = {\ttfamily 1},  }\item[{size\+\_\+t}]{axis = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert the tensor {\ttfamily slice} at location {\ttfamily offset} {\ttfamily count} times along the {\ttfamily axis}. This operation is equivalent to the operation of scanning the source tensor, and saving the value that is stored at coordinate \{d\+\_\+0, d\+\_\+1, ... d\+\_\+n\} in the new tensor at \{d\+\_\+0 + O\+\_\+0, d\+\_\+1 + O\+\_\+1, ... d\+\_\+n + O\+\_\+n\}, where O is the offset vector, assuming {\ttfamily count} = 1. For {\ttfamily count} $>$ 1, the same \hyperlink{classglow_1_1_tensor}{Tensor} is copied {\ttfamily count} times along the provided {\ttfamily axis}. The tensors must be of the right dimensions. \mbox{\Hypertarget{classglow_1_1_handle_ae201c577bfa7423f14722f365bbb8ddd}\label{classglow_1_1_handle_ae201c577bfa7423f14722f365bbb8ddd}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{is\+Valid()}{isValid()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+bool \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if this \hyperlink{classglow_1_1_handle}{Handle} points to a valid tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_add064d7f0e9c193dd326e237a3a2f767}\label{classglow_1_1_handle_add064d7f0e9c193dd326e237a3a2f767}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!is\+Zero@{is\+Zero}}
+\index{is\+Zero@{is\+Zero}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{is\+Zero()}{isZero()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+bool \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::is\+Zero (\begin{DoxyParamCaption}\item[{float}]{allowed\+Error = {\ttfamily 0.0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if tensor contains only elements equal to zero. {\ttfamily allowed\+Error} represents the delta from zero that is allowed before returning false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_ac4004af33a68096e15f642e5e91d954d}\label{classglow_1_1_handle_ac4004af33a68096e15f642e5e91d954d}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!min\+Max\+Arg@{min\+Max\+Arg}}
+\index{min\+Max\+Arg@{min\+Max\+Arg}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{min\+Max\+Arg()}{minMaxArg()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+std\+::pair$<$size\+\_\+t, size\+\_\+t$>$ \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::min\+Max\+Arg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the raw indices of a min and max values from the tensor. In case of multiple min or max, the smallest index is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_aba569359ae39c17970cbfba5bbb6fa79}\label{classglow_1_1_handle_aba569359ae39c17970cbfba5bbb6fa79}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!randomize@{randomize}}
+\index{randomize@{randomize}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{randomize()}{randomize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+template$<$typename T  = Elem\+Ty$>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+floating\+\_\+point$<$T$>$\+::value$>$\+::type \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::randomize (\begin{DoxyParamCaption}\item[{float}]{low,  }\item[{float}]{high,  }\item[{\hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \&}]{P\+R\+NG }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fill the tensor with uniformly distributed values in the range \mbox{[}low .. high). \mbox{\Hypertarget{classglow_1_1_handle_a7b66d372800e15c009ee8d4aae8d32c2}\label{classglow_1_1_handle_a7b66d372800e15c009ee8d4aae8d32c2}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!randomize@{randomize}}
+\index{randomize@{randomize}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{randomize()}{randomize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+template$<$typename T  = Elem\+Ty$>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+integral$<$T$>$\+::value$>$\+::type \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::randomize (\begin{DoxyParamCaption}\item[{int}]{low,  }\item[{int}]{high,  }\item[{\hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \&}]{P\+R\+NG }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fill the tensor with uniformly distributed values in the range \mbox{[}low .. high\mbox{]}. For quantized fused tensors leave scales/offsets unchanged. \mbox{\Hypertarget{classglow_1_1_handle_afc9f5d40382d7db26e117c2e7b3636a3}\label{classglow_1_1_handle_afc9f5d40382d7db26e117c2e7b3636a3}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!randomize@{randomize}}
+\index{randomize@{randomize}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{randomize()}{randomize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+template$<$typename T  = Elem\+Ty$>$ \\
+std\+::enable\+\_\+if$<$!std\+::is\+\_\+floating\+\_\+point$<$T$>$\+::value \&\& !std\+::is\+\_\+integral$<$T$>$\+::value$>$\+::type \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::randomize (\begin{DoxyParamCaption}\item[{float}]{low,  }\item[{float}]{high,  }\item[{\hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \&}]{P\+R\+NG }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fill the tensor with uniformly distributed values in the range \mbox{[}low .. high). \mbox{\Hypertarget{classglow_1_1_handle_aea03569f22a6d701b671403b5d4c2d43}\label{classglow_1_1_handle_aea03569f22a6d701b671403b5d4c2d43}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!raw@{raw}}
+\index{raw@{raw}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{raw()}{raw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+Elem\+Ty\& \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::raw (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the element at offset {\ttfamily idx} without any size calculations. The returned element can be a pad element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_ae9004553e87770e18aa2396d88bfeeff}\label{classglow_1_1_handle_ae9004553e87770e18aa2396d88bfeeff}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!raw@{raw}}
+\index{raw@{raw}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{raw()}{raw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+const Elem\+Ty\& \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::raw (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the element at offset {\ttfamily idx} without any size calculations. The returned element can be a pad element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_handle_a885d9052ce52d0125e99e47b45bc5fcc}\label{classglow_1_1_handle_a885d9052ce52d0125e99e47b45bc5fcc}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!set\+Fused\+Scale\+Offset\+In\+Row@{set\+Fused\+Scale\+Offset\+In\+Row}}
+\index{set\+Fused\+Scale\+Offset\+In\+Row@{set\+Fused\+Scale\+Offset\+In\+Row}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{set\+Fused\+Scale\+Offset\+In\+Row()}{setFusedScaleOffsetInRow()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+template$<$typename T $>$ \\
+void \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::set\+Fused\+Scale\+Offset\+In\+Row (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{row\+Idx,  }\item[{T}]{scale,  }\item[{T}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the {\ttfamily scale} and {\ttfamily offset} to a row {\ttfamily row\+Idx} of a Fused\+Rowwise\+Quantized \hyperlink{classglow_1_1_tensor}{Tensor}. \mbox{\Hypertarget{classglow_1_1_handle_a7322ebb8b8d2d57f4ea9ec93f238b7a5}\label{classglow_1_1_handle_a7322ebb8b8d2d57f4ea9ec93f238b7a5}} 
+\index{glow\+::\+Handle@{glow\+::\+Handle}!size@{size}}
+\index{size@{size}!glow\+::\+Handle@{glow\+::\+Handle}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty$>$ \\
+size\+\_\+t \hyperlink{classglow_1_1_handle}{glow\+::\+Handle}$<$ Elem\+Ty $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of elements in the whole tensor. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Base/Tensor.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,112 @@
+\hypertarget{classglow_1_1_type_a_to_type_b_function_converter}{}\section{glow\+:\+:Type\+A\+To\+Type\+B\+Function\+Converter Class Reference}
+\label{classglow_1_1_type_a_to_type_b_function_converter}\index{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter@{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}}
+
+
+{\ttfamily \#include $<$Type\+A\+To\+Type\+B\+Function\+Converter.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Type\+A\+To\+Type\+B\+Function\+Converter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_type_a_to_type_b_function_converter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_type_a_to_type_b_function_converter_a6d7a78b265dde722fddb1372deb6d9bd}{Type\+A\+To\+Type\+B\+Function\+Converter} (\hyperlink{classglow_1_1_function}{Function} \&F, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} from\+Kind, \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} to\+Kind, const \hyperlink{structglow_1_1_precision_configuration}{Precision\+Configuration} \&prec\+Config)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_a98b9d067d1afe5811ed48d38e5029d63}{get\+Target\+Type\+For\+Output} (const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&out) const override
+\item 
+\hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_a19c5372966cc435b4043c0b9f7f014b8}{get\+Target\+Type\+For\+Input} (const \hyperlink{classglow_1_1_node}{Node} \&use, unsigned idx) const override
+\item 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_a875e9ce5a9b356ca34d8f8f52c9b7bf1}{create\+Conversion} (\hyperlink{classglow_1_1_function}{Function} \&function, const \hyperlink{classglow_1_1_node}{Node} \&node, \hyperlink{structglow_1_1_node_value}{Node\+Value} \&val, \hyperlink{structglow_1_1_type}{Type\+Ref} dest\+Ty) override
+\item 
+\mbox{\Hypertarget{classglow_1_1_type_a_to_type_b_function_converter_acb83d144def5ae09b64f354430c2f643}\label{classglow_1_1_type_a_to_type_b_function_converter_acb83d144def5ae09b64f354430c2f643}} 
+bool \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_acb83d144def5ae09b64f354430c2f643}{can\+Convert} (const \hyperlink{classglow_1_1_node}{Node} \&node) const override
+\begin{DoxyCompactList}\small\item\em Check if {\ttfamily node} can be converted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_type_a_to_type_b_function_converter_ae2760cfe5e8635d1455e4eb91e1be9bc}\label{classglow_1_1_type_a_to_type_b_function_converter_ae2760cfe5e8635d1455e4eb91e1be9bc}} 
+void \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_ae2760cfe5e8635d1455e4eb91e1be9bc}{convert\+Tensor} (\hyperlink{classglow_1_1_tensor}{Tensor} \&tensor, \hyperlink{structglow_1_1_type}{Type\+Ref} dest\+Ty) override
+\begin{DoxyCompactList}\small\item\em Convert the {\ttfamily input} tensor to the {\ttfamily dest\+Ty} destination type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_type_a_to_type_b_function_converter_af9add479a1efeded2312a89022fbf646}\label{classglow_1_1_type_a_to_type_b_function_converter_af9add479a1efeded2312a89022fbf646}} 
+\hyperlink{classglow_1_1_module}{Module} \& \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_af9add479a1efeded2312a89022fbf646}{mod\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classglow_1_1_module}{Module} of the function to be converted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_type_a_to_type_b_function_converter_a9266924eca2508219f507ddc52992c1b}\label{classglow_1_1_type_a_to_type_b_function_converter_a9266924eca2508219f507ddc52992c1b}} 
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_a9266924eca2508219f507ddc52992c1b}{dst\+Kind\+\_\+}
+\begin{DoxyCompactList}\small\item\em Destination type of the conversions. \end{DoxyCompactList}\item 
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_a984bdf4b025f79a0bee38afb767cd8bd}{src\+Kind\+\_\+}
+\item 
+\mbox{\Hypertarget{classglow_1_1_type_a_to_type_b_function_converter_abe2a27823fd414025534b3879ff3b35d}\label{classglow_1_1_type_a_to_type_b_function_converter_abe2a27823fd414025534b3879ff3b35d}} 
+const \hyperlink{structglow_1_1_precision_configuration}{Precision\+Configuration} \& \hyperlink{classglow_1_1_type_a_to_type_b_function_converter_abe2a27823fd414025534b3879ff3b35d}{prec\+Config\+\_\+}
+\begin{DoxyCompactList}\small\item\em Precision configuration used during conversion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This helper class converts values of typeA into values of typeB. The nodes producing these values are morphed into the new type and proper conversions from/to typeA and typeB are inserted. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_type_a_to_type_b_function_converter_a6d7a78b265dde722fddb1372deb6d9bd}\label{classglow_1_1_type_a_to_type_b_function_converter_a6d7a78b265dde722fddb1372deb6d9bd}} 
+\index{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter@{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}!Type\+A\+To\+Type\+B\+Function\+Converter@{Type\+A\+To\+Type\+B\+Function\+Converter}}
+\index{Type\+A\+To\+Type\+B\+Function\+Converter@{Type\+A\+To\+Type\+B\+Function\+Converter}!glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter@{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}}
+\subsubsection{\texorpdfstring{Type\+A\+To\+Type\+B\+Function\+Converter()}{TypeAToTypeBFunctionConverter()}}
+{\footnotesize\ttfamily Type\+A\+To\+Type\+B\+Function\+Converter\+::\+Type\+A\+To\+Type\+B\+Function\+Converter (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{F,  }\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{from\+Kind,  }\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{to\+Kind,  }\item[{const \hyperlink{structglow_1_1_precision_configuration}{Precision\+Configuration} \&}]{prec\+Config }\end{DoxyParamCaption})}
+
+Create a type converter from {\ttfamily from\+Kind} to {\ttfamily to\+Kind} for {\ttfamily F} given {\ttfamily prec\+Config}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_type_a_to_type_b_function_converter_a875e9ce5a9b356ca34d8f8f52c9b7bf1}\label{classglow_1_1_type_a_to_type_b_function_converter_a875e9ce5a9b356ca34d8f8f52c9b7bf1}} 
+\index{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter@{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}!create\+Conversion@{create\+Conversion}}
+\index{create\+Conversion@{create\+Conversion}!glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter@{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}}
+\subsubsection{\texorpdfstring{create\+Conversion()}{createConversion()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_node}{Node} $\ast$ Type\+A\+To\+Type\+B\+Function\+Converter\+::create\+Conversion (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} \&}]{function,  }\item[{const \hyperlink{classglow_1_1_node}{Node} \&}]{node,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value} \&}]{val,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{dest\+Ty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Create a node in {\ttfamily function} that converts {\ttfamily val} to {\ttfamily dest\+Ty}, given context {\ttfamily node}. {\ttfamily val} and {\ttfamily dest\+Ty} must have the same shape. 
+
+Implements \hyperlink{classglow_1_1_function_converter_a03251a5ce1b3485e0fa5dd70faaa0a35}{glow\+::\+Function\+Converter}.
+
+\mbox{\Hypertarget{classglow_1_1_type_a_to_type_b_function_converter_a19c5372966cc435b4043c0b9f7f014b8}\label{classglow_1_1_type_a_to_type_b_function_converter_a19c5372966cc435b4043c0b9f7f014b8}} 
+\index{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter@{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}!get\+Target\+Type\+For\+Input@{get\+Target\+Type\+For\+Input}}
+\index{get\+Target\+Type\+For\+Input@{get\+Target\+Type\+For\+Input}!glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter@{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}}
+\subsubsection{\texorpdfstring{get\+Target\+Type\+For\+Input()}{getTargetTypeForInput()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_type}{Type\+Ref} Type\+A\+To\+Type\+B\+Function\+Converter\+::get\+Target\+Type\+For\+Input (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node}{Node} \&}]{use,  }\item[{unsigned}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+If the element type of the {\ttfamily idx-\/th} input of {\ttfamily use} is src\+Kind\+\_\+ returns a similarly shaped type using dst\+Kind\+\_\+. Otherwise returns nullptr. \begin{DoxySeeAlso}{See also}
+\hyperlink{classglow_1_1_function_converter_a2039ff94d1abe52dc89d3f7d3350c772}{Function\+Converter\+::get\+Target\+Type\+For\+Input} to know how this is used. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classglow_1_1_function_converter_a2039ff94d1abe52dc89d3f7d3350c772}{glow\+::\+Function\+Converter}.
+
+\mbox{\Hypertarget{classglow_1_1_type_a_to_type_b_function_converter_a98b9d067d1afe5811ed48d38e5029d63}\label{classglow_1_1_type_a_to_type_b_function_converter_a98b9d067d1afe5811ed48d38e5029d63}} 
+\index{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter@{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}!get\+Target\+Type\+For\+Output@{get\+Target\+Type\+For\+Output}}
+\index{get\+Target\+Type\+For\+Output@{get\+Target\+Type\+For\+Output}!glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter@{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}}
+\subsubsection{\texorpdfstring{get\+Target\+Type\+For\+Output()}{getTargetTypeForOutput()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_type}{Type\+Ref} Type\+A\+To\+Type\+B\+Function\+Converter\+::get\+Target\+Type\+For\+Output (\begin{DoxyParamCaption}\item[{const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+If the element type of {\ttfamily out} is src\+Kind\+\_\+ returns a similarly shaped type using dst\+Kind\+\_\+. Otherwise returns nullptr. \begin{DoxySeeAlso}{See also}
+\hyperlink{classglow_1_1_function_converter_a015dfed23796395ce34c7ca4766c7854}{Function\+Converter\+::get\+Target\+Type\+For\+Output} to know how this is used. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classglow_1_1_function_converter_a015dfed23796395ce34c7ca4766c7854}{glow\+::\+Function\+Converter}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classglow_1_1_type_a_to_type_b_function_converter_a984bdf4b025f79a0bee38afb767cd8bd}\label{classglow_1_1_type_a_to_type_b_function_converter_a984bdf4b025f79a0bee38afb767cd8bd}} 
+\index{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter@{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}!src\+Kind\+\_\+@{src\+Kind\+\_\+}}
+\index{src\+Kind\+\_\+@{src\+Kind\+\_\+}!glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter@{glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter}}
+\subsubsection{\texorpdfstring{src\+Kind\+\_\+}{srcKind\_}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} glow\+::\+Type\+A\+To\+Type\+B\+Function\+Converter\+::src\+Kind\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Source type of the conversions. I.\+e., the values of this element type are going to be converted. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Converter/Type\+A\+To\+Type\+B\+Function\+Converter.\+h\item 
+lib/\+Converter/Type\+A\+To\+Type\+B\+Function\+Converter.\+cpp\end{DoxyCompactItemize}

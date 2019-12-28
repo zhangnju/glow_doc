@@ -1,0 +1,108 @@
+\hypertarget{classglow_1_1_clip_node}{}\section{glow\+:\+:Clip\+Node Class Reference}
+\label{classglow_1_1_clip_node}\index{glow\+::\+Clip\+Node@{glow\+::\+Clip\+Node}}
+
+
+Clip range of inputs to lie in \mbox{[}Min, Max\mbox{]}.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Clip\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_clip_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_aa8b22b18697550b31541ca5304e93a2b}\label{classglow_1_1_clip_node_aa8b22b18697550b31541ca5304e93a2b}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_af71e4c8ec55f02d76da3188b85a59e2a}\label{classglow_1_1_clip_node_af71e4c8ec55f02d76da3188b85a59e2a}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a9a9b362d19a7cdf5beed47b3cb93066b}\label{classglow_1_1_clip_node_a9a9b362d19a7cdf5beed47b3cb93066b}} 
+{\bfseries Clip\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, float Min, float Max)
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a225b780f5ced11468ae855d0b4afa5ec}\label{classglow_1_1_clip_node_a225b780f5ced11468ae855d0b4afa5ec}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_ad55cc62b8adbaafb55e11611aae08515}\label{classglow_1_1_clip_node_ad55cc62b8adbaafb55e11611aae08515}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_ab24ba4a54bb00809afaba4791b155640}\label{classglow_1_1_clip_node_ab24ba4a54bb00809afaba4791b155640}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a597d75486e239fbcc62a60b4735ec5e4}\label{classglow_1_1_clip_node_a597d75486e239fbcc62a60b4735ec5e4}} 
+float {\bfseries get\+Min} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_af8161dcb3beec88053f805b8b6806a1f}\label{classglow_1_1_clip_node_af8161dcb3beec88053f805b8b6806a1f}} 
+float {\bfseries get\+Max} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_af86a7c8f5df6214564dd16167cbc44e2}\label{classglow_1_1_clip_node_af86a7c8f5df6214564dd16167cbc44e2}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a9eebb0903ec13e9c92b5f3634c60fe32}\label{classglow_1_1_clip_node_a9eebb0903ec13e9c92b5f3634c60fe32}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a38ff2503d678eff0ccad36c1b62848b7}\label{classglow_1_1_clip_node_a38ff2503d678eff0ccad36c1b62848b7}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_ab9b8bfa6b2a52c650551a9cd198f64e8}\label{classglow_1_1_clip_node_ab9b8bfa6b2a52c650551a9cd198f64e8}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a2931c95ac57c9904c59b578e42b82063}\label{classglow_1_1_clip_node_a2931c95ac57c9904c59b578e42b82063}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_aaa52d1211c2c19439218aad2ecaafd17}\label{classglow_1_1_clip_node_aaa52d1211c2c19439218aad2ecaafd17}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a45a6754e40f75fe6b13b05af4a37a54b}\label{classglow_1_1_clip_node_a45a6754e40f75fe6b13b05af4a37a54b}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a5bda5e8e7c62f4dfc52e7e1e393e492d}\label{classglow_1_1_clip_node_a5bda5e8e7c62f4dfc52e7e1e393e492d}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_ac0ae1e608ab69522ee4c7ee8d031e156}\label{classglow_1_1_clip_node_ac0ae1e608ab69522ee4c7ee8d031e156}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a007ab1da444134df0599b95e838de81b}\label{classglow_1_1_clip_node_a007ab1da444134df0599b95e838de81b}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_clip_node}{Clip\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a09ca5588c2570c49910348bff4c4cefd}\label{classglow_1_1_clip_node_a09ca5588c2570c49910348bff4c4cefd}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a603e46f51f84b7549714193ca84c6fcd}\label{classglow_1_1_clip_node_a603e46f51f84b7549714193ca84c6fcd}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_ab08531ebef2c46fabff9c29523381db4}\label{classglow_1_1_clip_node_ab08531ebef2c46fabff9c29523381db4}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_a30b105da1ea3da3935ab69200f1a9f54}\label{classglow_1_1_clip_node_a30b105da1ea3da3935ab69200f1a9f54}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_clip_node_aee9a7cb02ab0d44c7bf89635b13813dd}\label{classglow_1_1_clip_node_aee9a7cb02ab0d44c7bf89635b13813dd}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Clip range of inputs to lie in \mbox{[}Min, Max\mbox{]}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

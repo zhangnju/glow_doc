@@ -1,0 +1,123 @@
+\hypertarget{classglow_1_1_mean_var_normalization_node}{}\section{glow\+:\+:Mean\+Var\+Normalization\+Node Class Reference}
+\label{classglow_1_1_mean_var_normalization_node}\index{glow\+::\+Mean\+Var\+Normalization\+Node@{glow\+::\+Mean\+Var\+Normalization\+Node}}
+
+
+Calculates new normalized mean and variance based on the input mean, variance, and input.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Mean\+Var\+Normalization\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.990521cm]{classglow_1_1_mean_var_normalization_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a58e8cd59c3294523471bfc5ff1d1bf7b}\label{classglow_1_1_mean_var_normalization_node_a58e8cd59c3294523471bfc5ff1d1bf7b}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0, 
+{\bfseries Mean\+Idx} = 1, 
+{\bfseries Var\+Idx} = 2
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_ab481e55986b3177e26101c650ca069fe}\label{classglow_1_1_mean_var_normalization_node_ab481e55986b3177e26101c650ca069fe}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries New\+Mean\+Idx} = 0, 
+{\bfseries New\+Var\+Idx} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_abc9ea5d794c3c15f7578877505dcaa7a}\label{classglow_1_1_mean_var_normalization_node_abc9ea5d794c3c15f7578877505dcaa7a}} 
+{\bfseries Mean\+Var\+Normalization\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{structglow_1_1_node_value}{Node\+Value} Mean, \hyperlink{structglow_1_1_node_value}{Node\+Value} Var, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Channel\+Idx, float Momentum)
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a19fda89bea81507c6277e9182d68d5f2}\label{classglow_1_1_mean_var_normalization_node_a19fda89bea81507c6277e9182d68d5f2}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a7787f48eeab86faf2874fc62538d29b7}\label{classglow_1_1_mean_var_normalization_node_a7787f48eeab86faf2874fc62538d29b7}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Mean} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_aae92d741065a45a817ac4c2b03d47b4d}\label{classglow_1_1_mean_var_normalization_node_aae92d741065a45a817ac4c2b03d47b4d}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Var} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_ac68edbb90a3031c597feaa6a8bf11a59}\label{classglow_1_1_mean_var_normalization_node_ac68edbb90a3031c597feaa6a8bf11a59}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+New\+Mean} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a9c1a04c1ea59fbb9e8475b257be7c1a4}\label{classglow_1_1_mean_var_normalization_node_a9c1a04c1ea59fbb9e8475b257be7c1a4}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+New\+Mean} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a9771d6132faa1e919e27c8eaadfd2354}\label{classglow_1_1_mean_var_normalization_node_a9771d6132faa1e919e27c8eaadfd2354}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+New\+Var} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a3286187244ce190ba097a2105d1429ce}\label{classglow_1_1_mean_var_normalization_node_a3286187244ce190ba097a2105d1429ce}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+New\+Var} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a96fda510c0b2276823efc2effa4adcd6}\label{classglow_1_1_mean_var_normalization_node_a96fda510c0b2276823efc2effa4adcd6}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Channel\+Idx} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a681565e90075395e1c5a3216b43a5eca}\label{classglow_1_1_mean_var_normalization_node_a681565e90075395e1c5a3216b43a5eca}} 
+float {\bfseries get\+Momentum} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a169019a4bac426fd0d9df1b181ae04fe}\label{classglow_1_1_mean_var_normalization_node_a169019a4bac426fd0d9df1b181ae04fe}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a7ccc59e93793d23407e21d9f1e8123c8}\label{classglow_1_1_mean_var_normalization_node_a7ccc59e93793d23407e21d9f1e8123c8}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a2fc4e46369e66bc9f4f1dd543a885919}\label{classglow_1_1_mean_var_normalization_node_a2fc4e46369e66bc9f4f1dd543a885919}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a552aacfca0826919caa056b9789f4544}\label{classglow_1_1_mean_var_normalization_node_a552aacfca0826919caa056b9789f4544}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_abdfef55101b7e2cbdc6040306289b7ce}\label{classglow_1_1_mean_var_normalization_node_abdfef55101b7e2cbdc6040306289b7ce}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a73c69f9c6c52ba3e953475f5de0f4036}\label{classglow_1_1_mean_var_normalization_node_a73c69f9c6c52ba3e953475f5de0f4036}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_af53b86ce4ed41c9a272b77c091311b78}\label{classglow_1_1_mean_var_normalization_node_af53b86ce4ed41c9a272b77c091311b78}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a018ba275a982f677025e9f330f60f925}\label{classglow_1_1_mean_var_normalization_node_a018ba275a982f677025e9f330f60f925}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_aaa79caa915b6852f2fe3d12d22da86dc}\label{classglow_1_1_mean_var_normalization_node_aaa79caa915b6852f2fe3d12d22da86dc}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_aeae5749cffb2fb74a23df6f1cee0bb11}\label{classglow_1_1_mean_var_normalization_node_aeae5749cffb2fb74a23df6f1cee0bb11}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_mean_var_normalization_node}{Mean\+Var\+Normalization\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a5c685738fc708c2f3bdb25a4c5cca79e}\label{classglow_1_1_mean_var_normalization_node_a5c685738fc708c2f3bdb25a4c5cca79e}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a26a3b9a97c3a684188ad17bbf2c0c5a1}\label{classglow_1_1_mean_var_normalization_node_a26a3b9a97c3a684188ad17bbf2c0c5a1}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a1f71e9979ccce4dc453f532114f104c4}\label{classglow_1_1_mean_var_normalization_node_a1f71e9979ccce4dc453f532114f104c4}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_a3d73864bc4d275609c02d2d6136195cc}\label{classglow_1_1_mean_var_normalization_node_a3d73864bc4d275609c02d2d6136195cc}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_mean_var_normalization_node_af451cdd9f96973aa0cc883c80a913b51}\label{classglow_1_1_mean_var_normalization_node_af451cdd9f96973aa0cc883c80a913b51}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Calculates new normalized mean and variance based on the input mean, variance, and input. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

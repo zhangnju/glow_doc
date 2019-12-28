@@ -1,0 +1,108 @@
+\hypertarget{classglow_1_1_arg_max_node}{}\section{glow\+:\+:Arg\+Max\+Node Class Reference}
+\label{classglow_1_1_arg_max_node}\index{glow\+::\+Arg\+Max\+Node@{glow\+::\+Arg\+Max\+Node}}
+
+
+Finds index of a maximum element along Axis.\+If Keep\+Dims is not true, the axis is removed from output.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Arg\+Max\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_arg_max_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_ae45b3a014df6779e574f30b398dce292}\label{classglow_1_1_arg_max_node_ae45b3a014df6779e574f30b398dce292}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_aa3377c9258b26f5481c43103e265121f}\label{classglow_1_1_arg_max_node_aa3377c9258b26f5481c43103e265121f}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Argmax\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a6b97ea35485a44afc1bc12299d199bf0}\label{classglow_1_1_arg_max_node_a6b97ea35485a44afc1bc12299d199bf0}} 
+{\bfseries Arg\+Max\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Argmax, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Axis, bool Keep\+Dims)
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a29a4cc81a97f730903c7a898891f9118}\label{classglow_1_1_arg_max_node_a29a4cc81a97f730903c7a898891f9118}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a0886b9c18ecb6f1fcd8368b7be903334}\label{classglow_1_1_arg_max_node_a0886b9c18ecb6f1fcd8368b7be903334}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Argmax} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a3d2598dac1ea1ec24d2eb2c716f69ce7}\label{classglow_1_1_arg_max_node_a3d2598dac1ea1ec24d2eb2c716f69ce7}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Argmax} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_ad001eeff4b6fb29c2caeb9156e55a80f}\label{classglow_1_1_arg_max_node_ad001eeff4b6fb29c2caeb9156e55a80f}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Axis} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a8c195b271115961b9ab6dc8a87d38ec5}\label{classglow_1_1_arg_max_node_a8c195b271115961b9ab6dc8a87d38ec5}} 
+bool {\bfseries get\+Keep\+Dims} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_aef1cc960fc22360a24f9d1f9b243f48d}\label{classglow_1_1_arg_max_node_aef1cc960fc22360a24f9d1f9b243f48d}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a0e105e38c5dfc6889861cabc39709211}\label{classglow_1_1_arg_max_node_a0e105e38c5dfc6889861cabc39709211}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_ab0799ea7e9ca47343a22edf62978e39f}\label{classglow_1_1_arg_max_node_ab0799ea7e9ca47343a22edf62978e39f}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_aadd3c9409166e44e121b655343e3d06f}\label{classglow_1_1_arg_max_node_aadd3c9409166e44e121b655343e3d06f}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a45c008d27b91772cf3edcf691cdb624f}\label{classglow_1_1_arg_max_node_a45c008d27b91772cf3edcf691cdb624f}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a56cfccf529ff1a5fc207c0294ab1094e}\label{classglow_1_1_arg_max_node_a56cfccf529ff1a5fc207c0294ab1094e}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a24bbd7c9d0c4660b721c140509f78e06}\label{classglow_1_1_arg_max_node_a24bbd7c9d0c4660b721c140509f78e06}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a52c08368b6c60279fc9541dc17f62734}\label{classglow_1_1_arg_max_node_a52c08368b6c60279fc9541dc17f62734}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a7def5a18f4097dc60be38544798b37fd}\label{classglow_1_1_arg_max_node_a7def5a18f4097dc60be38544798b37fd}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a68292fd3a3aa569da16082e7feca9f7d}\label{classglow_1_1_arg_max_node_a68292fd3a3aa569da16082e7feca9f7d}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_arg_max_node}{Arg\+Max\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a58e1f90e300306d87e82b0e70a5049a9}\label{classglow_1_1_arg_max_node_a58e1f90e300306d87e82b0e70a5049a9}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a5fa67f8d010582e18907a90db4ba7a13}\label{classglow_1_1_arg_max_node_a5fa67f8d010582e18907a90db4ba7a13}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a91c6e1459c3f5a7a7369254511bbb46a}\label{classglow_1_1_arg_max_node_a91c6e1459c3f5a7a7369254511bbb46a}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a7c2cf5953cfffdacb29ef8424394a620}\label{classglow_1_1_arg_max_node_a7c2cf5953cfffdacb29ef8424394a620}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_arg_max_node_a6b6b46c59f552a2b8f8f311e9179d5e5}\label{classglow_1_1_arg_max_node_a6b6b46c59f552a2b8f8f311e9179d5e5}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Finds index of a maximum element along Axis.\+If Keep\+Dims is not true, the axis is removed from output. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

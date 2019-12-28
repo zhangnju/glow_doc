@@ -1,0 +1,69 @@
+\hypertarget{structglow_1_1_pre_order_visitor}{}\section{glow\+:\+:Pre\+Order\+Visitor Struct Reference}
+\label{structglow_1_1_pre_order_visitor}\index{glow\+::\+Pre\+Order\+Visitor@{glow\+::\+Pre\+Order\+Visitor}}
+
+
+A helper class for ordering the nodes in a pre-\/order order.  
+
+
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Pre\+Order\+Visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structglow_1_1_pre_order_visitor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structglow_1_1_pre_order_visitor_ac8c137afc60efc698bfcaca489b073db}{should\+Visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node}{Node} $\ast$N) override
+\item 
+\mbox{\Hypertarget{structglow_1_1_pre_order_visitor_a7815820d39e31f93c3ccec281dd1398d}\label{structglow_1_1_pre_order_visitor_a7815820d39e31f93c3ccec281dd1398d}} 
+bool {\bfseries should\+Visit} (const \hyperlink{classglow_1_1_node}{Node} $\ast$parent, const \hyperlink{classglow_1_1_node}{Node} $\ast$N) override
+\item 
+\mbox{\Hypertarget{structglow_1_1_pre_order_visitor_a389f7a32b51a4238287508443287aec9}\label{structglow_1_1_pre_order_visitor_a389f7a32b51a4238287508443287aec9}} 
+void \hyperlink{structglow_1_1_pre_order_visitor_a389f7a32b51a4238287508443287aec9}{pre} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node}{Node} $\ast$N) override
+\begin{DoxyCompactList}\small\item\em This callback is called before visiting the children of {\ttfamily N}. \end{DoxyCompactList}\item 
+llvm\+::\+Array\+Ref$<$ \hyperlink{classglow_1_1_node}{Node} $\ast$ $>$ \hyperlink{structglow_1_1_pre_order_visitor_a255e69ad29413aa03ee4c068316100ad}{get\+Pre\+Order} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_pre_order_visitor_a7384a0036559a39c48378e8e85f36be9}\label{structglow_1_1_pre_order_visitor_a7384a0036559a39c48378e8e85f36be9}} 
+std\+::vector$<$ \hyperlink{classglow_1_1_node}{Node} $\ast$ $>$ \hyperlink{structglow_1_1_pre_order_visitor_a7384a0036559a39c48378e8e85f36be9}{pre\+Order\+\_\+}
+\begin{DoxyCompactList}\small\item\em A pre-\/order list of nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_pre_order_visitor_a99cad2d52c3b864d6e736fc596f491f0}\label{structglow_1_1_pre_order_visitor_a99cad2d52c3b864d6e736fc596f491f0}} 
+std\+::unordered\+\_\+set$<$ const \hyperlink{classglow_1_1_node}{Node} $\ast$ $>$ \hyperlink{structglow_1_1_pre_order_visitor_a99cad2d52c3b864d6e736fc596f491f0}{visited\+\_\+}
+\begin{DoxyCompactList}\small\item\em A set of visited nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A helper class for ordering the nodes in a pre-\/order order. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_pre_order_visitor_a255e69ad29413aa03ee4c068316100ad}\label{structglow_1_1_pre_order_visitor_a255e69ad29413aa03ee4c068316100ad}} 
+\index{glow\+::\+Pre\+Order\+Visitor@{glow\+::\+Pre\+Order\+Visitor}!get\+Pre\+Order@{get\+Pre\+Order}}
+\index{get\+Pre\+Order@{get\+Pre\+Order}!glow\+::\+Pre\+Order\+Visitor@{glow\+::\+Pre\+Order\+Visitor}}
+\subsubsection{\texorpdfstring{get\+Pre\+Order()}{getPreOrder()}}
+{\footnotesize\ttfamily llvm\+::\+Array\+Ref$<$\hyperlink{classglow_1_1_node}{Node} $\ast$$>$ glow\+::\+Pre\+Order\+Visitor\+::get\+Pre\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the order. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_pre_order_visitor_ac8c137afc60efc698bfcaca489b073db}\label{structglow_1_1_pre_order_visitor_ac8c137afc60efc698bfcaca489b073db}} 
+\index{glow\+::\+Pre\+Order\+Visitor@{glow\+::\+Pre\+Order\+Visitor}!should\+Visit@{should\+Visit}}
+\index{should\+Visit@{should\+Visit}!glow\+::\+Pre\+Order\+Visitor@{glow\+::\+Pre\+Order\+Visitor}}
+\subsubsection{\texorpdfstring{should\+Visit()}{shouldVisit()}}
+{\footnotesize\ttfamily bool glow\+::\+Pre\+Order\+Visitor\+::should\+Visit (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{parent,  }\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{N }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This callback is called before processing the graph. If the method returns false then we skip this node. 
+
+Reimplemented from \hyperlink{classglow_1_1_node_walker_a33532d7a4fe24f71c1b763c53182b20b}{glow\+::\+Node\+Walker}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Utils.\+h\end{DoxyCompactItemize}

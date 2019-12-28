@@ -1,0 +1,42 @@
+\hypertarget{classglow_1_1_common_operator_writer}{}\section{glow\+:\+:Common\+Operator\+Writer$<$ Traits $>$ Class Template Reference}
+\label{classglow_1_1_common_operator_writer}\index{glow\+::\+Common\+Operator\+Writer$<$ Traits $>$@{glow\+::\+Common\+Operator\+Writer$<$ Traits $>$}}
+
+
+{\ttfamily \#include $<$Common\+Operator\+Writer.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Common\+Operator\+Writer$<$ Traits $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_common_operator_writer}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_writer_a5b62bfd291a1f6182a3882657686ccb9}{write\+Operator} (const \hyperlink{classglow_1_1_node}{Node} $\ast$node, typename Traits\+::\+Graph\+Proto \&graph)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Traits$>$\newline
+class glow\+::\+Common\+Operator\+Writer$<$ Traits $>$}
+
+Declares writer methods for all operators. Every writer method serializes Glow node into the provided protobuf. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_common_operator_writer_a5b62bfd291a1f6182a3882657686ccb9}\label{classglow_1_1_common_operator_writer_a5b62bfd291a1f6182a3882657686ccb9}} 
+\index{glow\+::\+Common\+Operator\+Writer@{glow\+::\+Common\+Operator\+Writer}!write\+Operator@{write\+Operator}}
+\index{write\+Operator@{write\+Operator}!glow\+::\+Common\+Operator\+Writer@{glow\+::\+Common\+Operator\+Writer}}
+\subsubsection{\texorpdfstring{write\+Operator()}{writeOperator()}}
+{\footnotesize\ttfamily template$<$typename Traits$>$ \\
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_common_operator_writer}{glow\+::\+Common\+Operator\+Writer}$<$ Traits $>$\+::write\+Operator (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node}{Node} $\ast$}]{node,  }\item[{typename Traits\+::\+Graph\+Proto \&}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\hyperlink{classglow_1_1_function}{Function} invokes the correspondent virtual method according to {\ttfamily node} type to serialize node information into {\ttfamily graph} (protobuf), reports visited intermediate nodes through {\ttfamily reporter}, \begin{DoxyReturn}{Returns}
+Error. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Exporter/Common\+Operator\+Writer.\+h\end{DoxyCompactItemize}

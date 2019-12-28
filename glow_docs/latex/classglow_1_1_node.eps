@@ -1,0 +1,628 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: ClassName
+%%Creator: Doxygen
+%%CreationDate: Time
+%%For: 
+%Magnification: 1.00
+%%Orientation: Portrait
+%%BoundingBox: 0 0 500 1370.757180
+%%Pages: 0
+%%BeginSetup
+%%EndSetup
+%%EndComments
+
+% ----- variables -----
+
+/boxwidth 0 def
+/boxheight 40 def
+/fontheight 24 def
+/marginwidth 10 def
+/distx 20 def
+/disty 40 def
+/boundaspect 0.364762 def  % aspect ratio of the BoundingBox (width/height)
+/boundx 500 def
+/boundy boundx boundaspect div def
+/xspacing 0 def
+/yspacing 0 def
+/rows 105 def
+/cols 4 def
+/scalefactor 0 def
+/boxfont /Times-Roman findfont fontheight scalefont def
+
+% ----- procedures -----
+
+/dotted { [1 4] 0 setdash } def
+/dashed { [5] 0 setdash } def
+/solid  { [] 0 setdash } def
+
+/max % result = MAX(arg1,arg2)
+{
+  /a exch def
+  /b exch def
+  a b gt {a} {b} ifelse
+} def
+
+/xoffset % result = MAX(0,(scalefactor-(boxwidth*cols+distx*(cols-1)))/2)
+{
+  0 scalefactor boxwidth cols mul distx cols 1 sub mul add sub 2 div max
+} def
+
+/cw % boxwidth = MAX(boxwidth, stringwidth(arg1))
+{
+  /str exch def
+  /boxwidth boxwidth str stringwidth pop max def
+} def
+
+/box % draws a box with text `arg1' at grid pos (arg2,arg3)
+{ gsave
+  2 setlinewidth
+  newpath
+  exch xspacing mul xoffset add
+  exch yspacing mul
+  moveto
+  boxwidth 0 rlineto 
+  0 boxheight rlineto 
+  boxwidth neg 0 rlineto 
+  0 boxheight neg rlineto 
+  closepath
+  dup stringwidth pop neg boxwidth add 2 div
+  boxheight fontheight 2 div sub 2 div
+  rmoveto show stroke
+  grestore
+} def  
+
+/mark
+{ newpath
+  exch xspacing mul xoffset add boxwidth add
+  exch yspacing mul
+  moveto
+  0 boxheight 4 div rlineto
+  boxheight neg 4 div boxheight neg 4 div rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/arrow
+{ newpath
+  moveto
+  3 -8 rlineto
+  -6 0 rlineto
+  3 8 rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/out % draws an output connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight add
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto 
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/in % draws an input connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul disty 2 div sub
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/hedge
+{
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight 2 div sub
+  /y exch def
+  /x exch def
+  newpath
+  x y moveto
+  boxwidth 2 div distx add 0 rlineto
+  stroke
+  1 eq
+  { newpath x boxwidth 2 div distx add add y moveto
+    -8 3 rlineto
+    0 -6 rlineto
+    8 3 rlineto
+    closepath
+    eofill
+    stroke
+  } if
+} def
+
+/vedge
+{
+  /ye exch def
+  /ys exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add dup
+  ys yspacing mul boxheight 2 div sub
+  moveto
+  ye yspacing mul boxheight 2 div sub
+  lineto
+  stroke
+} def
+
+/conn % connections the blocks from col `arg1' to `arg2' of row `arg3'
+{
+  /ys exch def
+  /xe exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add
+  ys yspacing mul disty 2 div sub
+  moveto
+  xspacing xe xs sub mul 0
+  rlineto
+  stroke
+} def
+
+% ----- main ------
+
+boxfont setfont
+1 boundaspect scale
+(glow::Node) cw
+(glow::Named) cw
+(glow::Kinded) cw
+(glow::UseDef< Node, NodeUse >) cw
+(llvm::ilist_node< Node >) cw
+(glow::AdaptiveAvgPoolGradNode) cw
+(glow::AdaptiveAvgPoolNode) cw
+(glow::AddGradNode) cw
+(glow::AddNode) cw
+(glow::ArgMaxNode) cw
+(glow::AvgPoolGradNode) cw
+(glow::AvgPoolNode) cw
+(glow::BatchBoxCoxNode) cw
+(glow::BatchedAddNode) cw
+(glow::BatchedReduceAddNode) cw
+(glow::BatchedReduceMeanNode) cw
+(glow::BatchedReduceMinNode) cw
+(glow::BatchMatMulNode) cw
+(glow::BatchNormalizationGradNode) cw
+(glow::BatchNormalizationNode) cw
+(glow::BatchOneHotNode) cw
+(glow::BucketizeNode) cw
+(glow::ChannelShuffleNode) cw
+(glow::ChannelwiseQuantizedConvolutionNode) cw
+(glow::ClipNode) cw
+(glow::CmpEQNode) cw
+(glow::CmpLTENode) cw
+(glow::CmpLTNode) cw
+(glow::ConcatNode) cw
+(glow::ConvertToNode) cw
+(glow::Convolution3DGradNode) cw
+(glow::Convolution3DNode) cw
+(glow::ConvolutionGradNode) cw
+(glow::ConvolutionNode) cw
+(glow::CPUConvDKKC8Node) cw
+(glow::CPUMaxSplatNode) cw
+(glow::CrossEntropyLossGradNode) cw
+(glow::CrossEntropyLossNode) cw
+(glow::DequantizeNode) cw
+(glow::DivGradNode) cw
+(glow::DivNode) cw
+(glow::ExpNode) cw
+(glow::FullyConnectedGradNode) cw
+(glow::FullyConnectedNode) cw
+(glow::FusedRowwiseQuantizedSparseLengthsSumNode) cw
+(glow::FusedRowwiseQuantizedSparseLengthsWeightedSumNode) cw
+(glow::GatherNode) cw
+(glow::GatherRangesNode) cw
+(glow::InsertTensorNode) cw
+(glow::IntLookupTableNode) cw
+(glow::IsNaNNode) cw
+(glow::LengthsRangeFillNode) cw
+(glow::LengthsSumNode) cw
+(glow::LengthsToRangesNode) cw
+(glow::LocalResponseNormalizationGradNode) cw
+(glow::LocalResponseNormalizationNode) cw
+(glow::LogNode) cw
+(glow::MatMulNode) cw
+(glow::MaxNode) cw
+(glow::MaxPoolGradNode) cw
+(glow::MaxPoolNode) cw
+(glow::MeanVarNormalizationNode) cw
+(glow::MinNode) cw
+(glow::ModuloNode) cw
+(glow::MulGradNode) cw
+(glow::MulNode) cw
+(glow::PadNode) cw
+(glow::PowNode) cw
+(glow::PReluNode) cw
+(glow::QuantizationProfileNode) cw
+(glow::QuantizeNode) cw
+(glow::RegressionGradNode) cw
+(glow::RegressionNode) cw
+(glow::ReluGradNode) cw
+(glow::ReluNode) cw
+(glow::ReplaceNaNNode) cw
+(glow::RescaleQuantizedNode) cw
+(glow::ReshapeNode) cw
+(glow::ResizeNearestNode) cw
+(glow::RowwiseQuantizedFullyConnectedNode) cw
+(glow::RowwiseQuantizedSparseLengthsWeightedSumNode) cw
+(glow::SaveNode) cw
+(glow::ScatterDataNode) cw
+(glow::SelectNode) cw
+(glow::SGDNode) cw
+(glow::SigmoidCrossEntropyWithLogitsNode) cw
+(glow::SigmoidGradNode) cw
+(glow::SigmoidNode) cw
+(glow::SliceNode) cw
+(glow::SoftMaxGradNode) cw
+(glow::SoftMaxNode) cw
+(glow::SpaceToDepthNode) cw
+(glow::SparseLengthsSumNode) cw
+(glow::SparseLengthsWeightedSumGradNode) cw
+(glow::SparseLengthsWeightedSumNode) cw
+(glow::SparseLengthsWeightedSumOffsetsNode) cw
+(glow::SparseToDenseMaskNode) cw
+(glow::SparseToDenseNode) cw
+(glow::SplatNode) cw
+(glow::Storage) cw
+(glow::SubGradNode) cw
+(glow::SubNode) cw
+(glow::TanhGradNode) cw
+(glow::TanhNode) cw
+(glow::TileNode) cw
+(glow::TopKNode) cw
+(glow::TraceEventNode) cw
+(glow::TransposeNode) cw
+/boxwidth boxwidth marginwidth 2 mul add def
+/xspacing boxwidth distx add def
+/yspacing boxheight disty add def
+/scalefactor 
+  boxwidth cols mul distx cols 1 sub mul add
+  boxheight rows mul disty rows 1 sub mul add boundaspect mul 
+  max def
+boundx scalefactor div boundy scalefactor div scale
+
+% ----- classes -----
+
+ (glow::Node) 1.500000 103.000000 box
+ (glow::Named) 0.000000 104.000000 box
+ (glow::Kinded) 1.000000 104.000000 box
+ (glow::UseDef< Node, NodeUse >) 2.000000 104.000000 box
+ (llvm::ilist_node< Node >) 3.000000 104.000000 box
+ (glow::AdaptiveAvgPoolGradNode) 2.500000 102.000000 box
+ (glow::AdaptiveAvgPoolNode) 2.500000 101.000000 box
+ (glow::AddGradNode) 2.500000 100.000000 box
+ (glow::AddNode) 2.500000 99.000000 box
+ (glow::ArgMaxNode) 2.500000 98.000000 box
+ (glow::AvgPoolGradNode) 2.500000 97.000000 box
+ (glow::AvgPoolNode) 2.500000 96.000000 box
+ (glow::BatchBoxCoxNode) 2.500000 95.000000 box
+ (glow::BatchedAddNode) 2.500000 94.000000 box
+ (glow::BatchedReduceAddNode) 2.500000 93.000000 box
+ (glow::BatchedReduceMeanNode) 2.500000 92.000000 box
+ (glow::BatchedReduceMinNode) 2.500000 91.000000 box
+ (glow::BatchMatMulNode) 2.500000 90.000000 box
+ (glow::BatchNormalizationGradNode) 2.500000 89.000000 box
+ (glow::BatchNormalizationNode) 2.500000 88.000000 box
+ (glow::BatchOneHotNode) 2.500000 87.000000 box
+ (glow::BucketizeNode) 2.500000 86.000000 box
+ (glow::ChannelShuffleNode) 2.500000 85.000000 box
+ (glow::ChannelwiseQuantizedConvolutionNode) 2.500000 84.000000 box
+ (glow::ClipNode) 2.500000 83.000000 box
+ (glow::CmpEQNode) 2.500000 82.000000 box
+ (glow::CmpLTENode) 2.500000 81.000000 box
+ (glow::CmpLTNode) 2.500000 80.000000 box
+ (glow::ConcatNode) 2.500000 79.000000 box
+ (glow::ConvertToNode) 2.500000 78.000000 box
+ (glow::Convolution3DGradNode) 2.500000 77.000000 box
+ (glow::Convolution3DNode) 2.500000 76.000000 box
+ (glow::ConvolutionGradNode) 2.500000 75.000000 box
+ (glow::ConvolutionNode) 2.500000 74.000000 box
+ (glow::CPUConvDKKC8Node) 2.500000 73.000000 box
+ (glow::CPUMaxSplatNode) 2.500000 72.000000 box
+ (glow::CrossEntropyLossGradNode) 2.500000 71.000000 box
+ (glow::CrossEntropyLossNode) 2.500000 70.000000 box
+ (glow::DequantizeNode) 2.500000 69.000000 box
+ (glow::DivGradNode) 2.500000 68.000000 box
+ (glow::DivNode) 2.500000 67.000000 box
+ (glow::ExpNode) 2.500000 66.000000 box
+ (glow::FullyConnectedGradNode) 2.500000 65.000000 box
+ (glow::FullyConnectedNode) 2.500000 64.000000 box
+ (glow::FusedRowwiseQuantizedSparseLengthsSumNode) 2.500000 63.000000 box
+ (glow::FusedRowwiseQuantizedSparseLengthsWeightedSumNode) 2.500000 62.000000 box
+ (glow::GatherNode) 2.500000 61.000000 box
+ (glow::GatherRangesNode) 2.500000 60.000000 box
+ (glow::InsertTensorNode) 2.500000 59.000000 box
+ (glow::IntLookupTableNode) 2.500000 58.000000 box
+ (glow::IsNaNNode) 2.500000 57.000000 box
+ (glow::LengthsRangeFillNode) 2.500000 56.000000 box
+ (glow::LengthsSumNode) 2.500000 55.000000 box
+ (glow::LengthsToRangesNode) 2.500000 54.000000 box
+ (glow::LocalResponseNormalizationGradNode) 2.500000 53.000000 box
+ (glow::LocalResponseNormalizationNode) 2.500000 52.000000 box
+ (glow::LogNode) 2.500000 51.000000 box
+ (glow::MatMulNode) 2.500000 50.000000 box
+ (glow::MaxNode) 2.500000 49.000000 box
+ (glow::MaxPoolGradNode) 2.500000 48.000000 box
+ (glow::MaxPoolNode) 2.500000 47.000000 box
+ (glow::MeanVarNormalizationNode) 2.500000 46.000000 box
+ (glow::MinNode) 2.500000 45.000000 box
+ (glow::ModuloNode) 2.500000 44.000000 box
+ (glow::MulGradNode) 2.500000 43.000000 box
+ (glow::MulNode) 2.500000 42.000000 box
+ (glow::PadNode) 2.500000 41.000000 box
+ (glow::PowNode) 2.500000 40.000000 box
+ (glow::PReluNode) 2.500000 39.000000 box
+ (glow::QuantizationProfileNode) 2.500000 38.000000 box
+ (glow::QuantizeNode) 2.500000 37.000000 box
+ (glow::RegressionGradNode) 2.500000 36.000000 box
+ (glow::RegressionNode) 2.500000 35.000000 box
+ (glow::ReluGradNode) 2.500000 34.000000 box
+ (glow::ReluNode) 2.500000 33.000000 box
+ (glow::ReplaceNaNNode) 2.500000 32.000000 box
+ (glow::RescaleQuantizedNode) 2.500000 31.000000 box
+ (glow::ReshapeNode) 2.500000 30.000000 box
+ (glow::ResizeNearestNode) 2.500000 29.000000 box
+ (glow::RowwiseQuantizedFullyConnectedNode) 2.500000 28.000000 box
+ (glow::RowwiseQuantizedSparseLengthsWeightedSumNode) 2.500000 27.000000 box
+ (glow::SaveNode) 2.500000 26.000000 box
+ (glow::ScatterDataNode) 2.500000 25.000000 box
+ (glow::SelectNode) 2.500000 24.000000 box
+ (glow::SGDNode) 2.500000 23.000000 box
+ (glow::SigmoidCrossEntropyWithLogitsNode) 2.500000 22.000000 box
+ (glow::SigmoidGradNode) 2.500000 21.000000 box
+ (glow::SigmoidNode) 2.500000 20.000000 box
+ (glow::SliceNode) 2.500000 19.000000 box
+ (glow::SoftMaxGradNode) 2.500000 18.000000 box
+ (glow::SoftMaxNode) 2.500000 17.000000 box
+ (glow::SpaceToDepthNode) 2.500000 16.000000 box
+ (glow::SparseLengthsSumNode) 2.500000 15.000000 box
+ (glow::SparseLengthsWeightedSumGradNode) 2.500000 14.000000 box
+ (glow::SparseLengthsWeightedSumNode) 2.500000 13.000000 box
+ (glow::SparseLengthsWeightedSumOffsetsNode) 2.500000 12.000000 box
+ (glow::SparseToDenseMaskNode) 2.500000 11.000000 box
+ (glow::SparseToDenseNode) 2.500000 10.000000 box
+ (glow::SplatNode) 2.500000 9.000000 box
+ (glow::Storage) 2.500000 8.000000 box
+2.500000 8.000000 mark
+ (glow::SubGradNode) 2.500000 7.000000 box
+ (glow::SubNode) 2.500000 6.000000 box
+ (glow::TanhGradNode) 2.500000 5.000000 box
+ (glow::TanhNode) 2.500000 4.000000 box
+ (glow::TileNode) 2.500000 3.000000 box
+ (glow::TopKNode) 2.500000 2.000000 box
+ (glow::TraceEventNode) 2.500000 1.000000 box
+ (glow::TransposeNode) 2.500000 0.000000 box
+
+% ----- relations -----
+
+solid
+0 1.500000 103.000000 out
+solid
+0.000000 3.000000 104.000000 conn
+solid
+1 0.000000 104.000000 in
+solid
+1 1.000000 104.000000 in
+solid
+1 2.000000 104.000000 in
+solid
+1 3.000000 104.000000 in
+solid
+1 1.500000 102.250000 out
+solid
+0 1.500000 102.500000 hedge
+solid
+0 1.500000 101.500000 hedge
+solid
+0 1.500000 100.500000 hedge
+solid
+0 1.500000 99.500000 hedge
+solid
+0 1.500000 98.500000 hedge
+solid
+0 1.500000 97.500000 hedge
+solid
+0 1.500000 96.500000 hedge
+solid
+0 1.500000 95.500000 hedge
+solid
+0 1.500000 94.500000 hedge
+solid
+0 1.500000 93.500000 hedge
+solid
+0 1.500000 92.500000 hedge
+solid
+0 1.500000 91.500000 hedge
+solid
+0 1.500000 90.500000 hedge
+solid
+0 1.500000 89.500000 hedge
+solid
+0 1.500000 88.500000 hedge
+solid
+0 1.500000 87.500000 hedge
+solid
+0 1.500000 86.500000 hedge
+solid
+0 1.500000 85.500000 hedge
+solid
+0 1.500000 84.500000 hedge
+solid
+0 1.500000 83.500000 hedge
+solid
+0 1.500000 82.500000 hedge
+solid
+0 1.500000 81.500000 hedge
+solid
+0 1.500000 80.500000 hedge
+solid
+0 1.500000 79.500000 hedge
+solid
+0 1.500000 78.500000 hedge
+solid
+0 1.500000 77.500000 hedge
+solid
+0 1.500000 76.500000 hedge
+solid
+0 1.500000 75.500000 hedge
+solid
+0 1.500000 74.500000 hedge
+solid
+0 1.500000 73.500000 hedge
+solid
+0 1.500000 72.500000 hedge
+solid
+0 1.500000 71.500000 hedge
+solid
+0 1.500000 70.500000 hedge
+solid
+0 1.500000 69.500000 hedge
+solid
+0 1.500000 68.500000 hedge
+solid
+0 1.500000 67.500000 hedge
+solid
+0 1.500000 66.500000 hedge
+solid
+0 1.500000 65.500000 hedge
+solid
+0 1.500000 64.500000 hedge
+solid
+0 1.500000 63.500000 hedge
+solid
+0 1.500000 62.500000 hedge
+solid
+0 1.500000 61.500000 hedge
+solid
+0 1.500000 60.500000 hedge
+solid
+0 1.500000 59.500000 hedge
+solid
+0 1.500000 58.500000 hedge
+solid
+0 1.500000 57.500000 hedge
+solid
+0 1.500000 56.500000 hedge
+solid
+0 1.500000 55.500000 hedge
+solid
+0 1.500000 54.500000 hedge
+solid
+0 1.500000 53.500000 hedge
+solid
+0 1.500000 52.500000 hedge
+solid
+0 1.500000 51.500000 hedge
+solid
+0 1.500000 50.500000 hedge
+solid
+0 1.500000 49.500000 hedge
+solid
+0 1.500000 48.500000 hedge
+solid
+0 1.500000 47.500000 hedge
+solid
+0 1.500000 46.500000 hedge
+solid
+0 1.500000 45.500000 hedge
+solid
+0 1.500000 44.500000 hedge
+solid
+0 1.500000 43.500000 hedge
+solid
+0 1.500000 42.500000 hedge
+solid
+0 1.500000 41.500000 hedge
+solid
+0 1.500000 40.500000 hedge
+solid
+0 1.500000 39.500000 hedge
+solid
+0 1.500000 38.500000 hedge
+solid
+0 1.500000 37.500000 hedge
+solid
+0 1.500000 36.500000 hedge
+solid
+0 1.500000 35.500000 hedge
+solid
+0 1.500000 34.500000 hedge
+solid
+0 1.500000 33.500000 hedge
+solid
+0 1.500000 32.500000 hedge
+solid
+0 1.500000 31.500000 hedge
+solid
+0 1.500000 30.500000 hedge
+solid
+0 1.500000 29.500000 hedge
+solid
+0 1.500000 28.500000 hedge
+solid
+0 1.500000 27.500000 hedge
+solid
+0 1.500000 26.500000 hedge
+solid
+0 1.500000 25.500000 hedge
+solid
+0 1.500000 24.500000 hedge
+solid
+0 1.500000 23.500000 hedge
+solid
+0 1.500000 22.500000 hedge
+solid
+0 1.500000 21.500000 hedge
+solid
+0 1.500000 20.500000 hedge
+solid
+0 1.500000 19.500000 hedge
+solid
+0 1.500000 18.500000 hedge
+solid
+0 1.500000 17.500000 hedge
+solid
+0 1.500000 16.500000 hedge
+solid
+0 1.500000 15.500000 hedge
+solid
+0 1.500000 14.500000 hedge
+solid
+0 1.500000 13.500000 hedge
+solid
+0 1.500000 12.500000 hedge
+solid
+0 1.500000 11.500000 hedge
+solid
+0 1.500000 10.500000 hedge
+solid
+0 1.500000 9.500000 hedge
+solid
+0 1.500000 8.500000 hedge
+solid
+0 1.500000 7.500000 hedge
+solid
+0 1.500000 6.500000 hedge
+solid
+0 1.500000 5.500000 hedge
+solid
+0 1.500000 4.500000 hedge
+solid
+0 1.500000 3.500000 hedge
+solid
+0 1.500000 2.500000 hedge
+solid
+0 1.500000 1.500000 hedge
+solid
+0 1.500000 0.500000 hedge
+solid
+1.500000 103.000000 0.500000 vedge

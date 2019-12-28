@@ -1,0 +1,69 @@
+This document describes the optimization pipeline and how to configure it for varying precision configurations. Note that the terms \char`\"{}\+Graph\char`\"{} and \char`\"{}\+Function\char`\"{} are often used interchangably.
+
+\subsubsection*{Graph (Function) Optimization Stages and Order}
+
+{\ttfamily \hyperlink{namespaceglow_af6b48e8310d02c29962b5469885b3a75}{glow\+::optimize\+Function()}} is used to drive the optimization pipeline of a Function. Inside {\ttfamily optimize\+Function()}, a Function is optimized by the following optimization stages in order\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily fold()}
+\item {\ttfamily optimize()}
+\item {\ttfamily lower()}
+\item {\ttfamily transform\+For\+Precision\+Mode()}
+\item {\ttfamily optimize()}
+\item {\ttfamily Backend\+::transform\+Post\+Lowering()}
+\item {\ttfamily optimize()}
+\item {\ttfamily check\+All\+Nodes\+Supported()}
+\end{DoxyItemize}
+
+Note that optimize is called many times, usually after every other stage. This is because the other stages may add or change the graph in some ways that allow for previously inapplicable optimizations to now occur, or new nodes may be able to take advantage of the optimizations.
+
+\subsubsection*{Descriptions of Optimization Stages}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \hyperlink{namespaceglow_a1af90308823b5fb36b860a8a73aaa923}{glow\+::fold()}}\+: Fold low-\/level Nodes into higher-\/level Nodes. This is useful when compiling an input model where some high-\/level operators have been lowered (this can be for instance a side effect of model converters, like converters from Tensorflow to O\+N\+NX). In this situation, such folding can then enable more optimizations and also improve the performance of backends that support natively such high-\/level operators. Folding is done first, as we want to raise the graph to a higher level in order to take advantage of high-\/level optimizations and allow for backends to prevent lowering on them as well if desired.
+\item {\ttfamily \hyperlink{namespaceglow_a0069e8261c2e2ddf94d4697de80150ad}{glow\+::lower()}}\+: Lowers high-\/level Nodes into lower-\/level Nodes. This allows backends to be agnostic to higher-\/level representations of Nodes. For example, a backend may support an L\+S\+TM if it supports all of the sub-\/nodes found inside an L\+S\+TM. However, it does not need to be responsible for understanding that it supports an L\+S\+TM. This future-\/proofs the backend, allowing it to support future high-\/level complex nodes without understanding their higher-\/level semantics. Note that \href{Backends.md#backend-abstract-class}{\tt Backends can prevent lowering} if preferred via {\ttfamily Backend\+::should\+Lower()}.
+\item {\ttfamily transform\+For\+Precision\+Mode()}\+: Transforms the graph depending on requested precision configuration. There are a few different options here\+:
+\begin{DoxyItemize}
+\item {\ttfamily Profile}\+: Add special profiling nodes to the graph to gather a histogram of values flowing through each Node in the graph. This can then be used to automatically quantize the graph.
+\item {\ttfamily Quantize}\+: Quantize the graph, given a previously gathered profile as mentioned above. This converts all Float inputs and outputs of each Node if the backend supports the node as quantized.
+\item {\ttfamily Convert\+To\+F\+P16}\+: Convert all Float inputs and outputs of Nodes to Float16. Note that this does not require any sort of profile. It can also be performed alongside Quantization to get a mixed precision graph.
+\end{DoxyItemize}
+\item {\ttfamily Backend\+::transform\+Post\+Lowering()}\+: Allow the Backend to transform the graph. This includes swapping in its own backend-\/specific nodes. More info can be found \href{Backends.md#backend-abstract-class}{\tt here} and \href{NewBackendSpecificNode.md#steps}{\tt here}.
+\item {\ttfamily \hyperlink{namespaceglow_a902cda054ebe738e9395e218ae09f291}{glow\+::optimize()}}\+: Performs a series of graph optimizations, as listed \href{Optimizations.md#set-of-supported-graph-optimizations}{\tt here}. Many of these are common compiler optimizations, such as D\+CE and C\+SE. Others are more ML and linear algebra related, such as fusing Batch\+Normalization into Convolutions in inference mode, or combining a series of Transpose operations into a single Transpose.
+\item {\ttfamily check\+All\+Nodes\+Supported()}\+: Given some Backend that we are optimizing the Graph for, this verifies that the backend supports each of the nodes after the entire optimization pipeline is complete, via \href{Backends.md#backend-abstract-class}{\tt Backend\+::is\+Op\+Supported()}. If any node is not supported it will return an error, which {\ttfamily optimize\+Function()} will then return up the stack.
+\end{DoxyItemize}
+
+\subsection*{How to call {\ttfamily \hyperlink{namespaceglow_af6b48e8310d02c29962b5469885b3a75}{glow\+::optimize\+Function()}}}
+
+Here we describe the A\+PI for {\ttfamily \hyperlink{namespaceglow_af6b48e8310d02c29962b5469885b3a75}{glow\+::optimize\+Function()}} and how to use it in different modes.
+
+
+\begin{DoxyCode}
+Error glow::optimizeFunction(Function *F, const Backend &B,
+                                   CompilationContext &cctx);
+\end{DoxyCode}
+
+
+An error is returned if something goes wrong during the optimization pipeline, for example if a Node is no longer supported by the backend after optimizations, or if the Compilation\+Context is not set up correctly.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily F}\+: The Function (graph) to optimize. It will be transformed; if the caller would like to keep an original copy of the Function it is responsible for cloning it before calling {\ttfamily optimize\+Function()}.
+\item {\ttfamily B}\+: The Backend for which we are optimizing {\ttfamily F}. It is able to control what is lowered ({\ttfamily Backend\+::should\+Lower()}), to specify what should be quantized ({\ttfamily Backend\+::is\+Op\+Supported()}); and to transform the graph however it wishes ({\ttfamily Backend\+::transform\+Post\+Lowering()}).
+\item {\ttfamily cctx}\+: The Compilation\+Context, containing important data structures to keep some state before/after compilation is complete, as well as configuration information for what kinds of transformations to perform.
+\begin{DoxyItemize}
+\item {\ttfamily Placeholder\+Bindings $\ast$bindings}\+: Mapping between Placeholders and Tensors for this compilation run. For example, this is used when instrumenting a Function for quantizaiton profiling, to create Placeholders and their Tensors for inserted {\ttfamily Quantization\+Profile\+Nodes}.
+\item {\ttfamily Lowered\+Info\+Map $\ast$lowered\+Info\+Map}\+: Mapping from each Node output name in a Function (corresponding to unique Node\+Values in a Function), to a set of {\ttfamily Node\+Name\+And\+Kind} (which is a pair of Node output name and Kind). This is used to keep track of what Nodes are lowered into what other Nodes, for use during Profiling and Quantization.
+\item {\ttfamily enum class Compilation\+Mode comp\+Mode}\+: This is set to either {\ttfamily Train} or {\ttfamily Infer}, depending on what the Function is being used for. Some optimizations may only be performed during one of these modes.
+\item {\ttfamily struct Backend\+Options backend\+Opts}\+: Different options for compilation after graph optimizations have been completed. \href{Backends.md#backendoptions-helper-struct}{\tt See here} for more info.
+\item {\ttfamily struct Precision\+Configuration precision\+Config}\+: Configuration for different precision modes, used during {\ttfamily transform\+For\+Precision\+Mode()}. Contains the following\+:
+\begin{DoxyItemize}
+\item {\ttfamily enum class Quantization\+Mode quant\+Mode}\+: One of {\ttfamily None}, {\ttfamily Quantize}, or {\ttfamily Profile}, as previously mentioned above.
+\item {\ttfamily quantization\+::\+Quantization\+Configuration quant\+Config}\+: Configuration for quantization, including the quantizaion precision {\ttfamily Elem\+Kind} (e.\+g. {\ttfamily Int8\+Q\+Ty}, {\ttfamily Int16\+Q\+Ty}, etc.), \href{Quantization.md#how-to-perform-nn-conversion}{\tt schema} (e.\+g. Asymmetric, Symmetric, etc.), whether to use rowwise quantization, etc.
+\item {\ttfamily bool convert\+To\+F\+P16}\+: Whether to convert all found {\ttfamily Float\+Ty} to {\ttfamily Float16\+Ty} in the Function. This is performed after Quantization, and so can be used together to get a mixed precision model.
+\item {\ttfamily Kind\+Set precision\+Mode\+Kind\+Set}\+: A set of node kinds. This has different uses depending on the precision mode. If in profiling mode, this represents node kinds that should not be lowered (\href{Quantization.md#how-to-perform-nn-conversion}{\tt mentioned here}). If performing quantization or F\+P16 conversion this represents node kinds that should not be converted, and should instead be left in Float\+Ty. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}

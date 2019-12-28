@@ -1,0 +1,334 @@
+\hypertarget{structglow_1_1_type}{}\section{glow\+:\+:Type Struct Reference}
+\label{structglow_1_1_type}\index{glow\+::\+Type@{glow\+::\+Type}}
+
+
+A class that represents a type of a tensor.  
+
+
+
+
+{\ttfamily \#include $<$Type.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_type_ae78da9643c3ea3f7db82fd3ebc9a0cc7}\label{structglow_1_1_type_ae78da9643c3ea3f7db82fd3ebc9a0cc7}} 
+\hyperlink{structglow_1_1_type_ae78da9643c3ea3f7db82fd3ebc9a0cc7}{Type} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{structglow_1_1_type_abf3890a5fdcd39b5c221a513a15c5461}{dims}, float scale, int32\+\_\+t offset)
+\begin{DoxyCompactList}\small\item\em Initialize a new quantized type with {\ttfamily scale} and {\ttfamily offset}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_type_a128506ce7e4533852994e9d5d766da5b}\label{structglow_1_1_type_a128506ce7e4533852994e9d5d766da5b}} 
+\hyperlink{structglow_1_1_type_a128506ce7e4533852994e9d5d766da5b}{Type} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{structglow_1_1_type_abf3890a5fdcd39b5c221a513a15c5461}{dims})
+\begin{DoxyCompactList}\small\item\em Initialize a new non-\/quantized type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_type_add9ac345f2aa3eb54f2d001ca55f29da}\label{structglow_1_1_type_add9ac345f2aa3eb54f2d001ca55f29da}} 
+\hyperlink{structglow_1_1_type_add9ac345f2aa3eb54f2d001ca55f29da}{Type} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{structglow_1_1_type_abf3890a5fdcd39b5c221a513a15c5461}{dims}, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ alignments, float scale, int32\+\_\+t offset)
+\begin{DoxyCompactList}\small\item\em Initialize a new quantized type with {\ttfamily scale} and {\ttfamily offset}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_type_a1aaad001ce5f372c122223f0e471ef32}\label{structglow_1_1_type_a1aaad001ce5f372c122223f0e471ef32}} 
+\hyperlink{structglow_1_1_type_a1aaad001ce5f372c122223f0e471ef32}{Type} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{structglow_1_1_type_abf3890a5fdcd39b5c221a513a15c5461}{dims}, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ alignments)
+\begin{DoxyCompactList}\small\item\em Initialize a new non-\/quantized type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_type_ade111bf5938519e18d21a289a5bcd2e2}\label{structglow_1_1_type_ade111bf5938519e18d21a289a5bcd2e2}} 
+\hyperlink{structglow_1_1_type_ade111bf5938519e18d21a289a5bcd2e2}{Type} ()=default
+\begin{DoxyCompactList}\small\item\em An empty type. \end{DoxyCompactList}\item 
+bool \hyperlink{structglow_1_1_type_af3e7be136c7e3fbe626d4e997c35081c}{is\+Equal} (\hyperlink{structglow_1_1_type}{Type\+Ref} other) const
+\item 
+float \hyperlink{structglow_1_1_type_a1567f59601da95164a15e2071db498c4}{get\+Scale} () const
+\item 
+int32\+\_\+t \hyperlink{structglow_1_1_type_ab26fc83476024a82b3573735179da19c}{get\+Offset} () const
+\item 
+std\+::pair$<$ float, float $>$ \hyperlink{structglow_1_1_type_ad654242804d0f47b169b9548a1d2cb48}{get\+Quantized\+Value\+Range} () const
+\item 
+bool \hyperlink{structglow_1_1_type_a1a9738606ca71d158222ca781657b941}{is\+Equal} (const \hyperlink{structglow_1_1_type}{Type} \&other, bool allow\+Different\+Shape=false) const
+\item 
+llvm\+::hash\+\_\+code \hyperlink{structglow_1_1_type_a85ce8b925c137209398a5891b583285b}{equals\+\_\+hash} () const
+\item 
+\mbox{\Hypertarget{structglow_1_1_type_ac387bef1735f8f0db555d321997386a3}\label{structglow_1_1_type_ac387bef1735f8f0db555d321997386a3}} 
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} {\bfseries get\+Element\+Type} () const
+\item 
+llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{structglow_1_1_type_abf3890a5fdcd39b5c221a513a15c5461}{dims} () const
+\item 
+llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{structglow_1_1_type_ab3f576c25f30f6fbe676408f4794c809}{strides} () const
+\item 
+size\+\_\+t \hyperlink{structglow_1_1_type_a8850574b9dff16a354465946ecabb861}{size} () const
+\item 
+size\+\_\+t \hyperlink{structglow_1_1_type_a612cc055d21d2e7402b0859f5dce35b2}{get\+Slice\+Size} (unsigned char start\+Dim) const
+\item 
+{\footnotesize template$<$class Elem\+Ty $>$ }\\bool \hyperlink{structglow_1_1_type_a07c025fdb2c0140b7906f3689fe7c175}{is\+Type} () const
+\item 
+bool \hyperlink{structglow_1_1_type_a2b57c85b1cbe5d83c7a13c3a60c242e8}{is\+Quantized\+Type} () const
+\item 
+bool \hyperlink{structglow_1_1_type_a3e5b4d7754eb3d94b85eac664235ad67}{is\+F\+P\+Type} () const
+\item 
+unsigned \hyperlink{structglow_1_1_type_a3bfc737652264de3d997632d0b01ac63}{get\+Element\+Size} () const
+\item 
+size\+\_\+t \hyperlink{structglow_1_1_type_a136383839b7414ad54835c1b3574b858}{get\+Size\+In\+Bytes} () const
+\item 
+size\+\_\+t \hyperlink{structglow_1_1_type_a7c624c2c77ac264040f362aeac219eae}{actual\+Size} () const
+\item 
+llvm\+::\+String\+Ref \hyperlink{structglow_1_1_type_a5eea8e5642ad38fa096c764b8740767f}{get\+Element\+Name} () const
+\item 
+\mbox{\Hypertarget{structglow_1_1_type_a0441e0e83e3cfa44a5f4f850a0d67ad8}\label{structglow_1_1_type_a0441e0e83e3cfa44a5f4f850a0d67ad8}} 
+void \hyperlink{structglow_1_1_type_a0441e0e83e3cfa44a5f4f850a0d67ad8}{dump} (llvm\+::raw\+\_\+ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{structglow_1_1_type}{Type} into provided output stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_type_a818731a6939730c60f885d686f495a22}\label{structglow_1_1_type_a818731a6939730c60f885d686f495a22}} 
+void \hyperlink{structglow_1_1_type_a818731a6939730c60f885d686f495a22}{dump} () const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{structglow_1_1_type}{Type} into default output stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_type_a1f160537a9daa986cae0d2c575b3c5ce}\label{structglow_1_1_type_a1f160537a9daa986cae0d2c575b3c5ce}} 
+std\+::string \hyperlink{structglow_1_1_type_a1f160537a9daa986cae0d2c575b3c5ce}{to\+String} () const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{structglow_1_1_type}{Type} to std\+::string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_type_a088a806fc60957fa585a4b183fe5d635}\label{structglow_1_1_type_a088a806fc60957fa585a4b183fe5d635}} 
+static \hyperlink{structglow_1_1_type}{Type} \hyperlink{structglow_1_1_type_a088a806fc60957fa585a4b183fe5d635}{new\+Shape} (const \hyperlink{structglow_1_1_type}{Type} \&T, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{structglow_1_1_type_abf3890a5fdcd39b5c221a513a15c5461}{dims})
+\begin{DoxyCompactList}\small\item\em Reshape existing type. This method takes care of quantized types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_type_a90947724fc317e427e461baff9e422b3}\label{structglow_1_1_type_a90947724fc317e427e461baff9e422b3}} 
+static \hyperlink{structglow_1_1_type}{Type} \hyperlink{structglow_1_1_type_a90947724fc317e427e461baff9e422b3}{new\+Shape} (const \hyperlink{structglow_1_1_type}{Type} \&T, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{structglow_1_1_type_abf3890a5fdcd39b5c221a513a15c5461}{dims}, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ alignments)
+\begin{DoxyCompactList}\small\item\em Reshape existing type and change alignments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Elem\+Ty $>$ }\\static bool \hyperlink{structglow_1_1_type_ac2cf6671bd0fec4a8a2cd2c7686c9f75}{is\+Type} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} Ty)
+\item 
+static unsigned \hyperlink{structglow_1_1_type_acaccb7d7d0d86e9599ba6a8720fcc101}{get\+Element\+Size} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} Ty)
+\item 
+static llvm\+::\+String\+Ref \hyperlink{structglow_1_1_type_a365405b8b6b16574cb2c30545508ff3e}{get\+Element\+Name} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} Ty)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{structglow_1_1_type_a7725158c5337a8e6787a090c9a403cc1}{sizes\+\_\+} \mbox{[}max\+\_\+tensor\+\_\+dimensions\mbox{]}
+\begin{DoxyCompactList}\small\item\em Contains the dimensions (sizes) of the tensor. Ex\+: \mbox{[}sx, sy, sz, ...\mbox{]}. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{structglow_1_1_type_ab1f4da2b41f26f88cc94db137d1a1cac}{strides\+\_\+} \mbox{[}max\+\_\+tensor\+\_\+dimensions\mbox{]}
+\item 
+\mbox{\Hypertarget{structglow_1_1_type_aab431e748a0e590b796428656af802de}\label{structglow_1_1_type_aab431e748a0e590b796428656af802de}} 
+unsigned char \hyperlink{structglow_1_1_type_aab431e748a0e590b796428656af802de}{num\+Sizes\+\_\+} \{0\}
+\begin{DoxyCompactList}\small\item\em Contains the number of dimensions used by the tensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_type_a9e25dca90eb66089c5c063918801c251}\label{structglow_1_1_type_a9e25dca90eb66089c5c063918801c251}} 
+float \hyperlink{structglow_1_1_type_a9e25dca90eb66089c5c063918801c251}{scale\+\_\+} \{0\}
+\begin{DoxyCompactList}\small\item\em On quantized tensors, this represents the scale of the values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_type_a646c53012cad9f3be1692d7e2623a9b6}\label{structglow_1_1_type_a646c53012cad9f3be1692d7e2623a9b6}} 
+int32\+\_\+t \hyperlink{structglow_1_1_type_a646c53012cad9f3be1692d7e2623a9b6}{offset\+\_\+} \{0\}
+\begin{DoxyCompactList}\small\item\em On quantized tensors, this represents the offset of the values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_type_ac3c2bbcd9232163c6336888cdf19d01e}\label{structglow_1_1_type_ac3c2bbcd9232163c6336888cdf19d01e}} 
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{structglow_1_1_type_ac3c2bbcd9232163c6336888cdf19d01e}{element\+Type\+\_\+} \{Elem\+Kind\+::\+Int64\+I\+Ty\}
+\begin{DoxyCompactList}\small\item\em Specifies the element type of the tensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that represents a type of a tensor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_type_a7c624c2c77ac264040f362aeac219eae}\label{structglow_1_1_type_a7c624c2c77ac264040f362aeac219eae}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!actual\+Size@{actual\+Size}}
+\index{actual\+Size@{actual\+Size}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{actual\+Size()}{actualSize()}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+Type\+::actual\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the actual number of elements in the tensor taking striding into account. Since \hyperlink{structglow_1_1_type_a8850574b9dff16a354465946ecabb861}{size()} does not take striding into account, \hyperlink{structglow_1_1_type_a8850574b9dff16a354465946ecabb861}{size()} is always $<$= \hyperlink{structglow_1_1_type_a7c624c2c77ac264040f362aeac219eae}{actual\+Size()}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_abf3890a5fdcd39b5c221a513a15c5461}\label{structglow_1_1_type_abf3890a5fdcd39b5c221a513a15c5461}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!dims@{dims}}
+\index{dims@{dims}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{dims()}{dims()}}
+{\footnotesize\ttfamily llvm\+::\+Array\+Ref$<$size\+\_\+t$>$ glow\+::\+Type\+::dims (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the shape of the tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a85ce8b925c137209398a5891b583285b}\label{structglow_1_1_type_a85ce8b925c137209398a5891b583285b}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!equals\+\_\+hash@{equals\+\_\+hash}}
+\index{equals\+\_\+hash@{equals\+\_\+hash}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{equals\+\_\+hash()}{equals\_hash()}}
+{\footnotesize\ttfamily llvm\+::hash\+\_\+code glow\+::\+Type\+::equals\+\_\+hash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a hash value for this \hyperlink{structglow_1_1_type}{Type}. Hashes for Ty1 and Ty2 are equal if Ty1.\+is\+Equal(\+Ty2). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a5eea8e5642ad38fa096c764b8740767f}\label{structglow_1_1_type_a5eea8e5642ad38fa096c764b8740767f}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!get\+Element\+Name@{get\+Element\+Name}}
+\index{get\+Element\+Name@{get\+Element\+Name}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{get\+Element\+Name()}{getElementName()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily llvm\+::\+String\+Ref glow\+::\+Type\+::get\+Element\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the textual name of the element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a365405b8b6b16574cb2c30545508ff3e}\label{structglow_1_1_type_a365405b8b6b16574cb2c30545508ff3e}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!get\+Element\+Name@{get\+Element\+Name}}
+\index{get\+Element\+Name@{get\+Element\+Name}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{get\+Element\+Name()}{getElementName()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static llvm\+::\+String\+Ref glow\+::\+Type\+::get\+Element\+Name (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{Ty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+the textual name of the element {\ttfamily Ty}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a3bfc737652264de3d997632d0b01ac63}\label{structglow_1_1_type_a3bfc737652264de3d997632d0b01ac63}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!get\+Element\+Size@{get\+Element\+Size}}
+\index{get\+Element\+Size@{get\+Element\+Size}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{get\+Element\+Size()}{getElementSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned glow\+::\+Type\+::get\+Element\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the size of the type element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_acaccb7d7d0d86e9599ba6a8720fcc101}\label{structglow_1_1_type_acaccb7d7d0d86e9599ba6a8720fcc101}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!get\+Element\+Size@{get\+Element\+Size}}
+\index{get\+Element\+Size@{get\+Element\+Size}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{get\+Element\+Size()}{getElementSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static unsigned glow\+::\+Type\+::get\+Element\+Size (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{Ty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+the size of the element {\ttfamily Ty}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_ab26fc83476024a82b3573735179da19c}\label{structglow_1_1_type_ab26fc83476024a82b3573735179da19c}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!get\+Offset@{get\+Offset}}
+\index{get\+Offset@{get\+Offset}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{get\+Offset()}{getOffset()}}
+{\footnotesize\ttfamily int32\+\_\+t glow\+::\+Type\+::get\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the offset of a quantized type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_ad654242804d0f47b169b9548a1d2cb48}\label{structglow_1_1_type_ad654242804d0f47b169b9548a1d2cb48}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!get\+Quantized\+Value\+Range@{get\+Quantized\+Value\+Range}}
+\index{get\+Quantized\+Value\+Range@{get\+Quantized\+Value\+Range}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{get\+Quantized\+Value\+Range()}{getQuantizedValueRange()}}
+{\footnotesize\ttfamily std\+::pair$<$float, float$>$ glow\+::\+Type\+::get\+Quantized\+Value\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the floating point value range that covers a quantized type (min first, max second). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a1567f59601da95164a15e2071db498c4}\label{structglow_1_1_type_a1567f59601da95164a15e2071db498c4}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!get\+Scale@{get\+Scale}}
+\index{get\+Scale@{get\+Scale}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{get\+Scale()}{getScale()}}
+{\footnotesize\ttfamily float glow\+::\+Type\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the scale of a quantized type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a136383839b7414ad54835c1b3574b858}\label{structglow_1_1_type_a136383839b7414ad54835c1b3574b858}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!get\+Size\+In\+Bytes@{get\+Size\+In\+Bytes}}
+\index{get\+Size\+In\+Bytes@{get\+Size\+In\+Bytes}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{get\+Size\+In\+Bytes()}{getSizeInBytes()}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+Type\+::get\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the size in bytes for this \hyperlink{classglow_1_1_tensor}{Tensor}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a612cc055d21d2e7402b0859f5dce35b2}\label{structglow_1_1_type_a612cc055d21d2e7402b0859f5dce35b2}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!get\+Slice\+Size@{get\+Slice\+Size}}
+\index{get\+Slice\+Size@{get\+Slice\+Size}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{get\+Slice\+Size()}{getSliceSize()}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+Type\+::get\+Slice\+Size (\begin{DoxyParamCaption}\item[{unsigned char}]{start\+Dim }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of elements in a slice in the tensor. Calculate the size of the slice starting at {\ttfamily start\+Dim}. For example, the tensor with the shape \mbox{[}10, 10, 3\mbox{]} and start\+Dim 1 would have the size 30, because this is the size of the slice \mbox{[}10, 3\mbox{]} that starts at index 1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_af3e7be136c7e3fbe626d4e997c35081c}\label{structglow_1_1_type_af3e7be136c7e3fbe626d4e997c35081c}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!is\+Equal@{is\+Equal}}
+\index{is\+Equal@{is\+Equal}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{is\+Equal()}{isEqual()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool glow\+::\+Type\+::is\+Equal (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\ttfamily other} is the same type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a1a9738606ca71d158222ca781657b941}\label{structglow_1_1_type_a1a9738606ca71d158222ca781657b941}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!is\+Equal@{is\+Equal}}
+\index{is\+Equal@{is\+Equal}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{is\+Equal()}{isEqual()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool glow\+::\+Type\+::is\+Equal (\begin{DoxyParamCaption}\item[{const \hyperlink{structglow_1_1_type}{Type} \&}]{other,  }\item[{bool}]{allow\+Different\+Shape = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\ttfamily other} is the same type. If {\ttfamily allow\+Different\+Shape} then shapes will not be considered as part of the equal comparison. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a3e5b4d7754eb3d94b85eac664235ad67}\label{structglow_1_1_type_a3e5b4d7754eb3d94b85eac664235ad67}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!is\+F\+P\+Type@{is\+F\+P\+Type}}
+\index{is\+F\+P\+Type@{is\+F\+P\+Type}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{is\+F\+P\+Type()}{isFPType()}}
+{\footnotesize\ttfamily bool glow\+::\+Type\+::is\+F\+P\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the type of this \hyperlink{classglow_1_1_tensor}{Tensor} is one of the floating point types. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a2b57c85b1cbe5d83c7a13c3a60c242e8}\label{structglow_1_1_type_a2b57c85b1cbe5d83c7a13c3a60c242e8}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!is\+Quantized\+Type@{is\+Quantized\+Type}}
+\index{is\+Quantized\+Type@{is\+Quantized\+Type}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{is\+Quantized\+Type()}{isQuantizedType()}}
+{\footnotesize\ttfamily bool glow\+::\+Type\+::is\+Quantized\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the type of this \hyperlink{classglow_1_1_tensor}{Tensor} is one of the quantized types. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a07c025fdb2c0140b7906f3689fe7c175}\label{structglow_1_1_type_a07c025fdb2c0140b7906f3689fe7c175}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!is\+Type@{is\+Type}}
+\index{is\+Type@{is\+Type}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{is\+Type()}{isType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty $>$ \\
+bool glow\+::\+Type\+::is\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the templated parameter {\ttfamily Elem\+Ty} matches this type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_ac2cf6671bd0fec4a8a2cd2c7686c9f75}\label{structglow_1_1_type_ac2cf6671bd0fec4a8a2cd2c7686c9f75}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!is\+Type@{is\+Type}}
+\index{is\+Type@{is\+Type}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{is\+Type()}{isType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty $>$ \\
+static bool glow\+::\+Type\+::is\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{Ty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+true if the templated parameter {\ttfamily Elem\+Ty} matches the type that\textquotesingle{}s specified by the parameter {\ttfamily Ty}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_a8850574b9dff16a354465946ecabb861}\label{structglow_1_1_type_a8850574b9dff16a354465946ecabb861}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!size@{size}}
+\index{size@{size}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+Type\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of elements in the tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structglow_1_1_type_ab3f576c25f30f6fbe676408f4794c809}\label{structglow_1_1_type_ab3f576c25f30f6fbe676408f4794c809}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!strides@{strides}}
+\index{strides@{strides}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{strides()}{strides()}}
+{\footnotesize\ttfamily llvm\+::\+Array\+Ref$<$size\+\_\+t$>$ glow\+::\+Type\+::strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the strides of the tensor. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1_type_a7725158c5337a8e6787a090c9a403cc1}\label{structglow_1_1_type_a7725158c5337a8e6787a090c9a403cc1}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!sizes\+\_\+@{sizes\+\_\+}}
+\index{sizes\+\_\+@{sizes\+\_\+}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{sizes\+\_\+}{sizes\_}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+Type\+::sizes\+\_\+\mbox{[}max\+\_\+tensor\+\_\+dimensions\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+      0,
+  \}
+\end{DoxyCode}
+
+
+Contains the dimensions (sizes) of the tensor. Ex\+: \mbox{[}sx, sy, sz, ...\mbox{]}. 
+
+\mbox{\Hypertarget{structglow_1_1_type_ab1f4da2b41f26f88cc94db137d1a1cac}\label{structglow_1_1_type_ab1f4da2b41f26f88cc94db137d1a1cac}} 
+\index{glow\+::\+Type@{glow\+::\+Type}!strides\+\_\+@{strides\+\_\+}}
+\index{strides\+\_\+@{strides\+\_\+}!glow\+::\+Type@{glow\+::\+Type}}
+\subsubsection{\texorpdfstring{strides\+\_\+}{strides\_}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+Type\+::strides\+\_\+\mbox{[}max\+\_\+tensor\+\_\+dimensions\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+      0,
+  \}
+\end{DoxyCode}
+Contains the strides for each dimension (in elements). The order should be the same as in sizes\+\_\+. In more details, suppose that the tensor is laid out flat in memory, and some dimensions are aligned. strides\+\_\+\mbox{[}i\mbox{]} is the number of elements that needs to be skipped in order to reach the next plane in the i-\/th dimension. For example, if the tensor has dimensions \mbox{[}3, 5, 10\mbox{]} and alignments \mbox{[}3, 32, 1\mbox{]}, the strides will be \mbox{[}162, 32, 1\mbox{]}. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Base/Type.\+h\item 
+lib/\+Base/Type.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,39 @@
+\hypertarget{structglow_1_1_compare_with_name}{}\section{glow\+:\+:Compare\+With\+Name$<$ Ty $>$ Struct Template Reference}
+\label{structglow_1_1_compare_with_name}\index{glow\+::\+Compare\+With\+Name$<$ Ty $>$@{glow\+::\+Compare\+With\+Name$<$ Ty $>$}}
+
+
+Interface that the comparison operator must implement.  
+
+
+
+
+{\ttfamily \#include $<$Verifier\+Helper.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Compare\+With\+Name$<$ Ty $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.052632cm]{structglow_1_1_compare_with_name}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_compare_with_name_a4e59bedfe02be5b5fcfdf1064b6029d7}\label{structglow_1_1_compare_with_name_a4e59bedfe02be5b5fcfdf1064b6029d7}} 
+virtual bool \hyperlink{structglow_1_1_compare_with_name_a4e59bedfe02be5b5fcfdf1064b6029d7}{operator()} (const Ty \&a, const Ty \&b) const =0
+\begin{DoxyCompactList}\small\item\em Binary comparison operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_compare_with_name_ad058672dd90e416c77c9397ed261703b}\label{structglow_1_1_compare_with_name_ad058672dd90e416c77c9397ed261703b}} 
+virtual llvm\+::\+String\+Ref \hyperlink{structglow_1_1_compare_with_name_ad058672dd90e416c77c9397ed261703b}{get\+Compare\+Name} () const =0
+\begin{DoxyCompactList}\small\item\em Name of the operator used for pretty printing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Ty$>$\newline
+struct glow\+::\+Compare\+With\+Name$<$ Ty $>$}
+
+Interface that the comparison operator must implement. 
+
+Wrapper around comparison operators. They are used to specify the behavior of expect\+Compare\+True and provide a pretty printer of the operator used when things fail. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Verifier\+Helper.\+h\end{DoxyCompactItemize}

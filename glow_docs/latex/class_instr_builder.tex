@@ -1,0 +1,92 @@
+\hypertarget{class_instr_builder}{}\section{Instr\+Builder Class Reference}
+\label{class_instr_builder}\index{Instr\+Builder@{Instr\+Builder}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_instr_builder_a1f8d2c91448322adb36fdd2f7b039b3a}\label{class_instr_builder_a1f8d2c91448322adb36fdd2f7b039b3a}} 
+{\bfseries Instr\+Builder} (std\+::ofstream \&H, std\+::ofstream \&C, std\+::ofstream \&D, std\+::ofstream \&BH, std\+::ofstream \&BC, std\+::ofstream \&I, const std\+::string \&name, bool is\+Backend\+Specific)
+\item 
+\hyperlink{class_instr_builder}{Instr\+Builder} \& \hyperlink{class_instr_builder_a01a949625decce59e455c45a44ff6dc3}{add\+Operand} (const std\+::string \&op, Operand\+Kind k)
+\item 
+\hyperlink{class_instr_builder}{Instr\+Builder} \& \hyperlink{class_instr_builder_a528dc2223a85cc13f3daae226dcee417}{add\+Member} (const Member\+Type type, const std\+::string \&name)
+\item 
+\hyperlink{class_instr_builder}{Instr\+Builder} \& \hyperlink{class_instr_builder_ac19c62ade7850afe2beff82188cb32f5}{add\+Member} (\hyperlink{struct_member_type_info}{Member\+Type\+Info} type\+Info, const std\+::string \&name)
+\item 
+\hyperlink{class_instr_builder}{Instr\+Builder} \& \hyperlink{class_instr_builder_a77e1fdbb84273840f54d90c540ea2425}{add\+Extra\+Method} (const std\+::string \&decl, const std\+::string \&body)
+\item 
+\hyperlink{class_instr_builder}{Instr\+Builder} \& \hyperlink{class_instr_builder_a59ba6eb40641a56ed3c7f007c765deaf}{set\+Type} (const std\+::string \&ty)
+\item 
+\hyperlink{class_instr_builder}{Instr\+Builder} \& \hyperlink{class_instr_builder_aae70d3e15b55b042ad9ebc2b6cffbcfa}{inplace\+Operand} (llvm\+::\+Array\+Ref$<$ llvm\+::\+String\+Ref $>$ lst)
+\item 
+void \hyperlink{class_instr_builder_af63ba41d5319382fb69e88a41d1703d7}{add\+Gradient\+Instr} (llvm\+::\+Array\+Ref$<$ llvm\+::\+String\+Ref $>$ original\+Fields, llvm\+::\+Array\+Ref$<$ llvm\+::\+String\+Ref $>$ grad\+Fields)
+\item 
+\hyperlink{class_instr_builder}{Instr\+Builder} \& \hyperlink{class_instr_builder_a69a849ba19e3bc7b6ec7edf64dc918a3}{auto\+I\+R\+Gen} (const std\+::string \&name=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{class_instr_builder_a042d784155a9aed4fa81eb5b5e5d52c7}\label{class_instr_builder_a042d784155a9aed4fa81eb5b5e5d52c7}} 
+\hyperlink{class_instr_builder}{Instr\+Builder} \& \hyperlink{class_instr_builder_a042d784155a9aed4fa81eb5b5e5d52c7}{auto\+Verify} (Verify\+Kind verif, llvm\+::\+Array\+Ref$<$ llvm\+::\+String\+Ref $>$ operands=\{\char`\"{}\char`\"{}\})
+\begin{DoxyCompactList}\small\item\em Automatically generates verification of type {\ttfamily verif}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_instr_builder_a5ac95624a7a1bfe205fc58716e36eb98}\label{class_instr_builder_a5ac95624a7a1bfe205fc58716e36eb98}} 
+\hyperlink{class_instr_builder}{Instr\+Builder} \& {\bfseries data\+Parallel} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_instr_builder_a77e1fdbb84273840f54d90c540ea2425}\label{class_instr_builder_a77e1fdbb84273840f54d90c540ea2425}} 
+\index{Instr\+Builder@{Instr\+Builder}!add\+Extra\+Method@{add\+Extra\+Method}}
+\index{add\+Extra\+Method@{add\+Extra\+Method}!Instr\+Builder@{Instr\+Builder}}
+\subsubsection{\texorpdfstring{add\+Extra\+Method()}{addExtraMethod()}}
+{\footnotesize\ttfamily \hyperlink{class_instr_builder}{Instr\+Builder}\& Instr\+Builder\+::add\+Extra\+Method (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{decl,  }\item[{const std\+::string \&}]{body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds the body of a new public method to the class. {\ttfamily decl} is the decleration that goes in the header file. {\ttfamily body} is the implementation that goes in the cpp file. \mbox{\Hypertarget{class_instr_builder_af63ba41d5319382fb69e88a41d1703d7}\label{class_instr_builder_af63ba41d5319382fb69e88a41d1703d7}} 
+\index{Instr\+Builder@{Instr\+Builder}!add\+Gradient\+Instr@{add\+Gradient\+Instr}}
+\index{add\+Gradient\+Instr@{add\+Gradient\+Instr}!Instr\+Builder@{Instr\+Builder}}
+\subsubsection{\texorpdfstring{add\+Gradient\+Instr()}{addGradientInstr()}}
+{\footnotesize\ttfamily void Instr\+Builder\+::add\+Gradient\+Instr (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ llvm\+::\+String\+Ref $>$}]{original\+Fields,  }\item[{llvm\+::\+Array\+Ref$<$ llvm\+::\+String\+Ref $>$}]{grad\+Fields }\end{DoxyParamCaption})}
+
+Constructs a new gradient instruction that is based on the current instruction that we are building. \mbox{\Hypertarget{class_instr_builder_a528dc2223a85cc13f3daae226dcee417}\label{class_instr_builder_a528dc2223a85cc13f3daae226dcee417}} 
+\index{Instr\+Builder@{Instr\+Builder}!add\+Member@{add\+Member}}
+\index{add\+Member@{add\+Member}!Instr\+Builder@{Instr\+Builder}}
+\subsubsection{\texorpdfstring{add\+Member()}{addMember()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_instr_builder}{Instr\+Builder} \& Instr\+Builder\+::add\+Member (\begin{DoxyParamCaption}\item[{const Member\+Type}]{type,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+Add a member to the instruction. Format\+: type, name. The name should start with a capital letter. For example\+: \char`\"{}\+Filter\char`\"{}. \mbox{\Hypertarget{class_instr_builder_ac19c62ade7850afe2beff82188cb32f5}\label{class_instr_builder_ac19c62ade7850afe2beff82188cb32f5}} 
+\index{Instr\+Builder@{Instr\+Builder}!add\+Member@{add\+Member}}
+\index{add\+Member@{add\+Member}!Instr\+Builder@{Instr\+Builder}}
+\subsubsection{\texorpdfstring{add\+Member()}{addMember()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_instr_builder}{Instr\+Builder}\& Instr\+Builder\+::add\+Member (\begin{DoxyParamCaption}\item[{\hyperlink{struct_member_type_info}{Member\+Type\+Info}}]{type\+Info,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a member to the node. Format type, name. The name should start with a capital letter. For example\+: \char`\"{}\+Filter\char`\"{}. If \hyperlink{struct_member_type_info}{Member\+Type\+Info} refers to an external user-\/defined type, this type T should satisfy the following requirements\+:
+\begin{DoxyItemize}
+\item There should be a hash function with a signature like {\ttfamily llvm\+::hash\+\_\+code hash\+\_\+value(const T)} which takes T by value, by reference or as a pointer, depending on the intended use.
+\item There should be a stream output operator with a signature like {\ttfamily llvm\+::raw\+\_\+ostream \&operator$<$$<$(llvm\+::raw\+\_\+ostream \&os, const T);}, which takes T by value, by reference or as a pointer, depending on the intended use.
+\item There should be a comparison operator {\ttfamily bool operator==(const T L\+HS, const T R\+HS)} (or a custom comparator function mentioned in \hyperlink{struct_member_type_info_abf6a66ee80b0f3680c6bd0b86d61a858}{Member\+Type\+Info\+::cmp\+Fn}), which takes T by reference or by value depending on the intended use. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_instr_builder_a01a949625decce59e455c45a44ff6dc3}\label{class_instr_builder_a01a949625decce59e455c45a44ff6dc3}} 
+\index{Instr\+Builder@{Instr\+Builder}!add\+Operand@{add\+Operand}}
+\index{add\+Operand@{add\+Operand}!Instr\+Builder@{Instr\+Builder}}
+\subsubsection{\texorpdfstring{add\+Operand()}{addOperand()}}
+{\footnotesize\ttfamily \hyperlink{class_instr_builder}{Instr\+Builder}\& Instr\+Builder\+::add\+Operand (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{op,  }\item[{Operand\+Kind}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add an operand to the instruction. The name should start with a capital letter. For example\+: \char`\"{}\+Input\char`\"{}. \mbox{\Hypertarget{class_instr_builder_a69a849ba19e3bc7b6ec7edf64dc918a3}\label{class_instr_builder_a69a849ba19e3bc7b6ec7edf64dc918a3}} 
+\index{Instr\+Builder@{Instr\+Builder}!auto\+I\+R\+Gen@{auto\+I\+R\+Gen}}
+\index{auto\+I\+R\+Gen@{auto\+I\+R\+Gen}!Instr\+Builder@{Instr\+Builder}}
+\subsubsection{\texorpdfstring{auto\+I\+R\+Gen()}{autoIRGen()}}
+{\footnotesize\ttfamily \hyperlink{class_instr_builder}{Instr\+Builder}\& Instr\+Builder\+::auto\+I\+R\+Gen (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Turns on automatic I\+R\+Gen generation for this instruction given the Node {\ttfamily name} (if empty, defaults to same name as Instr). \mbox{\Hypertarget{class_instr_builder_aae70d3e15b55b042ad9ebc2b6cffbcfa}\label{class_instr_builder_aae70d3e15b55b042ad9ebc2b6cffbcfa}} 
+\index{Instr\+Builder@{Instr\+Builder}!inplace\+Operand@{inplace\+Operand}}
+\index{inplace\+Operand@{inplace\+Operand}!Instr\+Builder@{Instr\+Builder}}
+\subsubsection{\texorpdfstring{inplace\+Operand()}{inplaceOperand()}}
+{\footnotesize\ttfamily \hyperlink{class_instr_builder}{Instr\+Builder}\& Instr\+Builder\+::inplace\+Operand (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ llvm\+::\+String\+Ref $>$}]{lst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds a list of inplace operands. The instruction may use the memory read by any of the operands in {\ttfamily lst}\mbox{[}1 .. n\mbox{]} for writing the result of the operand {\ttfamily lst}\mbox{[}0\mbox{]}. \mbox{\Hypertarget{class_instr_builder_a59ba6eb40641a56ed3c7f007c765deaf}\label{class_instr_builder_a59ba6eb40641a56ed3c7f007c765deaf}} 
+\index{Instr\+Builder@{Instr\+Builder}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Instr\+Builder@{Instr\+Builder}}
+\subsubsection{\texorpdfstring{set\+Type()}{setType()}}
+{\footnotesize\ttfamily \hyperlink{class_instr_builder}{Instr\+Builder}\& Instr\+Builder\+::set\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the expression that initializes the type of the instruction. Example\+: \textquotesingle{}L\+H\+S-\/$>$get\+Type()\textquotesingle{}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tools/\+Class\+Gen/Instr\+Builder.\+h\item 
+tools/\+Class\+Gen/Instr\+Builder.\+cpp\end{DoxyCompactItemize}

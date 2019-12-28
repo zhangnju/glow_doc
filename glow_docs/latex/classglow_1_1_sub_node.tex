@@ -1,0 +1,108 @@
+\hypertarget{classglow_1_1_sub_node}{}\section{glow\+:\+:Sub\+Node Class Reference}
+\label{classglow_1_1_sub_node}\index{glow\+::\+Sub\+Node@{glow\+::\+Sub\+Node}}
+
+
+Performs Sub on the L\+HS and R\+HS operands.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Sub\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_sub_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a8cff0e0ca213bffb4ec5da882bd2a643}\label{classglow_1_1_sub_node_a8cff0e0ca213bffb4ec5da882bd2a643}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries L\+H\+S\+Idx} = 0, 
+{\bfseries R\+H\+S\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a05a1432ab19e05c67cf00e1c07869423}\label{classglow_1_1_sub_node_a05a1432ab19e05c67cf00e1c07869423}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a2896fd467e265d2acf5b2dd54909284e}\label{classglow_1_1_sub_node_a2896fd467e265d2acf5b2dd54909284e}} 
+{\bfseries Sub\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} L\+HS, \hyperlink{structglow_1_1_node_value}{Node\+Value} R\+HS)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_ad0a010468a2aff8dc6cd9ae9e62b206d}\label{classglow_1_1_sub_node_ad0a010468a2aff8dc6cd9ae9e62b206d}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+L\+HS} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_acb5e0d96e6be908d3d13f7c575927fd0}\label{classglow_1_1_sub_node_acb5e0d96e6be908d3d13f7c575927fd0}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+R\+HS} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a64c17ee1d3e3c361fb7f096b799e6f1e}\label{classglow_1_1_sub_node_a64c17ee1d3e3c361fb7f096b799e6f1e}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a725ed03cd03b89d075dc87bced7932c7}\label{classglow_1_1_sub_node_a725ed03cd03b89d075dc87bced7932c7}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a9cc5b92f06d2e3998c899b8908336345}\label{classglow_1_1_sub_node_a9cc5b92f06d2e3998c899b8908336345}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_ae84fc90904546be34bebb52b1bf0e817}\label{classglow_1_1_sub_node_ae84fc90904546be34bebb52b1bf0e817}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a6429ebfbd37f98a63a9b50508a5fda2f}\label{classglow_1_1_sub_node_a6429ebfbd37f98a63a9b50508a5fda2f}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a4a281e16b4e9ac888122f33092ec45a9}\label{classglow_1_1_sub_node_a4a281e16b4e9ac888122f33092ec45a9}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a94a2f13022d1315cb3f385450e6e028f}\label{classglow_1_1_sub_node_a94a2f13022d1315cb3f385450e6e028f}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a9fe36b8c70f64cf4a3a26d38ade6908e}\label{classglow_1_1_sub_node_a9fe36b8c70f64cf4a3a26d38ade6908e}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_ab4cffd9dfe017938156b18e90bfed954}\label{classglow_1_1_sub_node_ab4cffd9dfe017938156b18e90bfed954}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a9ac797346aeba64710c087233a44804e}\label{classglow_1_1_sub_node_a9ac797346aeba64710c087233a44804e}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a00cfa0464a91e0bdcc578bd8b170049f}\label{classglow_1_1_sub_node_a00cfa0464a91e0bdcc578bd8b170049f}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_add4a535ec2f048af7246e9bc8b2da0ce}\label{classglow_1_1_sub_node_add4a535ec2f048af7246e9bc8b2da0ce}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_sub_node}{Sub\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a0e3c83364df52b91f71c0b8377449350}\label{classglow_1_1_sub_node_a0e3c83364df52b91f71c0b8377449350}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a027209cf1a9fbcce701d7c4a833dc551}\label{classglow_1_1_sub_node_a027209cf1a9fbcce701d7c4a833dc551}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a41836b9ccbbed708f07b6e49b6e1b103}\label{classglow_1_1_sub_node_a41836b9ccbbed708f07b6e49b6e1b103}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a7455e29af9ef3c85014c811723f31e71}\label{classglow_1_1_sub_node_a7455e29af9ef3c85014c811723f31e71}} 
+bool {\bfseries verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_ae034f667cad03b7202d434bd089e1729}\label{classglow_1_1_sub_node_ae034f667cad03b7202d434bd089e1729}} 
+\hyperlink{classglow_1_1_sub_grad_node}{Sub\+Grad\+Node} $\ast$ {\bfseries get\+Grad} (\hyperlink{classglow_1_1_graph_grad_mapper}{Graph\+Grad\+Mapper} \&builder)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sub_node_a7364106e72b6f0d3223e592a87fee5be}\label{classglow_1_1_sub_node_a7364106e72b6f0d3223e592a87fee5be}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Performs Sub on the L\+HS and R\+HS operands. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

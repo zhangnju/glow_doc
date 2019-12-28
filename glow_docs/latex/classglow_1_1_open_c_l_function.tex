@@ -1,0 +1,97 @@
+\hypertarget{classglow_1_1_open_c_l_function}{}\section{glow\+:\+:Open\+C\+L\+Function Class Reference}
+\label{classglow_1_1_open_c_l_function}\index{glow\+::\+Open\+C\+L\+Function@{glow\+::\+Open\+C\+L\+Function}}
+
+
+A Glow IR function compiled for Open\+CL.  
+
+
+
+
+{\ttfamily \#include $<$Open\+C\+L.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Open\+C\+L\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_open_c_l_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_open_c_l_function_acceb2df182fbdbc61d07191c02cc2429}\label{classglow_1_1_open_c_l_function_acceb2df182fbdbc61d07191c02cc2429}} 
+\hyperlink{classglow_1_1_open_c_l_function_acceb2df182fbdbc61d07191c02cc2429}{Open\+C\+L\+Function} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $>$ F, \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} \&\&bundle, \hyperlink{structglow_1_1_trace_info}{Trace\+Info} trace\+Info)
+\begin{DoxyCompactList}\small\item\em Ctor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_open_c_l_function_a0ecb51b615dffb23c038c8f4f36da5d2}\label{classglow_1_1_open_c_l_function_a0ecb51b615dffb23c038c8f4f36da5d2}} 
+\hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$ \hyperlink{classglow_1_1_open_c_l_function_a0ecb51b615dffb23c038c8f4f36da5d2}{get\+IR} ()
+\begin{DoxyCompactList}\small\item\em Returns IR function pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_open_c_l_function_a6e7b507f5f900a686c9b3ecfd93577fc}\label{classglow_1_1_open_c_l_function_a6e7b507f5f900a686c9b3ecfd93577fc}} 
+cl\+\_\+program \hyperlink{classglow_1_1_open_c_l_function_a6e7b507f5f900a686c9b3ecfd93577fc}{create\+Program} (const std\+::string \&source, const std\+::vector$<$ std\+::string $>$ \&options, cl\+\_\+command\+\_\+queue queue)
+\begin{DoxyCompactList}\small\item\em Create a program from the {\ttfamily source} using provided {\ttfamily options}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_open_c_l_function_aa96272cbfb8bd4fffabc03a8f50207ee}\label{classglow_1_1_open_c_l_function_aa96272cbfb8bd4fffabc03a8f50207ee}} 
+Manual\+Event\+Map \& \hyperlink{classglow_1_1_open_c_l_function_aa96272cbfb8bd4fffabc03a8f50207ee}{get\+Manual\+Trace\+Events} ()
+\begin{DoxyCompactList}\small\item\em Returns metadata about manual Trace\+Events defined in this function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Compiled\+Function interface}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_open_c_l_function_a86c778de3d9aee98a6f045a362da4173}\label{classglow_1_1_open_c_l_function_a86c778de3d9aee98a6f045a362da4173}} 
+{\bfseries $\sim$\+Open\+C\+L\+Function} () override
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_open_c_l_function_aa203e8d612943a37fcd5c44285a6c6eb}{execute} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context) override
+\item 
+void \hyperlink{classglow_1_1_open_c_l_function_aeaa9afb43d01cedc7c89c7451e5cec5d}{free\+Compilation\+Resources} () override
+\item 
+\mbox{\Hypertarget{classglow_1_1_open_c_l_function_a26a83ba0ff7dcb348e99ac8f30ad2740}\label{classglow_1_1_open_c_l_function_a26a83ba0ff7dcb348e99ac8f30ad2740}} 
+void \hyperlink{classglow_1_1_open_c_l_function_a26a83ba0ff7dcb348e99ac8f30ad2740}{collect\+Constants} (const \hyperlink{classglow_1_1_module}{Module} $\ast$module) override
+\begin{DoxyCompactList}\small\item\em Collects constants for runtime. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classglow_1_1_open_c_l_function_ad676ba76a33a2e8802caa82052b569c9}{get\+Compile\+Backend\+Name} () const override
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A Glow IR function compiled for Open\+CL. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_open_c_l_function_aa203e8d612943a37fcd5c44285a6c6eb}\label{classglow_1_1_open_c_l_function_aa203e8d612943a37fcd5c44285a6c6eb}} 
+\index{glow\+::\+Open\+C\+L\+Function@{glow\+::\+Open\+C\+L\+Function}!execute@{execute}}
+\index{execute@{execute}!glow\+::\+Open\+C\+L\+Function@{glow\+::\+Open\+C\+L\+Function}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} Open\+C\+L\+Function\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Execute the network and allocate \hyperlink{classglow_1_1_placeholder}{Placeholder} memory with given {\ttfamily bindings} providing mapping between \hyperlink{classglow_1_1_placeholder}{Placeholder} and populated tensor. \begin{DoxyReturn}{Returns}
+an Error if an error ocurred during execution. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1_compiled_function_ac8dd94f2ee7129a435f1701b6a9f419e}{glow\+::\+Compiled\+Function}.
+
+\mbox{\Hypertarget{classglow_1_1_open_c_l_function_aeaa9afb43d01cedc7c89c7451e5cec5d}\label{classglow_1_1_open_c_l_function_aeaa9afb43d01cedc7c89c7451e5cec5d}} 
+\index{glow\+::\+Open\+C\+L\+Function@{glow\+::\+Open\+C\+L\+Function}!free\+Compilation\+Resources@{free\+Compilation\+Resources}}
+\index{free\+Compilation\+Resources@{free\+Compilation\+Resources}!glow\+::\+Open\+C\+L\+Function@{glow\+::\+Open\+C\+L\+Function}}
+\subsubsection{\texorpdfstring{free\+Compilation\+Resources()}{freeCompilationResources()}}
+{\footnotesize\ttfamily void Open\+C\+L\+Function\+::free\+Compilation\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Once the compiled\+Function is done being added to devices calling this method will free any resources needed to load the network on the device but not needed for running on the device. 
+
+Reimplemented from \hyperlink{classglow_1_1_compiled_function_a0bd30fa8ff4f317ac14ae1c02898ed1a}{glow\+::\+Compiled\+Function}.
+
+\mbox{\Hypertarget{classglow_1_1_open_c_l_function_ad676ba76a33a2e8802caa82052b569c9}\label{classglow_1_1_open_c_l_function_ad676ba76a33a2e8802caa82052b569c9}} 
+\index{glow\+::\+Open\+C\+L\+Function@{glow\+::\+Open\+C\+L\+Function}!get\+Compile\+Backend\+Name@{get\+Compile\+Backend\+Name}}
+\index{get\+Compile\+Backend\+Name@{get\+Compile\+Backend\+Name}!glow\+::\+Open\+C\+L\+Function@{glow\+::\+Open\+C\+L\+Function}}
+\subsubsection{\texorpdfstring{get\+Compile\+Backend\+Name()}{getCompileBackendName()}}
+{\footnotesize\ttfamily std\+::string glow\+::\+Open\+C\+L\+Function\+::get\+Compile\+Backend\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the backend used to compile this function. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1_compiled_function_a7b3f2b17986d14706a1d1091d3c4df27}{glow\+::\+Compiled\+Function}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Open\+C\+L/Open\+C\+L.\+h\item 
+lib/\+Backends/\+Open\+C\+L/Open\+C\+L.\+cpp\end{DoxyCompactItemize}

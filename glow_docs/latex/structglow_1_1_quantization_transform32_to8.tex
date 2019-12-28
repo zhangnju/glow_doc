@@ -1,0 +1,49 @@
+\hypertarget{structglow_1_1_quantization_transform32_to8}{}\section{glow\+:\+:Quantization\+Transform32\+To8 Struct Reference}
+\label{structglow_1_1_quantization_transform32_to8}\index{glow\+::\+Quantization\+Transform32\+To8@{glow\+::\+Quantization\+Transform32\+To8}}
+
+
+{\ttfamily \#include $<$Base.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_quantization_transform32_to8_ad19aab74e564312114bb9eb32d7fad42}\label{structglow_1_1_quantization_transform32_to8_ad19aab74e564312114bb9eb32d7fad42}} 
+\hyperlink{structglow_1_1_quantization_transform32_to8_ad19aab74e564312114bb9eb32d7fad42}{Quantization\+Transform32\+To8} (int pre, int post, int scale, int offset)
+\begin{DoxyCompactList}\small\item\em Initializes the transformation based on the conversion formula (above). \end{DoxyCompactList}\item 
+int32\+\_\+t \hyperlink{structglow_1_1_quantization_transform32_to8_ab48e7acc8ccd87e09423c7d08dfa0b5f}{transform} (int32\+\_\+t input)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_quantization_transform32_to8_a0cc44bc4961875eb28bccdec468ea434}\label{structglow_1_1_quantization_transform32_to8_a0cc44bc4961875eb28bccdec468ea434}} 
+int {\bfseries pre}
+\item 
+\mbox{\Hypertarget{structglow_1_1_quantization_transform32_to8_a2dfeec98ddd05264fccb9d40f26cd9c2}\label{structglow_1_1_quantization_transform32_to8_a2dfeec98ddd05264fccb9d40f26cd9c2}} 
+int {\bfseries post}
+\item 
+\mbox{\Hypertarget{structglow_1_1_quantization_transform32_to8_aceb549f45cc58b9151a8a50b05e9233d}\label{structglow_1_1_quantization_transform32_to8_aceb549f45cc58b9151a8a50b05e9233d}} 
+int {\bfseries scale}
+\item 
+\mbox{\Hypertarget{structglow_1_1_quantization_transform32_to8_a25696ee5d2988d4b14a3174044d43b2e}\label{structglow_1_1_quantization_transform32_to8_a25696ee5d2988d4b14a3174044d43b2e}} 
+int {\bfseries offset}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A data structure that represents the 32-\/bit to 8-\/bit quantization scaling operation. This data structure represents the transformation\+: (((input $>$$>$ pre) $\ast$ scale) + rtn) $>$$>$ post + offset. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_quantization_transform32_to8_ab48e7acc8ccd87e09423c7d08dfa0b5f}\label{structglow_1_1_quantization_transform32_to8_ab48e7acc8ccd87e09423c7d08dfa0b5f}} 
+\index{glow\+::\+Quantization\+Transform32\+To8@{glow\+::\+Quantization\+Transform32\+To8}!transform@{transform}}
+\index{transform@{transform}!glow\+::\+Quantization\+Transform32\+To8@{glow\+::\+Quantization\+Transform32\+To8}}
+\subsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily int32\+\_\+t glow\+::\+Quantization\+Transform32\+To8\+::transform (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the scaled integer. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Quantization/\+Base/Base.\+h\end{DoxyCompactItemize}

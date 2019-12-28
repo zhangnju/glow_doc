@@ -1,0 +1,35 @@
+\hypertarget{classglow_1_1_stats_exporter_registry}{}\section{glow\+:\+:Stats\+Exporter\+Registry Class Reference}
+\label{classglow_1_1_stats_exporter_registry}\index{glow\+::\+Stats\+Exporter\+Registry@{glow\+::\+Stats\+Exporter\+Registry}}
+
+
+Registry of Stats\+Exporters.  
+
+
+
+
+{\ttfamily \#include $<$Stats\+Exporter.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_stats_exporter_registry_a8fdc5156e41840228e58f2301ec85779}\label{classglow_1_1_stats_exporter_registry_a8fdc5156e41840228e58f2301ec85779}} 
+void \hyperlink{classglow_1_1_stats_exporter_registry_a8fdc5156e41840228e58f2301ec85779}{add\+Time\+Series\+Value} (llvm\+::\+String\+Ref key, double value)
+\begin{DoxyCompactList}\small\item\em Add value to a time series for all registered Stats\+Exporters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_stats_exporter_registry_a866e879d431fbb51e14d36608d8887a4}\label{classglow_1_1_stats_exporter_registry_a866e879d431fbb51e14d36608d8887a4}} 
+void \hyperlink{classglow_1_1_stats_exporter_registry_a866e879d431fbb51e14d36608d8887a4}{increment\+Counter} (llvm\+::\+String\+Ref key, int64\+\_\+t value=1)
+\begin{DoxyCompactList}\small\item\em Increment a counter for all registered Stats\+Exporters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_stats_exporter_registry_a5e04d5795478d303a41f88c67a908f76}\label{classglow_1_1_stats_exporter_registry_a5e04d5795478d303a41f88c67a908f76}} 
+void \hyperlink{classglow_1_1_stats_exporter_registry_a5e04d5795478d303a41f88c67a908f76}{set\+Counter} (llvm\+::\+String\+Ref key, int64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Set a counter for all registered Stats\+Exporters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_stats_exporter_registry_a58bda3f996d2b5c9d08a0d8062d35997}\label{classglow_1_1_stats_exporter_registry_a58bda3f996d2b5c9d08a0d8062d35997}} 
+void \hyperlink{classglow_1_1_stats_exporter_registry_a58bda3f996d2b5c9d08a0d8062d35997}{register\+Stats\+Exporter} (\hyperlink{classglow_1_1_stats_exporter}{Stats\+Exporter} $\ast$exporter)
+\begin{DoxyCompactList}\small\item\em Register a \hyperlink{classglow_1_1_stats_exporter}{Stats\+Exporter}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Registry of Stats\+Exporters. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Runtime/Stats\+Exporter.\+h\item 
+lib/\+Runtime/Stats\+Exporter.\+cpp\end{DoxyCompactItemize}

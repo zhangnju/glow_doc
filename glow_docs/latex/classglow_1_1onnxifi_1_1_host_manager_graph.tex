@@ -1,0 +1,70 @@
+\hypertarget{classglow_1_1onnxifi_1_1_host_manager_graph}{}\section{glow\+:\+:onnxifi\+:\+:Host\+Manager\+Graph Class Reference}
+\label{classglow_1_1onnxifi_1_1_host_manager_graph}\index{glow\+::onnxifi\+::\+Host\+Manager\+Graph@{glow\+::onnxifi\+::\+Host\+Manager\+Graph}}
+Inheritance diagram for glow\+:\+:onnxifi\+:\+:Host\+Manager\+Graph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1onnxifi_1_1_host_manager_graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+onnx\+Status \hyperlink{classglow_1_1onnxifi_1_1_host_manager_graph_a58234ef078e7db198825b214881fe7ef}{init\+Graph} (const void $\ast$onnx\+Model, size\+\_\+t onnx\+Model\+Size, uint32\+\_\+t weight\+Count, const onnx\+Tensor\+Descriptor\+V1 $\ast$weight\+Descriptors, void $\ast$defered\+Blob\+Reader) override
+\item 
+onnx\+Status \hyperlink{classglow_1_1onnxifi_1_1_host_manager_graph_a962669c45b8c354730f150ca64f1a6c0}{run} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ ctx, \hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr} output\+Event, onnx\+Trace\+Event\+List $\ast$trace\+Events) override
+\item 
+const std\+::string \& \hyperlink{classglow_1_1onnxifi_1_1_host_manager_graph_acd6bb7414badffcd5a82b57fd4b97149}{get\+Name} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \hyperlink{classglow_1_1onnxifi_1_1_host_manager_graph_ada051c02bd3aa8b0b2cd109cc306893f}{make\+Unique\+Graph\+Id} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_host_manager_graph_acd6bb7414badffcd5a82b57fd4b97149}\label{classglow_1_1onnxifi_1_1_host_manager_graph_acd6bb7414badffcd5a82b57fd4b97149}} 
+\index{glow\+::onnxifi\+::\+Host\+Manager\+Graph@{glow\+::onnxifi\+::\+Host\+Manager\+Graph}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!glow\+::onnxifi\+::\+Host\+Manager\+Graph@{glow\+::onnxifi\+::\+Host\+Manager\+Graph}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily const std\+::string\& glow\+::onnxifi\+::\+Host\+Manager\+Graph\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the unique string name of the \hyperlink{classglow_1_1onnxifi_1_1_host_manager_graph}{Host\+Manager\+Graph} that the underlying \hyperlink{classglow_1_1onnxifi_1_1_host_manager_graph}{Host\+Manager\+Graph} uses to identify this network. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_host_manager_graph_a58234ef078e7db198825b214881fe7ef}\label{classglow_1_1onnxifi_1_1_host_manager_graph_a58234ef078e7db198825b214881fe7ef}} 
+\index{glow\+::onnxifi\+::\+Host\+Manager\+Graph@{glow\+::onnxifi\+::\+Host\+Manager\+Graph}!init\+Graph@{init\+Graph}}
+\index{init\+Graph@{init\+Graph}!glow\+::onnxifi\+::\+Host\+Manager\+Graph@{glow\+::onnxifi\+::\+Host\+Manager\+Graph}}
+\subsubsection{\texorpdfstring{init\+Graph()}{initGraph()}}
+{\footnotesize\ttfamily onnx\+Status glow\+::onnxifi\+::\+Host\+Manager\+Graph\+::init\+Graph (\begin{DoxyParamCaption}\item[{const void $\ast$}]{onnx\+Model,  }\item[{size\+\_\+t}]{onnx\+Model\+Size,  }\item[{uint32\+\_\+t}]{weight\+Count,  }\item[{const onnx\+Tensor\+Descriptor\+V1 $\ast$}]{weight\+Descriptors,  }\item[{void $\ast$}]{defered\+Blob\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Init Glow graph based on the O\+N\+NX model {\ttfamily onnx\+Model} and static trained weights {\ttfamily weight\+Descriptors}. Weights can be read in later by a {\ttfamily defered\+Blob\+Reader}. 
+
+Implements \hyperlink{classglow_1_1onnxifi_1_1_graph_a5f1ec69446852a2515d8aeec487a521a}{glow\+::onnxifi\+::\+Graph}.
+
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_host_manager_graph_ada051c02bd3aa8b0b2cd109cc306893f}\label{classglow_1_1onnxifi_1_1_host_manager_graph_ada051c02bd3aa8b0b2cd109cc306893f}} 
+\index{glow\+::onnxifi\+::\+Host\+Manager\+Graph@{glow\+::onnxifi\+::\+Host\+Manager\+Graph}!make\+Unique\+Graph\+Id@{make\+Unique\+Graph\+Id}}
+\index{make\+Unique\+Graph\+Id@{make\+Unique\+Graph\+Id}!glow\+::onnxifi\+::\+Host\+Manager\+Graph@{glow\+::onnxifi\+::\+Host\+Manager\+Graph}}
+\subsubsection{\texorpdfstring{make\+Unique\+Graph\+Id()}{makeUniqueGraphId()}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::onnxifi\+::\+Host\+Manager\+Graph\+::make\+Unique\+Graph\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+a globally unique graph id. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_host_manager_graph_a962669c45b8c354730f150ca64f1a6c0}\label{classglow_1_1onnxifi_1_1_host_manager_graph_a962669c45b8c354730f150ca64f1a6c0}} 
+\index{glow\+::onnxifi\+::\+Host\+Manager\+Graph@{glow\+::onnxifi\+::\+Host\+Manager\+Graph}!run@{run}}
+\index{run@{run}!glow\+::onnxifi\+::\+Host\+Manager\+Graph@{glow\+::onnxifi\+::\+Host\+Manager\+Graph}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily onnx\+Status glow\+::onnxifi\+::\+Host\+Manager\+Graph\+::run (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$}]{ctx,  }\item[{\hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr}}]{output\+Event,  }\item[{onnx\+Trace\+Event\+List $\ast$}]{trace\+Events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Async run \hyperlink{classglow_1_1onnxifi_1_1_host_manager_graph}{Host\+Manager\+Graph} with the given \hyperlink{classglow_1_1_execution_context}{Execution\+Context} {\ttfamily ctx} then signal {\ttfamily output\+Event} when done. {\ttfamily ph\+Name\+To\+Onnx\+Tensor\+Outputs} is a mapping that is generated by the base class \hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph} and should be used to map copy output placeholder tensors back to the given onnxifi tensors. 
+
+Implements \hyperlink{classglow_1_1onnxifi_1_1_graph}{glow\+::onnxifi\+::\+Graph}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Onnxifi/Host\+Manager\+Onnxifi.\+h\item 
+lib/\+Onnxifi/Host\+Manager\+Onnxifi.\+cpp\end{DoxyCompactItemize}

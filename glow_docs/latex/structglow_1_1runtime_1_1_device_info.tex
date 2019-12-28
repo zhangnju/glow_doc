@@ -1,0 +1,62 @@
+\hypertarget{structglow_1_1runtime_1_1_device_info}{}\section{glow\+:\+:runtime\+:\+:Device\+Info Struct Reference}
+\label{structglow_1_1runtime_1_1_device_info}\index{glow\+::runtime\+::\+Device\+Info@{glow\+::runtime\+::\+Device\+Info}}
+
+
+{\ttfamily \#include $<$Runtime\+Types.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_info_adad20514fd6cbf540fc4ac3d884d4ef9}\label{structglow_1_1runtime_1_1_device_info_adad20514fd6cbf540fc4ac3d884d4ef9}} 
+uint64\+\_\+t \hyperlink{structglow_1_1runtime_1_1_device_info_adad20514fd6cbf540fc4ac3d884d4ef9}{available\+Memory}
+\begin{DoxyCompactList}\small\item\em Available memory on device in bytes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_info_a48fdaa5e39cc3cefc11d04d5fe15dd15}\label{structglow_1_1runtime_1_1_device_info_a48fdaa5e39cc3cefc11d04d5fe15dd15}} 
+std\+::string \hyperlink{structglow_1_1runtime_1_1_device_info_a48fdaa5e39cc3cefc11d04d5fe15dd15}{backend\+Name}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classglow_1_1_backend}{Backend} \hyperlink{structglow_1_1_type}{Type}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structglow_1_1runtime_1_1_device_info_a732b81463b0439deec1666f33cef128f}{non\+Supported\+Nodes}
+\item 
+std\+::string \hyperlink{structglow_1_1runtime_1_1_device_info_af83b26fbfab3a0c8397885fa42767fd6}{supported\+Nodes}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_info_a40b28ee8233660b1dd8e48ecab1d6e23}\label{structglow_1_1runtime_1_1_device_info_a40b28ee8233660b1dd8e48ecab1d6e23}} 
+uint64\+\_\+t \hyperlink{structglow_1_1runtime_1_1_device_info_a40b28ee8233660b1dd8e48ecab1d6e23}{sram\+Capacity}
+\begin{DoxyCompactList}\small\item\em Available S\+R\+AM capacity in bytes. \end{DoxyCompactList}\item 
+float \hyperlink{structglow_1_1runtime_1_1_device_info_afda59a78f7d60ed3cab125b778e270cb}{peak\+Compute}
+\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_info_a7beab56e3141c4d1c9026b6f402c284d}\label{structglow_1_1runtime_1_1_device_info_a7beab56e3141c4d1c9026b6f402c284d}} 
+float \hyperlink{structglow_1_1runtime_1_1_device_info_a7beab56e3141c4d1c9026b6f402c284d}{peak\+Dram\+Bw}
+\begin{DoxyCompactList}\small\item\em Peak memory bandwidth from D\+R\+AM on device in bytes/second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_info_a23e3329fd7a86d3e3b10a92028a123bc}\label{structglow_1_1runtime_1_1_device_info_a23e3329fd7a86d3e3b10a92028a123bc}} 
+float \hyperlink{structglow_1_1runtime_1_1_device_info_a23e3329fd7a86d3e3b10a92028a123bc}{peak\+Sram\+Bw}
+\begin{DoxyCompactList}\small\item\em Peak memory bandwidth from S\+R\+AM on device in bytes/second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_info_a5e6b88abed0ee1a978d92ab6a1769f5d}\label{structglow_1_1runtime_1_1_device_info_a5e6b88abed0ee1a978d92ab6a1769f5d}} 
+float \hyperlink{structglow_1_1runtime_1_1_device_info_a5e6b88abed0ee1a978d92ab6a1769f5d}{peak\+P\+C\+Ie\+Bw}
+\begin{DoxyCompactList}\small\item\em Peak ingress/egress P\+C\+I-\/E bandwidth from device in bytes/second. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data structure that contains device constraint information for each device. Used to communicate memory constraints and later costs to the \hyperlink{classglow_1_1_partitioner}{Partitioner}. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1runtime_1_1_device_info_a732b81463b0439deec1666f33cef128f}\label{structglow_1_1runtime_1_1_device_info_a732b81463b0439deec1666f33cef128f}} 
+\index{glow\+::runtime\+::\+Device\+Info@{glow\+::runtime\+::\+Device\+Info}!non\+Supported\+Nodes@{non\+Supported\+Nodes}}
+\index{non\+Supported\+Nodes@{non\+Supported\+Nodes}!glow\+::runtime\+::\+Device\+Info@{glow\+::runtime\+::\+Device\+Info}}
+\subsubsection{\texorpdfstring{non\+Supported\+Nodes}{nonSupportedNodes}}
+{\footnotesize\ttfamily std\+::string glow\+::runtime\+::\+Device\+Info\+::non\+Supported\+Nodes}
+
+A string contains the node names(e.\+g. Add, Div) which are separeted by \char`\"{},\char`\"{}. E.\+g. \char`\"{}\+Div,\+Add\char`\"{}. In \hyperlink{classglow_1_1_partitioner}{Partitioner}, those nodes won\textquotesingle{}t be supported in this backend. \mbox{\Hypertarget{structglow_1_1runtime_1_1_device_info_afda59a78f7d60ed3cab125b778e270cb}\label{structglow_1_1runtime_1_1_device_info_afda59a78f7d60ed3cab125b778e270cb}} 
+\index{glow\+::runtime\+::\+Device\+Info@{glow\+::runtime\+::\+Device\+Info}!peak\+Compute@{peak\+Compute}}
+\index{peak\+Compute@{peak\+Compute}!glow\+::runtime\+::\+Device\+Info@{glow\+::runtime\+::\+Device\+Info}}
+\subsubsection{\texorpdfstring{peak\+Compute}{peakCompute}}
+{\footnotesize\ttfamily float glow\+::runtime\+::\+Device\+Info\+::peak\+Compute}
+
+Peak compute on device in ops/second. Assumes all ops are in int8. T\+O\+DO\+: distinguish between data types with different peak flops. \mbox{\Hypertarget{structglow_1_1runtime_1_1_device_info_af83b26fbfab3a0c8397885fa42767fd6}\label{structglow_1_1runtime_1_1_device_info_af83b26fbfab3a0c8397885fa42767fd6}} 
+\index{glow\+::runtime\+::\+Device\+Info@{glow\+::runtime\+::\+Device\+Info}!supported\+Nodes@{supported\+Nodes}}
+\index{supported\+Nodes@{supported\+Nodes}!glow\+::runtime\+::\+Device\+Info@{glow\+::runtime\+::\+Device\+Info}}
+\subsubsection{\texorpdfstring{supported\+Nodes}{supportedNodes}}
+{\footnotesize\ttfamily std\+::string glow\+::runtime\+::\+Device\+Info\+::supported\+Nodes}
+
+A string contains the node names(e.\+g. Add, Div) which are separeted by \char`\"{},\char`\"{}. E.\+g. \char`\"{}\+Div,\+Add\char`\"{}. In \hyperlink{classglow_1_1_partitioner}{Partitioner}, the complementary set of those nodes won\textquotesingle{}t be supported in this backend. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Runtime/Runtime\+Types.\+h\end{DoxyCompactItemize}

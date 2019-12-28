@@ -1,0 +1,141 @@
+\hypertarget{classglow_1_1runtime_1_1_execution_state}{}\section{glow\+:\+:runtime\+:\+:Execution\+State Class Reference}
+\label{classglow_1_1runtime_1_1_execution_state}\index{glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}}
+
+
+{\ttfamily \#include $<$Execution\+State.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_aff7ae841c3ac20e770aa410bd27d28f4}\label{classglow_1_1runtime_1_1_execution_state_aff7ae841c3ac20e770aa410bd27d28f4}} 
+\hyperlink{classglow_1_1runtime_1_1_execution_state_aff7ae841c3ac20e770aa410bd27d28f4}{Execution\+State} (Run\+Identifier\+Ty id, const \hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$root, \hyperlink{classglow_1_1_thread_executor}{Thread\+Executor} $\ast$executor, std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ result\+Context, Result\+C\+B\+Ty done\+Cb)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_af83141bff6cd70ed3070139bdd0b2088}\label{classglow_1_1runtime_1_1_execution_state_af83141bff6cd70ed3070139bdd0b2088}} 
+void \hyperlink{classglow_1_1runtime_1_1_execution_state_af83141bff6cd70ed3070139bdd0b2088}{init} ()
+\begin{DoxyCompactList}\small\item\em Does the B\+FS traversal and initializes the \hyperlink{classglow_1_1runtime_1_1_execution_state}{Execution\+State}. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ \hyperlink{classglow_1_1runtime_1_1_execution_state_a472587e5d655a0cba62586bcc4cefc61}{get\+Unique\+Node\+Context\+Ptr} (const \hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$node)
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_ac5c4a4207fa388ea36566796990f5c48}\label{classglow_1_1runtime_1_1_execution_state_ac5c4a4207fa388ea36566796990f5c48}} 
+void \hyperlink{classglow_1_1runtime_1_1_execution_state_ac5c4a4207fa388ea36566796990f5c48}{increment\+Inflight\+Nodes} (unsigned increment=1)
+\begin{DoxyCompactList}\small\item\em Increment the count of inflight nodes by {\ttfamily increment} (default is 1). \end{DoxyCompactList}\item 
+bool \hyperlink{classglow_1_1runtime_1_1_execution_state_aecb0acd57723284fe11b39e34886bd90}{decrement\+Inflight\+Nodes} (unsigned decrement=1)
+\item 
+bool \hyperlink{classglow_1_1runtime_1_1_execution_state_af80493d05caab1bf6a0a936269382828}{increment\+Node\+Parents\+Done} (const \hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$node, unsigned increment=1)
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_a78bd840454e363b65944aa23c24ccf4e}\label{classglow_1_1runtime_1_1_execution_state_a78bd840454e363b65944aa23c24ccf4e}} 
+void \hyperlink{classglow_1_1runtime_1_1_execution_state_a78bd840454e363b65944aa23c24ccf4e}{insert\+Into\+Trace\+Context} (\hyperlink{classglow_1_1_trace_context}{Trace\+Context} $\ast$run\+Ctx)
+\begin{DoxyCompactList}\small\item\em Move all events from the provided vector into the top level result\+Contxt. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_aeb7b674123b0d2eda2e82ff090a528ac}\label{classglow_1_1runtime_1_1_execution_state_aeb7b674123b0d2eda2e82ff090a528ac}} 
+void \hyperlink{classglow_1_1runtime_1_1_execution_state_aeb7b674123b0d2eda2e82ff090a528ac}{remove\+Intermediate\+Placeholders} ()
+\begin{DoxyCompactList}\small\item\em Remove intermediate placeholders not required in the final output. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ \hyperlink{classglow_1_1runtime_1_1_execution_state_afb39fb7b89ae3fe9ad5f869349c5f130}{get\+Unique\+Result\+Context\+Ptr} ()
+\item 
+\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$ \hyperlink{classglow_1_1runtime_1_1_execution_state_a53a9f874acff138302be72f0b615a03a}{get\+Raw\+Result\+Context\+Ptr} () const
+\item 
+Result\+C\+B\+Ty \hyperlink{classglow_1_1runtime_1_1_execution_state_ab9f5585825bf7177a2607a7c2fd29247}{get\+Callback} ()
+\item 
+\hyperlink{classglow_1_1_one_err_only}{One\+Err\+Only} \& \hyperlink{classglow_1_1runtime_1_1_execution_state_ae3af7aa022ac86ebf86acd31b68decb5}{get\+Error\+Container} ()
+\item 
+Run\+Identifier\+Ty \hyperlink{classglow_1_1runtime_1_1_execution_state_a0bbac1a5ff3a157183a16e63c81a4f23}{get\+Run\+Id} () const
+\item 
+\hyperlink{classglow_1_1_thread_executor}{Thread\+Executor} $\ast$ \hyperlink{classglow_1_1runtime_1_1_execution_state_a376ef4a61f38f8b4266b7dc63dedb941}{get\+Executor} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_a81379f5485a5b547d279c8ff0ea6b05c}\label{classglow_1_1runtime_1_1_execution_state_a81379f5485a5b547d279c8ff0ea6b05c}} 
+bool \hyperlink{classglow_1_1runtime_1_1_execution_state_a81379f5485a5b547d279c8ff0ea6b05c}{initialized\+\_\+} \{false\}
+\begin{DoxyCompactList}\small\item\em Whether or not this node has been initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class keeps track of the state of execution for a run (identified by the run\+Id). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_aecb0acd57723284fe11b39e34886bd90}\label{classglow_1_1runtime_1_1_execution_state_aecb0acd57723284fe11b39e34886bd90}} 
+\index{glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}!decrement\+Inflight\+Nodes@{decrement\+Inflight\+Nodes}}
+\index{decrement\+Inflight\+Nodes@{decrement\+Inflight\+Nodes}!glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}}
+\subsubsection{\texorpdfstring{decrement\+Inflight\+Nodes()}{decrementInflightNodes()}}
+{\footnotesize\ttfamily bool Execution\+State\+::decrement\+Inflight\+Nodes (\begin{DoxyParamCaption}\item[{unsigned}]{decrement = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Decrement the count of inflight nodes by the {\ttfamily decrement} (default is 1). \begin{DoxyReturn}{Returns}
+true if there are no nodes inflight after the decrement operation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_ab9f5585825bf7177a2607a7c2fd29247}\label{classglow_1_1runtime_1_1_execution_state_ab9f5585825bf7177a2607a7c2fd29247}} 
+\index{glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}!get\+Callback@{get\+Callback}}
+\index{get\+Callback@{get\+Callback}!glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}}
+\subsubsection{\texorpdfstring{get\+Callback()}{getCallback()}}
+{\footnotesize\ttfamily Result\+C\+B\+Ty glow\+::runtime\+::\+Execution\+State\+::get\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the callback for this execution. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_ae3af7aa022ac86ebf86acd31b68decb5}\label{classglow_1_1runtime_1_1_execution_state_ae3af7aa022ac86ebf86acd31b68decb5}} 
+\index{glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}!get\+Error\+Container@{get\+Error\+Container}}
+\index{get\+Error\+Container@{get\+Error\+Container}!glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}}
+\subsubsection{\texorpdfstring{get\+Error\+Container()}{getErrorContainer()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_one_err_only}{One\+Err\+Only}\& glow\+::runtime\+::\+Execution\+State\+::get\+Error\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classglow_1_1_one_err_only}{One\+Err\+Only} Error container for the execution. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_a376ef4a61f38f8b4266b7dc63dedb941}\label{classglow_1_1runtime_1_1_execution_state_a376ef4a61f38f8b4266b7dc63dedb941}} 
+\index{glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}!get\+Executor@{get\+Executor}}
+\index{get\+Executor@{get\+Executor}!glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}}
+\subsubsection{\texorpdfstring{get\+Executor()}{getExecutor()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_thread_executor}{Thread\+Executor}$\ast$ glow\+::runtime\+::\+Execution\+State\+::get\+Executor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classglow_1_1runtime_1_1_executor}{Executor} used for this run. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_a53a9f874acff138302be72f0b615a03a}\label{classglow_1_1runtime_1_1_execution_state_a53a9f874acff138302be72f0b615a03a}} 
+\index{glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}!get\+Raw\+Result\+Context\+Ptr@{get\+Raw\+Result\+Context\+Ptr}}
+\index{get\+Raw\+Result\+Context\+Ptr@{get\+Raw\+Result\+Context\+Ptr}!glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}}
+\subsubsection{\texorpdfstring{get\+Raw\+Result\+Context\+Ptr()}{getRawResultContextPtr()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$ Execution\+State\+::get\+Raw\+Result\+Context\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a raw pointer to the result bindings. This should be not called at the same time as get\+Unique\+Result\+Placeholder\+Bindings\+Ptr(). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_a0bbac1a5ff3a157183a16e63c81a4f23}\label{classglow_1_1runtime_1_1_execution_state_a0bbac1a5ff3a157183a16e63c81a4f23}} 
+\index{glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}!get\+Run\+Id@{get\+Run\+Id}}
+\index{get\+Run\+Id@{get\+Run\+Id}!glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}}
+\subsubsection{\texorpdfstring{get\+Run\+Id()}{getRunId()}}
+{\footnotesize\ttfamily Run\+Identifier\+Ty glow\+::runtime\+::\+Execution\+State\+::get\+Run\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the run ID for the execution. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_a472587e5d655a0cba62586bcc4cefc61}\label{classglow_1_1runtime_1_1_execution_state_a472587e5d655a0cba62586bcc4cefc61}} 
+\index{glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}!get\+Unique\+Node\+Context\+Ptr@{get\+Unique\+Node\+Context\+Ptr}}
+\index{get\+Unique\+Node\+Context\+Ptr@{get\+Unique\+Node\+Context\+Ptr}!glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}}
+\subsubsection{\texorpdfstring{get\+Unique\+Node\+Context\+Ptr()}{getUniqueNodeContextPtr()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ Execution\+State\+::get\+Unique\+Node\+Context\+Ptr (\begin{DoxyParamCaption}\item[{const \hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$}]{node }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+a unique pointer to an input bindings for {\ttfamily node}. This should not be called at the same time as insert\+Into\+Node\+Ctx(). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_afb39fb7b89ae3fe9ad5f869349c5f130}\label{classglow_1_1runtime_1_1_execution_state_afb39fb7b89ae3fe9ad5f869349c5f130}} 
+\index{glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}!get\+Unique\+Result\+Context\+Ptr@{get\+Unique\+Result\+Context\+Ptr}}
+\index{get\+Unique\+Result\+Context\+Ptr@{get\+Unique\+Result\+Context\+Ptr}!glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}}
+\subsubsection{\texorpdfstring{get\+Unique\+Result\+Context\+Ptr()}{getUniqueResultContextPtr()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ Execution\+State\+::get\+Unique\+Result\+Context\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+a unique pointer to the result bindings. This should not be called at the same time as get\+Raw\+Result\+Placeholder\+Bindings\+Ptr() or insert\+Into\+Result\+Ctx(). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_execution_state_af80493d05caab1bf6a0a936269382828}\label{classglow_1_1runtime_1_1_execution_state_af80493d05caab1bf6a0a936269382828}} 
+\index{glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}!increment\+Node\+Parents\+Done@{increment\+Node\+Parents\+Done}}
+\index{increment\+Node\+Parents\+Done@{increment\+Node\+Parents\+Done}!glow\+::runtime\+::\+Execution\+State@{glow\+::runtime\+::\+Execution\+State}}
+\subsubsection{\texorpdfstring{increment\+Node\+Parents\+Done()}{incrementNodeParentsDone()}}
+{\footnotesize\ttfamily bool Execution\+State\+::increment\+Node\+Parents\+Done (\begin{DoxyParamCaption}\item[{const \hyperlink{structglow_1_1runtime_1_1_d_a_g_node}{D\+A\+G\+Node} $\ast$}]{node,  }\item[{unsigned}]{increment = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Increment the count of completed parent nodes for {\ttfamily node}. \begin{DoxyReturn}{Returns}
+true if all parents are done after the increment operation, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Runtime/\+Executor/Execution\+State.\+h\item 
+lib/\+Runtime/\+Executor/Execution\+State.\+cpp\end{DoxyCompactItemize}

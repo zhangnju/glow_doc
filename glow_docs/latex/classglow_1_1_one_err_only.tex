@@ -1,0 +1,58 @@
+\hypertarget{classglow_1_1_one_err_only}{}\section{glow\+:\+:One\+Err\+Only Class Reference}
+\label{classglow_1_1_one_err_only}\index{glow\+::\+One\+Err\+Only@{glow\+::\+One\+Err\+Only}}
+
+
+{\ttfamily \#include $<$Error.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classglow_1_1_one_err_only_a09102f1c51e1431e53b52150e57df247}{set} (\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} err)
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_one_err_only_aaa1698514bac6aae1a6f1396e1310713}{get} ()
+\item 
+bool \hyperlink{classglow_1_1_one_err_only_ada443508e5ef1493096a065387507254}{contains\+Err} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class holds an Error provided via the add method. If an Error is added when the class already holds an Error, it will discard the new Error in favor of the original one. All methods in \hyperlink{classglow_1_1_one_err_only}{One\+Err\+Only} are thread-\/safe. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_one_err_only_ada443508e5ef1493096a065387507254}\label{classglow_1_1_one_err_only_ada443508e5ef1493096a065387507254}} 
+\index{glow\+::\+One\+Err\+Only@{glow\+::\+One\+Err\+Only}!contains\+Err@{contains\+Err}}
+\index{contains\+Err@{contains\+Err}!glow\+::\+One\+Err\+Only@{glow\+::\+One\+Err\+Only}}
+\subsubsection{\texorpdfstring{contains\+Err()}{containsErr()}}
+{\footnotesize\ttfamily bool glow\+::\+One\+Err\+Only\+::contains\+Err (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+true if contains an Error and false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_one_err_only_aaa1698514bac6aae1a6f1396e1310713}\label{classglow_1_1_one_err_only_aaa1698514bac6aae1a6f1396e1310713}} 
+\index{glow\+::\+One\+Err\+Only@{glow\+::\+One\+Err\+Only}!get@{get}}
+\index{get@{get}!glow\+::\+One\+Err\+Only@{glow\+::\+One\+Err\+Only}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} glow\+::\+One\+Err\+Only\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the stored Error clearing out the storage of the class. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_one_err_only_a09102f1c51e1431e53b52150e57df247}\label{classglow_1_1_one_err_only_a09102f1c51e1431e53b52150e57df247}} 
+\index{glow\+::\+One\+Err\+Only@{glow\+::\+One\+Err\+Only}!set@{set}}
+\index{set@{set}!glow\+::\+One\+Err\+Only@{glow\+::\+One\+Err\+Only}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily bool glow\+::\+One\+Err\+Only\+::set (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error}}]{err }\end{DoxyParamCaption})}
+
+Add a new Error {\ttfamily err} to be stored. If an existing Error has already been added then the contents of the new error will be logged and the new err will be discarded. \begin{DoxyReturn}{Returns}
+true if {\ttfamily err} was stored and 
+
+false otherwise. If {\ttfamily err} is an empty Error then does nothing and 
+
+false; 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Error.\+h\item 
+lib/\+Support/Error.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,160 @@
+\hypertarget{classglow_1_1_n_n_p_i_backend}{}\section{glow\+:\+:N\+N\+P\+I\+Backend Class Reference}
+\label{classglow_1_1_n_n_p_i_backend}\index{glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}}
+
+
+This is the Intel Neural-\/\+Network Processor for Inference (N\+N\+PI) backend.  
+
+
+
+
+{\ttfamily \#include $<$N\+N\+P\+I.\+h$>$}
+
+Inheritance diagram for glow\+:\+:N\+N\+P\+I\+Backend\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_n_n_p_i_backend}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_ab83a2560ee01483787b0e25ce9524eb5}\label{classglow_1_1_n_n_p_i_backend_ab83a2560ee01483787b0e25ce9524eb5}} 
+\hyperlink{classglow_1_1_n_n_p_i_backend_ab83a2560ee01483787b0e25ce9524eb5}{N\+N\+P\+I\+Backend} ()=default
+\begin{DoxyCompactList}\small\item\em Ctor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Backend methods.}
+\label{_amgrp74a5605ee0c2530d0af87631bd615b01}%
+ This is the implementation of the \hyperlink{classglow_1_1_backend}{Backend} interface. \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_a6ebd9a995eed0b13737af7ef8b140583}\label{classglow_1_1_n_n_p_i_backend_a6ebd9a995eed0b13737af7ef8b140583}} 
+{\bfseries $\sim$\+N\+N\+P\+I\+Backend} () override=default
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_a16935c6aea516981bc9fcefa47d06293}\label{classglow_1_1_n_n_p_i_backend_a16935c6aea516981bc9fcefa47d06293}} 
+std\+::string {\bfseries get\+Backend\+Name} () const override
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_compiled_function}{Compiled\+Function} $>$ $>$ \hyperlink{classglow_1_1_n_n_p_i_backend_af773c63c90b4d6c89c75c0057e5a6157}{compile} (\hyperlink{classglow_1_1_function}{Function} $\ast$F, const \hyperlink{structglow_1_1_backend_options}{Backend\+Options} \&opts) const override
+\begin{DoxyCompactList}\small\item\em Generate code for input function. \end{DoxyCompactList}\item 
+bool \hyperlink{classglow_1_1_n_n_p_i_backend_a901bcc9a7a53184a2dd74ab26d6dc32c}{is\+Op\+Supported} (const \hyperlink{classglow_1_1_node_info}{Node\+Info} \&NI) const override
+\item 
+bool \hyperlink{classglow_1_1_n_n_p_i_backend_a3e44cab4bf6fa70d239abb2c70a1a465}{should\+Lower} (const \hyperlink{classglow_1_1_node}{Node} $\ast$N) const override
+\item 
+bool \hyperlink{classglow_1_1_n_n_p_i_backend_ae831e2d887416d5ee461f1b898230b66}{should\+Share\+Buffers} () const override
+\item 
+bool \hyperlink{classglow_1_1_n_n_p_i_backend_a83a437d7624740427aa1aa650e381576}{supports\+Partial\+Tensors} () const override
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_af71da0f6261890ee8c370eff659b4e3d}\label{classglow_1_1_n_n_p_i_backend_af71da0f6261890ee8c370eff659b4e3d}} 
+\hyperlink{classglow_1_1_function_pass_pipeline}{Function\+Pass\+Pipeline} \hyperlink{classglow_1_1_n_n_p_i_backend_af71da0f6261890ee8c370eff659b4e3d}{get\+Optimization\+Pipeline} () const override
+\begin{DoxyCompactList}\small\item\em Modify the {\ttfamily optimization\+Opts} however desired. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1runtime_1_1_device_manager}{runtime\+::\+Device\+Manager} $\ast$ \hyperlink{classglow_1_1_n_n_p_i_backend_ad40f8e5a376846bcf4d2f615ffc373e7}{create\+Device\+Manager} (const \hyperlink{structglow_1_1runtime_1_1_device_config}{runtime\+::\+Device\+Config} \&device\+Config) override
+\item 
+bool \hyperlink{classglow_1_1_n_n_p_i_backend_ac467449ebb66b2a44d41da66180d7d91}{transform\+Post\+Lowering} (\hyperlink{classglow_1_1_function}{Function} $\ast$F, \hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx) const override
+\item 
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_a62c16924721b362523e3c0865f3395fc}\label{classglow_1_1_n_n_p_i_backend_a62c16924721b362523e3c0865f3395fc}} 
+static std\+::string {\bfseries get\+Name} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the Intel Neural-\/\+Network Processor for Inference (N\+N\+PI) backend. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_af773c63c90b4d6c89c75c0057e5a6157}\label{classglow_1_1_n_n_p_i_backend_af773c63c90b4d6c89c75c0057e5a6157}} 
+\index{glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}!compile@{compile}}
+\index{compile@{compile}!glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}}
+\subsubsection{\texorpdfstring{compile()}{compile()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_compiled_function}{Compiled\+Function} $>$ $>$ N\+N\+P\+I\+Backend\+::compile (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} $\ast$}]{F,  }\item[{const \hyperlink{structglow_1_1_backend_options}{Backend\+Options} \&}]{opts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Generate code for input function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & given settings in {\ttfamily opts}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classglow_1_1_backend_ab5f153ac5a6b2d1824f7a9c80ffc72f1}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_ad40f8e5a376846bcf4d2f615ffc373e7}\label{classglow_1_1_n_n_p_i_backend_ad40f8e5a376846bcf4d2f615ffc373e7}} 
+\index{glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}!create\+Device\+Manager@{create\+Device\+Manager}}
+\index{create\+Device\+Manager@{create\+Device\+Manager}!glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}}
+\subsubsection{\texorpdfstring{create\+Device\+Manager()}{createDeviceManager()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1runtime_1_1_device_manager}{runtime\+::\+Device\+Manager} $\ast$ N\+N\+P\+I\+Backend\+::create\+Device\+Manager (\begin{DoxyParamCaption}\item[{const \hyperlink{structglow_1_1runtime_1_1_device_config}{runtime\+::\+Device\+Config} \&}]{device\+Config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Create device manager corresponding to the backend based on the device\+Config. 
+
+Reimplemented from \hyperlink{classglow_1_1_backend_ab52ff7cc7a83edb282bea2cbf4b8766e}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_a901bcc9a7a53184a2dd74ab26d6dc32c}\label{classglow_1_1_n_n_p_i_backend_a901bcc9a7a53184a2dd74ab26d6dc32c}} 
+\index{glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}!is\+Op\+Supported@{is\+Op\+Supported}}
+\index{is\+Op\+Supported@{is\+Op\+Supported}!glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}}
+\subsubsection{\texorpdfstring{is\+Op\+Supported()}{isOpSupported()}}
+{\footnotesize\ttfamily bool N\+N\+P\+I\+Backend\+::is\+Op\+Supported (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node_info}{Node\+Info} \&}]{NI }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+whether the provided {\ttfamily NI} is supported by the backend. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1_backend_a386f7e534956c47f8a6b1457d6e87c67}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_a3e44cab4bf6fa70d239abb2c70a1a465}\label{classglow_1_1_n_n_p_i_backend_a3e44cab4bf6fa70d239abb2c70a1a465}} 
+\index{glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}!should\+Lower@{should\+Lower}}
+\index{should\+Lower@{should\+Lower}!glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}}
+\subsubsection{\texorpdfstring{should\+Lower()}{shouldLower()}}
+{\footnotesize\ttfamily bool N\+N\+P\+I\+Backend\+::should\+Lower (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node}{Node} $\ast$}]{N }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if the supplied \hyperlink{classglow_1_1_node}{Node}  should be lowered. By default, all Nodes are candidates for lowering. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classglow_1_1_backend_aba5bec08f5e60626bcc5238f410d632a}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_ae831e2d887416d5ee461f1b898230b66}\label{classglow_1_1_n_n_p_i_backend_ae831e2d887416d5ee461f1b898230b66}} 
+\index{glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}!should\+Share\+Buffers@{should\+Share\+Buffers}}
+\index{should\+Share\+Buffers@{should\+Share\+Buffers}!glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}}
+\subsubsection{\texorpdfstring{should\+Share\+Buffers()}{shouldShareBuffers()}}
+{\footnotesize\ttfamily bool glow\+::\+N\+N\+P\+I\+Backend\+::should\+Share\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{classglow_1_1_backend}{Backend} wants the buffer sharing optimization performed. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classglow_1_1_backend_a5314d00d2739dca36279cd70b4a01145}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_a83a437d7624740427aa1aa650e381576}\label{classglow_1_1_n_n_p_i_backend_a83a437d7624740427aa1aa650e381576}} 
+\index{glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}!supports\+Partial\+Tensors@{supports\+Partial\+Tensors}}
+\index{supports\+Partial\+Tensors@{supports\+Partial\+Tensors}!glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}}
+\subsubsection{\texorpdfstring{supports\+Partial\+Tensors()}{supportsPartialTensors()}}
+{\footnotesize\ttfamily bool glow\+::\+N\+N\+P\+I\+Backend\+::supports\+Partial\+Tensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{classglow_1_1_backend}{Backend} supports partial, unpadded tensors for inputs that can have variable size (e.\+g., embedding indices). 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classglow_1_1_backend_a930556ce803696ca2ffe8d66c9ba5401}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_n_n_p_i_backend_ac467449ebb66b2a44d41da66180d7d91}\label{classglow_1_1_n_n_p_i_backend_ac467449ebb66b2a44d41da66180d7d91}} 
+\index{glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}!transform\+Post\+Lowering@{transform\+Post\+Lowering}}
+\index{transform\+Post\+Lowering@{transform\+Post\+Lowering}!glow\+::\+N\+N\+P\+I\+Backend@{glow\+::\+N\+N\+P\+I\+Backend}}
+\subsubsection{\texorpdfstring{transform\+Post\+Lowering()}{transformPostLowering()}}
+{\footnotesize\ttfamily bool N\+N\+P\+I\+Backend\+::transform\+Post\+Lowering (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} $\ast$}]{F,  }\item[{\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Used by the compiler during graph optimization and before code generation, giving the backend an opportunity to transform the graph before I\+R\+Gen. The backend may insert backend-\/specific nodes. The backend is responsible for cleaning up after itself. \begin{DoxyReturn}{Returns}
+True if the graph was modified. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classglow_1_1_backend_a299652a58fc137b15c69858048980452}{glow\+::\+Backend}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+N\+N\+P\+I/N\+N\+P\+I.\+h\item 
+lib/\+Backends/\+N\+N\+P\+I/N\+N\+P\+I.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,22 @@
+\hypertarget{structllvm_1_1yaml_1_1_float_wrapper}{}\section{llvm\+:\+:yaml\+:\+:Float\+Wrapper Struct Reference}
+\label{structllvm_1_1yaml_1_1_float_wrapper}\index{llvm\+::yaml\+::\+Float\+Wrapper@{llvm\+::yaml\+::\+Float\+Wrapper}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structllvm_1_1yaml_1_1_float_wrapper_a247a2362b92f1fc11da5d21c4d291abb}\label{structllvm_1_1yaml_1_1_float_wrapper_a247a2362b92f1fc11da5d21c4d291abb}} 
+{\bfseries Float\+Wrapper} (float val)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structllvm_1_1yaml_1_1_float_wrapper_a09988b1775c619f1cdb90139b760f8c2}\label{structllvm_1_1yaml_1_1_float_wrapper_a09988b1775c619f1cdb90139b760f8c2}} 
+float {\bfseries val\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The default behavior of Y\+A\+ML is to serialize floating point numbers using the \char`\"{}\%g\char`\"{} format specifier which is not guaranteed to print all the decimals. During a round-\/trip (serialize, deserialize) decimals might be lost and hence precision is lost. Although this might not be critical for some quantization schema, for \char`\"{}\+Symmetric\+With\+Power2\+Scale\char`\"{} the round-\/trip must preserve the exact representation of the floating point scale which is a power of 2. The code below is a workaround to overwrite the behavior of the Y\+A\+ML serializer to print all the digits. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Quantization/Serialization.\+cpp\end{DoxyCompactItemize}

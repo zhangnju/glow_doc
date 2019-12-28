@@ -1,0 +1,56 @@
+This document describes how to add new backend-\/specific node to make further optimization on certain backend.
+
+\subsubsection*{Graph Optimization}
+
+Glow has two levels of IR. The high-\/level IR is a dataflow node-\/based graph. There are several strategies to make transformation on high-\/level IR to achieve better performance on certain backend. Two of these strategies will introduce new backend-\/specific node.
+
+\paragraph*{Operator Fusion}
+
+There are mainly two advantages of operator fusion\+:
+
+
+\begin{DoxyItemize}
+\item Good locality and less memory access
+\item Reduce kernel launch time in G\+PU and specialized accelerators
+\end{DoxyItemize}
+
+In Tensor\+RT, the convolution, bias and Re\+LU layers of various sizes can be combined into a single kernel called C\+BR. A simple analogy is making three separate trips to the supermarket to buy three items with close relation versus buying all three in a single trip, which reduce the time of seeking items and starting trips.
+
+\paragraph*{Data Layout Transformation}
+
+Actually, a Tensor is a view of a block of memory. Besides a pointer to the memory, we also have to get some other descriptions of this block of memory, such as shape, stride and layout.
+
+Different layout leads to different implementation of the operator kernel on certain backend. For example, in the subgraph from Res\+Net50, a {\ttfamily C\+P\+U\+Conv\+D\+K\+K\+C8} node with memory layout modified for efficient S\+I\+MD access is introduced to optimized for C\+PU backend. Please refer to \char`\"{}5.\+3 Use Case\+: Optimizing Resnet50 for the C\+P\+U\char`\"{} in \href{https://arxiv.org/abs/1805.00907}{\tt Glow paper}.
+
+We should take both fast operator kernel implementation and extra potential layout transformation into consideration to get better performance.
+
+\subsubsection*{Steps}
+
+This section is about (1) adding new backend-\/specific nodes and corresponding instructions, (2) how to utilize the A\+P\+Is to add these backend-\/specifics nodes to the graph, and (3) how to have your backend correctly handle this new corresponding backend-\/specific instruction that is I\+R\+Gen\textquotesingle{}d from your backend-\/specific Node.
+
+Here are mainly three steps to add a new backend-\/specific node in Glow\+:
+
+
+\begin{DoxyEnumerate}
+\item Add a backend-\/specific Node {\ttfamily Fused\+AB} to {\ttfamily X\+Specific\+Nodes.\+h}, and a corresponding backend-\/specific Instruction {\ttfamily Fused\+AB} to {\ttfamily X\+Specific\+Instrs.\+h}. Note that the {\ttfamily Fused\+A\+B\+Inst} needs to be marked with {\ttfamily auto\+I\+R\+Gen()} so that the node is automatically I\+R\+Gen\textquotesingle{}d to the instruction, as we currently do not support backend-\/specific I\+R\+Gen.
+\item Add logic to {\ttfamily X\+Backend\+::transform\+Post\+Lowering()} that looks for the pattern of nodes you want to fuse ({\ttfamily A} with a single use by {\ttfamily B}), and replaces all uses of the result of B with the new backend-\/specific {\ttfamily Fused\+A\+B\+Node}.
+\item Have your backend {\ttfamily X} implement {\ttfamily Fused\+A\+B\+Inst}. For example, for the Open\+CL backend, this would mean adding a case to enqueue a kernel for the {\ttfamily Fused\+A\+B\+Inst} to {\ttfamily Open\+C\+L\+Function\+::execute()}, and then adding the corresponding kernel in {\ttfamily kernels.\+cl}.
+\end{DoxyEnumerate}
+
+\subsubsection*{Examples}
+
+\paragraph*{Operator Fusion for Re\+LU in C\+PU}
+
+Re\+LU is max between zero and the input value. Glow lowers {\ttfamily Re\+L\+U\+Node} to two basic low-\/level linear algebra operator nodes, {\ttfamily Splat\+Node} and {\ttfamily Max\+Node}. The {\ttfamily Splat\+Node} first fills a Tensor with zero, and {\ttfamily Max\+Node} compare {\ttfamily Input} with the filling Tensor. We can fuse these two operations which work with the same shape of tensors into a single kernel.
+
+Please refer to the document in \href{https://github.com/pytorch/glow/blob/master/docs/Backends.md#backend-specific-nodes-and-instructions}{\tt Backend} part for source code details on adding a new backend-\/specific C\+P\+U\+Max\+Splat\+Node on C\+PU.
+
+\subsubsection*{References}
+
+
+\begin{DoxyItemize}
+\item \href{https://arxiv.org/abs/1805.00907}{\tt Glow\+: Graph Lowering Compiler Techniques for Neural Networks}
+\item \href{https://arxiv.org/abs/1802.04799}{\tt T\+V\+M\+: An Automated End-\/to-\/\+End Optimizing Compiler for Deep Learning}
+\item \href{https://devblogs.nvidia.com/tensorrt-3-faster-tensorflow-inference/}{\tt Tensor\+RT 3\+: Faster Tensor\+Flow Inference and Volta Support}
+\item \href{https://github.com/pytorch/glow/issues/1549#issuecomment-416283664}{\tt Discussions in Glow issue 1549} 
+\end{DoxyItemize}

@@ -1,0 +1,105 @@
+\hypertarget{classglow_1_1_l_l_v_m_compiled_function}{}\section{glow\+:\+:L\+L\+V\+M\+Compiled\+Function Class Reference}
+\label{classglow_1_1_l_l_v_m_compiled_function}\index{glow\+::\+L\+L\+V\+M\+Compiled\+Function@{glow\+::\+L\+L\+V\+M\+Compiled\+Function}}
+
+
+A Glow IR function compiled using L\+L\+VM.  
+
+
+
+
+{\ttfamily \#include $<$L\+L\+V\+M\+Compiled\+Function.\+h$>$}
+
+Inheritance diagram for glow\+:\+:L\+L\+V\+M\+Compiled\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classglow_1_1_l_l_v_m_compiled_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_compiled_function_adc204f1f491a163b475776d2ccdc7966}\label{classglow_1_1_l_l_v_m_compiled_function_adc204f1f491a163b475776d2ccdc7966}} 
+{\bfseries L\+L\+V\+M\+Compiled\+Function} (std\+::unique\+\_\+ptr$<$ \hyperlink{classllvm_1_1orc_1_1_glow_j_i_t}{llvm\+::orc\+::\+Glow\+J\+IT} $>$ J\+IT, \hyperlink{classglow_1_1runtime_1_1_runtime_bundle}{runtime\+::\+Runtime\+Bundle} \&\&runtime\+Bundle)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Compiled\+Function interface}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1_l_l_v_m_compiled_function_a5589e30446aa3a92f3e94267bded99ae}{execute} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context) override
+\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_compiled_function_a6c4001d8066b22d5d95996a8d92ed24b}\label{classglow_1_1_l_l_v_m_compiled_function_a6c4001d8066b22d5d95996a8d92ed24b}} 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_compiled_function_a6c4001d8066b22d5d95996a8d92ed24b}{collect\+Constants} (const \hyperlink{classglow_1_1_module}{Module} $\ast$module) override
+\begin{DoxyCompactList}\small\item\em Collects constants for runtime. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_compiled_function_ae3d3e8455d95a4062bdd73e7b258b179}\label{classglow_1_1_l_l_v_m_compiled_function_ae3d3e8455d95a4062bdd73e7b258b179}} 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_compiled_function_ae3d3e8455d95a4062bdd73e7b258b179}{translate\+Trace\+Events} (\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$context) const override
+\begin{DoxyCompactList}\small\item\em Read trace events out of this func and write them into /p bindings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_compiled_function_aa824762bc57cd44931e79100e2011f1f}{load\+Placeholders} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$bindings, uint8\+\_\+t $\ast$weights\+Address)
+\item 
+virtual void \hyperlink{classglow_1_1_l_l_v_m_compiled_function_a2ed315983546c8c45f2f34b8d935562b}{update\+Placeholders} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$bindings, uint8\+\_\+t $\ast$weights\+Address)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classllvm_1_1orc_1_1_glow_j_i_t}{llvm\+::orc\+::\+Glow\+J\+IT} $>$ \hyperlink{classglow_1_1_l_l_v_m_compiled_function_a87658ead1ed9f3e8647fcc2e3c925652}{J\+I\+T\+\_\+}
+\item 
+std\+::mutex \hyperlink{classglow_1_1_l_l_v_m_compiled_function_a93d54be72c9d719695d4341a56f70a50}{J\+I\+T\+Lock\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Glow IR function compiled using L\+L\+VM. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_compiled_function_a5589e30446aa3a92f3e94267bded99ae}\label{classglow_1_1_l_l_v_m_compiled_function_a5589e30446aa3a92f3e94267bded99ae}} 
+\index{glow\+::\+L\+L\+V\+M\+Compiled\+Function@{glow\+::\+L\+L\+V\+M\+Compiled\+Function}!execute@{execute}}
+\index{execute@{execute}!glow\+::\+L\+L\+V\+M\+Compiled\+Function@{glow\+::\+L\+L\+V\+M\+Compiled\+Function}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} L\+L\+V\+M\+Compiled\+Function\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_execution_context}{Execution\+Context} $\ast$}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Execute the network and allocate \hyperlink{classglow_1_1_placeholder}{Placeholder} memory with given {\ttfamily bindings} providing mapping between \hyperlink{classglow_1_1_placeholder}{Placeholder} and populated tensor. \begin{DoxyReturn}{Returns}
+an Error if an error ocurred during execution. 
+\end{DoxyReturn}
+Base address for Mutable weights memory block, Inputs and Outputs. 
+
+Implements \hyperlink{classglow_1_1_compiled_function_ac8dd94f2ee7129a435f1701b6a9f419e}{glow\+::\+Compiled\+Function}.
+
+
+
+Reimplemented in \hyperlink{classglow_1_1_c_p_u_function_a31625d840ca33030c6762955c93d82a1}{glow\+::\+C\+P\+U\+Function}.
+
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_compiled_function_aa824762bc57cd44931e79100e2011f1f}\label{classglow_1_1_l_l_v_m_compiled_function_aa824762bc57cd44931e79100e2011f1f}} 
+\index{glow\+::\+L\+L\+V\+M\+Compiled\+Function@{glow\+::\+L\+L\+V\+M\+Compiled\+Function}!load\+Placeholders@{load\+Placeholders}}
+\index{load\+Placeholders@{load\+Placeholders}!glow\+::\+L\+L\+V\+M\+Compiled\+Function@{glow\+::\+L\+L\+V\+M\+Compiled\+Function}}
+\subsubsection{\texorpdfstring{load\+Placeholders()}{loadPlaceholders()}}
+{\footnotesize\ttfamily void L\+L\+V\+M\+Compiled\+Function\+::load\+Placeholders (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$}]{bindings,  }\item[{uint8\+\_\+t $\ast$}]{weights\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Load constant tensors from {\ttfamily bindings} into {\ttfamily weights\+Address}, as defined by the Runtime\+Bundle (pre-\/run). \mbox{\Hypertarget{classglow_1_1_l_l_v_m_compiled_function_a2ed315983546c8c45f2f34b8d935562b}\label{classglow_1_1_l_l_v_m_compiled_function_a2ed315983546c8c45f2f34b8d935562b}} 
+\index{glow\+::\+L\+L\+V\+M\+Compiled\+Function@{glow\+::\+L\+L\+V\+M\+Compiled\+Function}!update\+Placeholders@{update\+Placeholders}}
+\index{update\+Placeholders@{update\+Placeholders}!glow\+::\+L\+L\+V\+M\+Compiled\+Function@{glow\+::\+L\+L\+V\+M\+Compiled\+Function}}
+\subsubsection{\texorpdfstring{update\+Placeholders()}{updatePlaceholders()}}
+{\footnotesize\ttfamily void L\+L\+V\+M\+Compiled\+Function\+::update\+Placeholders (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$}]{bindings,  }\item[{uint8\+\_\+t $\ast$}]{weights\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Load weights from {\ttfamily weights\+Address} into applicable backing tensors in {\ttfamily bindings}, as defined by the Runtime\+Bundle (post-\/run). 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classglow_1_1_l_l_v_m_compiled_function_a87658ead1ed9f3e8647fcc2e3c925652}\label{classglow_1_1_l_l_v_m_compiled_function_a87658ead1ed9f3e8647fcc2e3c925652}} 
+\index{glow\+::\+L\+L\+V\+M\+Compiled\+Function@{glow\+::\+L\+L\+V\+M\+Compiled\+Function}!J\+I\+T\+\_\+@{J\+I\+T\+\_\+}}
+\index{J\+I\+T\+\_\+@{J\+I\+T\+\_\+}!glow\+::\+L\+L\+V\+M\+Compiled\+Function@{glow\+::\+L\+L\+V\+M\+Compiled\+Function}}
+\subsubsection{\texorpdfstring{J\+I\+T\+\_\+}{JIT\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\hyperlink{classllvm_1_1orc_1_1_glow_j_i_t}{llvm\+::orc\+::\+Glow\+J\+IT}$>$ glow\+::\+L\+L\+V\+M\+Compiled\+Function\+::\+J\+I\+T\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+The L\+L\+VM J\+IT engine. The jit must be initialized after the ctor initializes the L\+L\+VM backends. \mbox{\Hypertarget{classglow_1_1_l_l_v_m_compiled_function_a93d54be72c9d719695d4341a56f70a50}\label{classglow_1_1_l_l_v_m_compiled_function_a93d54be72c9d719695d4341a56f70a50}} 
+\index{glow\+::\+L\+L\+V\+M\+Compiled\+Function@{glow\+::\+L\+L\+V\+M\+Compiled\+Function}!J\+I\+T\+Lock\+\_\+@{J\+I\+T\+Lock\+\_\+}}
+\index{J\+I\+T\+Lock\+\_\+@{J\+I\+T\+Lock\+\_\+}!glow\+::\+L\+L\+V\+M\+Compiled\+Function@{glow\+::\+L\+L\+V\+M\+Compiled\+Function}}
+\subsubsection{\texorpdfstring{J\+I\+T\+Lock\+\_\+}{JITLock\_}}
+{\footnotesize\ttfamily std\+::mutex glow\+::\+L\+L\+V\+M\+Compiled\+Function\+::\+J\+I\+T\+Lock\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+The J\+IT can be accessed from multiple threads but is not thread safe, J\+I\+T\+Lock\+\_\+ protects it. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+L\+L\+V\+M\+I\+R\+Code\+Gen/L\+L\+V\+M\+Compiled\+Function.\+h\item 
+lib/\+L\+L\+V\+M\+I\+R\+Code\+Gen/L\+L\+V\+M\+Compiled\+Function.\+cpp\end{DoxyCompactItemize}

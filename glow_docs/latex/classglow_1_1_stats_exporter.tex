@@ -1,0 +1,29 @@
+\hypertarget{classglow_1_1_stats_exporter}{}\section{glow\+:\+:Stats\+Exporter Class Reference}
+\label{classglow_1_1_stats_exporter}\index{glow\+::\+Stats\+Exporter@{glow\+::\+Stats\+Exporter}}
+
+
+{\ttfamily \#include $<$Stats\+Exporter.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_stats_exporter_a9f38009fb3415c9f4d89f3a065a8942a}\label{classglow_1_1_stats_exporter_a9f38009fb3415c9f4d89f3a065a8942a}} 
+virtual \hyperlink{classglow_1_1_stats_exporter_a9f38009fb3415c9f4d89f3a065a8942a}{$\sim$\+Stats\+Exporter} ()
+\begin{DoxyCompactList}\small\item\em Dtor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_stats_exporter_a734b507142ae532e2b0b4db628959d0c}\label{classglow_1_1_stats_exporter_a734b507142ae532e2b0b4db628959d0c}} 
+virtual void \hyperlink{classglow_1_1_stats_exporter_a734b507142ae532e2b0b4db628959d0c}{add\+Time\+Series\+Value} (llvm\+::\+String\+Ref key, double value)=0
+\begin{DoxyCompactList}\small\item\em Add value to a time series. May be called concurrently. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_stats_exporter_ad2a876e0ac6daa8f25446a33a3b385b3}\label{classglow_1_1_stats_exporter_ad2a876e0ac6daa8f25446a33a3b385b3}} 
+virtual void \hyperlink{classglow_1_1_stats_exporter_ad2a876e0ac6daa8f25446a33a3b385b3}{increment\+Counter} (llvm\+::\+String\+Ref key, int64\+\_\+t value=1)=0
+\begin{DoxyCompactList}\small\item\em Increment a counter. May be called concurrently. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_stats_exporter_a9a9cfffb67e1fdc305f68d857c3da262}\label{classglow_1_1_stats_exporter_a9a9cfffb67e1fdc305f68d857c3da262}} 
+virtual void \hyperlink{classglow_1_1_stats_exporter_a9a9cfffb67e1fdc305f68d857c3da262}{set\+Counter} (llvm\+::\+String\+Ref key, int64\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Set a counter. May be called concurrently. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for exporting runtime statistics. The base implementation delegates to any subclass registered via {\ttfamily register\+Stats\+Exporter}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Runtime/Stats\+Exporter.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,39 @@
+\hypertarget{structglow_1_1_load_weight_result}{}\section{glow\+:\+:Load\+Weight\+Result Struct Reference}
+\label{structglow_1_1_load_weight_result}\index{glow\+::\+Load\+Weight\+Result@{glow\+::\+Load\+Weight\+Result}}
+
+
+{\ttfamily \#include $<$Common\+Operator\+Loader.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_load_weight_result_ad2c5680f13b7efcfc8f678302ea9279c}\label{structglow_1_1_load_weight_result_ad2c5680f13b7efcfc8f678302ea9279c}} 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_tensor}{Tensor} $>$ \hyperlink{structglow_1_1_load_weight_result_ad2c5680f13b7efcfc8f678302ea9279c}{t}
+\begin{DoxyCompactList}\small\item\em Main Glow tensor, this is always non-\/null. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_tensor}{Tensor} $>$ \hyperlink{structglow_1_1_load_weight_result_abf5929aeb6bd1c78c687633590fa3b17}{offsets}
+\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_tensor}{Tensor} $>$ \hyperlink{structglow_1_1_load_weight_result_a65c468e00429585f1955b4b0373537e7}{scales}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Result of loading a weight, potentially with additional offsets and scales tensors containing quantization parameters only if the loaded weight was found to have multiple quantization parameters. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1_load_weight_result_abf5929aeb6bd1c78c687633590fa3b17}\label{structglow_1_1_load_weight_result_abf5929aeb6bd1c78c687633590fa3b17}} 
+\index{glow\+::\+Load\+Weight\+Result@{glow\+::\+Load\+Weight\+Result}!offsets@{offsets}}
+\index{offsets@{offsets}!glow\+::\+Load\+Weight\+Result@{glow\+::\+Load\+Weight\+Result}}
+\subsubsection{\texorpdfstring{offsets}{offsets}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\hyperlink{classglow_1_1_tensor}{Tensor}$>$ glow\+::\+Load\+Weight\+Result\+::offsets}
+
+Glow tensor containing quantization offsets. This should only be non-\/null if there is more than 1 quantization parameter found. \mbox{\Hypertarget{structglow_1_1_load_weight_result_a65c468e00429585f1955b4b0373537e7}\label{structglow_1_1_load_weight_result_a65c468e00429585f1955b4b0373537e7}} 
+\index{glow\+::\+Load\+Weight\+Result@{glow\+::\+Load\+Weight\+Result}!scales@{scales}}
+\index{scales@{scales}!glow\+::\+Load\+Weight\+Result@{glow\+::\+Load\+Weight\+Result}}
+\subsubsection{\texorpdfstring{scales}{scales}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\hyperlink{classglow_1_1_tensor}{Tensor}$>$ glow\+::\+Load\+Weight\+Result\+::scales}
+
+Glow tensor containing quantization scales. This should only be non-\/null if there is more than 1 quantization parameter found. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Importer/Common\+Operator\+Loader.\+h\end{DoxyCompactItemize}

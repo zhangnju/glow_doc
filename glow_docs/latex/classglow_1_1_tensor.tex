@@ -1,0 +1,412 @@
+\hypertarget{classglow_1_1_tensor}{}\section{glow\+:\+:Tensor Class Reference}
+\label{classglow_1_1_tensor}\index{glow\+::\+Tensor@{glow\+::\+Tensor}}
+
+
+A class that represents a contiguous n-\/dimensional array (a tensor).  
+
+
+
+
+{\ttfamily \#include $<$Tensor.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a20209a68c0539dfff33c065fe8358073}\label{classglow_1_1_tensor_a20209a68c0539dfff33c065fe8358073}} 
+enum \hyperlink{classglow_1_1_tensor_a20209a68c0539dfff33c065fe8358073}{Init\+Kind} \{ {\bfseries Zero}, 
+{\bfseries Broadcast}, 
+{\bfseries Xavier}
+ \}\begin{DoxyCompactList}\small\item\em Specifies the kind initialization for the tensor. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classglow_1_1_tensor_a574b58e799067a444cb639d0e7791b47}{is\+Unowned} () const
+\item 
+size\+\_\+t \hyperlink{classglow_1_1_tensor_a785ff21009c869e55c614a740c14de6f}{get\+Unpadded\+Size\+In\+Bytes} () const
+\item 
+const \hyperlink{structglow_1_1_type}{Type} \& \hyperlink{classglow_1_1_tensor_aeb7622d21d76d06f4628386c9a2db733}{get\+Type} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a88806a5ba8a0bbb9abff000f6b27d3b6}\label{classglow_1_1_tensor_a88806a5ba8a0bbb9abff000f6b27d3b6}} 
+void \hyperlink{classglow_1_1_tensor_a88806a5ba8a0bbb9abff000f6b27d3b6}{set\+Type} (const \hyperlink{structglow_1_1_type}{Type\+Ref} t)
+\begin{DoxyCompactList}\small\item\em Set the type of the \hyperlink{classglow_1_1_tensor}{Tensor} to {\ttfamily t}. \end{DoxyCompactList}\item 
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{classglow_1_1_tensor_affaeb77d2037ea76e6deea21a13c39dc}{get\+Element\+Type} () const
+\item 
+bool \hyperlink{classglow_1_1_tensor_ac6a74e37ff3771b581afc94291899f20}{is\+In\+Bounds} (llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ indices) const
+\item 
+void \hyperlink{classglow_1_1_tensor_ab55a3efa21c06448d41b445520aaef42}{zero} (bool reset\+Fused\+Scales\+Offsets=false)
+\item 
+llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{classglow_1_1_tensor_ad299b107d8ed92bb55392c4cb97070d9}{dims} () const
+\item 
+size\+\_\+t \hyperlink{classglow_1_1_tensor_a131eef055527823adf306e8928d4ae04}{size} () const
+\item 
+size\+\_\+t \hyperlink{classglow_1_1_tensor_a72f7219f5e4e926d953fd1dc674ff7c0}{actual\+Size} () const
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1_tensor_a5ef091fe78b378595f2ce3adf32b1821}{get\+Size\+In\+Bytes} () const
+\item 
+\hyperlink{classglow_1_1_tensor_pool}{Tensor\+Pool} $\ast$ \hyperlink{classglow_1_1_tensor_a62651514d8a45c6633948a87a1766e56}{get\+Owning\+Pool} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a9a89f5d8183362c9baa5c6645aa8dfe6}\label{classglow_1_1_tensor_a9a89f5d8183362c9baa5c6645aa8dfe6}} 
+\hyperlink{classglow_1_1_tensor_a9a89f5d8183362c9baa5c6645aa8dfe6}{Tensor} ()=default
+\begin{DoxyCompactList}\small\item\em Initialize an empty tensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a4fc52422cff0e2bc0276c808578af1d6}\label{classglow_1_1_tensor_a4fc52422cff0e2bc0276c808578af1d6}} 
+\hyperlink{classglow_1_1_tensor_a4fc52422cff0e2bc0276c808578af1d6}{Tensor} (const std\+::initializer\+\_\+list$<$ float $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Initialize from a list of float literals. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a796a7a282d6a74c575bbbcb075292910}\label{classglow_1_1_tensor_a796a7a282d6a74c575bbbcb075292910}} 
+\hyperlink{classglow_1_1_tensor_a796a7a282d6a74c575bbbcb075292910}{Tensor} (\hyperlink{structglow_1_1_type}{Type\+Ref} ty)
+\begin{DoxyCompactList}\small\item\em Allocate and initialize a new tensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_aa77474ecb6a18092b9b4f180c22f2ec7}\label{classglow_1_1_tensor_aa77474ecb6a18092b9b4f180c22f2ec7}} 
+\hyperlink{classglow_1_1_tensor_aa77474ecb6a18092b9b4f180c22f2ec7}{Tensor} (const \hyperlink{structglow_1_1_type}{Type} \&ty)
+\begin{DoxyCompactList}\small\item\em Allocate and initialize a new tensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a2543ba8816bd9cf0e6a48fec62de3843}\label{classglow_1_1_tensor_a2543ba8816bd9cf0e6a48fec62de3843}} 
+\hyperlink{classglow_1_1_tensor_a2543ba8816bd9cf0e6a48fec62de3843}{Tensor} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{classglow_1_1_tensor_ad299b107d8ed92bb55392c4cb97070d9}{dims})
+\begin{DoxyCompactList}\small\item\em Allocate and initialize a float new tensor. \end{DoxyCompactList}\item 
+\hyperlink{classglow_1_1_tensor_a647b7d8c649846c034297a04d4c3680b}{Tensor} (void $\ast$data, \hyperlink{structglow_1_1_type}{Type\+Ref} ty, size\+\_\+t unpadded\+Size=0)
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_af7361b57a0c9de802be4922c950962dd}\label{classglow_1_1_tensor_af7361b57a0c9de802be4922c950962dd}} 
+\hyperlink{classglow_1_1_tensor_af7361b57a0c9de802be4922c950962dd}{Tensor} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{classglow_1_1_tensor_ad299b107d8ed92bb55392c4cb97070d9}{dims}, float scale, int32\+\_\+t offset)
+\begin{DoxyCompactList}\small\item\em Allocate and initialize a new integer tensor with {\ttfamily scale} and {\ttfamily offset}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_ad8b1303d86eb052f1613a399d83e420e}\label{classglow_1_1_tensor_ad8b1303d86eb052f1613a399d83e420e}} 
+\hyperlink{classglow_1_1_tensor_ad8b1303d86eb052f1613a399d83e420e}{Tensor} (\hyperlink{structglow_1_1_type}{Type\+Ref} ty, \hyperlink{classglow_1_1_tensor_pool}{Tensor\+Pool} $\ast$tensor\+Pool)
+\begin{DoxyCompactList}\small\item\em Allocate a new \hyperlink{classglow_1_1_tensor}{Tensor} managed by the {\ttfamily tensor\+Pool}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a3c34395273dedd71eb372cb1c9a3a102}\label{classglow_1_1_tensor_a3c34395273dedd71eb372cb1c9a3a102}} 
+{\bfseries Tensor} (const \hyperlink{classglow_1_1_tensor}{Tensor} \&other)=delete
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_aaa46002e4a5dce0acb4ad5f130af344f}\label{classglow_1_1_tensor_aaa46002e4a5dce0acb4ad5f130af344f}} 
+\hyperlink{classglow_1_1_tensor}{Tensor} \& {\bfseries operator=} (const \hyperlink{classglow_1_1_tensor}{Tensor} \&other)=delete
+\item 
+void \hyperlink{classglow_1_1_tensor_a57bee99ef7a8498018fe4471574a10e9}{init} (\hyperlink{classglow_1_1_tensor_a20209a68c0539dfff33c065fe8358073}{Init\+Kind} init, float val, \hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \&P\+R\+NG)
+\item 
+\hyperlink{classglow_1_1_tensor}{Tensor} \hyperlink{classglow_1_1_tensor_a2b71346a672215c780ec46d1925c6d03}{get\+Unowned} (llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{classglow_1_1_tensor_ad299b107d8ed92bb55392c4cb97070d9}{dims}, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ offsets=\{\}) const
+\item 
+\hyperlink{classglow_1_1_tensor}{Tensor} \hyperlink{classglow_1_1_tensor_aa2559af82f20a58b5e9da6d136a0684e}{get\+Owned\+Slice} (llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ \hyperlink{classglow_1_1_tensor_ad299b107d8ed92bb55392c4cb97070d9}{dims}, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ offsets=\{\}) const
+\item 
+void \hyperlink{classglow_1_1_tensor_aac6a485f0e461c1be799b7b8ad3b985e}{reset} (const \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$other)
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a746f2e49d32b9630d283c2938eaac48b}\label{classglow_1_1_tensor_a746f2e49d32b9630d283c2938eaac48b}} 
+void {\bfseries reset} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ shape)
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a138bbf066e0c7d1d635395fbd6d3d95e}\label{classglow_1_1_tensor_a138bbf066e0c7d1d635395fbd6d3d95e}} 
+void {\bfseries reset} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} elem\+Ty, llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ shape, float scale, int32\+\_\+t offset)
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_abe39403f76673198519ef4cd764a6ea1}\label{classglow_1_1_tensor_abe39403f76673198519ef4cd764a6ea1}} 
+void \hyperlink{classglow_1_1_tensor_abe39403f76673198519ef4cd764a6ea1}{reset} (const \hyperlink{structglow_1_1_type}{Type} \&T)
+\begin{DoxyCompactList}\small\item\em Assigns a new shape to the tensor and allocates a new buffer. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_tensor_a683bda6d887705f654f3dab72cd384a8}{release} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a36ed951b58cca4db640fffb4bc0eec3e}\label{classglow_1_1_tensor_a36ed951b58cca4db640fffb4bc0eec3e}} 
+{\bfseries Tensor} (\hyperlink{classglow_1_1_tensor}{Tensor} \&\&other) noexcept
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a527a98b0a543ec2bef35c7986ed22376}\label{classglow_1_1_tensor_a527a98b0a543ec2bef35c7986ed22376}} 
+\hyperlink{classglow_1_1_tensor}{Tensor} \& \hyperlink{classglow_1_1_tensor_a527a98b0a543ec2bef35c7986ed22376}{operator=} (\hyperlink{classglow_1_1_tensor}{Tensor} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_ab1c4661689063631677e9607cd04a1e3}\label{classglow_1_1_tensor_ab1c4661689063631677e9607cd04a1e3}} 
+void \hyperlink{classglow_1_1_tensor_ab1c4661689063631677e9607cd04a1e3}{dump} (llvm\+::raw\+\_\+ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_tensor}{Tensor} into provided output stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a9ae22fafeb2d202f793c585876791793}\label{classglow_1_1_tensor_a9ae22fafeb2d202f793c585876791793}} 
+void \hyperlink{classglow_1_1_tensor_a9ae22fafeb2d202f793c585876791793}{dump} () const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_tensor}{Tensor} into default output stream. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_tensor_ac67a66dc3db1ac2e30c341552e93e20d}{dump} (llvm\+::raw\+\_\+ostream \&os, unsigned max\+Num\+Elem) const
+\item 
+void \hyperlink{classglow_1_1_tensor_afb64938f01ec86bb60020eebb1edf4e1}{dump} (unsigned max\+Num\+Elem) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_ad2c052b4150fd71d91a2185873f75bb6}\label{classglow_1_1_tensor_ad2c052b4150fd71d91a2185873f75bb6}} 
+std\+::string \hyperlink{classglow_1_1_tensor_ad2c052b4150fd71d91a2185873f75bb6}{to\+String} () const
+\begin{DoxyCompactList}\small\item\em Dump a textual representation of the \hyperlink{classglow_1_1_tensor}{Tensor} to std\+::string. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classglow_1_1_tensor_a306995cc2d51a2676bef62bca462e2c4}{to\+String} (unsigned max\+Num\+Elem) const
+\item 
+bool \hyperlink{classglow_1_1_tensor_adc8169ad48bdffbd2e8fa18b914cc73a}{is\+Equal} (const \hyperlink{classglow_1_1_tensor}{Tensor} \&other, float allowed\+Error=0.\+0001, bool verbose=true) const
+\item 
+bool \hyperlink{classglow_1_1_tensor_a9e4db56127af74adb5d9d6315bd6813c}{is\+Bitwise\+Equal} (const \hyperlink{classglow_1_1_tensor}{Tensor} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_afe490fac96b01156ffb682cba77a40ed}\label{classglow_1_1_tensor_afe490fac96b01156ffb682cba77a40ed}} 
+bool {\bfseries is\+Equal\+Impl} (const \hyperlink{classglow_1_1_tensor}{Tensor} \&other, bool is\+Bitwise, float allowed\+Error, bool verbose) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a95b433338320e6b2b2ecf76f44da37da}\label{classglow_1_1_tensor_a95b433338320e6b2b2ecf76f44da37da}} 
+void \hyperlink{classglow_1_1_tensor_a95b433338320e6b2b2ecf76f44da37da}{assign} (const \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Update the content and type of the tensor from the tensor {\ttfamily t}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_af51cf4de0d985f4c2d0aa08ac82fbc1c}\label{classglow_1_1_tensor_af51cf4de0d985f4c2d0aa08ac82fbc1c}} 
+void \hyperlink{classglow_1_1_tensor_af51cf4de0d985f4c2d0aa08ac82fbc1c}{copy\+Raw\+From} (const \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Update the raw data of the tensor from the tensor {\ttfamily t}. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_tensor_a2859b4783c2e9c2a661d5d52754147df}{copy\+Slice} (const \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$t, size\+\_\+t slice)
+\item 
+void \hyperlink{classglow_1_1_tensor_a66a32f8e59470dcda68232cbb1a05399}{copy\+Consecutive\+Slices} (const \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$t, size\+\_\+t start\+Slice\+Idx)
+\item 
+{\footnotesize template$<$typename Dest\+Elem\+Type , typename Src\+Elem\+Type $>$ }\\void \hyperlink{classglow_1_1_tensor_ae944ce87f0c192971b423b5fe93baaa9}{copy\+With\+Cast} (const \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$t)
+\item 
+void \hyperlink{classglow_1_1_tensor_a68745fea2e9158f33b0254db7e14be9a}{convert\+To\+Type} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} new\+Ty)
+\item 
+\hyperlink{classglow_1_1_tensor}{Tensor} \hyperlink{classglow_1_1_tensor_a5a65f889cbe5429225fe9d2ffe431a38}{get\+Copy\+Converted\+To\+Type} (\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} new\+Kind) const
+\item 
+void \hyperlink{classglow_1_1_tensor_a111b8eb06a33746bdd520931f940b520}{transpose} (\hyperlink{classglow_1_1_tensor}{Tensor} $\ast$dest, llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ shuffle) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a4ba0d361088018e1cb85a34e5e75b4f5}\label{classglow_1_1_tensor_a4ba0d361088018e1cb85a34e5e75b4f5}} 
+\hyperlink{classglow_1_1_tensor}{Tensor} \hyperlink{classglow_1_1_tensor_a4ba0d361088018e1cb85a34e5e75b4f5}{clone} () const
+\begin{DoxyCompactList}\small\item\em Create a new copy of the current tensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a82545ea7f472278da9479508f1018d18}\label{classglow_1_1_tensor_a82545ea7f472278da9479508f1018d18}} 
+char $\ast$ \hyperlink{classglow_1_1_tensor_a82545ea7f472278da9479508f1018d18}{get\+Unsafe\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em Return the raw unsafe pointer to the tensor payload. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Elem\+Ty  = float$>$ }\\\hyperlink{classglow_1_1_handle}{Handle}$<$ Elem\+Ty $>$ \hyperlink{classglow_1_1_tensor_a3145589191c1d1a4fd79f5c2f1215860}{get\+Handle} () \&
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_acbd750d3ec78725e4629479519430807}\label{classglow_1_1_tensor_acbd750d3ec78725e4629479519430807}} 
+{\footnotesize template$<$class Elem\+Ty  = float$>$ }\\const \hyperlink{classglow_1_1_handle}{Handle}$<$ Elem\+Ty $>$ {\bfseries get\+Handle} () const \&
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a2d10a5548da1a2bea1f4c52874ddf41c}\label{classglow_1_1_tensor_a2d10a5548da1a2bea1f4c52874ddf41c}} 
+{\footnotesize template$<$class Elem\+Ty  = float$>$ }\\\hyperlink{classglow_1_1_handle}{Handle}$<$ Elem\+Ty $>$ \hyperlink{classglow_1_1_tensor_a2d10a5548da1a2bea1f4c52874ddf41c}{get\+Handle} () \&\&=delete
+\begin{DoxyCompactList}\small\item\em If \hyperlink{classglow_1_1_tensor}{Tensor} is rvalue, it is an error to get its \hyperlink{classglow_1_1_handle}{Handle}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a3145589191c1d1a4fd79f5c2f1215860}\label{classglow_1_1_tensor_a3145589191c1d1a4fd79f5c2f1215860}} 
+{\footnotesize template$<$class Elem\+Ty $>$ }\\\hyperlink{classglow_1_1_handle}{Handle}$<$ Elem\+Ty $>$ {\bfseries get\+Handle} () \&
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_acbd750d3ec78725e4629479519430807}\label{classglow_1_1_tensor_acbd750d3ec78725e4629479519430807}} 
+{\footnotesize template$<$class Elem\+Ty $>$ }\\const \hyperlink{classglow_1_1_handle}{Handle}$<$ Elem\+Ty $>$ {\bfseries get\+Handle} () const \&
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_a67ca1a2d91273eaf85fb3d23ba8ce984}\label{classglow_1_1_tensor_a67ca1a2d91273eaf85fb3d23ba8ce984}} 
+{\footnotesize template$<$class Elem\+Ty $>$ }\\class {\bfseries Handle}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that represents a contiguous n-\/dimensional array (a tensor). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_tensor_a647b7d8c649846c034297a04d4c3680b}\label{classglow_1_1_tensor_a647b7d8c649846c034297a04d4c3680b}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!Tensor@{Tensor}}
+\index{Tensor@{Tensor}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{Tensor()}{Tensor()}}
+{\footnotesize\ttfamily glow\+::\+Tensor\+::\+Tensor (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{ty,  }\item[{size\+\_\+t}]{unpadded\+Size = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct an unowned tensor provided an existing payload buffer. This constructor can be used when there is a need to work with \char`\"{}externally\char`\"{} managed payload buffers using \hyperlink{classglow_1_1_tensor}{Tensor} A\+P\+Is. Additionally {\ttfamily unpadded\+Size} can be set to indicate actual size of the inputs. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_tensor_a72f7219f5e4e926d953fd1dc674ff7c0}\label{classglow_1_1_tensor_a72f7219f5e4e926d953fd1dc674ff7c0}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!actual\+Size@{actual\+Size}}
+\index{actual\+Size@{actual\+Size}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{actual\+Size()}{actualSize()}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+Tensor\+::actual\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the actual number of elements in the tensor taking striding into account. Since \hyperlink{classglow_1_1_tensor_a131eef055527823adf306e8928d4ae04}{size()} does not take striding into account, \hyperlink{classglow_1_1_tensor_a131eef055527823adf306e8928d4ae04}{size()} is always $<$= \hyperlink{classglow_1_1_tensor_a72f7219f5e4e926d953fd1dc674ff7c0}{actual\+Size()}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_a68745fea2e9158f33b0254db7e14be9a}\label{classglow_1_1_tensor_a68745fea2e9158f33b0254db7e14be9a}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!convert\+To\+Type@{convert\+To\+Type}}
+\index{convert\+To\+Type@{convert\+To\+Type}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{convert\+To\+Type()}{convertToType()}}
+{\footnotesize\ttfamily void Tensor\+::convert\+To\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{new\+Ty }\end{DoxyParamCaption})}
+
+Convert each element of this tensor to {\ttfamily new\+Ty}. Calls into \hyperlink{classglow_1_1_tensor_a5a65f889cbe5429225fe9d2ffe431a38}{get\+Copy\+Converted\+To\+Type()} to do the conversion, and hence supports converting between whatever Elem\+Kinds it supports. \mbox{\Hypertarget{classglow_1_1_tensor_a66a32f8e59470dcda68232cbb1a05399}\label{classglow_1_1_tensor_a66a32f8e59470dcda68232cbb1a05399}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!copy\+Consecutive\+Slices@{copy\+Consecutive\+Slices}}
+\index{copy\+Consecutive\+Slices@{copy\+Consecutive\+Slices}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{copy\+Consecutive\+Slices()}{copyConsecutiveSlices()}}
+{\footnotesize\ttfamily void glow\+::\+Tensor\+::copy\+Consecutive\+Slices (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$}]{t,  }\item[{size\+\_\+t}]{start\+Slice\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Update the content of the tensor with a sequence of slices from the tensor {\ttfamily t}. A slice is one index from the first dimension of the tensor. The copying operation may overlap the end of the tensor {\ttfamily t} one or more times. This means that the data in the input tensor may be duplicated. \mbox{\Hypertarget{classglow_1_1_tensor_a2859b4783c2e9c2a661d5d52754147df}\label{classglow_1_1_tensor_a2859b4783c2e9c2a661d5d52754147df}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!copy\+Slice@{copy\+Slice}}
+\index{copy\+Slice@{copy\+Slice}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{copy\+Slice()}{copySlice()}}
+{\footnotesize\ttfamily void glow\+::\+Tensor\+::copy\+Slice (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$}]{t,  }\item[{size\+\_\+t}]{slice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Update the content of the tensor with a slice from tensor {\ttfamily t}. A slice is one index from the first dimension of the tensor. \mbox{\Hypertarget{classglow_1_1_tensor_ae944ce87f0c192971b423b5fe93baaa9}\label{classglow_1_1_tensor_ae944ce87f0c192971b423b5fe93baaa9}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!copy\+With\+Cast@{copy\+With\+Cast}}
+\index{copy\+With\+Cast@{copy\+With\+Cast}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{copy\+With\+Cast()}{copyWithCast()}}
+{\footnotesize\ttfamily template$<$typename Dest\+Elem\+Type , typename Src\+Elem\+Type $>$ \\
+void glow\+::\+Tensor\+::copy\+With\+Cast (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Convenience method to copy the content of {\ttfamily t} to this while both have different underlying types. This copy will read each element of {\ttfamily t} as Src\+Elem\+Type and cast them to Dest\+Elem\+Type in this. \mbox{\Hypertarget{classglow_1_1_tensor_ad299b107d8ed92bb55392c4cb97070d9}\label{classglow_1_1_tensor_ad299b107d8ed92bb55392c4cb97070d9}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!dims@{dims}}
+\index{dims@{dims}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{dims()}{dims()}}
+{\footnotesize\ttfamily llvm\+::\+Array\+Ref$<$size\+\_\+t$>$ glow\+::\+Tensor\+::dims (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the shape of the tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_ac67a66dc3db1ac2e30c341552e93e20d}\label{classglow_1_1_tensor_ac67a66dc3db1ac2e30c341552e93e20d}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!dump@{dump}}
+\index{dump@{dump}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{dump()}{dump()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tensor\+::dump (\begin{DoxyParamCaption}\item[{llvm\+::raw\+\_\+ostream \&}]{os,  }\item[{unsigned}]{max\+Num\+Elem }\end{DoxyParamCaption}) const}
+
+Dump a textual representation of a specific number of elements in the \hyperlink{classglow_1_1_tensor}{Tensor} into provided output stream. \mbox{\Hypertarget{classglow_1_1_tensor_afb64938f01ec86bb60020eebb1edf4e1}\label{classglow_1_1_tensor_afb64938f01ec86bb60020eebb1edf4e1}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!dump@{dump}}
+\index{dump@{dump}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{dump()}{dump()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tensor\+::dump (\begin{DoxyParamCaption}\item[{unsigned}]{max\+Num\+Elem }\end{DoxyParamCaption}) const}
+
+Dump a textual representation of a specific number of elements in the \hyperlink{classglow_1_1_tensor}{Tensor} into default output stream. \mbox{\Hypertarget{classglow_1_1_tensor_a5a65f889cbe5429225fe9d2ffe431a38}\label{classglow_1_1_tensor_a5a65f889cbe5429225fe9d2ffe431a38}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!get\+Copy\+Converted\+To\+Type@{get\+Copy\+Converted\+To\+Type}}
+\index{get\+Copy\+Converted\+To\+Type@{get\+Copy\+Converted\+To\+Type}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{get\+Copy\+Converted\+To\+Type()}{getCopyConvertedToType()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tensor}{Tensor} Tensor\+::get\+Copy\+Converted\+To\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind}}]{new\+Kind }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a copy of the \hyperlink{classglow_1_1_tensor}{Tensor} but converted to {\ttfamily new\+Kind}. Currently supports conversion for\+:
+\begin{DoxyItemize}
+\item Float\+Ty to Float16\+Ty
+\item Float16\+Ty to Float\+Ty
+\item U\+Int8\+Fused\+Q\+Ty to U\+Int8\+Fused\+F\+P16\+Q\+Ty 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_affaeb77d2037ea76e6deea21a13c39dc}\label{classglow_1_1_tensor_affaeb77d2037ea76e6deea21a13c39dc}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!get\+Element\+Type@{get\+Element\+Type}}
+\index{get\+Element\+Type@{get\+Element\+Type}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{get\+Element\+Type()}{getElementType()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} glow\+::\+Tensor\+::get\+Element\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the element type of the tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_a3145589191c1d1a4fd79f5c2f1215860}\label{classglow_1_1_tensor_a3145589191c1d1a4fd79f5c2f1215860}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!get\+Handle@{get\+Handle}}
+\index{get\+Handle@{get\+Handle}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{get\+Handle()}{getHandle()}}
+{\footnotesize\ttfamily template$<$class Elem\+Ty  = float$>$ \\
+\hyperlink{classglow_1_1_handle}{Handle}$<$Elem\+Ty$>$ glow\+::\+Tensor\+::get\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&}
+
+\begin{DoxyReturn}{Returns}
+a new handle that points and manages this tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_aa2559af82f20a58b5e9da6d136a0684e}\label{classglow_1_1_tensor_aa2559af82f20a58b5e9da6d136a0684e}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!get\+Owned\+Slice@{get\+Owned\+Slice}}
+\index{get\+Owned\+Slice@{get\+Owned\+Slice}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{get\+Owned\+Slice()}{getOwnedSlice()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tensor}{Tensor} glow\+::\+Tensor\+::get\+Owned\+Slice (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{dims,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{offsets = {\ttfamily \{\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is the same as \hyperlink{classglow_1_1_tensor_a2b71346a672215c780ec46d1925c6d03}{get\+Unowned()} but it produces an owned tensor instead. \begin{DoxyReturn}{Returns}
+owned tensor copied from the data buffer of the current tensor but having different dimensions {\ttfamily dims}. {\ttfamily offsets} represents an optional offset into the tensor representing the location of the first element to start a subview from. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_a62651514d8a45c6633948a87a1766e56}\label{classglow_1_1_tensor_a62651514d8a45c6633948a87a1766e56}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!get\+Owning\+Pool@{get\+Owning\+Pool}}
+\index{get\+Owning\+Pool@{get\+Owning\+Pool}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{get\+Owning\+Pool()}{getOwningPool()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tensor_pool}{Tensor\+Pool}$\ast$ glow\+::\+Tensor\+::get\+Owning\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classglow_1_1_tensor_pool}{Tensor\+Pool} managing this object, or nullptr if it is unmanaged. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_a5ef091fe78b378595f2ce3adf32b1821}\label{classglow_1_1_tensor_a5ef091fe78b378595f2ce3adf32b1821}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!get\+Size\+In\+Bytes@{get\+Size\+In\+Bytes}}
+\index{get\+Size\+In\+Bytes@{get\+Size\+In\+Bytes}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{get\+Size\+In\+Bytes()}{getSizeInBytes()}}
+{\footnotesize\ttfamily uint64\+\_\+t glow\+::\+Tensor\+::get\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of bytes required to store the tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_aeb7622d21d76d06f4628386c9a2db733}\label{classglow_1_1_tensor_aeb7622d21d76d06f4628386c9a2db733}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily const \hyperlink{structglow_1_1_type}{Type}\& glow\+::\+Tensor\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the type of the tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_a2b71346a672215c780ec46d1925c6d03}\label{classglow_1_1_tensor_a2b71346a672215c780ec46d1925c6d03}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!get\+Unowned@{get\+Unowned}}
+\index{get\+Unowned@{get\+Unowned}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{get\+Unowned()}{getUnowned()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tensor}{Tensor} glow\+::\+Tensor\+::get\+Unowned (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{dims,  }\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{offsets = {\ttfamily \{\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+unowned tensor using the same data buffer as the current tensor but having different dimensions {\ttfamily dims}. {\ttfamily offsets} represents an optional offset into the tensor representing the location of the first element to start a subview from. The returned unonwed tensor is essentially a different view or subview on the same data.
+\end{DoxyReturn}
+The lifetime of the returned unowned tensor should be always within the lifetime of its parent tensor, i.\+e. the unowned tensor should not outlive its parent tensor. \mbox{\Hypertarget{classglow_1_1_tensor_a785ff21009c869e55c614a740c14de6f}\label{classglow_1_1_tensor_a785ff21009c869e55c614a740c14de6f}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!get\+Unpadded\+Size\+In\+Bytes@{get\+Unpadded\+Size\+In\+Bytes}}
+\index{get\+Unpadded\+Size\+In\+Bytes@{get\+Unpadded\+Size\+In\+Bytes}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{get\+Unpadded\+Size\+In\+Bytes()}{getUnpaddedSizeInBytes()}}
+{\footnotesize\ttfamily size\+\_\+t Tensor\+::get\+Unpadded\+Size\+In\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the size of the unpadded memory region. If unpadded\+Size\+\_\+ is not set return the size of the entire payload. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_a57bee99ef7a8498018fe4471574a10e9}\label{classglow_1_1_tensor_a57bee99ef7a8498018fe4471574a10e9}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!init@{init}}
+\index{init@{init}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Tensor\+::init (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_tensor_a20209a68c0539dfff33c065fe8358073}{Init\+Kind}}]{init,  }\item[{float}]{val,  }\item[{\hyperlink{classglow_1_1_pseudo_r_n_g}{Pseudo\+R\+NG} \&}]{P\+R\+NG }\end{DoxyParamCaption})}
+
+Initialize the content of the tensor using the {\ttfamily init} method. The value {\ttfamily val} is the initialization parameter. {\ttfamily P\+R\+NG} is used to generate random numbers. Note that if the tensor\textquotesingle{}s kind is Fused, then the fused scaled/offsets will not be modified. \mbox{\Hypertarget{classglow_1_1_tensor_a9e4db56127af74adb5d9d6315bd6813c}\label{classglow_1_1_tensor_a9e4db56127af74adb5d9d6315bd6813c}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!is\+Bitwise\+Equal@{is\+Bitwise\+Equal}}
+\index{is\+Bitwise\+Equal@{is\+Bitwise\+Equal}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{is\+Bitwise\+Equal()}{isBitwiseEqual()}}
+{\footnotesize\ttfamily bool glow\+::\+Tensor\+::is\+Bitwise\+Equal (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_tensor}{Tensor} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the content of the other tensor {\ttfamily other} is bitwise identical to this one. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_adc8169ad48bdffbd2e8fa18b914cc73a}\label{classglow_1_1_tensor_adc8169ad48bdffbd2e8fa18b914cc73a}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!is\+Equal@{is\+Equal}}
+\index{is\+Equal@{is\+Equal}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{is\+Equal()}{isEqual()}}
+{\footnotesize\ttfamily bool glow\+::\+Tensor\+::is\+Equal (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_tensor}{Tensor} \&}]{other,  }\item[{float}]{allowed\+Error = {\ttfamily 0.0001},  }\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the content of the other tensor {\ttfamily other} is identical to this one, given some {\ttfamily allowed\+Error}. If {\ttfamily verbose} and the tensors are not equal, then we will log information about the mismatch (number of elements exceeding allowed error; maximum error and location found; etc.). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_ac6a74e37ff3771b581afc94291899f20}\label{classglow_1_1_tensor_ac6a74e37ff3771b581afc94291899f20}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!is\+In\+Bounds@{is\+In\+Bounds}}
+\index{is\+In\+Bounds@{is\+In\+Bounds}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{is\+In\+Bounds()}{isInBounds()}}
+{\footnotesize\ttfamily bool glow\+::\+Tensor\+::is\+In\+Bounds (\begin{DoxyParamCaption}\item[{llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$}]{indices }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if the coordinate is within the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_a574b58e799067a444cb639d0e7791b47}\label{classglow_1_1_tensor_a574b58e799067a444cb639d0e7791b47}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!is\+Unowned@{is\+Unowned}}
+\index{is\+Unowned@{is\+Unowned}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{is\+Unowned()}{isUnowned()}}
+{\footnotesize\ttfamily bool glow\+::\+Tensor\+::is\+Unowned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if it is an unowned tensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_a683bda6d887705f654f3dab72cd384a8}\label{classglow_1_1_tensor_a683bda6d887705f654f3dab72cd384a8}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!release@{release}}
+\index{release@{release}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void glow\+::\+Tensor\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Releases the data buffer and sets the un\+Owned flag to true. This is useful for keeping metadata around but not the actual contents. \mbox{\Hypertarget{classglow_1_1_tensor_aac6a485f0e461c1be799b7b8ad3b985e}\label{classglow_1_1_tensor_aac6a485f0e461c1be799b7b8ad3b985e}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!reset@{reset}}
+\index{reset@{reset}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void glow\+::\+Tensor\+::reset (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reset the shape and type of this tensor to match the shape and type of {\ttfamily other}. \mbox{\Hypertarget{classglow_1_1_tensor_a131eef055527823adf306e8928d4ae04}\label{classglow_1_1_tensor_a131eef055527823adf306e8928d4ae04}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!size@{size}}
+\index{size@{size}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t glow\+::\+Tensor\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of real meaningful elements in the tensor. Does not take strides into account. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_tensor_a306995cc2d51a2676bef62bca462e2c4}\label{classglow_1_1_tensor_a306995cc2d51a2676bef62bca462e2c4}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily std\+::string Tensor\+::to\+String (\begin{DoxyParamCaption}\item[{unsigned}]{max\+Num\+Elem }\end{DoxyParamCaption}) const}
+
+Dump a textual representation of a specific number of elements in the \hyperlink{classglow_1_1_tensor}{Tensor} to std\+::string. \mbox{\Hypertarget{classglow_1_1_tensor_a111b8eb06a33746bdd520931f940b520}\label{classglow_1_1_tensor_a111b8eb06a33746bdd520931f940b520}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!transpose@{transpose}}
+\index{transpose@{transpose}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily void glow\+::\+Tensor\+::transpose (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_tensor}{Tensor} $\ast$}]{dest,  }\item[{llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$}]{shuffle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Transpose the tensor {\ttfamily src} into the empty tensor {\ttfamily dest}. Shuffle the axis based on the list {\ttfamily shuffle}, where each element is the src index. \mbox{\Hypertarget{classglow_1_1_tensor_ab55a3efa21c06448d41b445520aaef42}\label{classglow_1_1_tensor_ab55a3efa21c06448d41b445520aaef42}} 
+\index{glow\+::\+Tensor@{glow\+::\+Tensor}!zero@{zero}}
+\index{zero@{zero}!glow\+::\+Tensor@{glow\+::\+Tensor}}
+\subsubsection{\texorpdfstring{zero()}{zero()}}
+{\footnotesize\ttfamily void glow\+::\+Tensor\+::zero (\begin{DoxyParamCaption}\item[{bool}]{reset\+Fused\+Scales\+Offsets = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the content of the tensor to zero. If {\ttfamily reset\+Fused\+Scales\+Offsets}, then fused scales/offsets will be set to 1.\+0/0.0 as well. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Base/Tensor.\+h\item 
+lib/\+Base/Tensor.\+cpp\end{DoxyCompactItemize}

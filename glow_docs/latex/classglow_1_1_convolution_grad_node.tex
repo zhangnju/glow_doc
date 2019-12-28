@@ -1,0 +1,143 @@
+\hypertarget{classglow_1_1_convolution_grad_node}{}\section{glow\+:\+:Convolution\+Grad\+Node Class Reference}
+\label{classglow_1_1_convolution_grad_node}\index{glow\+::\+Convolution\+Grad\+Node@{glow\+::\+Convolution\+Grad\+Node}}
+Inheritance diagram for glow\+:\+:Convolution\+Grad\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_convolution_grad_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a5ebdc77f4d9240ffeb66e7507234a2c6}\label{classglow_1_1_convolution_grad_node_a5ebdc77f4d9240ffeb66e7507234a2c6}} 
+enum {\bfseries Input\+Indices} \{ \newline
+{\bfseries Input\+Idx} = 0, 
+{\bfseries Filter\+Idx} = 1, 
+{\bfseries Bias\+Idx} = 2, 
+{\bfseries Original\+Output\+For\+Result\+Idx} = 3, 
+\newline
+{\bfseries Grad\+Of\+Original\+Output\+Named\+Result\+Idx} = 4
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a5a1f13ac8a4fb46d2759033f5ec78c79}\label{classglow_1_1_convolution_grad_node_a5a1f13ac8a4fb46d2759033f5ec78c79}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Grad\+Of\+Input\+Named\+Input\+Idx} = 0, 
+{\bfseries Grad\+Of\+Input\+Named\+Filter\+Idx} = 1, 
+{\bfseries Grad\+Of\+Input\+Named\+Bias\+Idx} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a65811624b82e512861584a4cfd22a1bd}\label{classglow_1_1_convolution_grad_node_a65811624b82e512861584a4cfd22a1bd}} 
+{\bfseries Convolution\+Grad\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{structglow_1_1_node_value}{Node\+Value} Filter, \hyperlink{structglow_1_1_node_value}{Node\+Value} Bias, \hyperlink{structglow_1_1_node_value}{Node\+Value} Original\+Output\+For\+Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Grad\+Of\+Original\+Output\+Named\+Result, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Kernels, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Strides, std\+::vector$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ Pads, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Group, \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} Dilation, \hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{glow\+::\+Convolution\+Layout} Layout, \hyperlink{namespaceglow_ae88f2cc9ccac93130ee1cc326d968a21}{glow\+::\+Fused\+Activation} \hyperlink{namespaceglow_ae88f2cc9ccac93130ee1cc326d968a21}{Fused\+Activation})
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a10be8e9430ebe4ad694e05ad7e932196}\label{classglow_1_1_convolution_grad_node_a10be8e9430ebe4ad694e05ad7e932196}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a9341d3400994d91cee3358d90cca2eb1}\label{classglow_1_1_convolution_grad_node_a9341d3400994d91cee3358d90cca2eb1}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Filter} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_aeb8d1ea4ac0557a1c1e80467e66a6685}\label{classglow_1_1_convolution_grad_node_aeb8d1ea4ac0557a1c1e80467e66a6685}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Bias} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_aa2049c9044967d1009fd4f3b882eff40}\label{classglow_1_1_convolution_grad_node_aa2049c9044967d1009fd4f3b882eff40}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Original\+Output\+For\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_ae5a9195bc3eb5728c9ea3dfa99663bf7}\label{classglow_1_1_convolution_grad_node_ae5a9195bc3eb5728c9ea3dfa99663bf7}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Grad\+Of\+Original\+Output\+Named\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_aef9202a08719c77ea4a8496d6f498dbb}\label{classglow_1_1_convolution_grad_node_aef9202a08719c77ea4a8496d6f498dbb}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Grad\+Of\+Input\+Named\+Input} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a2d5af9a1ff577f1520a7111ee6b1e1c1}\label{classglow_1_1_convolution_grad_node_a2d5af9a1ff577f1520a7111ee6b1e1c1}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Grad\+Of\+Input\+Named\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a8440a172545104098e1bd7ffe12023f4}\label{classglow_1_1_convolution_grad_node_a8440a172545104098e1bd7ffe12023f4}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Grad\+Of\+Input\+Named\+Filter} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a55d29ba2b5ae1a9e5e5a01a3e54eb660}\label{classglow_1_1_convolution_grad_node_a55d29ba2b5ae1a9e5e5a01a3e54eb660}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Grad\+Of\+Input\+Named\+Filter} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a5139200b3aa20137f60998221cacbfef}\label{classglow_1_1_convolution_grad_node_a5139200b3aa20137f60998221cacbfef}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Grad\+Of\+Input\+Named\+Bias} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_af9921361a92e8f88cc90cfae776c4632}\label{classglow_1_1_convolution_grad_node_af9921361a92e8f88cc90cfae776c4632}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Grad\+Of\+Input\+Named\+Bias} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_afa8fc16ab501a6487a74def98d296f9e}\label{classglow_1_1_convolution_grad_node_afa8fc16ab501a6487a74def98d296f9e}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Kernels} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a34a4de2c79abec9309db356cc7f703df}\label{classglow_1_1_convolution_grad_node_a34a4de2c79abec9309db356cc7f703df}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Strides} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a03424405fbd5485dc44802a5429d2647}\label{classglow_1_1_convolution_grad_node_a03424405fbd5485dc44802a5429d2647}} 
+llvm\+::\+Array\+Ref$<$ \hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} $>$ {\bfseries get\+Pads} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_aab51ec5ead3fb8334c8efa4bd8b6d075}\label{classglow_1_1_convolution_grad_node_aab51ec5ead3fb8334c8efa4bd8b6d075}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Group} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_ac9043e7a0074b97631080ecf4ac93c41}\label{classglow_1_1_convolution_grad_node_ac9043e7a0074b97631080ecf4ac93c41}} 
+\hyperlink{namespaceglow_a0ca574644e1e42ef193a9947fb4d8911}{unsigned\+\_\+t} {\bfseries get\+Dilation} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_ac421ec3f138714624f09968366f829ec}\label{classglow_1_1_convolution_grad_node_ac421ec3f138714624f09968366f829ec}} 
+\hyperlink{namespaceglow_aa2f3a33e05699df0f42295c5c4bd1f77}{glow\+::\+Convolution\+Layout} {\bfseries get\+Layout} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a4b655fa85ecf3c29f9450978e5d0c7d8}\label{classglow_1_1_convolution_grad_node_a4b655fa85ecf3c29f9450978e5d0c7d8}} 
+\hyperlink{namespaceglow_ae88f2cc9ccac93130ee1cc326d968a21}{glow\+::\+Fused\+Activation} {\bfseries get\+Fused\+Activation} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a8e209f5ef3d6a8e6f99c3d360a368c8c}\label{classglow_1_1_convolution_grad_node_a8e209f5ef3d6a8e6f99c3d360a368c8c}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a7dba75fb584e7ea410c890fa1192bb7c}\label{classglow_1_1_convolution_grad_node_a7dba75fb584e7ea410c890fa1192bb7c}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a0c809fde8c68152883efaace9d744ea7}\label{classglow_1_1_convolution_grad_node_a0c809fde8c68152883efaace9d744ea7}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_ac6a4abd93ec9ac9353fc38e502a70bac}\label{classglow_1_1_convolution_grad_node_ac6a4abd93ec9ac9353fc38e502a70bac}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_ae7d0753a0633a633f3fb650d8d5f0b11}\label{classglow_1_1_convolution_grad_node_ae7d0753a0633a633f3fb650d8d5f0b11}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a83ffe7031f788649085261c68ce4029c}\label{classglow_1_1_convolution_grad_node_a83ffe7031f788649085261c68ce4029c}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_ac78cb764e5d0820ffbe81c2409776b67}\label{classglow_1_1_convolution_grad_node_ac78cb764e5d0820ffbe81c2409776b67}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a1afa9bc165e187137791b31a4d38b2e8}\label{classglow_1_1_convolution_grad_node_a1afa9bc165e187137791b31a4d38b2e8}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_ad356878a3452704b7a2f3c93bdb2ee69}\label{classglow_1_1_convolution_grad_node_ad356878a3452704b7a2f3c93bdb2ee69}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a4a77552b07493812ff6cb3ed1c516b9c}\label{classglow_1_1_convolution_grad_node_a4a77552b07493812ff6cb3ed1c516b9c}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_convolution_grad_node}{Convolution\+Grad\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_af753e070bf6abb88f81e750722c45c05}\label{classglow_1_1_convolution_grad_node_af753e070bf6abb88f81e750722c45c05}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_a7596131cf3a8210627549b5f9d3481ca}\label{classglow_1_1_convolution_grad_node_a7596131cf3a8210627549b5f9d3481ca}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_aaea8f50335017a2a330126a871b0d50a}\label{classglow_1_1_convolution_grad_node_aaea8f50335017a2a330126a871b0d50a}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_ac80533a7ae9ab22576ecff24cc8a86a9}\label{classglow_1_1_convolution_grad_node_ac80533a7ae9ab22576ecff24cc8a86a9}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_convolution_grad_node_aaf700281dbf1ad2aa21edd89976300c8}\label{classglow_1_1_convolution_grad_node_aaf700281dbf1ad2aa21edd89976300c8}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

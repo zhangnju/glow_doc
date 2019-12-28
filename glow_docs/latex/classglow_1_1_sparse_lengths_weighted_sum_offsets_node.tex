@@ -1,0 +1,114 @@
+\hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node}{}\section{glow\+:\+:Sparse\+Lengths\+Weighted\+Sum\+Offsets\+Node Class Reference}
+\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node}\index{glow\+::\+Sparse\+Lengths\+Weighted\+Sum\+Offsets\+Node@{glow\+::\+Sparse\+Lengths\+Weighted\+Sum\+Offsets\+Node}}
+
+
+Gathers slices of the outer-\/most dimension of Data indexed by Indices vector, and then accumulates them into len(\+Offsets) entries\+: first slice between Offsets\mbox{[}0\mbox{]} and Offsets\mbox{[}1\mbox{]} (or total length if there\textquotesingle{}s only one elem in Offsets) are aggregated to Result\mbox{[}0\mbox{]}, etc. I.\+e. largest offset must be less than or equal to len(\+Indices). Before doing aggregation, each individual slice is scaled by its weight\+: Result\mbox{[}0\mbox{]} = Weights\mbox{[}0\mbox{]} $\ast$ Slice(0) + Weights\mbox{[}1\mbox{]} $\ast$ Slice(1) + ... It implies that len(\+Weights) == len(\+Indices).  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Sparse\+Lengths\+Weighted\+Sum\+Offsets\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.489362cm]{classglow_1_1_sparse_lengths_weighted_sum_offsets_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a15aa0ad0c34f636653a8fd9a0ec8d6e4}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a15aa0ad0c34f636653a8fd9a0ec8d6e4}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Data\+Idx} = 0, 
+{\bfseries Weights\+Idx} = 1, 
+{\bfseries Indices\+Idx} = 2, 
+{\bfseries Offsets\+Idx} = 3
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a7e00ceef908495805b4dbd07bf7b1d94}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a7e00ceef908495805b4dbd07bf7b1d94}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_aba3f50076a8bc49319499b548c917274}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_aba3f50076a8bc49319499b548c917274}} 
+{\bfseries Sparse\+Lengths\+Weighted\+Sum\+Offsets\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_type}{Type\+Ref} Result, \hyperlink{structglow_1_1_node_value}{Node\+Value} Data, \hyperlink{structglow_1_1_node_value}{Node\+Value} Weights, \hyperlink{structglow_1_1_node_value}{Node\+Value} Indices, \hyperlink{structglow_1_1_node_value}{Node\+Value} Offsets)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a316795135d67afb6aa4a52fc7cf01d80}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a316795135d67afb6aa4a52fc7cf01d80}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Data} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a39a31be4023125f6a77406d6e78c3bf7}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a39a31be4023125f6a77406d6e78c3bf7}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Weights} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_af49f015f7466bd9d4c4673b45162fb81}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_af49f015f7466bd9d4c4673b45162fb81}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Indices} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_af5b8c21230b504f5ac7539d9d4ff3f0d}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_af5b8c21230b504f5ac7539d9d4ff3f0d}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Offsets} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_ab5fb8b627efea276251dbcdee18872e0}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_ab5fb8b627efea276251dbcdee18872e0}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a1df410f0e60d039dcd7efbe9eef5583f}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a1df410f0e60d039dcd7efbe9eef5583f}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a3f098c0db345b7587cecb47b271f86b2}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a3f098c0db345b7587cecb47b271f86b2}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a48834bd92946b1ff010e92142b29a3c6}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a48834bd92946b1ff010e92142b29a3c6}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a5ea4bd01304c3515b4fe2f24c323e56e}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a5ea4bd01304c3515b4fe2f24c323e56e}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a7e8d4867c8435302a55a9ad4b0092bfb}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a7e8d4867c8435302a55a9ad4b0092bfb}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_af6350ca4e36887023ce07b8902bce3d3}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_af6350ca4e36887023ce07b8902bce3d3}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a035ed34b91fdf86661ff76e7396c297c}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a035ed34b91fdf86661ff76e7396c297c}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_aa7856f67ea355a53c77333569b39d5dd}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_aa7856f67ea355a53c77333569b39d5dd}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_ac48c77093e3fdeac98dd497085a49a45}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_ac48c77093e3fdeac98dd497085a49a45}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_ac361f39a370e15993a1435ebfd813213}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_ac361f39a370e15993a1435ebfd813213}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_afb66db9efd90742e459191e574ea4b37}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_afb66db9efd90742e459191e574ea4b37}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_sparse_lengths_weighted_sum_offsets_node}{Sparse\+Lengths\+Weighted\+Sum\+Offsets\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_accccfc5ce1c37bc92030a566503bfc4d}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_accccfc5ce1c37bc92030a566503bfc4d}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_ae7231c32c2aac37eef54eb6cc139e915}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_ae7231c32c2aac37eef54eb6cc139e915}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_aa5326a5ae70afdf02e55c235672e9d03}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_aa5326a5ae70afdf02e55c235672e9d03}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_aad9675ea9f0ed5c306d6a6c64f8b586f}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_aad9675ea9f0ed5c306d6a6c64f8b586f}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a0daa6259e21935c62960290c16b80098}\label{classglow_1_1_sparse_lengths_weighted_sum_offsets_node_a0daa6259e21935c62960290c16b80098}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Gathers slices of the outer-\/most dimension of Data indexed by Indices vector, and then accumulates them into len(\+Offsets) entries\+: first slice between Offsets\mbox{[}0\mbox{]} and Offsets\mbox{[}1\mbox{]} (or total length if there\textquotesingle{}s only one elem in Offsets) are aggregated to Result\mbox{[}0\mbox{]}, etc. I.\+e. largest offset must be less than or equal to len(\+Indices). Before doing aggregation, each individual slice is scaled by its weight\+: Result\mbox{[}0\mbox{]} = Weights\mbox{[}0\mbox{]} $\ast$ Slice(0) + Weights\mbox{[}1\mbox{]} $\ast$ Slice(1) + ... It implies that len(\+Weights) == len(\+Indices). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

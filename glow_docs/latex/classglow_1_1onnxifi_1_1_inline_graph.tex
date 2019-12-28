@@ -1,0 +1,46 @@
+\hypertarget{classglow_1_1onnxifi_1_1_inline_graph}{}\section{glow\+:\+:onnxifi\+:\+:Inline\+Graph Class Reference}
+\label{classglow_1_1onnxifi_1_1_inline_graph}\index{glow\+::onnxifi\+::\+Inline\+Graph@{glow\+::onnxifi\+::\+Inline\+Graph}}
+
+
+{\ttfamily \#include $<$Inline\+Onnxifi.\+h$>$}
+
+Inheritance diagram for glow\+:\+:onnxifi\+:\+:Inline\+Graph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1onnxifi_1_1_inline_graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_inline_graph_a1deea6f74b8858b0a42d6f31cc436cea}\label{classglow_1_1onnxifi_1_1_inline_graph_a1deea6f74b8858b0a42d6f31cc436cea}} 
+{\bfseries Inline\+Graph} (\hyperlink{classglow_1_1onnxifi_1_1_backend}{Backend\+Ptr} backend\+Ptr, \hyperlink{structglow_1_1_precision_configuration_a9a40e5e2126e4c6f3e8fe3bab25ff12c}{Quantization\+Mode} quantization\+Mode)
+\item 
+onnx\+Status \hyperlink{classglow_1_1onnxifi_1_1_inline_graph_a989222c5a599a06aef3f7fc1c394f5eb}{init\+Graph} (const void $\ast$onnx\+Model, size\+\_\+t onnx\+Model\+Size, uint32\+\_\+t weight\+Count, const onnx\+Tensor\+Descriptor\+V1 $\ast$weight\+Descriptors, void $\ast$defered\+Blob\+Reader) override
+\item 
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_inline_graph_a391b569886a0403f765dc260641a51af}\label{classglow_1_1onnxifi_1_1_inline_graph_a391b569886a0403f765dc260641a51af}} 
+onnx\+Status {\bfseries run} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ ctx, \hyperlink{classglow_1_1onnxifi_1_1_event}{Event\+Ptr} output\+Event, onnx\+Trace\+Event\+List $\ast$trace\+Events) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Onnxifi \hyperlink{classglow_1_1onnxifi_1_1_graph}{Graph} whose run method just executes the underlying function on the same thread that calls its set\+I\+O\+And\+Run function. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1onnxifi_1_1_inline_graph_a989222c5a599a06aef3f7fc1c394f5eb}\label{classglow_1_1onnxifi_1_1_inline_graph_a989222c5a599a06aef3f7fc1c394f5eb}} 
+\index{glow\+::onnxifi\+::\+Inline\+Graph@{glow\+::onnxifi\+::\+Inline\+Graph}!init\+Graph@{init\+Graph}}
+\index{init\+Graph@{init\+Graph}!glow\+::onnxifi\+::\+Inline\+Graph@{glow\+::onnxifi\+::\+Inline\+Graph}}
+\subsubsection{\texorpdfstring{init\+Graph()}{initGraph()}}
+{\footnotesize\ttfamily onnx\+Status glow\+::onnxifi\+::\+Inline\+Graph\+::init\+Graph (\begin{DoxyParamCaption}\item[{const void $\ast$}]{onnx\+Model,  }\item[{size\+\_\+t}]{onnx\+Model\+Size,  }\item[{uint32\+\_\+t}]{weight\+Count,  }\item[{const onnx\+Tensor\+Descriptor\+V1 $\ast$}]{weight\+Descriptors,  }\item[{void $\ast$}]{defered\+Blob\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Init Glow graph based on the O\+N\+NX model {\ttfamily onnx\+Model} and static trained weights {\ttfamily weight\+Descriptors}. Weights can be read in later by a {\ttfamily defered\+Blob\+Reader}. 
+
+Implements \hyperlink{classglow_1_1onnxifi_1_1_graph_a5f1ec69446852a2515d8aeec487a521a}{glow\+::onnxifi\+::\+Graph}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Onnxifi/Inline\+Onnxifi.\+h\item 
+lib/\+Onnxifi/Inline\+Onnxifi.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,191 @@
+\hypertarget{classglow_1_1_instruction}{}\section{glow\+:\+:Instruction Class Reference}
+\label{classglow_1_1_instruction}\index{glow\+::\+Instruction@{glow\+::\+Instruction}}
+
+
+This represents an instruction in our IR.  
+
+
+
+
+{\ttfamily \#include $<$I\+R.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Instruction\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classglow_1_1_instruction}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_a69db88fac728c82be93f65a360e85459}\label{classglow_1_1_instruction_a69db88fac728c82be93f65a360e85459}} 
+using {\bfseries Operand} = Instruction\+Operand
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglow_1_1_instruction_a2e92685aa7341dd5251930b1a5860e61}{$\sim$\+Instruction} ()
+\item 
+\hyperlink{classglow_1_1_value}{Value} $\ast$ \hyperlink{classglow_1_1_instruction_ac66a99daf4eed52f1ad1f01a4e160c3b}{get\+Predicate} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_ae5d84cad1a4a388821bed798feee5dc9}\label{classglow_1_1_instruction_ae5d84cad1a4a388821bed798feee5dc9}} 
+void \hyperlink{classglow_1_1_instruction_ae5d84cad1a4a388821bed798feee5dc9}{set\+Predicate} (\hyperlink{classglow_1_1_value}{Value} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Assigns a nullable predicate to the current node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_a28f880bf3d4d9fdd7339b90de85cc0ad}\label{classglow_1_1_instruction_a28f880bf3d4d9fdd7339b90de85cc0ad}} 
+bool \hyperlink{classglow_1_1_instruction_a28f880bf3d4d9fdd7339b90de85cc0ad}{has\+Predicate} () const
+\begin{DoxyCompactList}\small\item\em Checks if a predicate is assigned to the current node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_a33b6f1864bf51f67cd8e463c415c676e}\label{classglow_1_1_instruction_a33b6f1864bf51f67cd8e463c415c676e}} 
+void \hyperlink{classglow_1_1_instruction_a33b6f1864bf51f67cd8e463c415c676e}{push\+Operand} (Operand op)
+\begin{DoxyCompactList}\small\item\em Adds a new operand {\ttfamily op} at the end of the operand list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_ae9d82794212299cf2e90282835b632f0}\label{classglow_1_1_instruction_ae9d82794212299cf2e90282835b632f0}} 
+{\bfseries Instruction} (llvm\+::\+String\+Ref name, Kinded\+::\+Kind k, \hyperlink{structglow_1_1_type}{Type\+Ref} Ty)
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_af3a6194aacf60683107613a22a43eb03}\label{classglow_1_1_instruction_af3a6194aacf60683107613a22a43eb03}} 
+{\bfseries Instruction} (llvm\+::\+String\+Ref name, Kinded\+::\+Kind k, \hyperlink{structglow_1_1_type}{Type\+Ref} Ty, llvm\+::\+Array\+Ref$<$ Operand $>$ ops)
+\item 
+bool \hyperlink{classglow_1_1_instruction_ac942cb4d52b84f25c428100a6009ed91}{is\+Inplace\+Op} (unsigned dst\+Idx, unsigned src\+Idx) const
+\item 
+bool \hyperlink{classglow_1_1_instruction_a0f4e0d6d07308627de111ff84a5bd7d4}{is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_a597bfb61ab070b97b246ed75f21f1294}\label{classglow_1_1_instruction_a597bfb61ab070b97b246ed75f21f1294}} 
+void \hyperlink{classglow_1_1_instruction_a597bfb61ab070b97b246ed75f21f1294}{set\+Operand} (unsigned idx, \hyperlink{classglow_1_1_value}{Value} $\ast$v)
+\begin{DoxyCompactList}\small\item\em Sets the ith operand at index {\ttfamily idx} to the value {\ttfamily v}. \end{DoxyCompactList}\item 
+Operand \hyperlink{classglow_1_1_instruction_ad8c63e8f5be507967615ef7247580926}{get\+Operand} (unsigned idx) const
+\item 
+unsigned \hyperlink{classglow_1_1_instruction_a6a6369ae28aa26f79aeb185dc18bf5bb}{get\+Num\+Operands} () const
+\item 
+llvm\+::\+Array\+Ref$<$ Operand $>$ \hyperlink{classglow_1_1_instruction_a5ae3498b8bd63edb56057006673a37da}{get\+Operands} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_a0bd5b0491b63a12fa4278f861ccd46d3}\label{classglow_1_1_instruction_a0bd5b0491b63a12fa4278f861ccd46d3}} 
+void \hyperlink{classglow_1_1_instruction_a0bd5b0491b63a12fa4278f861ccd46d3}{verify\+Use\+List} (const \hyperlink{classglow_1_1_instruction_numbering}{Instruction\+Numbering} \&Instr\+Numbering) const
+\begin{DoxyCompactList}\small\item\em Check the correctness of the use-\/list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_ae470d54098f70fed4ef4ffe986ef6872}\label{classglow_1_1_instruction_ae470d54098f70fed4ef4ffe986ef6872}} 
+void \hyperlink{classglow_1_1_instruction_ae470d54098f70fed4ef4ffe986ef6872}{verify} () const
+\begin{DoxyCompactList}\small\item\em Verify the correctness of the instruction parameters. \end{DoxyCompactList}\item 
+const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$ \hyperlink{classglow_1_1_instruction_a8d10bad794e192db6315a4372fbe829c}{get\+Parent} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_aa071b75e071e9207dac100c52f929ad6}\label{classglow_1_1_instruction_aa071b75e071e9207dac100c52f929ad6}} 
+\hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$ {\bfseries get\+Parent} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_acdad750586399d3a75a84206a3b649f3}\label{classglow_1_1_instruction_acdad750586399d3a75a84206a3b649f3}} 
+void \hyperlink{classglow_1_1_instruction_acdad750586399d3a75a84206a3b649f3}{set\+Parent} (\hyperlink{classglow_1_1_i_r_function}{I\+R\+Function} $\ast$Mod)
+\begin{DoxyCompactList}\small\item\em Sets a parent for the current instruction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_a6fe2f06b8a4b2c3d6308afb223a0238a}\label{classglow_1_1_instruction_a6fe2f06b8a4b2c3d6308afb223a0238a}} 
+void \hyperlink{classglow_1_1_instruction_a6fe2f06b8a4b2c3d6308afb223a0238a}{erase\+From\+Parent} ()
+\begin{DoxyCompactList}\small\item\em Erases instruction from its parent and destroy it. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_instruction_a629b572e87d2515df70e10eac20ee5da}{remove\+From\+Parent} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_af99ddfb73c4e6ecf3391f922f21664bc}\label{classglow_1_1_instruction_af99ddfb73c4e6ecf3391f922f21664bc}} 
+static bool \hyperlink{classglow_1_1_instruction_af99ddfb73c4e6ecf3391f922f21664bc}{is\+Inplace\+Op} (const \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$I, unsigned dst\+Idx, unsigned src\+Idx)
+\begin{DoxyCompactList}\small\item\em The static dispatch version of is\+Inplace\+Op. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_aa6cadb269a9c302e2a4bbd1fcad1c6c6}\label{classglow_1_1_instruction_aa6cadb269a9c302e2a4bbd1fcad1c6c6}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_value}{Value} $\ast$V)
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_a1df4da3756fc6213dbf68adbb9a9b1de}\label{classglow_1_1_instruction_a1df4da3756fc6213dbf68adbb9a9b1de}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_instruction}{Instruction} $\ast$I)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_aeed1aca4261382fc2daf4a05ade9e2b8}\label{classglow_1_1_instruction_aeed1aca4261382fc2daf4a05ade9e2b8}} 
+void \hyperlink{classglow_1_1_instruction_aeed1aca4261382fc2daf4a05ade9e2b8}{dump\+Operands} (llvm\+::raw\+\_\+ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Dump the operands of the instruction into the stream {\ttfamily os}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_instruction_a3d4b02d306f9e8057b1090c476505886}\label{classglow_1_1_instruction_a3d4b02d306f9e8057b1090c476505886}} 
+struct {\bfseries Instruction\+Traits}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This represents an instruction in our IR. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglow_1_1_instruction_a2e92685aa7341dd5251930b1a5860e61}\label{classglow_1_1_instruction_a2e92685aa7341dd5251930b1a5860e61}} 
+\index{glow\+::\+Instruction@{glow\+::\+Instruction}!````~Instruction@{$\sim$\+Instruction}}
+\index{````~Instruction@{$\sim$\+Instruction}!glow\+::\+Instruction@{glow\+::\+Instruction}}
+\subsubsection{\texorpdfstring{$\sim$\+Instruction()}{~Instruction()}}
+{\footnotesize\ttfamily glow\+::\+Instruction\+::$\sim$\+Instruction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prevent the destruction of a derived object via a base-\/class pointer. \hyperlink{structglow_1_1_use}{Use} I\+R\+Function\+::destroy\+Instruction instead. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_instruction_a6a6369ae28aa26f79aeb185dc18bf5bb}\label{classglow_1_1_instruction_a6a6369ae28aa26f79aeb185dc18bf5bb}} 
+\index{glow\+::\+Instruction@{glow\+::\+Instruction}!get\+Num\+Operands@{get\+Num\+Operands}}
+\index{get\+Num\+Operands@{get\+Num\+Operands}!glow\+::\+Instruction@{glow\+::\+Instruction}}
+\subsubsection{\texorpdfstring{get\+Num\+Operands()}{getNumOperands()}}
+{\footnotesize\ttfamily unsigned glow\+::\+Instruction\+::get\+Num\+Operands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of operands. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_instruction_ad8c63e8f5be507967615ef7247580926}\label{classglow_1_1_instruction_ad8c63e8f5be507967615ef7247580926}} 
+\index{glow\+::\+Instruction@{glow\+::\+Instruction}!get\+Operand@{get\+Operand}}
+\index{get\+Operand@{get\+Operand}!glow\+::\+Instruction@{glow\+::\+Instruction}}
+\subsubsection{\texorpdfstring{get\+Operand()}{getOperand()}}
+{\footnotesize\ttfamily Instruction\+::\+Operand Instruction\+::get\+Operand (\begin{DoxyParamCaption}\item[{unsigned}]{idx }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the ith operand. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_instruction_a5ae3498b8bd63edb56057006673a37da}\label{classglow_1_1_instruction_a5ae3498b8bd63edb56057006673a37da}} 
+\index{glow\+::\+Instruction@{glow\+::\+Instruction}!get\+Operands@{get\+Operands}}
+\index{get\+Operands@{get\+Operands}!glow\+::\+Instruction@{glow\+::\+Instruction}}
+\subsubsection{\texorpdfstring{get\+Operands()}{getOperands()}}
+{\footnotesize\ttfamily llvm\+::\+Array\+Ref$<$Operand$>$ glow\+::\+Instruction\+::get\+Operands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the operands of the instruction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_instruction_a8d10bad794e192db6315a4372fbe829c}\label{classglow_1_1_instruction_a8d10bad794e192db6315a4372fbe829c}} 
+\index{glow\+::\+Instruction@{glow\+::\+Instruction}!get\+Parent@{get\+Parent}}
+\index{get\+Parent@{get\+Parent}!glow\+::\+Instruction@{glow\+::\+Instruction}}
+\subsubsection{\texorpdfstring{get\+Parent()}{getParent()}}
+{\footnotesize\ttfamily const \hyperlink{classglow_1_1_i_r_function}{I\+R\+Function}$\ast$ glow\+::\+Instruction\+::get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+parent of current instruction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_instruction_ac66a99daf4eed52f1ad1f01a4e160c3b}\label{classglow_1_1_instruction_ac66a99daf4eed52f1ad1f01a4e160c3b}} 
+\index{glow\+::\+Instruction@{glow\+::\+Instruction}!get\+Predicate@{get\+Predicate}}
+\index{get\+Predicate@{get\+Predicate}!glow\+::\+Instruction@{glow\+::\+Instruction}}
+\subsubsection{\texorpdfstring{get\+Predicate()}{getPredicate()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_value}{Value} $\ast$ Instruction\+::get\+Predicate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the nullable predicate of the current node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_instruction_a0f4e0d6d07308627de111ff84a5bd7d4}\label{classglow_1_1_instruction_a0f4e0d6d07308627de111ff84a5bd7d4}} 
+\index{glow\+::\+Instruction@{glow\+::\+Instruction}!is\+Data\+Parallel@{is\+Data\+Parallel}}
+\index{is\+Data\+Parallel@{is\+Data\+Parallel}!glow\+::\+Instruction@{glow\+::\+Instruction}}
+\subsubsection{\texorpdfstring{is\+Data\+Parallel()}{isDataParallel()}}
+{\footnotesize\ttfamily bool Instruction\+::is\+Data\+Parallel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if this instruction is data parallel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_instruction_ac942cb4d52b84f25c428100a6009ed91}\label{classglow_1_1_instruction_ac942cb4d52b84f25c428100a6009ed91}} 
+\index{glow\+::\+Instruction@{glow\+::\+Instruction}!is\+Inplace\+Op@{is\+Inplace\+Op}}
+\index{is\+Inplace\+Op@{is\+Inplace\+Op}!glow\+::\+Instruction@{glow\+::\+Instruction}}
+\subsubsection{\texorpdfstring{is\+Inplace\+Op()}{isInplaceOp()}}
+{\footnotesize\ttfamily bool glow\+::\+Instruction\+::is\+Inplace\+Op (\begin{DoxyParamCaption}\item[{unsigned}]{dst\+Idx,  }\item[{unsigned}]{src\+Idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if this instruction may reuse the memory buffer read by operand {\ttfamily src\+Idx} for writing the result of the operand at {\ttfamily dst\+Idx}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_instruction_a629b572e87d2515df70e10eac20ee5da}\label{classglow_1_1_instruction_a629b572e87d2515df70e10eac20ee5da}} 
+\index{glow\+::\+Instruction@{glow\+::\+Instruction}!remove\+From\+Parent@{remove\+From\+Parent}}
+\index{remove\+From\+Parent@{remove\+From\+Parent}!glow\+::\+Instruction@{glow\+::\+Instruction}}
+\subsubsection{\texorpdfstring{remove\+From\+Parent()}{removeFromParent()}}
+{\footnotesize\ttfamily void glow\+::\+Instruction\+::remove\+From\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes instruction from its parent, but does not destroy it. The instruction can be inserted elsewhere afterwards. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+I\+R/I\+R.\+h\item 
+lib/\+I\+R/I\+R.\+cpp\end{DoxyCompactItemize}

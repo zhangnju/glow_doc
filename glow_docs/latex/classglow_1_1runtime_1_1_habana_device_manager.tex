@@ -1,0 +1,142 @@
+\hypertarget{classglow_1_1runtime_1_1_habana_device_manager}{}\section{glow\+:\+:runtime\+:\+:Habana\+Device\+Manager Class Reference}
+\label{classglow_1_1runtime_1_1_habana_device_manager}\index{glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}}
+
+
+{\ttfamily \#include $<$Habana\+Device\+Manager.\+h$>$}
+
+Inheritance diagram for glow\+:\+:runtime\+:\+:Habana\+Device\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1runtime_1_1_habana_device_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_habana_device_manager_af813436dab0903d1a60a0ffa8b425bc5}\label{classglow_1_1runtime_1_1_habana_device_manager_af813436dab0903d1a60a0ffa8b425bc5}} 
+\hyperlink{classglow_1_1runtime_1_1_habana_device_manager_af813436dab0903d1a60a0ffa8b425bc5}{Habana\+Device\+Manager} (const \hyperlink{structglow_1_1runtime_1_1_device_config}{Device\+Config} \&config, unsigned num\+Runners=k\+Num\+Runners, unsigned num\+Waiters=k\+Num\+Waiters)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_habana_device_manager_a7230c8d879e16c469c9dd318bc061946}\label{classglow_1_1runtime_1_1_habana_device_manager_a7230c8d879e16c469c9dd318bc061946}} 
+virtual \hyperlink{classglow_1_1runtime_1_1_habana_device_manager_a7230c8d879e16c469c9dd318bc061946}{$\sim$\+Habana\+Device\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_habana_device_manager_af5d6a6e9e3ee7a71356e63c89cda50be}{init} () override
+\item 
+void \hyperlink{classglow_1_1runtime_1_1_habana_device_manager_ac812a0a4b70e788e13255ad144bf792f}{add\+Network} (const \hyperlink{classglow_1_1_module}{Module} $\ast$module, Function\+Map\+Ty functions, Ready\+C\+B\+Ty ready\+CB) override
+\item 
+void \hyperlink{classglow_1_1runtime_1_1_habana_device_manager_a142fa73f19c5731a522a40c2646c070e}{evict\+Network} (std\+::string function\+Name, Evict\+Function\+C\+B\+Ty evict\+CB) override
+\item 
+Run\+Identifier\+Ty \hyperlink{classglow_1_1runtime_1_1_habana_device_manager_a345fedf5deacdb44274ed92de5dcc962}{run\+Function} (std\+::string function\+Name, std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ ctx, runtime\+::\+Result\+C\+B\+Ty result\+CB) override
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_habana_device_manager_a91a046755570923cf1dbb29929aa891b}\label{classglow_1_1runtime_1_1_habana_device_manager_a91a046755570923cf1dbb29929aa891b}} 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{classglow_1_1runtime_1_1_habana_device_manager_a91a046755570923cf1dbb29929aa891b}{stop} (bool block) override
+\begin{DoxyCompactList}\small\item\em Stops execution and shuts down the Device. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classglow_1_1runtime_1_1_habana_device_manager_a2e8ddfc33d1a4f482bcd1f9a5e4e5350}{get\+Maximum\+Memory} () const override
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1runtime_1_1_habana_device_manager_a9b23cdaa74210f057dd3bb6f839e0509}{get\+Available\+Memory} () const override
+\item 
+bool \hyperlink{classglow_1_1runtime_1_1_habana_device_manager_aadaab8c13097bb7ec64b219874549c7f}{is\+Memory\+Available} (uint64\+\_\+t estimate) const override
+\item 
+\hyperlink{structglow_1_1runtime_1_1_device_info}{Device\+Info} \hyperlink{classglow_1_1runtime_1_1_habana_device_manager_a5c73935d669a16b259c37b335caae76d}{get\+Device\+Info} () const override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class implements the \hyperlink{classglow_1_1runtime_1_1_device_manager}{Device\+Manager} interface for Habana devices. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_habana_device_manager_ac812a0a4b70e788e13255ad144bf792f}\label{classglow_1_1runtime_1_1_habana_device_manager_ac812a0a4b70e788e13255ad144bf792f}} 
+\index{glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}!add\+Network@{add\+Network}}
+\index{add\+Network@{add\+Network}!glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}}
+\subsubsection{\texorpdfstring{add\+Network()}{addNetwork()}}
+{\footnotesize\ttfamily void Habana\+Device\+Manager\+::add\+Network (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_module}{Module} $\ast$}]{module,  }\item[{Function\+Map\+Ty}]{functions,  }\item[{Ready\+C\+B\+Ty}]{ready\+CB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Load the provided module into the device, ready\+CB will be called when ready to use. {\ttfamily functions} contains the list of functions to load, keyed by their name (as used in run\+Function). 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_a9bbf9a88f8bf9ddc0ce63590580aa91f}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_habana_device_manager_a142fa73f19c5731a522a40c2646c070e}\label{classglow_1_1runtime_1_1_habana_device_manager_a142fa73f19c5731a522a40c2646c070e}} 
+\index{glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}!evict\+Network@{evict\+Network}}
+\index{evict\+Network@{evict\+Network}!glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}}
+\subsubsection{\texorpdfstring{evict\+Network()}{evictNetwork()}}
+{\footnotesize\ttfamily void Habana\+Device\+Manager\+::evict\+Network (\begin{DoxyParamCaption}\item[{std\+::string}]{function\+Name,  }\item[{Evict\+Function\+C\+B\+Ty}]{evict\+CB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Remove (and delete) the provided function, freeing up space on the device. {\ttfamily evict\+CB} will be called when the operation is completed or attempted and failed. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_a147c76a007db17659c1962c1fa864f9a}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_habana_device_manager_a9b23cdaa74210f057dd3bb6f839e0509}\label{classglow_1_1runtime_1_1_habana_device_manager_a9b23cdaa74210f057dd3bb6f839e0509}} 
+\index{glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}!get\+Available\+Memory@{get\+Available\+Memory}}
+\index{get\+Available\+Memory@{get\+Available\+Memory}!glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}}
+\subsubsection{\texorpdfstring{get\+Available\+Memory()}{getAvailableMemory()}}
+{\footnotesize\ttfamily uint64\+\_\+t Habana\+Device\+Manager\+::get\+Available\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the currently available memory (in bytes) available on the device, for provisioning new networks. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_a5a84ac3b23b9b6d72f50d763913ed8aa}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_habana_device_manager_a5c73935d669a16b259c37b335caae76d}\label{classglow_1_1runtime_1_1_habana_device_manager_a5c73935d669a16b259c37b335caae76d}} 
+\index{glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}!get\+Device\+Info@{get\+Device\+Info}}
+\index{get\+Device\+Info@{get\+Device\+Info}!glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}}
+\subsubsection{\texorpdfstring{get\+Device\+Info()}{getDeviceInfo()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1runtime_1_1_device_info}{Device\+Info} Habana\+Device\+Manager\+::get\+Device\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the \hyperlink{structglow_1_1runtime_1_1_device_info}{Device\+Info} for this device containing peak limits for compute and bandwidths (used in partitioning). 
+
+Reimplemented from \hyperlink{classglow_1_1runtime_1_1_device_manager_aaf319fc3b9aa67c5e053bdf690e89d34}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_habana_device_manager_a2e8ddfc33d1a4f482bcd1f9a5e4e5350}\label{classglow_1_1runtime_1_1_habana_device_manager_a2e8ddfc33d1a4f482bcd1f9a5e4e5350}} 
+\index{glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}!get\+Maximum\+Memory@{get\+Maximum\+Memory}}
+\index{get\+Maximum\+Memory@{get\+Maximum\+Memory}!glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}}
+\subsubsection{\texorpdfstring{get\+Maximum\+Memory()}{getMaximumMemory()}}
+{\footnotesize\ttfamily uint64\+\_\+t Habana\+Device\+Manager\+::get\+Maximum\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the maximum memory (in bytes) available on the device. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_ad158f1c1f9f32b48927f50d48f80decb}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_habana_device_manager_af5d6a6e9e3ee7a71356e63c89cda50be}\label{classglow_1_1runtime_1_1_habana_device_manager_af5d6a6e9e3ee7a71356e63c89cda50be}} 
+\index{glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}!init@{init}}
+\index{init@{init}!glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} Habana\+Device\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+See \hyperlink{classglow_1_1runtime_1_1_device_manager}{Device\+Manager} and \hyperlink{classglow_1_1runtime_1_1_queue_backed_device_manager}{Queue\+Backed\+Device\+Manager} for the documentation of the interface below. 
+
+Reimplemented from \hyperlink{classglow_1_1runtime_1_1_device_manager_a5adbd25b00686c38947ea6380e03e574}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_habana_device_manager_aadaab8c13097bb7ec64b219874549c7f}\label{classglow_1_1runtime_1_1_habana_device_manager_aadaab8c13097bb7ec64b219874549c7f}} 
+\index{glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}!is\+Memory\+Available@{is\+Memory\+Available}}
+\index{is\+Memory\+Available@{is\+Memory\+Available}!glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}}
+\subsubsection{\texorpdfstring{is\+Memory\+Available()}{isMemoryAvailable()}}
+{\footnotesize\ttfamily bool Habana\+Device\+Manager\+::is\+Memory\+Available (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{estimate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if we expect a \hyperlink{classglow_1_1_module}{Module} with the estimated constant size will fit on the device. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_ae9bba4abda9cb6aa1359a69e942feb22}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_habana_device_manager_a345fedf5deacdb44274ed92de5dcc962}\label{classglow_1_1runtime_1_1_habana_device_manager_a345fedf5deacdb44274ed92de5dcc962}} 
+\index{glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}!run\+Function@{run\+Function}}
+\index{run\+Function@{run\+Function}!glow\+::runtime\+::\+Habana\+Device\+Manager@{glow\+::runtime\+::\+Habana\+Device\+Manager}}
+\subsubsection{\texorpdfstring{run\+Function()}{runFunction()}}
+{\footnotesize\ttfamily Run\+Identifier\+Ty Habana\+Device\+Manager\+::run\+Function (\begin{DoxyParamCaption}\item[{std\+::string}]{function\+Name,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$}]{context,  }\item[{runtime\+::\+Result\+C\+B\+Ty}]{result\+CB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Execute the named \hyperlink{classglow_1_1_function}{Function} in an already provided network on the device. function\+Name must match the name of a function already added. The \hyperlink{classglow_1_1_execution_context}{Execution\+Context}\textquotesingle{}s \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} should have all Placeholders allocated. result\+CB will be called with the \hyperlink{classglow_1_1_execution_context}{Execution\+Context} containing output tensors filled, and any generated Trace\+Events. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_ac182cdf6ed9f6903c11fa71c0446d1f7}{glow\+::runtime\+::\+Device\+Manager}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Habana/Habana\+Device\+Manager.\+h\item 
+lib/\+Backends/\+Habana/Habana\+Device\+Manager.\+cpp\end{DoxyCompactItemize}

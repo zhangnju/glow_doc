@@ -1,0 +1,102 @@
+\hypertarget{classglow_1_1_save_node}{}\section{glow\+:\+:Save\+Node Class Reference}
+\label{classglow_1_1_save_node}\index{glow\+::\+Save\+Node@{glow\+::\+Save\+Node}}
+
+
+Specifies a node whose Input will be copied to Output.\+This node prevents graph optimizations from eliminating this node and all of its ancestor nodes. Generally intended to save the final result of a network.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Save\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_save_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a356913a60cd7c27f1e56c2c474ef40d5}\label{classglow_1_1_save_node_a356913a60cd7c27f1e56c2c474ef40d5}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0, 
+{\bfseries Output\+Idx} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_aadf41fffea2920b973068dd346e01f15}\label{classglow_1_1_save_node_aadf41fffea2920b973068dd346e01f15}} 
+enum {\bfseries Result\+Indices} 
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a56dcd7da6c6ee4c42da47ab7a3eb1b9c}\label{classglow_1_1_save_node_a56dcd7da6c6ee4c42da47ab7a3eb1b9c}} 
+{\bfseries Save\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{structglow_1_1_node_value}{Node\+Value} Output)
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_aa998491a935ed059c0d561e39c0d3775}\label{classglow_1_1_save_node_aa998491a935ed059c0d561e39c0d3775}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a122ea1a6e148c43f78abbd7355c3633f}\label{classglow_1_1_save_node_a122ea1a6e148c43f78abbd7355c3633f}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Output} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a3c53610a385a22e946bca8b422e2c375}\label{classglow_1_1_save_node_a3c53610a385a22e946bca8b422e2c375}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a9217bf84d68dba0e5034464ad7da9a3c}\label{classglow_1_1_save_node_a9217bf84d68dba0e5034464ad7da9a3c}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a9eb3345f2553a181a82d5befd6d2c62c}\label{classglow_1_1_save_node_a9eb3345f2553a181a82d5befd6d2c62c}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_af84dd9e9a3bda435428726f93e09e2ad}\label{classglow_1_1_save_node_af84dd9e9a3bda435428726f93e09e2ad}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_af2ea906c1aacb8b0378bca0d7b7f3f00}\label{classglow_1_1_save_node_af2ea906c1aacb8b0378bca0d7b7f3f00}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a5fcd3743a1eaeb27e718da92bd3936ac}\label{classglow_1_1_save_node_a5fcd3743a1eaeb27e718da92bd3936ac}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a916f74b2ce71c22bbbecbc07b3ad5cef}\label{classglow_1_1_save_node_a916f74b2ce71c22bbbecbc07b3ad5cef}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a10be0e415c7c63f6617099e8d0c31c04}\label{classglow_1_1_save_node_a10be0e415c7c63f6617099e8d0c31c04}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a8819f3fe14e41ef7ee3892bfd5ab3fc5}\label{classglow_1_1_save_node_a8819f3fe14e41ef7ee3892bfd5ab3fc5}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_afadae8b3e3f96ddba98989907d8bd33c}\label{classglow_1_1_save_node_afadae8b3e3f96ddba98989907d8bd33c}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_save_node}{Save\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a221cadf3656f15a76d11f3cca9694048}\label{classglow_1_1_save_node_a221cadf3656f15a76d11f3cca9694048}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a80010bf44a1673c44efc9af4a51d4f14}\label{classglow_1_1_save_node_a80010bf44a1673c44efc9af4a51d4f14}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a5e7b64f3321ca510f5d6808c3da5ed3c}\label{classglow_1_1_save_node_a5e7b64f3321ca510f5d6808c3da5ed3c}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a98d1a496bf714d71a42470bc1ac5e816}\label{classglow_1_1_save_node_a98d1a496bf714d71a42470bc1ac5e816}} 
+bool {\bfseries verify} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a0d8d453a108f05052773df617541ad7f}\label{classglow_1_1_save_node_a0d8d453a108f05052773df617541ad7f}} 
+\hyperlink{classglow_1_1_placeholder}{Placeholder} $\ast$ {\bfseries get\+Placeholder} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_save_node_a35782a507b59cb1350e54b9e69fc2e93}\label{classglow_1_1_save_node_a35782a507b59cb1350e54b9e69fc2e93}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Specifies a node whose Input will be copied to Output.\+This node prevents graph optimizations from eliminating this node and all of its ancestor nodes. Generally intended to save the final result of a network. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

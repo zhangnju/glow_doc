@@ -1,0 +1,55 @@
+\hypertarget{structglow_1_1_backend_info}{}\section{glow\+:\+:Backend\+Info Struct Reference}
+\label{structglow_1_1_backend_info}\index{glow\+::\+Backend\+Info@{glow\+::\+Backend\+Info}}
+
+
+{\ttfamily \#include $<$Partitioner\+Types.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_backend_info_ab3daa46687333b95a9626f526afed4d8}\label{structglow_1_1_backend_info_ab3daa46687333b95a9626f526afed4d8}} 
+size\+\_\+t \hyperlink{structglow_1_1_backend_info_ab3daa46687333b95a9626f526afed4d8}{num} = 0
+\begin{DoxyCompactList}\small\item\em Num of the devices which has the same type of backend. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_backend_info_a6ee40a460104df903fc6ab9202bee0d1}\label{structglow_1_1_backend_info_a6ee40a460104df903fc6ab9202bee0d1}} 
+uint64\+\_\+t \hyperlink{structglow_1_1_backend_info_a6ee40a460104df903fc6ab9202bee0d1}{mem\+Size}
+\begin{DoxyCompactList}\small\item\em The memory constraints for this backend. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{structglow_1_1_backend_info_ad39dc08f2df27ed1e7b3ac543cb352d3}{sram\+Capacity}
+\item 
+\mbox{\Hypertarget{structglow_1_1_backend_info_a67140de825fd4c68adda8425c2507e06}\label{structglow_1_1_backend_info_a67140de825fd4c68adda8425c2507e06}} 
+float \hyperlink{structglow_1_1_backend_info_a67140de825fd4c68adda8425c2507e06}{peak\+Compute}
+\begin{DoxyCompactList}\small\item\em Peak compute on device in ops/second. Assumes all ops are in int8. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_backend_info_a882516a34d2a6aaf02235510f2d76203}\label{structglow_1_1_backend_info_a882516a34d2a6aaf02235510f2d76203}} 
+float \hyperlink{structglow_1_1_backend_info_a882516a34d2a6aaf02235510f2d76203}{peak\+Dram\+Bw}
+\begin{DoxyCompactList}\small\item\em Peak memory bandwidth from D\+R\+AM on device in bytes/second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_backend_info_adc88763f2bfc246eba21cbf7f15b9db7}\label{structglow_1_1_backend_info_adc88763f2bfc246eba21cbf7f15b9db7}} 
+float \hyperlink{structglow_1_1_backend_info_adc88763f2bfc246eba21cbf7f15b9db7}{peak\+Sram\+Bw}
+\begin{DoxyCompactList}\small\item\em Peak memory bandwidth from S\+R\+AM on device in bytes/second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_backend_info_a0a307c40f316abe2827e7e7d6d0e6db8}\label{structglow_1_1_backend_info_a0a307c40f316abe2827e7e7d6d0e6db8}} 
+float \hyperlink{structglow_1_1_backend_info_a0a307c40f316abe2827e7e7d6d0e6db8}{peak\+P\+C\+Ie\+Bw}
+\begin{DoxyCompactList}\small\item\em Peak ingress/egress P\+C\+I-\/E bandwidth from device in bytes/second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_backend_info_aa86bd2f0dc9cbb259b3d76ed3fced1b0}\label{structglow_1_1_backend_info_aa86bd2f0dc9cbb259b3d76ed3fced1b0}} 
+\hyperlink{classglow_1_1_backend}{Backend} $\ast$ \hyperlink{structglow_1_1_backend_info_aa86bd2f0dc9cbb259b3d76ed3fced1b0}{backend} = nullptr
+\begin{DoxyCompactList}\small\item\em \hyperlink{classglow_1_1_backend}{Backend} pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_backend_info_abd15c9aa860f0dabe22409f1302b9a9a}\label{structglow_1_1_backend_info_abd15c9aa860f0dabe22409f1302b9a9a}} 
+std\+::set$<$ Kinded\+::\+Kind $>$ \hyperlink{structglow_1_1_backend_info_abd15c9aa860f0dabe22409f1302b9a9a}{non\+Supported\+Nodes\+Kinds}
+\begin{DoxyCompactList}\small\item\em The non-\/supported nodes kind. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_backend_info_a7b8f3298e4d76bb23e57b456c94900e1}\label{structglow_1_1_backend_info_a7b8f3298e4d76bb23e57b456c94900e1}} 
+std\+::set$<$ Kinded\+::\+Kind $>$ \hyperlink{structglow_1_1_backend_info_a7b8f3298e4d76bb23e57b456c94900e1}{supported\+Nodes\+Kinds}
+\begin{DoxyCompactList}\small\item\em The supported nodes kind. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data structure that contains the info for each type of backend used for partitioning. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structglow_1_1_backend_info_ad39dc08f2df27ed1e7b3ac543cb352d3}\label{structglow_1_1_backend_info_ad39dc08f2df27ed1e7b3ac543cb352d3}} 
+\index{glow\+::\+Backend\+Info@{glow\+::\+Backend\+Info}!sram\+Capacity@{sram\+Capacity}}
+\index{sram\+Capacity@{sram\+Capacity}!glow\+::\+Backend\+Info@{glow\+::\+Backend\+Info}}
+\subsubsection{\texorpdfstring{sram\+Capacity}{sramCapacity}}
+{\footnotesize\ttfamily uint64\+\_\+t glow\+::\+Backend\+Info\+::sram\+Capacity}
+
+The following peak\+Compute, peak\+Dram\+Bw, peak\+Sram\+Bw, peak\+P\+C\+Ie\+Bw are from Device\+Info\+\_\+. Available S\+R\+AM capacity in bytes. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Partitioner/Partitioner\+Types.\+h\end{DoxyCompactItemize}

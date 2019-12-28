@@ -1,0 +1,160 @@
+There are two directories used by backends in Glow\+:
+
+
+\begin{DoxyEnumerate}
+\item \href{https://github.com/pytorch/glow/tree/master/tools/ClassGen/Backends}{\tt tools/\+Class\+Gen/\+Backends/}\+: Each backend directory here contains new \href{#backend-specific-nodes-and-instructions-transformations}{\tt backend-\/specific} Nodes and Instructions for the backends. If a backend provides its own backend-\/specific nodes/instructions, they should be included in \href{https://github.com/pytorch/glow/blob/master/tools/ClassGen/NodeGen.cpp}{\tt Node\+Gen}/\href{https://github.com/pytorch/glow/blob/master/tools/ClassGen/InstrGen.cpp}{\tt Instr\+Gen}.
+\item \href{https://github.com/pytorch/glow/tree/master/lib/Backends}{\tt lib/\+Backends/}\+: The implementation of the backend is contained here. This includes derived classes for \href{#backend-abstract-class}{\tt {\ttfamily Backend}} and \href{#compiledfunction-abstract-class}{\tt {\ttfamily Compiled\+Function}}. Each backend needs to be registered through its own registration factory in order to be discovered by Glow, see \href{https://github.com/pytorch/glow/blob/master/lib/Backends/CPU/CPUFactory.cpp}{\tt C\+P\+U\+Backend for example}. And all factories must be linked to the Backends library, see \href{https://github.com/pytorch/glow/blob/master/lib/Backends/CMakeLists.txt}{\tt here}.
+\end{DoxyEnumerate}
+
+\subsubsection*{{\ttfamily Backend} Abstract Class}
+
+All backends in Glow derive from the \href{https://github.com/pytorch/glow/blob/master/include/glow/Backends/Backend.h}{\tt abstract base class {\ttfamily Backend}}. There are two pure virtual functions all backends must implement\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily virtual std\+::unique\+\_\+ptr$<$Compiled\+Function$>$ compile(\+Function $\ast$\+F) const;}
+\begin{DoxyItemize}
+\item This function takes a {\ttfamily Function $\ast$F} to compile with default \href{#backendoptions-helper-struct}{\tt {\ttfamily Backend\+Options}}. It should return a unique pointer to the \href{#compiledfunction-abstract-class}{\tt {\ttfamily Compiled\+Function}} of {\ttfamily F}. If the backend uses Glow low-\/level IR, it can call {\ttfamily generate\+And\+Optimize\+I\+R()} to generate an optimized {\ttfamily I\+R\+Function}.
+\end{DoxyItemize}
+\item {\ttfamily virtual std\+::unique\+\_\+ptr$<$Compiled\+Function$>$ compile(\+Function $\ast$\+F, Backend\+Options \&opts) const;}
+\begin{DoxyItemize}
+\item This function takes a {\ttfamily Function $\ast$F} and the provided \href{#backendoptions-helper-struct}{\tt {\ttfamily Backend\+Options}}. It should return a unique pointer to the \href{#compiledfunction-abstract-class}{\tt {\ttfamily Compiled\+Function}} of {\ttfamily F}. If the backend uses Glow low-\/level IR, it can call {\ttfamily generate\+And\+Optimize\+I\+R()} to generate an optimized {\ttfamily I\+R\+Function}.
+\end{DoxyItemize}
+\item {\ttfamily virtual std\+::vector$<$std\+::unique\+\_\+ptr$<$Compiled\+Function$>$$>$ compile\+Functions(llvm\+::\+Array\+Ref$<$Function $\ast$$>$ functions, Backend\+Options \&opts) const;}
+\begin{DoxyItemize}
+\item This function takes an {\ttfamily Array\+Ref} of {\ttfamily Function $\ast$}s and compiles them using the same {\ttfamily Backend\+Options} object for all functions. This allows the compiler to reason over things like shared constants between functions.
+\end{DoxyItemize}
+\item {\ttfamily virtual bool is\+Op\+Supported(const Node\+Info \&\+N\+I) const;}
+\begin{DoxyItemize}
+\item Returns whether the backend can execute a node with given Node\+Info {\ttfamily NI}, containing the node kind and input and output types. For example, a backend may not support a specific bit-\/width quantization kind (e.\+g. {\ttfamily Int16\+Q\+Ty}) at all, or may only support it for certain operations (e.\+g. {\ttfamily Convolution\+Node\+Kind}). Any {\ttfamily (op\+Kind, input\+Types, output\+Types)} passed in that returns true must be supported by the backed during {\ttfamily compile()} and {\ttfamily execute()}.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Additionally, there are virtual functions that backends can override\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily virtual bool transform\+Post\+Lowering(\+Function $\ast$\+F, Compilation\+Context \&cctx) const;}
+\begin{DoxyItemize}
+\item Allow the backend to transform the {\ttfamily Function $\ast$F} after \href{https://github.com/pytorch/glow/blob/master/docs/IR.md#node-lowering}{\tt node lowering} occurs, given the {\ttfamily Compilation\+Context}. For example, the C\+PU backend prefers to transform Max\+Nodes, which take a Splat\+Node as an input, into a https\+://github.com/pytorch/glow/blob/master/docs/\+New\+Backend\+Specific\+Node.\+md \char`\"{}backend-\/specific\char`\"{} C\+P\+U\+Max\+Splat\+Node, which takes a scalar value as a member input instead of a Splat\+Node. This should be done after node lowering, as Relu\+Nodes are lowered into Max\+Nodes. See \href{#backend-specific-nodes-and-instructions-transformations}{\tt below} for more information.
+\end{DoxyItemize}
+\item {\ttfamily virtual bool verify(const Function \&\+F) const;}
+\begin{DoxyItemize}
+\item Verifies that {\ttfamily Function \&F} conforms to the backend-\/dependent graph constraints.
+\end{DoxyItemize}
+\item {\ttfamily virtual bool verify(const I\+R\+Function \&\+I\+R) const;}
+\begin{DoxyItemize}
+\item Verifies that {\ttfamily I\+R\+Function \&IR} conforms to the backend-\/specific constraints.
+\end{DoxyItemize}
+\item {\ttfamily virtual bool should\+Lower(const Node $\ast$\+N) const;}
+\begin{DoxyItemize}
+\item Allow the backend to prevent lowering for some {\ttfamily Node $\ast$N}. For example, if a backend wants to fuse a {\ttfamily Relu\+Node} into a {\ttfamily Conv\+Node} to create some backend-\/specific node {\ttfamily Conv\+Relu\+Node}, then it may prevent lowering for {\ttfamily Relu\+Node}. Then during {\ttfamily transform\+Post\+Lowering()} it can look for patterns of {\ttfamily Conv\+Node} followed by {\ttfamily Relu\+Node} to swap out for {\ttfamily Conv\+Relu\+Node}. Another example is if a backend supports executing a Fully\+Connected operator, it would want to prevent lowering for it and provide a backend-\/specific Instruction for the Fully\+Connected\+Node to be \href{https://github.com/pytorch/glow/blob/master/docs/IR.md#low-level-ir}{\tt I\+R\+Gen\textquotesingle{}d} into. Note that I\+R\+Gen for a Node can be specified via the https\+://github.com/pytorch/glow/blob/master/docs/\+Class\+Gen.\+md \char`\"{}\+Class\+Gen\char`\"{} {\ttfamily auto\+I\+R\+Gen(\char`\"{}\+Node\+Name\char`\"{})} call. See \href{#backend-specific-nodes-and-instructions-transformations}{\tt below} for more information. Returns true if {\ttfamily N} should be lowered.
+\end{DoxyItemize}
+\item {\ttfamily virtual bool should\+Share\+Buffers() const;}
+\begin{DoxyItemize}
+\item Allow the backend to disable the buffer sharing optimization. This may be preferred by backends which would like to do their own memory optimizations. Returns true by default.
+\end{DoxyItemize}
+\item {\ttfamily virtual void save(Function $\ast$F, llvm\+::\+String\+Ref output\+Dir, llvm\+::\+String\+Ref bundle\+Name, llvm\+::\+String\+Ref main\+Entry\+Name) const;}
+\begin{DoxyItemize}
+\item Save a https\+://github.com/pytorch/glow/blob/master/docs/\+A\+O\+T.\+md \char`\"{}standalone executable
+    bundle\char`\"{}, where the provided {\ttfamily Function $\ast$F} is compiled and then saved to {\ttfamily output\+Dir} with bundle name {\ttfamily bundle\+Name} and main entry name {\ttfamily main\+Entry\+Name}.
+\end{DoxyItemize}
+\item {\ttfamily virtual bool generate\+Inst(\+Node $\ast$\+N, I\+R\+Gen\+Visitor \&irgen) const;}
+\begin{DoxyItemize}
+\item Allow the backend to custom lower from Node to Instruction IR. Returns true if lowering is performed, false otherwise.
+\end{DoxyItemize}
+\item {\ttfamily virtual Function\+Pass\+Pipeline get\+Optimization\+Pipeline() const;}
+\begin{DoxyItemize}
+\item Allows the backend to customize the graph optimizations that are performed when compiling a Function. Backend returns the \char`\"{}\+Default\+Graph\+Optimization\+Pass\+Pipeline\char`\"{}, which contains nearly all of the optimizations discussed \href{Optimizations.md#set-of-supported-graph-optimizations}{\tt here}. More information on how to configure this pipeline can be found \href{Optimizations.md#configuring-a-graph-optimization-pipeline}{\tt here}.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsubsection*{{\ttfamily Compiled\+Function} Abstract Class}
+
+{\ttfamily Compiled\+Function} is an abstract class that represents the result of compilation of a {\ttfamily Function}. Backends must implement their own derived class from {\ttfamily Compiled\+Function}, which must be returned as a result of {\ttfamily Backend\+::compile()} or {\ttfamily Backend\+::compile\+Without\+Constants()} . {\ttfamily Compiled\+Function} contains a pure virtual function that must be implemented\+: {\ttfamily virtual void execute();}. This function is responsible for copying inputs to the device from all input \href{https://github.com/pytorch/glow/blob/master/docs/IR.md#placeholders}{\tt Placeholders}, executing the function, and copying outputs back from the device to output Placeholders. The {\ttfamily Compiled\+Function} contains a \href{#runtimebundle-helper-class}{\tt Runtime\+Bundle} which contains the symbol information and mappings of inputs and outputs. Thus after the function returns, all Placeholders for the outputs of the function should have had their backing tensor updated. An optional method\+: {\ttfamily virtual void free\+Compilation\+Resources()} can be implemented to allow freeing resources that are no longer needed after the function has been loaded on a device.
+
+\subsubsection*{{\ttfamily Runtime\+Bundle} Helper Class}
+
+{\ttfamily Runtime\+Bundle} is a helper class that contains the symbol information and collection of constants needed at runtime. This allows a function to be compiled without being linked to a context, and allows the {\ttfamily Function} to be freed after compilation. The symbol information is stored in a table where the key is the symbol name and the payload contains symbol information including, size, offset, type, and whether it is an input or output of the function. {\ttfamily Runtime\+Bundle} also contains a pointer that may point to a block of memory that contains the constants for the {\ttfamily Compiled\+Function} if that {\ttfamily Backend} uses it.
+
+\subsubsection*{{\ttfamily Backend\+Options} Helper Struct}
+
+{\ttfamily Backend\+Options} is a helper struct that contains the options relevant to the backend for compilation. The options include\+:
+\begin{DoxyItemize}
+\item {\ttfamily bool collect\+Constants} -\/ Whether constants should be collected and stored in the {\ttfamily Compiled\+Function}\textquotesingle{}s \href{#runtimebundle-helper-class}{\tt Runtime\+Bundle}. Default\+: True
+\item {\ttfamily bool auto\+Instrument} -\/ Whether {\ttfamily Trace\+Events} should be inserted for profiling. Default\+: False
+\end{DoxyItemize}
+
+\subsection*{Backend-\/\+Specific Nodes and Instructions Transformations}
+
+Different backends may prefer to transform or optimize the graph differently for their own specialized architecture. For example, Glow lowers Re\+LU down to a Max node, taking as inputs the original tensor and a \char`\"{}\+Splat\char`\"{} tensor of matching dimensions, filled with all {\ttfamily 0}s. Glow\textquotesingle{}s C\+PU J\+IT backend prefers to replace this pattern -- a Max with a Splat input and another non-\/\+Splat input -- with a single \char`\"{}\+C\+P\+U\+Max\+Splat\char`\"{} operation that takes a scalar Splat value as input in place of an entire Splat tensor.
+
+\subsubsection*{Backend-\/\+Specific Transformation}
+
+Backends have the opportunity to perform their own analysis and transformations after lowering. This is exposed via the {\ttfamily transform\+Post\+Lowering()} hook, during which a backend can transform the graph however it desires. For example, the backend could use {\ttfamily transform\+Post\+Lowering()} to search the graph looking for the above {\ttfamily C\+P\+U\+Max\+Splat} pattern.
+
+\paragraph*{Backend-\/\+Specific Nodes and Instructions}
+
+A backend may create its own custom Nodes and Instructions which it can insert into the IR. This is done via Class\+Gen and implicitly included in {\ttfamily tools/\+Class\+Gen/\+Node\+Gen.\+cpp} and {\ttfamily tools/\+Class\+Gen/\+Instr\+Gen.\+cpp}. These new nodes and instructions should be defined inside the backend sub-\/directory, in files {\ttfamily lib/\+Backends/$<$Backend\+Name$>$/\+Class\+Gen/$<$Backend\+Name$>$Specific\+Nodes.\+h} and {\ttfamily lib/\+Backends/$<$Backend\+Name$>$/\+Class\+Gen/$<$Backend\+Name$>$Specific\+Instrs.\+h}\+:
+
+For example, the C\+PU Backend defines {\ttfamily C\+P\+U\+Max\+Splat} in {\ttfamily \hyperlink{_c_p_u_specific_nodes_8h_source}{lib/\+Backends/\+C\+P\+U/\+Class\+Gen/\+C\+P\+U\+Specific\+Nodes.\+h}}\+:
+
+
+\begin{DoxyCode}
+BB.newBackendSpecificNode(\textcolor{stringliteral}{"CPUMaxSplat"})
+    .addInput(\textcolor{stringliteral}{"Input"})
+    .addResult(\textcolor{stringliteral}{"Input.getType()"})
+    .addMember(MemberType::Float, \textcolor{stringliteral}{"SplatValue"})
+    .setDocstring(\textcolor{stringliteral}{"A Max node with one splat input; CPU specific."});
+\end{DoxyCode}
+
+
+During {\ttfamily transform\+Post\+Lowering()}, this {\ttfamily C\+P\+U\+Max\+Splat} node replaces the aforementioned pattern. However, there must be a corresponding instruction for this Node to be lowered to during the I\+R\+Gen phase. Thus, we need a corresponding backend-\/specific C\+P\+U\+Max\+Splat instruction, defined in {\ttfamily \hyperlink{_c_p_u_specific_instrs_8h_source}{lib/\+Backends/\+C\+P\+U/\+Class\+Gen/\+C\+P\+U\+Specific\+Instrs.\+h}}\+:
+
+
+\begin{DoxyCode}
+BB.newBackendSpecificInstr("CPUMaxSplat")
+    .addOperand("Dest", OperandKind::Out)
+    .addOperand("Src", OperandKind::In)
+    .addMember(MemberType::Float, "SplatValue")
+    .inplaceOperand(\{"Dest", "Src"\})
+    .dataParallel()
+    .autoIRGen();
+\end{DoxyCode}
+
+
+These instructions will appear in the instruction stream sent to the C\+PU backend J\+IT; its \href{JIT.md#usage-of-the-standard-library}{\tt standard library} has a kernel for executing this {\ttfamily C\+P\+U\+Max\+Splat} instruction. You can see such instructions in the \href{Example.md#lowering-to-ir}{\tt Le\+Net M\+N\+I\+ST example}.
+
+Note that backend-\/specific nodes and instructions can be treated just as any other node or instruction defined in {\ttfamily tools/\+Class\+Gen/\+Node\+Gen.\+cpp} or {\ttfamily tools/\+Class\+Gen/\+Instr\+Gen.\+cpp}. For example, the {\ttfamily C\+P\+U\+Max\+Splat} instruction definition includes the {\ttfamily data\+Parallel()} property, allowing for data parallel optimizations to take place.
+
+The {\ttfamily \hyperlink{_c_p_u_specific_nodes_8h_source}{lib/\+Backends/\+C\+P\+U/\+Class\+Gen/\+C\+P\+U\+Specific\+Nodes.\+h}} and {\ttfamily \hyperlink{_c_p_u_specific_instrs_8h_source}{lib/\+Backends/\+C\+P\+U/\+Class\+Gen/\+C\+P\+U\+Specific\+Instrs.\+h}} files are implicitly included in {\ttfamily tools/\+Class\+Gen/\+Node\+Gen.\+cpp} and {\ttfamily tools/\+Class\+Gen/\+Instr\+Gen.\+cpp}, respectively.
+
+\paragraph*{Backend Parameterized Tests}
+
+Glow provides several test suites that are parameterized by backend. An example of such a suite is {\ttfamily tests/unittests/\+Operator\+Test.\+cpp}, which defines small tests of Glow operators. These tests can be executed against any backend to check compliance.
+
+These tests will only be run for a backend if a corresponding {\ttfamily lib/\+Backends/\$\+B\+A\+C\+K\+E\+ND/tests} directory is found and contains a corresponding {\ttfamily \$\{B\+A\+C\+K\+E\+ND\}\$\{T\+E\+ST\}.cpp} file containing a blacklist definition, e.\+g.\+: 
+\begin{DoxyCode}
+std::set<std::string> glow::backendTestBlacklist = \{\};
+\end{DoxyCode}
+
+
+This blacklist can be used to exclude any unsupported tests while a backend is a work-\/in-\/progress. See the Interpreter and C\+PU backends for examples of setting up and using these tests. To bootstrap a blacklist, we recommend using a simple shell script to check which tests already work\+: 
+\begin{DoxyCode}
+for test in $(tests/ExampleBackendOperatorTest --gtest\_list\_tests); do
+  if ! tests/ExampleBackendOperatorTest --gtest\_filter="$test" >& /dev/null; then
+    echo $test
+  fi
+done
+\end{DoxyCode}
+
+
+\paragraph*{External backends}
+
+External backends can be added to Glow without changing the Glow build infrastructure.
+
+An external backend is provided as a single source directory. It can then be developped in a separate source management repository.
+
+The external backend mechanism is for instance convenient for adding closed source backends to Glow.
+
+The structure of external backends is defined https\+://github.com/pytorch/glow/blob/master/docs/\+External\+Backend.\+md \char`\"{}here\char`\"{}. 

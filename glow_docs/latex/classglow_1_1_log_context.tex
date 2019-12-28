@@ -1,0 +1,85 @@
+\hypertarget{classglow_1_1_log_context}{}\section{glow\+:\+:Log\+Context Class Reference}
+\label{classglow_1_1_log_context}\index{glow\+::\+Log\+Context@{glow\+::\+Log\+Context}}
+
+
+A class for logging all compilation related activities.  
+
+
+
+
+{\ttfamily \#include $<$Log.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_log_context_a2c79fee01dad0613508a0c7d5880f236}\label{classglow_1_1_log_context_a2c79fee01dad0613508a0c7d5880f236}} 
+{\bfseries Log\+Context} (\hyperlink{classglow_1_1_module}{Module} $\ast$parent)
+\item 
+\mbox{\Hypertarget{classglow_1_1_log_context_a3598792cb8cf2edc300e7119551d74b3}\label{classglow_1_1_log_context_a3598792cb8cf2edc300e7119551d74b3}} 
+void \hyperlink{classglow_1_1_log_context_a3598792cb8cf2edc300e7119551d74b3}{push\+Event} (\hyperlink{structglow_1_1_log_event}{Log\+Event} $\ast$ev)
+\begin{DoxyCompactList}\small\item\em Add a new event to the log. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_log_context_ab63daf2e961fe626da6cd2842d25748d}\label{classglow_1_1_log_context_ab63daf2e961fe626da6cd2842d25748d}} 
+void \hyperlink{classglow_1_1_log_context_ab63daf2e961fe626da6cd2842d25748d}{push\+Log\+Scope} (llvm\+::\+String\+Ref scope\+Name)
+\begin{DoxyCompactList}\small\item\em Add a new scope. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_log_context_ae4099fbfa9ec2254b000685e7d646298}\label{classglow_1_1_log_context_ae4099fbfa9ec2254b000685e7d646298}} 
+void \hyperlink{classglow_1_1_log_context_ae4099fbfa9ec2254b000685e7d646298}{pop\+Log\+Scope} ()
+\begin{DoxyCompactList}\small\item\em Pops out the most recently added scope. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_log_context_a72bcf17196ebe196cc7069f6b53d8489}{dump\+Log} (llvm\+::\+String\+Ref func\+Name)
+\item 
+void \hyperlink{classglow_1_1_log_context_acf1c637611e33d3677d943bd89c240d1}{log\+Node\+Creation} (const \hyperlink{classglow_1_1_node}{Node} \&new\+Node, bool log\+Into\+Module=false)
+\begin{DoxyCompactList}\small\item\em Logs the node creation with a list of input nodes. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_log_context_aa50d06ca59c680f4faa4339644584226}{log\+Node\+Deletion} (const \hyperlink{classglow_1_1_node}{Node} \&deleted\+Node, bool log\+Into\+Module=false)
+\begin{DoxyCompactList}\small\item\em Logs the node deletion. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_log_context_a03bfee023d7c01e3c1a3701a56fbe0c6}{log\+Node\+Input\+Change} (const \hyperlink{classglow_1_1_node}{Node} \&user, const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&prev\+Opr\+Val, const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&new\+Opr\+Val)
+\begin{DoxyCompactList}\small\item\em Logs node\textquotesingle{}s input changes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_log_context_ae9827db3c15f81408249624889b423fc}\label{classglow_1_1_log_context_ae9827db3c15f81408249624889b423fc}} 
+\hyperlink{structglow_1_1_log_event}{Log\+Event} $\ast$ \hyperlink{classglow_1_1_log_context_ae9827db3c15f81408249624889b423fc}{get\+Cloned\+Scope} ()
+\begin{DoxyCompactList}\small\item\em Get a deep cloned copy of the top level scope of this \hyperlink{classglow_1_1_log_context}{Log\+Context}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for logging all compilation related activities. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_log_context_a72bcf17196ebe196cc7069f6b53d8489}\label{classglow_1_1_log_context_a72bcf17196ebe196cc7069f6b53d8489}} 
+\index{glow\+::\+Log\+Context@{glow\+::\+Log\+Context}!dump\+Log@{dump\+Log}}
+\index{dump\+Log@{dump\+Log}!glow\+::\+Log\+Context@{glow\+::\+Log\+Context}}
+\subsubsection{\texorpdfstring{dump\+Log()}{dumpLog()}}
+{\footnotesize\ttfamily void glow\+::\+Log\+Context\+::dump\+Log (\begin{DoxyParamCaption}\item[{llvm\+::\+String\+Ref}]{func\+Name }\end{DoxyParamCaption})}
+
+Dumps the log in J\+S\+ON format into the logfile (configured by command line option). /p func\+Name currently unused. \mbox{\Hypertarget{classglow_1_1_log_context_acf1c637611e33d3677d943bd89c240d1}\label{classglow_1_1_log_context_acf1c637611e33d3677d943bd89c240d1}} 
+\index{glow\+::\+Log\+Context@{glow\+::\+Log\+Context}!log\+Node\+Creation@{log\+Node\+Creation}}
+\index{log\+Node\+Creation@{log\+Node\+Creation}!glow\+::\+Log\+Context@{glow\+::\+Log\+Context}}
+\subsubsection{\texorpdfstring{log\+Node\+Creation()}{logNodeCreation()}}
+{\footnotesize\ttfamily void glow\+::\+Log\+Context\+::log\+Node\+Creation (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node}{Node} \&}]{new\+Node,  }\item[{bool}]{log\+Into\+Module = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Logs the node creation with a list of input nodes. 
+
+Logs the node creation. Also logs into \hyperlink{classglow_1_1_module}{Module} log context if {\ttfamily log\+Into\+Module} set as true. \mbox{\Hypertarget{classglow_1_1_log_context_aa50d06ca59c680f4faa4339644584226}\label{classglow_1_1_log_context_aa50d06ca59c680f4faa4339644584226}} 
+\index{glow\+::\+Log\+Context@{glow\+::\+Log\+Context}!log\+Node\+Deletion@{log\+Node\+Deletion}}
+\index{log\+Node\+Deletion@{log\+Node\+Deletion}!glow\+::\+Log\+Context@{glow\+::\+Log\+Context}}
+\subsubsection{\texorpdfstring{log\+Node\+Deletion()}{logNodeDeletion()}}
+{\footnotesize\ttfamily void glow\+::\+Log\+Context\+::log\+Node\+Deletion (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node}{Node} \&}]{deleted\+Node,  }\item[{bool}]{log\+Into\+Module = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Logs the node deletion. 
+
+Logs the node deletion. Also logs into \hyperlink{classglow_1_1_module}{Module} log context if {\ttfamily log\+Into\+Module} set as true. \mbox{\Hypertarget{classglow_1_1_log_context_a03bfee023d7c01e3c1a3701a56fbe0c6}\label{classglow_1_1_log_context_a03bfee023d7c01e3c1a3701a56fbe0c6}} 
+\index{glow\+::\+Log\+Context@{glow\+::\+Log\+Context}!log\+Node\+Input\+Change@{log\+Node\+Input\+Change}}
+\index{log\+Node\+Input\+Change@{log\+Node\+Input\+Change}!glow\+::\+Log\+Context@{glow\+::\+Log\+Context}}
+\subsubsection{\texorpdfstring{log\+Node\+Input\+Change()}{logNodeInputChange()}}
+{\footnotesize\ttfamily void glow\+::\+Log\+Context\+::log\+Node\+Input\+Change (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node}{Node} \&}]{user,  }\item[{const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&}]{prev\+Opr\+Val,  }\item[{const \hyperlink{structglow_1_1_node_value}{Node\+Value} \&}]{new\+Opr\+Val }\end{DoxyParamCaption})}
+
+
+
+Logs node\textquotesingle{}s input changes. 
+
+Logs node\textquotesingle{}s input changes. {\ttfamily user} is the user node of the operands {\ttfamily prev\+Opr} previous operand {\ttfamily new\+Opr} new operand 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Log.\+h\item 
+lib/\+Graph/Log.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\hypertarget{classglow_1_1_tensor_pool}{}\section{glow\+:\+:Tensor\+Pool Class Reference}
+\label{classglow_1_1_tensor_pool}\index{glow\+::\+Tensor\+Pool@{glow\+::\+Tensor\+Pool}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structglow_1_1_tensor_pool_1_1_stats}{Stats}
+\begin{DoxyCompactList}\small\item\em Statistics relating to the usage of the pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_pool_a73e3619d284eb51de11ffd449cddbab6}\label{classglow_1_1_tensor_pool_a73e3619d284eb51de11ffd449cddbab6}} 
+{\bfseries Tensor\+Pool} (bool prevent\+Allocs=false)
+\item 
+\hyperlink{classglow_1_1_tensor}{Tensor} $\ast$ \hyperlink{classglow_1_1_tensor_pool_acc0ba9e26ed657d789b92dccc3ed0b73}{get} (\hyperlink{structglow_1_1_type}{Type\+Ref} ty)
+\item 
+void \hyperlink{classglow_1_1_tensor_pool_aca0c52c7f6857d238dbe7873766f5350}{reclaim} (\hyperlink{classglow_1_1_tensor}{Tensor} $\ast$t)
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_pool_a1bbc6fce7e3f511d149ee741708e4398}\label{classglow_1_1_tensor_pool_a1bbc6fce7e3f511d149ee741708e4398}} 
+void \hyperlink{classglow_1_1_tensor_pool_a1bbc6fce7e3f511d149ee741708e4398}{reserve} (\hyperlink{structglow_1_1_type}{Type\+Ref} ty, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Add {\ttfamily count} elements of the provided type {\ttfamily ty} to the pool. \end{DoxyCompactList}\item 
+void \hyperlink{classglow_1_1_tensor_pool_a67ae82ff913ef17d2b18cb86182b0546}{clear} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_pool_a9977cc9788c58efeca73ee43b770d40f}\label{classglow_1_1_tensor_pool_a9977cc9788c58efeca73ee43b770d40f}} 
+const \hyperlink{structglow_1_1_tensor_pool_1_1_stats}{Stats} \& \hyperlink{classglow_1_1_tensor_pool_a9977cc9788c58efeca73ee43b770d40f}{get\+Stats} ()
+\begin{DoxyCompactList}\small\item\em Return statistics about the \hyperlink{classglow_1_1_tensor_pool}{Tensor\+Pool}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_tensor_pool_a4e535768e1f71cec8eae3e6e5445dbb4}\label{classglow_1_1_tensor_pool_a4e535768e1f71cec8eae3e6e5445dbb4}} 
+struct \hyperlink{structglow_1_1_tensor_pool_1_1_stats}{glow\+::\+Tensor\+Pool\+::\+Stats} {\bfseries stats\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_tensor_pool_a67ae82ff913ef17d2b18cb86182b0546}\label{classglow_1_1_tensor_pool_a67ae82ff913ef17d2b18cb86182b0546}} 
+\index{glow\+::\+Tensor\+Pool@{glow\+::\+Tensor\+Pool}!clear@{clear}}
+\index{clear@{clear}!glow\+::\+Tensor\+Pool@{glow\+::\+Tensor\+Pool}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void glow\+::\+Tensor\+Pool\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear the pool and all allocated Tensors. Note\+: this does not delete tensors that were allocated by the pool but were not reclaimed. \mbox{\Hypertarget{classglow_1_1_tensor_pool_acc0ba9e26ed657d789b92dccc3ed0b73}\label{classglow_1_1_tensor_pool_acc0ba9e26ed657d789b92dccc3ed0b73}} 
+\index{glow\+::\+Tensor\+Pool@{glow\+::\+Tensor\+Pool}!get@{get}}
+\index{get@{get}!glow\+::\+Tensor\+Pool@{glow\+::\+Tensor\+Pool}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1_tensor}{Tensor} $\ast$ glow\+::\+Tensor\+Pool\+::get (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_type}{Type\+Ref}}]{ty }\end{DoxyParamCaption})}
+
+Retrieve a \hyperlink{classglow_1_1_tensor}{Tensor} with type {\ttfamily ty} from the pool -\/ this type must have previously been added by initialize. If the pool is empty this will allocate a new \hyperlink{classglow_1_1_tensor}{Tensor} unless prevent\+Allocs was set true at construction time. \mbox{\Hypertarget{classglow_1_1_tensor_pool_aca0c52c7f6857d238dbe7873766f5350}\label{classglow_1_1_tensor_pool_aca0c52c7f6857d238dbe7873766f5350}} 
+\index{glow\+::\+Tensor\+Pool@{glow\+::\+Tensor\+Pool}!reclaim@{reclaim}}
+\index{reclaim@{reclaim}!glow\+::\+Tensor\+Pool@{glow\+::\+Tensor\+Pool}}
+\subsubsection{\texorpdfstring{reclaim()}{reclaim()}}
+{\footnotesize\ttfamily void glow\+::\+Tensor\+Pool\+::reclaim (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_tensor}{Tensor} $\ast$}]{t }\end{DoxyParamCaption})}
+
+Return a \hyperlink{classglow_1_1_tensor}{Tensor} {\ttfamily t} to the pool. This \hyperlink{classglow_1_1_tensor}{Tensor} must have been previously allocated by this \hyperlink{classglow_1_1_tensor_pool}{Tensor\+Pool}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Support/Tensor\+Pool.\+h\item 
+lib/\+Support/\+Tensor\+Pool/Tensor\+Pool.\+cpp\end{DoxyCompactItemize}

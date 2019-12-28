@@ -1,0 +1,54 @@
+\hypertarget{classglow_1_1_graph_grad_mapper}{}\section{glow\+:\+:Graph\+Grad\+Mapper Class Reference}
+\label{classglow_1_1_graph_grad_mapper}\index{glow\+::\+Graph\+Grad\+Mapper@{glow\+::\+Graph\+Grad\+Mapper}}
+
+
+{\ttfamily \#include $<$Grad.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_graph_grad_mapper_a3149fe116142ee6d8a770b0548cd01f2}\label{classglow_1_1_graph_grad_mapper_a3149fe116142ee6d8a770b0548cd01f2}} 
+{\bfseries Graph\+Grad\+Mapper} (\hyperlink{classglow_1_1_function}{Function} $\ast$F)
+\item 
+void \hyperlink{classglow_1_1_graph_grad_mapper_addce94263ca0ac1734886eddc661c76c}{add\+Gradient} (\hyperlink{structglow_1_1_node_value}{Node\+Value} activation, \hyperlink{structglow_1_1_node_value}{Node\+Value} grad)
+\item 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} \hyperlink{classglow_1_1_graph_grad_mapper_a6a14b27336f7054e326bbaa46b94edec}{get\+Gradient} (\hyperlink{structglow_1_1_node_value}{Node\+Value} activation)
+\item 
+bool \hyperlink{classglow_1_1_graph_grad_mapper_a65988a9626ac25e16111a35c50b7d65e}{has\+Gradient} (\hyperlink{structglow_1_1_node_value}{Node\+Value} activation)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Helper class that manages the mapping between gradients and activations, and helps to accumulate gradients into placeholders. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_graph_grad_mapper_addce94263ca0ac1734886eddc661c76c}\label{classglow_1_1_graph_grad_mapper_addce94263ca0ac1734886eddc661c76c}} 
+\index{glow\+::\+Graph\+Grad\+Mapper@{glow\+::\+Graph\+Grad\+Mapper}!add\+Gradient@{add\+Gradient}}
+\index{add\+Gradient@{add\+Gradient}!glow\+::\+Graph\+Grad\+Mapper@{glow\+::\+Graph\+Grad\+Mapper}}
+\subsubsection{\texorpdfstring{add\+Gradient()}{addGradient()}}
+{\footnotesize\ttfamily void Graph\+Grad\+Mapper\+::add\+Gradient (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{activation,  }\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{grad }\end{DoxyParamCaption})}
+
+the node {\ttfamily grad} as the grad of {\ttfamily activation}. If the node is already registered then create an \textquotesingle{}add\textquotesingle{} node that accumulates the gradient into the grad buffer. \mbox{\Hypertarget{classglow_1_1_graph_grad_mapper_a6a14b27336f7054e326bbaa46b94edec}\label{classglow_1_1_graph_grad_mapper_a6a14b27336f7054e326bbaa46b94edec}} 
+\index{glow\+::\+Graph\+Grad\+Mapper@{glow\+::\+Graph\+Grad\+Mapper}!get\+Gradient@{get\+Gradient}}
+\index{get\+Gradient@{get\+Gradient}!glow\+::\+Graph\+Grad\+Mapper@{glow\+::\+Graph\+Grad\+Mapper}}
+\subsubsection{\texorpdfstring{get\+Gradient()}{getGradient()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_node_value}{Node\+Value} Graph\+Grad\+Mapper\+::get\+Gradient (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{activation }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the node that {\ttfamily activation} is mapped to. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_graph_grad_mapper_a65988a9626ac25e16111a35c50b7d65e}\label{classglow_1_1_graph_grad_mapper_a65988a9626ac25e16111a35c50b7d65e}} 
+\index{glow\+::\+Graph\+Grad\+Mapper@{glow\+::\+Graph\+Grad\+Mapper}!has\+Gradient@{has\+Gradient}}
+\index{has\+Gradient@{has\+Gradient}!glow\+::\+Graph\+Grad\+Mapper@{glow\+::\+Graph\+Grad\+Mapper}}
+\subsubsection{\texorpdfstring{has\+Gradient()}{hasGradient()}}
+{\footnotesize\ttfamily bool Graph\+Grad\+Mapper\+::has\+Gradient (\begin{DoxyParamCaption}\item[{\hyperlink{structglow_1_1_node_value}{Node\+Value}}]{activation }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the node {\ttfamily activation} is mapped. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Grad.\+h\item 
+lib/\+Graph/Grad.\+cpp\end{DoxyCompactItemize}

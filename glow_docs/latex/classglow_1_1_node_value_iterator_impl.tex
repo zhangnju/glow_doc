@@ -1,0 +1,53 @@
+\hypertarget{classglow_1_1_node_value_iterator_impl}{}\section{glow\+:\+:Node\+Value\+Iterator\+Impl$<$ is\+\_\+const\+\_\+iter $>$ Class Template Reference}
+\label{classglow_1_1_node_value_iterator_impl}\index{glow\+::\+Node\+Value\+Iterator\+Impl$<$ is\+\_\+const\+\_\+iter $>$@{glow\+::\+Node\+Value\+Iterator\+Impl$<$ is\+\_\+const\+\_\+iter $>$}}
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Node\+Value\+Iterator\+Impl$<$ is\+\_\+const\+\_\+iter $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_node_value_iterator_impl}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_iterator_impl_a7bd4a74736e858846d2884bbb06b2862}\label{classglow_1_1_node_value_iterator_impl_a7bd4a74736e858846d2884bbb06b2862}} 
+using \hyperlink{classglow_1_1_node_value_iterator_impl_a7bd4a74736e858846d2884bbb06b2862}{iterator} = typename std\+::conditional$<$ is\+\_\+const\+\_\+iter, std\+::list$<$ \hyperlink{structglow_1_1_node_use}{Node\+Use} $>$\+::const\+\_\+iterator, std\+::list$<$ \hyperlink{structglow_1_1_node_use}{Node\+Use} $>$\+::\hyperlink{classglow_1_1_node_value_iterator_impl_a7bd4a74736e858846d2884bbb06b2862}{iterator} $>$\+::type
+\begin{DoxyCompactList}\small\item\em Base type of the iterator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_iterator_impl_ae219906549ad90e5c4bd3f5424767070}\label{classglow_1_1_node_value_iterator_impl_ae219906549ad90e5c4bd3f5424767070}} 
+using \hyperlink{classglow_1_1_node_value_iterator_impl_ae219906549ad90e5c4bd3f5424767070}{Node\+Value\+Ty} = typename std\+::conditional$<$ is\+\_\+const\+\_\+iter, const \hyperlink{structglow_1_1_node_value}{Node\+Value}, \hyperlink{structglow_1_1_node_value}{Node\+Value} $>$\+::type
+\begin{DoxyCompactList}\small\item\em \hyperlink{structglow_1_1_type}{Type} of the \hyperlink{structglow_1_1_node_value}{Node\+Value} that this iterator is filtering for. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_iterator_impl_a188009c2b4658372cf779a20bb9ace75}\label{classglow_1_1_node_value_iterator_impl_a188009c2b4658372cf779a20bb9ace75}} 
+using \hyperlink{classglow_1_1_node_value_iterator_impl_a188009c2b4658372cf779a20bb9ace75}{Node\+Use\+Ty} = typename std\+::conditional$<$ is\+\_\+const\+\_\+iter, const \hyperlink{structglow_1_1_node_use}{Node\+Use}, \hyperlink{structglow_1_1_node_use}{Node\+Use} $>$\+::type
+\begin{DoxyCompactList}\small\item\em \hyperlink{structglow_1_1_type}{Type} of the \hyperlink{structglow_1_1_node_use}{Node\+Use} that this iterator should return when dereferenced. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_iterator_impl_a402b53904b525b1678617d4b38a539d0}\label{classglow_1_1_node_value_iterator_impl_a402b53904b525b1678617d4b38a539d0}} 
+{\bfseries Node\+Value\+Iterator\+Impl} (\hyperlink{classglow_1_1_node_value_iterator_impl_ae219906549ad90e5c4bd3f5424767070}{Node\+Value\+Ty} \&parent, \hyperlink{classglow_1_1_node_value_iterator_impl_a7bd4a74736e858846d2884bbb06b2862}{iterator} it)
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_iterator_impl_a3535cc3d81f36b1ae663d8315be120d8}\label{classglow_1_1_node_value_iterator_impl_a3535cc3d81f36b1ae663d8315be120d8}} 
+\hyperlink{classglow_1_1_node_value_iterator_impl}{Node\+Value\+Iterator\+Impl} \& \hyperlink{classglow_1_1_node_value_iterator_impl_a3535cc3d81f36b1ae663d8315be120d8}{operator++} ()
+\begin{DoxyCompactList}\small\item\em Move to the next use of parent\+\_\+. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_iterator_impl_a09ca8bf60f823ecdf32d807421cb7c5b}\label{classglow_1_1_node_value_iterator_impl_a09ca8bf60f823ecdf32d807421cb7c5b}} 
+\hyperlink{classglow_1_1_node_value_iterator_impl_a188009c2b4658372cf779a20bb9ace75}{Node\+Use\+Ty} \& {\bfseries operator$\ast$} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_iterator_impl_ab849cf3bb99d514a2c5c9ba8ffcc522e}\label{classglow_1_1_node_value_iterator_impl_ab849cf3bb99d514a2c5c9ba8ffcc522e}} 
+const \hyperlink{classglow_1_1_node_value_iterator_impl_a188009c2b4658372cf779a20bb9ace75}{Node\+Use\+Ty} \& {\bfseries operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_node_value_iterator_impl_a8c251ce38821b9bbca2a7f21a704b09a}\label{classglow_1_1_node_value_iterator_impl_a8c251ce38821b9bbca2a7f21a704b09a}} 
+bool {\bfseries operator!=} (const \hyperlink{classglow_1_1_node_value_iterator_impl}{Node\+Value\+Iterator\+Impl} \&other) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$bool is\+\_\+const\+\_\+iter = false$>$\newline
+class glow\+::\+Node\+Value\+Iterator\+Impl$<$ is\+\_\+const\+\_\+iter $>$}
+
+Helper class to walk through the specific uses of a \hyperlink{structglow_1_1_node_value}{Node\+Value}. This class is built on top of the regular users-\/list (\hyperlink{classglow_1_1_use_def_a36287064b16f4c2569988d2b795cd9b7}{Node\+::get\+Users}) but filters out the uses that don\textquotesingle{}t affect the desired \hyperlink{structglow_1_1_node_value}{Node\+Value}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Node.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\hypertarget{classglow_1_1_batch_box_cox_node}{}\section{glow\+:\+:Batch\+Box\+Cox\+Node Class Reference}
+\label{classglow_1_1_batch_box_cox_node}\index{glow\+::\+Batch\+Box\+Cox\+Node@{glow\+::\+Batch\+Box\+Cox\+Node}}
+
+
+Apply box-\/cox transform for each column for each column in NxD input tensor.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Gen\+Nodes.\+h$>$}
+
+Inheritance diagram for glow\+:\+:Batch\+Box\+Cox\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.028986cm]{classglow_1_1_batch_box_cox_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_ac71f03c0bec87e39debb6d1dd7d8251a}\label{classglow_1_1_batch_box_cox_node_ac71f03c0bec87e39debb6d1dd7d8251a}} 
+enum {\bfseries Input\+Indices} \{ {\bfseries Input\+Idx} = 0, 
+{\bfseries Lambda1\+Idx} = 1, 
+{\bfseries Lambda2\+Idx} = 2
+ \}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_af5ce5cfd7636ec7c5a9e839a56cb58d3}\label{classglow_1_1_batch_box_cox_node_af5ce5cfd7636ec7c5a9e839a56cb58d3}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Result\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_ad583e3f4e2740d999e8107901f8c4022}\label{classglow_1_1_batch_box_cox_node_ad583e3f4e2740d999e8107901f8c4022}} 
+{\bfseries Batch\+Box\+Cox\+Node} (llvm\+::\+String\+Ref name, \hyperlink{structglow_1_1_node_value}{Node\+Value} Input, \hyperlink{structglow_1_1_node_value}{Node\+Value} Lambda1, \hyperlink{structglow_1_1_node_value}{Node\+Value} Lambda2, float Epsilon)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a8106139f5297816380832b86adabc00a}\label{classglow_1_1_batch_box_cox_node_a8106139f5297816380832b86adabc00a}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Input} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a82b160c6927b316be43ce543bc60436f}\label{classglow_1_1_batch_box_cox_node_a82b160c6927b316be43ce543bc60436f}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Lambda1} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a7aa4d6765982bddfaa67790b2af006b5}\label{classglow_1_1_batch_box_cox_node_a7aa4d6765982bddfaa67790b2af006b5}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Lambda2} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_ab66e223af527ca64b2a0eedf53d22303}\label{classglow_1_1_batch_box_cox_node_ab66e223af527ca64b2a0eedf53d22303}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a2bdc839e1f628434c7010ee66f71c909}\label{classglow_1_1_batch_box_cox_node_a2bdc839e1f628434c7010ee66f71c909}} 
+const \hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Result} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_ad3e305700373969cdfd54de2c88f73dd}\label{classglow_1_1_batch_box_cox_node_ad3e305700373969cdfd54de2c88f73dd}} 
+float {\bfseries get\+Epsilon} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a6b75e30658f5f1fa9ae93daa34140beb}\label{classglow_1_1_batch_box_cox_node_a6b75e30658f5f1fa9ae93daa34140beb}} 
+bool {\bfseries is\+Overwritten\+Nth\+Input} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a5f80fc446ccc5bcb3c2692ba40d2df28}\label{classglow_1_1_batch_box_cox_node_a5f80fc446ccc5bcb3c2692ba40d2df28}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_ad61e7b16bb288715f2b0c67533476942}\label{classglow_1_1_batch_box_cox_node_ad61e7b16bb288715f2b0c67533476942}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a8056eb12ab724e64dcb2d04477551ada}\label{classglow_1_1_batch_box_cox_node_a8056eb12ab724e64dcb2d04477551ada}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a5a00e307ded346db0cf3943e39832d4c}\label{classglow_1_1_batch_box_cox_node_a5a00e307ded346db0cf3943e39832d4c}} 
+void {\bfseries set\+Nth\+Input} (unsigned idx, \hyperlink{structglow_1_1_node_value}{Node\+Value} val)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a60373a442dffc7dfbc8c09e6701c98c2}\label{classglow_1_1_batch_box_cox_node_a60373a442dffc7dfbc8c09e6701c98c2}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a33326dd391b8313fc581e0ce6a931d6f}\label{classglow_1_1_batch_box_cox_node_a33326dd391b8313fc581e0ce6a931d6f}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a5e02e47eb0aa78976aa40ccddec93eaa}\label{classglow_1_1_batch_box_cox_node_a5e02e47eb0aa78976aa40ccddec93eaa}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_ab99ccba84d87613189803042433811ad}\label{classglow_1_1_batch_box_cox_node_ab99ccba84d87613189803042433811ad}} 
+std\+::string {\bfseries get\+Debug\+Desc} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a9cdc5e245ee2fa64c9291dc2229282a9}\label{classglow_1_1_batch_box_cox_node_a9cdc5e245ee2fa64c9291dc2229282a9}} 
+bool {\bfseries is\+Equal} (const \hyperlink{classglow_1_1_batch_box_cox_node}{Batch\+Box\+Cox\+Node} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_aa8fd207db0d5875b36abae140df702d9}\label{classglow_1_1_batch_box_cox_node_aa8fd207db0d5875b36abae140df702d9}} 
+llvm\+::hash\+\_\+code {\bfseries get\+Hash} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a66832cf19c7626d2d71da478389bf2a8}\label{classglow_1_1_batch_box_cox_node_a66832cf19c7626d2d71da478389bf2a8}} 
+void {\bfseries visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a404578c8ba2ef32b3c64455d5687c420}\label{classglow_1_1_batch_box_cox_node_a404578c8ba2ef32b3c64455d5687c420}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a135cc7b4ebf95edb2d109a5a74927649}\label{classglow_1_1_batch_box_cox_node_a135cc7b4ebf95edb2d109a5a74927649}} 
+bool {\bfseries verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_batch_box_cox_node_a7279a934eeda309fa9da2193de369178}\label{classglow_1_1_batch_box_cox_node_a7279a934eeda309fa9da2193de369178}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Apply box-\/cox transform for each column for each column in NxD input tensor. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\item 
+/home/iotgvideo/\+P\+Y\+T\+O\+R\+C\+H/build\+\_\+\+Debug/glow/Auto\+Gen\+Nodes.\+cpp\end{DoxyCompactItemize}

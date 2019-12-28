@@ -1,0 +1,151 @@
+\hypertarget{classglow_1_1_habana_backend}{}\section{glow\+:\+:Habana\+Backend Class Reference}
+\label{classglow_1_1_habana_backend}\index{glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}}
+Inheritance diagram for glow\+:\+:Habana\+Backend\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1_habana_backend}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_backend_af98b56680c9b726f60320fc24080237c}\label{classglow_1_1_habana_backend_af98b56680c9b726f60320fc24080237c}} 
+\hyperlink{classglow_1_1_habana_backend_af98b56680c9b726f60320fc24080237c}{Habana\+Backend} ()=default
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_backend_a38324f01e7296f09b0854296ad06926b}\label{classglow_1_1_habana_backend_a38324f01e7296f09b0854296ad06926b}} 
+static bool {\bfseries is\+Version\+Bigger\+Equal\+To} (std\+::string version\+To\+Compare)
+\end{DoxyCompactItemize}
+\subsection*{Backend methods.}
+\label{_amgrp74a5605ee0c2530d0af87631bd615b01}%
+ This is the implementation of the \hyperlink{classglow_1_1_backend}{Backend} interface. \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_backend_acb7f83baf6049e9166754554db9d6d33}\label{classglow_1_1_habana_backend_acb7f83baf6049e9166754554db9d6d33}} 
+{\bfseries $\sim$\+Habana\+Backend} () override=default
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_backend_afbb0d258d966c7a3f2149f026b3afb5d}\label{classglow_1_1_habana_backend_afbb0d258d966c7a3f2149f026b3afb5d}} 
+std\+::string {\bfseries get\+Backend\+Name} () const override
+\item 
+\hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_compiled_function}{Compiled\+Function} $>$ $>$ \hyperlink{classglow_1_1_habana_backend_a0dfa74ae240460b996248124ad726690}{compile} (\hyperlink{classglow_1_1_function}{Function} $\ast$F, const \hyperlink{structglow_1_1_backend_options}{Backend\+Options} \&opts) const override
+\begin{DoxyCompactList}\small\item\em Generate code for input function. \end{DoxyCompactList}\item 
+bool \hyperlink{classglow_1_1_habana_backend_ac7aa767d22eeeae36d68cf84cd508aae}{is\+Op\+Supported} (const \hyperlink{classglow_1_1_node_info}{Node\+Info} \&NI) const override
+\item 
+bool \hyperlink{classglow_1_1_habana_backend_afb3363f26ef92e21fb1d431a1c8699df}{should\+Lower} (const \hyperlink{classglow_1_1_node}{Node} $\ast$N) const override
+\item 
+bool \hyperlink{classglow_1_1_habana_backend_a84fed53bd3602fd2824bcab2786c8207}{transform\+Post\+Lowering} (\hyperlink{classglow_1_1_function}{Function} $\ast$F, \hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&cctx) const override
+\item 
+bool \hyperlink{classglow_1_1_habana_backend_a15199d7d7f6890963f2b8471095d0145}{should\+Share\+Buffers} () const override
+\item 
+bool \hyperlink{classglow_1_1_habana_backend_ac6a97ec29cff4ba43e1d459450e9d175}{supports\+Partial\+Tensors} () const override
+\item 
+\hyperlink{classglow_1_1runtime_1_1_device_manager}{runtime\+::\+Device\+Manager} $\ast$ \hyperlink{classglow_1_1_habana_backend_a8ae721f9f76b5ce37663348fcd8ddeeb}{create\+Device\+Manager} (const \hyperlink{structglow_1_1runtime_1_1_device_config}{runtime\+::\+Device\+Config} \&device\+Config) override
+\item 
+\mbox{\Hypertarget{classglow_1_1_habana_backend_aca7c74daefe7ec9c57e76d6dd0989013}\label{classglow_1_1_habana_backend_aca7c74daefe7ec9c57e76d6dd0989013}} 
+static std\+::string {\bfseries get\+Name} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_habana_backend_a0dfa74ae240460b996248124ad726690}\label{classglow_1_1_habana_backend_a0dfa74ae240460b996248124ad726690}} 
+\index{glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}!compile@{compile}}
+\index{compile@{compile}!glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}}
+\subsubsection{\texorpdfstring{compile()}{compile()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1detail_1_1_glow_expected}{Expected}$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_compiled_function}{Compiled\+Function} $>$ $>$ Habana\+Backend\+::compile (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} $\ast$}]{F,  }\item[{const \hyperlink{structglow_1_1_backend_options}{Backend\+Options} \&}]{opts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Generate code for input function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & given settings in {\ttfamily opts}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classglow_1_1_backend_ab5f153ac5a6b2d1824f7a9c80ffc72f1}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_habana_backend_a8ae721f9f76b5ce37663348fcd8ddeeb}\label{classglow_1_1_habana_backend_a8ae721f9f76b5ce37663348fcd8ddeeb}} 
+\index{glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}!create\+Device\+Manager@{create\+Device\+Manager}}
+\index{create\+Device\+Manager@{create\+Device\+Manager}!glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}}
+\subsubsection{\texorpdfstring{create\+Device\+Manager()}{createDeviceManager()}}
+{\footnotesize\ttfamily \hyperlink{classglow_1_1runtime_1_1_device_manager}{runtime\+::\+Device\+Manager}$\ast$ glow\+::\+Habana\+Backend\+::create\+Device\+Manager (\begin{DoxyParamCaption}\item[{const \hyperlink{structglow_1_1runtime_1_1_device_config}{runtime\+::\+Device\+Config} \&}]{device\+Config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Create device manager corresponding to the backend based on the device\+Config. 
+
+Reimplemented from \hyperlink{classglow_1_1_backend_ab52ff7cc7a83edb282bea2cbf4b8766e}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_habana_backend_ac7aa767d22eeeae36d68cf84cd508aae}\label{classglow_1_1_habana_backend_ac7aa767d22eeeae36d68cf84cd508aae}} 
+\index{glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}!is\+Op\+Supported@{is\+Op\+Supported}}
+\index{is\+Op\+Supported@{is\+Op\+Supported}!glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}}
+\subsubsection{\texorpdfstring{is\+Op\+Supported()}{isOpSupported()}}
+{\footnotesize\ttfamily bool Habana\+Backend\+::is\+Op\+Supported (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node_info}{Node\+Info} \&}]{NI }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+whether the provided {\ttfamily NI} is supported by the backend. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1_backend_a386f7e534956c47f8a6b1457d6e87c67}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_habana_backend_afb3363f26ef92e21fb1d431a1c8699df}\label{classglow_1_1_habana_backend_afb3363f26ef92e21fb1d431a1c8699df}} 
+\index{glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}!should\+Lower@{should\+Lower}}
+\index{should\+Lower@{should\+Lower}!glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}}
+\subsubsection{\texorpdfstring{should\+Lower()}{shouldLower()}}
+{\footnotesize\ttfamily bool Habana\+Backend\+::should\+Lower (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_node}{Node} $\ast$}]{N }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if the supplied \hyperlink{classglow_1_1_node}{Node}  should be lowered. By default, all Nodes are candidates for lowering. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classglow_1_1_backend_aba5bec08f5e60626bcc5238f410d632a}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_habana_backend_a15199d7d7f6890963f2b8471095d0145}\label{classglow_1_1_habana_backend_a15199d7d7f6890963f2b8471095d0145}} 
+\index{glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}!should\+Share\+Buffers@{should\+Share\+Buffers}}
+\index{should\+Share\+Buffers@{should\+Share\+Buffers}!glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}}
+\subsubsection{\texorpdfstring{should\+Share\+Buffers()}{shouldShareBuffers()}}
+{\footnotesize\ttfamily bool glow\+::\+Habana\+Backend\+::should\+Share\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{classglow_1_1_backend}{Backend} wants the buffer sharing optimization performed. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classglow_1_1_backend_a5314d00d2739dca36279cd70b4a01145}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_habana_backend_ac6a97ec29cff4ba43e1d459450e9d175}\label{classglow_1_1_habana_backend_ac6a97ec29cff4ba43e1d459450e9d175}} 
+\index{glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}!supports\+Partial\+Tensors@{supports\+Partial\+Tensors}}
+\index{supports\+Partial\+Tensors@{supports\+Partial\+Tensors}!glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}}
+\subsubsection{\texorpdfstring{supports\+Partial\+Tensors()}{supportsPartialTensors()}}
+{\footnotesize\ttfamily bool glow\+::\+Habana\+Backend\+::supports\+Partial\+Tensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{classglow_1_1_backend}{Backend} supports partial, unpadded tensors for inputs that can have variable size (e.\+g., embedding indices). 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classglow_1_1_backend_a930556ce803696ca2ffe8d66c9ba5401}{glow\+::\+Backend}.
+
+\mbox{\Hypertarget{classglow_1_1_habana_backend_a84fed53bd3602fd2824bcab2786c8207}\label{classglow_1_1_habana_backend_a84fed53bd3602fd2824bcab2786c8207}} 
+\index{glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}!transform\+Post\+Lowering@{transform\+Post\+Lowering}}
+\index{transform\+Post\+Lowering@{transform\+Post\+Lowering}!glow\+::\+Habana\+Backend@{glow\+::\+Habana\+Backend}}
+\subsubsection{\texorpdfstring{transform\+Post\+Lowering()}{transformPostLowering()}}
+{\footnotesize\ttfamily bool Habana\+Backend\+::transform\+Post\+Lowering (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_function}{Function} $\ast$}]{F,  }\item[{\hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} \&}]{cctx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Used by the compiler during graph optimization and before code generation, giving the backend an opportunity to transform the graph before I\+R\+Gen. The backend may insert backend-\/specific nodes. The backend is responsible for cleaning up after itself. \begin{DoxyReturn}{Returns}
+True if the graph was modified. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classglow_1_1_backend_a299652a58fc137b15c69858048980452}{glow\+::\+Backend}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Habana/Habana.\+h\item 
+lib/\+Backends/\+Habana/Habana.\+cpp\end{DoxyCompactItemize}

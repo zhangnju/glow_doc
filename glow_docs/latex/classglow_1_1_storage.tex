@@ -1,0 +1,118 @@
+\hypertarget{classglow_1_1_storage}{}\section{glow\+:\+:Storage Class Reference}
+\label{classglow_1_1_storage}\index{glow\+::\+Storage@{glow\+::\+Storage}}
+Inheritance diagram for glow\+:\+:Storage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.705314cm]{classglow_1_1_storage}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_a943cf00d1fa9c0ad7f76a11a9901db4c}\label{classglow_1_1_storage_a943cf00d1fa9c0ad7f76a11a9901db4c}} 
+enum {\bfseries Result\+Indices} \{ {\bfseries Output\+Idx} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_a9cd49344209da553251799a0c4ecee1d}\label{classglow_1_1_storage_a9cd49344209da553251799a0c4ecee1d}} 
+{\bfseries Storage} (Kinded\+::\+Kind k, llvm\+::\+String\+Ref name)
+\item 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} \hyperlink{classglow_1_1_storage_a76b8f66f05094e222fc5416688fd9014}{get\+Output} ()
+\item 
+\hyperlink{structglow_1_1_type}{Type\+Ref} \hyperlink{classglow_1_1_storage_a7dd9963b09942c7e1772125112be7e3f}{get\+Type} () const
+\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classglow_1_1_storage_a1fe8d4de0e28ca6953f12b6c00c6f5bf}{visit} (\hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor)
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_addc913b136cbeca89d09d7a3674fca51}\label{classglow_1_1_storage_addc913b136cbeca89d09d7a3674fca51}} 
+void {\bfseries visit} (const \hyperlink{classglow_1_1_node}{Node} $\ast$parent, \hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$visitor) const
+\item 
+bool \hyperlink{classglow_1_1_storage_a549ea8dc4f7cfe34182eda64649458d9}{is\+Equal} (const \hyperlink{classglow_1_1_storage}{Storage} \&other) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_aa3023426f5be521dce556e921035a8ae}\label{classglow_1_1_storage_aa3023426f5be521dce556e921035a8ae}} 
+unsigned {\bfseries get\+Num\+Inputs} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_a7db808c7ba539503399c6ef17810218a}\label{classglow_1_1_storage_a7db808c7ba539503399c6ef17810218a}} 
+std\+::string {\bfseries get\+Input\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_a33815a64d95165dee1b2af132759c8b2}\label{classglow_1_1_storage_a33815a64d95165dee1b2af132759c8b2}} 
+\hyperlink{structglow_1_1_node_value}{Node\+Value} {\bfseries get\+Nth\+Input} (unsigned idx)
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_aafcae472e19c782758575ce6ac8fd51a}\label{classglow_1_1_storage_aafcae472e19c782758575ce6ac8fd51a}} 
+llvm\+::\+String\+Ref {\bfseries get\+Output\+Name} (unsigned idx) const
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_a2c0a996fceb11ca23557f4e18c4a3bbc}\label{classglow_1_1_storage_a2c0a996fceb11ca23557f4e18c4a3bbc}} 
+bool {\bfseries has\+Side\+Effects} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_aceba5410b22c99a2694226cc1c983b26}\label{classglow_1_1_storage_aceba5410b22c99a2694226cc1c983b26}} 
+bool {\bfseries is\+Data\+Parallel} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_ae67868cab9873c1e770b8db8b5714491}\label{classglow_1_1_storage_ae67868cab9873c1e770b8db8b5714491}} 
+\hyperlink{classglow_1_1_node}{Node} $\ast$ {\bfseries clone} () const
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} \hyperlink{classglow_1_1_storage_a837ab9786696a0dee6ecb76b6d4ea546}{get\+Element\+Type} () const
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_af10d5eba2cfd183b33903e0e50f49773}\label{classglow_1_1_storage_af10d5eba2cfd183b33903e0e50f49773}} 
+llvm\+::\+Array\+Ref$<$ size\+\_\+t $>$ {\bfseries dims} () const
+\end{DoxyCompactItemize}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1_storage_a6e1c8b8ced427583760c1019edaecec1}\label{classglow_1_1_storage_a6e1c8b8ced427583760c1019edaecec1}} 
+static bool {\bfseries classof} (const \hyperlink{classglow_1_1_kinded}{Kinded} $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1_storage_a837ab9786696a0dee6ecb76b6d4ea546}\label{classglow_1_1_storage_a837ab9786696a0dee6ecb76b6d4ea546}} 
+\index{glow\+::\+Storage@{glow\+::\+Storage}!get\+Element\+Type@{get\+Element\+Type}}
+\index{get\+Element\+Type@{get\+Element\+Type}!glow\+::\+Storage@{glow\+::\+Storage}}
+\subsubsection{\texorpdfstring{get\+Element\+Type()}{getElementType()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_ab92e14a94329daf4083db670e95fbcdf}{Elem\+Kind} glow\+::\+Storage\+::get\+Element\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Methods that forward to the result type (that must be valid)\+: \mbox{\Hypertarget{classglow_1_1_storage_a76b8f66f05094e222fc5416688fd9014}\label{classglow_1_1_storage_a76b8f66f05094e222fc5416688fd9014}} 
+\index{glow\+::\+Storage@{glow\+::\+Storage}!get\+Output@{get\+Output}}
+\index{get\+Output@{get\+Output}!glow\+::\+Storage@{glow\+::\+Storage}}
+\subsubsection{\texorpdfstring{get\+Output()}{getOutput()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_node_value}{Node\+Value} glow\+::\+Storage\+::get\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the single output value of the node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_storage_a7dd9963b09942c7e1772125112be7e3f}\label{classglow_1_1_storage_a7dd9963b09942c7e1772125112be7e3f}} 
+\index{glow\+::\+Storage@{glow\+::\+Storage}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!glow\+::\+Storage@{glow\+::\+Storage}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily \hyperlink{structglow_1_1_type}{Type\+Ref} glow\+::\+Storage\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+result type of the storage. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglow_1_1_storage_a549ea8dc4f7cfe34182eda64649458d9}\label{classglow_1_1_storage_a549ea8dc4f7cfe34182eda64649458d9}} 
+\index{glow\+::\+Storage@{glow\+::\+Storage}!is\+Equal@{is\+Equal}}
+\index{is\+Equal@{is\+Equal}!glow\+::\+Storage@{glow\+::\+Storage}}
+\subsubsection{\texorpdfstring{is\+Equal()}{isEqual()}}
+{\footnotesize\ttfamily bool Storage\+::is\+Equal (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_storage}{Storage} \&}]{other }\end{DoxyParamCaption}) const}
+
+A storage should be equal only to itself! \mbox{\Hypertarget{classglow_1_1_storage_a1fe8d4de0e28ca6953f12b6c00c6f5bf}\label{classglow_1_1_storage_a1fe8d4de0e28ca6953f12b6c00c6f5bf}} 
+\index{glow\+::\+Storage@{glow\+::\+Storage}!visit@{visit}}
+\index{visit@{visit}!glow\+::\+Storage@{glow\+::\+Storage}}
+\subsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily void Storage\+::visit (\begin{DoxyParamCaption}\item[{\hyperlink{classglow_1_1_node}{Node} $\ast$}]{parent,  }\item[{\hyperlink{classglow_1_1_node_walker}{Node\+Walker} $\ast$}]{visitor }\end{DoxyParamCaption})}
+
+Declare the standard \hyperlink{classglow_1_1_node}{Node} methods. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Graph/Nodes.\+h\item 
+lib/\+Graph/Nodes.\+cpp\end{DoxyCompactItemize}

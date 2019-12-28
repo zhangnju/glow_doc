@@ -1,0 +1,33 @@
+\hypertarget{classglow_1_1runtime_1_1_open_c_l_buffer}{}\section{glow\+:\+:runtime\+:\+:Open\+C\+L\+Buffer Class Reference}
+\label{classglow_1_1runtime_1_1_open_c_l_buffer}\index{glow\+::runtime\+::\+Open\+C\+L\+Buffer@{glow\+::runtime\+::\+Open\+C\+L\+Buffer}}
+
+
+{\ttfamily \#include $<$Open\+C\+L\+Device\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_buffer_a1215b43783cc10b07353347e0e4de229}\label{classglow_1_1runtime_1_1_open_c_l_buffer_a1215b43783cc10b07353347e0e4de229}} 
+{\bfseries Open\+C\+L\+Buffer} (cl\+\_\+mem buffer, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_buffer_a3c3df21a16d85b19cf24f920633ccbd5}\label{classglow_1_1runtime_1_1_open_c_l_buffer_a3c3df21a16d85b19cf24f920633ccbd5}} 
+cl\+\_\+mem \hyperlink{classglow_1_1runtime_1_1_open_c_l_buffer_a3c3df21a16d85b19cf24f920633ccbd5}{get\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Returns the stored buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_buffer_ab4957190604c5995174144eb8036b7ce}\label{classglow_1_1runtime_1_1_open_c_l_buffer_ab4957190604c5995174144eb8036b7ce}} 
+unsigned int \hyperlink{classglow_1_1runtime_1_1_open_c_l_buffer_ab4957190604c5995174144eb8036b7ce}{increment\+Users} ()
+\begin{DoxyCompactList}\small\item\em Increment user count by 1 and return new count. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_buffer_a00a6739eeb56d5f9180a7a02177a3327}\label{classglow_1_1runtime_1_1_open_c_l_buffer_a00a6739eeb56d5f9180a7a02177a3327}} 
+unsigned int \hyperlink{classglow_1_1runtime_1_1_open_c_l_buffer_a00a6739eeb56d5f9180a7a02177a3327}{decrement\+Users} ()
+\begin{DoxyCompactList}\small\item\em Decrement user count by 1 and return new count. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_open_c_l_buffer_aec1060a0ecbdfc0ae6eb1653cf58d24b}\label{classglow_1_1runtime_1_1_open_c_l_buffer_aec1060a0ecbdfc0ae6eb1653cf58d24b}} 
+size\+\_\+t \hyperlink{classglow_1_1runtime_1_1_open_c_l_buffer_aec1060a0ecbdfc0ae6eb1653cf58d24b}{get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Get size of buffer in bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that contains an open\+CL device buffer. It frees the buffer when it is destroyed. Can be extended to store multiple buffers and rotate through them. Also tracks number of functions using this buffer. Since adds/evicts are serialized by the \hyperlink{classglow_1_1runtime_1_1_device_manager}{Device\+Manager} this does not need multithreading protection. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Backends/\+Open\+C\+L/Open\+C\+L\+Device\+Manager.\+h\item 
+lib/\+Backends/\+Open\+C\+L/Open\+C\+L\+Device\+Manager.\+cpp\end{DoxyCompactItemize}

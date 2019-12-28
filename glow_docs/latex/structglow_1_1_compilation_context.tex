@@ -1,0 +1,91 @@
+\hypertarget{structglow_1_1_compilation_context}{}\section{glow\+:\+:Compilation\+Context Struct Reference}
+\label{structglow_1_1_compilation_context}\index{glow\+::\+Compilation\+Context@{glow\+::\+Compilation\+Context}}
+
+
+Context for compilation.  
+
+
+
+
+{\ttfamily \#include $<$Compilation\+Context.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014a}{Compilation\+Mode} \{ {\bfseries Train}, 
+\hyperlink{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014aa442b0d534b230e2f2c9b562974652f79}{Compilation\+Mode\+::\+Infer}, 
+\hyperlink{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014aa9fd1bb83eed98173b7291341f46dce86}{Compilation\+Mode\+::\+Num\+Compilation\+Modes}
+ \}\begin{DoxyCompactList}\small\item\em Select whether in Training or Inference mode. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_compilation_context_a97e61dac204d0f830e5cc88352460ff8}\label{structglow_1_1_compilation_context_a97e61dac204d0f830e5cc88352460ff8}} 
+{\bfseries Compilation\+Context} (\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$bindings\+\_\+=nullptr, \hyperlink{namespaceglow_a419aca63ca48becda137d774dd06493c}{Lowered\+Info\+Map} $\ast$lowered\+Info\+Map\+\_\+=nullptr)
+\item 
+\hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} \hyperlink{structglow_1_1_compilation_context_a636e4b05d0dce25f559262c31ac8f0a9}{verify} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structglow_1_1_compilation_context_ac83a8c20aff85167069c3e188d4bf9b9}\label{structglow_1_1_compilation_context_ac83a8c20aff85167069c3e188d4bf9b9}} 
+\hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} $\ast$ \hyperlink{structglow_1_1_compilation_context_ac83a8c20aff85167069c3e188d4bf9b9}{bindings} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em Used during Profiling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_compilation_context_adce436b4b85ab08a7fa61538c571aeeb}\label{structglow_1_1_compilation_context_adce436b4b85ab08a7fa61538c571aeeb}} 
+\hyperlink{namespaceglow_a419aca63ca48becda137d774dd06493c}{Lowered\+Info\+Map} $\ast$ \hyperlink{structglow_1_1_compilation_context_adce436b4b85ab08a7fa61538c571aeeb}{lowered\+Info\+Map} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em Used during Quantization and Profiling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_compilation_context_a8aab22abfcd7f6fa96cd0cef0120d430}\label{structglow_1_1_compilation_context_a8aab22abfcd7f6fa96cd0cef0120d430}} 
+enum \hyperlink{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014a}{glow\+::\+Compilation\+Context\+::\+Compilation\+Mode} {\bfseries Infer}
+\item 
+\mbox{\Hypertarget{structglow_1_1_compilation_context_a342c91bb994ad5f0a8f4e2b58c9851aa}\label{structglow_1_1_compilation_context_a342c91bb994ad5f0a8f4e2b58c9851aa}} 
+\hyperlink{structglow_1_1_backend_options}{Backend\+Options} \hyperlink{structglow_1_1_compilation_context_a342c91bb994ad5f0a8f4e2b58c9851aa}{backend\+Opts}
+\begin{DoxyCompactList}\small\item\em Options for the \hyperlink{classglow_1_1_backend}{Backend} to use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_compilation_context_af9c1dd72e16ad800aefb856201324236}\label{structglow_1_1_compilation_context_af9c1dd72e16ad800aefb856201324236}} 
+\hyperlink{structglow_1_1_optimization_options}{Optimization\+Options} \hyperlink{structglow_1_1_compilation_context_af9c1dd72e16ad800aefb856201324236}{optimization\+Opts}
+\begin{DoxyCompactList}\small\item\em Options for the optimizations to use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structglow_1_1_compilation_context_a6133ffa65e66f4ec5c97cfc5de8e589d}\label{structglow_1_1_compilation_context_a6133ffa65e66f4ec5c97cfc5de8e589d}} 
+\hyperlink{structglow_1_1_precision_configuration}{Precision\+Configuration} \hyperlink{structglow_1_1_compilation_context_a6133ffa65e66f4ec5c97cfc5de8e589d}{precision\+Config}
+\begin{DoxyCompactList}\small\item\em Configuration for different precision modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Context for compilation. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014a}\label{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014a}} 
+\index{glow\+::\+Compilation\+Context@{glow\+::\+Compilation\+Context}!Compilation\+Mode@{Compilation\+Mode}}
+\index{Compilation\+Mode@{Compilation\+Mode}!glow\+::\+Compilation\+Context@{glow\+::\+Compilation\+Context}}
+\subsubsection{\texorpdfstring{Compilation\+Mode}{CompilationMode}}
+{\footnotesize\ttfamily enum \hyperlink{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014a}{glow\+::\+Compilation\+Context\+::\+Compilation\+Mode}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Select whether in Training or Inference mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Infer@{Infer}!glow\+::\+Compilation\+Context@{glow\+::\+Compilation\+Context}}\index{glow\+::\+Compilation\+Context@{glow\+::\+Compilation\+Context}!Infer@{Infer}}}\mbox{\Hypertarget{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014aa442b0d534b230e2f2c9b562974652f79}\label{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014aa442b0d534b230e2f2c9b562974652f79}} 
+Infer&Compile the graph in preperation for training. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Num\+Compilation\+Modes@{Num\+Compilation\+Modes}!glow\+::\+Compilation\+Context@{glow\+::\+Compilation\+Context}}\index{glow\+::\+Compilation\+Context@{glow\+::\+Compilation\+Context}!Num\+Compilation\+Modes@{Num\+Compilation\+Modes}}}\mbox{\Hypertarget{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014aa9fd1bb83eed98173b7291341f46dce86}\label{structglow_1_1_compilation_context_a92efb87746c0edf7756b84fdcd87014aa9fd1bb83eed98173b7291341f46dce86}} 
+Num\+Compilation\+Modes&Compile the graph for inference. Notice that this operation changes the graph in a way that is not reversible. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structglow_1_1_compilation_context_a636e4b05d0dce25f559262c31ac8f0a9}\label{structglow_1_1_compilation_context_a636e4b05d0dce25f559262c31ac8f0a9}} 
+\index{glow\+::\+Compilation\+Context@{glow\+::\+Compilation\+Context}!verify@{verify}}
+\index{verify@{verify}!glow\+::\+Compilation\+Context@{glow\+::\+Compilation\+Context}}
+\subsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily \hyperlink{namespaceglow_afdb176c3a672ef66db0ecfc19a8d39bf}{Error} glow\+::\+Compilation\+Context\+::verify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an error if the \hyperlink{structglow_1_1_compilation_context}{Compilation\+Context} is malformed for whatever configuration it is set up for, otherwise returns success. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Optimizer/\+Graph\+Optimizer/Compilation\+Context.\+h\end{DoxyCompactItemize}

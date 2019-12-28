@@ -1,0 +1,108 @@
+\hypertarget{classglow_1_1runtime_1_1_dummy_device_manager}{}\section{glow\+:\+:runtime\+:\+:Dummy\+Device\+Manager Class Reference}
+\label{classglow_1_1runtime_1_1_dummy_device_manager}\index{glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}}
+
+
+{\ttfamily \#include $<$Dummy\+Device\+Manager.\+h$>$}
+
+Inheritance diagram for glow\+:\+:runtime\+:\+:Dummy\+Device\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglow_1_1runtime_1_1_dummy_device_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_dummy_device_manager_a527bdf78603fddeb50b390e6d8636dd2}\label{classglow_1_1runtime_1_1_dummy_device_manager_a527bdf78603fddeb50b390e6d8636dd2}} 
+{\bfseries Dummy\+Device\+Manager} (const \hyperlink{structglow_1_1runtime_1_1_device_config}{Device\+Config} \&config)
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1runtime_1_1_dummy_device_manager_a58bc8e9d658c8b173d27527a4251e5e0}{get\+Maximum\+Memory} () const override
+\item 
+uint64\+\_\+t \hyperlink{classglow_1_1runtime_1_1_dummy_device_manager_a96ef72c763a1932e1482c29b4eea486b}{get\+Available\+Memory} () const override
+\item 
+bool \hyperlink{classglow_1_1runtime_1_1_dummy_device_manager_a51b1549661977f06447122f0529d8b14}{is\+Memory\+Available} (uint64\+\_\+t) const override
+\item 
+void \hyperlink{classglow_1_1runtime_1_1_dummy_device_manager_a73a826505a055281b9ad2902f6ffdb0f}{add\+Network} (const \hyperlink{classglow_1_1_module}{Module} $\ast$module, Function\+Map\+Ty functions, Ready\+C\+B\+Ty callback) override
+\item 
+void \hyperlink{classglow_1_1runtime_1_1_dummy_device_manager_a69a52700a23ae64f2c9db09e1e32c038}{evict\+Network} (std\+::string function\+Name, Evict\+Function\+C\+B\+Ty evict\+CB) override
+\item 
+Run\+Identifier\+Ty \hyperlink{classglow_1_1runtime_1_1_dummy_device_manager_a6a0da3ce939dea1323eead33a27d5487}{run\+Function} (std\+::string function\+Name, std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$ context, Result\+C\+B\+Ty callback) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classglow_1_1runtime_1_1_dummy_device_manager}{Dummy\+Device\+Manager} is a simple \hyperlink{classglow_1_1runtime_1_1_device_manager}{Device\+Manager} implementation that provides execution for backends that are in development. It is explicitly not threadsafe and runs provided \hyperlink{classglow_1_1_compiled_function}{Compiled\+Function}\textquotesingle{}s in the caller thread. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_dummy_device_manager_a73a826505a055281b9ad2902f6ffdb0f}\label{classglow_1_1runtime_1_1_dummy_device_manager_a73a826505a055281b9ad2902f6ffdb0f}} 
+\index{glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}!add\+Network@{add\+Network}}
+\index{add\+Network@{add\+Network}!glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}}
+\subsubsection{\texorpdfstring{add\+Network()}{addNetwork()}}
+{\footnotesize\ttfamily void glow\+::runtime\+::\+Dummy\+Device\+Manager\+::add\+Network (\begin{DoxyParamCaption}\item[{const \hyperlink{classglow_1_1_module}{Module} $\ast$}]{module,  }\item[{Function\+Map\+Ty}]{functions,  }\item[{Ready\+C\+B\+Ty}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Load the provided module into the device, ready\+CB will be called when ready to use. {\ttfamily functions} contains the list of functions to load, keyed by their name (as used in run\+Function). 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_a9bbf9a88f8bf9ddc0ce63590580aa91f}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_dummy_device_manager_a69a52700a23ae64f2c9db09e1e32c038}\label{classglow_1_1runtime_1_1_dummy_device_manager_a69a52700a23ae64f2c9db09e1e32c038}} 
+\index{glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}!evict\+Network@{evict\+Network}}
+\index{evict\+Network@{evict\+Network}!glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}}
+\subsubsection{\texorpdfstring{evict\+Network()}{evictNetwork()}}
+{\footnotesize\ttfamily void glow\+::runtime\+::\+Dummy\+Device\+Manager\+::evict\+Network (\begin{DoxyParamCaption}\item[{std\+::string}]{function\+Name,  }\item[{Evict\+Function\+C\+B\+Ty}]{evict\+CB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Remove (and delete) the provided function, freeing up space on the device. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_a147c76a007db17659c1962c1fa864f9a}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_dummy_device_manager_a96ef72c763a1932e1482c29b4eea486b}\label{classglow_1_1runtime_1_1_dummy_device_manager_a96ef72c763a1932e1482c29b4eea486b}} 
+\index{glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}!get\+Available\+Memory@{get\+Available\+Memory}}
+\index{get\+Available\+Memory@{get\+Available\+Memory}!glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}}
+\subsubsection{\texorpdfstring{get\+Available\+Memory()}{getAvailableMemory()}}
+{\footnotesize\ttfamily uint64\+\_\+t glow\+::runtime\+::\+Dummy\+Device\+Manager\+::get\+Available\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the currently available memory (in bytes) available on the device, for provisioning new networks. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_a5a84ac3b23b9b6d72f50d763913ed8aa}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_dummy_device_manager_a58bc8e9d658c8b173d27527a4251e5e0}\label{classglow_1_1runtime_1_1_dummy_device_manager_a58bc8e9d658c8b173d27527a4251e5e0}} 
+\index{glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}!get\+Maximum\+Memory@{get\+Maximum\+Memory}}
+\index{get\+Maximum\+Memory@{get\+Maximum\+Memory}!glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}}
+\subsubsection{\texorpdfstring{get\+Maximum\+Memory()}{getMaximumMemory()}}
+{\footnotesize\ttfamily uint64\+\_\+t glow\+::runtime\+::\+Dummy\+Device\+Manager\+::get\+Maximum\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+The \hyperlink{classglow_1_1runtime_1_1_dummy_device_manager}{Dummy\+Device\+Manager} is a simple wrapper for testing, if you need memory guards you should implement a \hyperlink{classglow_1_1runtime_1_1_device_manager}{Device\+Manager} for your device. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_ad158f1c1f9f32b48927f50d48f80decb}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_dummy_device_manager_a51b1549661977f06447122f0529d8b14}\label{classglow_1_1runtime_1_1_dummy_device_manager_a51b1549661977f06447122f0529d8b14}} 
+\index{glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}!is\+Memory\+Available@{is\+Memory\+Available}}
+\index{is\+Memory\+Available@{is\+Memory\+Available}!glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}}
+\subsubsection{\texorpdfstring{is\+Memory\+Available()}{isMemoryAvailable()}}
+{\footnotesize\ttfamily bool glow\+::runtime\+::\+Dummy\+Device\+Manager\+::is\+Memory\+Available (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{estimate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if we expect a \hyperlink{classglow_1_1_module}{Module} with the estimated constant size will fit on the device. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_ae9bba4abda9cb6aa1359a69e942feb22}{glow\+::runtime\+::\+Device\+Manager}.
+
+\mbox{\Hypertarget{classglow_1_1runtime_1_1_dummy_device_manager_a6a0da3ce939dea1323eead33a27d5487}\label{classglow_1_1runtime_1_1_dummy_device_manager_a6a0da3ce939dea1323eead33a27d5487}} 
+\index{glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}!run\+Function@{run\+Function}}
+\index{run\+Function@{run\+Function}!glow\+::runtime\+::\+Dummy\+Device\+Manager@{glow\+::runtime\+::\+Dummy\+Device\+Manager}}
+\subsubsection{\texorpdfstring{run\+Function()}{runFunction()}}
+{\footnotesize\ttfamily Run\+Identifier\+Ty glow\+::runtime\+::\+Dummy\+Device\+Manager\+::run\+Function (\begin{DoxyParamCaption}\item[{std\+::string}]{function\+Name,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglow_1_1_execution_context}{Execution\+Context} $>$}]{context,  }\item[{Result\+C\+B\+Ty}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Execute the named \hyperlink{classglow_1_1_function}{Function} in an already provided network on the device. function\+Name must match the name of a function already added. The \hyperlink{classglow_1_1_execution_context}{Execution\+Context}\textquotesingle{}s \hyperlink{classglow_1_1_placeholder_bindings}{Placeholder\+Bindings} should have all Placeholders allocated. result\+CB will be called with the \hyperlink{classglow_1_1_execution_context}{Execution\+Context} containing output tensors filled, and any generated Trace\+Events. 
+
+Implements \hyperlink{classglow_1_1runtime_1_1_device_manager_ac182cdf6ed9f6903c11fa71c0446d1f7}{glow\+::runtime\+::\+Device\+Manager}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/glow/\+Backends/Dummy\+Device\+Manager.\+h\end{DoxyCompactItemize}
